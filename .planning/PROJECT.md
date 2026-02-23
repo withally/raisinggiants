@@ -2,7 +2,7 @@
 
 ## What This Is
 
-A personalized digital guide that helps parents and pre-parents understand how their own upbringing shapes their parenting instincts. Users take an in-depth quiz (10-20 minutes) grounded in research from 20-30 top KOLs in parenting and child development, receive a free archetype summary, and can purchase a deeply personalized 15-20 page PDF guide ($14). The product serves two purposes: helping individuals understand their own patterns and watchouts, and creating a foundation for principled dialogue with their partner and loved ones.
+A personalized digital guide that helps parents and pre-parents understand how their own upbringing shapes their parenting instincts. Users take an in-depth quiz (10-20 minutes) grounded in research from top 100 KOLs in parenting and child development, receive a free archetype summary, and can purchase a deeply personalized 15-20 page PDF guide ($14). The product serves two purposes: helping individuals understand their own patterns and watchouts, and creating a foundation for principled dialogue with their partner and loved ones.
 
 ## Core Value
 
@@ -17,7 +17,7 @@ Parents feel deeply seen and understood about their upbringing — the personali
 ### Active
 
 - [ ] Users can take a 10-20 minute in-depth quiz about their upbringing and parenting experiences
-- [ ] Quiz is built on research from 20-30 top KOLs in parenting/child development for credibility
+- [ ] Quiz is built on research from top 100 KOLs in parenting/child development for credibility
 - [ ] Quiz asks about cultural background directly and uses it to personalize output
 - [ ] Quiz maps responses to one of 6-8 parenting style archetypes (framework to be developed with Sophia)
 - [ ] Quiz surfaces both foundational patterns (priming) and specific watchouts
@@ -43,7 +43,7 @@ Parents feel deeply seen and understood about their upbringing — the personali
 
 **Market gap:** Every personalized book/product targets kids (Wonderbly, Magic Story, Hooray Heroes). Nobody targets parents reflecting on their own upbringing. The parenting quiz/assessment space is full of free lead magnets with ugly, basic text outputs.
 
-**Credibility foundation:** The quiz and personalization are built on research from 20-30 top KOLs (Key Opinion Leaders) in parenting, child development, and family psychology. This research base gives the product authority and trust — it's not just another BuzzFeed quiz.
+**Credibility foundation:** The quiz and personalization are built on research from top 100 KOLs (Key Opinion Leaders) in parenting, child development, and family psychology. This research base gives the product authority and trust — it's not just another BuzzFeed quiz.
 
 **Team:** Sophia is co-founder with clinical expertise in parenting psychology. She provides the archetype framework and clinical knowledge. The archetype framework is currently at concept stage — 6-8 parenting style archetypes need to be defined with scoring logic and descriptions.
 
@@ -73,7 +73,7 @@ Parents feel deeply seen and understood about their upbringing — the personali
 | Direct cultural background questions | Richer personalization data vs. inferred approach | — Pending |
 | Digital-only delivery | No physical fulfillment complexity, instant gratification | — Pending |
 | 10-20 min quiz (not 2-3 min) | Depth builds credibility and produces richer personalization | — Pending |
-| Research-backed from 20-30 KOLs | Trust and authority differentiate from generic quiz products | — Pending |
+| Research-backed from top 100 KOLs | Trust and authority differentiate from generic quiz products | — Pending |
 
 ---
 *Last updated: 2026-02-23 after initialization (updated with credibility/depth requirements)*
