@@ -110,50 +110,50 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| ARCH-01 | — | Pending |
-| ARCH-02 | — | Pending |
-| ARCH-03 | — | Pending |
-| ARCH-04 | — | Pending |
-| ARCH-05 | — | Pending |
-| QUIZ-01 | — | Pending |
-| QUIZ-02 | — | Pending |
-| QUIZ-03 | — | Pending |
-| QUIZ-04 | — | Pending |
-| QUIZ-05 | — | Pending |
-| QUIZ-06 | — | Pending |
-| QUIZ-07 | — | Pending |
-| QUIZ-08 | — | Pending |
-| RSLT-01 | — | Pending |
-| RSLT-02 | — | Pending |
-| RSLT-03 | — | Pending |
-| RSLT-04 | — | Pending |
-| RSLT-05 | — | Pending |
-| PAY-01 | — | Pending |
-| PAY-02 | — | Pending |
-| PAY-03 | — | Pending |
-| PAY-04 | — | Pending |
-| PAY-05 | — | Pending |
-| PDF-01 | — | Pending |
-| PDF-02 | — | Pending |
-| PDF-03 | — | Pending |
-| PDF-04 | — | Pending |
-| PDF-05 | — | Pending |
-| PDF-06 | — | Pending |
-| PDF-07 | — | Pending |
-| PDF-08 | — | Pending |
-| PDF-09 | — | Pending |
-| PDF-10 | — | Pending |
-| LAND-01 | — | Pending |
-| LAND-02 | — | Pending |
-| LAND-03 | — | Pending |
-| LAND-04 | — | Pending |
-| LAND-05 | — | Pending |
+| ARCH-01 | Phase 0 | Pending |
+| ARCH-02 | Phase 0 | Pending |
+| ARCH-03 | Phase 0 | Pending |
+| ARCH-04 | Phase 0 | Pending |
+| ARCH-05 | Phase 0 | Pending |
+| QUIZ-01 | Phase 2 | Pending |
+| QUIZ-02 | Phase 2 | Pending |
+| QUIZ-03 | Phase 2 | Pending |
+| QUIZ-04 | Phase 2 | Pending |
+| QUIZ-05 | Phase 2 | Pending |
+| QUIZ-06 | Phase 2 | Pending |
+| QUIZ-07 | Phase 2 | Pending |
+| QUIZ-08 | Phase 2 | Pending |
+| RSLT-01 | Phase 3 | Pending |
+| RSLT-02 | Phase 3 | Pending |
+| RSLT-03 | Phase 3 | Pending |
+| RSLT-04 | Phase 3 | Pending |
+| RSLT-05 | Phase 3 | Pending |
+| PAY-01 | Phase 4 | Pending |
+| PAY-02 | Phase 4 | Pending |
+| PAY-03 | Phase 4 | Pending |
+| PAY-04 | Phase 4 | Pending |
+| PAY-05 | Phase 4 | Pending |
+| PDF-01 | Phase 5 | Pending |
+| PDF-02 | Phase 6 | Pending |
+| PDF-03 | Phase 5 | Pending |
+| PDF-04 | Phase 5 | Pending |
+| PDF-05 | Phase 5 | Pending |
+| PDF-06 | Phase 5 | Pending |
+| PDF-07 | Phase 5 | Pending |
+| PDF-08 | Phase 5 | Pending |
+| PDF-09 | Phase 5 | Pending |
+| PDF-10 | Phase 5 | Pending |
+| LAND-01 | Phase 7 | Pending |
+| LAND-02 | Phase 7 | Pending |
+| LAND-03 | Phase 7 | Pending |
+| LAND-04 | Phase 7 | Pending |
+| LAND-05 | Phase 7 | Pending |
 
 **Coverage:**
 - v1 requirements: 35 total
-- Mapped to phases: 0
-- Unmapped: 35 ⚠️
+- Mapped to phases: 35
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-02-23*
-*Last updated: 2026-02-23 after initial definition*
+*Last updated: 2026-02-23 — traceability table completed after roadmap creation*
