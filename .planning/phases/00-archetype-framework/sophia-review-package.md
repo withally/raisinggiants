@@ -853,6 +853,8 @@ Please work through each item below. If all are approved, Phase 0 is complete an
 
 ## 8. Revision Notes
 
+> **NOTE (2026-02-24):** Sophia's formal review of this document has been postponed. The team has decided to proceed with Phase 1 engineering with **provisional approval** — Sophia will revisit this review package at a later date to complete the sign-off checklist and provide any adjustment requests. The framework is considered clinically sound enough to begin building against, with the understanding that feedback from Sophia may require framework adjustments post-review.
+
 *For Sophia to complete during review. Please describe any changes requested. If all items are approved, write "Approved as-is" here.*
 
 ### Dimension Changes
