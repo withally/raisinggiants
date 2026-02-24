@@ -194,7 +194,7 @@ async function runVerification(): Promise<void> {
     // ------------------------------------------------------------------
     // Test 7 — Storage bucket exists and is private
     // ------------------------------------------------------------------
-    const { data: bucketsData, error: bucketsErr } = await anonClient.storage.listBuckets()
+    const { data: bucketsData, error: bucketsErr } = await adminClient.storage.listBuckets()
     if (bucketsErr) {
       fail(`listBuckets failed: ${bucketsErr.message}`)
     }
