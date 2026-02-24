@@ -33,7 +33,13 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Each archetype has a foundational patterns description (positive framing) and a watchouts description (shadow/risk patterns)
   4. Each archetype has a cultural context overlay document describing how cultural background modifies the archetype
   5. Sophia has validated the scoring output against 20-30 simulated answer sets and confirmed results are clinically plausible
-**Plans**: TBD
+**Plans:** 5 plans
+Plans:
+- [ ] 00-01-PLAN.md — TypeScript type contracts, KOL research synthesis, and scoring dimension definitions
+- [ ] 00-02-PLAN.md — Archetype definitions with dimension profiles and scoring algorithm
+- [ ] 00-03-PLAN.md — Scoring validation script with 20-30 simulated answer sets
+- [ ] 00-04-PLAN.md — Content outlines (foundational patterns, watchouts) and cultural context overlays
+- [ ] 00-05-PLAN.md — Sophia review package and clinical sign-off checkpoint
 
 ### Phase 1: Data Foundation
 **Goal**: The database and infrastructure layer is in place so quiz sessions and orders can be persisted securely from day one
@@ -120,7 +126,7 @@ Phases execute in numeric order: 0 → 1 → 2 → 3 → 4 → 5 → 6 → 7
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 0. Archetype Framework | 0/TBD | Not started | - |
+| 0. Archetype Framework | 0/5 | Planning complete | - |
 | 1. Data Foundation | 0/TBD | Not started | - |
 | 2. Quiz Engine | 0/TBD | Not started | - |
 | 3. Free Result Page | 0/TBD | Not started | - |
