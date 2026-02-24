@@ -1,0 +1,8 @@
+-- supabase/seed.sql
+-- Seed data for local development.
+-- This file runs after migrations during `supabase db reset`.
+--
+-- Phase 1: No seed data required.
+-- The blueprints storage bucket is created in the migration.
+-- Tables start empty for local dev — use the RLS verification script
+-- (scripts/verify-rls.ts) to populate and test with anonymous user sessions.
