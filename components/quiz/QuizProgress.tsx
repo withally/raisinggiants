@@ -1,12 +1,12 @@
-'use client'
+"use client";
 
 interface QuizProgressProps {
-  current: number
-  total: number
+  current: number;
+  total: number;
 }
 
 export function QuizProgress({ current, total }: QuizProgressProps) {
-  const percentage = total > 0 ? Math.min((current / total) * 100, 100) : 0
+  const percentage = total > 0 ? Math.min((current / total) * 100, 100) : 0;
 
   return (
     <div
@@ -22,5 +22,5 @@ export function QuizProgress({ current, total }: QuizProgressProps) {
         style={{ width: `${percentage}%` }}
       />
     </div>
-  )
+  );
 }

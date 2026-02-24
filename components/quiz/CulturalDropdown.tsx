@@ -1,50 +1,50 @@
-'use client'
+"use client";
 
-import { useState, useRef, useEffect } from 'react'
-import { cn } from '@/lib/utils'
-import { Input } from '@/components/ui/input'
+import { useEffect, useRef, useState } from "react";
+import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
 
 interface DropdownOption {
-  id: string
-  label: string
+  id: string;
+  label: string;
 }
 
 interface CulturalDropdownProps {
-  options: DropdownOption[]
-  value: string | null
-  onSelect: (value: string) => void
+  options: DropdownOption[];
+  value: string | null;
+  onSelect: (value: string) => void;
 }
 
 export function CulturalDropdown({ options, value, onSelect }: CulturalDropdownProps) {
-  const [query, setQuery] = useState('')
-  const [isOpen, setIsOpen] = useState(false)
-  const containerRef = useRef<HTMLDivElement>(null)
+  const [query, setQuery] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   // Initialise the text input with the selected option label if value is set
-  const selectedOption = options.find((opt) => opt.id === value)
+  const selectedOption = options.find((opt) => opt.id === value);
 
   // Filter options by query (case-insensitive)
   const filteredOptions =
-    query.trim() === ''
+    query.trim() === ""
       ? options
-      : options.filter((opt) => opt.label.toLowerCase().includes(query.toLowerCase()))
+      : options.filter((opt) => opt.label.toLowerCase().includes(query.toLowerCase()));
 
   function handleSelect(option: DropdownOption) {
-    onSelect(option.id)
-    setQuery(option.label)
-    setIsOpen(false)
+    onSelect(option.id);
+    setQuery(option.label);
+    setIsOpen(false);
   }
 
   function handleInputChange(e: React.ChangeEvent<HTMLInputElement>) {
-    setQuery(e.target.value)
-    setIsOpen(true)
+    setQuery(e.target.value);
+    setIsOpen(true);
   }
 
   function handleInputFocus() {
-    setIsOpen(true)
+    setIsOpen(true);
     // Clear query when re-focusing to allow fresh search
     if (selectedOption && query === selectedOption.label) {
-      setQuery('')
+      setQuery("");
     }
   }
 
@@ -52,25 +52,25 @@ export function CulturalDropdown({ options, value, onSelect }: CulturalDropdownP
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
       if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
-        setIsOpen(false)
+        setIsOpen(false);
         // Restore selected label if user blurs without selecting
         if (selectedOption) {
-          setQuery(selectedOption.label)
+          setQuery(selectedOption.label);
         } else {
-          setQuery('')
+          setQuery("");
         }
       }
     }
-    document.addEventListener('mousedown', handleClickOutside)
-    return () => document.removeEventListener('mousedown', handleClickOutside)
-  }, [selectedOption])
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [selectedOption]);
 
   // Sync query with external value changes (e.g. on resumption)
   useEffect(() => {
     if (value && selectedOption) {
-      setQuery(selectedOption.label)
+      setQuery(selectedOption.label);
     }
-  }, [value, selectedOption])
+  }, [value, selectedOption]);
 
   return (
     <div ref={containerRef} className="relative w-full">
@@ -89,25 +89,21 @@ export function CulturalDropdown({ options, value, onSelect }: CulturalDropdownP
       />
 
       {isOpen && filteredOptions.length > 0 && (
-        <ul
-          role="listbox"
-          aria-label="Cultural background options"
-          className="absolute z-10 mt-1 w-full bg-white border border-gray-200 rounded-xl shadow-lg max-h-60 overflow-y-auto"
-        >
+        <div className="absolute z-10 mt-1 w-full bg-white border border-gray-200 rounded-xl shadow-lg max-h-60 overflow-y-auto">
           {filteredOptions.map((option) => {
-            const isSelected = value === option.id
+            const isSelected = value === option.id;
             return (
-              <li
+              <button
                 key={option.id}
-                role="option"
-                aria-selected={isSelected}
+                type="button"
                 onClick={() => handleSelect(option)}
                 className={cn(
-                  'flex items-center gap-3 px-4 py-3 cursor-pointer text-sm min-h-[44px]',
-                  'transition-colors duration-100',
+                  "flex w-full items-center gap-3 px-4 py-3 text-left text-sm min-h-[44px]",
+                  "transition-colors duration-100",
+                  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-inset",
                   isSelected
-                    ? 'bg-amber-50 text-amber-900 font-medium'
-                    : 'text-gray-800 hover:bg-gray-50',
+                    ? "bg-amber-50 text-amber-900 font-medium"
+                    : "text-gray-800 hover:bg-gray-50",
                 )}
               >
                 {isSelected && (
@@ -126,10 +122,10 @@ export function CulturalDropdown({ options, value, onSelect }: CulturalDropdownP
                 )}
                 {!isSelected && <span className="h-4 w-4 shrink-0" />}
                 {option.label}
-              </li>
-            )
+              </button>
+            );
           })}
-        </ul>
+        </div>
       )}
 
       {isOpen && filteredOptions.length === 0 && (
@@ -138,5 +134,5 @@ export function CulturalDropdown({ options, value, onSelect }: CulturalDropdownP
         </div>
       )}
     </div>
-  )
+  );
 }

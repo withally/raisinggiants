@@ -1,12 +1,12 @@
-'use client'
+"use client";
 
-import { cn } from '@/lib/utils'
+import { cn } from "@/lib/utils";
 
 interface OptionCardProps {
-  label: string
-  isSelected: boolean
-  onSelect: () => void
-  disabled?: boolean
+  label: string;
+  isSelected: boolean;
+  onSelect: () => void;
+  disabled?: boolean;
 }
 
 export function OptionCard({ label, isSelected, onSelect, disabled = false }: OptionCardProps) {
@@ -17,16 +17,16 @@ export function OptionCard({ label, isSelected, onSelect, disabled = false }: Op
       disabled={disabled}
       className={cn(
         // Base styles: full-width, minimum touch target, rounded, padded
-        'w-full min-h-[44px] rounded-xl px-5 py-4 text-left',
-        'border-2 transition-colors duration-150',
-        'text-base font-normal leading-snug',
-        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2',
+        "w-full min-h-[44px] rounded-xl px-5 py-4 text-left",
+        "border-2 transition-colors duration-150",
+        "text-base font-normal leading-snug",
+        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2",
         // Default (unselected) state
         isSelected
-          ? 'bg-amber-50 border-amber-500 text-amber-900'
-          : 'bg-white border-gray-200 text-gray-800 hover:border-amber-300 hover:bg-amber-50/40',
+          ? "bg-amber-50 border-amber-500 text-amber-900"
+          : "bg-white border-gray-200 text-gray-800 hover:border-amber-300 hover:bg-amber-50/40",
         // Disabled state
-        disabled && 'opacity-60 cursor-not-allowed',
+        disabled && "opacity-60 cursor-not-allowed",
       )}
     >
       <span className="flex items-center gap-3">
@@ -48,5 +48,5 @@ export function OptionCard({ label, isSelected, onSelect, disabled = false }: Op
         {label}
       </span>
     </button>
-  )
+  );
 }

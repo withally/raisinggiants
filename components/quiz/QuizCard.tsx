@@ -1,16 +1,16 @@
-'use client'
+"use client";
 
-import type { QuizQuestion } from '@/lib/quiz/questions'
-import { OptionCard } from '@/components/quiz/OptionCard'
-import { WhyWeAskThis } from '@/components/quiz/WhyWeAskThis'
-import { CulturalDropdown } from '@/components/quiz/CulturalDropdown'
-import { QuizSectionHeader } from '@/components/quiz/QuizSectionHeader'
+import { CulturalDropdown } from "@/components/quiz/CulturalDropdown";
+import { OptionCard } from "@/components/quiz/OptionCard";
+import { QuizSectionHeader } from "@/components/quiz/QuizSectionHeader";
+import { WhyWeAskThis } from "@/components/quiz/WhyWeAskThis";
+import type { QuizQuestion } from "@/lib/quiz/questions";
 
 interface QuizCardProps {
-  question: QuizQuestion
-  currentAnswer: string | null // currently selected option ID (for resumption)
-  onAnswer: (questionId: string, answerId: string) => void
-  showSectionHeader: boolean // true when this is the first question in a new section
+  question: QuizQuestion;
+  currentAnswer: string | null; // currently selected option ID (for resumption)
+  onAnswer: (questionId: string, answerId: string) => void;
+  showSectionHeader: boolean; // true when this is the first question in a new section
 }
 
 export function QuizCard({ question, currentAnswer, onAnswer, showSectionHeader }: QuizCardProps) {
@@ -28,7 +28,7 @@ export function QuizCard({ question, currentAnswer, onAnswer, showSectionHeader 
       <h2 className="text-lg font-medium text-gray-900 leading-snug mb-6">{question.question}</h2>
 
       {/* Answer input — option cards or searchable dropdown */}
-      {question.inputType === 'option-cards' && (
+      {question.inputType === "option-cards" && (
         <div className="space-y-3">
           {question.options.map((option) => (
             <OptionCard
@@ -41,7 +41,7 @@ export function QuizCard({ question, currentAnswer, onAnswer, showSectionHeader 
         </div>
       )}
 
-      {question.inputType === 'searchable-dropdown' && (
+      {question.inputType === "searchable-dropdown" && (
         <CulturalDropdown
           options={question.options}
           value={currentAnswer}
@@ -52,5 +52,5 @@ export function QuizCard({ question, currentAnswer, onAnswer, showSectionHeader 
       {/* Why we ask this — tap-to-reveal helper text */}
       {question.whyWeAskThis && <WhyWeAskThis text={question.whyWeAskThis} />}
     </div>
-  )
+  );
 }

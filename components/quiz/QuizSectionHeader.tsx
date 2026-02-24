@@ -1,8 +1,8 @@
-'use client'
+"use client";
 
 interface QuizSectionHeaderProps {
-  title: string
-  description?: string
+  title: string;
+  description?: string;
 }
 
 export function QuizSectionHeader({ title, description }: QuizSectionHeaderProps) {
@@ -11,5 +11,5 @@ export function QuizSectionHeader({ title, description }: QuizSectionHeaderProps
       <p className="text-sm font-medium text-gray-500 uppercase tracking-wide">{title}</p>
       {description && <p className="mt-1 text-sm text-gray-400">{description}</p>}
     </div>
-  )
+  );
 }
