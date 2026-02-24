@@ -7,7 +7,7 @@
  *   Step 1: Quiz answers × question weights → dimension scores per user
  *   Step 2: User dimension profile vs. archetype reference profiles → ranked result
  *
- * The 7 dimensions here were derived from cross-referencing 10+ parenting
+ * The 11 dimensions here were derived from cross-referencing 10+ parenting
  * research frameworks (see .planning/phases/00-archetype-framework/kol-synthesis.md).
  * Each dimension is present in multiple validated instruments and can be
  * operationalized via natural-feeling self-report quiz questions.
@@ -40,6 +40,10 @@ export const DIMENSION_KEYS: DimensionKey[] = [
   'protective-instinct',
   'narrative-coherence',
   'presence-attunement',
+  'repair-reconnection',
+  'role-integrity',
+  'reciprocity',
+  'nonjudgmental-acceptance',
 ] as const;
 
 // ---------------------------------------------------------------------------
@@ -81,6 +85,7 @@ export const DIMENSIONS: DimensionDefinition[] = [
       'Gottman (1997) — Empathic attunement as core of Emotion Coaching',
       'PBDQ Factor 1 — Emotional Warmth (Louwerse et al., 2011; PMC4456141)',
       'Ainsworth (1978) — Sensitive responsiveness as marker of secure attachment',
+      'Kennedy (2022) — Good Inside: belief in the child\'s inherent goodness as the foundation of warm, accepting connection',
     ],
     candidateQuestions: [
       // Past lens (how you were raised)
@@ -214,6 +219,7 @@ export const DIMENSIONS: DimensionDefinition[] = [
       'Siegel (2010) — Emotional integration; the window of tolerance in parenting',
       'Tsabary (2010) — Conscious vs. reactive parenting',
       'Siegel & Hartzell (2003) — Triggered reactivity when parent\'s own unresolved past is activated',
+      'Kennedy (2022) — Good Inside: separating the child\'s behavior from their identity; regulating alongside the child rather than against them',
     ],
     candidateQuestions: [
       // Past lens — how the parent's own emotions were handled growing up
@@ -360,6 +366,7 @@ export const DIMENSIONS: DimensionDefinition[] = [
       'Tsabary (2010, 2014) — Conscious Parenting: presence vs. projection as the foundational axis',
       'Siegel (2010) — Mindsight: the capacity to perceive one\'s own and another\'s inner mental life',
       'Gottman (1997) — Emotional awareness as a precondition for emotion coaching',
+      'Gottman Institute — Bids for connection: recognizing and turning toward the child\'s bids as the micro-unit of attunement',
     ],
     candidateQuestions: [
       // Past lens — the child's experience of being seen
@@ -378,5 +385,211 @@ export const DIMENSIONS: DimensionDefinition[] = [
       'distinct — a parent can be calm AND still be projecting. Sophia to validate ' +
       'discriminant validity between this dimension and Emotional Regulation when reviewing ' +
       'archetype profiles in Plan 02.',
+  },
+
+  // -------------------------------------------------------------------------
+  // Dimension 8: Repair and Reconnection
+  // -------------------------------------------------------------------------
+  {
+    key: 'repair-reconnection',
+    name: 'Repair and Reconnection',
+    description:
+      'The capacity to repair ruptures in the parent-child relationship — to return after ' +
+      'conflict, name what happened, and actively rebuild the connection. Tronick\'s research ' +
+      'on "still face" experiments shows that rupture is inevitable and normal in all ' +
+      'relationships; what predicts secure attachment is not the absence of rupture but the ' +
+      'presence of repair. Kennedy\'s "Good Inside" framework places repair as the cornerstone ' +
+      'of secure attachment: the parent who comes back after being harsh teaches the child that ' +
+      'relationships can survive difficulty. Gottman\'s research on repair attempts in couples ' +
+      'extends to parent-child dynamics: the ratio of successful repairs to unrepaired ruptures ' +
+      'is a stronger predictor of relationship quality than the frequency of conflict itself.',
+    lowLabel:
+      'Ruptures tend to be left unaddressed — conflict ends when the storm passes, not through ' +
+      'active reconnection. The child learns that breaks in the relationship are permanent or ' +
+      'must be forgotten rather than processed. May move on quickly ("let\'s not dwell on it") ' +
+      'without acknowledging what happened or how the child experienced it.',
+    highLabel:
+      'Consistently returns after rupture — names what happened, takes responsibility for their ' +
+      'part, and checks in on the child\'s experience. Repair is a deliberate practice, not an ' +
+      'afterthought. The child learns that relationships can break and be mended, which builds ' +
+      'resilience and trust. Comfortable saying "I got that wrong" or "I was too harsh."',
+    researchAnchors: [
+      'Kennedy (2022) — Good Inside: repair as the cornerstone of secure attachment; "the most important parenting skill is repair"',
+      'Tronick (2007) — Still Face Paradigm: rupture-and-repair as the normative rhythm of secure relationships; repair capacity predicts attachment security',
+      'Gottman Institute — Repair attempts as the #1 predictor of relationship stability; turning toward after turning against',
+      'Siegel & Bryson (2011) — The Whole-Brain Child: reconnection after disconnection as a core parenting practice',
+    ],
+    candidateQuestions: [
+      // Past lens — did your parents come back after conflict?
+      'After a heated moment or punishment, how often did a parent come back to you to talk about what happened — not to re-explain the rule, but to check in on how you were feeling?',
+      // Current lens — do you repair after you've been harsh?
+      'When you\'ve been too sharp, impatient, or harsh with your child, what usually happens next? (I go back and acknowledge what happened / I move on and focus on what comes next / I feel bad but don\'t usually address it directly)',
+      // Behavioral indicator
+      'How comfortable are you saying to your child: "I handled that badly and I\'m sorry" — and then sitting with their response?',
+    ],
+    lensNotes:
+      'Applies to all three lenses. Past lens captures whether the parent experienced repair ' +
+      'in their own childhood — a powerful predictor of their own repair capacity. Current lens ' +
+      'captures present-tense repair behavior. Aspirational lens captures the desire to repair ' +
+      'even when it feels uncomfortable. This dimension is clinically distinct from Emotional ' +
+      'Regulation (a parent can be well-regulated but still fail to repair) and from Emotional ' +
+      'Warmth (warmth without repair leaves ruptures unresolved). The absence of repair in ' +
+      'childhood is a key marker of several negative patterns including emotional neglect, ' +
+      'threats as discipline, and parentification.',
+  },
+
+  // -------------------------------------------------------------------------
+  // Dimension 9: Role Integrity
+  // -------------------------------------------------------------------------
+  {
+    key: 'role-integrity',
+    name: 'Role Integrity',
+    description:
+      'Whether appropriate parent-child role boundaries exist around emotional responsibility. ' +
+      'Measures the degree to which the parent carries the emotional weight of the relationship ' +
+      'rather than the child carrying it for them. Jurkovic\'s research on parentification — ' +
+      'where a child takes on the emotional caretaking role for a parent — identifies this role ' +
+      'reversal as a distinct form of developmental trauma that is often invisible because the ' +
+      'child appears competent, responsible, and "mature beyond their years." Van der Kolk\'s ' +
+      'work on relational trauma distinguishes parentification from other ACEs: the harm comes ' +
+      'not from what was done to the child but from what the child was required to carry. ' +
+      'Siegel & Hartzell identify intact role boundaries as a prerequisite for the parent to ' +
+      'be a genuine safe haven rather than a burden the child must manage.',
+    lowLabel:
+      'The child carries emotional responsibility that belongs to the parent — managing the ' +
+      'parent\'s moods, providing comfort during the parent\'s distress, mediating family ' +
+      'conflicts, or serving as the parent\'s confidant. The child may appear mature and ' +
+      'capable but at the cost of their own developmental needs. The parent may depend on ' +
+      'the child emotionally without recognizing the reversal.',
+    highLabel:
+      'The parent carries the emotional responsibility of the relationship. The child is free ' +
+      'to be a child — to have needs, make messes, and be emotionally dependent without ' +
+      'worrying about the parent\'s state. The parent manages their own emotional needs through ' +
+      'adult relationships and resources, not through the child. Role boundaries are clear ' +
+      'even when the parent is struggling.',
+    researchAnchors: [
+      'Jurkovic (1997) — Lost Childhoods: parentification as a distinct form of relational boundary violation and developmental trauma',
+      'van der Kolk (2014) — The Body Keeps the Score: parentification as developmental trauma; role reversal as distinct from other ACEs',
+      'Siegel & Hartzell (2003) — Parenting from the Inside Out: the parent as the container of emotional weight, not the child',
+      'Bowlby (1969/1982) — Attachment Theory: the attachment figure as the provider of a secure base, not the recipient of one',
+    ],
+    candidateQuestions: [
+      // Past lens — were you responsible for your parents' emotions?
+      'Growing up, how often did you feel responsible for a parent\'s emotional wellbeing — like it was your job to cheer them up, keep the peace, or make sure they were okay?',
+      // Past lens — role reversal indicator
+      'As a child, did you ever feel like you were the one taking care of your parent emotionally — being their confidant, their support, or the person who held things together?',
+      // Current lens — does your child manage your emotional state?
+      'When you\'re having a hard day, how aware are your children of your emotional state? (They usually don\'t notice / They notice but it doesn\'t change their behavior / They seem to adjust their behavior to manage my mood)',
+    ],
+    lensNotes:
+      'Applies primarily to Past and Current lenses. Past lens captures whether the parent ' +
+      'experienced parentification in their own childhood — a strong predictor of both their ' +
+      'current parenting patterns and their vulnerability to recreating role reversal with ' +
+      'their own children. Current lens captures whether the parent\'s child is carrying ' +
+      'emotional weight that belongs to the parent. This dimension is clinically distinct from ' +
+      'Autonomy Support (which measures the child\'s freedom to make decisions, not the ' +
+      'child\'s burden of emotional responsibility) and from Protective Instinct (which ' +
+      'measures anxiety-driven over-involvement, not role reversal). Low Role Integrity ' +
+      'combined with high Emotional Warmth is the signature of enmeshment; low Role Integrity ' +
+      'combined with low Emotional Warmth is the signature of instrumental parentification.',
+  },
+
+  // -------------------------------------------------------------------------
+  // Dimension 10: Reciprocity
+  // -------------------------------------------------------------------------
+  {
+    key: 'reciprocity',
+    name: 'Reciprocity',
+    description:
+      'The degree to which a parent treats the parent-child relationship as a genuinely ' +
+      'bidirectional exchange — one in which the child\'s perspective, preferences, and input ' +
+      'are actively sought and incorporated into family decisions, daily routines, and ' +
+      'conflict resolution. High scores reflect parents who share power age-appropriately, ' +
+      'negotiate rather than decree, and model cooperative problem-solving. Low scores reflect ' +
+      'a top-down authority model in which the parent sets the agenda and the child is expected ' +
+      'to comply. This dimension is conceptually distinct from Autonomy Support (which measures ' +
+      'the child\'s freedom to act independently) — Reciprocity measures the parent\'s willingness ' +
+      'to be influenced by the child within the relationship itself.',
+    lowLabel:
+      'Family decisions flow one direction — from parent to child. The child\'s opinions may be ' +
+      'heard but do not materially influence outcomes. Disagreements are resolved by parental ' +
+      'authority rather than negotiation. Love is unconditional but influence is not.',
+    highLabel:
+      'Actively seeks the child\'s input on decisions that affect them. Family conversations ' +
+      'feel collaborative rather than directive. Comfortable being influenced by the child\'s ' +
+      'perspective and adjusting plans accordingly. Models that relationships work best when ' +
+      'both parties contribute to the direction.',
+    researchAnchors: [
+      'Grusec & Davidov (2010) — Domain-specific socialization: reciprocal compliance as a distinct socialization domain separate from attachment and control',
+      'Duncan, Coatsworth & Greenberg (2009) — Mindful Parenting: bidirectional listening as a component of mindful parenting',
+      'PBDQ Factor 6 — Democratic Discipline: collaborative rule-setting and shared decision-making (Louwerse et al., 2011; PMC4456141)',
+      'Maccoby (2007) — Socialization as bidirectional process: children as active contributors to parent-child dynamics, not passive recipients',
+    ],
+    candidateQuestions: [
+      // Past lens
+      'Growing up, how often were you asked for your opinion on family decisions — and did it actually change anything?',
+      // Current/Aspirational lens
+      'When making a decision that affects your child (changing schools, weekend plans, household rules), how often do you genuinely incorporate their perspective into the final call?',
+      // Behavioral indicator
+      'How comfortable are you letting your child change your mind about something you\'d already decided?',
+    ],
+    lensNotes:
+      'Applies to all three lenses. Past lens captures whether the parent experienced a cooperative ' +
+      'vs. hierarchical family dynamic. Current lens captures whether the parent actively includes ' +
+      'the child in decision-making. This dimension is distinct from Autonomy Support: a parent can ' +
+      'grant significant independence (high AS) while still making all shared decisions unilaterally ' +
+      '(low Reciprocity). Conversely, a parent might be highly collaborative in joint decisions ' +
+      '(high Reciprocity) but still step in often during independent tasks (low AS).',
+  },
+
+  // -------------------------------------------------------------------------
+  // Dimension 11: Nonjudgmental Acceptance
+  // -------------------------------------------------------------------------
+  {
+    key: 'nonjudgmental-acceptance',
+    name: 'Nonjudgmental Acceptance',
+    description:
+      'The degree to which a parent communicates unconditional positive regard for the child — ' +
+      'acceptance of who the child is, independent of the child\'s behavior, achievements, or ' +
+      'compliance with parental expectations. High scores reflect parents who separate the child\'s ' +
+      'identity from the child\'s actions, maintain warmth even during discipline, and communicate ' +
+      'that love is not contingent on performance. Low scores reflect conditional acceptance — ' +
+      'love or approval that is visibly tied to the child meeting expectations, behaving well, or ' +
+      'reflecting well on the parent. This dimension is distinct from Emotional Warmth (which ' +
+      'measures the quantity and expressiveness of affection) — Nonjudgmental Acceptance measures ' +
+      'whether that warmth persists when the child disappoints, fails, or deviates from expectations.',
+    lowLabel:
+      'Love and approval are visibly linked to behavior and achievement. The child experiences ' +
+      'warmth as something that fluctuates based on performance — more available when they succeed ' +
+      'or comply, less available when they fail or disappoint. May use withdrawal of affection, ' +
+      'disappointment, or comparison as motivational tools.',
+    highLabel:
+      'The child experiences love as a constant — present even in moments of failure, defiance, ' +
+      'or disappointment. The parent can be firm about behavior while communicating clearly that ' +
+      'the child\'s worth is not in question. Comfortable with a child who is different from what ' +
+      'was expected or hoped for. Discipline addresses the action, never the identity.',
+    researchAnchors: [
+      'Rohner (2004) — Interpersonal Acceptance-Rejection Theory (IPARTheory): perceived parental acceptance as the single strongest cross-cultural predictor of child psychological adjustment',
+      'Kennedy (2022) — Good Inside: the child is a "good kid having a hard time"; separating behavior from identity as the core stance',
+      'Rogers (1951) — Unconditional Positive Regard as the foundational therapeutic stance, extended to parent-child relationships',
+      'Gottman (1997) — Emotion Coaching: maintaining connection and acceptance during behavioral correction',
+    ],
+    candidateQuestions: [
+      // Past lens
+      'Growing up, did you feel that your parents\' love or approval changed depending on how well you behaved, performed in school, or met their expectations?',
+      // Current/Aspirational lens
+      'When your child does something that genuinely disappoints you, how easy is it for you to communicate that the behavior was wrong without making them feel that something is wrong with them?',
+      // Behavioral indicator
+      'How often does your child hear you express pride in who they are — as opposed to what they\'ve accomplished?',
+    ],
+    lensNotes:
+      'Applies to all three lenses. Past lens captures whether the parent experienced conditional ' +
+      'vs. unconditional acceptance. Current lens captures whether the parent communicates ' +
+      'unconditional regard to their own child. This dimension is distinct from Emotional Warmth: ' +
+      'a parent can be very warm (high W) but withdraw that warmth when the child disappoints ' +
+      '(low NJA). The Devoted Champion archetype is the signature case: high warmth and investment ' +
+      'that becomes conditional under stress. Rohner\'s cross-cultural research identifies perceived ' +
+      'acceptance-rejection as a universal predictor — it operates across cultures, not within ' +
+      'specific cultural frameworks.',
   },
 ];

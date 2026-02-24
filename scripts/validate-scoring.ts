@@ -37,16 +37,21 @@ import type { DimensionProfile } from '../lib/archetypes/types';
 // ---------------------------------------------------------------------------
 // Helper: build DimensionProfile from ordered values (matches DIMENSION_KEYS order)
 // [emotional-warmth, boundary-consistency, autonomy-support, emotional-regulation,
-//  protective-instinct, narrative-coherence, presence-attunement]
+//  protective-instinct, narrative-coherence, presence-attunement,
+//  repair-reconnection, role-integrity, reciprocity, nonjudgmental-acceptance]
 // ---------------------------------------------------------------------------
 function p(
-  w: number,  // emotional-warmth
-  b: number,  // boundary-consistency
-  as: number, // autonomy-support
-  er: number, // emotional-regulation
-  pi: number, // protective-instinct
-  nc: number, // narrative-coherence
-  pa: number  // presence-attunement
+  w: number,    // emotional-warmth
+  b: number,    // boundary-consistency
+  as: number,   // autonomy-support
+  er: number,   // emotional-regulation
+  pi: number,   // protective-instinct
+  nc: number,   // narrative-coherence
+  pa: number,   // presence-attunement
+  rr: number,   // repair-reconnection
+  ri: number,   // role-integrity
+  rec: number,  // reciprocity
+  nja: number   // nonjudgmental-acceptance
 ): DimensionProfile {
   return {
     'emotional-warmth': w,
@@ -56,6 +61,10 @@ function p(
     'protective-instinct': pi,
     'narrative-coherence': nc,
     'presence-attunement': pa,
+    'repair-reconnection': rr,
+    'role-integrity': ri,
+    'reciprocity': rec,
+    'nonjudgmental-acceptance': nja,
   };
 }
 
@@ -64,7 +73,7 @@ function p(
 // ---------------------------------------------------------------------------
 interface SimulatedProfile {
   label: string;
-  category: 'A-classic' | 'B-edge' | 'C-cultural' | 'D-blended';
+  category: 'A-classic' | 'B-edge' | 'C-cultural' | 'D-blended' | 'E-negative';
   profile: DimensionProfile;
   expectedBehavior: string; // "should be X", "should be ambiguous", "should not be Y"
 }
@@ -82,102 +91,102 @@ const SIMULATED_PROFILES: SimulatedProfile[] = [
   {
     label: 'A1: Authoritative-adjacent (high W+B+ER)',
     category: 'A-classic',
-    profile: p(9, 8, 5, 8, 3, 7, 8),
+    profile: p(9, 8, 5, 8, 3, 7, 8, 7, 8, 6, 7),
     expectedBehavior: 'should be steady-anchor (authoritative archetype)',
   },
   {
     label: 'A2: Authoritarian-adjacent (high B, low W+AS)',
     category: 'A-classic',
-    profile: p(4, 9, 3, 5, 7, 5, 3),
+    profile: p(4, 9, 3, 5, 7, 5, 3, 3, 6, 3, 3),
     expectedBehavior: 'should be structured-mentor or fierce-guardian (strict, low warmth)',
   },
   {
     label: 'A3: Permissive-adjacent (high W, low B)',
     category: 'A-classic',
-    profile: p(9, 2, 8, 7, 3, 5, 9),
+    profile: p(9, 2, 8, 7, 3, 5, 9, 8, 6, 7, 9),
     expectedBehavior: 'should be gentle-nurturer (permissive pattern)',
   },
   {
     label: 'A4: Overprotective (high PI, low AS)',
     category: 'A-classic',
-    profile: p(7, 8, 2, 5, 9, 4, 4),
+    profile: p(7, 8, 2, 5, 9, 4, 4, 3, 5, 2, 4),
     expectedBehavior: 'should be fierce-guardian (high protective instinct, low autonomy)',
   },
   {
     label: 'A5: Conscious/Attuned (high PA+ER+W)',
     category: 'A-classic',
-    profile: p(8, 6, 9, 8, 2, 6, 9),
+    profile: p(8, 6, 9, 8, 2, 6, 9, 9, 8, 9, 8),
     expectedBehavior: 'should be intentional-guide (conscious parenting pattern)',
   },
   {
     label: 'A6: Earned Secure (high NC+ER+AS)',
     category: 'A-classic',
-    profile: p(8, 6, 9, 9, 5, 10, 7),
+    profile: p(8, 6, 9, 9, 5, 10, 7, 9, 7, 7, 8),
     expectedBehavior: 'should be resilient-striver (maximal narrative coherence)',
   },
   {
     label: 'A7: Disengaged (low W+B+engagement)',
     category: 'A-classic',
-    profile: p(2, 3, 4, 3, 3, 3, 2),
+    profile: p(2, 3, 4, 3, 3, 3, 2, 2, 5, 3, 3),
     expectedBehavior: 'should be structured-mentor or open-hearted-learner (low engagement) — will not be a perfect fit for any archetype',
   },
   {
     label: 'A8: Free-range adjacent (high W+AS, low B)',
     category: 'A-classic',
-    profile: p(8, 2, 9, 7, 2, 5, 8),
+    profile: p(8, 2, 9, 7, 2, 5, 8, 8, 7, 8, 8),
     expectedBehavior: 'should be gentle-nurturer or intentional-guide (very low boundaries, high autonomy)',
   },
 
   // =========================================================================
-  // Category B — Edge Cases (7 profiles)
+  // Category B — Edge Cases (8 profiles)
   // =========================================================================
 
   {
     label: 'B1: ALL dimensions at 5 (flat/indeterminate)',
     category: 'B-edge',
-    profile: p(5, 5, 5, 5, 5, 5, 5),
+    profile: p(5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5),
     expectedBehavior: 'should produce a result without crashing (any archetype is acceptable)',
   },
   {
     label: 'B2: Emotional-warmth maxed (10), all others at 3',
     category: 'B-edge',
-    profile: p(10, 3, 3, 3, 3, 3, 3),
+    profile: p(10, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3),
     expectedBehavior: 'one-dimensional warmth profile — should produce a result, likely gentle-nurturer or steady-anchor',
   },
   {
     label: 'B3: Autonomy-support maxed (10), all others at 3',
     category: 'B-edge',
-    profile: p(3, 3, 10, 3, 3, 3, 3),
+    profile: p(3, 3, 10, 3, 3, 3, 3, 3, 3, 3, 3),
     expectedBehavior: 'one-dimensional autonomy profile — should produce a result, likely intentional-guide',
   },
   {
     label: 'B4: Narrative-coherence maxed (10), all others at 3',
     category: 'B-edge',
-    profile: p(3, 3, 3, 3, 3, 10, 3),
+    profile: p(3, 3, 3, 3, 3, 10, 3, 3, 3, 3, 3),
     expectedBehavior: 'one-dimensional narrative profile — should produce a result, likely resilient-striver',
   },
   {
     label: 'B5: ALL dimensions at 9 (ceiling case)',
     category: 'B-edge',
-    profile: p(9, 9, 9, 9, 9, 9, 9),
+    profile: p(9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9),
     expectedBehavior: 'everything-high profile — should produce a result without crashing',
   },
   {
     label: 'B6: ALL dimensions at 2 (floor case)',
     category: 'B-edge',
-    profile: p(2, 2, 2, 2, 2, 2, 2),
+    profile: p(2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2),
     expectedBehavior: 'everything-low profile — should produce a result without crashing',
   },
   {
     label: 'B7: High PI (10) + Low ER (2) — trauma-suggestive',
     category: 'B-edge',
-    profile: p(6, 7, 2, 2, 10, 3, 3),
+    profile: p(6, 7, 2, 2, 10, 3, 3, 2, 5, 2, 3),
     expectedBehavior: 'should be fierce-guardian (anxious-protective, poor regulation, low narrative integration)',
   },
   {
     label: 'B8: High NC (10) + Low W (3) — intellectualized',
     category: 'B-edge',
-    profile: p(3, 6, 7, 7, 3, 10, 5),
+    profile: p(3, 6, 7, 7, 3, 10, 5, 7, 7, 6, 6),
     expectedBehavior: 'should be resilient-striver (narrative integration without emotional expressiveness)',
   },
 
@@ -188,31 +197,31 @@ const SIMULATED_PROFILES: SimulatedProfile[] = [
   {
     label: 'C1: Collectivist-adjacent (high B+W, low AS)',
     category: 'C-cultural',
-    profile: p(8, 9, 2, 6, 5, 5, 6),
-    expectedBehavior: 'should be fierce-guardian or steady-anchor (strong structure + warmth, low autonomy)',
+    profile: p(8, 9, 2, 6, 5, 5, 6, 5, 7, 3, 5),
+    expectedBehavior: 'should be devoted-champion or steady-anchor (strong structure + warmth, low autonomy, low reciprocity)',
   },
   {
     label: 'C2: Western permissive-progressive (high AS, moderate W, low B)',
     category: 'C-cultural',
-    profile: p(7, 3, 9, 7, 2, 6, 8),
-    expectedBehavior: 'should be gentle-nurturer or intentional-guide (autonomy-forward, low structure)',
+    profile: p(7, 3, 9, 7, 2, 6, 8, 8, 7, 8, 8),
+    expectedBehavior: 'should be gentle-nurturer or intentional-guide or collaborative-ally (autonomy-forward, low structure)',
   },
   {
     label: 'C3: South Asian joint-family (high PI+W+B)',
     category: 'C-cultural',
-    profile: p(8, 8, 3, 5, 8, 5, 5),
-    expectedBehavior: 'should be fierce-guardian (high protection + warmth + structure, low autonomy)',
+    profile: p(8, 8, 3, 5, 8, 5, 5, 4, 6, 2, 4),
+    expectedBehavior: 'should be fierce-guardian or devoted-champion (high protection + warmth + structure, low autonomy)',
   },
   {
     label: 'C4: Mindful parenting, culturally neutral (moderate+high PA)',
     category: 'C-cultural',
-    profile: p(7, 6, 6, 8, 3, 7, 9),
+    profile: p(7, 6, 6, 8, 3, 7, 9, 8, 8, 7, 8),
     expectedBehavior: 'should be steady-anchor or intentional-guide (balanced, high presence)',
   },
   {
     label: 'C5: Strict disciplinarian cross-cultural (high B+PI, low W)',
     category: 'C-cultural',
-    profile: p(3, 9, 4, 6, 8, 4, 3),
+    profile: p(3, 9, 4, 6, 8, 4, 3, 2, 6, 2, 2),
     expectedBehavior: 'should be fierce-guardian or structured-mentor (strict, firm, emotionally reserved)',
   },
 
@@ -223,44 +232,131 @@ const SIMULATED_PROFILES: SimulatedProfile[] = [
   {
     label: 'D1: Near-tie between steady-anchor and resilient-striver',
     category: 'D-blended',
-    profile: p(8, 7, 7, 8, 4, 8, 8),
+    profile: p(8, 7, 7, 8, 4, 8, 8, 8, 7, 7, 8),
     expectedBehavior: 'should be ambiguous between steady-anchor and resilient-striver (close call)',
   },
   {
     label: 'D2: Near-tie between gentle-nurturer and intentional-guide',
     category: 'D-blended',
-    profile: p(9, 5, 9, 8, 2, 5, 9),
+    profile: p(9, 5, 9, 8, 2, 5, 9, 8, 7, 8, 9),
     expectedBehavior: 'should be ambiguous between gentle-nurturer and intentional-guide',
   },
   {
     label: 'D3: Equidistant from 3+ archetypes (maximally ambiguous)',
     category: 'D-blended',
-    profile: p(6, 6, 6, 7, 5, 6, 7),
+    profile: p(6, 6, 6, 7, 5, 6, 7, 7, 6, 6, 6),
     expectedBehavior: 'should be ambiguous — scores close across multiple archetypes',
   },
   {
     label: 'D4: Strong resilient-striver with outlier low-warmth',
     category: 'D-blended',
-    profile: p(2, 6, 9, 9, 5, 10, 7),
+    profile: p(2, 6, 9, 9, 5, 10, 7, 9, 7, 7, 8),
     expectedBehavior: 'should be resilient-striver despite very low warmth outlier',
   },
   {
     label: 'D5: High-variance profile (some 9s, some 2s)',
     category: 'D-blended',
-    profile: p(9, 2, 9, 2, 9, 2, 9),
+    profile: p(9, 2, 9, 2, 9, 2, 9, 2, 9, 2, 9),
     expectedBehavior: 'high-variance profile — should produce a result; any archetype acceptable',
   },
   {
     label: 'D6: Low-variance profile (all 5-7, steady)',
     category: 'D-blended',
-    profile: p(6, 6, 5, 7, 5, 6, 6),
+    profile: p(6, 6, 5, 7, 5, 6, 6, 6, 6, 6, 6),
     expectedBehavior: 'low-variance balanced profile — should produce a result; likely steady-anchor adjacent',
   },
   {
     label: 'D7: Near-tie between structured-mentor and fierce-guardian',
     category: 'D-blended',
-    profile: p(5, 9, 5, 6, 5, 5, 4),
+    profile: p(5, 9, 5, 6, 5, 5, 4, 3, 6, 3, 3),
     expectedBehavior: 'should be ambiguous between structured-mentor and fierce-guardian (both high-boundary archetypes)',
+  },
+
+  // =========================================================================
+  // Category E — Negative Childhood Experience Patterns (7 profiles)
+  // =========================================================================
+  // These profiles test whether the new repair-reconnection and role-integrity
+  // dimensions allow the framework to differentiate specific negative childhood
+  // patterns that were previously collapsed into "low on various dimensions."
+
+  {
+    label: 'E1: Parentified child (high attunement + very low RI)',
+    category: 'E-negative',
+    profile: p(7, 4, 6, 7, 6, 4, 8, 5, 1, 5, 6),
+    expectedBehavior: 'should be open-hearted-learner (high attunement, low narrative coherence, very low role integrity)',
+  },
+  {
+    label: 'E2: Threats as discipline (high structure + very low RR)',
+    category: 'E-negative',
+    profile: p(3, 9, 2, 4, 8, 3, 2, 1, 6, 1, 2),
+    expectedBehavior: 'should be fierce-guardian or structured-mentor (high structure, no repair after conflict)',
+  },
+  {
+    label: 'E3: Emotional neglect (low everything + intact RI)',
+    category: 'E-negative',
+    profile: p(2, 4, 5, 3, 2, 3, 2, 2, 8, 3, 3),
+    expectedBehavior: 'should not be open-hearted-learner (low warmth/attunement distinguishes from parentification)',
+  },
+  {
+    label: 'E4: Emotional manipulation (warm surface + low RI + low RR)',
+    category: 'E-negative',
+    profile: p(8, 3, 3, 3, 6, 2, 6, 2, 2, 3, 2),
+    expectedBehavior: 'should be open-hearted-learner or devoted-champion (warm surface but no repair, reversed roles)',
+  },
+  {
+    label: 'E5: Healed parentified child (high NC + high RR + restored RI)',
+    category: 'E-negative',
+    profile: p(7, 6, 8, 8, 4, 9, 7, 9, 8, 7, 8),
+    expectedBehavior: 'should be resilient-striver (earned-secure from parentification background, repair restored)',
+  },
+  {
+    label: 'E6: Volatile/unpredictable (low across most dimensions)',
+    category: 'E-negative',
+    profile: p(4, 2, 3, 2, 7, 2, 3, 1, 3, 2, 2),
+    expectedBehavior: 'should be fierce-guardian or open-hearted-learner (volatile, low regulation, high protection)',
+  },
+  {
+    label: 'E7: Enmeshed/over-involved (high warmth + very low RI)',
+    category: 'E-negative',
+    profile: p(9, 3, 2, 6, 7, 3, 7, 6, 1, 4, 5),
+    expectedBehavior: 'should be open-hearted-learner or gentle-nurturer (warm but enmeshed, very low role integrity)',
+  },
+
+  // =========================================================================
+  // Category F — New Archetype Targeting Profiles (5 profiles)
+  // =========================================================================
+  // These profiles specifically target the two new archetypes (Devoted Champion
+  // and Collaborative Ally) to ensure they each receive at least 1 primary hit.
+
+  {
+    label: 'F1: Devoted Champion classic (high W+B, very low REC+NJA)',
+    category: 'A-classic',
+    profile: p(8, 8, 5, 6, 3, 5, 7, 5, 7, 3, 2),
+    expectedBehavior: 'should be devoted-champion (conditional warmth, low reciprocity, low acceptance)',
+  },
+  {
+    label: 'F2: Collaborative Ally classic (very high REC+NJA, high AS)',
+    category: 'A-classic',
+    profile: p(6, 4, 8, 7, 3, 7, 6, 7, 6, 10, 9),
+    expectedBehavior: 'should be collaborative-ally (democratic, cooperative, unconditional acceptance)',
+  },
+  {
+    label: 'F3: Devoted Champion variant (high investment, conditional regard)',
+    category: 'A-classic',
+    profile: p(7, 9, 4, 5, 4, 5, 6, 4, 7, 2, 2),
+    expectedBehavior: 'should be devoted-champion (high structure + investment but conditional warmth)',
+  },
+  {
+    label: 'F4: Collaborative Ally variant (egalitarian, democratic)',
+    category: 'A-classic',
+    profile: p(7, 3, 9, 7, 2, 6, 7, 8, 6, 9, 10),
+    expectedBehavior: 'should be collaborative-ally (high reciprocity + acceptance, low structure)',
+  },
+  {
+    label: 'F5: Near-tie devoted-champion vs collaborative-ally',
+    category: 'D-blended',
+    profile: p(7, 6, 6, 7, 3, 6, 6, 6, 7, 6, 5),
+    expectedBehavior: 'should be ambiguous between devoted-champion and other archetypes (mid-range on new dims)',
   },
 ];
 

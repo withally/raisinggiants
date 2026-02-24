@@ -22,7 +22,7 @@
  * - Western individualist is treated as one context among equals, not the default
  * - Overlays modify expression only; archetype identity is held constant
  *
- * 5 cultural contexts × 7 archetypes = 35 overlay entries.
+ * 5 cultural contexts × 9 archetypes = 45 overlay entries.
  *
  * Exports: CULTURAL_OVERLAYS
  */
@@ -600,6 +600,166 @@ const OPEN_HEARTED_LEARNER_OVERLAYS: CulturalOverlay[] = [
 ];
 
 // ---------------------------------------------------------------------------
+// 8. The Devoted Champion
+// ---------------------------------------------------------------------------
+
+const DEVOTED_CHAMPION_OVERLAYS: CulturalOverlay[] = [
+  {
+    culturalContext: CTX_EAST_ASIAN,
+    expressionModifier:
+      'The Devoted Champion in East Asian collectivist contexts finds strong cultural alignment — the deep investment in the child\'s success, the willingness to sacrifice personally for outcomes, and the high expectations all resonate with culturally normative parenting. The conditional quality of warmth may be less visible because conditional approval is a culturally shared pattern rather than an individual departure. The champion\'s intensity is culturally supported but may intensify the achievement-contingency of acceptance.',
+    strengthsInContext: [
+      'The deep personal investment in the child\'s outcomes aligns with cultural values of parental sacrifice and devotion to the family\'s educational and social standing — the Devoted Champion\'s intensity is culturally legible as love',
+      'High expectations combined with active support map onto the culturally honored pattern of parents who move mountains for their children\'s success — tutoring, resource provision, and environmental management',
+      'The fierce loyalty and protective advocacy for the child within institutional settings (schools, programs) is a valued parental role in contexts where parents are expected to actively manage their child\'s trajectory',
+    ],
+    tensionsInContext: [
+      'The cultural amplification of achievement-based approval can intensify the Devoted Champion\'s conditional warmth pattern — the child may experience an environment where love and worth are even more tightly coupled to performance',
+      'The collective reputation dimension means the Devoted Champion is championing not just the child but the family\'s standing, adding layers of pressure that extend beyond the parent-child relationship',
+      'Emotional restraint norms may make it harder for the Devoted Champion to express the unconditional dimension of their love, leaving the conditional dimension more visible by default',
+    ],
+  },
+  {
+    culturalContext: CTX_SOUTH_ASIAN,
+    expressionModifier:
+      'In South Asian joint-family contexts, the Devoted Champion\'s fierce advocacy for their child operates within a complex extended family system. Their championing instinct may manifest as protecting the child from family criticism, fighting for the child\'s interests within intergenerational negotiations, and ensuring the child receives the best opportunities the family can provide. The conditional warmth pattern is amplified by family honor dynamics — the child\'s achievements reflect on the entire family.',
+    strengthsInContext: [
+      'The Devoted Champion\'s advocacy role is amplified in joint-family contexts where the child\'s interests must be actively defended within a complex system of competing family needs and expectations',
+      'Deep personal sacrifice for the child\'s future is culturally honored and recognized — the Devoted Champion\'s willingness to subordinate personal needs to the child\'s outcomes is understood as the highest form of parental duty',
+      'The practical investment in the child\'s education, social connections, and marriage prospects aligns with extended family expectations and strengthens the parent\'s standing within the family hierarchy',
+    ],
+    tensionsInContext: [
+      'The joint-family system can both support and distort the championing instinct — the Devoted Champion may find themselves fighting for the child against family expectations while simultaneously using family expectations as a motivational tool',
+      'Marriage-family honor dynamics add an additional layer of conditional acceptance — the child\'s worth within the family system may be explicitly linked to achievements, matches, and social standing',
+      'The Devoted Champion\'s intense investment can be exploited by the extended family system — their willingness to sacrifice may be expected rather than appreciated, leading to depletion',
+    ],
+  },
+  {
+    culturalContext: CTX_LATIN_AMERICAN,
+    expressionModifier:
+      'The Devoted Champion in Latin American familismo contexts brings their fierce advocacy into a cultural environment that celebrates passionate parental devotion. The intensity of their love and investment is culturally legible and honored. However, the conditional quality of their warmth may be more visible in a context where unconditional emotional expressiveness is the cultural norm — the moments when warmth withdraws may be more conspicuous against a culturally warm backdrop.',
+    strengthsInContext: [
+      'The passionate, all-in quality of the Devoted Champion\'s love aligns with familismo values of deep family devotion and the parent as the child\'s fiercest advocate and supporter',
+      'The willingness to sacrifice personally for the child\'s future resonates with cultural narratives of parental sacrifice that are central to family identity in many Latin American contexts',
+      'The champion\'s protective advocacy — ensuring the child receives opportunities, fighting institutional barriers, opening doors — is a recognized and honored parental role',
+    ],
+    tensionsInContext: [
+      'In a cultural context where warmth is expected to be unconditional and freely given, the Devoted Champion\'s conditional warmth pattern may create more visible strain — the child may notice the warmth fluctuations more sharply against a culturally warm backdrop',
+      'Marianismo expectations can intensify the sacrifice dimension to the point of total self-effacement — the cultural ideal of the all-giving parent amplifies the Devoted Champion\'s tendency to subordinate their own wellbeing',
+      'The familismo value of unconditional family loyalty may conflict with the Devoted Champion\'s implicit message that love has conditions — creating internal tension for both parent and child',
+    ],
+  },
+  {
+    culturalContext: CTX_SUB_SAHARAN,
+    expressionModifier:
+      'In Sub-Saharan African community-centred contexts, the Devoted Champion\'s fierce investment in their child\'s success takes on a communal dimension — championing the child is also championing the family\'s future contribution to the community. The parent\'s intense advocacy is embedded in a network of community expectations about the child\'s potential and the family\'s investment in realizing it. Spiritual frameworks may add a sense of calling or destiny to the championing instinct.',
+    strengthsInContext: [
+      'The Devoted Champion\'s intense parental investment is embedded within communal aspirations for the child — the parent\'s advocacy is understood as contributing to the community\'s future, not just the individual child\'s success',
+      'Community and elder structures recognize and support the championing parent — the parent who fights for their child\'s opportunities is honoring their role within the intergenerational community structure',
+      'Spiritual frameworks for the child\'s potential and calling can provide a meaningful context for the Devoted Champion\'s intensity — their investment feels purposeful rather than merely anxious',
+    ],
+    tensionsInContext: [
+      'Communal child-rearing means the Devoted Champion\'s intense focus on their own child may be in tension with the expectation of more evenly distributed care across the community\'s children',
+      'The conditional warmth pattern may be amplified by communal expectations — the child represents not just the parent\'s investment but the community\'s aspirations, adding layers of performance pressure',
+      'The champion\'s advocacy for individual achievement may occasionally be in tension with communal values that prioritize collective contribution over individual distinction',
+    ],
+  },
+  {
+    culturalContext: CTX_WESTERN,
+    expressionModifier:
+      'The Devoted Champion in Western individualist contexts may encounter cultural tension from two directions: their intense investment in the child\'s outcomes aligns with achievement culture, but their conditional warmth pattern conflicts with dominant gentle parenting and unconditional positive regard frameworks. They may receive cultural messaging that celebrates their advocacy while questioning their emotional approach.',
+    strengthsInContext: [
+      'The intense investment in the child\'s development and success is culturally valued — the parent who actively champions their child\'s interests, opportunities, and outcomes is recognized and appreciated',
+      'The advocacy dimension — fighting for the child in institutional settings, removing barriers, creating opportunities — aligns with Western values of parental agency and individual empowerment',
+    ],
+    tensionsInContext: [
+      'Contemporary Western parenting discourse around unconditional positive regard and separating behavior from identity may create explicit cultural friction with the Devoted Champion\'s conditional warmth pattern — the parent may receive direct feedback that their approach is harmful even when their intentions are genuine',
+      'The therapeutic culture of Western contexts may pathologize the Devoted Champion\'s conditional acceptance as a form of emotional manipulation rather than understanding it as a genuine but flawed expression of deep investment',
+    ],
+  },
+];
+
+// ---------------------------------------------------------------------------
+// 9. The Collaborative Ally
+// ---------------------------------------------------------------------------
+
+const COLLABORATIVE_ALLY_OVERLAYS: CulturalOverlay[] = [
+  {
+    culturalContext: CTX_EAST_ASIAN,
+    expressionModifier:
+      'The Collaborative Ally in East Asian collectivist contexts faces a particular challenge: their democratic, egalitarian approach to the parent-child relationship sits in tension with hierarchical family structures and strong deference-to-elders norms. Their genuine belief in shared power and the child\'s right to influence decisions may be read as a lack of appropriate authority within cultural contexts that value clear generational hierarchy.',
+    strengthsInContext: [
+      'The Collaborative Ally\'s genuine respect for the child\'s perspective can serve as a modernizing bridge within changing cultural contexts where younger generations increasingly value individual voice and agency',
+      'The cooperative problem-solving approach creates a strong relational foundation that supports the child through the stress of high-achievement educational systems without adding parental pressure on top',
+      'The nonjudgmental acceptance that characterizes the Collaborative Ally provides a rare emotional safe harbor in contexts where approval can be tightly tied to performance',
+    ],
+    tensionsInContext: [
+      'The egalitarian orientation can be read as a failure of proper parental authority within cultural contexts that value hierarchical family structure — extended family and community may perceive the Collaborative Ally as too permissive or insufficiently serious about the parental role',
+      'The democratic decision-making style may create confusion for the child when other adults in their life (teachers, grandparents, extended family) operate from an authority-based model',
+      'The collaborative approach may undermine the child\'s ability to navigate authority structures that remain hierarchical in the broader society — school, work, and institutional settings',
+    ],
+  },
+  {
+    culturalContext: CTX_SOUTH_ASIAN,
+    expressionModifier:
+      'In South Asian joint-family contexts, the Collaborative Ally\'s cooperative, democratic approach to parenting is tested by the multi-layered authority structure of the extended family. Their belief in shared power with the child may be in direct tension with intergenerational authority expectations — the parent who treats their child as a partner may be seen as undermining the family hierarchy that extends from grandparents through parents to children.',
+    strengthsInContext: [
+      'The Collaborative Ally\'s deep acceptance and nonjudgmental stance provides a uniquely safe emotional space for children navigating the complex expectations of joint-family life',
+      'The cooperative approach models a different kind of relationship that children may find valuable as they develop their own identity within and sometimes distinct from the family system',
+      'The high reciprocity orientation can actually strengthen the parent\'s relationship with the child in ways that increase the parent\'s influence through trust rather than authority — a valuable asset when the child reaches adolescence',
+    ],
+    tensionsInContext: [
+      'The democratic orientation may create active family conflict — elder family members may view the Collaborative Ally\'s approach as disrespectful to family hierarchy and may intervene to impose traditional authority over the child',
+      'The child may be confused by receiving democratic treatment from one parent while experiencing hierarchical authority from grandparents and extended family, creating a split in their understanding of how relationships work',
+      'The cultural expectation of parental sacrifice and total devotion may frame the Collaborative Ally\'s egalitarian stance as insufficient care — "real parents" make decisions for their children rather than with them',
+    ],
+  },
+  {
+    culturalContext: CTX_LATIN_AMERICAN,
+    expressionModifier:
+      'The Collaborative Ally in Latin American familismo contexts brings their cooperative orientation into a cultural environment that values warm, close family relationships but typically within a more defined authority structure. Their nonjudgmental acceptance aligns with the emotional warmth of familismo, but their democratic approach to decision-making may feel unfamiliar in contexts where respeto includes clear parental authority.',
+    strengthsInContext: [
+      'The deep emotional warmth and unconditional acceptance of the Collaborative Ally resonate strongly with familismo values — the quality of the relational connection is culturally celebrated',
+      'The cooperative approach can be framed within familismo as deep respect for the child as a full member of the family rather than a subordinate within it — this framing makes the democratic orientation more culturally legible',
+      'The nonjudgmental stance provides an important emotional resource in cultural contexts where family expectations around conformity and loyalty can create significant internal pressure for children',
+    ],
+    tensionsInContext: [
+      'Respeto norms that include deference to parental authority may be in tension with the Collaborative Ally\'s egalitarian orientation — the parent may need to navigate between their natural style and cultural expectations about appropriate family hierarchy',
+      'Strong family cohesion values can make the democratic approach feel like it dilutes appropriate parental authority — extended family members may question the parent\'s capacity to "be in charge"',
+      'The collaborative approach to discipline may be perceived as insufficient firmness in cultural contexts where clear parental authority is understood as the structure within which family warmth operates',
+    ],
+  },
+  {
+    culturalContext: CTX_SUB_SAHARAN,
+    expressionModifier:
+      'In Sub-Saharan African community-centred contexts, the Collaborative Ally\'s democratic, cooperative orientation sits within a communal framework that distributes both care and authority across multiple adults. Their egalitarian stance toward the child may be in tension with strong elder-respect norms and community-based authority structures, but their cooperative instincts can also align with communal decision-making traditions that value consensus.',
+    strengthsInContext: [
+      'The Collaborative Ally\'s cooperative orientation can align with communal decision-making traditions that value consensus and collective input — their democratic instincts are not entirely foreign to community-centred governance models',
+      'The unconditional acceptance and nonjudgmental stance provide emotional safety within community contexts where children are subject to multiple adults\' expectations and potentially inconsistent authority',
+      'The reciprocity orientation models a relational style that can strengthen community ties — the child learns to negotiate, consider others\' perspectives, and contribute to shared decisions, which are valued community skills',
+    ],
+    tensionsInContext: [
+      'Strong elder-respect norms may position the Collaborative Ally\'s egalitarian approach to the child as a violation of the generational authority structure that community life depends on',
+      'Communal discipline expectations may require more clearly defined parental authority than the Collaborative Ally naturally provides — community members may step in to impose structure when the parent\'s cooperative approach seems insufficient',
+      'The democratic approach to the parent-child relationship may be hard to maintain when the broader community operates from authority-based models — the child receives conflicting signals about how power works in relationships',
+    ],
+  },
+  {
+    culturalContext: CTX_WESTERN,
+    expressionModifier:
+      'The Collaborative Ally is perhaps most culturally at home in Western individualist contexts, where democratic parenting, children\'s rights frameworks, and egalitarian family models are well-represented in parenting discourse. Their cooperative, nonjudgmental approach is supported by a significant strand of contemporary Western parenting culture, including collaborative problem-solving (Ross Greene), peaceful parenting, and democratic family meeting traditions.',
+    strengthsInContext: [
+      'The Collaborative Ally\'s approach is explicitly supported by multiple well-known Western parenting frameworks including collaborative problem-solving, nonviolent communication, and democratic family structures',
+      'The egalitarian orientation aligns with broader Western cultural values of individual rights and agency, applied to the parent-child relationship in ways that are culturally legible and celebrated',
+    ],
+    tensionsInContext: [
+      'The democratic orientation can sometimes be used to avoid the discomfort of being the authority when authority is genuinely needed — Western cultural support for egalitarian parenting can reinforce the Collaborative Ally\'s tendency to under-use their structural power',
+      'The individualist framing may mean the Collaborative Ally does not have access to the communal support structures that would complement their cooperative individual approach with the broader authority the child also needs',
+    ],
+  },
+];
+
+// ---------------------------------------------------------------------------
 // CULTURAL_OVERLAYS — the complete exported record
 // ---------------------------------------------------------------------------
 
@@ -630,4 +790,6 @@ export const CULTURAL_OVERLAYS: Record<ArchetypeId, CulturalOverlay[]> = {
   'resilient-striver': RESILIENT_STRIVER_OVERLAYS,
   'structured-mentor': STRUCTURED_MENTOR_OVERLAYS,
   'open-hearted-learner': OPEN_HEARTED_LEARNER_OVERLAYS,
+  'devoted-champion': DEVOTED_CHAMPION_OVERLAYS,
+  'collaborative-ally': COLLABORATIVE_ALLY_OVERLAYS,
 };

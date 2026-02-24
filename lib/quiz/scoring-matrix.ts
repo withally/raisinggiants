@@ -16,7 +16,7 @@
  * Algorithm: Normalized weighted similarity distance (NOT cosine similarity).
  * For each dimension: similarity = 1 - |user_val - archetype_val| / MAX_DELTA
  * where MAX_DELTA = 9 (scale is 1-10, max difference is 9).
- * Final score is the weighted mean across all dimensions.
+ * Final score is the weighted mean across all 11 dimensions.
  *
  * Source: RESEARCH.md §Architecture Patterns — Pattern 1: Dimensional Scoring.
  * Adapted from SWCPQ character matching methodology (openpsychometrics.org).
@@ -123,6 +123,10 @@ export const DIMENSION_WEIGHTS: Partial<Record<string, number>> = {
   // transmission mechanism — the product's core clinical IP.
   'narrative-coherence': 1.0,
   'presence-attunement': 1.0,
+  'repair-reconnection': 1.0,
+  'role-integrity': 1.0,
+  'reciprocity': 1.0,
+  'nonjudgmental-acceptance': 1.0,
 };
 
 // ---------------------------------------------------------------------------
@@ -160,7 +164,7 @@ const MAX_DELTA = 9;
  *
  * This is a normalized distance measure, NOT cosine similarity. Cosine
  * similarity is appropriate for high-dimensional text embeddings. For
- * 7 named dimensions with human-interpretable 1-10 scales, normalized
+ * 11 named dimensions with human-interpretable 1-10 scales, normalized
  * distance is simpler, more explainable, and produces equivalent rank
  * ordering. See RESEARCH.md §Architecture Patterns for full rationale.
  *

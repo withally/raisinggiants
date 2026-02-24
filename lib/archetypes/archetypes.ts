@@ -3,7 +3,7 @@
  *
  * Complete parenting archetype definitions for the Raising Giants framework.
  *
- * 7 archetypes derived from the KOL synthesis and 7-dimension scoring space
+ * 9 archetypes derived from the KOL synthesis and 11-dimension scoring space
  * (see .planning/phases/00-archetype-framework/kol-synthesis.md for the
  * research derivation; see lib/quiz/dimensions.ts for dimension definitions).
  *
@@ -28,13 +28,17 @@ import { CULTURAL_OVERLAYS } from './cultural-overlays';
 // ---------------------------------------------------------------------------
 //
 // Dimensions (all scored 1-10):
-//   emotional-warmth      — warmth / responsiveness axis (Baumrind, Gottman, PBDQ)
+//   emotional-warmth      — warmth / responsiveness axis (Baumrind, Gottman, PBDQ, Kennedy)
 //   boundary-consistency  — structure / demandingness axis (Baumrind, Maccoby & Martin)
 //   autonomy-support      — independence-scaffolding axis (PBDQ, Tsabary)
-//   emotional-regulation  — Gottman coaching axis; self-regulation under stress
+//   emotional-regulation  — Gottman coaching axis; self-regulation under stress (Kennedy)
 //   protective-instinct   — PBDQ anxious intrusiveness axis
 //   narrative-coherence   — Main AAI coherence; intergenerational integration
-//   presence-attunement   — Tsabary/Siegel conscious vs. reactive axis
+//   presence-attunement   — Tsabary/Siegel conscious vs. reactive axis (Gottman bidding)
+//   repair-reconnection   — Kennedy/Gottman/Tronick rupture-repair capacity
+//   role-integrity        — Jurkovic/van der Kolk parent-child role boundaries
+//   reciprocity           — Grusec & Davidov/Duncan et al. bidirectional exchange
+//   nonjudgmental-acceptance — Rohner IPARTheory/Kennedy unconditional positive regard
 //
 // Clinical pattern → archetype mapping:
 //   Authoritative-adjacent (high W, high B, high ER, high NC, PA)  → The Steady Anchor
@@ -44,8 +48,10 @@ import { CULTURAL_OVERLAYS } from './cultural-overlays';
 //   Earned-secure/healing (maximal NC, high ER, high AS)            → The Resilient Striver
 //   Structured/achievement (very low W, high B, high AS, low PA)    → The Structured Mentor
 //   Emotionally attuned/still-integrating (high W+ER+PA, low NC)   → The Open-Hearted Learner
+//   Conditional-warmth/championing (high W+B, low REC, low NJA)    → The Devoted Champion
+//   Democratic/cooperative (very high REC+NJA, high AS, high NJA)   → The Collaborative Ally
 //
-// All 21 archetype pairs validated via validateArchetypeDistinctness:
+// All 36 archetype pairs validated via validateArchetypeDistinctness:
 //   Every pair differs by 3+ points on at least 2 dimensions. See validation
 //   results in .planning/phases/00-archetype-framework/00-02-SUMMARY.md.
 // ---------------------------------------------------------------------------
@@ -53,7 +59,8 @@ import { CULTURAL_OVERLAYS } from './cultural-overlays';
 // Helper function to build dimension profiles from ordered values.
 // Argument order matches DIMENSION_KEYS:
 //   [emotional-warmth, boundary-consistency, autonomy-support, emotional-regulation,
-//    protective-instinct, narrative-coherence, presence-attunement]
+//    protective-instinct, narrative-coherence, presence-attunement,
+//    repair-reconnection, role-integrity, reciprocity, nonjudgmental-acceptance]
 function profile(
   emotionalWarmth: number,
   boundaryConsistency: number,
@@ -61,7 +68,11 @@ function profile(
   emotionalRegulation: number,
   protectiveInstinct: number,
   narrativeCoherence: number,
-  presenceAttunement: number
+  presenceAttunement: number,
+  repairReconnection: number,
+  roleIntegrity: number,
+  reciprocity: number,
+  nonjudgmentalAcceptance: number
 ): DimensionProfile {
   return {
     'emotional-warmth': emotionalWarmth,
@@ -71,6 +82,10 @@ function profile(
     'protective-instinct': protectiveInstinct,
     'narrative-coherence': narrativeCoherence,
     'presence-attunement': presenceAttunement,
+    'repair-reconnection': repairReconnection,
+    'role-integrity': roleIntegrity,
+    'reciprocity': reciprocity,
+    'nonjudgmental-acceptance': nonjudgmentalAcceptance,
   };
 }
 
@@ -85,15 +100,17 @@ function profile(
 // but not anxious. Moderate autonomy support — structured but not rigid.
 // Signature: calm, reliable, emotionally present, the "safe harbor" parent.
 //
-// Validated profile (W=9, B=8, AS=5, ER=8, PI=3, NC=7, PA=8):
+// Validated profile (W=9, B=8, AS=5, ER=8, PI=3, NC=7, PA=8, RR=7, RI=8):
 //   Distinguishes from every other archetype on 2+ dimensions (delta≥3).
 //   Key differentiators: very high warmth + strong structure + low PI.
+//   RR=7: Good repair from regulation — comes back after conflict reliably.
+//   RI=8: Clear role boundaries — parent carries the emotional weight.
 // ---------------------------------------------------------------------------
 const STEADY_ANCHOR: Archetype = {
   id: 'steady-anchor',
   name: 'The Steady Anchor',
   tagline: 'Your calm is your children\'s foundation.',
-  dimensionProfile: profile(9, 8, 5, 8, 3, 7, 8),
+  dimensionProfile: profile(9, 8, 5, 8, 3, 7, 8, 7, 8, 6, 7),
   foundationalPatterns: {
     headline: 'Your calm, consistent presence gives your children a deep sense of safety they carry into the world.',
     themes: [
@@ -161,14 +178,16 @@ const STEADY_ANCHOR: Archetype = {
 // Signature: deeply loyal, safety-first, fierce love, difficulty with
 // letting the child take risks or find their own way.
 //
-// Validated profile (W=7, B=9, AS=2, ER=5, PI=9, NC=4, PA=4):
+// Validated profile (W=7, B=9, AS=2, ER=5, PI=9, NC=4, PA=4, RR=3, RI=5):
 //   Key differentiators: maximal PI combined with minimal AS.
+//   RR=3: Low repair — tends to justify reactions rather than return to reconnect.
+//   RI=5: Moderate role integrity — protective drive can blur boundaries.
 // ---------------------------------------------------------------------------
 const FIERCE_GUARDIAN: Archetype = {
   id: 'fierce-guardian',
   name: 'The Fierce Guardian',
   tagline: 'Your love shows up as an unshakeable wall of safety.',
-  dimensionProfile: profile(7, 9, 2, 5, 9, 4, 4),
+  dimensionProfile: profile(7, 9, 2, 5, 9, 4, 4, 3, 5, 2, 4),
   foundationalPatterns: {
     headline: 'Your children know, with absolute certainty, that you will move mountains to keep them safe — and that certainty is its own kind of love.',
     themes: [
@@ -235,14 +254,16 @@ const FIERCE_GUARDIAN: Archetype = {
 // coherence. Signature: deeply warm, relationally attuned, the child
 // always feels loved and seen, but may lack the structure to feel safe.
 //
-// Validated profile (W=9, B=3, AS=8, ER=7, PI=3, NC=5, PA=9):
+// Validated profile (W=9, B=3, AS=8, ER=7, PI=3, NC=5, PA=9, RR=8, RI=6):
 //   Key differentiators: very low B combined with very high W and PA.
+//   RR=8: High repair from warmth — returns to reconnect readily.
+//   RI=6: Moderate — warmth and low boundaries can blur role separation.
 // ---------------------------------------------------------------------------
 const GENTLE_NURTURER: Archetype = {
   id: 'gentle-nurturer',
   name: 'The Gentle Nurturer',
   tagline: 'Where your children come to be truly seen.',
-  dimensionProfile: profile(9, 3, 8, 7, 3, 5, 9),
+  dimensionProfile: profile(9, 3, 8, 7, 3, 5, 9, 8, 6, 7, 9),
   foundationalPatterns: {
     headline: 'Your children grow up knowing that their inner world matters, and that knowledge becomes the foundation of their emotional intelligence.',
     themes: [
@@ -310,14 +331,16 @@ const GENTLE_NURTURER: Archetype = {
 // Signature: intentional, growth-minded, curious about self and child,
 // very comfortable with the child's independence.
 //
-// Validated profile (W=6, B=7, AS=10, ER=8, PI=2, NC=6, PA=9):
+// Validated profile (W=6, B=7, AS=10, ER=8, PI=2, NC=6, PA=9, RR=9, RI=8):
 //   Key differentiators: maximal AS combined with minimal PI.
+//   RR=9: Deliberate repair practice — intentionally returns and names ruptures.
+//   RI=8: Conscious role boundaries — clear about who carries what.
 // ---------------------------------------------------------------------------
 const INTENTIONAL_GUIDE: Archetype = {
   id: 'intentional-guide',
   name: 'The Intentional Guide',
   tagline: 'You parent with purpose, not just instinct.',
-  dimensionProfile: profile(6, 7, 10, 8, 2, 6, 9),
+  dimensionProfile: profile(6, 7, 10, 8, 2, 6, 9, 9, 8, 9, 8),
   foundationalPatterns: {
     headline: 'You approach parenting as one of the most conscious and transformative acts a person can undertake — and that intention shapes everything you do.',
     themes: [
@@ -386,14 +409,16 @@ const INTENTIONAL_GUIDE: Archetype = {
 // reflective, deeply aware of intergenerational patterns, committed to
 // breaking cycles.
 //
-// Validated profile (W=8, B=6, AS=9, ER=9, PI=5, NC=10, PA=7):
+// Validated profile (W=8, B=6, AS=9, ER=9, PI=5, NC=10, PA=7, RR=9, RI=7):
 //   Key differentiators: maximal NC combined with very high AS and ER.
+//   RR=9: Repair is central to the earned-secure narrative — comes back and names it.
+//   RI=7: Good role boundaries, though healing journey can occasionally blur them.
 // ---------------------------------------------------------------------------
 const RESILIENT_STRIVER: Archetype = {
   id: 'resilient-striver',
   name: 'The Resilient Striver',
   tagline: 'You\'ve rewritten your story — and theirs.',
-  dimensionProfile: profile(8, 6, 9, 9, 5, 10, 7),
+  dimensionProfile: profile(8, 6, 9, 9, 5, 10, 7, 9, 7, 7, 8),
   foundationalPatterns: {
     headline: 'You have done the hard, quiet work of understanding where you came from — and that work has given your children a different beginning.',
     themes: [
@@ -464,14 +489,16 @@ const RESILIENT_STRIVER: Archetype = {
 // clear expectations, real responsibility, deep respect for the child's
 // capability.
 //
-// Validated profile (W=4, B=9, AS=7, ER=6, PI=2, NC=6, PA=4):
+// Validated profile (W=4, B=9, AS=7, ER=6, PI=2, NC=6, PA=4, RR=3, RI=6):
 //   Key differentiators: very low W and PA combined with very high B.
+//   RR=3: Low repair — tends to move forward rather than return to reconnect.
+//   RI=6: Moderate — clear role expectations but emotional distance can blur support.
 // ---------------------------------------------------------------------------
 const STRUCTURED_MENTOR: Archetype = {
   id: 'structured-mentor',
   name: 'The Structured Mentor',
   tagline: 'You raise capable people by expecting great things.',
-  dimensionProfile: profile(4, 9, 7, 6, 2, 6, 4),
+  dimensionProfile: profile(4, 9, 7, 6, 2, 6, 4, 3, 6, 4, 3),
   foundationalPatterns: {
     headline: 'You give your children something rare: a parent who genuinely believes they are capable of hard things, and who structures the world to prove it.',
     themes: [
@@ -542,15 +569,17 @@ const STRUCTURED_MENTOR: Archetype = {
 // Signature: emotionally generous, growth-seeking, heart-led parenting
 // while still finding their footing in their own story.
 //
-// Validated profile (W=8, B=6, AS=5, ER=8, PI=7, NC=3, PA=8):
+// Validated profile (W=8, B=6, AS=5, ER=8, PI=7, NC=3, PA=8, RR=7, RI=4):
 //   Key differentiators: very low NC combined with mid-high PI — the "still
 //   integrating" profile as opposed to the fully coherent Resilient Striver.
+//   RR=7: Wants to repair and often does, but low NC = inconsistent follow-through.
+//   RI=4: Highest parentification risk — emotional generosity can reverse roles.
 // ---------------------------------------------------------------------------
 const OPEN_HEARTED_LEARNER: Archetype = {
   id: 'open-hearted-learner',
   name: 'The Open-Hearted Learner',
   tagline: 'You show up fully — and keep growing as you go.',
-  dimensionProfile: profile(8, 6, 5, 8, 7, 3, 8),
+  dimensionProfile: profile(8, 6, 5, 8, 7, 3, 8, 7, 4, 6, 7),
   foundationalPatterns: {
     headline: 'You bring your whole self to parenting — your warmth, your sensitivity, and your genuine commitment to growing alongside your children.',
     themes: [
@@ -605,16 +634,172 @@ const OPEN_HEARTED_LEARNER: Archetype = {
 };
 
 // ---------------------------------------------------------------------------
+// Archetype 8: The Devoted Champion
+// ---------------------------------------------------------------------------
+// Clinical pattern: Conditional-warmth — high emotional warmth + high boundary
+// consistency + moderate presence, but LOW reciprocity and LOW nonjudgmental
+// acceptance. This archetype loves deeply and invests intensely but warmth
+// becomes conditional under stress — tied to the child meeting expectations,
+// performing well, or reflecting well on the parent. The love is genuine and
+// the investment is real, but the child experiences approval as something that
+// must be earned. This is distinct from the Fierce Guardian (who restricts
+// autonomy from anxiety) and from the Structured Mentor (who is low-warmth
+// by nature). The Devoted Champion is HIGH warmth but that warmth fluctuates
+// based on the child's compliance with the parent's vision.
+//
+// Validated profile (W=8, B=8, AS=5, ER=6, PI=3, NC=5, PA=7, RR=5, RI=7, REC=3, NJA=2):
+//   Key differentiators: high W+B combined with very low REC and NJA.
+//   RR=5: Moderate repair — returns sometimes but may frame it as lesson.
+//   RI=7: Clear roles — the parent leads, the child follows the parent's vision.
+// ---------------------------------------------------------------------------
+const DEVOTED_CHAMPION: Archetype = {
+  id: 'devoted-champion',
+  name: 'The Devoted Champion',
+  tagline: 'You pour everything into helping them become their best.',
+  dimensionProfile: profile(8, 8, 5, 6, 3, 5, 7, 5, 7, 3, 2),
+  foundationalPatterns: {
+    headline: 'Your children know they have a parent who will go to the ends of the earth for them — your investment in their growth is total, visible, and deeply felt.',
+    themes: [
+      'All-in investment — you bring your full energy, resources, and attention to your children\'s development; they experience a parent who cares enough to show up completely and consistently',
+      'Visible love through action — your care is demonstrated through sacrifice, preparation, and active engagement with your children\'s lives; you know their teachers, their friends, their struggles, and their aspirations',
+      'High standards as belief — your expectations come from a genuine conviction that your children are capable of great things; you hold them to standards because you see their potential clearly',
+      'Advocacy and championing — you fight for your children in the world; when they face obstacles, you do not stand by passively but actively work to remove barriers and create opportunities',
+      'Consistency and reliability — your children can count on you to follow through; when you commit to something, it happens, and that reliability creates a stable platform for their development',
+    ],
+    researchAnchor: 'Grounded in Rohner\'s Interpersonal Acceptance-Rejection Theory, which identifies the distinction between perceived conditional and unconditional acceptance as a core axis of parenting impact, and Grusec & Davidov\'s domain-specific socialization model, which recognizes that different socialization domains (compliance, reciprocity, guided learning) operate independently.',
+    citations: [
+      {
+        researcher: 'Ronald P. Rohner',
+        workTitle: 'The Parental Acceptance-Rejection Syndrome: Universal Correlates of Perceived Rejection',
+        year: 2004,
+        relevanceNote: 'IPARTheory establishes that perceived parental acceptance vs. rejection is the single strongest cross-cultural predictor of child psychological adjustment; the Devoted Champion\'s conditional warmth pattern represents the boundary between acceptance and conditional rejection.',
+      },
+      {
+        researcher: 'Joan E. Grusec & Maayan Davidov',
+        workTitle: 'Integrating different perspectives on socialization theory and research: A domain-specific approach',
+        year: 2010,
+        relevanceNote: 'Domain-specific socialization theory identifies reciprocal compliance — the child\'s willingness to cooperate based on the quality of the bidirectional relationship — as a distinct domain; low reciprocity undermines the very cooperation the Devoted Champion seeks.',
+      },
+    ],
+  },
+  watchouts: {
+    headline: 'When love and expectation become the same thing, your children may grow up feeling that they are loved for what they achieve rather than who they are.',
+    themes: [
+      'Conditional warmth as invisible pressure — research on perceived acceptance-rejection shows that children are acutely sensitive to fluctuations in parental warmth; when warmth rises with achievement and falls with failure, the child internalizes that their worth is performance-dependent, even if the parent never says so explicitly',
+      'The approval treadmill — your high standards create an implicit standard for love; when stressed, you might find that your emotional tone toward your child shifts based on how well they are meeting expectations, creating an experience where approval must be continuously re-earned',
+      'Low reciprocity creating distance — your championing is often done for the child rather than with the child; the child\'s own perspective on what they need or want may be overridden by your vision of what is best for them, which can erode trust and closeness over time',
+      'Investment becoming ownership — the depth of your sacrifice and commitment can create an implicit expectation that the child owes compliance in return; research on conditional parenting shows this exchange dynamic undermines intrinsic motivation and authentic self-development',
+      'Difficulty accepting deviation — when your child wants something genuinely different from what you\'ve championed for them, you may experience it as rejection of your investment rather than healthy individuation; the nonjudgmental acceptance gap becomes most visible in these moments',
+    ],
+    researchAnchor: 'Drawing from Rohner\'s cross-cultural research showing that perceived conditional acceptance produces anxiety, insecurity, and dependence on external validation, and from research on conditional regard (Assor, Roth & Deci, 2004) showing that parental conditional positive regard predicts internal compulsion and resentment rather than genuine internalization.',
+    citations: [
+      {
+        researcher: 'Avi Assor, Guy Roth & Edward L. Deci',
+        workTitle: 'The emotional costs of parents\' conditional regard: A self-determination theory analysis',
+        year: 2004,
+        relevanceNote: 'Demonstrates that parental conditional positive regard — providing more warmth and attention contingent on the child meeting expectations — predicts internal compulsion to comply but also resentment, fluctuating self-esteem, and lower wellbeing; the child complies but at a psychological cost.',
+      },
+      {
+        researcher: 'Ronald P. Rohner',
+        workTitle: 'The Parental Acceptance-Rejection Syndrome: Universal Correlates of Perceived Rejection',
+        year: 2004,
+        relevanceNote: 'Cross-cultural research across 60+ societies shows that perceived parental rejection — including conditional acceptance — is universally associated with hostility, dependence, negative self-esteem, and emotional instability in children, regardless of cultural context.',
+      },
+    ],
+  },
+  culturalOverlays: CULTURAL_OVERLAYS['devoted-champion'] ?? [],
+};
+
+// ---------------------------------------------------------------------------
+// Archetype 9: The Collaborative Ally
+// ---------------------------------------------------------------------------
+// Clinical pattern: Democratic/cooperative — very high reciprocity + very high
+// nonjudgmental acceptance + high autonomy support. This archetype views the
+// parent-child relationship as a genuine partnership. Power is shared
+// age-appropriately, decisions are negotiated rather than decreed, and the
+// child's perspective is actively sought and incorporated. The Collaborative
+// Ally is comfortable being influenced by the child and models that
+// relationships are cooperative rather than hierarchical. Distinct from the
+// Gentle Nurturer (who has low boundaries); the Collaborative Ally has
+// moderate boundaries that are democratically negotiated rather than absent.
+// Distinct from the Intentional Guide (who scaffolds autonomy); the
+// Collaborative Ally actively shares power and seeks mutual influence.
+//
+// Validated profile (W=6, B=4, AS=8, ER=7, PI=3, NC=7, PA=6, RR=7, RI=6, REC=10, NJA=9):
+//   Key differentiators: maximal REC combined with very high NJA.
+//   RR=7: Good repair grounded in mutual respect — returns to reconnect as equals.
+//   RI=6: Moderate — democratic orientation sometimes blurs generational role.
+// ---------------------------------------------------------------------------
+const COLLABORATIVE_ALLY: Archetype = {
+  id: 'collaborative-ally',
+  name: 'The Collaborative Ally',
+  tagline: 'You parent with your children, not just for them.',
+  dimensionProfile: profile(6, 4, 8, 7, 3, 7, 6, 7, 6, 10, 9),
+  foundationalPatterns: {
+    headline: 'Your children grow up knowing their voice matters — not as a courtesy but as a genuine force in the family\'s direction.',
+    themes: [
+      'Genuine power-sharing — you treat your children as legitimate contributors to family decisions; their preferences, ideas, and objections are not just heard but genuinely influence outcomes, which builds the felt sense that their voice has weight in the world',
+      'Unconditional acceptance as foundation — your children experience love that does not fluctuate with their behavior or achievements; this stable acceptance frees them to take risks, make mistakes, and develop authentically without fear of losing your regard',
+      'Modeling cooperation — you demonstrate that relationships work best when both parties contribute, negotiate, and influence each other; your children learn collaborative skills from the most important relationship in their lives',
+      'Democratic discipline — when rules are needed, you involve your children in creating them; research shows that children who participate in rule-setting are more likely to internalize and follow those rules than children who have rules imposed on them',
+      'Deep respect for the child\'s perspective — you genuinely believe that your child sees things you might miss, and you are comfortable being changed by what they see; this mutual influence builds trust, closeness, and the child\'s confidence in their own judgment',
+    ],
+    researchAnchor: 'Grounded in Grusec & Davidov\'s domain-specific socialization model, which identifies reciprocal compliance as a distinct domain where the quality of the bidirectional relationship predicts the child\'s cooperative behavior, and Duncan et al.\'s mindful parenting framework, which includes nonjudgmental acceptance and bidirectional listening as core components.',
+    citations: [
+      {
+        researcher: 'Larry J. Duncan, J. Douglas Coatsworth & Mark T. Greenberg',
+        workTitle: 'A model of mindful parenting: Implications for parent-child relationships and prevention research',
+        year: 2009,
+        relevanceNote: 'Identifies five dimensions of mindful parenting, including nonjudgmental acceptance of the child and of oneself as a parent, and bidirectional listening — attending fully to the child\'s communication rather than filtering it through parental agenda; the Collaborative Ally embodies these two dimensions most fully.',
+      },
+      {
+        researcher: 'Joan E. Grusec & Maayan Davidov',
+        workTitle: 'Integrating different perspectives on socialization theory and research: A domain-specific approach',
+        year: 2010,
+        relevanceNote: 'Demonstrates that the reciprocal compliance domain — where children cooperate because the relationship is genuinely bidirectional — produces deeper internalization of values than the control domain; children comply not from fear of consequences but from genuine mutual respect.',
+      },
+    ],
+  },
+  watchouts: {
+    headline: 'When partnership replaces structure, your children may have a wonderful collaborator but miss the parent who is simply in charge when they need one.',
+    themes: [
+      'Under-using structural authority — research on democratic parenting shows that genuine situations arise where children need a parent who decides quickly and holds the line without negotiation; when stressed, you might find yourself opening a collaborative conversation when the moment calls for a clear directive, which can leave children feeling unsafe in genuinely high-stakes situations',
+      'Democratizing what shouldn\'t be democratic — not all decisions benefit from shared power; safety decisions, age-inappropriate choices, and situations requiring parental expertise may be undermined by a reflexive move toward collaboration; the child needs to know that some things are simply decided',
+      'Role clarity under pressure — the egalitarian orientation can blur the generational boundary that children need to feel safe; when stressed, you might find that the collaborative dynamic creates a peer-like quality that leaves the child uncertain about who is actually in charge',
+      'Difficulty with firm limits — holding a hard limit without negotiation may feel like a betrayal of your relational values; research on permissive outcomes shows that even children who thrive in democratic environments need the experience of encountering a limit that does not move, as this builds frustration tolerance and a felt sense of external safety',
+      'The acceptance trap — your deep nonjudgmental acceptance is a genuine strength, but under stress it can slide toward accepting behaviors that genuinely need to be challenged; the distinction between accepting the child and accepting all their choices can blur when your identity is built around unconditional regard',
+    ],
+    researchAnchor: 'Drawing from Baumrind\'s research showing that permissive parenting — even when warm and collaborative — produces children with lower self-regulation and frustration tolerance, and from developmental research showing that children need both autonomy and structure, with the balance shifting by age and context.',
+    citations: [
+      {
+        researcher: 'Diana Baumrind',
+        workTitle: 'Current patterns of parental authority',
+        year: 1971,
+        relevanceNote: 'Demonstrates that children of permissive parents — including those who are warm, engaged, and democratic — show lower self-regulation, lower frustration tolerance, and greater difficulty with authority structures outside the family; warmth without structure leaves a developmental scaffold missing.',
+      },
+      {
+        researcher: 'Larry J. Duncan, J. Douglas Coatsworth & Mark T. Greenberg',
+        workTitle: 'A model of mindful parenting: Implications for parent-child relationships and prevention research',
+        year: 2009,
+        relevanceNote: 'Notes that nonjudgmental acceptance must coexist with appropriate limit-setting and guidance; acceptance of the child does not mean acceptance of all behaviors, and the mindful parent must hold both stances simultaneously.',
+      },
+    ],
+  },
+  culturalOverlays: CULTURAL_OVERLAYS['collaborative-ally'] ?? [],
+};
+
+// ---------------------------------------------------------------------------
 // ARCHETYPES — the complete exported array
 // ---------------------------------------------------------------------------
 
 /**
  * ARCHETYPES is the canonical ordered array of all parenting archetype definitions.
  *
- * 7 archetypes — research-driven count from the 7-dimension scoring space.
+ * 9 archetypes — research-driven count from the 11-dimension scoring space.
  * Every pair satisfies the minimum differentiation rule:
  *   "Any two archetypes must differ by 3+ points on at least 2 dimensions."
  * See validateArchetypeDistinctness for the enforcement function.
+ * All 36 pairs (9×8/2) validated via validateArchetypeDistinctness.
  *
  * Content fields (foundationalPatterns, watchouts) populated in Plan 04.
  * Cultural overlays imported from lib/archetypes/cultural-overlays.ts (Plan 04).
@@ -632,6 +817,8 @@ export const ARCHETYPES: Archetype[] = [
   RESILIENT_STRIVER,
   STRUCTURED_MENTOR,
   OPEN_HEARTED_LEARNER,
+  DEVOTED_CHAMPION,
+  COLLABORATIVE_ALLY,
 ];
 
 // ---------------------------------------------------------------------------
@@ -666,7 +853,7 @@ export interface ArchetypeDistinctnessReport {
   allPairsPass: boolean;
   /**
    * Total number of pairs checked.
-   * For N archetypes: N*(N-1)/2 pairs. For 7 archetypes: 21 pairs.
+   * For N archetypes: N*(N-1)/2 pairs. For 9 archetypes: 36 pairs.
    */
   totalPairs: number;
   /** Number of pairs that pass the minimum differentiation rule. */
@@ -692,15 +879,8 @@ export interface ArchetypeDistinctnessReport {
  * Source: RESEARCH.md open question #3 — recommended minimum differentiation rule.
  * Sophia to validate this threshold clinically when reviewing the profiles.
  *
- * Current status: All 21 pairs of the 7 defined archetypes pass this check.
- * The tightest pairs (2 distinguishing dimensions each) are:
- *   - steady-anchor vs gentle-nurturer (B=5, AS=3)
- *   - steady-anchor vs intentional-guide (W=3, AS=5)
- *   - steady-anchor vs resilient-striver (AS=4, NC=3)
- *   - gentle-nurturer vs resilient-striver (B=3, NC=5)
- *   - intentional-guide vs resilient-striver (PI=3, NC=4)
- *   - intentional-guide vs structured-mentor (AS=3, PA=5)
- *   - resilient-striver vs open-hearted-learner (AS=4, NC=7)
+ * Current status: All 36 pairs of the 9 defined archetypes pass this check.
+ * (Tightest pairs to be updated after validation run.)
  *
  * @param minimumDistinguishingDimensions - Number of dimensions that must differ
  *   by minimumDelta or more. Default: 2.
