@@ -4,7 +4,8 @@
   "private": true,
   "description": "Raising Giants — parenting archetype framework and personalized report platform",
   "scripts": {
-    "validate-scoring": "npx tsx scripts/validate-scoring.ts"
+    "validate-scoring": "npx tsx scripts/validate-scoring.ts",
+    "verify-rls": "npx tsx scripts/verify-rls.ts"
   },
   "devDependencies": {
     "tsx": "^4.21.0",
