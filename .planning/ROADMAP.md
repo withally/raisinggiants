@@ -51,7 +51,10 @@ Plans:
   2. RLS policies are verified to work through the JavaScript SDK (not just the SQL editor)
   3. Anonymous sign-in is enabled and an anonymous user can write a quiz session and read only their own row
   4. Supabase Storage private bucket exists with signed URL access working for PDF delivery
-**Plans**: TBD
+**Plans:** 2 plans
+Plans:
+- [ ] 01-01-PLAN.md -- Supabase project init, migration SQL (schema + RLS + storage), client helpers
+- [ ] 01-02-PLAN.md -- RLS verification script + human checkpoint for end-to-end infrastructure validation
 
 ### Phase 2: Quiz Engine
 **Goal**: Users can complete the full quiz experience end-to-end, with answers persisted to Supabase on completion
@@ -136,7 +139,7 @@ Phases execute in numeric order: 0 → 1 → 2 → 3 → 4 → 5 → 6 → 7 →
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 0. Archetype Framework | 4/5 | In Progress|  |
-| 1. Data Foundation | 0/TBD | Not started | - |
+| 1. Data Foundation | 0/2 | Planned | - |
 | 2. Quiz Engine | 0/TBD | Not started | - |
 | 3. Free Result Page | 0/TBD | Not started | - |
 | 4. Payment Flow | 0/TBD | Not started | - |
