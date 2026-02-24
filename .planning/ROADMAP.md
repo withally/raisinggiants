@@ -83,7 +83,11 @@ Plans:
   2. The page shows blurred or partial PDF preview pages so users can see what they would be paying for
   3. The page explains how the user's upbringing shaped their archetype result (the transmission mechanism)
   4. A single clear CTA to purchase the full PDF guide for $14 is visible and drives to checkout
-**Plans**: TBD
+**Plans:** 3 plans
+Plans:
+- [ ] 03-01-PLAN.md -- ResultShell data fetch + ResultHero archetype reveal animation (RSLT-01)
+- [ ] 03-02-PLAN.md -- TransmissionSection, TeaserSection, PartnerTeaser content sections (RSLT-02, RSLT-03, RSLT-04)
+- [ ] 03-03-PLAN.md -- CTABlock, StickyMobileCTA, human verification checkpoint (RSLT-05)
 
 ### Phase 4: Payment Flow
 **Goal**: Users can pay $14 and the system reliably triggers PDF generation, regardless of client-side redirect behavior
@@ -147,7 +151,7 @@ Phases execute in numeric order: 0 → 1 → 2 → 3 → 4 → 5 → 6 → 7 →
 | 0. Archetype Framework | 5/5 | Complete | 2026-02-24 |
 | 1. Data Foundation | 2/2 | Complete   | 2026-02-24 |
 | 2. Quiz Engine | 4/5 | In Progress|  |
-| 3. Free Result Page | 0/TBD | Not started | - |
+| 3. Free Result Page | 0/3 | Planned | - |
 | 4. Payment Flow | 0/TBD | Not started | - |
 | 5. AI Content Generation | 0/TBD | Not started | - |
 | 6. PDF Rendering + Delivery | 0/TBD | Not started | - |
