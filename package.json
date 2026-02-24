@@ -1,0 +1,13 @@
+{
+  "name": "raisinggiants",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Raising Giants — parenting archetype framework and personalized report platform",
+  "scripts": {
+    "validate-scoring": "npx tsx scripts/validate-scoring.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.21.0",
+    "typescript": "^5.0.0"
+  }
+}
