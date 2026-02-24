@@ -53,7 +53,7 @@ Plans:
   4. Supabase Storage private bucket exists with signed URL access working for PDF delivery
 **Plans:** 2 plans
 Plans:
-- [ ] 01-01-PLAN.md -- Supabase project init, migration SQL (schema + RLS + storage), client helpers
+- [x] 01-01-PLAN.md -- Supabase project init, migration SQL (schema + RLS + storage), client helpers
 - [ ] 01-02-PLAN.md -- RLS verification script + human checkpoint for end-to-end infrastructure validation
 
 ### Phase 2: Quiz Engine
@@ -138,8 +138,8 @@ Phases execute in numeric order: 0 → 1 → 2 → 3 → 4 → 5 → 6 → 7 →
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 0. Archetype Framework | 4/5 | In Progress|  |
-| 1. Data Foundation | 0/2 | Planned | - |
+| 0. Archetype Framework | 5/5 | Complete | 2026-02-24 |
+| 1. Data Foundation | 1/2 | In Progress | - |
 | 2. Quiz Engine | 0/TBD | Not started | - |
 | 3. Free Result Page | 0/TBD | Not started | - |
 | 4. Payment Flow | 0/TBD | Not started | - |

@@ -9,19 +9,19 @@ See: .planning/PROJECT.md (updated 2026-02-23)
 
 ## Current Position
 
-Phase: 0 of 8 (Archetype Framework) — COMPLETE (provisional)
-Plan: 5 of 5 in current phase (Plan 05 complete — provisional approval; Phase 1 ready to begin)
-Status: Phase 0 complete — Phase 1 engineering may begin
-Last activity: 2026-02-24 — Plan 00-05 complete: Sophia review package v2.0 (905 lines) with provisional approval note; Sophia formal sign-off deferred but framework unblocked for Phase 1
+Phase: 1 of 8 (Data Foundation) — IN PROGRESS
+Plan: 1 of 1 in current phase (Plan 01-01 complete — Supabase schema + client helpers)
+Status: Phase 1 Plan 01 complete — Phase 2 (Quiz Engine) ready to begin
+Last activity: 2026-02-24 — Plan 01-01 complete: Supabase schema migration, RLS policies, anonymous auth, blueprints bucket, client helper files
 
-Progress: [███░░░░░░░] 14% (5/35+ plans estimated, Phase 0 complete, Phase 1 next)
+Progress: [███░░░░░░░] 17% (6/35+ plans estimated, Phase 0 complete, Phase 1 Plan 01 complete)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 4
+- Total plans completed: 6
 - Average duration: 6 min
-- Total execution time: 0.42 hours
+- Total execution time: 0.45 hours
 
 **By Phase:**
 
@@ -65,6 +65,11 @@ Recent decisions affecting current work:
 - **[00-05]** Review package updated to v2.0 to match actual framework state — prior commit had created v1.0 based on outdated 7/7 structure; v2.0 is the definitive Sophia review document
 - **[00-05]** Open-Hearted Learner selected as cultural overlay showcase (vs. Fierce Guardian in v1.0) — shows more clinically interesting cross-cultural variation in how the "still integrating" quality interacts with context
 - **[00-05]** Sophia formal sign-off deferred — proceeding with provisional approval; framework is technically validated (scoring simulation VERDICT: PASS) and clinically grounded enough to begin Phase 1 engineering; Sophia will complete formal review asynchronously
+- **[01-01]** email column on quiz_sessions is nullable — session created at quiz start before email is captured at lead gate
+- **[01-01]** JSONB used for answers and dimension_scores (not JSON) — binary storage and indexing capability
+- **[01-01]** orders INSERT/UPDATE done exclusively via service_role (Stripe webhook) — no anon INSERT policy on orders table
+- **[01-01]** createAdminClient name (not createClient) for server.ts — makes dangerous, RLS-bypassing nature obvious at all import sites
+- **[01-01]** Dual Supabase client pattern: lib/supabase/client.ts (browser, @supabase/ssr) and lib/supabase/server.ts (server-only, service_role, no NEXT_PUBLIC_ prefix)
 
 ### Pending Todos
 
@@ -87,5 +92,5 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-02-24
-Stopped at: Completed Plan 00-05 with provisional approval — Phase 0 complete; Phase 1 engineering ready to begin
-Resume file: None — begin Phase 1 (quiz engine + scoring)
+Stopped at: Completed Plan 01-01 — Supabase schema migration, RLS policies, anonymous auth, blueprints bucket, and client helper files committed
+Resume file: None — begin Phase 2 (Quiz Engine)
