@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-02-23)
 ## Current Position
 
 Phase: 2 of 8 (Quiz Engine) — IN PROGRESS
-Plan: 3 of 5 in current phase (Plan 02-03 COMPLETE — Zustand store + all quiz UI sub-components)
-Status: Phase 2 in progress — Plan 02-03 complete; ready for Plan 02-04 (QuizShell)
-Last activity: 2026-02-24 — Plan 02-03 complete: Zustand quiz store with localStorage persist, QuizCard composing OptionCard/QuizProgress/WhyWeAskThis/CulturalDropdown/QuizSectionHeader
+Plan: 4 of 5 in current phase (Plan 02-04 COMPLETE — QuizShell orchestrator, EmailCaptureScreen, ProcessingScreen, quiz route)
+Status: Phase 2 in progress — Plan 02-04 complete; ready for Plan 02-05 (final Phase 2 plan)
+Last activity: 2026-02-24 — Plan 02-04 complete: QuizShell end-to-end quiz flow (nuqs step sync, anonymous Supabase session, auto-advance, email capture, processing screen, quiz_sessions UPDATE)
 
-Progress: [█████░░░░░] 26% (9/35+ plans estimated, Phase 0 complete, Phase 1 complete, Phase 2 in progress)
+Progress: [██████░░░░] 29% (10/35+ plans estimated, Phase 0 complete, Phase 1 complete, Phase 2 in progress)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 7
+- Total plans completed: 8
 - Average duration: 6 min
-- Total execution time: 0.53 hours
+- Total execution time: 0.61 hours
 
 **By Phase:**
 
@@ -29,10 +29,10 @@ Progress: [█████░░░░░] 26% (9/35+ plans estimated, Phase 0 c
 |-------|-------|-------|----------|
 | 0. Archetype Framework | 5/5 (complete) | 40 min | 8 min |
 | 1. Data Foundation | 2/2 (complete) | 27 min | 13 min |
-| 2. Quiz Engine | 3/5 (in progress) | 25 min | 8 min |
+| 2. Quiz Engine | 4/5 (in progress) | 30 min | 8 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (2 min), 01-02 (25 min), 02-01 (15 min), 02-02 (5 min), 02-03 (5 min)
+- Last 5 plans: 01-02 (25 min), 02-01 (15 min), 02-02 (5 min), 02-03 (5 min), 02-04 (5 min)
 - Trend: steady
 
 *Updated after each plan completion*
@@ -85,6 +85,10 @@ Recent decisions affecting current work:
 - **[02-03]** CulturalDropdown uses div+button pattern over ul[role=listbox]+li[role=option] — Biome a11y rules require native interactive elements; button is inherently focusable and keyboard-accessible
 - **[02-03]** WhyWeAskThis uses CSS grid-template-rows 0fr->1fr trick for smooth height animation — no JS height measurement, pure CSS, no layout thrash
 - **[02-03]** QuizCard onAnswer wiring: QuizCard calls onAnswer on tap without delay — auto-advance timing (300ms) is QuizShell's responsibility (Plan 02-04)
+- **[02-04]** SSR-safe Zustand hydration: direct persist.hasHydrated() call in component body crashes Next.js SSR — use useState(false) + useEffect + onFinishHydration subscription
+- **[02-04]** nuqs useQueryState requires Suspense boundary in Next.js App Router — wraps useSearchParams internally; add Suspense in page.tsx
+- **[02-04]** NuqsAdapter scoped to quiz page (not root layout) — only quiz uses nuqs in Phase 2; can be promoted to layout if needed
+- **[02-04]** store.reset() not called after quiz completion — Phase 3 /result page may need localStorage session data for optimistic rendering
 
 ### Pending Todos
 
@@ -107,5 +111,5 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-02-24
-Stopped at: Completed 02-03-PLAN.md — Zustand quiz store (localStorage persist) + QuizCard + 5 sub-components created; Biome clean and TypeScript clean
-Resume file: None — Phase 2 continues; begin Plan 02-04 (QuizShell)
+Stopped at: Completed 02-04-PLAN.md — QuizShell orchestrator + EmailCaptureScreen + ProcessingScreen + quiz route page; npm run build passes cleanly
+Resume file: None — Phase 2 continues; begin Plan 02-05 (final Phase 2 plan)
