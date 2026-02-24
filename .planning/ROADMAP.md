@@ -34,13 +34,13 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Each archetype has a foundational patterns description (positive framing) and a watchouts description (shadow/risk patterns)
   4. Each archetype has a cultural context overlay document describing how cultural background modifies the archetype
   5. Sophia has validated the scoring output against 20-30 simulated answer sets and confirmed results are clinically plausible
-**Plans:** 4/5 plans executed
+**Plans:** 5/5 plans executed (Phase 0 at Sophia sign-off gate)
 Plans:
 - [x] 00-01-PLAN.md — TypeScript type contracts, KOL research synthesis, and scoring dimension definitions
 - [x] 00-02-PLAN.md — Archetype definitions with dimension profiles and scoring algorithm
 - [x] 00-03-PLAN.md — Scoring validation script with 28 simulated profiles; VERDICT: PASS
 - [x] 00-04-PLAN.md — Content outlines (foundational patterns, watchouts) and cultural context overlays
-- [ ] 00-05-PLAN.md — Sophia review package and clinical sign-off checkpoint
+- [~] 00-05-PLAN.md — Sophia review package v2.0 generated (Task 1 done); awaiting Sophia sign-off (Task 2 checkpoint)
 
 ### Phase 1: Data Foundation
 **Goal**: The database and infrastructure layer is in place so quiz sessions and orders can be persisted securely from day one

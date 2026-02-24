@@ -10,11 +10,11 @@ See: .planning/PROJECT.md (updated 2026-02-23)
 ## Current Position
 
 Phase: 0 of 8 (Archetype Framework)
-Plan: 4 of 5 in current phase (Plan 04 complete)
-Status: In progress
-Last activity: 2026-02-24 — Plan 00-04 complete: all 7 archetype content outlines populated + 35 cultural overlays created
+Plan: 5 of 5 in current phase (Plan 05 in progress — awaiting Sophia sign-off)
+Status: Checkpoint — awaiting human verification
+Last activity: 2026-02-24 — Plan 00-05 Task 1 complete: Sophia review package v2.0 generated (9 archetypes, 11 dimensions, 40 simulation profiles); stopped at Task 2 checkpoint awaiting Sophia's clinical review
 
-Progress: [█░░░░░░░░░] 11% (4/35+ plans estimated)
+Progress: [██░░░░░░░░] 13% (5/35+ plans estimated, Phase 0 at gate)
 
 ## Performance Metrics
 
@@ -27,10 +27,10 @@ Progress: [█░░░░░░░░░] 11% (4/35+ plans estimated)
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 0. Archetype Framework | 4/5 | 25 min | 6 min |
+| 0. Archetype Framework | 5/5 (at gate) | 40 min | 8 min |
 
 **Recent Trend:**
-- Last 5 plans: 00-01 (6 min), 00-02 (6 min), 00-03 (3 min), 00-04 (10 min)
+- Last 5 plans: 00-01 (6 min), 00-02 (6 min), 00-03 (3 min), 00-04 (10 min), 00-05 (15 min)
 - Trend: steady
 
 *Updated after each plan completion*
@@ -61,14 +61,20 @@ Recent decisions affecting current work:
 - **[00-04]** 5 cultural contexts selected: East Asian collectivist, South Asian joint-family, Latin American familismo, Sub-Saharan African community-centred, Western individualist — covers highest-diversity segments with distinct profiles
 - **[00-04]** Western individualist treated as full context (not empty baseline) — 3 strengths + 3 tensions per archetype; avoids treating Western as the default
 - **[00-04]** 5 themes per content section (plan allowed 3-5) — full clinical nuance of each archetype warranted maximum depth at outline stage
+- **[00-05]** Framework expanded from 7 archetypes/7 dimensions to 9 archetypes/11 dimensions before Sophia review package generated — Devoted Champion and Collaborative Ally added; Repair/Reconnection, Role Integrity, Reciprocity, NJA added as dimensions
+- **[00-05]** Review package updated to v2.0 to match actual framework state — prior commit had created v1.0 based on outdated 7/7 structure; v2.0 is the definitive Sophia review document
+- **[00-05]** Open-Hearted Learner selected as cultural overlay showcase (vs. Fierce Guardian in v1.0) — shows more clinically interesting cross-cultural variation in how the "still integrating" quality interacts with context
 
 ### Pending Todos
 
+- **BLOCKING: Sophia sign-off required** — Phase 0 gate. Share .planning/phases/00-archetype-framework/sophia-review-package.md with Sophia for clinical review and completion of 27-item sign-off checklist
 - Sophia confirmation: does Narrative Coherence apply to Current lens scoring?
 - Sophia validation: discriminant validity between Presence/Attunement and Emotional Regulation
-- Sophia review: intentional-guide low selection rate (3.6%) — clinically acceptable or needs profile adjustment?
-- Sophia review: structured-mentor as default for ambiguous profiles — clinically appropriate?
-- Plan 05 (Sophia validation): Review all 7 archetype content outlines + 35 cultural overlays for clinical accuracy and tone
+- Sophia validation: discriminant validity between Reciprocity and Autonomy Support as separate scoring axes
+- Sophia review: Repair/Reconnection, Role Integrity, NJA — independently scoreable via self-report?
+- Sophia review: intentional-guide low selection rate (2.5%) — clinically acceptable or needs profile adjustment?
+- Sophia review: flat/indeterminate profile (all dims=5) defaults to Devoted Champion — clinically appropriate?
+- Sophia review: all 9 archetype names warm and non-pathologising?
 
 ### Blockers/Concerns
 
@@ -80,5 +86,5 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-02-24
-Stopped at: Plan 00-04 complete — archetype content outlines + cultural overlays fully populated; Plan 05 (Sophia validation) is next
-Resume file: None
+Stopped at: Plan 00-05 Task 1 complete — Sophia review package v2.0 generated (905 lines, 9 archetypes, 11 dimensions); stopped at Task 2 checkpoint:human-verify awaiting Sophia's clinical review and sign-off
+Resume file: None — resume after Sophia provides sign-off or revision requests
