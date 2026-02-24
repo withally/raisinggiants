@@ -9,8 +9,8 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Archetype Framework
 
-- [ ] **ARCH-01**: 6-8 named parenting archetypes defined with distinct profiles based on Sophia's clinical knowledge
-- [ ] **ARCH-02**: Scoring logic maps quiz answers to primary archetype (handles blended results)
+- [x] **ARCH-01**: 6-8 named parenting archetypes defined with distinct profiles based on Sophia's clinical knowledge
+- [x] **ARCH-02**: Scoring logic maps quiz answers to primary archetype (handles blended results)
 - [ ] **ARCH-03**: Each archetype has foundational patterns description (positive framing of tendencies)
 - [ ] **ARCH-04**: Each archetype has specific watchouts description (shadow/risk patterns to be aware of)
 - [ ] **ARCH-05**: Each archetype has cultural context overlay (how cultural background modifies the archetype)
@@ -110,8 +110,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| ARCH-01 | Phase 0 | Pending |
-| ARCH-02 | Phase 0 | Pending |
+| ARCH-01 | Phase 0 | Complete |
+| ARCH-02 | Phase 0 | Complete |
 | ARCH-03 | Phase 0 | Pending |
 | ARCH-04 | Phase 0 | Pending |
 | ARCH-05 | Phase 0 | Pending |

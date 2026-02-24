@@ -2,7 +2,7 @@
 
 ## Overview
 
-From clinical framework to working product: Phase 0 defines the archetype system with Sophia (a hard prerequisite that blocks all engineering), then Phases 1-7 build the full product in dependency order — data foundation, quiz engine, free result page, payment flow, AI content generation, PDF rendering and delivery, and finally the landing page that wraps the complete experience. Every phase delivers a coherent, verifiable capability before the next phase begins.
+From clinical framework to working product: Phase 0 defines the archetype system with Sophia (a hard prerequisite that blocks all engineering), then Phases 1-8 build the full product in dependency order — data foundation, quiz engine, free result page, payment flow, AI content generation, PDF rendering and delivery, landing page, and finally the marketing and launch strategy that brings the product to its audience. Every phase delivers a coherent, verifiable capability before the next phase begins.
 
 ## Phases
 
@@ -20,6 +20,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [ ] **Phase 5: AI Content Generation** - Moonshot Kimi 2.5 prompts, parallel generation pipeline, async queue
 - [ ] **Phase 6: PDF Rendering + Delivery** - react-pdf document, Supabase Storage, Resend email delivery
 - [ ] **Phase 7: Landing Page + Polish** - Credibility-forward landing page, KOL signals, mobile-responsive
+- [ ] **Phase 8: Marketing + Launch Strategy** - Go-to-market plan, content marketing, social media strategy, email funnels, KOL/influencer outreach, launch campaign
 
 ## Phase Details
 
@@ -33,7 +34,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Each archetype has a foundational patterns description (positive framing) and a watchouts description (shadow/risk patterns)
   4. Each archetype has a cultural context overlay document describing how cultural background modifies the archetype
   5. Sophia has validated the scoring output against 20-30 simulated answer sets and confirmed results are clinically plausible
-**Plans:** 5 plans
+**Plans:** 1/5 plans executed
 Plans:
 - [ ] 00-01-PLAN.md — TypeScript type contracts, KOL research synthesis, and scoring dimension definitions
 - [ ] 00-02-PLAN.md — Archetype definitions with dimension profiles and scoring algorithm
@@ -119,14 +120,22 @@ Plans:
   3. A prominent quiz start CTA drives visitors into the quiz flow
   4. The entire landing page is fully mobile-responsive and loads fast on mobile connections
 
+### Phase 8: Marketing + Launch Strategy
+**Goal**: A concrete go-to-market plan is in place so the product reaches its target audience and generates first sales from launch day
+**Depends on**: Phase 7
+**Requirements**: TBD
+**Success Criteria** (what must be TRUE):
+  1. TBD — needs scoping (likely covers: launch campaign plan, content/social media strategy, email funnel design, KOL/influencer outreach plan, paid acquisition channels identified)
+**Plans**: TBD
+
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 0 → 1 → 2 → 3 → 4 → 5 → 6 → 7
+Phases execute in numeric order: 0 → 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 0. Archetype Framework | 0/5 | Planning complete | - |
+| 0. Archetype Framework | 1/5 | In Progress|  |
 | 1. Data Foundation | 0/TBD | Not started | - |
 | 2. Quiz Engine | 0/TBD | Not started | - |
 | 3. Free Result Page | 0/TBD | Not started | - |
@@ -134,3 +143,4 @@ Phases execute in numeric order: 0 → 1 → 2 → 3 → 4 → 5 → 6 → 7
 | 5. AI Content Generation | 0/TBD | Not started | - |
 | 6. PDF Rendering + Delivery | 0/TBD | Not started | - |
 | 7. Landing Page + Polish | 0/TBD | Not started | - |
+| 8. Marketing + Launch Strategy | 0/TBD | Not started | - |
