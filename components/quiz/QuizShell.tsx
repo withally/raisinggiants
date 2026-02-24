@@ -18,10 +18,25 @@ const TOTAL_QUESTIONS = QUESTIONS.length;
 
 export function QuizShell() {
   const router = useRouter();
-  const hasHydrated = useQuizStore.persist.hasHydrated();
+  const [hasHydrated, setHasHydrated] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [initError, setInitError] = useState(false);
   const sessionInitialized = useRef(false);
+
+  // SSR-safe Zustand hydration detection
+  // useQuizStore.persist.hasHydrated() is not available during SSR — use useEffect
+  useEffect(() => {
+    // Synchronous check: if already hydrated before this effect runs
+    if (useQuizStore.persist.hasHydrated()) {
+      setHasHydrated(true);
+      return;
+    }
+    // Subscribe to hydration completion for slower devices
+    const unsubscribe = useQuizStore.persist.onFinishHydration(() => {
+      setHasHydrated(true);
+    });
+    return unsubscribe;
+  }, []);
 
   // nuqs step synchronization — history:push enables browser Back button (QUIZ-03)
   const [step, setStep] = useQueryState("step", {
