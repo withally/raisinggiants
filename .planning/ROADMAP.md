@@ -66,7 +66,7 @@ Plans:
   3. User can leave mid-quiz, return later, and find their answers restored from localStorage
   4. Sensitive questions (upbringing, cultural background) show a "Why we ask this" helper text
   5. Cultural background is directly asked and the answer is stored in the quiz session for personalization downstream
-**Plans:** 5 plans in 4 waves
+**Plans:** 2/5 plans executed
 Plans:
 - [ ] 02-01-PLAN.md -- Next.js scaffold, Tailwind CSS v4, shadcn/ui, Biome, and all Phase 2 dependencies
 - [x] 02-02-PLAN.md -- Question bank (32 questions) with dimension scores and computeDimensionProfile function
@@ -146,7 +146,7 @@ Phases execute in numeric order: 0 → 1 → 2 → 3 → 4 → 5 → 6 → 7 →
 |-------|----------------|--------|-----------|
 | 0. Archetype Framework | 5/5 | Complete | 2026-02-24 |
 | 1. Data Foundation | 2/2 | Complete   | 2026-02-24 |
-| 2. Quiz Engine | 2/5 | In progress | - |
+| 2. Quiz Engine | 2/5 | In Progress|  |
 | 3. Free Result Page | 0/TBD | Not started | - |
 | 4. Payment Flow | 0/TBD | Not started | - |
 | 5. AI Content Generation | 0/TBD | Not started | - |

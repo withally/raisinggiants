@@ -29,10 +29,10 @@ Progress: [█████░░░░░] 25% (8/35+ plans estimated, Phase 0 c
 |-------|-------|-------|----------|
 | 0. Archetype Framework | 5/5 (complete) | 40 min | 8 min |
 | 1. Data Foundation | 2/2 (complete) | 27 min | 13 min |
-| 2. Quiz Engine | 2/5 (in progress) | 5 min | 5 min |
+| 2. Quiz Engine | 2/5 (in progress) | 20 min | 10 min |
 
 **Recent Trend:**
-- Last 5 plans: 00-05 (15 min), 01-01 (2 min), 01-02 (25 min), 02-01 (— min), 02-02 (5 min)
+- Last 5 plans: 00-05 (15 min), 01-01 (2 min), 01-02 (25 min), 02-01 (15 min), 02-02 (5 min)
 - Trend: steady
 
 *Updated after each plan completion*
@@ -75,6 +75,9 @@ Recent decisions affecting current work:
 - **[01-02]** No dotenv dependency added — .env.local parsed inline with Node.js fs module to avoid adding a new dependency
 - **[01-02]** Single anon SupabaseClient reused for User A and User B sessions (signOut + signInAnonymously) — no duplicate client instances needed
 - **[01-02]** Admin client used for storage bucket check — cloud Supabase denies anon bucket listing; bucket existence is infrastructure concern, not user-access RLS test
+- **[02-01]** scripts/ excluded from tsconfig.json — scripts run via npx tsx independently; pre-existing type error in validate-scoring.ts must not block Next.js TypeScript compile
+- **[02-01]** Biome 2.4.4 config shape differs from plan spec (2.0.0) — organizeImports moved to assist.actions.source, files.ignore renamed to files.experimentalScannerIgnores
+- **[02-01]** app/page.tsx is a development placeholder only — minimal "Take the Quiz" CTA linking to /quiz; Phase 7 landing page will replace it
 - **[02-02]** 32 questions (vs 25-30 target) — extra questions ensure all 11 dimensions have multiple score contributions; passes automated verify (25-35 range)
 - **[02-02]** dimensionScores allows multi-dimension scoring per option — e.g. hug-listen scores both emotional-warmth:9 and presence-attunement:9, reflecting real construct correlation
 - **[02-02]** computeDimensionProfile defaults uncovered dimensions to 5 (midpoint) not 0 — prevents extreme archetype bias from unanswered quiz sections

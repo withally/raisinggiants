@@ -20,7 +20,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **QUIZ-01**: Card-style one-question-per-screen UI with warm, conversational language
 - [ ] **QUIZ-02**: Progress bar showing completion percentage throughout quiz
 - [ ] **QUIZ-03**: Back button allowing navigation to any previous question without losing answers
-- [ ] **QUIZ-04**: Mobile-responsive layout optimized for thumb interaction
+- [x] **QUIZ-04**: Mobile-responsive layout optimized for thumb interaction
 - [x] **QUIZ-05**: "Why we ask this" helper text on sensitive questions (upbringing, cultural background)
 - [x] **QUIZ-06**: Direct cultural background questions that feed into personalization
 - [ ] **QUIZ-07**: localStorage auto-save so users can resume if they leave mid-quiz
@@ -118,7 +118,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | QUIZ-01 | Phase 2 | Pending |
 | QUIZ-02 | Phase 2 | Pending |
 | QUIZ-03 | Phase 2 | Pending |
-| QUIZ-04 | Phase 2 | Pending |
+| QUIZ-04 | Phase 2 | Complete |
 | QUIZ-05 | Phase 2 | Complete |
 | QUIZ-06 | Phase 2 | Complete |
 | QUIZ-07 | Phase 2 | Pending |
