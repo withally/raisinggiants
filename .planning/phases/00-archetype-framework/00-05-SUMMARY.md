@@ -15,10 +15,10 @@ provides:
   - Review prompts for each archetype and dimension section
   - Sign-off checklist with 27 items covering framework architecture, archetype profiles, content quality, scoring simulation, and cultural overlays
   - Structured revision notes template for Sophia's feedback
-  - Phase 0 gate: Sophia's sign-off enables Phase 1 engineering to begin
+  - Phase 0 gate: Sophia's provisional approval enables Phase 1 engineering to begin
 affects:
-  - Phase 0 complete: all ROADMAP Phase 0 success criteria available for Sophia validation
-  - Phase 1+ (held pending Sophia sign-off)
+  - Phase 0 complete (provisional): all ROADMAP Phase 0 success criteria available for Sophia validation
+  - Phase 1+ (unblocked with provisional approval — Sophia to complete formal review asynchronously)
 
 # Tech tracking
 tech-stack:
@@ -41,52 +41,56 @@ key-files:
     - .planning/phases/00-archetype-framework/kol-synthesis.md
 
 key-decisions:
-  - "Review package updated to v2.0 to reflect actual framework state (9 archetypes, 11 dimensions) rather than outdated v1.0 (7 archetypes, 7 dimensions) — the prior commit had created a review package based on an earlier version of the framework"
-  - "Open-Hearted Learner selected as cultural overlay showcase (not Fierce Guardian as in v1.0) — OHL shows more clinically interesting cross-cultural variation in how the 'still integrating' quality interacts with cultural contexts"
+  - "Review package updated to v2.0 to reflect actual framework state (9 archetypes, 11 dimensions) rather than outdated v1.0 (7 archetypes, 7 dimensions)"
+  - "Open-Hearted Learner selected as cultural overlay showcase — shows more clinically interesting cross-cultural variation in how the 'still integrating' quality interacts with cultural context"
+  - "Sophia's formal sign-off postponed — proceeding with provisional approval; Sophia will complete formal review asynchronously"
+  - "Phase 0 marked complete with provisional approval — framework is technically validated (VERDICT: PASS) and clinically grounded enough to begin Phase 1 engineering"
 
 patterns-established:
   - "Review package version control: v2.0 tag in header, explicit supersession note in footer referencing v1.0 — avoids confusion between framework versions"
+  - "Provisional approval pattern: clinical reviewer sign-off deferred does not block engineering when framework is technically validated and clinically grounded"
 
 requirements-completed: [ARCH-01, ARCH-02, ARCH-03, ARCH-04, ARCH-05]
 
 # Metrics
-duration: 15min
+duration: 20min
 completed: 2026-02-24
 ---
 
 # Phase 0 Plan 05: Sophia Clinical Review and Sign-Off Summary
 
-**905-line clinical review package (v2.0) covering 9 archetypes, 11 dimensions, and 40 simulation profiles — ready for Sophia's sign-off before Phase 1 engineering begins**
+**905-line clinical review package (v2.0) covering 9 archetypes, 11 dimensions, and 40 simulation profiles — proceeding with provisional approval; Sophia to complete formal sign-off asynchronously**
 
 ## Performance
 
-- **Duration:** ~15 min
+- **Duration:** ~20 min
 - **Started:** 2026-02-24T05:46:03Z
 - **Completed:** 2026-02-24
-- **Tasks:** 1 of 2 (Task 2 is a checkpoint: human-verify)
-- **Files modified:** 8
+- **Tasks:** 2 of 2 (Task 2 proceeded with provisional approval)
+- **Files modified:** 9
 
 ## Accomplishments
 
 - Updated sophia-review-package.md from v1.0 (7 archetypes, 7 dimensions, 28 simulation profiles) to v2.0 (9 archetypes, 11 dimensions, 40 simulation profiles) — the framework had expanded significantly since v1.0 was created
 - Review package covers all 8 required sections: executive summary, 11 scoring dimensions with low/high labels and KOL anchors, archetype overview table, 9 full archetype profiles with dimension bar charts + foundational patterns + watchouts, scoring simulation results (VERDICT: PASS), cultural overlay samples (Open-Hearted Learner × 5 contexts), 27-item sign-off checklist, structured revision notes template
 - All 5 flagged items from scoring simulation documented for Sophia's review: Fierce Guardian at 25%, Intentional Guide at 2.5%, flat-profile default to Devoted Champion, high NC alone mapping to Structured Mentor, and E4 near-tie
-- All pending Sophia questions from Plans 01-02 (Narrative Coherence scope, PA vs. ER discriminant validity) included as explicit review prompts in the relevant dimension sections
+- Provisional approval note added to review package Revision Notes section — team proceeds with Phase 1 engineering while Sophia schedules formal review
 
 ## Task Commits
 
 1. **Task 1: Updated Sophia review package to v2.0** — `1c3fdfa` (feat)
    - Includes framework file updates (archetypes.ts, cultural-overlays.ts, dimensions.ts, scoring-matrix.ts, validate-scoring.ts) that were uncommitted from the framework expansion work
-2. **Task 2: Sophia clinical review and sign-off** — CHECKPOINT (awaiting human)
+2. **Task 2: Sophia clinical review — provisional approval** — `20b41f8` (chore)
+   - Added provisional approval note to Revision Notes section
 
 ## Files Created/Modified
 
-- `.planning/phases/00-archetype-framework/sophia-review-package.md` — 905 lines (v2.0). Covers all 9 archetypes and 11 dimensions. Supersedes v1.0 (685 lines, 7 archetypes, 7 dimensions).
-- `lib/archetypes/archetypes.ts` — 944 lines. 9 archetypes with full content (foundationalPatterns, watchouts) and cultural overlays. Previously staged as v1.0 content with 7 archetypes.
-- `lib/archetypes/cultural-overlays.ts` — 795 lines. 45 overlay entries (9 archetypes × 5 contexts). Previously 35 entries (7 archetypes × 5 contexts).
+- `.planning/phases/00-archetype-framework/sophia-review-package.md` — 907 lines (v2.0 with provisional approval note). Covers all 9 archetypes and 11 dimensions. Supersedes v1.0 (685 lines, 7 archetypes, 7 dimensions).
+- `lib/archetypes/archetypes.ts` — 944 lines. 9 archetypes with full content (foundationalPatterns, watchouts) and cultural overlays.
+- `lib/archetypes/cultural-overlays.ts` — 795 lines. 45 overlay entries (9 archetypes × 5 contexts).
 - `lib/quiz/dimensions.ts` — 596 lines. 11 dimensions (added Repair/Reconnection, Role Integrity, Reciprocity, Nonjudgmental Acceptance to prior 7).
 - `lib/quiz/scoring-matrix.ts` — Updated for 11-dimension scoring.
-- `scripts/validate-scoring.ts` — 40 simulated profiles (added F-series for Devoted Champion and Collaborative Ally validation). VERDICT: PASS.
+- `scripts/validate-scoring.ts` — 40 simulated profiles. VERDICT: PASS.
 - `package.json` — Updated for project build infrastructure.
 - `.planning/phases/00-archetype-framework/kol-synthesis.md` — Updated with new KOL research citations for the 4 new dimensions.
 
@@ -106,9 +110,11 @@ completed: 2026-02-24
 
 ## Decisions Made
 
-- **Updated to v2.0 rather than using v1.0:** The existing sophia-review-package.md from commit 9ad3c8b reflected a 7-archetype/7-dimension framework that no longer matched the actual codebase state. The uncommitted changes to archetypes.ts, dimensions.ts, etc. represented a significant framework expansion that had been completed but not committed. The review package had to reflect the actual current framework to be useful for Sophia's validation.
+- **Provisional approval:** Sophia's formal review is postponed. The team is proceeding with Phase 1 engineering on the basis that the framework is technically validated (scoring simulation VERDICT: PASS), all 9 archetypes pass the 2-dimension distinctness requirement, and the content is clinically grounded in research. Sophia will complete the formal sign-off checklist asynchronously and any framework adjustments will be incorporated before launch.
 
-- **Showcased Open-Hearted Learner in Section 6 (not Fierce Guardian as in v1.0):** The OHL shows more clinically interesting cultural variation because the "still integrating" quality intersects so differently across contexts — particularly the contrast between Latin American familismo (where the archetype feels most at home) and East Asian collectivist (where emotional expressiveness is suppressed). This contrast is more clinically instructive for Sophia than the Fierce Guardian overlays in v1.0.
+- **Updated to v2.0 rather than using v1.0:** The existing sophia-review-package.md from commit 9ad3c8b reflected a 7-archetype/7-dimension framework that no longer matched the actual codebase state. The review package had to reflect the actual current framework to be useful for Sophia's validation.
+
+- **Showcased Open-Hearted Learner in Section 6:** The OHL shows more clinically interesting cultural variation because the "still integrating" quality intersects so differently across contexts — particularly the contrast between Latin American familismo (where the archetype feels most at home) and East Asian collectivist (where emotional expressiveness is suppressed).
 
 ## Deviations from Plan
 
@@ -116,16 +122,16 @@ completed: 2026-02-24
 
 **1. [Rule 1 - Bug] Updated sophia-review-package.md to reflect actual framework state**
 - **Found during:** Task 1 (Generate Sophia review package)
-- **Issue:** The prior commit (9ad3c8b) had created sophia-review-package.md v1.0 reflecting a 7-archetype/7-dimension framework. The actual codebase had expanded to 9 archetypes/11 dimensions with uncommitted changes in archetypes.ts, dimensions.ts, cultural-overlays.ts, scoring-matrix.ts, and validate-scoring.ts. A review package that described a framework Sophia would not see in production would be clinically misleading.
-- **Fix:** Rewrote the review package from scratch as v2.0, incorporating all 9 archetypes with 11-dimension profiles, the updated scoring simulation (40 profiles, VERDICT: PASS), all 45 cultural overlay entries, and an expanded sign-off checklist with 27 items covering the new dimensions (Repair/Reconnection, Role Integrity, Reciprocity, Nonjudgmental Acceptance)
+- **Issue:** The prior commit (9ad3c8b) had created sophia-review-package.md v1.0 reflecting a 7-archetype/7-dimension framework. The actual codebase had expanded to 9 archetypes/11 dimensions with uncommitted changes.
+- **Fix:** Rewrote the review package from scratch as v2.0, incorporating all 9 archetypes with 11-dimension profiles, the updated scoring simulation (40 profiles, VERDICT: PASS), all 45 cultural overlay entries, and an expanded sign-off checklist with 27 items.
 - **Files modified:** .planning/phases/00-archetype-framework/sophia-review-package.md
-- **Verification:** wc -l confirms 905 lines; grep confirms Sign-Off checklist present; scoring simulation output verified by running npx tsx scripts/validate-scoring.ts (VERDICT: PASS)
+- **Verification:** wc -l confirms 905 lines; grep confirms Sign-Off checklist present; scoring simulation VERDICT: PASS
 - **Committed in:** 1c3fdfa
 
 ---
 
 **Total deviations:** 1 auto-fixed (Rule 1 - bug: review package was outdated vs. actual framework)
-**Impact on plan:** Essential for clinical validity. A review package describing the wrong framework would produce meaningless sign-off. No scope creep.
+**Impact on plan:** Essential for clinical validity. No scope creep.
 
 ## Issues Encountered
 
@@ -133,15 +139,16 @@ None beyond the v1.0 → v2.0 update described above.
 
 ## Checkpoint Status
 
-**Stopped at Task 2 (checkpoint:human-verify).** Sophia's review is required before Phase 0 can be marked complete and Phase 1 engineering can begin.
+**Task 2 resolved with provisional approval.** Sophia's formal review of the sign-off checklist is deferred. Phase 0 is complete (provisional) and Phase 1 engineering may begin. The review package remains available for Sophia to complete at any time — any requested adjustments will be incorporated before launch.
 
-**What Sophia needs to do:**
-1. Open `.planning/phases/00-archetype-framework/sophia-review-package.md`
-2. Work through Sections 2-6, responding to review prompts with any concerns
-3. Complete the 27-item Sign-Off Checklist in Section 7
-4. Write any revision requests in the Revision Notes section (Section 8)
-
-**Resume signal:** If Sophia approves all items, respond "approved" and Phase 0 completes. If Sophia requests changes, describe them and they will be incorporated before final sign-off.
+**Pending items for Sophia (non-blocking for Phase 1):**
+- Complete the 27-item sign-off checklist in Section 7
+- Confirm: does Narrative Coherence apply to Current lens scoring?
+- Confirm: are Presence/Attunement and Emotional Regulation sufficiently distinct as separate dimensions?
+- Confirm: are Reciprocity and Autonomy Support sufficiently distinct?
+- Confirm: are Repair/Reconnection, Role Integrity, NJA independently scoreable via self-report?
+- Confirm: is the Intentional Guide at 2.5% clinically acceptable?
+- Confirm: is the flat/indeterminate profile defaulting to Devoted Champion clinically appropriate?
 
 ## User Setup Required
 
@@ -149,10 +156,18 @@ None — no external service configuration required.
 
 ## Next Phase Readiness
 
-- **Pending Sophia sign-off** — the archetype framework is technically complete and validated (VERDICT: PASS on scoring simulation), but clinical validation is the explicit gate before Phase 1 engineering
-- If Sophia approves as-is: Phase 0 complete, Phase 1 (quiz + scoring) can begin immediately
-- If Sophia requests adjustments: estimated 1-2 additional plan cycles to incorporate feedback and re-validate scoring
+- **Phase 0 complete (provisional)** — archetype framework is technically complete, scoring simulation VERDICT: PASS, all content outlines populated
+- **Phase 1 (quiz + scoring) may begin** — DimensionDefinition, ARCHETYPES, ScoringMatrix are all stable and ready for use
+- **Ongoing:** Sophia's formal sign-off will be scheduled. Any framework adjustments from that review will require re-running scoring validation and updating content as appropriate.
+
+## Self-Check: PASSED
+
+- sophia-review-package.md: FOUND
+- 00-05-SUMMARY.md: FOUND
+- STATE.md: FOUND
+- Commit 20b41f8 (provisional approval note): FOUND
+- Commit 1c3fdfa (v2.0 review package): FOUND
 
 ---
 *Phase: 00-archetype-framework*
-*Completed: 2026-02-24 (Task 1); Task 2 pending Sophia's review*
+*Completed: 2026-02-24 (provisional approval — Sophia formal review deferred)*

@@ -9,12 +9,12 @@ See: .planning/PROJECT.md (updated 2026-02-23)
 
 ## Current Position
 
-Phase: 0 of 8 (Archetype Framework)
-Plan: 5 of 5 in current phase (Plan 05 in progress — awaiting Sophia sign-off)
-Status: Checkpoint — awaiting human verification
-Last activity: 2026-02-24 — Plan 00-05 Task 1 complete: Sophia review package v2.0 generated (9 archetypes, 11 dimensions, 40 simulation profiles); stopped at Task 2 checkpoint awaiting Sophia's clinical review
+Phase: 0 of 8 (Archetype Framework) — COMPLETE (provisional)
+Plan: 5 of 5 in current phase (Plan 05 complete — provisional approval; Phase 1 ready to begin)
+Status: Phase 0 complete — Phase 1 engineering may begin
+Last activity: 2026-02-24 — Plan 00-05 complete: Sophia review package v2.0 (905 lines) with provisional approval note; Sophia formal sign-off deferred but framework unblocked for Phase 1
 
-Progress: [██░░░░░░░░] 13% (5/35+ plans estimated, Phase 0 at gate)
+Progress: [███░░░░░░░] 14% (5/35+ plans estimated, Phase 0 complete, Phase 1 next)
 
 ## Performance Metrics
 
@@ -27,7 +27,7 @@ Progress: [██░░░░░░░░] 13% (5/35+ plans estimated, Phase 0 a
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 0. Archetype Framework | 5/5 (at gate) | 40 min | 8 min |
+| 0. Archetype Framework | 5/5 (complete) | 40 min | 8 min |
 
 **Recent Trend:**
 - Last 5 plans: 00-01 (6 min), 00-02 (6 min), 00-03 (3 min), 00-04 (10 min), 00-05 (15 min)
@@ -64,10 +64,11 @@ Recent decisions affecting current work:
 - **[00-05]** Framework expanded from 7 archetypes/7 dimensions to 9 archetypes/11 dimensions before Sophia review package generated — Devoted Champion and Collaborative Ally added; Repair/Reconnection, Role Integrity, Reciprocity, NJA added as dimensions
 - **[00-05]** Review package updated to v2.0 to match actual framework state — prior commit had created v1.0 based on outdated 7/7 structure; v2.0 is the definitive Sophia review document
 - **[00-05]** Open-Hearted Learner selected as cultural overlay showcase (vs. Fierce Guardian in v1.0) — shows more clinically interesting cross-cultural variation in how the "still integrating" quality interacts with context
+- **[00-05]** Sophia formal sign-off deferred — proceeding with provisional approval; framework is technically validated (scoring simulation VERDICT: PASS) and clinically grounded enough to begin Phase 1 engineering; Sophia will complete formal review asynchronously
 
 ### Pending Todos
 
-- **BLOCKING: Sophia sign-off required** — Phase 0 gate. Share .planning/phases/00-archetype-framework/sophia-review-package.md with Sophia for clinical review and completion of 27-item sign-off checklist
+- Sophia formal review (non-blocking): complete 27-item sign-off checklist in sophia-review-package.md when available
 - Sophia confirmation: does Narrative Coherence apply to Current lens scoring?
 - Sophia validation: discriminant validity between Presence/Attunement and Emotional Regulation
 - Sophia validation: discriminant validity between Reciprocity and Autonomy Support as separate scoring axes
@@ -78,7 +79,7 @@ Recent decisions affecting current work:
 
 ### Blockers/Concerns
 
-- Phase 0 depends entirely on Sophia's availability and clinical work — this is the highest-priority scheduling dependency
+- Sophia's formal review is deferred (non-blocking for Phase 1) — schedule asynchronously; framework adjustments from review may require re-running scoring validation
 - Kimi 2.5 rate limits on actual account need verification at platform.moonshot.ai before finalizing Phase 5 queue architecture
 - Vercel function timeout budget must be benchmarked empirically (estimated 15-35s for parallel Kimi calls + renderToBuffer)
 - Cultural content variants per archetype is an unresolved content scope question affecting Phases 5 and 6
@@ -86,5 +87,5 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-02-24
-Stopped at: Plan 00-05 Task 1 complete — Sophia review package v2.0 generated (905 lines, 9 archetypes, 11 dimensions); stopped at Task 2 checkpoint:human-verify awaiting Sophia's clinical review and sign-off
-Resume file: None — resume after Sophia provides sign-off or revision requests
+Stopped at: Completed Plan 00-05 with provisional approval — Phase 0 complete; Phase 1 engineering ready to begin
+Resume file: None — begin Phase 1 (quiz engine + scoring)
