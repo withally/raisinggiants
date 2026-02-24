@@ -13,7 +13,7 @@ From clinical framework to working product: Phase 0 defines the archetype system
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 0: Archetype Framework** - Define 6-8 clinical archetypes with Sophia, scoring logic, and content descriptions (completed 2026-02-24)
-- [ ] **Phase 1: Data Foundation** - Supabase schema, RLS policies, Storage, and anonymous auth configured
+- [x] **Phase 1: Data Foundation** - Supabase schema, RLS policies, Storage, and anonymous auth configured (completed 2026-02-24)
 - [ ] **Phase 2: Quiz Engine** - Full quiz UI with scoring, persistence, and Supabase session write
 - [ ] **Phase 3: Free Result Page** - Archetype result display with teaser content and purchase CTA
 - [ ] **Phase 4: Payment Flow** - Stripe Checkout, webhook-triggered fulfillment, and success page
@@ -51,7 +51,7 @@ Plans:
   2. RLS policies are verified to work through the JavaScript SDK (not just the SQL editor)
   3. Anonymous sign-in is enabled and an anonymous user can write a quiz session and read only their own row
   4. Supabase Storage private bucket exists with signed URL access working for PDF delivery
-**Plans:** 2 plans
+**Plans:** 2/2 plans complete
 Plans:
 - [x] 01-01-PLAN.md -- Supabase project init, migration SQL (schema + RLS + storage), client helpers
 - [ ] 01-02-PLAN.md -- RLS verification script + human checkpoint for end-to-end infrastructure validation
@@ -139,7 +139,7 @@ Phases execute in numeric order: 0 → 1 → 2 → 3 → 4 → 5 → 6 → 7 →
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 0. Archetype Framework | 5/5 | Complete | 2026-02-24 |
-| 1. Data Foundation | 1/2 | In Progress | - |
+| 1. Data Foundation | 2/2 | Complete   | 2026-02-24 |
 | 2. Quiz Engine | 0/TBD | Not started | - |
 | 3. Free Result Page | 0/TBD | Not started | - |
 | 4. Payment Flow | 0/TBD | Not started | - |
