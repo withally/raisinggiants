@@ -69,7 +69,7 @@ Plans:
 **Plans:** 5 plans in 4 waves
 Plans:
 - [ ] 02-01-PLAN.md -- Next.js scaffold, Tailwind CSS v4, shadcn/ui, Biome, and all Phase 2 dependencies
-- [ ] 02-02-PLAN.md -- Question bank (25-30 questions) with dimension scores and computeDimensionProfile function
+- [x] 02-02-PLAN.md -- Question bank (32 questions) with dimension scores and computeDimensionProfile function
 - [ ] 02-03-PLAN.md -- Zustand store with localStorage persistence, quiz UI sub-components (OptionCard, QuizProgress, WhyWeAskThis, CulturalDropdown, QuizSectionHeader, QuizCard)
 - [ ] 02-04-PLAN.md -- QuizShell orchestrator, EmailCapture, ProcessingScreen, nuqs step sync, Supabase session write, completion flow
 - [ ] 02-05-PLAN.md -- Human verification checkpoint for end-to-end quiz experience
@@ -146,7 +146,7 @@ Phases execute in numeric order: 0 → 1 → 2 → 3 → 4 → 5 → 6 → 7 →
 |-------|----------------|--------|-----------|
 | 0. Archetype Framework | 5/5 | Complete | 2026-02-24 |
 | 1. Data Foundation | 2/2 | Complete   | 2026-02-24 |
-| 2. Quiz Engine | 0/5 | Not started | - |
+| 2. Quiz Engine | 2/5 | In progress | - |
 | 3. Free Result Page | 0/TBD | Not started | - |
 | 4. Payment Flow | 0/TBD | Not started | - |
 | 5. AI Content Generation | 0/TBD | Not started | - |

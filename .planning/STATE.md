@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-02-23)
 
 **Core value:** Parents feel deeply seen and understood about their upbringing — the personalized output must feel written specifically for them, grounded in credible research, and create a bridge for meaningful conversations with loved ones.
-**Current focus:** Phase 1 - Data Foundation
+**Current focus:** Phase 2 - Quiz Engine
 
 ## Current Position
 
-Phase: 1 of 8 (Data Foundation) — COMPLETE
-Plan: 2 of 2 in current phase (Plan 01-02 COMPLETE — all 8 RLS tests passed against cloud Supabase, human-approved)
-Status: Phase 1 complete — both plans done; ready to begin Phase 2 (Quiz Engine)
-Last activity: 2026-02-24 — Plan 01-02 complete: RLS verification script all 8 tests passed against cloud Supabase, human-verified schema in Supabase Studio
+Phase: 2 of 8 (Quiz Engine) — IN PROGRESS
+Plan: 2 of 5 in current phase (Plan 02-02 COMPLETE — question bank + computeDimensionProfile verified)
+Status: Phase 2 in progress — Plan 02-02 complete; ready for Plan 02-03 (Quiz Store)
+Last activity: 2026-02-24 — Plan 02-02 complete: 32-question bank and computeDimensionProfile function, end-to-end scoring verified
 
-Progress: [████░░░░░░] 20% (7/35+ plans estimated, Phase 0 complete, Phase 1 complete)
+Progress: [█████░░░░░] 25% (8/35+ plans estimated, Phase 0 complete, Phase 1 complete, Phase 2 in progress)
 
 ## Performance Metrics
 
@@ -29,9 +29,10 @@ Progress: [████░░░░░░] 20% (7/35+ plans estimated, Phase 0 c
 |-------|-------|-------|----------|
 | 0. Archetype Framework | 5/5 (complete) | 40 min | 8 min |
 | 1. Data Foundation | 2/2 (complete) | 27 min | 13 min |
+| 2. Quiz Engine | 2/5 (in progress) | 5 min | 5 min |
 
 **Recent Trend:**
-- Last 5 plans: 00-03 (3 min), 00-04 (10 min), 00-05 (15 min), 01-01 (2 min), 01-02 (25 min)
+- Last 5 plans: 00-05 (15 min), 01-01 (2 min), 01-02 (25 min), 02-01 (— min), 02-02 (5 min)
 - Trend: steady
 
 *Updated after each plan completion*
@@ -74,6 +75,10 @@ Recent decisions affecting current work:
 - **[01-02]** No dotenv dependency added — .env.local parsed inline with Node.js fs module to avoid adding a new dependency
 - **[01-02]** Single anon SupabaseClient reused for User A and User B sessions (signOut + signInAnonymously) — no duplicate client instances needed
 - **[01-02]** Admin client used for storage bucket check — cloud Supabase denies anon bucket listing; bucket existence is infrastructure concern, not user-access RLS test
+- **[02-02]** 32 questions (vs 25-30 target) — extra questions ensure all 11 dimensions have multiple score contributions; passes automated verify (25-35 range)
+- **[02-02]** dimensionScores allows multi-dimension scoring per option — e.g. hug-listen scores both emotional-warmth:9 and presence-attunement:9, reflecting real construct correlation
+- **[02-02]** computeDimensionProfile defaults uncovered dimensions to 5 (midpoint) not 0 — prevents extreme archetype bias from unanswered quiz sections
+- **[02-02]** Cultural background question has empty dimensionScores — explicitly metadata, not scored; consistent with QUIZ-06 spec
 
 ### Pending Todos
 
@@ -96,5 +101,5 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-02-24
-Stopped at: Completed 01-02-PLAN.md — Phase 1 (Data Foundation) complete; all 8 RLS verification tests passed against cloud Supabase; human-approved
-Resume file: None — Phase 1 complete; begin Phase 2 (Quiz Engine)
+Stopped at: Completed 02-02-PLAN.md — 32-question bank and computeDimensionProfile function complete; end-to-end scoring verified (answers -> DimensionProfile -> valid archetype result)
+Resume file: None — Phase 2 continues; begin Plan 02-03 (Quiz Store)

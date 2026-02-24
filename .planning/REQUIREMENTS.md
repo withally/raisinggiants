@@ -21,10 +21,10 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **QUIZ-02**: Progress bar showing completion percentage throughout quiz
 - [ ] **QUIZ-03**: Back button allowing navigation to any previous question without losing answers
 - [ ] **QUIZ-04**: Mobile-responsive layout optimized for thumb interaction
-- [ ] **QUIZ-05**: "Why we ask this" helper text on sensitive questions (upbringing, cultural background)
-- [ ] **QUIZ-06**: Direct cultural background questions that feed into personalization
+- [x] **QUIZ-05**: "Why we ask this" helper text on sensitive questions (upbringing, cultural background)
+- [x] **QUIZ-06**: Direct cultural background questions that feed into personalization
 - [ ] **QUIZ-07**: localStorage auto-save so users can resume if they leave mid-quiz
-- [ ] **QUIZ-08**: Quiz is 10-20 minutes with questions grounded in research from top 100 parenting KOLs
+- [x] **QUIZ-08**: Quiz is 10-20 minutes with questions grounded in research from top 100 parenting KOLs
 
 ### Free Result Page
 
@@ -119,10 +119,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | QUIZ-02 | Phase 2 | Pending |
 | QUIZ-03 | Phase 2 | Pending |
 | QUIZ-04 | Phase 2 | Pending |
-| QUIZ-05 | Phase 2 | Pending |
-| QUIZ-06 | Phase 2 | Pending |
+| QUIZ-05 | Phase 2 | Complete |
+| QUIZ-06 | Phase 2 | Complete |
 | QUIZ-07 | Phase 2 | Pending |
-| QUIZ-08 | Phase 2 | Pending |
+| QUIZ-08 | Phase 2 | Complete |
 | RSLT-01 | Phase 3 | Pending |
 | RSLT-02 | Phase 3 | Pending |
 | RSLT-03 | Phase 3 | Pending |
@@ -156,4 +156,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-02-23*
-*Last updated: 2026-02-24 — ARCH-03, ARCH-04, ARCH-05 marked complete after Plan 04 execution*
+*Last updated: 2026-02-24 — QUIZ-05, QUIZ-06, QUIZ-08 marked complete after Plan 02-02 execution*
