@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-02-23)
 ## Current Position
 
 Phase: 0 of 8 (Archetype Framework)
-Plan: 1 of 5 in current phase (Plan 01 complete)
+Plan: 2 of 5 in current phase (Plan 02 complete)
 Status: In progress
-Last activity: 2026-02-24 — Plan 00-01 complete: TypeScript contracts, KOL synthesis, dimension definitions
+Last activity: 2026-02-24 — Plan 00-02 complete: 7 archetype definitions with dimension profiles, scoring algorithm implemented
 
-Progress: [█░░░░░░░░░] 3% (1/35+ plans estimated)
+Progress: [█░░░░░░░░░] 6% (2/35+ plans estimated)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 1
+- Total plans completed: 2
 - Average duration: 6 min
-- Total execution time: 0.1 hours
+- Total execution time: 0.2 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 0. Archetype Framework | 1/5 | 6 min | 6 min |
+| 0. Archetype Framework | 2/5 | 12 min | 6 min |
 
 **Recent Trend:**
-- Last 5 plans: 00-01 (6 min)
-- Trend: establishing baseline
+- Last 5 plans: 00-01 (6 min), 00-02 (6 min)
+- Trend: consistent baseline
 
 *Updated after each plan completion*
 
@@ -50,12 +50,17 @@ Recent decisions affecting current work:
 - **[00-01]** 7 dimensions selected (not 6): Presence/Attunement added as 7th dimension, capturing Tsabary's conscious-vs-reactive axis distinct from Emotional Regulation
 - **[00-01]** Narrative Coherence dimension is primarily Past-lens-only — Sophia to confirm if modified form applies to Current lens in Plan 02 review
 - **[00-01]** Punitive Discipline (PBDQ factor 2) excluded from dimensions — collinear with inverse Emotional Warmth and inverse Emotional Regulation
+- **[00-02]** 7 archetypes confirmed (not 6 or 8) — 7-dimension space naturally produces 7 clinically distinct patterns without force-fitting
+- **[00-02]** DIMENSION_WEIGHTS all default 1.0 — Narrative Coherence weight elevation deferred to post-simulation adjustment (Plan 03)
+- **[00-02]** Gentle Nurturer autonomy-support raised to 8 to achieve 2-dimension distinctness from The Steady Anchor
+- **[00-02]** softInferCurrentFromPast returns same archetype ranking as past (intergenerational transmission assumption) — empirical mapping table deferred post-launch
 
 ### Pending Todos
 
-- Sophia review of kol-synthesis.md and dimension set before Plan 02 archetype profiles begin
+- Sophia review of archetype dimension profiles before Plan 03 simulation begins
 - Sophia confirmation: does Narrative Coherence apply to Current lens scoring?
 - Sophia validation: discriminant validity between Presence/Attunement and Emotional Regulation
+- Plan 03: Run scoring simulation on 20-30 answer sets to validate archetype profiles
 
 ### Blockers/Concerns
 
@@ -67,5 +72,5 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-02-24
-Stopped at: Plan 00-01 complete — TypeScript type contracts, KOL synthesis document, 7 scoring dimensions defined
+Stopped at: Plan 00-02 complete — 7 archetypes defined with dimension profiles, scoring algorithm and DIMENSION_WEIGHTS implemented
 Resume file: None
