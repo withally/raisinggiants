@@ -516,6 +516,27 @@ export const QUESTIONS: QuizQuestion[] = [
     },
   },
 
+  {
+    id: 'q-protective-past-02',
+    lens: 'past',
+    section: 'your-parents-patterns',
+    question:
+      'When you wanted to do something independently as a child — walk to a friend\'s house, ride your bike further, stay home alone — how did your parents typically respond?',
+    inputType: 'option-cards',
+    options: [
+      { id: 'encouraged', label: 'They encouraged it — they liked seeing me be independent' },
+      { id: 'cautious-yes', label: 'They said yes but with conditions and check-ins' },
+      { id: 'reluctant', label: 'They were reluctant and often said no at first' },
+      { id: 'rarely-allowed', label: 'They rarely allowed it — they preferred to keep me close' },
+    ],
+    dimensionScores: {
+      encouraged:      { 'protective-instinct': 2, 'autonomy-support': 9 },
+      'cautious-yes':  { 'protective-instinct': 5, 'autonomy-support': 6 },
+      reluctant:       { 'protective-instinct': 7, 'autonomy-support': 3 },
+      'rarely-allowed':{ 'protective-instinct': 9, 'autonomy-support': 1 },
+    },
+  },
+
   // --- Repair / Reconnection (past) — SENSITIVE ---
 
   {
