@@ -9,12 +9,12 @@ See: .planning/PROJECT.md (updated 2026-02-23)
 
 ## Current Position
 
-Phase: 1 of 8 (Data Foundation) — IN PROGRESS
-Plan: 2 of 2 in current phase (Plan 01-02 at checkpoint — RLS verification script created, awaiting human verification)
-Status: Phase 1 Plan 02 Task 1 complete — checkpoint:human-verify reached; human must run `npm run verify-rls` and visually confirm schema in Supabase Studio
-Last activity: 2026-02-24 — Plan 01-02 Task 1 complete: RLS verification script (scripts/verify-rls.ts) with 8 SDK-based phase-gate tests
+Phase: 1 of 8 (Data Foundation) — COMPLETE
+Plan: 2 of 2 in current phase (Plan 01-02 COMPLETE — all 8 RLS tests passed against cloud Supabase, human-approved)
+Status: Phase 1 complete — both plans done; ready to begin Phase 2 (Quiz Engine)
+Last activity: 2026-02-24 — Plan 01-02 complete: RLS verification script all 8 tests passed against cloud Supabase, human-verified schema in Supabase Studio
 
-Progress: [███░░░░░░░] 17% (6/35+ plans estimated, Phase 0 complete, Phase 1 Plan 01 complete; Plan 02 at checkpoint)
+Progress: [████░░░░░░] 20% (7/35+ plans estimated, Phase 0 complete, Phase 1 complete)
 
 ## Performance Metrics
 
@@ -28,9 +28,10 @@ Progress: [███░░░░░░░] 17% (6/35+ plans estimated, Phase 0 c
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 0. Archetype Framework | 5/5 (complete) | 40 min | 8 min |
+| 1. Data Foundation | 2/2 (complete) | 27 min | 13 min |
 
 **Recent Trend:**
-- Last 5 plans: 00-01 (6 min), 00-02 (6 min), 00-03 (3 min), 00-04 (10 min), 00-05 (15 min)
+- Last 5 plans: 00-03 (3 min), 00-04 (10 min), 00-05 (15 min), 01-01 (2 min), 01-02 (25 min)
 - Trend: steady
 
 *Updated after each plan completion*
@@ -70,8 +71,9 @@ Recent decisions affecting current work:
 - **[01-01]** orders INSERT/UPDATE done exclusively via service_role (Stripe webhook) — no anon INSERT policy on orders table
 - **[01-01]** createAdminClient name (not createClient) for server.ts — makes dangerous, RLS-bypassing nature obvious at all import sites
 - **[01-01]** Dual Supabase client pattern: lib/supabase/client.ts (browser, @supabase/ssr) and lib/supabase/server.ts (server-only, service_role, no NEXT_PUBLIC_ prefix)
-- [Phase 01-02]: No dotenv dependency added — .env.local parsed inline with Node.js fs module to avoid adding a new dependency
-- [Phase 01-02]: Single anon SupabaseClient reused for User A and User B sessions (signOut + signInAnonymously) — no duplicate client instances needed
+- **[01-02]** No dotenv dependency added — .env.local parsed inline with Node.js fs module to avoid adding a new dependency
+- **[01-02]** Single anon SupabaseClient reused for User A and User B sessions (signOut + signInAnonymously) — no duplicate client instances needed
+- **[01-02]** Admin client used for storage bucket check — cloud Supabase denies anon bucket listing; bucket existence is infrastructure concern, not user-access RLS test
 
 ### Pending Todos
 
@@ -94,5 +96,5 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-02-24
-Stopped at: Plan 01-02 Task 2 checkpoint:human-verify — scripts/verify-rls.ts created (commit 7585d2c); human must run `npx supabase start`, populate .env.local, and run `npm run verify-rls` to complete Phase 1 gate
-Resume file: None — after checkpoint approval, Phase 1 complete; begin Phase 2 (Quiz Engine)
+Stopped at: Completed 01-02-PLAN.md — Phase 1 (Data Foundation) complete; all 8 RLS verification tests passed against cloud Supabase; human-approved
+Resume file: None — Phase 1 complete; begin Phase 2 (Quiz Engine)

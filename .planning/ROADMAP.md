@@ -54,7 +54,7 @@ Plans:
 **Plans:** 2/2 plans complete
 Plans:
 - [x] 01-01-PLAN.md -- Supabase project init, migration SQL (schema + RLS + storage), client helpers
-- [ ] 01-02-PLAN.md -- RLS verification script + human checkpoint for end-to-end infrastructure validation
+- [x] 01-02-PLAN.md -- RLS verification script + human checkpoint for end-to-end infrastructure validation
 
 ### Phase 2: Quiz Engine
 **Goal**: Users can complete the full quiz experience end-to-end, with answers persisted to Supabase on completion
