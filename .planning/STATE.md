@@ -5,7 +5,7 @@
 See: .planning/PROJECT.md (updated 2026-02-23)
 
 **Core value:** Parents feel deeply seen and understood about their upbringing — the personalized output must feel written specifically for them, grounded in credible research, and create a bridge for meaningful conversations with loved ones.
-**Current focus:** Phase 0 - Archetype Framework
+**Current focus:** Phase 1 - Data Foundation
 
 ## Current Position
 

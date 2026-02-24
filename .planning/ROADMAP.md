@@ -12,7 +12,7 @@ From clinical framework to working product: Phase 0 defines the archetype system
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 0: Archetype Framework** - Define 6-8 clinical archetypes with Sophia, scoring logic, and content descriptions
+- [x] **Phase 0: Archetype Framework** - Define 6-8 clinical archetypes with Sophia, scoring logic, and content descriptions (completed 2026-02-24)
 - [ ] **Phase 1: Data Foundation** - Supabase schema, RLS policies, Storage, and anonymous auth configured
 - [ ] **Phase 2: Quiz Engine** - Full quiz UI with scoring, persistence, and Supabase session write
 - [ ] **Phase 3: Free Result Page** - Archetype result display with teaser content and purchase CTA
