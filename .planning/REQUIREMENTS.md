@@ -29,10 +29,10 @@ Requirements for initial release (The Mirror — free product). Each maps to roa
 
 ### Archetype Content Rewrite
 
-- [ ] **COPY-01**: All archetype names reframed to describe parents' parenting style (not user's current parenting)
-- [ ] **COPY-02**: All foundational patterns rewritten as "patterns your parents passed to you" (inherited lens)
-- [ ] **COPY-03**: All watchouts rewritten as "what to watch for given how you were raised" (awareness lens)
-- [ ] **COPY-04**: All cultural overlay copy updated to match parents-archetype framing
+- [x] **COPY-01**: All archetype names reframed to describe parents' parenting style (not user's current parenting)
+- [x] **COPY-02**: All foundational patterns rewritten as "patterns your parents passed to you" (inherited lens)
+- [x] **COPY-03**: All watchouts rewritten as "what to watch for given how you were raised" (awareness lens)
+- [x] **COPY-04**: All cultural overlay copy updated to match parents-archetype framing
 
 ### Mirror Result Page
 
@@ -141,10 +141,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | QUIZ-06 | Phase 2 | Complete |
 | QUIZ-07 | Phase 2 | Complete |
 | QUIZ-08 | Phase 2 | Complete |
-| COPY-01 | Phase 2.5 | Pending |
-| COPY-02 | Phase 2.5 | Pending |
-| COPY-03 | Phase 2.5 | Pending |
-| COPY-04 | Phase 2.5 | Pending |
+| COPY-01 | Phase 2.5 | Complete |
+| COPY-02 | Phase 2.5 | Complete |
+| COPY-03 | Phase 2.5 | Complete |
+| COPY-04 | Phase 2.5 | Complete |
 | RSLT-01 | Phase 3 | Pending |
 | RSLT-03 | Phase 3 | Pending |
 | RSLT-05 | Phase 3 | Pending |

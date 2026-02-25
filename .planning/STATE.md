@@ -5,17 +5,17 @@
 See: .planning/PROJECT.md (updated 2026-02-25)
 
 **Core value:** Adults feel deeply seen and understood about the parenting they *received* — the personalized output surfaces patterns they've always sensed but never had language for, grounded in credible research from top parenting experts.
-**Current focus:** Phase 04 — Landing Page Polish (complete); next: Phase 2.5 or Phase 3
+**Current focus:** Phase 025 — Archetype Content Rewrite (in progress)
 **Product:** The Mirror (free) — v1 launch scope
 
 ## Current Position
 
-Phase: 04 of 5 (Landing Page Polish) — COMPLETE
-Plan: 2 of 2 in Phase 04 (both plans complete — Phase 04 done)
-Status: Landing page fully polished and user-approved — Cormorant Garamond display font, updated metadata, 8 KOL researcher SVG portrait icons, visual polish across all sections
-Last activity: 2026-02-25 — Plan 04-02 complete: checkpoint approved, SUMMARY.md finalized
+Phase: 025 of 5 (Archetype Content Rewrite) — COMPLETE
+Plan: 2 of 2 in Phase 025 complete (Phase 025 fully done)
+Status: Plan 025-02 complete — all 45 cultural overlays rewritten to receiver perspective; result page placeholder text corrected to parents-lens framing
+Last activity: 2026-02-26 — Plan 025-02 complete
 
-Progress: [███████░░░] 70% (15/~22 plans estimated, Phases 0-2 + all of Phase 04 complete)
+Progress: [████████░░] 78% (17/~22 plans estimated)
 
 ## Performance Metrics
 
@@ -39,6 +39,8 @@ Progress: [███████░░░] 70% (15/~22 plans estimated, Phases 0
 
 *Updated after each plan completion*
 | Phase 04 P02 | 15 min | 2 tasks | 7 files |
+| Phase 025 P01 | 8 min | 2 tasks | 3 files |
+| Phase 025 P02 | 10 min | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -71,6 +73,18 @@ Recent decisions affecting current work:
 - **[04-02-A]** Cormorant Garamond chosen as display font — editorial warmth, elegant italic forms, strong contrast with Geist Sans
 - **[04-02-B]** Display font loaded via next/font/google as --font-display CSS variable (zero render-blocking, display: swap)
 - **[04-02-C]** Display font applied via inline style prop on headlines — avoids Tailwind v4 @theme coupling
+
+**Phase 025-02 Cultural Overlay Rewrite (2026-02-26):**
+- **[025-02-A]** expressionModifier register: factual/observational, not personal second-person — describes how archetype qualities manifested in cultural context, then invites reader in with "you may have felt" or "you likely grew up with"
+- **[025-02-B]** strengthsInContext across all 45 overlays: "gave you / giving you" framing — what growing up with this gave the child
+- **[025-02-C]** tensionsInContext across all 45 overlays: "may have cost you / may have" framing — what growing up with this may have cost the child
+- **[025-02-D]** Resilient Striver overlays: framed as "growing up with people who had done their own healing work" — each cultural context describes child's experience of that journey
+
+**Phase 025-01 Archetype Content Rewrite (2026-02-26):**
+- **[025-01-A]** Resilient Striver reframed: parents' healing journey observed by child — "the people who raised you had done their own healing work" — earned-security narrative preserved but entirely reoriented
+- **[025-01-B]** Taglines for 6 unspecified archetypes: Intentional Guide ("given room to become yourself"), Resilient Striver ("watching someone rewrite the story"), Structured Mentor ("expected to be capable"), Open-Hearted Learner ("loved by someone still learning how"), Devoted Champion ("championed"), Collaborative Ally ("with a voice in the room")
+- **[025-01-C]** Recurring watchout closer "That served you then. It may not serve you now." appears once in each watchout headline, not in individual themes
+- **[025-01-D]** Caregiver reference established as "the people who raised you" throughout — inclusive of non-traditional caregivers
 
 **Earlier decisions (Phases 0-2):**
 - Archetype framework is a hard prerequisite — zero engineering starts until Phase 0 complete
@@ -107,6 +121,6 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-02-25
-Stopped at: Completed 04-02-PLAN.md — Phase 04 fully complete
-Resume file: None — Phase 04 done. Next: plan Phase 2.5 (Archetype Content Rewrite) or Phase 3 (Mirror Result Page)
+Last session: 2026-02-26
+Stopped at: Completed 025-02-PLAN.md — Phase 025 fully complete. All 45 cultural overlays rewritten to receiver perspective; result page placeholder corrected
+Resume file: None — Phase 025 done. Next: Phase 3 (Mirror Result Page)
