@@ -5,17 +5,17 @@
 See: .planning/PROJECT.md (updated 2026-02-25)
 
 **Core value:** Adults feel deeply seen and understood about the parenting they *received* — the personalized output surfaces patterns they've always sensed but never had language for, grounded in credible research from top parenting experts.
-**Current focus:** Phase 2.5 — Archetype Content Rewrite (upcoming)
+**Current focus:** Phase 04 — Landing Page Polish (in progress)
 **Product:** The Mirror (free) — v1 launch scope
 
 ## Current Position
 
-Phase: 2.5 of 5 (Archetype Content Rewrite) — UPCOMING
-Plan: 0 of TBD in Phase 2.5
-Status: Product ladder pivot complete; documentation updated; Phase 2.5 ready for planning
-Last activity: 2026-02-25 — Product ladder pivot: documentation rewrite across PROJECT.md, REQUIREMENTS.md, ROADMAP.md, STATE.md; old Phase 3 plans deleted
+Phase: 04 of 5 (Landing Page Polish) — IN PROGRESS
+Plan: 1 of 2 in Phase 04 (04-01 complete)
+Status: Landing page live at /; 5 section components built; ready for Plan 04-02 typography polish
+Last activity: 2026-02-25 — Plan 04-01 complete: full landing page with HeroSection, ProductLadder, KOLCredibility, SecondaryHero, Footer
 
-Progress: [██████░░░░] 50% (11/~22 plans estimated, Phases 0-2 complete, Phase 2.5 upcoming)
+Progress: [███████░░░] 60% (13/~22 plans estimated, Phases 0-2 + 04-01 complete)
 
 ## Performance Metrics
 
@@ -31,9 +31,10 @@ Progress: [██████░░░░] 50% (11/~22 plans estimated, Phases 0
 | 0. Archetype Framework | 5/5 (complete) | 40 min | 8 min |
 | 1. Data Foundation | 2/2 (complete) | 27 min | 13 min |
 | 2. Quiz Engine | 5/5 (complete) | 30 min | 6 min |
+| 4. Landing Page Polish | 1/2 (in progress) | 6 min | 6 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-01 (15 min), 02-02 (5 min), 02-03 (5 min), 02-04 (5 min), 02-05 (human verification)
+- Last 5 plans: 02-01 (15 min), 02-02 (5 min), 02-03 (5 min), 02-04 (5 min), 04-01 (6 min)
 - Trend: steady
 
 *Updated after each plan completion*
@@ -56,6 +57,12 @@ Recent decisions affecting current work:
 - **[PIVOT-08]** Old Phase 7 (Landing Page) → Phase 4, old Phase 8 (Marketing) → Phase 5
 - **[PIVOT-09]** RSLT-02 (blurred PDF previews) and RSLT-04 (partner dialogue teaser) deleted — incompatible with free full result
 - **[PIVOT-10]** Product 2 coming-soon page (RSLT-10) replaces purchase CTA — captures Blueprint launch interest
+
+**Phase 04-01 Landing Page (2026-02-25):**
+- **[04-01-A]** Editorial warm aesthetic: amber-50/stone-900 alternating section backgrounds for visual rhythm
+- **[04-01-B]** KOL researcher data defined as inline const array in KOLCredibility.tsx, not imported from archetypes.ts
+- **[04-01-C]** Named exports for all landing components (`export function`) for explicit import pattern in page.tsx
+- **[04-01-D]** 8 named researchers displayed: Baumrind, Gottman, Siegel, Ainsworth, Kennedy, Tsabary, van der Kolk, Rohner
 
 **Earlier decisions (Phases 0-2):**
 - Archetype framework is a hard prerequisite — zero engineering starts until Phase 0 complete
@@ -89,5 +96,5 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-02-25
-Stopped at: Product ladder pivot documentation complete — all 4 planning docs rewritten, old Phase 3 plans deleted, directories restructured
-Resume file: None — Phase 2.5 ready for planning; run `/gsd:plan-phase 2.5` to begin
+Stopped at: Completed 04-01-PLAN.md — full landing page built and live at /
+Resume file: None — run `/gsd:execute-phase 04` for Plan 04-02 (typography polish)

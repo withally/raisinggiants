@@ -47,11 +47,11 @@ Requirements for initial release (The Mirror — free product). Each maps to roa
 
 ### Landing Page
 
-- [ ] **LAND-01**: Clear value proposition communicating the research-backed, expert-informed nature of the product
-- [ ] **LAND-02**: KOL credibility signals (top 100 named experts, research attribution)
-- [ ] **LAND-03**: Quiz start CTA that drives conversions
-- [ ] **LAND-04**: Mobile-responsive design
-- [ ] **LAND-05**: Sophia's credentials and clinical authority visible
+- [x] **LAND-01**: Clear value proposition communicating the research-backed, expert-informed nature of the product
+- [x] **LAND-02**: KOL credibility signals (top 100 named experts, research attribution)
+- [x] **LAND-03**: Quiz start CTA that drives conversions
+- [x] **LAND-04**: Mobile-responsive design
+- [x] **LAND-05**: Sophia's credentials and clinical authority visible
 
 ## Product 2 Scope — The Blueprint (Paid)
 
@@ -153,11 +153,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | RSLT-08 | Phase 3 | Pending |
 | RSLT-09 | Phase 3 | Pending |
 | RSLT-10 | Phase 3 | Pending |
-| LAND-01 | Phase 4 | Pending |
-| LAND-02 | Phase 4 | Pending |
-| LAND-03 | Phase 4 | Pending |
-| LAND-04 | Phase 4 | Pending |
-| LAND-05 | Phase 4 | Pending |
+| LAND-01 | Phase 4 | Complete |
+| LAND-02 | Phase 4 | Complete |
+| LAND-03 | Phase 4 | Complete |
+| LAND-04 | Phase 4 | Complete |
+| LAND-05 | Phase 4 | Complete |
 
 **Coverage:**
 - v1 requirements (Mirror): 26 total
