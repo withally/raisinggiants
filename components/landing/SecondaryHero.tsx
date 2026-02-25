@@ -18,25 +18,25 @@ export function SecondaryHero() {
           className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-stone-100 leading-tight mb-6"
           style={{ fontFamily: "var(--font-display)" }}
         >
-          You&apos;ve always sensed it.
+          The patterns don&apos;t pause
           <br />
-          <em className="italic text-amber-300/90">Now you can see it clearly.</em>
+          <em className="italic text-amber-300/90">while you think about it.</em>
         </h2>
 
         <p className="text-base sm:text-lg text-stone-400 leading-relaxed max-w-xl mx-auto mb-10">
-          The Mirror takes 5 minutes. What it reflects may take longer to sit with — and that&apos;s
-          exactly the point.
+          Every day on autopilot is a day your inherited patterns go unchecked. The Mirror takes
+          5 minutes. What it reveals may take longer to sit with — and that&apos;s exactly the point.
         </p>
 
         <Link
           href="/quiz"
           className="inline-flex items-center justify-center rounded-full bg-amber-500 px-10 py-4 text-base font-semibold text-stone-900 shadow-lg hover:bg-amber-400 hover:shadow-xl hover:shadow-amber-500/20 transition-all duration-200 min-h-[52px] w-full sm:w-auto"
         >
-          Begin The Mirror — it&apos;s free
+          Find your archetype — it&apos;s free
         </Link>
 
         <p className="mt-4 text-xs text-stone-500">
-          No account needed &middot; No email required to start
+          No account needed &middot; Your answers stay private
         </p>
       </div>
     </section>

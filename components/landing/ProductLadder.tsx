@@ -1,32 +1,29 @@
 import Link from "next/link";
 
-const products = [
+const steps = [
   {
     step: "01",
     name: "The Mirror",
-    tagline: "Understand your upbringing",
+    tagline: "See your patterns",
     description:
-      "A 21-question reflection on the parenting you received — revealing the patterns, styles, and emotional environment that shaped your earliest sense of self.",
-    status: "free" as const,
-    cta: { label: "Start The Mirror", href: "/quiz" },
+      "A 21-question reflection on the parenting you received — revealing the styles, patterns, and emotional environment that shaped your earliest sense of self.",
+    active: true,
   },
   {
     step: "02",
     name: "The Blueprint",
-    tagline: "Understand your tendencies and aspirations",
+    tagline: "Map your instincts",
     description:
-      "Take what The Mirror surfaces and turn it into a personalised map of your parenting instincts — where they serve you, where they hold you back, and what you want to pass on.",
-    status: "coming-soon" as const,
-    cta: null,
+      "Turn what The Mirror surfaces into a personalised map — where your instincts serve you, where they hold you back, and what you want to pass on.",
+    active: false,
   },
   {
     step: "03",
     name: "Partner Match",
-    tagline: "Have a dialogue with your partner",
+    tagline: "Align with your partner",
     description:
-      "Bring two mirrors together. Understand where you and your partner's upbringings align, where they differ, and how to build a shared parenting vision from that awareness.",
-    status: "coming-soon" as const,
-    cta: null,
+      "Bring two mirrors together. See where your upbringings align, where they differ, and build a shared parenting vision from that awareness.",
+    active: false,
   },
 ];
 
@@ -43,75 +40,70 @@ export function ProductLadder() {
             className="text-4xl sm:text-5xl font-semibold text-stone-100 leading-tight max-w-2xl"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            Three steps toward conscious parenting.
+            It starts with seeing clearly.
           </h2>
           <p className="mt-4 text-stone-400 text-base leading-relaxed max-w-xl">
-            Self-awareness is the beginning. Every step deepens your understanding — of your past,
-            your present, and the family you&apos;re building.
+            The Mirror is your first step. What comes next builds on what you discover about yourself.
           </p>
         </div>
 
-        {/* Product cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-0 lg:divide-x lg:divide-stone-700">
-          {products.map((product, index) => (
+        {/* Journey steps */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-0">
+          {steps.map((step, index) => (
             <div
-              key={product.step}
+              key={step.step}
               className={`relative flex flex-col p-6 lg:p-8 transition-all duration-200 ${
-                index === 0
+                step.active
                   ? "bg-amber-950/40 border border-amber-800/50 rounded-2xl lg:rounded-r-none lg:rounded-l-2xl hover:bg-amber-950/60"
-                  : index === 1
-                    ? "bg-stone-800/50 border border-stone-700/50 rounded-2xl lg:rounded-none hover:bg-stone-800/70"
-                    : "bg-stone-800/30 border border-stone-700/30 rounded-2xl lg:rounded-l-none lg:rounded-r-2xl hover:bg-stone-800/50"
-              }`}
+                  : "border border-stone-800/40 rounded-2xl lg:rounded-none last:lg:rounded-r-2xl"
+              } ${index === 1 ? "lg:rounded-none" : ""}`}
             >
-              {/* Step number */}
-              <p className="text-4xl font-bold text-stone-600 mb-4 leading-none">{product.step}</p>
-
-              {/* Status badge */}
-              <div className="mb-3">
-                {product.status === "free" ? (
+              {/* Step number + status */}
+              <div className="flex items-center gap-3 mb-4">
+                <p className={`text-3xl font-bold leading-none ${step.active ? "text-amber-500/60" : "text-stone-700"}`}>
+                  {step.step}
+                </p>
+                {step.active ? (
                   <span className="inline-flex items-center rounded-full bg-amber-500/20 px-3 py-1 text-xs font-semibold text-amber-300 ring-1 ring-amber-500/30">
-                    Free
+                    Start here — free
                   </span>
                 ) : (
-                  <span className="inline-flex items-center rounded-full bg-stone-700/60 px-3 py-1 text-xs font-medium text-stone-400 ring-1 ring-stone-600/30">
-                    Coming Soon
+                  <span className="inline-flex items-center rounded-full bg-stone-800/60 px-3 py-1 text-xs font-medium text-stone-500">
+                    Coming soon
                   </span>
                 )}
               </div>
 
               {/* Product name — display font */}
               <h3
-                className="text-2xl font-semibold text-stone-100 mb-1"
+                className={`text-2xl font-semibold mb-1 ${step.active ? "text-stone-100" : "text-stone-400"}`}
                 style={{ fontFamily: "var(--font-display)" }}
               >
-                {product.name}
+                {step.name}
               </h3>
 
               {/* Tagline */}
-              <p className="text-sm text-amber-300/80 font-medium mb-4">{product.tagline}</p>
-
-              {/* Description */}
-              <p className="text-sm text-stone-400 leading-relaxed flex-1 mb-6">
-                {product.description}
+              <p className={`text-sm font-medium mb-4 ${step.active ? "text-amber-300/80" : "text-stone-500"}`}>
+                {step.tagline}
               </p>
 
-              {/* CTA */}
-              {product.cta ? (
+              {/* Description */}
+              <p className={`text-sm leading-relaxed flex-1 ${step.active ? "text-stone-400" : "text-stone-500/70"}`}>
+                {step.description}
+              </p>
+
+              {/* CTA — only for active step */}
+              {step.active && (
                 <Link
-                  href={product.cta.href}
-                  className="inline-flex items-center justify-center rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-stone-900 hover:bg-amber-400 hover:shadow-lg hover:shadow-amber-500/20 transition-all duration-200 min-h-[44px] w-full"
+                  href="/quiz"
+                  className="mt-6 inline-flex items-center justify-center rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-stone-900 hover:bg-amber-400 hover:shadow-lg hover:shadow-amber-500/20 transition-all duration-200 min-h-[44px] w-full"
                 >
-                  {product.cta.label}
+                  Start The Mirror — free
                 </Link>
-              ) : (
-                <div className="inline-flex items-center justify-center rounded-full border border-stone-600 px-6 py-3 text-sm text-stone-500 min-h-[44px] w-full cursor-default select-none">
-                  Notify me
-                </div>
               )}
 
               {/* Connector arrow — desktop only, not last item */}
-              {index < products.length - 1 && (
+              {index < steps.length - 1 && (
                 <div
                   className="hidden lg:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10 w-6 h-6 bg-stone-900 border border-stone-700 rounded-full items-center justify-center"
                   aria-hidden="true"

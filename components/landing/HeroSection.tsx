@@ -27,7 +27,7 @@ export function HeroSection() {
 
         {/* Main headline — display font */}
         <h1
-          className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-semibold text-stone-900 leading-[1.05] mb-6 max-w-3xl"
+          className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-semibold text-stone-900 leading-[1.05] mb-5 max-w-3xl"
           style={{ fontFamily: "var(--font-display)" }}
         >
           The way you were raised
@@ -35,32 +35,38 @@ export function HeroSection() {
           <em className="italic text-amber-600">shaping</em> you.
         </h1>
 
-        {/* Subheadline */}
-        <p className="text-lg sm:text-xl text-stone-600 leading-relaxed max-w-2xl mb-4">
-          Every parent carries the echoes of their own upbringing — patterns, tendencies, and quiet
-          beliefs absorbed long before they held their own child for the first time.
+        {/* Single punchy sub — emotion, not explanation */}
+        <p className="text-lg sm:text-xl text-stone-600 leading-relaxed max-w-xl mb-8">
+          See the patterns you inherited — in 5 minutes.
         </p>
 
-        <p className="text-base sm:text-lg text-stone-500 leading-relaxed max-w-xl mb-10">
-          Grounded in decades of research from the world&apos;s leading parenting scientists, The
-          Mirror helps you see those patterns clearly — and understand where they came from.
-        </p>
-
-        {/* CTA group */}
-        <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
+        {/* CTA group — tight to the headline */}
+        <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center mb-10">
           <Link
             href="/quiz"
             className="inline-flex items-center justify-center rounded-full bg-stone-900 px-8 py-4 text-base font-semibold text-amber-50 shadow-md hover:bg-stone-700 hover:shadow-lg transition-all duration-200 min-h-[52px] w-full sm:w-auto"
           >
-            Begin your Mirror — it&apos;s free
+            Find your archetype — it&apos;s free
           </Link>
           <p className="text-sm text-stone-400 text-center sm:text-left sm:ml-2 self-center">
-            21 questions &middot; 5 minutes &middot; No account needed
+            21 questions &middot; No account needed &middot; Completely private
+          </p>
+        </div>
+
+        {/* Supporting copy — below CTA for scrollers who want more context */}
+        <div className="max-w-2xl space-y-3 mb-12">
+          <p className="text-base text-stone-500 leading-relaxed">
+            We all carry echoes of our upbringing — patterns, tendencies, and quiet beliefs absorbed
+            long before we had words for them.
+          </p>
+          <p className="text-sm text-stone-400 leading-relaxed">
+            Grounded in decades of research from the world&apos;s leading parenting scientists, The
+            Mirror helps you see those patterns clearly — and understand where they came from.
           </p>
         </div>
 
         {/* Research badge */}
-        <div className="mt-16 pt-8 border-t border-amber-200 flex flex-col sm:flex-row gap-2 sm:gap-6 items-start">
+        <div className="pt-8 border-t border-amber-200 flex flex-col sm:flex-row gap-2 sm:gap-6 items-start">
           <p className="text-xs text-stone-400 uppercase tracking-wider font-medium shrink-0 mt-0.5">
             Informed by
           </p>

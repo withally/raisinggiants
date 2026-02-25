@@ -5,17 +5,17 @@
 See: .planning/PROJECT.md (updated 2026-02-25)
 
 **Core value:** Adults feel deeply seen and understood about the parenting they *received* — the personalized output surfaces patterns they've always sensed but never had language for, grounded in credible research from top parenting experts.
-**Current focus:** Phase 04 — Landing Page Polish (in progress)
+**Current focus:** Phase 04 — Landing Page Polish (complete); next: Phase 2.5 or Phase 3
 **Product:** The Mirror (free) — v1 launch scope
 
 ## Current Position
 
-Phase: 04 of 5 (Landing Page Polish) — IN PROGRESS (awaiting user checkpoint)
-Plan: 2 of 2 in Phase 04 (04-01 complete, 04-02 task 1 complete — checkpoint pending)
-Status: Landing page polished with Cormorant Garamond display font and updated metadata; awaiting user visual approval at checkpoint
-Last activity: 2026-02-25 — Plan 04-02 task 1 complete: metadata updated, display font added, visual polish applied
+Phase: 04 of 5 (Landing Page Polish) — COMPLETE
+Plan: 2 of 2 in Phase 04 (both plans complete — Phase 04 done)
+Status: Landing page fully polished and user-approved — Cormorant Garamond display font, updated metadata, 8 KOL researcher SVG portrait icons, visual polish across all sections
+Last activity: 2026-02-25 — Plan 04-02 complete: checkpoint approved, SUMMARY.md finalized
 
-Progress: [███████░░░] 65% (14/~22 plans estimated, Phases 0-2 + 04-01 + 04-02 task 1 complete)
+Progress: [███████░░░] 70% (15/~22 plans estimated, Phases 0-2 + all of Phase 04 complete)
 
 ## Performance Metrics
 
@@ -31,14 +31,14 @@ Progress: [███████░░░] 65% (14/~22 plans estimated, Phases 0
 | 0. Archetype Framework | 5/5 (complete) | 40 min | 8 min |
 | 1. Data Foundation | 2/2 (complete) | 27 min | 13 min |
 | 2. Quiz Engine | 5/5 (complete) | 30 min | 6 min |
-| 4. Landing Page Polish | 1/2 (in progress) | 6 min | 6 min |
+| 4. Landing Page Polish | 2/2 (complete) | 23 min | 11 min |
 
 **Recent Trend:**
 - Last 5 plans: 02-01 (15 min), 02-02 (5 min), 02-03 (5 min), 02-04 (5 min), 04-01 (6 min)
 - Trend: steady
 
 *Updated after each plan completion*
-| Phase 04 P02 | 8 | 1 tasks | 6 files |
+| Phase 04 P02 | 15 min | 2 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -85,6 +85,7 @@ Recent decisions affecting current work:
 - [Phase 04]: [04-02-A] Cormorant Garamond chosen as display font — editorial warmth and elegant italic forms for Raising Giants brand
 - [Phase 04]: [04-02-B] Display font loaded via next/font/google as --font-display CSS variable (zero render-blocking, display: swap)
 - [Phase 04]: [04-02-C] Display font applied via inline style prop on headlines — avoids Tailwind v4 @theme coupling
+- [Phase 04]: [04-02-D] SVG sketch portrait icons created for all 8 KOL researchers, each with unique editorial visual metaphor for their contribution
 
 ### Pending Todos
 
@@ -107,5 +108,5 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-02-25
-Stopped at: 04-02-PLAN.md Task 2 checkpoint — visual verification awaiting user approval
-Resume file: None — approve or describe issues at checkpoint, then run `/gsd:execute-phase 04` to complete
+Stopped at: Completed 04-02-PLAN.md — Phase 04 fully complete
+Resume file: None — Phase 04 done. Next: plan Phase 2.5 (Archetype Content Rewrite) or Phase 3 (Mirror Result Page)

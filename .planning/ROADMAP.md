@@ -117,8 +117,8 @@ Plans:
   4. The entire landing page is fully mobile-responsive and loads fast on mobile connections
 **Plans:** 2/2 plans complete
 Plans:
-- [ ] 04-01-PLAN.md — Landing page core build: hero, product ladder, KOL credibility, secondary CTA, footer
-- [ ] 04-02-PLAN.md — Metadata update (Raising Giants branding), display font, visual polish, human verification
+- [x] 04-01-PLAN.md — Landing page core build: hero, product ladder, KOL credibility, secondary CTA, footer
+- [x] 04-02-PLAN.md — Metadata update (Raising Giants branding), display font, visual polish, human verification
 
 ### Phase 5: Marketing + Launch Strategy
 **Goal**: A concrete go-to-market plan is in place so the product reaches its target audience and generates initial traffic from launch day
