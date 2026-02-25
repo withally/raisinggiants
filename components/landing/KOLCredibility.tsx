@@ -1,10 +1,30 @@
-const researchers = [
+import type { ComponentType } from "react";
+import {
+  BaumrindPortrait,
+  GottmanPortrait,
+  SiegelPortrait,
+  AinsworthPortrait,
+  KennedyPortrait,
+  TsabaryPortrait,
+  VanDerKolkPortrait,
+  RohnerPortrait,
+} from "./portraits/SketchPortrait";
+
+const researchers: {
+  name: string;
+  role: string;
+  contribution: string;
+  work: string;
+  year: string;
+  Portrait: ComponentType<{ className?: string }>;
+}[] = [
   {
     name: "Diana Baumrind",
     role: "Developmental psychologist",
     contribution: "Authoritative parenting framework",
     work: "Child care practices anteceding three patterns of preschool behavior",
     year: "1967",
+    Portrait: BaumrindPortrait,
   },
   {
     name: "John Gottman",
@@ -12,6 +32,7 @@ const researchers = [
     contribution: "Emotional coaching and repair",
     work: "Raising an Emotionally Intelligent Child",
     year: "1997",
+    Portrait: GottmanPortrait,
   },
   {
     name: "Daniel J. Siegel",
@@ -19,6 +40,7 @@ const researchers = [
     contribution: "Interpersonal neurobiology",
     work: "The Developing Mind",
     year: "2012",
+    Portrait: SiegelPortrait,
   },
   {
     name: "Mary Ainsworth",
@@ -26,6 +48,7 @@ const researchers = [
     contribution: "Attachment theory",
     work: "Strange Situation study",
     year: "1978",
+    Portrait: AinsworthPortrait,
   },
   {
     name: "Dr. Becky Kennedy",
@@ -33,6 +56,7 @@ const researchers = [
     contribution: "Repair as cornerstone of connection",
     work: "Good Inside",
     year: "2022",
+    Portrait: KennedyPortrait,
   },
   {
     name: "Shefali Tsabary",
@@ -40,6 +64,7 @@ const researchers = [
     contribution: "Conscious parenting",
     work: "The Conscious Parent",
     year: "2010",
+    Portrait: TsabaryPortrait,
   },
   {
     name: "Bessel van der Kolk",
@@ -47,6 +72,7 @@ const researchers = [
     contribution: "Intergenerational trauma",
     work: "The Body Keeps the Score",
     year: "2014",
+    Portrait: VanDerKolkPortrait,
   },
   {
     name: "Ronald P. Rohner",
@@ -54,6 +80,7 @@ const researchers = [
     contribution: "Cross-cultural parental acceptance",
     work: "IPARTheory & PARQ — 60+ cultures",
     year: "ongoing",
+    Portrait: RohnerPortrait,
   },
 ];
 
@@ -84,8 +111,13 @@ export function KOLCredibility() {
           {researchers.map((researcher) => (
             <div
               key={researcher.name}
-              className="bg-amber-50 p-5 lg:p-6 flex flex-col gap-2 hover:bg-white transition-colors duration-150"
+              className="bg-amber-50 p-5 lg:p-6 flex flex-col gap-3 hover:bg-white transition-colors duration-150"
             >
+              {/* Portrait sketch */}
+              <div className="w-16 h-18 text-stone-400">
+                <researcher.Portrait className="w-full h-full" />
+              </div>
+
               {/* Name — display font */}
               <h3
                 className="text-base font-semibold text-stone-900 leading-snug"
