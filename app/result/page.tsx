@@ -3,8 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Your Result | Raising Giants — The Mirror",
-  description:
-    "Your personalised parenting archetype result from The Mirror assessment.",
+  description: "Discover the parenting patterns you inherited — your personalised Mirror result.",
 };
 
 export default async function ResultPage({
@@ -27,9 +26,9 @@ export default async function ResultPage({
           Your archetype is being prepared
         </h1>
         <p className="text-stone-600 leading-relaxed mb-3">
-          We are building your full, personalised result page. It will include
-          your parenting archetype breakdown, dimension scores, and tailored
-          insights grounded in research.
+          We are building your full, personalised result page. It will include the parenting
+          archetype that shaped you, the patterns you inherited, and tailored insights grounded in
+          research.
         </p>
         {session && (
           <p className="text-sm text-stone-400 mb-8">
@@ -38,8 +37,8 @@ export default async function ResultPage({
         )}
         {!session && <div className="mb-8" />}
         <p className="text-stone-500 text-sm leading-relaxed mb-8">
-          In the meantime, you can retake the quiz or return to the home page to
-          learn more about the science behind The Mirror.
+          In the meantime, you can retake the quiz or return to the home page to learn more about
+          the science behind The Mirror.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
