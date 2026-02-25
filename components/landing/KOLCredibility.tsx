@@ -66,7 +66,10 @@ export function KOLCredibility() {
           <p className="text-xs tracking-[0.25em] uppercase text-amber-700 font-medium mb-4">
             The Research
           </p>
-          <h2 className="text-3xl sm:text-4xl font-semibold text-stone-900 leading-tight mb-4">
+          <h2
+            className="text-4xl sm:text-5xl font-semibold text-stone-900 leading-tight mb-4"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
             Grounded in decades of work from the world&apos;s leading parenting scientists.
           </h2>
           <p className="text-stone-500 text-base leading-relaxed">
@@ -77,14 +80,17 @@ export function KOLCredibility() {
         </div>
 
         {/* Researcher grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-amber-200/60 border border-amber-200/60 rounded-2xl overflow-hidden">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-amber-200/60 border border-amber-200/60 rounded-2xl overflow-hidden shadow-sm">
           {researchers.map((researcher) => (
             <div
               key={researcher.name}
-              className="bg-amber-50 p-5 lg:p-6 flex flex-col gap-2 hover:bg-amber-100/60 transition-colors"
+              className="bg-amber-50 p-5 lg:p-6 flex flex-col gap-2 hover:bg-white transition-colors duration-150"
             >
-              {/* Name */}
-              <h3 className="text-sm font-semibold text-stone-900 leading-snug">
+              {/* Name — display font */}
+              <h3
+                className="text-base font-semibold text-stone-900 leading-snug"
+                style={{ fontFamily: "var(--font-display)" }}
+              >
                 {researcher.name}
               </h3>
 

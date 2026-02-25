@@ -39,7 +39,10 @@ export function ProductLadder() {
           <p className="text-xs tracking-[0.25em] uppercase text-amber-400 font-medium mb-4">
             The Journey
           </p>
-          <h2 className="text-3xl sm:text-4xl font-semibold text-stone-100 leading-tight max-w-2xl">
+          <h2
+            className="text-4xl sm:text-5xl font-semibold text-stone-100 leading-tight max-w-2xl"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
             Three steps toward conscious parenting.
           </h2>
           <p className="mt-4 text-stone-400 text-base leading-relaxed max-w-xl">
@@ -53,12 +56,12 @@ export function ProductLadder() {
           {products.map((product, index) => (
             <div
               key={product.step}
-              className={`relative flex flex-col p-6 lg:p-8 ${
+              className={`relative flex flex-col p-6 lg:p-8 transition-all duration-200 ${
                 index === 0
-                  ? "bg-amber-950/40 border border-amber-800/50 rounded-2xl lg:rounded-r-none lg:rounded-l-2xl"
+                  ? "bg-amber-950/40 border border-amber-800/50 rounded-2xl lg:rounded-r-none lg:rounded-l-2xl hover:bg-amber-950/60"
                   : index === 1
-                    ? "bg-stone-800/50 border border-stone-700/50 rounded-2xl lg:rounded-none"
-                    : "bg-stone-800/30 border border-stone-700/30 rounded-2xl lg:rounded-l-none lg:rounded-r-2xl"
+                    ? "bg-stone-800/50 border border-stone-700/50 rounded-2xl lg:rounded-none hover:bg-stone-800/70"
+                    : "bg-stone-800/30 border border-stone-700/30 rounded-2xl lg:rounded-l-none lg:rounded-r-2xl hover:bg-stone-800/50"
               }`}
             >
               {/* Step number */}
@@ -77,8 +80,13 @@ export function ProductLadder() {
                 )}
               </div>
 
-              {/* Product name */}
-              <h3 className="text-xl font-semibold text-stone-100 mb-1">{product.name}</h3>
+              {/* Product name — display font */}
+              <h3
+                className="text-2xl font-semibold text-stone-100 mb-1"
+                style={{ fontFamily: "var(--font-display)" }}
+              >
+                {product.name}
+              </h3>
 
               {/* Tagline */}
               <p className="text-sm text-amber-300/80 font-medium mb-4">{product.tagline}</p>
@@ -92,7 +100,7 @@ export function ProductLadder() {
               {product.cta ? (
                 <Link
                   href={product.cta.href}
-                  className="inline-flex items-center justify-center rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-stone-900 hover:bg-amber-400 transition-colors min-h-[44px] w-full"
+                  className="inline-flex items-center justify-center rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-stone-900 hover:bg-amber-400 hover:shadow-lg hover:shadow-amber-500/20 transition-all duration-200 min-h-[44px] w-full"
                 >
                   {product.cta.label}
                 </Link>
@@ -105,7 +113,7 @@ export function ProductLadder() {
               {/* Connector arrow — desktop only, not last item */}
               {index < products.length - 1 && (
                 <div
-                  className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 z-10 w-6 h-6 bg-stone-900 border border-stone-700 rounded-full flex items-center justify-center"
+                  className="hidden lg:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10 w-6 h-6 bg-stone-900 border border-stone-700 rounded-full items-center justify-center"
                   aria-hidden="true"
                 >
                   <svg

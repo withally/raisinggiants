@@ -25,11 +25,14 @@ export function HeroSection() {
           Raising Giants — The Mirror
         </p>
 
-        {/* Main headline */}
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold text-stone-900 leading-[1.1] mb-6 max-w-3xl">
+        {/* Main headline — display font */}
+        <h1
+          className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-semibold text-stone-900 leading-[1.05] mb-6 max-w-3xl"
+          style={{ fontFamily: "var(--font-display)" }}
+        >
           The way you were raised
           <br className="hidden sm:block" /> is still{" "}
-          <em className="not-italic text-amber-600">shaping</em> you.
+          <em className="italic text-amber-600">shaping</em> you.
         </h1>
 
         {/* Subheadline */}
@@ -47,7 +50,7 @@ export function HeroSection() {
         <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
           <Link
             href="/quiz"
-            className="inline-flex items-center justify-center rounded-full bg-stone-900 px-8 py-4 text-base font-semibold text-amber-50 shadow-md hover:bg-stone-700 transition-colors min-h-[52px] w-full sm:w-auto"
+            className="inline-flex items-center justify-center rounded-full bg-stone-900 px-8 py-4 text-base font-semibold text-amber-50 shadow-md hover:bg-stone-700 hover:shadow-lg transition-all duration-200 min-h-[52px] w-full sm:w-auto"
           >
             Begin your Mirror — it&apos;s free
           </Link>
