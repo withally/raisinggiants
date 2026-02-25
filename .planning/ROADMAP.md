@@ -107,14 +107,18 @@ Plans:
 **Plans**: TBD — to be planned after Phase 2.5
 
 ### Phase 4: Landing Page + Polish
-**Goal**: The landing page clearly communicates credibility and the product's unique value, and converts visitors to quiz starts
+**Goal**: A credibility-forward landing page that communicates the bigger mission, presents the full product ladder (Mirror/Blueprint/Partner Match), integrates KOL research attribution, and converts visitors into the free Mirror quiz
 **Depends on**: Phase 3
 **Requirements**: LAND-01, LAND-02, LAND-03, LAND-04, LAND-05
 **Success Criteria** (what must be TRUE):
-  1. The landing page prominently displays Sophia's credentials and clinical authority
-  2. Named KOL credibility signals (top 100 parenting researchers) are visible with specific research attribution
-  3. A prominent quiz start CTA drives visitors into the quiz flow
+  1. Named KOL credibility signals (8+ researchers) are visible with specific research attribution — clinical authority communicated through the research framework, not Sophia's personal credentials (per user decision in 04-CONTEXT.md)
+  2. The full product ladder (Mirror, Blueprint, Partner Match) is displayed with correct status labels
+  3. A prominent quiz start CTA drives visitors into the quiz flow at /quiz
   4. The entire landing page is fully mobile-responsive and loads fast on mobile connections
+**Plans:** 2 plans in 2 waves
+Plans:
+- [ ] 04-01-PLAN.md — Landing page core build: hero, product ladder, KOL credibility, secondary CTA, footer
+- [ ] 04-02-PLAN.md — Metadata update (Raising Giants branding), display font, visual polish, human verification
 
 ### Phase 5: Marketing + Launch Strategy
 **Goal**: A concrete go-to-market plan is in place so the product reaches its target audience and generates initial traffic from launch day
