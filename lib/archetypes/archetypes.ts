@@ -8,8 +8,8 @@
  * research derivation; see lib/quiz/dimensions.ts for dimension definitions).
  *
  * Design constraints satisfied here:
- * - Warm, descriptive names referencing current parenting style — no clinical terms
- * - Every name passes the test: "Would a parent proudly share this as their result?"
+ * - Warm, descriptive names describing the parenting the user received — no clinical terms
+ * - Every name passes the test: "Would someone proudly share this as how they were raised?"
  * - Each archetype has a shareable one-liner tagline (≤10 words)
  * - Content fields (foundationalPatterns, watchouts) populated in Plan 04
  * - Cultural overlays imported from cultural-overlays.ts (Plan 04)
@@ -109,18 +109,18 @@ function profile(
 const STEADY_ANCHOR: Archetype = {
   id: 'steady-anchor',
   name: 'The Steady Anchor',
-  tagline: 'Your calm is your children\'s foundation.',
+  tagline: 'You grew up anchored.',
   dimensionProfile: profile(9, 8, 5, 8, 3, 7, 8, 7, 8, 6, 7),
   foundationalPatterns: {
-    headline: 'Your calm, consistent presence gives your children a deep sense of safety they carry into the world.',
+    headline: 'You grew up in a home where calm, consistent presence gave you a deep sense of safety you\'ve carried into the world.',
     themes: [
-      'Emotional predictability — your children always know what to expect from you, and that reliability builds secure attachment from the inside out',
-      'Boundaries as an act of love — your clear structure communicates care and safety, not control or restriction',
-      'Modeling regulation under pressure — you demonstrate that difficult emotions can be felt without being acted on, and your children internalize this as their own capacity',
-      'Warmth and firmness together — you hold both at once, which research identifies as the most protective combination for long-term child wellbeing',
-      'The safe harbor — your children return to you knowing they will be received without judgment, which frees them to explore and take risks',
+      'Emotional predictability — the people who raised you were consistent; you always knew what to expect from them, and that reliability built your sense of secure attachment from the inside out',
+      'Boundaries as an act of love — the clear structure you grew up with communicated care and safety, not control or restriction; limits felt like evidence that someone was paying attention',
+      'Regulation modeled under pressure — the home you grew up in showed you that difficult emotions can be felt without being acted on; you absorbed this as your own capacity over time',
+      'Warmth and firmness held together — the people who raised you offered both at once, which research identifies as the most protective combination for long-term wellbeing',
+      'The safe harbor — you grew up knowing you could return home without judgment, and that freedom gave you the security to explore and take risks in the world',
     ],
-    researchAnchor: 'Rooted in Baumrind\'s authoritative parenting framework (high responsiveness + high demandingness) and Siegel\'s concept of the "safe haven" as the foundation from which secure attachment develops.',
+    researchAnchor: 'Research on attachment shows that children raised with the authoritative combination — high responsiveness and high structure — develop the strongest foundations for competence, self-reliance, and secure relationships.',
     citations: [
       {
         researcher: 'Diana Baumrind',
@@ -137,15 +137,15 @@ const STEADY_ANCHOR: Archetype = {
     ],
   },
   watchouts: {
-    headline: 'When stress runs high, your steadiness can tip into emotional distance — and the people closest to you may feel it first.',
+    headline: 'Growing up with this kind of steadiness, you may have absorbed a quiet rule: keep things calm, hold it together, don\'t be the one who makes waves. That served you then. It may not serve you now.',
     themes: [
-      'Emotion-dismissing under pressure — research shows that parents with high self-regulation can inadvertently suppress rather than process difficult emotions, which Gottman terms the "emotion-dismissing" pattern; children may learn to hide feelings to preserve the calm',
-      'Missing bids for connection — when you\'re focused on maintaining equilibrium, you might find yourself responding to the surface of what your child says rather than the emotional undercurrent beneath it',
-      'Rigidity masking as consistency — your reliable structure is a strength, but under stress it can harden into inflexibility; when the situation calls for creative adaptation, you may find yourself defaulting to the familiar pattern even when it isn\'t fitting',
-      'Under-expressing warmth to those outside the immediate family — your capacity to hold it together for your children can mean that partners, extended family, or the children themselves receive less of your emotional availability than they need',
-      'Difficulty receiving support — the anchoring role can make it harder to let others hold you; research on caregiving dynamics suggests that consistent caregivers often defer their own needs in ways that compound over time',
+      'You may have learned that emotions are something to manage quietly — many people raised with this kind of predictable calm find that under stress, they default to distance rather than vulnerability, not because they don\'t feel, but because that\'s what felt safe growing up',
+      'You may have learned to track the surface of a conversation rather than the undercurrent — the home you grew up in prized equilibrium, and many people raised this way find themselves responding to what was said rather than what was really meant',
+      'You may have internalized that consistency means holding to the plan — that served you well in a structured home, but many people raised this way find that rigidity and reliability can look the same from the inside, even when the situation is calling for something different',
+      'You may have learned that the person who holds it together does so quietly — the strength you absorbed can sometimes mean that your own need for warmth or support goes unspoken; that served you then, it may not serve you now',
+      'You may have learned that the anchor doesn\'t need anchoring — many people raised with steady, capable caregivers find it harder to let others show up for them; the role of the one who holds things together was modeled clearly, but being held was harder to practice',
     ],
-    researchAnchor: 'Drawing from Gottman\'s research on emotion dismissing as a parenting pattern, and Siegel\'s concept of rigidity as one end of the "river of integration" — where the opposite of chaos is not health but inflexibility.',
+    researchAnchor: 'Research on attachment shows that children raised with emotion-dismissing caregivers — even warm, structured ones — often develop a quiet habit of suppressing emotional bids rather than risking disrupting the calm.',
     citations: [
       {
         researcher: 'John Gottman',
@@ -186,18 +186,18 @@ const STEADY_ANCHOR: Archetype = {
 const FIERCE_GUARDIAN: Archetype = {
   id: 'fierce-guardian',
   name: 'The Fierce Guardian',
-  tagline: 'Your love shows up as an unshakeable wall of safety.',
+  tagline: 'You grew up protected.',
   dimensionProfile: profile(7, 9, 2, 5, 9, 4, 4, 3, 5, 2, 4),
   foundationalPatterns: {
-    headline: 'Your children know, with absolute certainty, that you will move mountains to keep them safe — and that certainty is its own kind of love.',
+    headline: 'You grew up knowing, with absolute certainty, that the people who raised you would move mountains to keep you safe — and that certainty was its own kind of love.',
     themes: [
-      'Love as protection — your care is expressed through vigilance and provision; your children feel held even when they can\'t articulate why',
-      'Clear and consistent expectations — your children always know where the lines are, and that predictability builds a particular kind of trust',
-      'Unwavering commitment — when the world is difficult or threatening, your children know you won\'t flinch; your loyalty is a bedrock resource',
-      'Practical reliability — you show up, you follow through, you handle it; this action-based care is deeply felt even when it goes unremarked',
-      'High standards as belief in potential — your expectations come from a place of deep investment in your children\'s outcomes, and they know you believe they can meet them',
+      'Love as protection — the care you received was expressed through vigilance and provision; you felt held even when you couldn\'t have articulated why',
+      'Clear and consistent expectations — you always knew where the lines were growing up, and that predictability built a particular kind of trust in the people raising you',
+      'Unwavering commitment — when the world was difficult or threatening, the people who raised you didn\'t flinch; their loyalty was a bedrock resource you could lean on',
+      'Practical reliability — they showed up, they followed through, they handled it; this action-based care ran deep even when it went unremarked',
+      'High standards as belief in potential — the expectations the people who raised you held came from genuine investment in your outcomes; you grew up knowing they believed you could meet them',
     ],
-    researchAnchor: 'Grounded in Ainsworth\'s research on protective availability as a component of secure attachment, and cross-cultural research (Lansford et al.) showing that firm, protective parenting produces stronger positive outcomes in high-threat environments where vigilance is adaptive.',
+    researchAnchor: 'Research on attachment shows that children raised with consistent protective availability develop a secure base for navigating the world — vigilance-as-love is a genuine form of care, particularly where threat was real.',
     citations: [
       {
         researcher: 'Mary Ainsworth',
@@ -214,15 +214,15 @@ const FIERCE_GUARDIAN: Archetype = {
     ],
   },
   watchouts: {
-    headline: 'When worry is running the show, your fierce protection can become the thing that keeps your children from finding their own strength.',
+    headline: 'Growing up with this kind of fierce protection, you may have absorbed a quiet rule: the world is dangerous, and safety comes from vigilance. That served you then. It may not serve you now.',
     themes: [
-      'Autonomy erosion — research on anxious intrusiveness shows that well-intentioned protection that removes challenge also removes the experiences through which children build self-efficacy and resilience; when stressed, you might find yourself solving problems your child was ready to solve themselves',
-      'Emotional scanning replacing emotional attunement — your protective vigilance focuses outward on threats; you might find that you\'re assessing risk rather than receiving your child\'s inner experience, which can leave them feeling watched rather than seen',
-      'Fear transmission — Ainsworth\'s research on anxious attachment shows that parental anxiety is contagious; children of highly vigilant parents often develop their own threat-sensitivity, sometimes without a corresponding sense of their own competence',
-      'Control as the default response — when a situation feels uncertain or threatening, you might find yourself adding more structure and oversight rather than tolerating the ambiguity that learning requires',
-      'Difficulty distinguishing real risk from imagined risk — high protective instinct is well-calibrated for genuine threats but can over-generalize to low-risk situations, which narrows the space available for your children to grow',
+      'You may have learned that the world requires watching — many people raised with high-vigilance caregivers develop their own finely tuned threat-sensitivity; that alertness was useful growing up, but many find it hard to switch off when the actual danger has passed',
+      'You may have learned that the people who love you scan for what might go wrong — that grew your own awareness of risk, but many people raised this way find it harder to access the felt sense that they are also capable of handling what comes',
+      'You may have absorbed that protection means limiting exposure to difficulty — the home you grew up in kept danger at bay, but many people raised this way find they had fewer chances to discover what they could do when things got hard',
+      'You may have learned that worry is how love shows up — the vigilance around you was real and genuine, but many people raised this way find they internalized anxiety as a form of caring, making it hard to rest when nothing is actively wrong',
+      'You may have grown up feeling watched more than seen — the protective attention around you was constant, but many people raised this way report a quieter longing: to be received as a person, not just kept safe as a charge',
     ],
-    researchAnchor: 'Drawing from PBDQ research on anxious intrusiveness as a distinct parenting factor, Ainsworth\'s anxious/ambivalent attachment pattern, and Siegel\'s work on how unprocessed parental fear gets transmitted through the parent-child relationship.',
+    researchAnchor: 'Research on attachment shows that children raised with anxiously intrusive caregivers often develop heightened threat-sensitivity alongside a reduced felt sense of their own competence — the very protection can narrow the space for self-efficacy to grow.',
     citations: [
       {
         researcher: 'Louwerse et al. / PBDQ',
@@ -262,18 +262,18 @@ const FIERCE_GUARDIAN: Archetype = {
 const GENTLE_NURTURER: Archetype = {
   id: 'gentle-nurturer',
   name: 'The Gentle Nurturer',
-  tagline: 'Where your children come to be truly seen.',
+  tagline: 'You grew up held.',
   dimensionProfile: profile(9, 3, 8, 7, 3, 5, 9, 8, 6, 7, 9),
   foundationalPatterns: {
-    headline: 'Your children grow up knowing that their inner world matters, and that knowledge becomes the foundation of their emotional intelligence.',
+    headline: 'You grew up knowing that your inner world mattered — and that knowledge became the foundation of your emotional intelligence.',
     themes: [
-      'Emotional fluency — you create a home where feelings are named, received, and worked through rather than managed or suppressed; this emotional vocabulary is one of the most protective gifts a childhood can offer',
-      'Genuine presence — you are truly with your children when you are with them; you notice their emotional state, track their experience, and respond to what they are actually feeling rather than what you expect them to feel',
-      'Autonomy and trust — you believe in your children\'s capacity to navigate their own experience; you offer support without taking over, which builds genuine self-direction over time',
-      'Non-judgment as invitation — your children tell you things because they trust you won\'t immediately fix, lecture, or react; that trust is earned through consistent emotional availability',
-      'High emotional intelligence inheritance — research on Gottman\'s emotion-coaching style shows that children raised with consistent emotional attunement develop stronger empathy, better peer relationships, and greater emotional self-regulation',
+      'Emotional fluency — the home you grew up in was a place where feelings were named, received, and worked through rather than managed or suppressed; this emotional vocabulary is one of the most protective gifts a childhood can give',
+      'Genuine presence — the people who raised you were truly with you when they were with you; they noticed your emotional state, tracked your experience, and responded to what you were actually feeling rather than what they expected you to feel',
+      'Autonomy and trust — the people who raised you believed in your capacity to navigate your own experience; they offered support without taking over, which built your genuine self-direction over time',
+      'Non-judgment as invitation — you grew up knowing you could share things without the immediate threat of being fixed, lectured, or reacted at; that trust was earned through consistent emotional availability and it shaped how you learned to receive yourself',
+      'Emotional intelligence inherited — research on Gottman\'s emotion-coaching model shows that children raised with consistent emotional attunement develop stronger empathy, better peer relationships, and greater emotional self-regulation',
     ],
-    researchAnchor: 'Grounded in Gottman\'s emotion-coaching research, which identifies parental emotional attunement as the single strongest predictor of children\'s emotional intelligence, and Siegel\'s concept of "mindsight" — the capacity to see and be seen in relationship.',
+    researchAnchor: 'Research on attachment shows that children raised in emotion-coaching environments — where feelings are named, validated, and worked through — develop the strongest foundations for emotional intelligence and relational capacity.',
     citations: [
       {
         researcher: 'John Gottman',
@@ -290,15 +290,15 @@ const GENTLE_NURTURER: Archetype = {
     ],
   },
   watchouts: {
-    headline: 'When love and limits feel like opposites, your warmth can leave your children without the structure they need to feel truly safe.',
+    headline: 'Growing up with this kind of warmth, you may have absorbed a quiet rule: love means making the discomfort stop. That served you then. It may not serve you now.',
     themes: [
-      'Boundaries dissolving under emotional pressure — research on permissive parenting shows that the same attunement that makes you responsive to your child\'s feelings can make it hard to hold a limit when they\'re distressed; when stressed, you might find yourself negotiating your way out of a boundary you already set',
-      'Comfort prioritized over growth — your natural instinct is to reduce your child\'s discomfort; research shows this can inadvertently communicate that difficult feelings are dangerous, and that your child needs protecting from their own experience rather than support in navigating it',
-      'Inconsistency creating ambient anxiety — children with permissive parents often report feeling anxious even in very warm environments because unpredictable limits create a felt sense of instability, even when the relationship is loving',
-      'Difficulty tolerating your own discomfort at their discomfort — when your child is unhappy, your instinct to soothe may be partly about managing your own distress; when stressed, you might find yourself rushing to resolution before they\'ve had a chance to sit with and process the feeling',
-      'High emotional support, low emotional challenge — your children know they can come to you with how they feel, but they may not always get the gentle pushback that helps them develop frustration tolerance and resilience',
+      'You may have learned that feelings are best resolved quickly — the warmth around you moved swiftly to soothe; many people raised this way find it harder to sit with discomfort in themselves or others, because resolution was always close at hand growing up',
+      'You may have learned that love means being met wherever you are — the deep attunement you grew up with was a gift, but many people raised this way find they struggle when relationships have edges or limits, because softness was the primary language they knew',
+      'You may have absorbed that structure and warmth are opposites — the home you grew up in prized warmth above all; many people raised this way find that encountering firm limits later in life feels like a form of rejection, even when it isn\'t',
+      'You may have learned that your discomfort is something others will move to ease — that was true in the home you grew up in; many people raised this way find it harder to develop tolerance for the friction that\'s simply part of being alive and in relationship',
+      'You may have internalized that being truly seen means always being received — the unconditional quality of the warmth around you was real and precious, but many people raised this way find it harder to receive honest feedback without it feeling like a withdrawal of love',
     ],
-    researchAnchor: 'Drawing from Baumrind\'s permissive parenting research and Gottman\'s description of the well-meaning "laissez-faire" parent who acknowledges emotions but fails to set limits or guide behavior, resulting in children with lower self-regulation.',
+    researchAnchor: 'Research on attachment shows that children raised in high-warmth, low-structure environments often develop strong emotional vocabulary but lower frustration tolerance — the structure that teaches self-regulation was part of what was missing.',
     citations: [
       {
         researcher: 'Diana Baumrind',
@@ -339,18 +339,18 @@ const GENTLE_NURTURER: Archetype = {
 const INTENTIONAL_GUIDE: Archetype = {
   id: 'intentional-guide',
   name: 'The Intentional Guide',
-  tagline: 'You parent with purpose, not just instinct.',
+  tagline: 'You grew up given room to become yourself.',
   dimensionProfile: profile(6, 7, 10, 8, 2, 6, 9, 9, 8, 9, 8),
   foundationalPatterns: {
-    headline: 'You approach parenting as one of the most conscious and transformative acts a person can undertake — and that intention shapes everything you do.',
+    headline: 'You grew up in a home where parenting was approached as one of the most conscious and transformative acts a person can undertake — and that intention shaped the space you had to become yourself.',
     themes: [
-      'Deliberate responsiveness — you pause between trigger and response; this gap is where your parenting lives, and research on conscious parenting identifies it as the space where intergenerational patterns either repeat or change',
-      'Scaffolding independence — you see your role as building your child\'s capacity to navigate their own life; you offer support that develops their competence rather than substituting for it',
-      'Curiosity about self and child — you approach parenting with genuine inquiry, asking not just "what do I do?" but "what is driving this behavior?" and "what is this moment asking of both of us?"',
-      'Growth orientation — you genuinely believe both you and your children are always capable of learning, changing, and expanding; mistakes are data, not verdicts',
-      'Trust in the child\'s process — you are deeply comfortable with your children having experiences that are theirs, making decisions that are theirs, and learning from consequences that are theirs; you don\'t need to manage their story',
+      'Deliberate responsiveness — the people who raised you paused between trigger and response; you grew up in that gap, and research on conscious parenting identifies it as the space where intergenerational patterns either repeat or change',
+      'Scaffolding independence — the people who raised you saw their role as building your capacity to navigate your own life; they offered support that developed your competence rather than substituting for it',
+      'Curiosity about you — you were raised with genuine inquiry directed at you; the questions were not just "what did you do?" but "what were you thinking?" and "what is this moment asking of you?" — your inner world was treated as worth understanding',
+      'Growth as a shared orientation — you grew up in an environment that genuinely believed both adults and children are always capable of learning and expanding; mistakes were treated as data, not verdicts',
+      'Trust in your process — the people who raised you were deeply comfortable with you having experiences that were yours, making decisions that were yours, and learning from consequences that were yours; they didn\'t need to manage your story',
     ],
-    researchAnchor: 'Aligned with Tsabary\'s conscious parenting framework — the distinction between parenting from the present moment (the child\'s actual needs) versus from unmet parental needs — and Siegel\'s concept of mindsight as the capacity to pause, observe, and choose.',
+    researchAnchor: 'Research on attachment shows that children raised with high autonomy support and deliberate emotional attunement develop strong internal compasses and greater capacity to pause and choose their responses — rather than react automatically.',
     citations: [
       {
         researcher: 'Shefali Tsabary',
@@ -367,15 +367,15 @@ const INTENTIONAL_GUIDE: Archetype = {
     ],
   },
   watchouts: {
-    headline: 'When parenting becomes a project to perfect rather than a relationship to inhabit, your thoughtfulness can create distance you didn\'t intend.',
+    headline: 'Growing up with this kind of thoughtful, purpose-driven parenting, you may have absorbed a quiet rule: feelings need to be understood before they can be felt. That served you then. It may not serve you now.',
     themes: [
-      'Over-intellectualizing emotion — research on conscious parenting practitioners shows a risk of analyzing feelings rather than feeling them; when stressed, you might find yourself thinking through an emotional moment rather than being inside it with your child',
-      'Warmth that requires effort — your attunement is real but it is often effortful; in moments of depletion or surprise, you may find yourself reaching for the thoughtful response rather than having it arise naturally, which can be felt as a slight distance by your children',
-      'The perfectionism of intentionality — the same drive that makes you reflective can turn your parenting into a performance you\'re grading yourself on; when stressed, you might find yourself more focused on whether you responded correctly than on how your child is doing',
-      'Difficulty with spontaneity — your comfort zone is the considered response; you may find it harder than other parents to be playful, messy, or unpredictably warm — the kinds of moments that build relational intimacy through sheer delight',
-      'Moderate narrative integration — you have done personal work, but research suggests that intellectual understanding of one\'s past does not always translate into the visceral emotional integration that makes it truly settled; some of your own story may still be operating outside your awareness',
+      'You may have learned that emotions are best approached with analysis — the home you grew up in prized reflective intelligence; many people raised this way find they move quickly to make sense of a feeling rather than simply being inside it, which can create a subtle distance from their own emotional experience',
+      'You may have learned that warmth comes through attention and intention — the care you received was real, but it was often careful; many people raised this way find that spontaneous, unpremeditated warmth is harder to give and receive, because love in their home was thoughtful rather than effortlessly felt',
+      'You may have internalized that growth is the point — the conscious-parenting lens gave you space to become yourself, but many people raised in deliberate households find they approach their own lives as a project to optimize, which can make it hard to simply inhabit the present',
+      'You may have learned to reach for the right response rather than the natural one — that reflective capacity is a genuine strength, but many people raised this way find that spontaneity and play can feel unfamiliar, even slightly unsafe, compared to the considered mode they grew up in',
+      'You may have been given intellectual understanding of your parents\' history without the visceral emotional integration that makes it truly settled — insight was valued in your home, but research suggests that intellectual knowledge of the past and its emotional resolution are different things',
     ],
-    researchAnchor: 'Drawing from Siegel\'s distinction between intellectual understanding of the past and true narrative integration, and Tsabary\'s caution that conscious parenting can become another performance of the ego when the parent\'s attention is on their own growth rather than the child\'s actual presence.',
+    researchAnchor: 'Research on attachment shows that children raised in high-attunement, intellectually oriented households sometimes develop strong self-awareness alongside a more tentative relationship with their own spontaneous emotional life — reflection was so prized that raw feeling became harder to trust.',
     citations: [
       {
         researcher: 'Daniel J. Siegel & Mary Hartzell',
@@ -417,18 +417,18 @@ const INTENTIONAL_GUIDE: Archetype = {
 const RESILIENT_STRIVER: Archetype = {
   id: 'resilient-striver',
   name: 'The Resilient Striver',
-  tagline: 'You\'ve rewritten your story — and theirs.',
+  tagline: 'You grew up watching someone rewrite the story.',
   dimensionProfile: profile(8, 6, 9, 9, 5, 10, 7, 9, 7, 7, 8),
   foundationalPatterns: {
-    headline: 'You have done the hard, quiet work of understanding where you came from — and that work has given your children a different beginning.',
+    headline: 'The people who raised you had done their own hard, quiet work of understanding where they came from — and that work shaped the home you grew up in.',
     themes: [
-      'Earned coherence — research identifies the "earned secure" parent as one of the most remarkable outcomes in attachment science: someone who experienced adversity in their own upbringing but has done the integrative work to narrate it with clarity, emotional access, and resolution; this is your signature strength',
-      'Pattern-breaking as an active practice — you are aware of the intergenerational currents running through your family history and you actively choose which to carry forward and which to redirect; this level of intentionality is rare and protective',
-      'High emotional regulation from hard experience — your capacity to manage difficult feelings was built, not given; it is deeper and more flexible than regulation that was never tested',
-      'Wisdom from the inside — your lived experience with adversity gives you a particular kind of empathy for your children\'s struggles; you understand that difficulty is not the end of the story',
-      'Autonomy earned and freely given — because you had to find your own footing in ways many parents didn\'t, you understand intrinsically what it takes to build an inner compass; you give your children that space deliberately',
+      'Earned coherence modeled — research identifies the "earned secure" adult as one of the most remarkable outcomes in attachment science: someone who experienced adversity in their own upbringing but did the integrative work to narrate it with clarity and resolution; you grew up watching this in practice',
+      'Pattern-breaking as a lived value — the people who raised you were aware of the intergenerational currents running through your family history, and they actively chose which to carry forward and which to redirect; you absorbed this intentionality as your inheritance',
+      'Resilience built through honest modeling — the emotional regulation you saw growing up was built, not given; it came from hard experience, and watching someone carry difficulty with openness taught you that this is possible',
+      'Wisdom from the inside — the people who raised you understood adversity from the inside, and that gave their empathy a particular quality; when things were hard for you, they knew what hard felt like, and that knowing shaped how they showed up',
+      'A home that believed in growth — because the people who raised you had to find their own footing, they understood intrinsically what it takes to build an inner compass; they gave you that space deliberately, and with meaning',
     ],
-    researchAnchor: 'Grounded in van IJzendoorn\'s meta-analysis establishing the "earned secure" construct — adults who experienced insecure attachment but developed secure attachment states of mind through reflection and integration — and Siegel\'s narrative coherence research as the mechanism of intergenerational change.',
+    researchAnchor: 'Research on attachment shows that children raised by "earned secure" caregivers — adults who integrated difficult histories through reflection and narrative work — inherit the same attachment security as children raised by those who never faced adversity.',
     citations: [
       {
         researcher: 'Marinus H. van IJzendoorn',
@@ -445,15 +445,15 @@ const RESILIENT_STRIVER: Archetype = {
     ],
   },
   watchouts: {
-    headline: 'When the work of healing becomes part of your identity, you might find that the story of where you came from takes up more space than where you are.',
+    headline: 'Growing up with this kind of conscious, hard-won parenting, you may have absorbed a quiet rule: the past is always present, and healing is never fully done. That served you then. It may not serve you now.',
     themes: [
-      'Identity fusion with the healing narrative — the earned-secure journey is real and significant, but research on identity and narrative suggests that when the story of "what I overcame" becomes central to self-definition, it can subtly keep you oriented toward the past rather than fully inhabiting the present relationship with your child',
-      'Vigilance about regression — because you know what the old patterns look like, you might be hyperalert to signs of slipping back into them; when stressed, you might find yourself monitoring your own parenting more than receiving your child, which can create a slight emotional remove',
-      'The weight of being the first to break the cycle — this role is meaningful but it is also a burden; you might carry a responsibility that others don\'t, a sense that everything depends on you getting this right, which can manifest as perfectionism or anxiety when things don\'t go as planned',
-      'Moderate protective instinct from your own history — your experience of difficulty has given you a calibrated vigilance that is generally adaptive; under stress it can over-activate, particularly in situations that echo your own experiences of being unprotected',
-      'Difficulty receiving without context — you may find it harder to simply enjoy ordinary, uncomplicated moments with your children without reflecting on their significance; the meaning-making that is your strength can sometimes interfere with pure presence',
+      'You may have grown up aware of your parents\' healing journey in ways that put some of the weight of that story on you — the people who raised you were doing real and meaningful work, but many people raised this way find they absorbed a sense of responsibility for that journey, or felt the shadow of what came before even when the present was actually safe',
+      'You may have learned that the past is always something to be understood — the home you grew up in took history seriously; many people raised this way find it harder to simply inhabit an uncomplicated moment without scanning it for meaning or significance',
+      'You may have internalized that healing is ongoing and never quite complete — that vigilance was modeled as wisdom, and it is; but many people raised this way find they carry a low-level alertness to regression that makes full rest harder to access',
+      'You may have been the witness to someone else\'s transformation — there is something profound about growing up alongside a parent doing real inner work, but many people raised this way find they carry a weight of being both inspired by and responsible for that transformation',
+      'You may have absorbed a moderate alertness rooted in your family\'s history — the adaptive vigilance you grew up around is generally protective; under stress it can over-activate, particularly in situations that echo older family patterns you know by name',
     ],
-    researchAnchor: 'Drawing from Main\'s Adult Attachment Interview research on "preoccupied" states of mind (where the past remains emotionally unresolved and dominates present experience), and Siegel\'s distinction between narrative coherence and narrative preoccupation.',
+    researchAnchor: 'Research on attachment shows that children raised in households shaped by a parent\'s healing journey sometimes absorb a preoccupied relationship with the past — not because the healing failed, but because the story of healing was itself ever-present.',
     citations: [
       {
         researcher: 'Mary Main & Ruth Goldwyn',
@@ -497,18 +497,18 @@ const RESILIENT_STRIVER: Archetype = {
 const STRUCTURED_MENTOR: Archetype = {
   id: 'structured-mentor',
   name: 'The Structured Mentor',
-  tagline: 'You raise capable people by expecting great things.',
+  tagline: 'You grew up expected to be capable.',
   dimensionProfile: profile(4, 9, 7, 6, 2, 6, 4, 3, 6, 4, 3),
   foundationalPatterns: {
-    headline: 'You give your children something rare: a parent who genuinely believes they are capable of hard things, and who structures the world to prove it.',
+    headline: 'You grew up with something rare: people who genuinely believed you were capable of hard things, and who structured the world to prove it.',
     themes: [
-      'High expectations as a form of respect — you hold your children to standards because you believe in their capacity, not because you need them to perform; research on authoritative parenting identifies high expectations combined with support as a key predictor of achievement and self-efficacy',
-      'Real responsibility, real agency — you give your children meaningful roles and actual consequences, which builds competence and the felt sense that their actions matter',
-      'Exposure to productive difficulty — you understand that growth requires struggle, and you resist the instinct to smooth every path; your children develop frustration tolerance and resilience because you let them encounter real challenges',
-      'Clear structure as cognitive relief — your consistent expectations free your children\'s attention from navigating ambiguity; they can focus on the task at hand rather than reading the room for rules that keep changing',
-      'Preparation over protection — you prepare your children for the world they will actually encounter rather than trying to insulate them from it; this forward-looking investment is a deep form of care',
+      'High expectations as a form of respect — the people who raised you held you to standards because they believed in your capacity, not because they needed you to perform; you grew up with the felt sense that they thought you could handle real things',
+      'Real responsibility, real agency — you were given meaningful roles and actual consequences growing up, which built your competence and the felt sense that your actions mattered in the world',
+      'Exposure to productive difficulty — the people who raised you understood that growth requires struggle; they resisted the instinct to smooth every path, and you developed frustration tolerance and resilience because you encountered real challenges',
+      'Clear structure as cognitive relief — the consistent expectations you grew up with freed your attention from navigating ambiguity; you could focus on the task at hand rather than reading the room for rules that kept changing',
+      'Preparation over protection — the people who raised you prepared you for the world you would actually encounter rather than trying to insulate you from it; this forward-looking investment was a genuine form of care',
     ],
-    researchAnchor: 'Aligned with Baumrind\'s research on the authoritarian parenting style\'s positive outcomes on achievement and self-reliance when balanced with appropriate autonomy support, and Dweck\'s growth mindset research showing that high expectations combined with belief in process over fixed ability produce the strongest long-term outcomes.',
+    researchAnchor: 'Research on attachment shows that children raised with high structure and genuine belief in their capacity develop strong self-reliance and frustration tolerance — the experience of being expected to handle hard things builds the muscle to do so.',
     citations: [
       {
         researcher: 'Diana Baumrind',
@@ -525,15 +525,15 @@ const STRUCTURED_MENTOR: Archetype = {
     ],
   },
   watchouts: {
-    headline: 'When achievement and capability are how love gets communicated, your children may grow up competent at everything except knowing they are loved for who they are, not what they do.',
+    headline: 'Growing up with this kind of high-structure, capability-first home, you may have absorbed a quiet rule: what you do is who you are. That served you then. It may not serve you now.',
     themes: [
-      'Emotional attunement as a gap — research on low-warmth, high-structure parenting shows that children in these environments often perform well but report feeling emotionally distant from their parents; when stressed, you might find yourself reaching for feedback on what they did rather than curiosity about how they are',
-      'Love felt but not legible — your care is real but it is expressed through investment in outcomes rather than in warmth, physical affection, or emotional availability; your children may need to learn to read a different language of love than the one most explicitly described in attachment research',
-      'Emotional flooding as an alarm — you are comfortable with challenge and difficulty but not with emotional flooding; when your child is overwhelmed or dysregulated, you might find your instinct is to redirect to behavior rather than to sit inside the feeling with them',
-      'The achievement frame narrowing what counts — when competence is the primary frame, children may experience their emotional struggles, social difficulties, or creative departures as failures; the things that don\'t fit the achievement narrative may go unsupported',
-      'Difficulty with the non-productive — play, rest, wandering, and emotional processing have no clear output; you might find yourself subtly or explicitly communicating that these are less valuable than activities that produce visible results',
+      'You may have learned that competence is how you earn your place — the home you grew up in communicated investment through expectations; many people raised this way find it harder to feel loved simply for existing, because love in their home was expressed through standards rather than warmth',
+      'You may have learned to read love in action rather than in feeling — the care you received was real but it lived in follow-through, preparation, and investment in your outcomes; many people raised this way find the emotional language of warmth, affection, and verbal affirmation harder to trust or give, because that wasn\'t the primary dialect at home',
+      'You may have absorbed that emotional flooding is something to redirect — the home you grew up in was more comfortable with challenge than with overwhelm; many people raised this way find their instinct when they or someone they love is emotionally dysregulated is to move to behavior rather than to sit inside the feeling',
+      'You may have grown up with a narrower frame for what counts — when competence and achievement were the primary measures, your emotional struggles, social difficulties, or creative departures may have gotten less support; many people raised this way find those domains feel faintly less legitimate even in adulthood',
+      'You may have learned that rest, play, and wandering require justification — the home you grew up in prized visible results; many people raised this way find that activities with no clear output carry a quiet sense of wrongness, as if not being productive is a small failure',
     ],
-    researchAnchor: 'Drawing from Gottman\'s research on the emotion-dismissing parent — who is warm in action but uncomfortable with emotional expression — and attachment research showing that children of low-warmth, high-structure parents develop secure competence but report lower emotional intimacy with caregivers.',
+    researchAnchor: 'Research on attachment shows that children raised in low-warmth, high-structure environments often develop strong competence alongside a more tentative relationship with their own emotional life — the achievement frame was clear; the emotional one was harder to find.',
     citations: [
       {
         researcher: 'John Gottman',
@@ -578,18 +578,18 @@ const STRUCTURED_MENTOR: Archetype = {
 const OPEN_HEARTED_LEARNER: Archetype = {
   id: 'open-hearted-learner',
   name: 'The Open-Hearted Learner',
-  tagline: 'You show up fully — and keep growing as you go.',
+  tagline: 'You grew up loved by someone still learning how.',
   dimensionProfile: profile(8, 6, 5, 8, 7, 3, 8, 7, 4, 6, 7),
   foundationalPatterns: {
-    headline: 'You bring your whole self to parenting — your warmth, your sensitivity, and your genuine commitment to growing alongside your children.',
+    headline: 'You grew up with a whole-hearted presence — warmth, sensitivity, and a genuine commitment to you that showed up even when the people who raised you were still finding their own footing.',
     themes: [
-      'Emotional generosity — you give freely from your heart; your children experience a parent who is genuinely present with their feelings and who responds to the texture of their emotional life, not just its surface',
-      'Attuned responsiveness — you notice what your children are actually experiencing and you respond to that, rather than to what you think they should be experiencing; this attunement is a cornerstone of secure attachment',
-      'Growth as a shared practice — you model that adults are also works in progress; your children grow up understanding that learning and changing are not just things children do',
-      'Warmth under pressure — your emotional availability doesn\'t disappear when things are hard; your children know they can come to you when they are struggling, which keeps the relationship open through difficulty',
-      'Heart-led engagement — you approach your children with curiosity and care rather than strategy or agenda; this creates the quality of relationship that children remember most clearly when they look back on their childhoods',
+      'Emotional generosity given freely — the people who raised you gave from the heart; you experienced caregivers who were genuinely present with your feelings and who responded to the texture of your emotional life, not just its surface',
+      'Attuned responsiveness — the people who raised you noticed what you were actually experiencing and responded to that, rather than to what they thought you should be experiencing; this attunement was a cornerstone of the relationship you knew',
+      'Growth as a shared practice — you grew up watching adults who were also works in progress; you learned that learning and changing are not just things children do, they\'re what people do when they take themselves and their relationships seriously',
+      'Warmth that didn\'t disappear under pressure — the emotional availability in your home didn\'t vanish when things got hard; you grew up knowing you could bring difficulty to the relationship, which kept it open through challenge',
+      'Heart-led engagement — the people who raised you came to you with curiosity and care rather than strategy or agenda; this created the quality of relationship that stays with you — you know what it felt like to be genuinely approached',
     ],
-    researchAnchor: 'Grounded in Ainsworth\'s research on consistent emotional availability as the foundation of secure attachment, and Gottman\'s emotion-coaching model which identifies attuned responsiveness to children\'s emotional experience as the strongest predictor of emotional intelligence.',
+    researchAnchor: 'Research on attachment shows that children raised with consistent emotional availability develop the secure base that allows them to explore, to seek support, and to develop the emotional intelligence that comes from being truly met.',
     citations: [
       {
         researcher: 'Mary Ainsworth',
@@ -606,15 +606,15 @@ const OPEN_HEARTED_LEARNER: Archetype = {
     ],
   },
   watchouts: {
-    headline: 'When your own story is still finding its shape, you might find that your children\'s emotional moments sometimes activate yours — and the line between their experience and yours can blur.',
+    headline: 'Growing up with someone still finding their own story, you may have absorbed a quiet rule: their emotional state is something you need to track. That served you then. It may not serve you now.',
     themes: [
-      'Emotional resonance becoming emotional absorption — your attunement means you feel your children\'s feelings with them; research on less-integrated caregivers shows this can tip from empathy into merger, where your child\'s distress becomes your distress and your response is driven by your own activation rather than their need',
-      'Unprocessed past surfacing in present moments — research by Siegel and Main shows that low narrative coherence predicts being "triggered" by specific child behaviors; when stressed, you might find yourself responding to a present moment with an emotional intensity that belongs to your own history rather than the current situation',
-      'Protection and warmth narrowing autonomy — your care for your children is deep and genuine; combined with a still-integrating history that includes some ambient anxiety, you might find yourself wanting to keep your children close in ways that subtly limit their development of independence',
-      'Inconsistent structure — your warmth is steady but your boundaries may move with your emotional state; when you are well-resourced and present, limits are clear; when you are activated or depleted, they may soften in ways that create unpredictability',
-      'Drawn to parenting as healing — there is something beautiful about approaching parenting as a growth process; the watchout is when the child\'s role in the parent\'s healing narrative becomes more prominent than the child\'s own developmental story',
+      'You may have learned to monitor the emotional weather in the room — the people who raised you were attuned and warm, but their own story was still in process; many people raised this way develop a finely calibrated sense of how the adults around them are doing, because that felt like important information growing up',
+      'You may have experienced the line between their feelings and yours as permeable — the warmth in your home was real and genuine, but many people raised this way find that empathy and merger can be hard to distinguish; you absorbed feelings along with care, and separating the two takes practice',
+      'You may have grown up with love that was steady but structure that moved — the emotional availability in your home was consistent; the limits were less so; many people raised this way find that unpredictability in structure creates a low-level ambient anxiety, even inside a very warm relationship',
+      'You may have learned that closeness means staying close — the warmth and warmth-forward vigilance of the home you grew up in sometimes read as wanting you near; many people raised this way find their own independence carries a faint guilt, as if growing autonomous is a form of leaving',
+      'You may have been part of someone\'s healing story in ways you didn\'t choose — there is something real and meaningful about growing up alongside a person doing genuine inner work; many people raised this way also carry a quiet awareness that some of what was theirs got taken up by what was their parents\'',
     ],
-    researchAnchor: 'Drawing from Main\'s AAI research on unresolved/disorganized attachment states as a predictor of inconsistent parenting, and Siegel\'s work on the "emotionally reactive" parent whose lower narrative integration creates specific vulnerabilities around the child\'s expressions of distress, anger, or need.',
+    researchAnchor: 'Research on attachment shows that children raised by caregivers with lower narrative coherence — even deeply loving ones — often develop a heightened alertness to adult emotional states, because that attunement was woven into how they stayed safe and connected.',
     citations: [
       {
         researcher: 'Mary Main & Judith Solomon',
@@ -655,18 +655,18 @@ const OPEN_HEARTED_LEARNER: Archetype = {
 const DEVOTED_CHAMPION: Archetype = {
   id: 'devoted-champion',
   name: 'The Devoted Champion',
-  tagline: 'You pour everything into helping them become their best.',
+  tagline: 'You grew up championed.',
   dimensionProfile: profile(8, 8, 5, 6, 3, 5, 7, 5, 7, 3, 2),
   foundationalPatterns: {
-    headline: 'Your children know they have a parent who will go to the ends of the earth for them — your investment in their growth is total, visible, and deeply felt.',
+    headline: 'You grew up knowing you had people who would go to the ends of the earth for you — their investment in your growth was total, visible, and deeply felt.',
     themes: [
-      'All-in investment — you bring your full energy, resources, and attention to your children\'s development; they experience a parent who cares enough to show up completely and consistently',
-      'Visible love through action — your care is demonstrated through sacrifice, preparation, and active engagement with your children\'s lives; you know their teachers, their friends, their struggles, and their aspirations',
-      'High standards as belief — your expectations come from a genuine conviction that your children are capable of great things; you hold them to standards because you see their potential clearly',
-      'Advocacy and championing — you fight for your children in the world; when they face obstacles, you do not stand by passively but actively work to remove barriers and create opportunities',
-      'Consistency and reliability — your children can count on you to follow through; when you commit to something, it happens, and that reliability creates a stable platform for their development',
+      'All-in investment — the people who raised you brought their full energy, resources, and attention to your development; you experienced caregivers who cared enough to show up completely and consistently',
+      'Visible love through action — the care you received was demonstrated through sacrifice, preparation, and active engagement in your life; the people who raised you knew your teachers, your friends, your struggles, and your aspirations',
+      'High standards as belief in you — the expectations held for you came from a genuine conviction that you were capable of great things; you were held to standards because the people who raised you saw your potential clearly',
+      'Advocacy and championing — when you faced obstacles, the people who raised you did not stand by passively; they actively worked to remove barriers and create opportunities, and you grew up knowing someone was fighting in your corner',
+      'Consistency and reliability — you could count on the people who raised you to follow through; when they committed to something, it happened, and that reliability created a stable platform for your development',
     ],
-    researchAnchor: 'Grounded in Rohner\'s Interpersonal Acceptance-Rejection Theory, which identifies the distinction between perceived conditional and unconditional acceptance as a core axis of parenting impact, and Grusec & Davidov\'s domain-specific socialization model, which recognizes that different socialization domains (compliance, reciprocity, guided learning) operate independently.',
+    researchAnchor: 'Research on attachment shows that children raised with high investment and consistent follow-through develop strong self-efficacy and a felt sense that their growth matters to the people around them — being championed is a genuine form of love.',
     citations: [
       {
         researcher: 'Ronald P. Rohner',
@@ -683,15 +683,15 @@ const DEVOTED_CHAMPION: Archetype = {
     ],
   },
   watchouts: {
-    headline: 'When love and expectation become the same thing, your children may grow up feeling that they are loved for what they achieve rather than who they are.',
+    headline: 'Growing up with this kind of devoted investment, you may have absorbed a quiet rule: love comes with expectations, and approval is something you earn. That served you then. It may not serve you now.',
     themes: [
-      'Conditional warmth as invisible pressure — research on perceived acceptance-rejection shows that children are acutely sensitive to fluctuations in parental warmth; when warmth rises with achievement and falls with failure, the child internalizes that their worth is performance-dependent, even if the parent never says so explicitly',
-      'The approval treadmill — your high standards create an implicit standard for love; when stressed, you might find that your emotional tone toward your child shifts based on how well they are meeting expectations, creating an experience where approval must be continuously re-earned',
-      'Low reciprocity creating distance — your championing is often done for the child rather than with the child; the child\'s own perspective on what they need or want may be overridden by your vision of what is best for them, which can erode trust and closeness over time',
-      'Investment becoming ownership — the depth of your sacrifice and commitment can create an implicit expectation that the child owes compliance in return; research on conditional parenting shows this exchange dynamic undermines intrinsic motivation and authentic self-development',
-      'Difficulty accepting deviation — when your child wants something genuinely different from what you\'ve championed for them, you may experience it as rejection of your investment rather than healthy individuation; the nonjudgmental acceptance gap becomes most visible in these moments',
+      'You may have learned that warmth rises when you meet the standard — the investment around you was real, but many people raised this way are acutely sensitive to shifts in parental warmth based on performance; even if nothing was ever said explicitly, the emotional temperature changed, and you noticed',
+      'You may have internalized that you need to continuously re-earn approval — the deep investment in your outcomes communicated belief in you, but many people raised this way find themselves perpetually reaching for validation, because enough never quite felt final',
+      'You may have grown up having your direction shaped more than it was discovered — the championing around you was genuine, but many people raised this way find that the vision others held for them was stronger than the space to find their own; your preferences may have been heard, but the plan was already formed',
+      'You may have absorbed that sacrifice creates an implicit debt — the depth of investment and commitment around you was real; many people raised this way find a quiet internal ledger, a sense that the love they received came with an unspoken expectation of compliance or gratitude in return',
+      'You may have learned that wanting something different is a kind of betrayal — when the people who raised you had championed a path, your genuine desire to diverge may have been experienced as a rejection of their investment; many people raised this way find that individuation still carries a faint charge of disloyalty',
     ],
-    researchAnchor: 'Drawing from Rohner\'s cross-cultural research showing that perceived conditional acceptance produces anxiety, insecurity, and dependence on external validation, and from research on conditional regard (Assor, Roth & Deci, 2004) showing that parental conditional positive regard predicts internal compulsion and resentment rather than genuine internalization.',
+    researchAnchor: 'Research on attachment shows that children raised with conditional warmth — even deeply invested, well-intentioned warmth — often internalize performance as the price of love, developing an ongoing sensitivity to whether they have done enough to remain approved of.',
     citations: [
       {
         researcher: 'Avi Assor, Guy Roth & Edward L. Deci',
@@ -733,18 +733,18 @@ const DEVOTED_CHAMPION: Archetype = {
 const COLLABORATIVE_ALLY: Archetype = {
   id: 'collaborative-ally',
   name: 'The Collaborative Ally',
-  tagline: 'You parent with your children, not just for them.',
+  tagline: 'You grew up with a voice in the room.',
   dimensionProfile: profile(6, 4, 8, 7, 3, 7, 6, 7, 6, 10, 9),
   foundationalPatterns: {
-    headline: 'Your children grow up knowing their voice matters — not as a courtesy but as a genuine force in the family\'s direction.',
+    headline: 'You grew up knowing your voice mattered — not as a courtesy but as a genuine force in the family\'s direction.',
     themes: [
-      'Genuine power-sharing — you treat your children as legitimate contributors to family decisions; their preferences, ideas, and objections are not just heard but genuinely influence outcomes, which builds the felt sense that their voice has weight in the world',
-      'Unconditional acceptance as foundation — your children experience love that does not fluctuate with their behavior or achievements; this stable acceptance frees them to take risks, make mistakes, and develop authentically without fear of losing your regard',
-      'Modeling cooperation — you demonstrate that relationships work best when both parties contribute, negotiate, and influence each other; your children learn collaborative skills from the most important relationship in their lives',
-      'Democratic discipline — when rules are needed, you involve your children in creating them; research shows that children who participate in rule-setting are more likely to internalize and follow those rules than children who have rules imposed on them',
-      'Deep respect for the child\'s perspective — you genuinely believe that your child sees things you might miss, and you are comfortable being changed by what they see; this mutual influence builds trust, closeness, and the child\'s confidence in their own judgment',
+      'Genuine power-sharing experienced — the people who raised you treated you as a legitimate contributor to family decisions; your preferences, ideas, and objections were not just heard but genuinely influenced outcomes, and you grew up with the felt sense that your voice had weight in the world',
+      'Unconditional acceptance as foundation — the love you received growing up did not fluctuate with your behavior or achievements; that stable acceptance freed you to take risks, make mistakes, and develop authentically without fear of losing their regard',
+      'Cooperation modeled in the relationship — you grew up watching relationships work through contribution, negotiation, and mutual influence; you learned collaborative skills from the most important relationship in your early life',
+      'Democratic rule-setting — when limits were needed in your home, you were often involved in creating them; research shows that children who participate in rule-setting are more likely to internalize and follow those rules, and you grew up with that experience',
+      'Deep respect for your perspective — the people who raised you genuinely believed you saw things they might miss, and they were willing to be changed by what you saw; this mutual influence built trust and your confidence in your own judgment',
     ],
-    researchAnchor: 'Grounded in Grusec & Davidov\'s domain-specific socialization model, which identifies reciprocal compliance as a distinct domain where the quality of the bidirectional relationship predicts the child\'s cooperative behavior, and Duncan et al.\'s mindful parenting framework, which includes nonjudgmental acceptance and bidirectional listening as core components.',
+    researchAnchor: 'Research on attachment shows that children raised in genuinely bidirectional relationships — where their input was sought and valued — develop deeper internalization of shared values and greater confidence in their own perspective and judgment.',
     citations: [
       {
         researcher: 'Larry J. Duncan, J. Douglas Coatsworth & Mark T. Greenberg',
@@ -761,15 +761,15 @@ const COLLABORATIVE_ALLY: Archetype = {
     ],
   },
   watchouts: {
-    headline: 'When partnership replaces structure, your children may have a wonderful collaborator but miss the parent who is simply in charge when they need one.',
+    headline: 'Growing up with this kind of collaborative, partnership-oriented home, you may have absorbed a quiet rule: all decisions deserve a conversation. That served you then. It may not serve you now.',
     themes: [
-      'Under-using structural authority — research on democratic parenting shows that genuine situations arise where children need a parent who decides quickly and holds the line without negotiation; when stressed, you might find yourself opening a collaborative conversation when the moment calls for a clear directive, which can leave children feeling unsafe in genuinely high-stakes situations',
-      'Democratizing what shouldn\'t be democratic — not all decisions benefit from shared power; safety decisions, age-inappropriate choices, and situations requiring parental expertise may be undermined by a reflexive move toward collaboration; the child needs to know that some things are simply decided',
-      'Role clarity under pressure — the egalitarian orientation can blur the generational boundary that children need to feel safe; when stressed, you might find that the collaborative dynamic creates a peer-like quality that leaves the child uncertain about who is actually in charge',
-      'Difficulty with firm limits — holding a hard limit without negotiation may feel like a betrayal of your relational values; research on permissive outcomes shows that even children who thrive in democratic environments need the experience of encountering a limit that does not move, as this builds frustration tolerance and a felt sense of external safety',
-      'The acceptance trap — your deep nonjudgmental acceptance is a genuine strength, but under stress it can slide toward accepting behaviors that genuinely need to be challenged; the distinction between accepting the child and accepting all their choices can blur when your identity is built around unconditional regard',
+      'You may have learned that authority requires justification — the home you grew up in democratized decisions as a matter of principle; many people raised this way find it harder to trust or accept directives that arrive without explanation, because that wasn\'t the relational norm they knew',
+      'You may have grown up with the expectation that your perspective would be genuinely incorporated — that was real and valuable; many people raised this way find that encounters with structures where their input doesn\'t change outcomes feel especially disorienting or unfair',
+      'You may have absorbed that clear authority is a form of disrespect — the collaborative quality of your home reframed power as something to be shared; many people raised this way find that firm unilateral limits — at work, in relationships, in life — carry a faint charge of violation, even when they\'re appropriate',
+      'You may have experienced more partnership than generational clarity — the egalitarian quality of your home was a gift, but many people raised this way find it harder to rest inside someone else\'s authority when the situation genuinely calls for it; the footing of being led is less familiar',
+      'You may have learned that acceptance means accepting all of who someone is, always — the unconditional regard you grew up with was genuine; many people raised this way find that the line between accepting a person and accepting all their choices blurs, both in how they received feedback growing up and in how they hold limits now',
     ],
-    researchAnchor: 'Drawing from Baumrind\'s research showing that permissive parenting — even when warm and collaborative — produces children with lower self-regulation and frustration tolerance, and from developmental research showing that children need both autonomy and structure, with the balance shifting by age and context.',
+    researchAnchor: 'Research on attachment shows that children raised in highly democratic, low-structure environments often develop strong collaborative instincts alongside a lower tolerance for unilateral authority — the shape of power they grew up with becomes the shape they expect in the world.',
     citations: [
       {
         researcher: 'Diana Baumrind',
@@ -801,7 +801,7 @@ const COLLABORATIVE_ALLY: Archetype = {
  * See validateArchetypeDistinctness for the enforcement function.
  * All 36 pairs (9×8/2) validated via validateArchetypeDistinctness.
  *
- * Content fields (foundationalPatterns, watchouts) populated in Plan 04.
+ * Content fields (foundationalPatterns, watchouts) reframed to parents-lens in Phase 2.5.
  * Cultural overlays imported from lib/archetypes/cultural-overlays.ts (Plan 04).
  *
  * Downstream consumers:
