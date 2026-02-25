@@ -80,6 +80,8 @@ Each task was committed atomically:
 1. **Task 1: Update metadata and add display font** - `4cf0735` (feat)
 2. **Task 2: Visual verification of complete landing page** - approved (human gate — no code changes)
 
+**Deviation commit:** `4d75fd0` (feat: editorial SVG portrait icons for 8 KOL researchers)
+
 **Plan metadata:** (this commit)
 
 ## Files Created/Modified
@@ -117,7 +119,7 @@ Each task was committed atomically:
 - **Fix:** Created `components/landing/portraits/SketchPortrait.tsx` with 8 hand-crafted SVG illustration components. Each uses ink-style cross-hatching and a unique editorial visual metaphor: tree roots/canopy (Baumrind), two reaching hands with heart (Gottman), brain with neural pathways (Siegel), interlocking circles with figure (Ainsworth), kintsugi bowl with cracks (Kennedy), open eye with lotus bloom (Tsabary), parent-child silhouettes with wave patterns (van der Kolk), globe with embracing arms (Rohner)
 - **Files modified:** `components/landing/portraits/SketchPortrait.tsx` (created), `components/landing/KOLCredibility.tsx` (updated to import and render portraits)
 - **Verification:** TypeScript compiles cleanly, lint passes, visual result approved by user at checkpoint
-- **Committed in:** 4cf0735 (Task 1 commit)
+- **Committed in:** `4d75fd0` (separate feat commit after checkpoint approval)
 
 ---
 
@@ -136,6 +138,13 @@ None - no external service configuration required.
 - The --font-display CSS variable is available globally — result page and quiz can use it for headline consistency
 - Next planned work: Phase 2.5 (Archetype Content Rewrite) then Phase 3 (Mirror Result Page) — both prerequisites before the landing page's quiz CTA leads to a complete user experience
 - No blockers from this plan
+
+## Self-Check: PASSED
+
+- FOUND: `.planning/phases/04-landing-page-polish/04-02-SUMMARY.md`
+- FOUND: `components/landing/portraits/SketchPortrait.tsx`
+- FOUND commit: `4cf0735` (Task 1: metadata, display font, visual polish)
+- FOUND commit: `4d75fd0` (Deviation: editorial SVG portrait icons)
 
 ---
 *Phase: 04-landing-page-polish*
