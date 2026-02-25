@@ -92,8 +92,8 @@ Plans:
   5. No copy in `archetypes.ts` or `cultural-overlays.ts` implies the user is currently parenting in this style
 **Plans:** 2 plans (Wave 1 parallel)
 Plans:
-- [ ] 025-01-PLAN.md — Rewrite archetypes.ts: taglines, foundational patterns, watchouts to parents-lens framing
-- [ ] 025-02-PLAN.md — Rewrite cultural-overlays.ts: 45 overlays to receiver perspective + result page placeholder fix
+- [x] 025-01-PLAN.md — Rewrite archetypes.ts: taglines, foundational patterns, watchouts to parents-lens framing
+- [x] 025-02-PLAN.md — Rewrite cultural-overlays.ts: 45 overlays to receiver perspective + result page placeholder fix
 
 ### Phase 3: Mirror Result Page
 **Goal**: After completing the quiz, users provide their email and see a complete, free result that makes them feel deeply seen about the parenting they received — no paywall, no blurred content
