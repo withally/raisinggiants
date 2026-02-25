@@ -43,9 +43,8 @@ export function ProductLadder() {
             Three steps toward conscious parenting.
           </h2>
           <p className="mt-4 text-stone-400 text-base leading-relaxed max-w-xl">
-            Self-awareness is the beginning. Every step deepens your
-            understanding — of your past, your present, and the family you&apos;re
-            building.
+            Self-awareness is the beginning. Every step deepens your understanding — of your past,
+            your present, and the family you&apos;re building.
           </p>
         </div>
 
@@ -63,9 +62,7 @@ export function ProductLadder() {
               }`}
             >
               {/* Step number */}
-              <p className="text-4xl font-bold text-stone-600 mb-4 leading-none">
-                {product.step}
-              </p>
+              <p className="text-4xl font-bold text-stone-600 mb-4 leading-none">{product.step}</p>
 
               {/* Status badge */}
               <div className="mb-3">
@@ -81,14 +78,10 @@ export function ProductLadder() {
               </div>
 
               {/* Product name */}
-              <h3 className="text-xl font-semibold text-stone-100 mb-1">
-                {product.name}
-              </h3>
+              <h3 className="text-xl font-semibold text-stone-100 mb-1">{product.name}</h3>
 
               {/* Tagline */}
-              <p className="text-sm text-amber-300/80 font-medium mb-4">
-                {product.tagline}
-              </p>
+              <p className="text-sm text-amber-300/80 font-medium mb-4">{product.tagline}</p>
 
               {/* Description */}
               <p className="text-sm text-stone-400 leading-relaxed flex-1 mb-6">
@@ -121,6 +114,7 @@ export function ProductLadder() {
                     viewBox="0 0 10 10"
                     fill="none"
                     className="text-stone-500"
+                    aria-hidden="true"
                   >
                     <path
                       d="M2 5h6M5 2l3 3-3 3"

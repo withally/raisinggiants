@@ -34,15 +34,13 @@ export function HeroSection() {
 
         {/* Subheadline */}
         <p className="text-lg sm:text-xl text-stone-600 leading-relaxed max-w-2xl mb-4">
-          Every parent carries the echoes of their own upbringing — patterns,
-          tendencies, and quiet beliefs absorbed long before they held their own
-          child for the first time.
+          Every parent carries the echoes of their own upbringing — patterns, tendencies, and quiet
+          beliefs absorbed long before they held their own child for the first time.
         </p>
 
         <p className="text-base sm:text-lg text-stone-500 leading-relaxed max-w-xl mb-10">
-          Grounded in decades of research from the world&apos;s leading parenting
-          scientists, The Mirror helps you see those patterns clearly — and
-          understand where they came from.
+          Grounded in decades of research from the world&apos;s leading parenting scientists, The
+          Mirror helps you see those patterns clearly — and understand where they came from.
         </p>
 
         {/* CTA group */}
@@ -64,8 +62,8 @@ export function HeroSection() {
             Informed by
           </p>
           <p className="text-sm text-stone-500 leading-snug">
-            Baumrind &middot; Gottman &middot; Siegel &middot; Ainsworth &middot;
-            Kennedy &middot; Tsabary &middot; van der Kolk &middot; Rohner
+            Baumrind &middot; Gottman &middot; Siegel &middot; Ainsworth &middot; Kennedy &middot;
+            Tsabary &middot; van der Kolk &middot; Rohner
           </p>
         </div>
       </div>

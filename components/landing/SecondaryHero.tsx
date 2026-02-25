@@ -21,8 +21,8 @@ export function SecondaryHero() {
         </h2>
 
         <p className="text-base sm:text-lg text-stone-400 leading-relaxed max-w-xl mx-auto mb-10">
-          The Mirror takes 5 minutes. What it reflects may take longer to sit
-          with — and that&apos;s exactly the point.
+          The Mirror takes 5 minutes. What it reflects may take longer to sit with — and that&apos;s
+          exactly the point.
         </p>
 
         <Link

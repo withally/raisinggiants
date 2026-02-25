@@ -67,14 +67,12 @@ export function KOLCredibility() {
             The Research
           </p>
           <h2 className="text-3xl sm:text-4xl font-semibold text-stone-900 leading-tight mb-4">
-            Grounded in decades of work from the world&apos;s leading parenting
-            scientists.
+            Grounded in decades of work from the world&apos;s leading parenting scientists.
           </h2>
           <p className="text-stone-500 text-base leading-relaxed">
-            The Mirror isn&apos;t built on opinion or trend. Every dimension it
-            measures draws on peer-reviewed research, longitudinal studies, and
-            clinical frameworks that have shaped how the field understands child
-            development.
+            The Mirror isn&apos;t built on opinion or trend. Every dimension it measures draws on
+            peer-reviewed research, longitudinal studies, and clinical frameworks that have shaped
+            how the field understands child development.
           </p>
         </div>
 
@@ -104,17 +102,15 @@ export function KOLCredibility() {
               </p>
 
               {/* Year */}
-              <p className="text-xs text-stone-400 mt-auto">
-                {researcher.year}
-              </p>
+              <p className="text-xs text-stone-400 mt-auto">{researcher.year}</p>
             </div>
           ))}
         </div>
 
         {/* Closing note */}
         <p className="mt-8 text-center text-xs text-stone-400 leading-relaxed max-w-lg mx-auto">
-          These thinkers shaped the framework behind The Mirror. Their work
-          informs every question, every dimension, every insight.
+          These thinkers shaped the framework behind The Mirror. Their work informs every question,
+          every dimension, every insight.
         </p>
       </div>
     </section>
