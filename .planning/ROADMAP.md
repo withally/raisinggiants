@@ -17,7 +17,7 @@ From clinical framework to working product: Phase 0 defines the archetype system
 - [x] **Phase 2: Quiz Engine** — Full quiz UI with scoring, persistence, and Supabase session write (completed 2026-02-24)
 - [ ] **Phase 2.5: Archetype Content Rewrite** — Reframe all archetype copy from "your parenting style" to "your parents' parenting style" (INSERTED — pivot requirement)
 - [ ] **Phase 3: Mirror Result Page** — Email gate, full free result (parents' archetype, patterns, watchouts, cultural section), Product 2 CTA
-- [ ] **Phase 4: Landing Page + Polish** — Credibility-forward landing page, KOL signals, mobile-responsive
+- [x] **Phase 4: Landing Page + Polish** — Credibility-forward landing page, KOL signals, mobile-responsive (completed 2026-02-25)
 - [ ] **Phase 5: Marketing + Launch Strategy** — Go-to-market plan, content marketing, social media strategy, email funnels, KOL/influencer outreach
 
 ## Product 2 Roadmap — The Blueprint (Paid)
@@ -115,7 +115,7 @@ Plans:
   2. The full product ladder (Mirror, Blueprint, Partner Match) is displayed with correct status labels
   3. A prominent quiz start CTA drives visitors into the quiz flow at /quiz
   4. The entire landing page is fully mobile-responsive and loads fast on mobile connections
-**Plans:** 2 plans in 2 waves
+**Plans:** 2/2 plans complete
 Plans:
 - [ ] 04-01-PLAN.md — Landing page core build: hero, product ladder, KOL credibility, secondary CTA, footer
 - [ ] 04-02-PLAN.md — Metadata update (Raising Giants branding), display font, visual polish, human verification
@@ -140,5 +140,5 @@ Phases execute in numeric order: 0 → 1 → 2 → 2.5 → 3 → 4 → 5
 | 2. Quiz Engine | 5/5 | Complete | 2026-02-24 |
 | 2.5. Archetype Content Rewrite | 0/TBD | Upcoming | — |
 | 3. Mirror Result Page | 0/TBD | Not started | — |
-| 4. Landing Page + Polish | 0/TBD | Not started | — |
+| 4. Landing Page + Polish | 2/2 | Complete   | 2026-02-25 |
 | 5. Marketing + Launch Strategy | 0/TBD | Not started | — |

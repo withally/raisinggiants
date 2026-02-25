@@ -10,12 +10,12 @@ See: .planning/PROJECT.md (updated 2026-02-25)
 
 ## Current Position
 
-Phase: 04 of 5 (Landing Page Polish) — IN PROGRESS
-Plan: 1 of 2 in Phase 04 (04-01 complete)
-Status: Landing page live at /; 5 section components built; ready for Plan 04-02 typography polish
-Last activity: 2026-02-25 — Plan 04-01 complete: full landing page with HeroSection, ProductLadder, KOLCredibility, SecondaryHero, Footer
+Phase: 04 of 5 (Landing Page Polish) — IN PROGRESS (awaiting user checkpoint)
+Plan: 2 of 2 in Phase 04 (04-01 complete, 04-02 task 1 complete — checkpoint pending)
+Status: Landing page polished with Cormorant Garamond display font and updated metadata; awaiting user visual approval at checkpoint
+Last activity: 2026-02-25 — Plan 04-02 task 1 complete: metadata updated, display font added, visual polish applied
 
-Progress: [███████░░░] 60% (13/~22 plans estimated, Phases 0-2 + 04-01 complete)
+Progress: [███████░░░] 65% (14/~22 plans estimated, Phases 0-2 + 04-01 + 04-02 task 1 complete)
 
 ## Performance Metrics
 
@@ -38,6 +38,7 @@ Progress: [███████░░░] 60% (13/~22 plans estimated, Phases 0
 - Trend: steady
 
 *Updated after each plan completion*
+| Phase 04 P02 | 8 | 1 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -47,7 +48,9 @@ Decisions are logged in PROJECT.md Key Decisions table.
 Recent decisions affecting current work:
 
 **Product Ladder Pivot (2026-02-25):**
-- **[PIVOT-01]** Product ladder: Mirror (free) → Blueprint (paid) → Partner Match (premium) — replaces single $14 PDF model
+- **[PIVOT-01]** Product ladder: Mirror (free) → Blueprint (paid) → Partner Match (premium) — replaces single ### Decisions
+
+4 PDF model
 - **[PIVOT-02]** Archetype describes parents' style, not user's current parenting — makes product universally accessible
 - **[PIVOT-03]** Email gate before result reveal — captures lead at peak curiosity; result is the free value exchange
 - **[PIVOT-04]** Full result free (no paywall, no blurred content) — users must feel completely seen; teaser model undermines core value
@@ -64,6 +67,11 @@ Recent decisions affecting current work:
 - **[04-01-C]** Named exports for all landing components (`export function`) for explicit import pattern in page.tsx
 - **[04-01-D]** 8 named researchers displayed: Baumrind, Gottman, Siegel, Ainsworth, Kennedy, Tsabary, van der Kolk, Rohner
 
+**Phase 04-02 Landing Page Typography (2026-02-25):**
+- **[04-02-A]** Cormorant Garamond chosen as display font — editorial warmth, elegant italic forms, strong contrast with Geist Sans
+- **[04-02-B]** Display font loaded via next/font/google as --font-display CSS variable (zero render-blocking, display: swap)
+- **[04-02-C]** Display font applied via inline style prop on headlines — avoids Tailwind v4 @theme coupling
+
 **Earlier decisions (Phases 0-2):**
 - Archetype framework is a hard prerequisite — zero engineering starts until Phase 0 complete
 - 9 archetypes / 11 dimensions (expanded from original 7/7 before Sophia review)
@@ -74,6 +82,9 @@ Recent decisions affecting current work:
 - **[01-01]** Dual Supabase client pattern: client.ts (browser) and server.ts (service_role)
 - **[02-04]** SSR-safe Zustand hydration pattern established
 - **[02-04]** store.reset() not called after quiz completion — result page may need localStorage session data
+- [Phase 04]: [04-02-A] Cormorant Garamond chosen as display font — editorial warmth and elegant italic forms for Raising Giants brand
+- [Phase 04]: [04-02-B] Display font loaded via next/font/google as --font-display CSS variable (zero render-blocking, display: swap)
+- [Phase 04]: [04-02-C] Display font applied via inline style prop on headlines — avoids Tailwind v4 @theme coupling
 
 ### Pending Todos
 
@@ -96,5 +107,5 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-02-25
-Stopped at: Completed 04-01-PLAN.md — full landing page built and live at /
-Resume file: None — run `/gsd:execute-phase 04` for Plan 04-02 (typography polish)
+Stopped at: 04-02-PLAN.md Task 2 checkpoint — visual verification awaiting user approval
+Resume file: None — approve or describe issues at checkpoint, then run `/gsd:execute-phase 04` to complete
