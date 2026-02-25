@@ -15,7 +15,7 @@ export function QuizProgress({ current, total }: QuizProgressProps) {
       aria-valuemin={0}
       aria-valuemax={total}
       aria-label={`Quiz progress: ${current} of ${total} questions answered`}
-      className="fixed top-0 left-0 w-full z-50 h-1 bg-gray-100"
+      className="fixed top-0 left-0 w-full z-50 h-1 bg-stone-100"
     >
       <div
         className="h-full bg-amber-500 transition-all duration-300 ease-out"

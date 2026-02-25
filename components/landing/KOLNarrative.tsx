@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
 const highlights = [
   {
@@ -48,41 +49,43 @@ export function KOLNarrative() {
     <section className="bg-amber-50 pb-20 lg:pb-28">
       <div className="mx-auto max-w-3xl px-6">
         <div className="border-t border-amber-200/60 pt-14">
-          <p className="text-xs tracking-[0.25em] uppercase text-amber-700 font-medium mb-8 text-center">
-            Why this research matters for you
-          </p>
+          <ScrollReveal>
+            <p className="text-xs tracking-[0.25em] uppercase text-amber-700 font-medium mb-8 text-center">
+              Why this research matters for you
+            </p>
+          </ScrollReveal>
 
           <div className="space-y-10">
-            {highlights.map((h) => (
-              <div key={h.name} className="group">
-                {/* Quote */}
-                <blockquote className="relative pl-5 border-l-2 border-amber-300 mb-4">
-                  <p
-                    className="text-lg sm:text-xl text-stone-700 leading-relaxed italic"
-                    style={{ fontFamily: "var(--font-display)" }}
-                  >
-                    &ldquo;{h.quote}&rdquo;
-                  </p>
-                  <footer className="mt-2 text-sm text-stone-500 not-italic">
-                    — {h.name}, {h.year}
-                  </footer>
-                </blockquote>
+            {highlights.map((h, i) => (
+              <ScrollReveal key={h.name} delay={i * 120}>
+                <div className="group">
+                  {/* Quote */}
+                  <blockquote className="relative pl-5 border-l-2 border-amber-300 mb-4">
+                    <p className="text-lg sm:text-xl text-stone-700 leading-relaxed italic font-display">
+                      &ldquo;{h.quote}&rdquo;
+                    </p>
+                    <footer className="mt-2 text-sm text-stone-500 not-italic">
+                      — {h.name}, {h.year}
+                    </footer>
+                  </blockquote>
 
-                {/* Discovery + Mirror connection */}
-                <p className="text-sm text-stone-500 leading-relaxed mb-1.5">
-                  {h.discovery}
-                </p>
-                <p className="text-sm text-amber-700/80 leading-relaxed font-medium">
-                  {h.mirrorConnection}
-                </p>
-              </div>
+                  {/* Discovery + Mirror connection */}
+                  <p className="text-sm text-stone-500 leading-relaxed mb-1.5">
+                    {h.discovery}
+                  </p>
+                  <p className="text-sm text-amber-700/80 leading-relaxed font-medium">
+                    {h.mirrorConnection}
+                  </p>
+                </div>
+              </ScrollReveal>
             ))}
           </div>
 
           {/* CTA — catch intent at peak curiosity */}
-          <div className="mt-12 pt-10 border-t border-amber-200/60 text-center">
+          <ScrollReveal delay={200} className="mt-12 pt-10 border-t border-amber-200/60 text-center">
             <p className="text-sm text-stone-500 mb-4">
-              See which patterns shaped you — and which ones you&apos;re carrying forward.
+              See which patterns shaped you — and which ones you&apos;re
+              carrying forward.
             </p>
             <Link
               href="/quiz"
@@ -90,7 +93,7 @@ export function KOLNarrative() {
             >
               Find your archetype — it&apos;s free
             </Link>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

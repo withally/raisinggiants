@@ -1,4 +1,5 @@
 import type { ComponentType } from "react";
+import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import {
   BaumrindPortrait,
   GottmanPortrait,
@@ -89,40 +90,38 @@ export function KOLCredibility() {
     <section className="bg-amber-50 py-20 lg:py-32">
       <div className="mx-auto max-w-5xl px-6">
         {/* Section header */}
-        <div className="mb-14 max-w-2xl">
+        <ScrollReveal className="mb-14 max-w-2xl">
           <p className="text-xs tracking-[0.25em] uppercase text-amber-700 font-medium mb-4">
             The Research
           </p>
-          <h2
-            className="text-4xl sm:text-5xl font-semibold text-stone-900 leading-tight mb-4"
-            style={{ fontFamily: "var(--font-display)" }}
-          >
-            Grounded in decades of work from the world&apos;s leading parenting scientists.
+          <h2 className="text-4xl sm:text-5xl font-semibold text-stone-900 leading-tight mb-4 font-display">
+            Grounded in decades of work from the world&apos;s leading parenting
+            scientists.
           </h2>
           <p className="text-stone-500 text-base leading-relaxed">
-            The Mirror isn&apos;t built on opinion or trend. Every dimension it measures draws on
-            peer-reviewed research, longitudinal studies, and clinical frameworks that have shaped
-            how the field understands child development.
+            The Mirror isn&apos;t built on opinion or trend. Every dimension it
+            measures draws on peer-reviewed research, longitudinal studies, and
+            clinical frameworks that have shaped how the field understands child
+            development.
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Researcher grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-amber-200/60 border border-amber-200/60 rounded-2xl overflow-hidden shadow-sm">
-          {researchers.map((researcher) => (
-            <div
+          {researchers.map((researcher, i) => (
+            <ScrollReveal
               key={researcher.name}
+              delay={i * 100}
+              distance={16}
               className="bg-amber-50 p-5 lg:p-6 flex flex-col gap-3 hover:bg-white transition-colors duration-150"
             >
               {/* Portrait sketch */}
-              <div className="w-16 h-18 text-stone-400">
+              <div className="w-16 h-18 text-stone-500">
                 <researcher.Portrait className="w-full h-full" />
               </div>
 
               {/* Name — display font */}
-              <h3
-                className="text-base font-semibold text-stone-900 leading-snug"
-                style={{ fontFamily: "var(--font-display)" }}
-              >
+              <h3 className="text-base font-semibold text-stone-900 leading-snug font-display">
                 {researcher.name}
               </h3>
 
@@ -132,7 +131,10 @@ export function KOLCredibility() {
               </p>
 
               {/* Divider */}
-              <div className="w-6 h-px bg-amber-300 my-1" aria-hidden="true" />
+              <div
+                className="w-6 h-px bg-amber-300 my-1"
+                aria-hidden="true"
+              />
 
               {/* Work */}
               <p className="text-xs text-stone-500 leading-snug italic">
@@ -140,16 +142,20 @@ export function KOLCredibility() {
               </p>
 
               {/* Year */}
-              <p className="text-xs text-stone-400 mt-auto">{researcher.year}</p>
-            </div>
+              <p className="text-xs text-stone-500 mt-auto">
+                {researcher.year}
+              </p>
+            </ScrollReveal>
           ))}
         </div>
 
         {/* Closing note */}
-        <p className="mt-8 text-center text-xs text-stone-400 leading-relaxed max-w-lg mx-auto">
-          These thinkers shaped the framework behind The Mirror. Their work informs every question,
-          every dimension, every insight.
-        </p>
+        <ScrollReveal delay={400} className="mt-8">
+          <p className="text-center text-xs text-stone-500 leading-relaxed max-w-lg mx-auto">
+            These thinkers shaped the framework behind The Mirror. Their work
+            informs every question, every dimension, every insight.
+          </p>
+        </ScrollReveal>
       </div>
     </section>
   );

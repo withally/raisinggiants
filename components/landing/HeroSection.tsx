@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
 export function HeroSection() {
   return (
@@ -26,10 +27,7 @@ export function HeroSection() {
         </p>
 
         {/* Main headline — display font */}
-        <h1
-          className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-semibold text-stone-900 leading-[1.05] mb-5 max-w-3xl"
-          style={{ fontFamily: "var(--font-display)" }}
-        >
+        <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-semibold text-stone-900 leading-[1.05] mb-5 max-w-3xl font-display">
           The way you were raised
           <br className="hidden sm:block" /> is still{" "}
           <em className="italic text-amber-600">shaping</em> you.
@@ -48,33 +46,37 @@ export function HeroSection() {
           >
             Find your archetype — it&apos;s free
           </Link>
-          <p className="text-sm text-stone-400 text-center sm:text-left sm:ml-2 self-center">
+          <p className="text-sm text-stone-500 text-center sm:text-left sm:ml-2 self-center">
             21 questions &middot; No account needed &middot; Completely private
           </p>
         </div>
 
         {/* Supporting copy — below CTA for scrollers who want more context */}
-        <div className="max-w-2xl space-y-3 mb-12">
+        <ScrollReveal className="max-w-2xl space-y-3 mb-12">
           <p className="text-base text-stone-500 leading-relaxed">
-            We all carry echoes of our upbringing — patterns, tendencies, and quiet beliefs absorbed
-            long before we had words for them.
+            We all carry echoes of our upbringing — patterns, tendencies, and
+            quiet beliefs absorbed long before we had words for them.
           </p>
-          <p className="text-sm text-stone-400 leading-relaxed">
-            Grounded in decades of research from the world&apos;s leading parenting scientists, The
-            Mirror helps you see those patterns clearly — and understand where they came from.
+          <p className="text-sm text-stone-500 leading-relaxed">
+            Grounded in decades of research from the world&apos;s leading
+            parenting scientists, The Mirror helps you see those patterns clearly
+            — and understand where they came from.
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Research badge */}
-        <div className="pt-8 border-t border-amber-200 flex flex-col sm:flex-row gap-2 sm:gap-6 items-start">
-          <p className="text-xs text-stone-400 uppercase tracking-wider font-medium shrink-0 mt-0.5">
-            Informed by
-          </p>
-          <p className="text-sm text-stone-500 leading-snug">
-            Baumrind &middot; Gottman &middot; Siegel &middot; Ainsworth &middot; Kennedy &middot;
-            Tsabary &middot; van der Kolk &middot; Rohner
-          </p>
-        </div>
+        <ScrollReveal delay={200}>
+          <div className="pt-8 border-t border-amber-200 flex flex-col sm:flex-row gap-2 sm:gap-6 items-start">
+            <p className="text-xs text-stone-500 uppercase tracking-wider font-medium shrink-0 mt-0.5">
+              Informed by
+            </p>
+            <p className="text-sm text-stone-500 leading-snug">
+              Baumrind &middot; Gottman &middot; Siegel &middot; Ainsworth
+              &middot; Kennedy &middot; Tsabary &middot; van der Kolk &middot;
+              Rohner
+            </p>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

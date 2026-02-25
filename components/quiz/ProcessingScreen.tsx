@@ -12,10 +12,15 @@ export function ProcessingScreen() {
         </div>
 
         {/* Warm message */}
-        <h2 className="text-xl font-semibold text-stone-800 mb-3 leading-snug">
-          We&apos;re putting together your parenting blueprint...
+        <h2
+          className="text-xl font-semibold text-stone-800 mb-3 leading-snug"
+          style={{ fontFamily: "var(--font-display)" }}
+        >
+          We&apos;re putting together your archetype profile&hellip;
         </h2>
-        <p className="text-stone-500 text-base leading-relaxed">This only takes a moment.</p>
+        <p className="text-stone-500 text-base leading-relaxed">
+          Analyzing your patterns across 8 dimensions&hellip;
+        </p>
       </div>
     </div>
   );

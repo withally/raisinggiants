@@ -1,6 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
+import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
@@ -36,13 +37,16 @@ export function EmailCaptureScreen({ onSubmit, isSubmitting = false }: EmailCapt
         {/* Card */}
         <div className="bg-white rounded-2xl shadow-sm border border-amber-100 px-8 py-10">
           {/* Headline */}
-          <h2 className="text-2xl font-semibold text-stone-800 mb-2 leading-snug">
-            Almost there! Let&apos;s save your results.
+          <h2
+            className="text-2xl font-semibold text-stone-800 mb-2 leading-snug"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
+            Your reflection is complete.
           </h2>
 
           {/* Sub-text */}
           <p className="text-stone-500 mb-8 leading-relaxed">
-            Enter your email so we can save your parenting blueprint.
+            Enter your email so we can send your results.
           </p>
 
           {/* Form */}
@@ -77,7 +81,11 @@ export function EmailCaptureScreen({ onSubmit, isSubmitting = false }: EmailCapt
 
         {/* Privacy note */}
         <p className="mt-4 text-center text-xs text-stone-400">
-          We&apos;ll only use your email to send your blueprint. No spam, ever.
+          We&apos;ll only use your email to send your results. No spam, ever.
+          <br />
+          <Link href="/privacy" className="underline underline-offset-2 hover:text-stone-600 transition-colors">
+            Read our privacy policy
+          </Link>
         </p>
       </div>
     </div>

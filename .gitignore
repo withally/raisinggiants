@@ -2,6 +2,12 @@ node_modules/
 local-data/
 .claude/
 
+# Environment
+.env.local
+
+# Build artifacts
+tsconfig.tsbuildinfo
+
 # Next.js
 .next/
 out/

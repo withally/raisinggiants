@@ -5,6 +5,8 @@ import { QuizShell } from "@/components/quiz/QuizShell";
 
 export const metadata: Metadata = {
   title: "Take the Quiz | Your Parenting Blueprint",
+  description:
+    "Answer 21 reflective questions to uncover the parenting patterns you inherited. Free, private, and research-informed.",
 };
 
 export default function QuizPage() {

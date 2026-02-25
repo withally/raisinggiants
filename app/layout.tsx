@@ -16,6 +16,7 @@ const cormorantGaramond = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://raisinggiants.com"),
   title: "Raising Giants — The Mirror",
   description:
     "Understand the parenting you received. A free, research-backed assessment grounded in the work of the world's leading parenting scientists.",
@@ -25,6 +26,23 @@ export const metadata: Metadata = {
       "Understand the parenting you received. A free, research-backed assessment grounded in the work of the world's leading parenting scientists.",
     type: "website",
     siteName: "Raising Giants",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "The Mirror — Discover Your Parenting Archetype",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Raising Giants — The Mirror",
+    description:
+      "Understand the parenting you received. A free, research-backed assessment grounded in the work of the world's leading parenting scientists.",
+  },
+  alternates: {
+    canonical: "/",
   },
 };
 

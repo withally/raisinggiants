@@ -45,6 +45,12 @@ export const useQuizStore = create<QuizState>()(
       setUserId: (id) => set({ userId: id }),
       reset: () => set(initialState),
     }),
-    { name: "quiz-session" }, // localStorage key
+    {
+      name: "quiz-session", // localStorage key
+      partialize: (state) => {
+        const { email, ...rest } = state;
+        return rest;
+      },
+    },
   ),
 );

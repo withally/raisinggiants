@@ -16,12 +16,21 @@ import { useQuizStore } from "@/stores/quizStore";
 // Zustand persist localStorage key: "quiz-session" (defined in stores/quizStore.ts)
 const TOTAL_QUESTIONS = QUESTIONS.length;
 
+// Step layout:
+// step 0 = intro screen
+// step 1..TOTAL_QUESTIONS = question screens (QUESTIONS[step - 1])
+// step TOTAL_QUESTIONS + 1 = closing/transition screen
+// step TOTAL_QUESTIONS + 2 = email capture
+// step TOTAL_QUESTIONS + 3 = processing
+
 export function QuizShell() {
   const router = useRouter();
   const [hasHydrated, setHasHydrated] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [initError, setInitError] = useState(false);
+  const [introSeen, setIntroSeen] = useState(false);
   const sessionInitialized = useRef(false);
+  const isTransitioning = useRef(false);
 
   // SSR-safe Zustand hydration detection
   // useQuizStore.persist.hasHydrated() is not available during SSR — use useEffect
@@ -51,6 +60,9 @@ export function QuizShell() {
 
   const direction = useQuizStore((s) => s.direction);
 
+  // Fix #8: proper Zustand selector for answers (no stale reads)
+  const answers = useQuizStore((s) => s.answers);
+
   // On mount: sync nuqs step from Zustand localStorage state (for page refresh resumption)
   useEffect(() => {
     if (!hasHydrated) return;
@@ -59,6 +71,8 @@ export function QuizShell() {
     const urlParams = new URLSearchParams(window.location.search);
     if (!urlParams.has("step") && storeStep > 0) {
       setStep(storeStep);
+      // If returning user has progressed past intro, mark it as seen
+      setIntroSeen(true);
     }
   }, [hasHydrated, setStep]);
 
@@ -132,27 +146,60 @@ export function QuizShell() {
   // Auto-advance handler — called by QuizCard on option tap
   const handleAnswer = useCallback(
     (questionId: string, answerId: string) => {
+      // Fix #7: guard against double-tap race condition
+      if (isTransitioning.current) return;
+
       const store = useQuizStore.getState();
       store.setAnswer(questionId, answerId);
 
       // 300ms delay for visible selected state before advancing
+      isTransitioning.current = true;
       setTimeout(() => {
         const nextStep = step + 1;
         setStep(nextStep);
         store.goForward(nextStep);
+        isTransitioning.current = false;
       }, 300);
     },
     [step, setStep],
   );
 
+  // Skip handler — advance without recording an answer
+  const handleSkip = useCallback(() => {
+    if (isTransitioning.current) return;
+    isTransitioning.current = true;
+
+    const store = useQuizStore.getState();
+    const nextStep = step + 1;
+    setStep(nextStep);
+    store.goForward(nextStep);
+    isTransitioning.current = false;
+  }, [step, setStep]);
+
   // Back button handler — navigates to previous question
   const handleBack = useCallback(() => {
-    if (step > 0) {
+    if (step > 1) {
+      // Don't go back to step 0 (intro) once it's been seen
       const prevStep = step - 1;
       setStep(prevStep);
       useQuizStore.getState().goBack(prevStep);
     }
   }, [step, setStep]);
+
+  // Intro screen "Begin" handler
+  const handleBegin = useCallback(() => {
+    setIntroSeen(true);
+    const nextStep = 1;
+    setStep(nextStep);
+    useQuizStore.getState().goForward(nextStep);
+  }, [setStep]);
+
+  // Closing screen "Continue" handler — advance to email capture
+  const handleClosingContinue = useCallback(() => {
+    const nextStep = TOTAL_QUESTIONS + 2;
+    setStep(nextStep);
+    useQuizStore.getState().goForward(nextStep);
+  }, [setStep]);
 
   // Quiz completion — called by EmailCaptureScreen on form submit
   const onQuizComplete = useCallback(
@@ -171,7 +218,7 @@ export function QuizShell() {
       const culturalBackground = store.answers["q-cultural-background"] ?? null;
 
       // Step 4: Show processing screen immediately
-      setStep(TOTAL_QUESTIONS + 1);
+      setStep(TOTAL_QUESTIONS + 3);
 
       // Step 5: Persist completed quiz data to quiz_sessions
       const supabase = createClient();
@@ -229,27 +276,105 @@ export function QuizShell() {
     );
   }
 
+  // Current question index (step 1 = QUESTIONS[0], step 2 = QUESTIONS[1], etc.)
+  const questionIndex = step - 1;
+  const isQuestionStep = step >= 1 && step <= TOTAL_QUESTIONS;
+
   // Section header detection: show header when entering a new section
-  const showSectionHeader = step === 0 || QUESTIONS[step]?.section !== QUESTIONS[step - 1]?.section;
+  const showSectionHeader =
+    isQuestionStep &&
+    (questionIndex === 0 ||
+      QUESTIONS[questionIndex]?.section !== QUESTIONS[questionIndex - 1]?.section);
 
-  // Current answer for the active question (for resumption state)
-  const currentAnswer = QUESTIONS[step]
-    ? (useQuizStore.getState().answers[QUESTIONS[step].id] ?? null)
-    : null;
+  // Fix #8: current answer from Zustand selector (reactive, not stale)
+  const currentAnswer =
+    isQuestionStep && QUESTIONS[questionIndex]
+      ? (answers[QUESTIONS[questionIndex].id] ?? null)
+      : null;
 
-  // Rendering: question screens, email capture, or processing
+  // ---- INTRO SCREEN (step 0) ----
+  if (step === 0 && !introSeen) {
+    return (
+      <div className="min-h-[100dvh] flex items-center justify-center px-6 bg-amber-50">
+        <div className="max-w-lg text-center animate-fade-up">
+          <h1
+            className="text-3xl sm:text-4xl font-semibold text-stone-900 mb-4 leading-snug"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
+            Before we begin
+          </h1>
+          <p className="text-stone-600 text-base sm:text-lg leading-relaxed mb-6">
+            You&apos;ll reflect on 21 moments from your childhood. There are no right
+            answers&nbsp;&mdash; only your experience.
+          </p>
+          <p className="text-sm text-stone-400 mb-8">Takes about 5 minutes</p>
+          <button
+            type="button"
+            onClick={handleBegin}
+            className="rounded-full bg-stone-900 text-amber-50 px-8 py-3 text-base font-semibold hover:bg-stone-800 transition-colors"
+          >
+            Begin
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  // If somehow on step 0 but intro was seen (e.g. browser back), push to step 1
+  if (step === 0 && introSeen) {
+    setStep(1);
+    return <div className="min-h-screen bg-amber-50" />;
+  }
+
+  // ---- CLOSING / TRANSITION SCREEN (after last question, before email) ----
+  if (step === TOTAL_QUESTIONS + 1) {
+    return (
+      <div className="min-h-[100dvh] flex items-center justify-center px-6 bg-amber-50">
+        <div className="max-w-lg text-center animate-fade-up">
+          <h2
+            className="text-2xl sm:text-3xl font-semibold text-stone-900 mb-4 leading-snug"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
+            Thank you for reflecting on this.
+          </h2>
+          <p className="text-stone-600 text-base leading-relaxed mb-8">
+            Your answers paint a meaningful picture. Let&apos;s see what they reveal.
+          </p>
+          <button
+            type="button"
+            onClick={handleClosingContinue}
+            className="rounded-full bg-stone-900 text-amber-50 px-8 py-3 text-base font-semibold hover:bg-stone-800 transition-colors"
+          >
+            Continue
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  // ---- EMAIL CAPTURE SCREEN ----
+  if (step === TOTAL_QUESTIONS + 2) {
+    return <EmailCaptureScreen onSubmit={onQuizComplete} isSubmitting={isSubmitting} />;
+  }
+
+  // ---- PROCESSING SCREEN ----
+  if (step >= TOTAL_QUESTIONS + 3) {
+    return <ProcessingScreen />;
+  }
+
+  // ---- QUESTION SCREENS ----
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden bg-amber-50">
       {/* Fixed progress bar at top of screen */}
-      {step < TOTAL_QUESTIONS && <QuizProgress current={step} total={TOTAL_QUESTIONS} />}
+      {isQuestionStep && <QuizProgress current={questionIndex} total={TOTAL_QUESTIONS} />}
 
-      {/* Back button — hidden on step 0 and on post-quiz screens */}
-      {step > 0 && step < TOTAL_QUESTIONS && (
+      {/* Back button — hidden on step 1 (first question) and on post-quiz screens */}
+      {step > 1 && isQuestionStep && (
         <button
           type="button"
           onClick={handleBack}
           aria-label="Go to previous question"
-          className="fixed top-4 left-4 z-50 p-2 rounded-full bg-white shadow-sm border border-gray-100 text-stone-600 hover:text-stone-900 hover:bg-amber-50 transition-colors"
+          className="fixed top-4 left-4 z-50 p-2 rounded-full bg-white shadow-sm border border-stone-100 text-stone-600 hover:text-stone-900 hover:bg-amber-50 transition-colors"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -269,22 +394,19 @@ export function QuizShell() {
       )}
 
       {/* Animated slide wrapper */}
-      {step < TOTAL_QUESTIONS ? (
+      {isQuestionStep && QUESTIONS[questionIndex] && (
         <div
           key={step}
           className={direction === "forward" ? "animate-slide-in-right" : "animate-slide-in-left"}
         >
           <QuizCard
-            question={QUESTIONS[step]}
+            question={QUESTIONS[questionIndex]}
             currentAnswer={currentAnswer}
             onAnswer={handleAnswer}
+            onSkip={handleSkip}
             showSectionHeader={showSectionHeader}
           />
         </div>
-      ) : step === TOTAL_QUESTIONS ? (
-        <EmailCaptureScreen onSubmit={onQuizComplete} isSubmitting={isSubmitting} />
-      ) : (
-        <ProcessingScreen />
       )}
     </div>
   );

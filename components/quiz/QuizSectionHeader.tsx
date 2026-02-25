@@ -8,8 +8,8 @@ interface QuizSectionHeaderProps {
 export function QuizSectionHeader({ title, description }: QuizSectionHeaderProps) {
   return (
     <div className="mb-4">
-      <p className="text-sm font-medium text-gray-500 uppercase tracking-wide">{title}</p>
-      {description && <p className="mt-1 text-sm text-gray-400">{description}</p>}
+      <p className="text-sm font-medium text-stone-500 uppercase tracking-wide">{title}</p>
+      {description && <p className="mt-1 text-sm text-stone-400">{description}</p>}
     </div>
   );
 }

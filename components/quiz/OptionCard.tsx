@@ -24,7 +24,7 @@ export function OptionCard({ label, isSelected, onSelect, disabled = false }: Op
         // Default (unselected) state
         isSelected
           ? "bg-amber-50 border-amber-500 text-amber-900"
-          : "bg-white border-gray-200 text-gray-800 hover:border-amber-300 hover:bg-amber-50/40",
+          : "bg-white border-stone-200 text-stone-800 hover:border-amber-300 hover:bg-amber-50/40",
         // Disabled state
         disabled && "opacity-60 cursor-not-allowed",
       )}

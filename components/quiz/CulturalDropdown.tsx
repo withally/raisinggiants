@@ -89,7 +89,7 @@ export function CulturalDropdown({ options, value, onSelect }: CulturalDropdownP
       />
 
       {isOpen && filteredOptions.length > 0 && (
-        <div className="absolute z-10 mt-1 w-full bg-white border border-gray-200 rounded-xl shadow-lg max-h-60 overflow-y-auto">
+        <div className="absolute z-10 mt-1 w-full bg-white border border-stone-200 rounded-xl shadow-lg max-h-60 overflow-y-auto">
           {filteredOptions.map((option) => {
             const isSelected = value === option.id;
             return (
@@ -103,7 +103,7 @@ export function CulturalDropdown({ options, value, onSelect }: CulturalDropdownP
                   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-inset",
                   isSelected
                     ? "bg-amber-50 text-amber-900 font-medium"
-                    : "text-gray-800 hover:bg-gray-50",
+                    : "text-stone-800 hover:bg-stone-50",
                 )}
               >
                 {isSelected && (
@@ -129,7 +129,7 @@ export function CulturalDropdown({ options, value, onSelect }: CulturalDropdownP
       )}
 
       {isOpen && filteredOptions.length === 0 && (
-        <div className="absolute z-10 mt-1 w-full bg-white border border-gray-200 rounded-xl shadow-lg px-4 py-3 text-sm text-gray-500">
+        <div className="absolute z-10 mt-1 w-full bg-white border border-stone-200 rounded-xl shadow-lg px-4 py-3 text-sm text-stone-500">
           No matches found
         </div>
       )}
