@@ -140,5 +140,5 @@ Phases execute in numeric order: 0 → 1 → 2 → 2.5 → 3 → 4 → 5
 | 2. Quiz Engine | 5/5 | Complete | 2026-02-24 |
 | 2.5. Archetype Content Rewrite | 0/TBD | Upcoming | — |
 | 3. Mirror Result Page | 0/TBD | Not started | — |
-| 4. Landing Page + Polish | 2/2 | Complete   | 2026-02-25 |
+| 4. Landing Page + Polish | 2/2 | Complete    | 2026-02-25 |
 | 5. Marketing + Launch Strategy | 0/TBD | Not started | — |
