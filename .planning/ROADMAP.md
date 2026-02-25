@@ -90,7 +90,10 @@ Plans:
   3. All watchouts copy reads as "what to watch for given how you were raised" (awareness lens)
   4. All cultural overlay copy is updated to match the parents-archetype framing
   5. No copy in `archetypes.ts` or `cultural-overlays.ts` implies the user is currently parenting in this style
-**Plans**: TBD — to be planned
+**Plans:** 2 plans (Wave 1 parallel)
+Plans:
+- [ ] 025-01-PLAN.md — Rewrite archetypes.ts: taglines, foundational patterns, watchouts to parents-lens framing
+- [ ] 025-02-PLAN.md — Rewrite cultural-overlays.ts: 45 overlays to receiver perspective + result page placeholder fix
 
 ### Phase 3: Mirror Result Page
 **Goal**: After completing the quiz, users provide their email and see a complete, free result that makes them feel deeply seen about the parenting they received — no paywall, no blurred content
@@ -138,7 +141,7 @@ Phases execute in numeric order: 0 → 1 → 2 → 2.5 → 3 → 4 → 5
 | 0. Archetype Framework | 5/5 | Complete | 2026-02-24 |
 | 1. Data Foundation | 2/2 | Complete | 2026-02-24 |
 | 2. Quiz Engine | 5/5 | Complete | 2026-02-24 |
-| 2.5. Archetype Content Rewrite | 0/TBD | Upcoming | — |
+| 2.5. Archetype Content Rewrite | 0/2 | Planned | — |
 | 3. Mirror Result Page | 0/TBD | Not started | — |
 | 4. Landing Page + Polish | 2/2 | Complete    | 2026-02-25 |
 | 5. Marketing + Launch Strategy | 0/TBD | Not started | — |
