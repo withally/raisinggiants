@@ -5,7 +5,7 @@
 See: .planning/PROJECT.md (updated 2026-02-25)
 
 **Core value:** Adults feel deeply seen and understood about the parenting they *received* — the personalized output surfaces patterns they've always sensed but never had language for, grounded in credible research from top parenting experts.
-**Current focus:** Phase 025 — Archetype Content Rewrite (in progress)
+**Current focus:** Phase 025 complete — next: Phase 3 (Mirror Result Page)
 **Product:** The Mirror (free) — v1 launch scope
 
 ## Current Position

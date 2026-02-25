@@ -15,7 +15,7 @@ From clinical framework to working product: Phase 0 defines the archetype system
 - [x] **Phase 0: Archetype Framework** — Define 9 clinical archetypes with Sophia, scoring logic, and content descriptions (completed 2026-02-24)
 - [x] **Phase 1: Data Foundation** — Supabase schema, RLS policies, Storage, and anonymous auth configured (completed 2026-02-24)
 - [x] **Phase 2: Quiz Engine** — Full quiz UI with scoring, persistence, and Supabase session write (completed 2026-02-24)
-- [ ] **Phase 2.5: Archetype Content Rewrite** — Reframe all archetype copy from "your parenting style" to "your parents' parenting style" (INSERTED — pivot requirement)
+- [x] **Phase 2.5: Archetype Content Rewrite** — Reframe all archetype copy from "your parenting style" to "your parents' parenting style" (INSERTED — pivot requirement) (completed 2026-02-26)
 - [ ] **Phase 3: Mirror Result Page** — Email gate, full free result (parents' archetype, patterns, watchouts, cultural section), Product 2 CTA
 - [x] **Phase 4: Landing Page + Polish** — Credibility-forward landing page, KOL signals, mobile-responsive (completed 2026-02-25)
 - [ ] **Phase 5: Marketing + Launch Strategy** — Go-to-market plan, content marketing, social media strategy, email funnels, KOL/influencer outreach
@@ -90,7 +90,7 @@ Plans:
   3. All watchouts copy reads as "what to watch for given how you were raised" (awareness lens)
   4. All cultural overlay copy is updated to match the parents-archetype framing
   5. No copy in `archetypes.ts` or `cultural-overlays.ts` implies the user is currently parenting in this style
-**Plans:** 2 plans (Wave 1 parallel)
+**Plans:** 2/2 plans complete
 Plans:
 - [x] 025-01-PLAN.md — Rewrite archetypes.ts: taglines, foundational patterns, watchouts to parents-lens framing
 - [x] 025-02-PLAN.md — Rewrite cultural-overlays.ts: 45 overlays to receiver perspective + result page placeholder fix
@@ -141,7 +141,7 @@ Phases execute in numeric order: 0 → 1 → 2 → 2.5 → 3 → 4 → 5
 | 0. Archetype Framework | 5/5 | Complete | 2026-02-24 |
 | 1. Data Foundation | 2/2 | Complete | 2026-02-24 |
 | 2. Quiz Engine | 5/5 | Complete | 2026-02-24 |
-| 2.5. Archetype Content Rewrite | 0/2 | Planned | — |
+| 2.5. Archetype Content Rewrite | 2/2 | Complete | 2026-02-26 |
 | 3. Mirror Result Page | 0/TBD | Not started | — |
 | 4. Landing Page + Polish | 2/2 | Complete    | 2026-02-25 |
 | 5. Marketing + Launch Strategy | 0/TBD | Not started | — |
