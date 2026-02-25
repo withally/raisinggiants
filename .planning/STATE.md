@@ -2,26 +2,27 @@
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-02-23)
+See: .planning/PROJECT.md (updated 2026-02-25)
 
-**Core value:** Parents feel deeply seen and understood about their upbringing — the personalized output must feel written specifically for them, grounded in credible research, and create a bridge for meaningful conversations with loved ones.
-**Current focus:** Phase 3 - Free Result Page
+**Core value:** Adults feel deeply seen and understood about the parenting they *received* — the personalized output surfaces patterns they've always sensed but never had language for, grounded in credible research from top parenting experts.
+**Current focus:** Phase 2.5 — Archetype Content Rewrite (upcoming)
+**Product:** The Mirror (free) — v1 launch scope
 
 ## Current Position
 
-Phase: 3 of 8 (Free Result Page) — UPCOMING
-Plan: 5 of 5 in Phase 2 complete (Plan 02-05 COMPLETE — Human verification; quiz narrowed to 21 questions past-lens only; Phase 2 COMPLETE)
-Status: Phase 2 complete; ready to begin Phase 3 (Free Result Page)
-Last activity: 2026-02-24 — Plan 02-05 complete: Human verification of full quiz experience; removed 11 current-parenting questions (quiz now 21 questions, universally accessible)
+Phase: 2.5 of 5 (Archetype Content Rewrite) — UPCOMING
+Plan: 0 of TBD in Phase 2.5
+Status: Product ladder pivot complete; documentation updated; Phase 2.5 ready for planning
+Last activity: 2026-02-25 — Product ladder pivot: documentation rewrite across PROJECT.md, REQUIREMENTS.md, ROADMAP.md, STATE.md; old Phase 3 plans deleted
 
-Progress: [███████░░░] 31% (11/35+ plans estimated, Phase 0 complete, Phase 1 complete, Phase 2 complete)
+Progress: [██████░░░░] 50% (11/~22 plans estimated, Phases 0-2 complete, Phase 2.5 upcoming)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 9
+- Total plans completed: 12
 - Average duration: 6 min
-- Total execution time: 0.61 hours
+- Total execution time: ~1.2 hours
 
 **By Phase:**
 
@@ -44,52 +45,28 @@ Progress: [███████░░░] 31% (11/35+ plans estimated, Phase 0 
 Decisions are logged in PROJECT.md Key Decisions table.
 Recent decisions affecting current work:
 
-- Archetype framework is a hard prerequisite — zero engineering starts until Phase 0 complete and Sophia has validated 20-30 simulated answer sets
-- PDF generation uses @react-pdf/renderer renderToBuffer() (not renderToStream, which has a Next.js 15 bug)
-- Stripe webhook checkout.session.completed is the sole authoritative fulfillment trigger — never the success URL redirect
-- Vercel Pro required from day one (Hobby's 10s timeout is insufficient for AI + PDF generation)
-- **[00-01]** DimensionProfile uses Record<DimensionKey, number> not named fields — dimension count can change without breaking the type contract
-- **[00-01]** 7 dimensions selected (not 6): Presence/Attunement added as 7th dimension, capturing Tsabary's conscious-vs-reactive axis distinct from Emotional Regulation
-- **[00-01]** Narrative Coherence dimension is primarily Past-lens-only — Sophia to confirm if modified form applies to Current lens in Plan 02 review
-- **[00-01]** Punitive Discipline (PBDQ factor 2) excluded from dimensions — collinear with inverse Emotional Warmth and inverse Emotional Regulation
-- **[00-02]** 7 archetypes confirmed (not 6 or 8) — 7-dimension space naturally produces 7 clinically distinct patterns without force-fitting
-- **[00-02]** DIMENSION_WEIGHTS all default 1.0 — Narrative Coherence weight elevation deferred to post-simulation adjustment (Plan 03)
-- **[00-02]** Gentle Nurturer autonomy-support raised to 8 to achieve 2-dimension distinctness from The Steady Anchor
-- **[00-02]** softInferCurrentFromPast returns same archetype ranking as past (intergenerational transmission assumption) — empirical mapping table deferred post-launch
-- **[00-03]** No dimension weight adjustments needed — simulation passed with all weights = 1.0; Sophia may still recommend NC weight elevation on clinical grounds
-- **[00-03]** intentional-guide selected least frequently (1/28, 3.6%) — clinically acceptable given its specific profile requirement; flagged for Sophia review
-- **[00-03]** structured-mentor is default for ambiguous profiles (wins 7/28) — not degenerate (25% < 40% ceiling) but flagged for Sophia awareness
-- **[00-03]** package.json and tsconfig.json created — project had no build infrastructure; required for npx tsx script execution
-- **[00-04]** 5 cultural contexts selected: East Asian collectivist, South Asian joint-family, Latin American familismo, Sub-Saharan African community-centred, Western individualist — covers highest-diversity segments with distinct profiles
-- **[00-04]** Western individualist treated as full context (not empty baseline) — 3 strengths + 3 tensions per archetype; avoids treating Western as the default
-- **[00-04]** 5 themes per content section (plan allowed 3-5) — full clinical nuance of each archetype warranted maximum depth at outline stage
-- **[00-05]** Framework expanded from 7 archetypes/7 dimensions to 9 archetypes/11 dimensions before Sophia review package generated — Devoted Champion and Collaborative Ally added; Repair/Reconnection, Role Integrity, Reciprocity, NJA added as dimensions
-- **[00-05]** Review package updated to v2.0 to match actual framework state — prior commit had created v1.0 based on outdated 7/7 structure; v2.0 is the definitive Sophia review document
-- **[00-05]** Open-Hearted Learner selected as cultural overlay showcase (vs. Fierce Guardian in v1.0) — shows more clinically interesting cross-cultural variation in how the "still integrating" quality interacts with context
-- **[00-05]** Sophia formal sign-off deferred — proceeding with provisional approval; framework is technically validated (scoring simulation VERDICT: PASS) and clinically grounded enough to begin Phase 1 engineering; Sophia will complete formal review asynchronously
-- **[01-01]** email column on quiz_sessions is nullable — session created at quiz start before email is captured at lead gate
-- **[01-01]** JSONB used for answers and dimension_scores (not JSON) — binary storage and indexing capability
-- **[01-01]** orders INSERT/UPDATE done exclusively via service_role (Stripe webhook) — no anon INSERT policy on orders table
-- **[01-01]** createAdminClient name (not createClient) for server.ts — makes dangerous, RLS-bypassing nature obvious at all import sites
-- **[01-01]** Dual Supabase client pattern: lib/supabase/client.ts (browser, @supabase/ssr) and lib/supabase/server.ts (server-only, service_role, no NEXT_PUBLIC_ prefix)
-- **[01-02]** No dotenv dependency added — .env.local parsed inline with Node.js fs module to avoid adding a new dependency
-- **[01-02]** Single anon SupabaseClient reused for User A and User B sessions (signOut + signInAnonymously) — no duplicate client instances needed
-- **[01-02]** Admin client used for storage bucket check — cloud Supabase denies anon bucket listing; bucket existence is infrastructure concern, not user-access RLS test
-- **[02-01]** scripts/ excluded from tsconfig.json — scripts run via npx tsx independently; pre-existing type error in validate-scoring.ts must not block Next.js TypeScript compile
-- **[02-01]** Biome 2.4.4 config shape differs from plan spec (2.0.0) — organizeImports moved to assist.actions.source, files.ignore renamed to files.experimentalScannerIgnores
-- **[02-01]** app/page.tsx is a development placeholder only — minimal "Take the Quiz" CTA linking to /quiz; Phase 7 landing page will replace it
-- **[02-02]** 32 questions (vs 25-30 target) — extra questions ensure all 11 dimensions have multiple score contributions; passes automated verify (25-35 range)
-- **[02-02]** dimensionScores allows multi-dimension scoring per option — e.g. hug-listen scores both emotional-warmth:9 and presence-attunement:9, reflecting real construct correlation
-- **[02-02]** computeDimensionProfile defaults uncovered dimensions to 5 (midpoint) not 0 — prevents extreme archetype bias from unanswered quiz sections
-- **[02-02]** Cultural background question has empty dimensionScores — explicitly metadata, not scored; consistent with QUIZ-06 spec
-- **[02-03]** CulturalDropdown uses div+button pattern over ul[role=listbox]+li[role=option] — Biome a11y rules require native interactive elements; button is inherently focusable and keyboard-accessible
-- **[02-03]** WhyWeAskThis uses CSS grid-template-rows 0fr->1fr trick for smooth height animation — no JS height measurement, pure CSS, no layout thrash
-- **[02-03]** QuizCard onAnswer wiring: QuizCard calls onAnswer on tap without delay — auto-advance timing (300ms) is QuizShell's responsibility (Plan 02-04)
-- **[02-04]** SSR-safe Zustand hydration: direct persist.hasHydrated() call in component body crashes Next.js SSR — use useState(false) + useEffect + onFinishHydration subscription
-- **[02-04]** nuqs useQueryState requires Suspense boundary in Next.js App Router — wraps useSearchParams internally; add Suspense in page.tsx
-- **[02-04]** NuqsAdapter scoped to quiz page (not root layout) — only quiz uses nuqs in Phase 2; can be promoted to layout if needed
-- **[02-04]** store.reset() not called after quiz completion — Phase 3 /result page may need localStorage session data for optimistic rendering
-- [Phase 02-quiz-engine]: Quiz scope narrowed to past-lens only: removed 11 current-parenting questions during human verification to make quiz universally accessible for non-parents and expecting parents; all 11 dimensions still covered; quiz is now 21 questions
+**Product Ladder Pivot (2026-02-25):**
+- **[PIVOT-01]** Product ladder: Mirror (free) → Blueprint (paid) → Partner Match (premium) — replaces single $14 PDF model
+- **[PIVOT-02]** Archetype describes parents' style, not user's current parenting — makes product universally accessible
+- **[PIVOT-03]** Email gate before result reveal — captures lead at peak curiosity; result is the free value exchange
+- **[PIVOT-04]** Full result free (no paywall, no blurred content) — users must feel completely seen; teaser model undermines core value
+- **[PIVOT-05]** Phase 2.5 inserted for archetype content rewrite — all copy must be reframed before result page can be built
+- **[PIVOT-06]** Payment, AI content gen, PDF rendering → Product 2 scope — not in v1
+- **[PIVOT-07]** Old Phases 4-6 (Payment, AI Content, PDF) removed from v1 roadmap → Product 2 Roadmap section
+- **[PIVOT-08]** Old Phase 7 (Landing Page) → Phase 4, old Phase 8 (Marketing) → Phase 5
+- **[PIVOT-09]** RSLT-02 (blurred PDF previews) and RSLT-04 (partner dialogue teaser) deleted — incompatible with free full result
+- **[PIVOT-10]** Product 2 coming-soon page (RSLT-10) replaces purchase CTA — captures Blueprint launch interest
+
+**Earlier decisions (Phases 0-2):**
+- Archetype framework is a hard prerequisite — zero engineering starts until Phase 0 complete
+- 9 archetypes / 11 dimensions (expanded from original 7/7 before Sophia review)
+- Quiz narrowed to 21 questions (past-lens only) during Phase 2 verification
+- Sophia formal sign-off deferred — proceeding with provisional approval
+- **[01-01]** email column on quiz_sessions is nullable — session created at quiz start before email captured
+- **[01-01]** JSONB used for answers and dimension_scores
+- **[01-01]** Dual Supabase client pattern: client.ts (browser) and server.ts (service_role)
+- **[02-04]** SSR-safe Zustand hydration pattern established
+- **[02-04]** store.reset() not called after quiz completion — result page may need localStorage session data
 
 ### Pending Todos
 
@@ -104,13 +81,13 @@ Recent decisions affecting current work:
 
 ### Blockers/Concerns
 
-- Sophia's formal review is deferred (non-blocking for Phase 1) — schedule asynchronously; framework adjustments from review may require re-running scoring validation
-- Kimi 2.5 rate limits on actual account need verification at platform.moonshot.ai before finalizing Phase 5 queue architecture
-- Vercel function timeout budget must be benchmarked empirically (estimated 15-35s for parallel Kimi calls + renderToBuffer)
-- Cultural content variants per archetype is an unresolved content scope question affecting Phases 5 and 6
+- Sophia's formal review is deferred (non-blocking) — schedule asynchronously; framework adjustments from review may require re-running scoring validation
+- **[Product 2]** Kimi 2.5 rate limits on actual account need verification at platform.moonshot.ai before finalizing AI pipeline
+- **[Product 2]** Vercel function timeout budget must be benchmarked empirically for AI + PDF generation
+- **[Product 2]** Cultural content variants per archetype is an unresolved content scope question
 
 ## Session Continuity
 
-Last session: 2026-02-24
-Stopped at: Completed 02-05-PLAN.md — Human verification of complete quiz experience; quiz narrowed to 21 questions (past-lens only); Phase 2 COMPLETE
-Resume file: None — Phase 2 complete; begin Phase 3 (Free Result Page)
+Last session: 2026-02-25
+Stopped at: Product ladder pivot documentation complete — all 4 planning docs rewritten, old Phase 3 plans deleted, directories restructured
+Resume file: None — Phase 2.5 ready for planning; run `/gsd:plan-phase 2.5` to begin

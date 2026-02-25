@@ -1,79 +1,90 @@
-# Your Parenting Blueprint
+# Raising Giants — The Mirror
 
 ## What This Is
 
-A personalized digital guide that helps parents and pre-parents understand how their own upbringing shapes their parenting instincts. Users take an in-depth quiz (10-20 minutes) grounded in research from top 100 KOLs in parenting and child development, receive a free archetype summary, and can purchase a deeply personalized 15-20 page PDF guide ($14). The product serves two purposes: helping individuals understand their own patterns and watchouts, and creating a foundation for principled dialogue with their partner and loved ones.
+A product ladder that helps adults understand how the parenting they received shapes who they are today:
+
+- **Product 1 — The Mirror (FREE):** A complete experience. Users take a research-backed quiz about their upbringing, provide their email, and receive a full personalized result: their parents' archetype, inherited foundational patterns, all 5 watchouts, and a dedicated cultural section. The Mirror helps adults feel deeply seen about the parenting they received.
+- **Product 2 — The Blueprint (PAID):** Layers in the user's own parenting style and aspirations. A personalized PDF guide that bridges "what I inherited" with "what I want to build." Not in v1.
+- **Product 3 — The Partner Match (PREMIUM):** Both partners take the quiz, then receive a combined report showing alignment, conflict areas, and a dialogue kit for principled conversations. Not in v1.
+
+**v1 launch scope:** The Mirror (free quiz → email gate → full result page) + landing page + marketing strategy. Payment, AI content generation, and PDF rendering are Product 2 scope.
 
 ## Core Value
 
-Parents feel deeply seen and understood about their upbringing — the personalized output must feel like it was written specifically for them, grounded in credible research, and create a bridge for meaningful conversations with the people they love.
+Adults feel deeply seen and understood about the parenting they *received* — the personalized output surfaces patterns they've always sensed but never had language for, grounded in credible research from top parenting experts.
 
 ## Requirements
 
-### Validated
+### Product 1 — The Mirror (v1)
 
-(None yet — ship to validate)
+- [x] Research-backed archetype framework (9 archetypes, 11 dimensions) validated with Sophia
+- [x] 10-20 minute quiz about upbringing with cultural background questions
+- [x] Full quiz experience with progress bar, back navigation, localStorage persistence
+- [ ] Archetype copy rewritten to describe parents' style (not user's current parenting)
+- [ ] Email gate before result reveal
+- [ ] Full Mirror result page: parents' archetype, foundational patterns, all watchouts, cultural section
+- [ ] Product 2 coming-soon CTA on result page
+- [ ] Landing page with credibility signals and quiz start CTA
+- [ ] Marketing and launch strategy
 
-### Active
+### Product 2 — The Blueprint (future)
 
-- [ ] Users can take a 10-20 minute in-depth quiz about their upbringing and parenting experiences
-- [ ] Quiz is built on research from top 100 KOLs in parenting/child development for credibility
-- [ ] Quiz asks about cultural background directly and uses it to personalize output
-- [ ] Quiz maps responses to one of 6-8 parenting style archetypes (framework to be developed with Sophia)
-- [ ] Quiz surfaces both foundational patterns (priming) and specific watchouts
-- [ ] Users receive a free result page showing their archetype summary
-- [ ] Users can purchase a full personalized PDF guide for $14 via Stripe Checkout
-- [ ] PDF is 15-20 pages with AI-personalized paragraphs (Moonshot AI Kimi 2.5)
-- [ ] PDF includes: parenting origin profile, cultural background insights, tailored reflection prompts, relevant research snippets, conversation starters for blind spots
-- [ ] PDF includes dialogue prompts designed for conversations with partner and loved ones
-- [ ] PDF has warm, approachable design (therapy workbook meets Canva premium)
-- [ ] PDF is delivered instantly after payment (digital delivery, no fulfillment)
-- [ ] Landing page communicates credibility (research-backed, expert-informed) and drives quiz starts
+- [ ] Stripe Checkout for paid PDF guide
+- [ ] AI-personalized 15-20 page PDF via Moonshot Kimi 2.5
+- [ ] Premium PDF design (therapy workbook meets Canva premium)
+- [ ] Webhook-driven fulfillment and email delivery
+
+### Product 3 — The Partner Match (future)
+
+- [ ] Both partners take quiz separately with results combined
+- [ ] Partnership report showing alignment and conflict areas
+- [ ] Dialogue kit with conversation starters for couple conversations
 
 ### Out of Scope
 
-- Couple's Blueprint (combined report with compatibility insights) — v2 feature, after individual flow is validated
-- Partner comparison / viral sharing mechanics — v2, depends on couple's flow
 - Mobile app — web-first
 - Physical book / printed product — digital only
-- OAuth / social login — email-based flow sufficient for v1
-- User accounts / dashboards — stateless quiz flow, PDF delivery via email or download
+- OAuth / social login — email-based flow sufficient
+- User accounts / dashboards — stateless quiz flow
 
 ## Context
 
-**Market gap:** Every personalized book/product targets kids (Wonderbly, Magic Story, Hooray Heroes). Nobody targets parents reflecting on their own upbringing. The parenting quiz/assessment space is full of free lead magnets with ugly, basic text outputs.
+**Market gap:** Every personalized book/product targets kids (Wonderbly, Magic Story, Hooray Heroes). Nobody targets adults reflecting on their own upbringing. The parenting quiz/assessment space is full of free lead magnets with ugly, basic text outputs.
 
-**Credibility foundation:** The quiz and personalization are built on research from top 100 KOLs (Key Opinion Leaders) in parenting, child development, and family psychology. This research base gives the product authority and trust — it's not just another BuzzFeed quiz.
+**Key insight — archetype describes parents, not user:** The quiz maps how the user was *raised*, producing their parents' archetype. This reframe makes the product universally accessible (non-parents, expecting parents, anyone) and sharpens the emotional core: "finally understanding what happened to me."
 
-**Team:** Sophia is co-founder with clinical expertise in parenting psychology. She provides the archetype framework and clinical knowledge. The archetype framework is currently at concept stage — 6-8 parenting style archetypes need to be defined with scoring logic and descriptions.
+**Credibility foundation:** The quiz and personalization are built on research from top 100 KOLs (Key Opinion Leaders) in parenting, child development, and family psychology. This research base gives the product authority and trust.
 
-**Competitive positioning:** Combines quality quiz experience + AI-powered deep personalization + premium designed output + research-backed credibility. Pricing at $14 individual sits between free generic quizzes and $20-35 physical books.
+**Team:** Sophia is co-founder with clinical expertise in parenting psychology. She provides the archetype framework and clinical knowledge. The framework is at 9 archetypes / 11 dimensions, provisionally validated.
 
-**Dual purpose:** The product isn't just self-reflection — it's designed to create a foundation for principled dialogue. The PDF includes conversation prompts and frameworks that help people talk about their upbringing with their partner and loved ones.
-
-**v2 vision:** Couple's Blueprint ($22) where both partners take the quiz separately, then receive a combined report showing alignment and conflict areas. This is the viral mechanic — share link and email invite flows for partner matching.
+**Product ladder strategy:** The Mirror (free) builds the email list and establishes trust. The Blueprint (paid) monetizes with deep personalization. The Partner Match (premium) is the viral mechanic — share link and email invite flows.
 
 ## Constraints
 
-- **Tech stack**: Next.js on Vercel, Supabase for database, Stripe Checkout for payments, Moonshot AI Kimi 2.5 for content generation
+- **Tech stack**: Next.js on Vercel, Supabase for database, Stripe Checkout for payments (Product 2)
 - **Design**: Warm and approachable aesthetic — therapy workbook meets Canva premium. Not clinical, not childish.
-- **Quiz length**: 10-20 minutes. Depth and credibility matter more than speed. Must feel meaningful, not tedious.
-- **Research foundation**: Quiz questions and personalization logic must be grounded in established parenting/child development research from identified KOLs.
-- **Archetype framework**: Needs development with Sophia's clinical input before quiz can be finalized. 6-8 archetypes based on clinical parenting psychology.
-- **PDF generation**: Templated sections with AI-personalized paragraphs. Not fully AI-generated — structure is fixed, content is personalized.
+- **Quiz length**: 10-20 minutes. Depth and credibility matter more than speed.
+- **Research foundation**: Quiz questions and personalization logic grounded in established parenting/child development research from identified KOLs.
+- **Archetype framework**: 9 archetypes / 11 dimensions, validated with Sophia's clinical input.
 
 ## Key Decisions
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Next.js + Vercel + Supabase | Standard modern stack, fast to ship, good DX | — Pending |
-| Moonshot AI Kimi 2.5 for personalization | User's preferred AI model for content generation | — Pending |
-| Stripe Checkout (redirect) over embedded | Simplest to build, handles PCI compliance | — Pending |
-| Individual Blueprint first, couple's later | Validate core value before building viral mechanics | — Pending |
-| Direct cultural background questions | Richer personalization data vs. inferred approach | — Pending |
-| Digital-only delivery | No physical fulfillment complexity, instant gratification | — Pending |
-| 10-20 min quiz (not 2-3 min) | Depth builds credibility and produces richer personalization | — Pending |
-| Research-backed from top 100 KOLs | Trust and authority differentiate from generic quiz products | — Pending |
+| Next.js + Vercel + Supabase | Standard modern stack, fast to ship, good DX | Confirmed |
+| Individual Blueprint first, couple's later | Validate core value before building viral mechanics | Confirmed |
+| Direct cultural background questions | Richer personalization data vs. inferred approach | Confirmed |
+| Digital-only delivery | No physical fulfillment complexity, instant gratification | Confirmed |
+| 10-20 min quiz (not 2-3 min) | Depth builds credibility and produces richer personalization | Confirmed |
+| Research-backed from top 100 KOLs | Trust and authority differentiate from generic quiz products | Confirmed |
+| Archetype = parents' style, not user's | Makes product universal (non-parents too); sharpens emotional core | Confirmed |
+| Email gate before result (not after) | Captures lead at peak curiosity; result is the free value exchange | Confirmed |
+| Product ladder (free → paid → premium) | Free Mirror builds list + trust; Blueprint monetizes; Partner Match is viral | Confirmed |
+| Full result free (no paywall/teaser) | Users must feel completely seen; teaser model undermines core value | Confirmed |
+| Moonshot AI Kimi 2.5 for personalization | User's preferred AI model — Product 2 scope | Deferred to Product 2 |
+| Stripe Checkout (redirect) over embedded | Simplest to build, handles PCI compliance — Product 2 scope | Deferred to Product 2 |
+| Vercel Pro for AI + PDF generation | Hobby's 10s timeout insufficient — Product 2 scope | Deferred to Product 2 |
 
 ---
-*Last updated: 2026-02-23 after initialization (updated with credibility/depth requirements)*
+*Last updated: 2026-02-25 — Product ladder pivot (Mirror free / Blueprint paid / Partner Match premium)*
