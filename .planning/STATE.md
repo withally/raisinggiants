@@ -11,18 +11,18 @@ See: .planning/PROJECT.md (updated 2026-02-25)
 ## Current Position
 
 Phase: 03 of 5 (Mirror Result Page) — IN PROGRESS
-Plan: 1 of 3 in Phase 03 complete
-Status: Plan 03-01 complete — result page Server Component and 4 section components built (ArchetypeReveal, FoundationalPatternsSection, WatchoutsSection, CulturalSection)
-Last activity: 2026-02-26 — Plan 03-01 complete
+Plan: 2 of 3 in Phase 03 complete
+Status: Plan 03-02 complete — Blueprint CTA + sticky bar on result page, /blueprint coming-soon page with email capture, API route, and Supabase migration
+Last activity: 2026-02-26 — Plan 03-02 complete
 
-Progress: [████████░░] 82% (18/~22 plans estimated)
+Progress: [█████████░] 86% (19/~22 plans estimated)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 12
-- Average duration: 6 min
-- Total execution time: ~1.2 hours
+- Total plans completed: 13
+- Average duration: 5 min
+- Total execution time: ~1.3 hours
 
 **By Phase:**
 
@@ -42,6 +42,7 @@ Progress: [████████░░] 82% (18/~22 plans estimated)
 | Phase 025 P01 | 8 min | 2 tasks | 3 files |
 | Phase 025 P02 | 10 min | 2 tasks | 2 files |
 | Phase 03 P01 | 3 min | 2 tasks | 6 files |
+| Phase 03 P02 | 3 min | 2 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -81,6 +82,12 @@ Recent decisions affecting current work:
 - **[025-02-C]** tensionsInContext across all 45 overlays: "may have cost you / may have" framing — what growing up with this may have cost the child
 - **[025-02-D]** Resilient Striver overlays: framed as "growing up with people who had done their own healing work" — each cultural context describes child's experience of that journey
 
+**Phase 03-02 Blueprint CTA (2026-02-26):**
+- **[03-02-A]** BlueprintEmailForm extracted as separate components/result/BlueprintEmailForm.tsx — reusable across result page, sticky bar, and blueprint page
+- **[03-02-B]** StickyBlueprintBar accepts hidden prop (default false) so Plan 03 email gate overlay can suppress it at z-50
+- **[03-02-C]** scroll threshold set at 400px — deep enough to avoid immediate distraction, shallow enough to appear before user exits
+- **[03-02-D]** blueprint_interest_emails uses upsert with ignoreDuplicates so duplicate email submissions return 200 success silently
+
 **Phase 03-01 Mirror Result Page (2026-02-26):**
 - **[03-01-A]** getCulturalOverlay uses startsWith(prefix) to match culturalContext strings — resilient to long descriptive labels like "East Asian collectivist (Chinese, Korean, Japanese)"
 - **[03-01-B]** Content-based keys (theme.slice(0,40), researcher-year) instead of array index keys — Biome noArrayIndexKey compliance; themes are unique strings by content
@@ -118,6 +125,7 @@ Recent decisions affecting current work:
 - Sophia review: intentional-guide low selection rate (2.5%) — clinically acceptable or needs profile adjustment?
 - Sophia review: flat/indeterminate profile (all dims=5) defaults to Devoted Champion — clinically appropriate?
 - Sophia review: all 9 archetype names warm and non-pathologising?
+- Apply Supabase migration `20260226000000_blueprint_interest.sql` before Blueprint email capture goes live
 
 ### Blockers/Concerns
 
@@ -129,5 +137,5 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-02-26
-Stopped at: Completed 03-01-PLAN.md — result page Server Component and 4 section components built (ArchetypeReveal, FoundationalPatternsSection, WatchoutsSection, CulturalSection). Production build passes.
-Resume file: None — continue with Phase 03 Plan 02 (BlueprintCTA and sticky bar)
+Stopped at: Completed 03-02-PLAN.md — Blueprint CTA + sticky bar on result page, /blueprint coming-soon page, /api/blueprint-interest route, and Supabase migration. Production build passes.
+Resume file: None — continue with Phase 03 Plan 03 (email gate overlay)

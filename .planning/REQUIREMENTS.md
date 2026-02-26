@@ -38,12 +38,12 @@ Requirements for initial release (The Mirror — free product). Each maps to roa
 
 - [x] **RSLT-01**: Displays parents' archetype name prominently with full summary paragraph (not a teaser)
 - [x] **RSLT-03**: Dedicated cultural section showing how user's cultural background shaped the parenting they received
-- [ ] **RSLT-05**: Clear CTA promoting The Blueprint (Product 2) as "coming soon" — not a $14 purchase button
+- [x] **RSLT-05**: Clear CTA promoting The Blueprint (Product 2) as "coming soon" — not a $14 purchase button
 - [ ] **RSLT-06**: Email gate captures user's email before revealing result (email required to see result)
 - [x] **RSLT-07**: Full foundational patterns section (all inherited patterns displayed, nothing blurred or gated)
 - [x] **RSLT-08**: Full watchouts section (all 5 watchouts displayed, nothing blurred or gated)
 - [x] **RSLT-09**: Cultural overlay section with personalized cultural context based on user's stated background
-- [ ] **RSLT-10**: Product 2 coming-soon page accessible from CTA (email capture for Blueprint launch notification)
+- [x] **RSLT-10**: Product 2 coming-soon page accessible from CTA (email capture for Blueprint launch notification)
 
 ### Landing Page
 
@@ -147,12 +147,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 | COPY-04 | Phase 2.5 | Complete |
 | RSLT-01 | Phase 3 | Complete |
 | RSLT-03 | Phase 3 | Complete |
-| RSLT-05 | Phase 3 | Pending |
+| RSLT-05 | Phase 3 | Complete |
 | RSLT-06 | Phase 3 | Pending |
 | RSLT-07 | Phase 3 | Complete |
 | RSLT-08 | Phase 3 | Complete |
 | RSLT-09 | Phase 3 | Complete |
-| RSLT-10 | Phase 3 | Pending |
+| RSLT-10 | Phase 3 | Complete |
 | LAND-01 | Phase 4 | Complete |
 | LAND-02 | Phase 4 | Complete |
 | LAND-03 | Phase 4 | Complete |
