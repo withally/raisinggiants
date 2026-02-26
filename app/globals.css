@@ -175,3 +175,37 @@ body {
 @utility animate-fade-up {
   animation: fade-up 0.6s ease-out both;
 }
+
+/* Email gate overlay — curtain-lifting reveal animations */
+@keyframes gate-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes content-unblur {
+  from {
+    filter: blur(12px);
+  }
+  to {
+    filter: blur(0);
+  }
+}
+
+/* @utility cannot be nested — prefers-reduced-motion handled via animation-duration override */
+@utility animate-gate-fade-out {
+  animation: gate-fade-out 0.6s ease forwards;
+  @media (prefers-reduced-motion: reduce) {
+    animation-duration: 0.01s;
+  }
+}
+
+@utility animate-content-unblur {
+  animation: content-unblur 0.8s ease forwards;
+  @media (prefers-reduced-motion: reduce) {
+    animation-duration: 0.01s;
+  }
+}

@@ -4,8 +4,9 @@ import { ArchetypeReveal } from "@/components/result/ArchetypeReveal";
 import { BlueprintCTA } from "@/components/result/BlueprintCTA";
 import { CulturalSection } from "@/components/result/CulturalSection";
 import { FoundationalPatternsSection } from "@/components/result/FoundationalPatternsSection";
-import { StickyBlueprintBar } from "@/components/result/StickyBlueprintBar";
+import { ResultPageClient } from "@/components/result/ResultPageClient";
 import { WatchoutsSection } from "@/components/result/WatchoutsSection";
+
 import { ARCHETYPES } from "@/lib/archetypes/archetypes";
 import { CULTURAL_DISPLAY_NAMES, fetchQuizSession, getCulturalOverlay } from "@/lib/result/helpers";
 
@@ -83,26 +84,25 @@ export default async function ResultPage({
     : null;
 
   return (
-    <main className="bg-amber-50">
-      {/* Section 1: Archetype hero reveal */}
-      <ArchetypeReveal archetype={archetype} />
+    <ResultPageClient>
+      <main className="bg-amber-50">
+        {/* Section 1: Archetype hero reveal */}
+        <ArchetypeReveal archetype={archetype} />
 
-      {/* Section 2: Foundational patterns — what you inherited */}
-      <FoundationalPatternsSection patterns={archetype.foundationalPatterns} />
+        {/* Section 2: Foundational patterns — what you inherited */}
+        <FoundationalPatternsSection patterns={archetype.foundationalPatterns} />
 
-      {/* Section 3: Watchouts — what to watch for */}
-      <WatchoutsSection watchouts={archetype.watchouts} />
+        {/* Section 3: Watchouts — what to watch for */}
+        <WatchoutsSection watchouts={archetype.watchouts} />
 
-      {/* Section 3b: Blueprint CTA — between Watchouts and Cultural */}
-      <BlueprintCTA />
+        {/* Section 3b: Blueprint CTA — between Watchouts and Cultural */}
+        <BlueprintCTA />
 
-      {/* Section 4: Cultural lens — conditional on quiz selection */}
-      {culturalOverlay && culturalDisplayName && (
-        <CulturalSection overlay={culturalOverlay} displayName={culturalDisplayName} />
-      )}
-
-      {/* Sticky bottom bar — appears on scroll, z-40 (below email gate at z-50) */}
-      <StickyBlueprintBar />
-    </main>
+        {/* Section 4: Cultural lens — conditional on quiz selection */}
+        {culturalOverlay && culturalDisplayName && (
+          <CulturalSection overlay={culturalOverlay} displayName={culturalDisplayName} />
+        )}
+      </main>
+    </ResultPageClient>
   );
 }
