@@ -5,17 +5,17 @@
 See: .planning/PROJECT.md (updated 2026-02-25)
 
 **Core value:** Adults feel deeply seen and understood about the parenting they *received* — the personalized output surfaces patterns they've always sensed but never had language for, grounded in credible research from top parenting experts.
-**Current focus:** Phase 025 complete — next: Phase 3 (Mirror Result Page)
+**Current focus:** Phase 03 in progress — Mirror Result Page
 **Product:** The Mirror (free) — v1 launch scope
 
 ## Current Position
 
-Phase: 025 of 5 (Archetype Content Rewrite) — COMPLETE
-Plan: 2 of 2 in Phase 025 complete (Phase 025 fully done)
-Status: Plan 025-02 complete — all 45 cultural overlays rewritten to receiver perspective; result page placeholder text corrected to parents-lens framing
-Last activity: 2026-02-26 — Plan 025-02 complete
+Phase: 03 of 5 (Mirror Result Page) — IN PROGRESS
+Plan: 1 of 3 in Phase 03 complete
+Status: Plan 03-01 complete — result page Server Component and 4 section components built (ArchetypeReveal, FoundationalPatternsSection, WatchoutsSection, CulturalSection)
+Last activity: 2026-02-26 — Plan 03-01 complete
 
-Progress: [████████░░] 78% (17/~22 plans estimated)
+Progress: [████████░░] 82% (18/~22 plans estimated)
 
 ## Performance Metrics
 
@@ -41,6 +41,7 @@ Progress: [████████░░] 78% (17/~22 plans estimated)
 | Phase 04 P02 | 15 min | 2 tasks | 7 files |
 | Phase 025 P01 | 8 min | 2 tasks | 3 files |
 | Phase 025 P02 | 10 min | 2 tasks | 2 files |
+| Phase 03 P01 | 3 min | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -79,6 +80,12 @@ Recent decisions affecting current work:
 - **[025-02-B]** strengthsInContext across all 45 overlays: "gave you / giving you" framing — what growing up with this gave the child
 - **[025-02-C]** tensionsInContext across all 45 overlays: "may have cost you / may have" framing — what growing up with this may have cost the child
 - **[025-02-D]** Resilient Striver overlays: framed as "growing up with people who had done their own healing work" — each cultural context describes child's experience of that journey
+
+**Phase 03-01 Mirror Result Page (2026-02-26):**
+- **[03-01-A]** getCulturalOverlay uses startsWith(prefix) to match culturalContext strings — resilient to long descriptive labels like "East Asian collectivist (Chinese, Korean, Japanese)"
+- **[03-01-B]** Content-based keys (theme.slice(0,40), researcher-year) instead of array index keys — Biome noArrayIndexKey compliance; themes are unique strings by content
+- **[03-01-C]** Theme rendering splits on first em-dash to extract title/body — aligns with archetype content format "Title — description"; graceful fallback if no dash present
+- **[03-01-D]** HTML details/summary for citations collapsible — zero JS, server-renderable, works without hydration; fits pure Server Component constraint
 
 **Phase 025-01 Archetype Content Rewrite (2026-02-26):**
 - **[025-01-A]** Resilient Striver reframed: parents' healing journey observed by child — "the people who raised you had done their own healing work" — earned-security narrative preserved but entirely reoriented
@@ -122,5 +129,5 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-02-26
-Stopped at: Completed 025-02-PLAN.md — Phase 025 fully complete. All 45 cultural overlays rewritten to receiver perspective; result page placeholder corrected
-Resume file: None — Phase 025 done. Next: Phase 3 (Mirror Result Page)
+Stopped at: Completed 03-01-PLAN.md — result page Server Component and 4 section components built (ArchetypeReveal, FoundationalPatternsSection, WatchoutsSection, CulturalSection). Production build passes.
+Resume file: None — continue with Phase 03 Plan 02 (BlueprintCTA and sticky bar)
