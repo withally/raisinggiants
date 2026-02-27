@@ -163,7 +163,11 @@ Phases execute in numeric order: 0 → 1 → 2 → 2.5 → 3 → 4 → 5
   5. A visual direction brief specifies palette, typography, imagery, layout, and tone — grounded in millennial parent positioning
   6. A rebrand execution plan maps visual recommendations to specific codebase files and phases
   7. The user has reviewed and approved the overall direction
-**Plans:** 0/TBD (replanning)
+**Plans:** 5 plans
 
 Plans:
-(replanning in progress)
+- [ ] 06-01-PLAN.md — Competitive landscape: profile 16+ millennial parenting digital products, positioning map, gap analysis
+- [ ] 06-02-PLAN.md — Reference brand gallery: 8-12 aspirational brands with pattern synthesis
+- [ ] 06-03-PLAN.md — Positioning narrative and brand name evaluation for multi-product brand
+- [ ] 06-04-PLAN.md — Visual direction brief: palette, typography, imagery, layout, tone
+- [ ] 06-05-PLAN.md — Rebrand execution plan and user approval checkpoint
