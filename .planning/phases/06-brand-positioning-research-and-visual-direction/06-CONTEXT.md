@@ -1,63 +1,73 @@
 # Phase 6: Brand Positioning Research and Visual Direction - Context
 
 **Gathered:** 2026-02-27
-**Status:** Ready for planning
+**Status:** Ready for planning (REWORKED — pivot from self-discovery to multi-product millennial parent brand)
 
 <domain>
 ## Phase Boundary
 
-Research and define brand positioning, competitive landscape, visual direction, and rebrand execution plan for Raising Giants. The current brand feels generic/template-like and too clinical/institutional — it needs to evolve into something modern, authentic, and aligned with the product's emotional depth. This phase covers the full arc: competitive research → positioning strategy → visual direction → execution plan.
+Research and define brand positioning, competitive landscape, visual direction, and rebrand execution plan for Raising Giants. The brand vision is a **multi-product brand for millennial parents** — The Mirror is product 1, The Blueprint is product 2, with more products to come. Each product solves a different millennial parent problem.
 
-Brand territory: **grounded self-discovery** — the intersection of clinical credibility and emotional intimacy. Not therapy (too clinical), not wellness (too broad), not personality quiz (too light). The product helps adults feel deeply seen about the parenting they received.
+The current brand feels generic/template-like. It needs to evolve into something that owns the space of **digital products for millennial parents** — not just a self-discovery quiz tool.
+
+**Critical pivot:** The previous Phase 6 work positioned around "grounded self-discovery." This was too narrow — it anchored the brand to Product 1's lens. The real brand play is owning the millennial parent space with a multi-product portfolio.
 
 </domain>
 
 <decisions>
 ## Implementation Decisions
 
-### Competitive scope
-- Study 10-15 competitors across three segments: parenting tools, wellness/therapy platforms, and personal growth/self-discovery products
-- Full funnel analysis for each: visual identity, onboarding flow, quiz/assessment UX, result delivery, monetization model, email capture strategy
-- Discovery-first approach — no pre-existing competitor list; research surfaces the landscape
-- Audience-first lens: identify competitors and references based on where the target audience already spends time, not just by industry category
+### Competitive scope — CHANGED
+- Study millennial parenting tools BROADLY — apps, platforms, content brands, digital products targeting millennial parents
+- Examples to consider: Huckleberry, Moshi, Big Life Journal, ParentLab, Wonder, Cozi, FamilyAlbum, Talkspace (parent-focused), BetterHelp, Headspace (parenting content), etc.
+- NOT limited to self-discovery/personality quiz competitors (the old scope)
+- Full funnel analysis for each: visual identity, product positioning, onboarding, core value prop, monetization model, audience engagement
+- Discovery-first approach — research surfaces the landscape and the gap; do NOT pre-commit to any positioning territory
+- Goal: understand what exists for millennial parents and where the whitespace is
+
+### Brand positioning — CHANGED
+- The brand must work as a MULTI-PRODUCT umbrella, not just for The Mirror
+- Let the competitive research reveal the gap — do not pre-commit to "grounded self-discovery" or any other territory
+- The positioning must be broad enough to house future products but specific enough to own a space
+- Think about: what do millennial parents need that nobody is giving them well?
 
 ### Visual identity direction
 - Clean slate — everything is on the table, no elements locked from current brand
 - Visual register to be determined by research findings, not pre-committed
-- Must move away from current "startup quiz template" feel toward something that reads as "someone who understands me"
+- Must move away from current "startup quiz template" feel
 - The visual direction must follow from positioning, not lead it
 
-### Inspirational references
-- getrelatio.com noted as benchmark for product framing that feels "modern and relevant" — not necessarily the right aesthetic for Raising Giants, but sets the bar for feeling current and intentional
-- Reference brands should be identified through audience-first thinking: what brands do self-reflective adults already trust and engage with?
-- For each reference: capture both the visual elements (colors, typography, layout) AND the emotional response they produce (trust, curiosity, warmth, exclusivity)
+### Inspirational references — UPDATED
+- getrelatio.com still relevant as a benchmark for product framing quality
+- Reference brands should now be evaluated through the "millennial parent" lens — what brands do millennial parents already trust and love?
+- Consider both parenting-specific brands AND cross-industry brands that have nailed the millennial parent audience
 
 ### Brand name evaluation
-- "Raising Giants" is open for evaluation — if research shows the name works against the positioning, it can change
+- "Raising Giants" is open for evaluation — may work better now as a multi-product parent brand than it did as a self-discovery brand
 - Product names (The Mirror, The Blueprint, The Partner Match) are also open for evaluation
-- Name analysis should be part of the positioning recommendation
+- Name analysis should account for multi-product brand architecture
 
 ### Research deliverables
-- Primary deliverable: narrative positioning document — landscape, gap, and a case for where Raising Giants should position
-- Positioning decision comes first, visual direction follows from it
-- End-to-end scope: research → positioning strategy → visual direction → rebrand execution plan
-- The execution plan should be actionable enough to implement in subsequent work
+- Primary deliverable: competitive landscape of millennial parenting digital products
+- Secondary: positioning recommendation based on gap analysis
+- Then: visual direction that serves the multi-product brand
+- Then: execution plan for implementation
 
 ### Claude's Discretion
 - Specific research methodology and competitor discovery approach
-- How to structure the competitive analysis (profiles, matrices, comparisons)
-- Level of visual documentation (screenshots, mood boards, annotated examples)
-- How to present the final positioning recommendation (structure and argumentation)
+- How to structure the competitive analysis
+- What dimensions to map competitors on (let the research suggest the right axes)
+- How to present the positioning recommendation
 
 </decisions>
 
 <specifics>
 ## Specific Ideas
 
-- getrelatio.com — specifically the way they frame an assessment product as a meaningful personal experience rather than a throwaway lead magnet; the "modern and new" feel, even though the niche is different
-- The current product is often mistaken for a parenting advice tool, but it's actually a self-understanding product for adults reflecting on their own upbringing — the brand must make this distinction clear
-- The audience includes non-parents, expecting parents, anyone — the unifying trait is self-reflection, not parenthood
-- The product's emotional core: "finally understanding what happened to me" and having language for patterns always sensed but never articulated
+- getrelatio.com — the way they frame an assessment product as a meaningful personal experience
+- The brand should feel like it "gets" millennial parents — not clinical, not cutesy, not preachy
+- Millennial parents are the first generation raising kids with awareness of their own childhood patterns — this is a unique psychographic
+- The product portfolio: The Mirror (understand your parents' parenting), The Blueprint (personalized guide), The Partner Match (couples dynamics) — all serve the millennial parent who wants to be intentional
 
 </specifics>
 
@@ -71,4 +81,4 @@ None — discussion stayed within phase scope
 ---
 
 *Phase: 06-brand-positioning-research-and-visual-direction*
-*Context gathered: 2026-02-27*
+*Context gathered: 2026-02-27 (reworked)*

@@ -152,22 +152,18 @@ Phases execute in numeric order: 0 → 1 → 2 → 2.5 → 3 → 4 → 5
 
 ### Phase 6: Brand Positioning Research and Visual Direction
 
-**Goal:** Research the competitive landscape, define brand positioning, evaluate the brand name, create a visual direction brief, and produce an actionable rebrand execution plan — so Raising Giants moves from "startup quiz template" to a brand that communicates "grounded self-discovery" with clinical credibility and emotional intimacy
+**Goal:** Research the millennial parenting digital product landscape, identify the whitespace for a multi-product brand, define positioning, evaluate the brand name, create a visual direction brief, and produce an actionable rebrand execution plan — so Raising Giants owns the space of digital products for millennial parents
 **Depends on:** Phase 4 (landing page exists to evaluate against)
 **Requirements**: BRAND-01, BRAND-02, BRAND-03, BRAND-04, BRAND-05, BRAND-06, BRAND-07, BRAND-08
 **Success Criteria** (what must be TRUE):
-  1. 10-15 competitors are profiled across three segments with full-funnel analysis
-  2. A positioning map identifies the unoccupied "deep + warm" territory
-  3. A narrative positioning document defines the brand territory "grounded self-discovery"
-  4. Brand name ("Raising Giants") and product names are evaluated with clear recommendations
-  5. A visual direction brief specifies palette, typography, imagery, layout, and tone — all grounded in positioning
+  1. 15+ millennial parenting digital products are profiled with full-funnel analysis across the landscape
+  2. A positioning map identifies the unoccupied whitespace for a multi-product millennial parent brand
+  3. A narrative positioning document defines the brand territory based on research-revealed gap (not pre-committed)
+  4. Brand name ("Raising Giants") and product names are evaluated for multi-product brand architecture
+  5. A visual direction brief specifies palette, typography, imagery, layout, and tone — grounded in millennial parent positioning
   6. A rebrand execution plan maps visual recommendations to specific codebase files and phases
   7. The user has reviewed and approved the overall direction
-**Plans:** 5/5 plans complete
+**Plans:** 0/TBD (replanning)
 
 Plans:
-- [ ] 06-01-PLAN.md — Competitive landscape: 10-15 competitor profiles + positioning map + gap analysis (Wave 1)
-- [ ] 06-02-PLAN.md — Reference brand gallery: 8-12 aspirational brands + pattern synthesis (Wave 1)
-- [ ] 06-03-PLAN.md — Positioning narrative: landscape, gap, territory, name evaluation (Wave 2)
-- [ ] 06-04-PLAN.md — Visual direction brief: palette, typography, imagery, layout, tone (Wave 3)
-- [ ] 06-05-PLAN.md — Rebrand execution plan + human verification checkpoint (Wave 4)
+(replanning in progress)

@@ -55,14 +55,14 @@ Requirements for initial release (The Mirror — free product). Each maps to roa
 
 ### Brand Positioning and Visual Direction
 
-- [x] **BRAND-01**: 10-15 competitors profiled across three segments (self-discovery, wellness/therapy, parenting) with audience-first discovery methodology
-- [x] **BRAND-02**: Competitive positioning map (2x2: clinical-warm x shallow-deep) with gap analysis identifying unoccupied territory
-- [x] **BRAND-03**: Reference brand gallery of 8-12 aspirational brands with visual attribute + emotional response documentation and pattern synthesis
-- [x] **BRAND-04**: Narrative positioning document defining brand territory, answering: landscape, gap, and positioning case
-- [x] **BRAND-05**: Brand name and product name evaluation with clear keep/change recommendations tested against clarity, inclusion, direction, and register criteria
-- [x] **BRAND-06**: Visual direction brief — color palette with hex codes and emotional rationale, grounded in positioning
-- [x] **BRAND-07**: Visual direction brief — typography, imagery system, layout approach, and brand tone recommendations
-- [x] **BRAND-08**: Rebrand execution plan mapping visual recommendations to specific codebase files with phased implementation scope
+- [ ] **BRAND-01**: 15+ millennial parenting digital products profiled broadly (apps, platforms, content brands) with full-funnel analysis
+- [ ] **BRAND-02**: Competitive positioning map with gap analysis identifying whitespace for a multi-product millennial parent brand
+- [ ] **BRAND-03**: Reference brand gallery of 8-12 aspirational brands evaluated through millennial parent lens with pattern synthesis
+- [ ] **BRAND-04**: Narrative positioning document defining brand territory based on research-revealed gap (not pre-committed)
+- [ ] **BRAND-05**: Brand name and product name evaluation for multi-product brand architecture with clear keep/change recommendations
+- [ ] **BRAND-06**: Visual direction brief — color palette with hex codes and emotional rationale, grounded in millennial parent positioning
+- [ ] **BRAND-07**: Visual direction brief — typography, imagery system, layout approach, and brand tone recommendations
+- [ ] **BRAND-08**: Rebrand execution plan mapping visual recommendations to specific codebase files with phased implementation scope
 
 ## Product 2 Scope — The Blueprint (Paid)
 
