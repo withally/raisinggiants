@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v2.0
 milestone_name: milestone
 status: unknown
-last_updated: "2026-02-27T12:54:52.818Z"
+last_updated: "2026-02-27T13:04:02.303Z"
 progress:
   total_phases: 8
   completed_phases: 5
   total_plans: 25
-  completed_plans: 21
+  completed_plans: 22
 ---
 
 # Project State
@@ -24,9 +24,9 @@ See: .planning/PROJECT.md (updated 2026-02-25)
 ## Current Position
 
 Phase: 06 of 6 (Brand Positioning Research and Visual Direction) — IN PROGRESS (REWORKED)
-Plan: 3 of 5 in Phase 06 complete — 06-03 (positioning narrative + name evaluation) done; 06-04 (visual direction brief) ready to begin
-Status: Plan 06-03 complete — brand territory locked ("digital tools for parents who want to understand themselves"), emotional core defined at brand level, Raising Giants → Imprint name change confirmed under fresh 6-criteria evaluation, product names evaluated. Plan 06-04 can begin immediately.
-Last activity: 2026-02-27 - Completed 06-03: positioning narrative and name evaluation (reworked for multi-product brand)
+Plan: 4 of 5 in Phase 06 complete — 06-04 (visual direction brief) done; 06-05 (rebrand execution plan) ready to begin
+Status: Plan 06-04 complete — visual direction brief written; terracotta palette, expanded Cormorant italic use, editorial line illustration system, permission-first tone, multi-product visual summary table. Plan 06-05 can begin immediately.
+Last activity: 2026-02-27 - Completed 06-04: visual direction brief (multi-product brand system)
 
 Progress: [█████████░] 95% (23/~24 plans estimated)
 
@@ -64,6 +64,7 @@ Progress: [█████████░] 95% (23/~24 plans estimated)
 | Phase 06 P01 | 5 | 2 tasks | 1 files |
 | Phase 06 P02 | 7 | 2 tasks | 1 files |
 | Phase 06 P03 | 5 | 2 tasks | 1 files |
+| Phase 06 P04 | 5 | 2 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -161,6 +162,10 @@ Recent decisions affecting current work:
 - [Phase 06]: [06-03-NEW-B] Emotional core at brand level: the experience of seeing something you always carried but never had a name for — 'I always sensed this. Now I see it.' is primary articulation, not universal tagline
 - [Phase 06]: [06-03-NEW-C] Brand name: change Raising Giants to Imprint — fails 5/6 criteria under fresh multi-product evaluation; documented real-world misidentification confirmed
 - [Phase 06]: [06-03-NEW-D] Product names: The Mirror (keep), The Blueprint (keep with self-knowledge framing), The Partner Match (change at Product 3 build — 'match' is compatibility-quiz register)
+- [Phase 06]: [06-04-A] Terracotta #B05A3A replaces amber — semantically encodes 'earthen, past, permanent' not 'startup warm'; direct encoding of brand territory 'the ground on which you were built'
+- [Phase 06]: [06-04-B] Cormorant Garamond: KEEP — dramatically increase italic utilization; font correctly chosen, critically underdeployed; italic form is the brand's warmest typographic gesture
+- [Phase 06]: [06-04-G] Tagline: 'Finally, the words for it.' recommended as primary option — encodes vocabulary gift mechanism; works across Mirror, Blueprint, Partner Match
+- [Phase 06]: [06-04-E] Brand illustration subject: parent interiority (not product metaphor) — MirrorIllustration.tsx redesign required from reflection metaphor to brand-level scene
 
 ### Roadmap Evolution
 
