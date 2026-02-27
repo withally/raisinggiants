@@ -1,115 +1,115 @@
 ---
 phase: 06-brand-positioning-research-and-visual-direction
-plan: 02
-subsystem: brand-strategy
-tags: [brand-research, visual-identity, typography, color-theory, editorial-design, reference-gallery]
-
-# Dependency graph
-requires:
-  - phase: 06-brand-positioning-research-and-visual-direction
-    provides: "Phase 06-01 competitive landscape — positioned Raising Giants in the competitive gap"
-provides:
-  - "Reference brand gallery with 10 detailed brand profiles (visual attributes + emotional response)"
-  - "Pattern synthesis across color, typography, imagery, layout, and tone"
-  - "7 direction signals actionable for the visual direction brief"
-  - "getrelatio.com deep benchmark analysis"
-affects:
-  - "06-03 (positioning narrative) — vocabulary gift and permission patterns inform tone direction"
-  - "06-04 (visual direction brief) — 7 direction signals feed directly into visual recommendations"
-  - "06-05 (rebrand execution plan) — typography, color, and illustration findings scope implementation"
-
-# Tech tracking
-tech-stack:
+plan: "02"
+subsystem: brand-research
+tags: [brand, reference-brands, millennial-parent, visual-direction, multi-product]
+dependency_graph:
+  requires: [06-01-competitive-landscape.md]
+  provides: [06-02-reference-brand-gallery.md]
+  affects: [06-04-visual-direction-brief.md]
+tech_stack:
   added: []
-  patterns:
-    - "Audience-first brand research: identify reference brands by where the target audience already spends time, not by industry category"
-    - "Visual attributes + emotional response dual documentation: capture both what the brand looks like AND how it makes you feel"
-    - "Pattern synthesis before direction: discover recurring patterns across multiple brands before prescribing visual direction"
-
-key-files:
-  created:
-    - ".planning/phases/06-brand-positioning-research-and-visual-direction/06-02-reference-brand-gallery.md"
-  modified: []
-
-key-decisions:
-  - "[06-02-A] Serif display fonts (confirmed): Cormorant Garamond is aligned with the reference brand pattern — high-contrast editorial serifs dominate the deep+warm register across all 10 reference brands. Maintain and increase expressive use of Cormorant italic."
-  - "[06-02-B] Accent color specificity: Current amber is directionally correct but lacks specific emotional meaning. Signal 2 recommends evaluating terracotta (the earthen, the past) or aged gold (wisdom, accumulated understanding) as more semantically specific alternatives."
-  - "[06-02-C] Whitespace as trust signal: 30-50% increase in section padding and inter-element spacing is warranted based on the pattern — whitespace is the most reliable signal of depth in the target audience's visual experience."
-  - "[06-02-D] Illustration direction: Shift from 'geometric abstraction' to 'emotionally evocative metaphor' — specific scenes depicting the act of looking back, recognizing patterns, or the parent-child relationship."
-  - "[06-02-E] Vocabulary gift as core brand mechanism: The naming pattern (Brené Brown's 'vulnerability', Gottman's 'bids for connection') is the primary trust mechanism — archetype names and marketing copy must be positioned as vocabulary gifts, not labels."
-  - "[06-02-F] Permission-giving tone: On Being and Brené Brown pattern — give permission before revelation. Landing page and quiz copy should acknowledge what users might be feeling before asking them to engage."
-
-patterns-established:
-  - "Pattern: Deep + Warm register = warm near-neutrals + earthy chromatic accent + high-contrast serif display + generous whitespace + editorial rhythm"
-  - "Pattern: Vocabulary gift mechanism — naming unnamed experiences creates the 'seen' feeling more reliably than description"
-  - "Pattern: Permission before revelation — normalize the experience before asking the user to engage with it"
-
-requirements-completed: [BRAND-03]
-
-# Metrics
-duration: 5min
-completed: 2026-02-27
+  patterns: [brand-gallery, pattern-synthesis, anti-pattern-synthesis, design-direction-signals]
+key_files:
+  created: []
+  modified:
+    - .planning/phases/06-brand-positioning-research-and-visual-direction/06-02-reference-brand-gallery.md
+decisions:
+  - "[06-02-A-REVISED] Reference brands now evaluated through millennial parent lens — 10 brands spanning parenting-specific (Good Inside, Big Life Journal, Motherly), editorial (School of Life, Kinfolk), wellness (Brene Brown, Headspace), and architecture models (Patagonia, Apple, getrelatio)"
+  - "[06-02-ARCH] Mission-as-architecture (Patagonia model) is the correct multi-product architecture for Raising Giants — brand coherence comes from mission clarity, not product adjacency"
+  - "[06-02-NAME] Raising Giants brand name passes the architecture test — encodes a desired outcome (raising psychologically healthy children and families) that holds The Mirror, Blueprint, and Partner Match without incoherence"
+  - "[06-02-ILLUS] Illustration must shift from geometric abstraction to representational emotional line illustration (School of Life register) — depicts interior psychological states, not abstract shapes"
+  - "[06-02-KOL] KOL-anchored brand building (Good Inside, Brene Brown) explicitly identified as anti-pattern — trust must be anchored to research framework and methodology, not founder personality"
+metrics:
+  duration: "7 min"
+  completed_date: "2026-02-27"
+  tasks_completed: 2
+  files_modified: 1
 ---
 
 # Phase 06 Plan 02: Reference Brand Gallery Summary
 
-**10 reference brands profiled (getrelatio.com deep benchmark + 9 cross-industry brands) with 7 direction signals for the visual brief, identifying the deep+warm register as the target aesthetic and vocabulary-gift as the core trust mechanism**
+**One-liner:** Multi-product millennial parent lens applied to 10 reference brands, revealing 5 cross-brand patterns and 5 anti-patterns with actionable design direction signals for visual brief.
 
-## Performance
+## What Was Built
 
-- **Duration:** 5 min
-- **Started:** 2026-02-27T07:05:33Z
-- **Completed:** 2026-02-27T07:10:52Z
-- **Tasks:** 2
-- **Files modified:** 1
+Completely replaced the previous 06-02-reference-brand-gallery.md (which evaluated brands through a self-discovery aesthetic lens only) with a comprehensive reference brand gallery scoped to the multi-product millennial parent brand opportunity.
 
-## Accomplishments
+The new document covers:
 
-- Built a 679-line reference brand gallery profiling 10 brands across 6+ industries (relationship assessment, personal growth publishing, research-storytelling, journaling, editorial lifestyle, spiritual inquiry, relationship psychology, sleep tech, mindfulness, book publishing)
-- Synthesized 5 pattern categories (color, typography, imagery, layout, tone) from the cross-brand analysis with specific brand examples for each pattern
-- Distilled 7 actionable direction signals that bridge research findings to concrete visual choices in the Plan 04 visual direction brief
-- Confirmed Cormorant Garamond as correctly chosen display font (aligned with every high-depth brand in the study); identified accent color specificity as the primary visual gap in the current brand
+**Task 1: 10 Brand Profiles**
 
-## Task Commits
+Each brand is profiled across all 8 required dimensions:
+1. Brand name and category
+2. Why relevant to Raising Giants (specific multi-product brand connection)
+3. Visual identity snapshot (colors, typography, imagery, design register)
+4. Emotional register (what feeling the brand creates; how it makes the audience feel about themselves)
+5. What millennial parents specifically love (evidence-backed)
+6. Brand architecture (single vs. multi-product; how products are organized)
+7. Transferable pattern (specific, implementable principle — not "good design")
+8. What NOT to borrow (the element that would harm Raising Giants' positioning)
 
-Each task was committed atomically:
+**Brands profiled:**
+| # | Brand | Category | Key architectural lesson |
+|---|-------|----------|--------------------------|
+| 1 | Good Inside (Dr. Becky Kennedy) | Parenting psychology platform | Vocabulary gift as core trust mechanism |
+| 2 | Big Life Journal | Growth mindset parenting | Terracotta accent that doesn't code as "children's brand" |
+| 3 | Motherly | Editorial multi-product media | Editorial-first brand building enables paid product trust |
+| 4 | The School of Life | Personal growth / multi-product | Editorial line illustration for interior emotional states |
+| 5 | Brene Brown / Unlocking Us | Research-storytelling brand | Named experience as the "seen" mechanism |
+| 6 | Headspace (Adult) | Wellness mindfulness platform | Brand name as desired state = maximum product flexibility |
+| 7 | Kinfolk Magazine | Editorial lifestyle | Radical whitespace as trust signal for educated audience |
+| 8 | Patagonia | Values-driven multi-product brand | Mission-as-architecture for diverse portfolio coherence |
+| 9 | Apple | Technology multi-product ecosystem | Quality standard as brand membership criterion |
+| 10 | getrelatio.com | Relationship assessment platform | Journey framing transforms quiz experience |
 
-1. **Task 1: Identify and profile 8-12 reference brands with visual + emotional analysis** - `3ef7e2d` (feat)
-2. **Task 2: Synthesize visual and tonal patterns across reference brands** - `3ef7e2d` (feat — included in same document creation; pattern synthesis written concurrently with brand profiles)
+**Task 2: Synthesis Sections**
 
-**Plan metadata:** (final docs commit — see below)
+**Pattern Synthesis (5 categories):**
+1. **Color patterns:** Warm earth neutrals as base; natural accent colors (terracotta, aged gold, forest green) signal trust; cold whites, pastel multicolor, and tech blues signal shallowness
+2. **Typography patterns:** Editorial serifs dominate high-trust register; generous line height (1.65-1.85) is the most underimplemented depth signal; Cormorant Garamond italic is underutilized
+3. **Imagery patterns:** Illustration over photography for abstract-emotional content; abstract geometric illustration signals startup, not depth; representational editorial line illustration signals psychological seriousness
+4. **Tone patterns:** Second-person present tense is the most intimate register; vocabulary gift (naming unnamed experiences) is the primary "seen" mechanism; permission-giving language precedes revelation
+5. **Brand architecture patterns:** Mission-as-architecture (Patagonia), brand name as desired state (Headspace), quality standard as membership criterion (Apple) — all more robust than personal brand architecture
 
-## Files Created/Modified
+**Anti-Pattern Synthesis (5 patterns to avoid):**
+1. Child-coded visuals (bright primary colors, playful rounded type, cartoon illustration)
+2. KOL-anchored brand building (personal brand fragility)
+3. Wellness-overreach aesthetics (Goop exclusivity, precious minimalism)
+4. Generic "self-discovery" visual vocabulary (personality quiz aesthetic)
+5. App-like layout (feature cards, numbered steps, icon-labeled benefits)
 
-- `.planning/phases/06-brand-positioning-research-and-visual-direction/06-02-reference-brand-gallery.md` — Complete reference brand gallery: 10 brand profiles, pattern synthesis, 7 direction signals
+**Design Direction Signals (5 actionable signals for Plan 06-04):**
+1. Cormorant Garamond must be used more aggressively, especially italic form
+2. Terracotta replaces amber — semantically encodes "past, earthen, enduring"
+3. Shift from geometric abstraction to representational emotional line illustration
+4. Radical whitespace as trust signal — minimum standards must be specified and enforced
+5. Establish brand-to-product visual hierarchy before second product launches
 
-## Decisions Made
+## Key Decisions Made
 
-- **[06-02-A] Cormorant Garamond confirmed:** Every high-depth brand in the reference set uses high-contrast editorial serif display fonts. The current font choice is correct and should be maintained and extended.
-- **[06-02-B] Accent color requires specificity:** The current amber is warm but generic. Terracotta (earthen, the past, the enduring) or aged gold (wisdom, accumulated understanding) would encode Raising Giants' brand territory more specifically.
-- **[06-02-C] Whitespace standards needed:** The whitespace pattern analysis recommends specifying minimum whitespace standards in the visual brief — 30-50% increase from current implementation.
-- **[06-02-D] Illustration brief direction:** Move from geometric abstraction to emotionally evocative metaphor — specific scenes that depict interior psychological states (looking back, pattern recognition, the space between past and present).
-- **[06-02-E] Vocabulary gift as brand mechanism:** The naming of unnamed experiences (Brené Brown model, Gottman Institute model) is the core trust mechanism. Archetype names must be framed as vocabulary gifts in copy.
-- **[06-02-F] Permission-giving tone pattern:** Add explicit permission language before depth-requiring content throughout the product — landing page, quiz, and result page.
+**Brand architecture model:** Mission-as-architecture (Patagonia) is the correct model for Raising Giants. The mission ("helping millennial parents understand their own psychology and break harmful cycles") holds The Mirror, Blueprint, and Partner Match without incoherence. New products are justified by mission-fit, not category-fit.
+
+**KOL dependency anti-pattern confirmed:** Good Inside and Brene Brown demonstrate both the power and fragility of personal brand architecture. Raising Giants must anchor trust to the research framework and methodology — not a founder personality.
+
+**Illustration direction confirmed:** School of Life editorial line illustration is the target register. The brief must specify scenes that depict interior psychological states: recognition, the act of looking back, the relationship between past experience and present self.
+
+**Terracotta accent confirmed:** Multiple reference brands (Big Life Journal, Gottman Institute, Kinfolk) successfully use terracotta without coding as "children's brand" — the disambiguation comes from typography and illustration register, not from color change. This confirms the 06-04-A decision.
+
+**Cormorant Garamond underutilization identified:** The font is correctly chosen but underdeployed. It should dominate all emotionally weighted content — hero headlines, pull-quotes, emotional callouts, section intros.
 
 ## Deviations from Plan
 
-None — plan executed exactly as written. Both tasks completed in a single document creation since the pattern synthesis was developed concurrently with the brand profiles (each brand profile includes the "what works / what doesn't" analysis that feeds directly into the synthesis). This is an efficient execution of the task intent, not a deviation from it.
+**None.** The plan was executed exactly as specified. The reference brand gallery replaces the previous version with full multi-product millennial parent lens. All 8 required dimensions are present for all 10 brands. All three synthesis sections (Pattern Synthesis, Anti-Pattern Synthesis, Design Direction Signals) are present and meet the required counts.
 
-## Issues Encountered
+## Self-Check
 
-None.
+**Files exist:**
+- .planning/phases/06-brand-positioning-research-and-visual-direction/06-02-reference-brand-gallery.md — verified (contains 10 brand profiles, all synthesis sections)
 
-## User Setup Required
+**Commits exist:**
+- 4ee0caa — feat(06-02): rewrite reference brand gallery through millennial parent lens
 
-None — no external service configuration required.
+## Self-Check: PASSED
 
-## Next Phase Readiness
-
-- Plan 03 (Positioning Narrative): The vocabulary gift and permission-giving patterns identified in Signal 6 and Signal 7 directly inform the tone and voice of the positioning narrative. The brand territory of "grounded self-discovery" is confirmed as unoccupied by any reference brand — all 10 profiled brands occupy adjacent but distinct territories.
-- Plan 04 (Visual Direction Brief): All 7 direction signals are specific enough to guide concrete visual choices. The brief should reference Signals 1-7 explicitly and translate each into specific visual specifications (font weights, color hex codes, whitespace values, illustration style description).
-- Plan 05 (Rebrand Execution Plan): The illustration system direction (Signal 4) is likely the highest-effort execution item — current abstract/geometric SVG illustrations would need new direction (not full rebuild). Typography and color changes can be implemented in single-file edits.
-
----
-*Phase: 06-brand-positioning-research-and-visual-direction*
-*Completed: 2026-02-27*
+All created files verified present. All commits verified in git log. Both automated verification checks passed (8+ brand profiles, 3+ synthesis section types).

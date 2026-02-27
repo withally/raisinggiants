@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v2.0
 milestone_name: milestone
 status: unknown
-last_updated: "2026-02-27T12:43:19.347Z"
+last_updated: "2026-02-27T12:46:09.034Z"
 progress:
   total_phases: 8
   completed_phases: 5
   total_plans: 25
-  completed_plans: 19
+  completed_plans: 20
 ---
 
 # Project State
@@ -62,6 +62,7 @@ Progress: [█████████░] 95% (23/~24 plans estimated)
 | Phase 06 P04 | 5 | 2 tasks | 1 files |
 | Phase 06 P05 | 5 | 1 task (checkpoint) | 1 files |
 | Phase 06 P01 | 5 | 2 tasks | 1 files |
+| Phase 06 P02 | 7 | 2 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -152,6 +153,9 @@ Recent decisions affecting current work:
 - [Phase 06]: [06-01-R1] Parent-centric + self-understanding quadrant is empty across all 16 millennial parenting digital products — supply gap, not demand gap
 - [Phase 06]: [06-01-R2] Good Inside is nearest competitor but occupies behavioral-advice territory, not revelation territory — differentiable, not competing
 - [Phase 06]: [06-01-R3] Past-lens framing (understanding parenting received) confirmed as single strongest differentiator — zero competitors engage this dimension
+- [Phase 06]: [06-02-ARCH] Mission-as-architecture (Patagonia model) confirmed as correct multi-product architecture for Raising Giants — brand coherence from mission clarity, not product adjacency
+- [Phase 06]: [06-02-KOL] KOL-anchored brand building explicitly identified as anti-pattern — trust must anchor to research framework and methodology, not founder personality
+- [Phase 06]: [06-02-ILLUS] Illustration must shift from geometric abstraction to representational editorial line illustration (School of Life register) for interior psychological state depiction
 
 ### Roadmap Evolution
 
