@@ -55,8 +55,8 @@ Requirements for initial release (The Mirror — free product). Each maps to roa
 
 ### Brand Positioning and Visual Direction
 
-- [ ] **BRAND-01**: 10-15 competitors profiled across three segments (self-discovery, wellness/therapy, parenting) with audience-first discovery methodology
-- [ ] **BRAND-02**: Competitive positioning map (2x2: clinical-warm x shallow-deep) with gap analysis identifying unoccupied territory
+- [x] **BRAND-01**: 10-15 competitors profiled across three segments (self-discovery, wellness/therapy, parenting) with audience-first discovery methodology
+- [x] **BRAND-02**: Competitive positioning map (2x2: clinical-warm x shallow-deep) with gap analysis identifying unoccupied territory
 - [x] **BRAND-03**: Reference brand gallery of 8-12 aspirational brands with visual attribute + emotional response documentation and pattern synthesis
 - [ ] **BRAND-04**: Narrative positioning document defining brand territory, answering: landscape, gap, and positioning case
 - [ ] **BRAND-05**: Brand name and product name evaluation with clear keep/change recommendations tested against clarity, inclusion, direction, and register criteria
@@ -169,8 +169,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | LAND-03 | Phase 4 | Complete |
 | LAND-04 | Phase 4 | Complete |
 | LAND-05 | Phase 4 | Complete |
-| BRAND-01 | Phase 6 | Pending |
-| BRAND-02 | Phase 6 | Pending |
+| BRAND-01 | Phase 6 | Complete |
+| BRAND-02 | Phase 6 | Complete |
 | BRAND-03 | Phase 6 | Complete |
 | BRAND-04 | Phase 6 | Pending |
 | BRAND-05 | Phase 6 | Pending |
