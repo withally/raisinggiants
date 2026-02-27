@@ -55,8 +55,8 @@ Requirements for initial release (The Mirror — free product). Each maps to roa
 
 ### Brand Positioning and Visual Direction
 
-- [ ] **BRAND-01**: 15+ millennial parenting digital products profiled broadly (apps, platforms, content brands) with full-funnel analysis
-- [ ] **BRAND-02**: Competitive positioning map with gap analysis identifying whitespace for a multi-product millennial parent brand
+- [x] **BRAND-01**: 15+ millennial parenting digital products profiled broadly (apps, platforms, content brands) with full-funnel analysis
+- [x] **BRAND-02**: Competitive positioning map with gap analysis identifying whitespace for a multi-product millennial parent brand
 - [ ] **BRAND-03**: Reference brand gallery of 8-12 aspirational brands evaluated through millennial parent lens with pattern synthesis
 - [ ] **BRAND-04**: Narrative positioning document defining brand territory based on research-revealed gap (not pre-committed)
 - [ ] **BRAND-05**: Brand name and product name evaluation for multi-product brand architecture with clear keep/change recommendations
