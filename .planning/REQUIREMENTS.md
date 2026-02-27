@@ -62,7 +62,7 @@ Requirements for initial release (The Mirror — free product). Each maps to roa
 - [x] **BRAND-05**: Brand name and product name evaluation with clear keep/change recommendations tested against clarity, inclusion, direction, and register criteria
 - [x] **BRAND-06**: Visual direction brief — color palette with hex codes and emotional rationale, grounded in positioning
 - [x] **BRAND-07**: Visual direction brief — typography, imagery system, layout approach, and brand tone recommendations
-- [ ] **BRAND-08**: Rebrand execution plan mapping visual recommendations to specific codebase files with phased implementation scope
+- [x] **BRAND-08**: Rebrand execution plan mapping visual recommendations to specific codebase files with phased implementation scope
 
 ## Product 2 Scope — The Blueprint (Paid)
 
@@ -176,7 +176,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | BRAND-05 | Phase 6 | Complete |
 | BRAND-06 | Phase 6 | Complete |
 | BRAND-07 | Phase 6 | Complete |
-| BRAND-08 | Phase 6 | Pending |
+| BRAND-08 | Phase 6 | Complete |
 
 **Coverage:**
 - v1 requirements (Mirror): 26 total
