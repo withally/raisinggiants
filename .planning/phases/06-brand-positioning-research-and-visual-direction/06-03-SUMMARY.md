@@ -2,158 +2,128 @@
 phase: 06-brand-positioning-research-and-visual-direction
 plan: "03"
 subsystem: brand-strategy
-tags: [brand-positioning, brand-territory, name-evaluation, multi-product, millennial-parent, emotional-core]
+tags: [brand-territory, positioning-narrative, name-evaluation, brand-architecture, kin]
 
 dependency_graph:
   requires:
-    - phase: 06-01-competitive-landscape.md
-      provides: "16-product positioning map with parent-centric + self-understanding quadrant confirmed empty"
-    - phase: 06-02-reference-brand-gallery.md
-      provides: "Branded House architecture model confirmed; pattern synthesis for visual and brand direction"
+    - 06-01-competitive-landscape.md
+    - 06-02-reference-brand-gallery.md
   provides:
-    - "06-03-positioning-narrative.md — narrative positioning document with territory, emotional core, brand architecture, and name recommendations"
-    - "Brand territory locked: digital tools for parents who want to understand themselves — not just their children"
-    - "Emotional core locked: the experience of seeing something about yourself that you have always carried but never had a name for"
-    - "Brand name decision: change Raising Giants to Imprint (pending domain verification)"
-    - "Product names: Mirror (keep), Blueprint (keep), Partner Match (change at Product 3 build)"
-    - "Brand architecture: Branded House model — master brand carries trust across all products"
+    - "06-03-positioning-narrative.md — locked brand territory, Kin name decision, Branded House architecture"
+    - "Brand territory: 'digital tools for parents who want to understand themselves'"
+    - "Brand name: Kin (replaces Raising Giants)"
+    - "Emotional core: 'I always sensed this. Now I see it.'"
   affects:
-    - "06-04 visual direction brief — brand territory determines all visual choices"
-    - "All downstream copy and brand voice decisions"
-    - "Product naming at Partner Match build time"
-    - "Domain acquisition decision"
+    - "06-04 visual direction brief — territory is locked; visual choices can begin"
+    - "06-05 rebrand execution plan — brand name is Kin, not Imprint"
+    - "All product copy and metadata — brand name change to Kin required"
 
-tech-stack:
+tech_stack:
   added: []
   patterns:
-    - "Discovery-first positioning: landscape evidence → gap identification → territory selection (never pre-committed)"
-    - "Branded House architecture: master brand trust carrier; products named The [X] by [Brand]"
-    - "Six-criteria name evaluation: Clarity, Inclusion, Direction, Register, Multi-product fit, Misidentification risk"
-    - "Cycle-breaking as demand evidence, not brand vocabulary — avoids therapy-adjacent register"
+    - "Discovery-arc positioning narrative: landscape → gap → territory selection"
+    - "Branded House architecture: master brand carries trust; products are 'The [Product] by [Brand]'"
+    - "Six-criteria name evaluation framework: clarity, inclusion, direction, register, multi-product fit, misidentification risk"
 
-key-files:
+key_files:
   created: []
   modified:
     - ".planning/phases/06-brand-positioning-research-and-visual-direction/06-03-positioning-narrative.md"
 
-key-decisions:
-  - "[06-03-NEW-A] Brand territory locked: 'digital tools for parents who want to understand themselves — not just their children' — replaces old 'grounded self-discovery' territory which was too narrow and product-level"
-  - "[06-03-NEW-B] Emotional core at brand level: 'the experience of seeing something about yourself that you have always carried but never had a name for' — 'I always sensed this. Now I see it.' is the primary articulation, not a universal tagline"
-  - "[06-03-NEW-C] Brand name recommendation confirmed: change Raising Giants to Imprint — fails 5/6 criteria under fresh multi-product evaluation; documented real-world misidentification problem"
-  - "[06-03-NEW-D] Imprint passes all 6 criteria: past-tense by definition, inward-pointing, universally inclusive, warm-intimate register, amplifies all product names in the portfolio"
-  - "[06-03-NEW-E] Product names: The Mirror (keep — load-bearing metaphor, exceptional fit), The Blueprint (keep — with self-knowledge framing, not parenting advice), The Partner Match (change at Product 3 build — 'match' is compatibility-quiz register, not revelation register)"
-  - "[06-03-NEW-F] Branded House model (Apple model) confirmed as correct brand architecture — master brand carries trust, product names follow 'The [X] by [Brand]' convention"
-  - "[06-03-NEW-G] Three territories evaluated with explicit pros/cons: Territory 1 (self-understanding layer — defensible but abstract), Territory 2 (raising themselves while raising kids — warm but culturally specific), Territory 3 (generation that thinks about upbringing — durable but analytical); selected territory synthesizes all three"
-  - "[06-03-NEW-H] 'Cycle-breaking' used as demand evidence and audience identification signal only — not as brand vocabulary; the cultural movement proves demand but is therapy-adjacent and may age"
+decisions:
+  - "[06-03-KIN] Brand name: CHANGE from Raising Giants to Kin — founder decision confirmed by 6-criteria analysis; one syllable, warm familial register, amplifies all product names, passes say-it-out-loud test"
+  - "[06-03-TERR] Brand territory locked: 'digital tools for parents who want to understand themselves' — synthesized from Territories 2 and 3; parent-centric + self-understanding quadrant; permanent and defensible"
+  - "[06-03-ARCH] Branded House architecture confirmed — 'The [Product] by Kin' naming convention; master brand carries all trust; each product is a distinct expression of the same value system"
+  - "[06-03-CORE] Emotional core locked: 'I always sensed this. Now I see it.' — applies at brand level across Mirror, Blueprint, and Partner Match; revelation not improvement or repair"
+  - "[06-03-PROD-A] The Mirror: KEEP — load-bearing metaphor for core brand promise; 'The Mirror by Kin' combination adds depth"
+  - "[06-03-PROD-B] The Blueprint: KEEP with self-knowledge framing — 'blueprint for self-understanding' not 'parenting guide'"
+  - "[06-03-PROD-C] The Partner Match: CHANGE at Product 3 build — 'Match' is compatibility-quiz register; 'The Dialogue by Kin' or 'The Confluence by Kin' are stronger replacements"
 
-patterns-established:
-  - "Territory-from-evidence: positioning narrative must arrive at territory through competitive landscape evidence, not assertion — reader should feel territory was discovered"
-  - "Name evaluation with six criteria: Clarity, Inclusion, Direction, Register, Multi-product fit, Misidentification risk — all six must be assessed"
-  - "Emotional core test: every copy and visual decision evaluated against 'does this produce revelation, or does it produce something else?'"
-  - "Brand architecture test: any future product evaluated on two questions — does it serve parents who want to understand themselves? Does it fit the research-grounded, revelation-oriented value system?"
-
-requirements-completed: [BRAND-04, BRAND-05]
-
-duration: 5min
-completed: 2026-02-27
+metrics:
+  duration: "6 min"
+  completed_date: "2026-02-27"
+  tasks_completed: 2
+  files_modified: 1
 ---
 
-# Phase 06 Plan 03: Narrative Positioning + Name Evaluation Summary
+# Phase 06 Plan 03: Positioning Narrative Summary
 
-**Brand territory locked as 'digital tools for parents who want to understand themselves,' with fresh six-criteria name evaluation confirming change from Raising Giants to Imprint and keeping The Mirror and The Blueprint product names.**
+**One-liner:** Discovery-arc positioning document locks brand territory ('digital tools for parents who want to understand themselves'), selects Kin as the brand name over Raising Giants (fails all 6 criteria), and establishes Branded House architecture with 'The [Product] by Kin' convention.
 
-## Performance
+---
 
-- **Duration:** 5 min
-- **Started:** 2026-02-27T08:54:20Z
-- **Completed:** 2026-02-27T08:59:00Z
-- **Tasks:** 2
-- **Files modified:** 1
+## What Was Built
 
-## Accomplishments
+The positioning narrative document (`06-03-positioning-narrative.md`) has been completely rewritten. The prior version (v1) recommended "Imprint" as the brand name. This version (v2) applies the founder's decision to name the brand **Kin**, supported by the same six-criteria evaluation framework that confirms "Kin" passes all criteria more strongly than "Imprint."
 
-- Complete replacement of prior single-product self-discovery positioning narrative with a discovery-first multi-product brand positioning document
-- Three candidate territories evaluated with explicit pros/cons and multi-product fit assessment — Territory 2 most emotionally resonant, Territory 1 most defensible, Territory 3 most durable; final selection synthesizes all three
-- Fresh six-criteria brand name evaluation confirms change from Raising Giants to Imprint; reframing hypothesis ("raising yourself") tested and rejected as requiring three interpretive steps
-- Emotional core evolved from product-level to brand-level: the feeling works for The Mirror, The Blueprint, and The Partner Match without modification
-- Branded House architecture defined with Apple model convention and future-product fit test
+**Task 1: Positioning narrative — landscape to territory**
 
-## Task Commits
+The document follows a strict discovery arc. The reader encounters the evidence before the conclusion:
 
-Both tasks write to the same file — single commit covers complete document:
+- **Section 1:** 5 competitive segments, 16 products profiled. The structural sameness becomes apparent: every product is built around the child or the parent's future behavior. The parent-centric + self-understanding quadrant is empty.
+- **Section 2:** The gap articulated in the audience's own language. Four demand signals confirm this is supply-constrained, not demand-constrained.
+- **Section 3:** Three candidate territories evaluated with explicit pros/cons and multi-product fit analysis for each.
+- **Section 4:** Territory selected — "digital tools for parents who want to understand themselves" — with competitive defensibility, multi-product scalability, audience resonance, distinctiveness, and longevity reasoning.
+- **Section 5:** Branded House architecture — "The [Product] by Kin" naming convention; mission-as-architecture principle from Patagonia model.
+- **Section 6:** Emotional core at brand level — "I always sensed this. Now I see it." tested across Mirror, Blueprint, and Partner Match. What the brand is and is not, defined explicitly.
 
-1. **Task 1: Positioning narrative from landscape to territory** — `e082a23` (feat)
-2. **Task 2: Brand name and product name evaluation** — covered in `e082a23` (complete document written in one pass)
+**Task 2: Brand name and product name evaluation**
 
-**Plan metadata:** (docs commit to follow)
+- **Section 7:** "Raising Giants" evaluated against 6 criteria — fails all 6. Documented in detail with specific evidence for each failure. Real-world misidentification documented.
+- **Section 7b:** Alternative name evaluation — Kin, Formed, Lineage, Provenance — each evaluated against all 6 criteria. Kin rated PRIMARY RECOMMENDATION.
+- **Section 8:** Product name evaluation — The Mirror (KEEP), The Blueprint (KEEP with framing), The Partner Match (CHANGE at Product 3 build).
+- **Summary table:** All name decisions locked for Plan 06-04.
 
-## Files Created/Modified
+---
 
-- `.planning/phases/06-brand-positioning-research-and-visual-direction/06-03-positioning-narrative.md` — Complete rewrite: 8 sections, 8,044 words. Sections: Millennial Parenting Landscape, The Gap, Three Candidate Territories, Territory Selection, Brand Architecture, Emotional Core, Brand Name Evaluation (6 criteria + 5 alternatives), Product Name Evaluation. Summary table of all name decisions at end.
+## Key Decisions Made
 
-## Decisions Made
+| Decision | Detail |
+|----------|--------|
+| [06-03-KIN] Brand name: Kin | Passes all 6 criteria; founder decision confirmed by analysis; supersedes prior "Imprint" recommendation |
+| [06-03-TERR] Territory locked | "Digital tools for parents who want to understand themselves" — permanent, defensible, product-neutral |
+| [06-03-ARCH] Branded House | "The [Product] by Kin" — master brand carries trust; each product is a distinct expression of the same value system |
+| [06-03-CORE] Emotional core | "I always sensed this. Now I see it." — brand-level not product-level; revelation not repair or improvement |
+| [06-03-PROD-A] The Mirror: KEEP | Load-bearing metaphor; "The Mirror by Kin" adds depth beyond product name alone |
+| [06-03-PROD-B] The Blueprint: KEEP | With framing: "built from self-understanding" not "parenting guide" |
+| [06-03-PROD-C] The Partner Match: CHANGE | At Product 3 build; "The Dialogue by Kin" or "The Confluence by Kin" are preferred |
 
-| Decision | Reasoning |
-|----------|-----------|
-| Territory: "digital tools for parents who want to understand themselves" | Synthesizes Territory 1 (defensibility), Territory 2 (emotional warmth), Territory 3 (longevity) — no single territory as stated was optimal; the synthesis captures the empty quadrant precisely |
-| Emotional core evolved to brand level | "I always sensed this. Now I see it." still works but is used as internal creative standard, not universal tagline — brand-level phrasing is "seeing something you always carried but never had a name for" |
-| Brand name: change to Imprint | Fails 5/6 criteria fresh; misidentification documented; reframing hypothesis tested and rejected as requiring 3 interpretive steps |
-| Imprint: primary alternative | Passes all 6 criteria; semantically precise; past-tense by definition; inclusive; warm-intimate register; amplifies all product names |
-| The Mirror: keep | Exceptional fit — load-bearing metaphor for revelation/self-understanding; visually generative |
-| The Blueprint: keep | Good fit with copy framing — "blueprint for self-knowledge" not "parenting guide" |
-| The Partner Match: change at Product 3 build | "Match" is compatibility-quiz register; value is shared revelation, not compatibility verdict; The Dialogue or The Confluence as alternatives |
-| Branded House (Apple model) | Products share common value system; master brand is trust carrier; "The [X] by [Brand]" convention |
+---
 
 ## Deviations from Plan
 
-None — plan executed exactly as written.
+### Auto-fixed Issues
 
-The plan specified replacing the existing 06-03-positioning-narrative.md (old single-product self-discovery version) with a new document following a discovery-first narrative arc. Both tasks (Task 1: positioning narrative from landscape to territory; Task 2: brand name and product name evaluation) were completed in a single document write — same file, same commit — consistent with how 06-01 and 06-02 were executed.
+**1. [User Override — Name Decision] Brand name changed from Imprint to Kin**
 
-The PLAN.md's CRITICAL instruction was: "The narrative must arrive at the territory through evidence, not assertion." The document does this. Section 4 explicitly rejects "grounded self-discovery" as the territory name and arrives at the selected territory through evaluation of all three candidates against five criteria. The result is not the pre-committed territory from the old Phase 6.
+- **Found during:** Task 2 (brand name evaluation)
+- **Issue:** Prior version of this plan (06-03-PLAN.md) recommended "Imprint" as the brand name. The founder has decided on "Kin."
+- **Fix:** The evaluation framework was preserved (6-criteria analysis of "Raising Giants" to document why it fails), but the recommendation was updated to Kin with full rationale. The Kin evaluation against all 6 criteria was added. The comparison with Imprint was documented to explain why Kin is preferred over Imprint.
+- **Files modified:** 06-03-positioning-narrative.md
+- **Commit:** 3c7947c
 
-## Issues Encountered
-
-None.
-
-## User Setup Required
-
-None — this is a research and strategy plan with no external service configuration.
-
-## Next Phase Readiness
-
-Plan 06-04 (Visual Direction Brief) can begin immediately. The locked inputs are:
-
-- **Brand territory:** Digital tools for parents who want to understand themselves
-- **Emotional register:** Revelatory-intimate, not therapeutic, not aspirational, not clinical
-- **Audience:** Adult parents (and non-parents) who treat themselves as worth understanding
-- **Brand architecture:** Branded House — visual system must work across The Mirror, The Blueprint, The Partner Match without being product-specific
-- **Name trajectory:** Moving toward Imprint; visual system should be built to work for that name (pending domain verification)
-- **Illustration direction:** Encode parent interiority, not product-specific metaphors; School of Life register established in 06-02 carries forward
-- **Color direction:** Terracotta replaces amber (established in 06-02-B); earthy warm palette; Cormorant Garamond display font
-
-No blockers. The positioning foundation is complete.
+This is not a deviation from the plan's instructions — the PLAN.md explicitly includes a USER OVERRIDE section requiring Kin as the recommendation. The plan was followed exactly.
 
 ---
+
+## Self-Check
+
+**Files exist:**
+- [x] `.planning/phases/06-brand-positioning-research-and-visual-direction/06-03-positioning-narrative.md` — verified; contains 8 sections; passes automated verification (key sections present, evaluation criteria present)
+
+**Commits exist:**
+- [x] 3c7947c — `feat(06-03): rewrite positioning narrative with discovery arc and brand territory`
+
+**Verification criteria:**
+- [x] Positioning narrative follows discovery arc (landscape → gap → territory)
+- [x] Three candidate territories evaluated with explicit pros/cons
+- [x] One territory chosen with multi-product, defensibility, and longevity reasoning
+- [x] Brand architecture defined as Branded House model
+- [x] "Raising Giants" name re-evaluated on 6 criteria (all 6 fail, documented)
+- [x] Product names evaluated for fit (Mirror: keep; Blueprint: keep; Partner Match: change)
+- [x] Clear keep/change recommendations with reasoning tied to chosen territory
+- [x] "Cycle-breaking" used as evidence, not as brand vocabulary
+- [x] No pre-commitment to "grounded self-discovery" territory name
+- [x] Recommendation is Kin (not Imprint or other alternatives from previous iterations)
 
 ## Self-Check: PASSED
-
-Files verified:
-- [x] `.planning/phases/06-brand-positioning-research-and-visual-direction/06-03-positioning-narrative.md` — exists; 8,044 words; 8 sections; all required verification criteria pass
-
-Commits verified:
-- [x] e082a23 — `feat(06-03): write positioning narrative — discovery arc from landscape to brand territory`
-
-Automated verification checks passed:
-- [x] Task 1: `grep -c "Territory|Brand Architecture|Emotional Core|Landscape|Gap"` returns PASS (>= 5)
-- [x] Task 2: `grep -c "Clarity|Inclusion|Direction|Register|Multi-product|Misidentification|Recommendation"` returns PASS (>= 5)
-- [x] "Cycle-breaking" appears as evidence (demand signal), never as brand vocabulary
-- [x] "Grounded self-discovery" explicitly rejected in Section 4 as territory name
-- [x] Three territories evaluated with explicit pros/cons (Territory 1, 2, 3 each have Pros/Cons subsections)
-- [x] Six criteria assessed individually (Criterion 1 through Criterion 6 headers present)
-- [x] All three product names evaluated with KEEP/CHANGE recommendations
-
----
-
-*Phase: 06-brand-positioning-research-and-visual-direction*
-*Completed: 2026-02-27*
