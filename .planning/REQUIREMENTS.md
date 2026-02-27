@@ -53,6 +53,17 @@ Requirements for initial release (The Mirror — free product). Each maps to roa
 - [x] **LAND-04**: Mobile-responsive design
 - [x] **LAND-05**: Sophia's credentials and clinical authority visible
 
+### Brand Positioning and Visual Direction
+
+- [ ] **BRAND-01**: 10-15 competitors profiled across three segments (self-discovery, wellness/therapy, parenting) with audience-first discovery methodology
+- [ ] **BRAND-02**: Competitive positioning map (2x2: clinical-warm x shallow-deep) with gap analysis identifying unoccupied territory
+- [ ] **BRAND-03**: Reference brand gallery of 8-12 aspirational brands with visual attribute + emotional response documentation and pattern synthesis
+- [ ] **BRAND-04**: Narrative positioning document defining brand territory, answering: landscape, gap, and positioning case
+- [ ] **BRAND-05**: Brand name and product name evaluation with clear keep/change recommendations tested against clarity, inclusion, direction, and register criteria
+- [ ] **BRAND-06**: Visual direction brief — color palette with hex codes and emotional rationale, grounded in positioning
+- [ ] **BRAND-07**: Visual direction brief — typography, imagery system, layout approach, and brand tone recommendations
+- [ ] **BRAND-08**: Rebrand execution plan mapping visual recommendations to specific codebase files with phased implementation scope
+
 ## Product 2 Scope — The Blueprint (Paid)
 
 Deferred to Product 2 release. Tracked but not in v1 roadmap.
@@ -158,14 +169,23 @@ Which phases cover which requirements. Updated during roadmap creation.
 | LAND-03 | Phase 4 | Complete |
 | LAND-04 | Phase 4 | Complete |
 | LAND-05 | Phase 4 | Complete |
+| BRAND-01 | Phase 6 | Pending |
+| BRAND-02 | Phase 6 | Pending |
+| BRAND-03 | Phase 6 | Pending |
+| BRAND-04 | Phase 6 | Pending |
+| BRAND-05 | Phase 6 | Pending |
+| BRAND-06 | Phase 6 | Pending |
+| BRAND-07 | Phase 6 | Pending |
+| BRAND-08 | Phase 6 | Pending |
 
 **Coverage:**
 - v1 requirements (Mirror): 26 total
 - Mapped to phases: 26
 - Unmapped: 0
+- Brand positioning requirements: 8 (BRAND-01–08)
 - Product 2 requirements: 15 (PAY-01–05, PDF-01–10)
 - Product 3 requirements: 5 (COUP-01–05)
 
 ---
 *Requirements defined: 2026-02-23*
-*Last updated: 2026-02-25 — Product ladder pivot; RSLT-02/RSLT-04 deleted; RSLT-06–10 added; COPY-01–04 added; PAY/PDF moved to Product 2 scope*
+*Last updated: 2026-02-27 — Phase 6 brand positioning requirements added (BRAND-01–08)*
