@@ -1,142 +1,171 @@
 ---
 phase: 06-brand-positioning-research-and-visual-direction
-plan: 05
-subsystem: brand-strategy
-tags: [brand-execution-plan, rebrand, color-tokens, illustration-system, brand-name-change, implementation-scope]
+plan: "05"
+subsystem: brand-rebrand-execution
+tags: [rebrand, execution-plan, kin, 2026-design, deep-teal, merlot, canela, brand-name-change]
 
-# Dependency graph
-requires:
-  - phase: 06-brand-positioning-research-and-visual-direction
-    provides: "06-04 visual direction brief — 7-color palette, typography recommendations, illustration system direction, permission-first voice"
-  - phase: 06-brand-positioning-research-and-visual-direction
-    provides: "06-03 positioning narrative — brand name change recommendation (Raising Giants → Imprint), grounded self-discovery territory"
-provides:
-  - "Developer-ready rebrand execution plan with specific file changes for every visual direction recommendation"
-  - "Change scope matrix: 25+ specific changes mapped to exact files, CSS properties, and Tailwind classes"
-  - "oklch color conversion table for all 8 palette values (bone, charcoal, terracotta, aged gold, deep dusk, soft clay, stone mid/light)"
-  - "3-phase implementation scope: Foundation (2 plans), Component-Level (3-4 plans), Asset-Level (4-6 plans)"
-  - "Brand name change technical checklist: domain acquisition, string references, metadata sequence, SEO 301 redirect strategy"
-  - "5 risks with rollback strategies and visual regression scan checklist"
-affects:
-  - "Phase 07 (rebrand implementation) — execution plan is the primary input for all implementation plans"
-  - "Phase A Foundation plans — globals.css token changes and layout.tsx metadata updates"
-  - "Phase B Component plans — landing/quiz/result component color class replacements"
-  - "Phase C Asset plans — illustration redesigns and brand identity creation"
+dependency_graph:
+  requires:
+    - 06-04-visual-direction-brief.md
+    - 06-03-positioning-narrative.md
+    - 06-RESEARCH.md (codebase analysis)
+  provides:
+    - "06-05-rebrand-execution-plan.md — file-by-file rebrand execution plan (v2, Kin/2026 direction)"
+    - "26-file audit with explicit amber/stone-900 → Deep Teal/Merlot/Burnished Amber/Cloud White class map"
+    - "Phased implementation scope: Foundation / Component / Asset"
+    - "Brand name change checklist: Raising Giants → Kin"
+  affects:
+    - "Future implementation phase — execution plan is the developer-ready work order"
+    - "app/globals.css (Phase A) — palette token changes documented"
+    - "app/layout.tsx (Phase A) — font swap + metadata changes documented"
+    - "26 components/landing/ + components/quiz/ + components/result/ files (Phase B)"
+    - "MirrorIllustration.tsx + ArchetypeIcons.tsx (Phase C)"
 
-# Tech tracking
-tech-stack:
+tech_stack:
   added: []
   patterns:
-    - "Token-first palette migration: semantic token changes in globals.css propagate globally; hardcoded Tailwind color class changes handled in separate Phase B"
-    - "oklch color format: all palette values specified in oklch() notation (not hex) for globals.css consistency"
-    - "Phase-gated rebrand: Foundation → Component → Asset phases allow incremental rollout with clean rollback points"
+    - "Deep Teal / Merlot / Burnished Amber / Cloud White / Warm Sand semantic token system documented"
+    - "DM Serif Display as Canela substitute (Canela is commercial, not on Google Fonts)"
+    - "Merlot for Mirror/revelation contexts; Burnished Amber for Blueprint/research contexts"
+    - "Glassmorphism .glass-card utility documented for Phase A globals.css"
 
-key-files:
-  created:
+key_files:
+  created: []
+  modified:
     - ".planning/phases/06-brand-positioning-research-and-visual-direction/06-05-rebrand-execution-plan.md"
-  modified: []
 
-key-decisions:
-  - "[06-05-A] Rebrand is split into token changes (globals.css, Phase A) and component-level Tailwind class replacements (Phase B) — because the codebase uses a mix of semantic tokens and hardcoded amber/stone Tailwind classes, both layers require separate implementation"
-  - "[06-05-B] Illustration redesign offers two implementation paths: Option A (PNG replacement, zero code change) vs Option B (inline SVG, more flexible but more complex) — choosing at Phase C time based on creative tooling available"
-  - "[06-05-C] Domain acquisition is a pre-implementation user action — metadata changes (title, OG, twitter) can proceed immediately; metadataBase URL change waits for domain confirmation"
+decisions:
+  - "[06-05-A] Two-layer color migration required: semantic token update (globals.css Phase A) + hardcoded Tailwind class replacements in 26 component files (Phase B) — codebase uses both patterns"
+  - "[06-05-B] Illustration redesign implementation path (inline SVG vs. PNG) deferred to Phase C decision at implementation time — both options documented with tradeoffs"
+  - "[06-05-C] Domain acquisition for Raising Giants → Kin rename is user action required before metadataBase URL change; all other metadata string changes (title/OG/twitter) can proceed in Phase A immediately"
+  - "[06-05-D] Canela not available on Google Fonts (commercial license required); DM Serif Display recommended as free substitute; executor makes final call at Phase A"
+  - "[06-05-E] Merlot as Mirror/revelation accent; Burnished Amber as Blueprint/research accent — product-specific accent differentiation per 06-04 multi-product table"
 
-patterns-established:
-  - "Execution-plan structure: Change Scope Matrix → Implementation Constraints → Phased Scope → Name Change Checklist → Effort Estimate → Risks → Visual Regression Checklist"
-  - "Dual-layer color migration: semantic tokens (Phase A) + hardcoded class replacements (Phase B) handles Tailwind v4 @theme inline + direct class usage simultaneously"
-
-requirements-completed: [BRAND-08]
-
-# Metrics
-duration: 5min
-completed: 2026-02-27
+metrics:
+  duration: "in progress — paused at Task 2 checkpoint"
+  completed_date: "2026-02-27"
+  tasks_completed: 1
+  files_modified: 1
 ---
 
-# Phase 6 Plan 05: Rebrand Execution Plan Summary
+# Phase 06 Plan 05: Rebrand Execution Plan Summary (v2 — Kin / 2026 Direction)
 
-**331-line developer-ready rebrand execution plan mapping all visual direction recommendations to specific files, tokens, and components — terracotta palette in oklch, 3-phase implementation scope, and domain migration checklist for Raising Giants → Imprint name change**
+**One-liner:** Complete rewrite of the rebrand execution plan — replaces the terracotta/Imprint/Cormorant direction with an explicit file-by-file change map for the Kin brand: Deep Teal primary, Merlot revelation accent, Burnished Amber Blueprint accent, Cloud White background, DM Serif Display (Canela substitute), covering all 26 component files plus globals.css, layout.tsx, and illustration assets across three implementation phases.
 
-## Performance
+---
 
-- **Duration:** ~5 min
-- **Started:** 2026-02-27T07:31:08Z
-- **Completed:** 2026-02-27T07:36:00Z
-- **Tasks:** 1 of 2 complete (Task 2 is human-verify checkpoint — awaiting user review)
-- **Files modified:** 1
+## What Was Built
 
-## Accomplishments
+The `06-05-rebrand-execution-plan.md` was fully rewritten as v2. The v1 (prior) plan specified a terracotta palette, Cormorant Garamond retention, School of Life editorial illustration, and used "Imprint" as the new brand name. All of these have been superseded by the v3 visual direction brief (06-04) and the founder's decision to rename to "Kin".
 
-- Created the complete rebrand execution plan (331 lines) with all required sections: Executive Summary, Change Scope Matrix (25+ entries), Implementation Constraints, Phased Implementation Scope (A/B/C), Brand Name Change Technical Checklist, Effort Estimate, Risks and Mitigations, Visual Regression Checklist
-- Mapped every visual direction recommendation from 06-04 to a specific file + change: `globals.css` for all 8 palette token changes with oklch equivalents, `layout.tsx` for metadata and optional DM Sans addition, all 5 landing components for color class replacements, quiz and result component directories for color class updates
-- Identified the critical constraint: the codebase uses both semantic tokens AND hardcoded Tailwind color classes — requiring a two-pass Phase A (tokens) + Phase B (hardcoded classes) migration strategy rather than a single globals.css update
-- Specified the brand name change sequence: immediate metadata string replacements (title, OG, twitter) → domain acquisition user action → metadataBase URL update → Vercel 301 redirect configuration → Supabase cosmetic rename
-- Estimated total rebrand scope at 9-12 implementation plans / ~2-2.5 hours of Claude execution time
+### Task 1: Codebase Audit + Phased Execution Plan
 
-## Task Commits
+**Codebase audit findings:**
 
-1. **Task 1: Create phased rebrand execution plan** - `12cffa0` (feat)
-2. **Task 2: Human verify Phase 6 deliverables** - CHECKPOINT (awaiting user approval)
+- 26 component files with hardcoded `amber-*` / `stone-900` Tailwind color classes
+- 9 user-facing "Raising Giants" string references across 5 files
+- 10+ components using `font-display` class / `var(--font-display)` — all update automatically on font swap in layout.tsx
+- `globals.css` semantic tokens are currently neutral Tailwind defaults — no brand-specific tokens exist yet
+- `MirrorIllustration.tsx` and `ArchetypeIcons.tsx` both use inline SVG — implementation path is clear
 
-## Files Created/Modified
+**v2 execution plan structure:**
 
-- `.planning/phases/06-brand-positioning-research-and-visual-direction/06-05-rebrand-execution-plan.md` — 331-line execution plan covering: executive summary (3 sentences), change scope matrix with 25+ rows mapping each visual direction recommendation to exact file/token/class changes, implementation constraints (Tailwind v4 @theme inline, oklch format, next/font/google, Biome), 3-phase implementation scope (Foundation: 2 plans / Component: 3-4 plans / Asset: 4-6 plans), brand name technical checklist (domain, string references, SEO, Supabase), effort estimate table (9-12 plans total), 5 risks with rollback strategies, visual regression scan checklist
+**Color Change Mapping:**
+- Explicit semantic token update table (10 shadcn tokens → new values)
+- 6 new custom brand properties to add (`--color-deep-teal`, `--color-merlot`, `--color-burnished-amber`, etc.)
+- Complete amber-class → new class mapping table (25 amber classes, 17 stone classes)
+- Glassmorphism utility documented
 
-## Decisions Made
+**Change Scope Matrix:**
+- 38-row file-by-file change matrix covering every visual direction recommendation
+- Each row: file path, specific change, phase assignment (A/B/C), effort level
 
-**[06-05-A] Two-layer color migration strategy**
-The codebase uses a mix of semantic Tailwind tokens (`bg-background`, `bg-primary`) and hardcoded Tailwind color classes (`bg-amber-50`, `text-amber-700`, `bg-stone-900`). A single globals.css update is insufficient — component files with hardcoded classes also need updating. Phase A updates semantic tokens; Phase B separately handles the hardcoded class replacements. This keeps each migration layer independently rollback-able.
+**Phased Implementation:**
+- Phase A (2 plans, ~20 min): globals.css tokens + font swap + metadata. Single-file updates that propagate globally.
+- Phase B (3–4 plans, ~35–45 min): 26 component color class replacements + brand name strings + copy updates. Organized by component group (landing → quiz → result).
+- Phase C (3–5 plans, ~45–75 min): MirrorIllustration redesign + ArchetypeIcons redesign + OG image + favicon.
 
-**[06-05-B] Illustration implementation path deferred to Phase C**
-The illustration redesign can be done via PNG replacement (zero component code changes, simpler) or inline SVG (more flexible, color-themeable, requires component changes). The choice depends on the creative tooling available at Phase C implementation time. The execution plan documents both options — the implementing executor chooses at implementation time based on asset format.
+**Brand name change checklist (Raising Giants → Kin):**
+- 9 user-facing string references documented with exact line numbers and replacement text
+- Domain acquisition noted as user action required before metadataBase URL change
+- "The Mirror by Kin" established as product eyebrow label pattern
 
-**[06-05-C] Domain acquisition gating**
-The user must verify and acquire the new domain before the `metadataBase` URL change goes live. All other metadata string changes (title, description, OG title, twitter) can proceed without domain confirmation. The execution plan documents this sequence explicitly to prevent implementing domain-dependent changes prematurely.
+**Canela font constraint documented:**
+- Canela is a commercial font (Commercial Type) — not on Google Fonts
+- DM Serif Display recommended as free substitute (Google Fonts, contemporary, screen-optimized)
+- Fraunces and Playfair Display listed as alternatives
+- Implementation path documented: same `--font-display` variable, automatic propagation
+
+**6 risks documented** with mitigations:
+1. Canela licensing constraint
+2. oklch conversion accuracy
+3. Deep Teal / Merlot WCAG contrast (Burnished Amber flagged for large-text-only use)
+4. Hardcoded class coverage gaps
+5. Illustration quality (requires human-verify checkpoints in Phase C)
+6. Partial rebrand visual state
+
+### Task 2: Checkpoint (awaiting user review)
+
+Human-verify checkpoint — awaiting user review and approval of all 5 Phase 6 deliverables before Phase 6 is marked complete.
+
+---
+
+## Key Decisions Made
+
+| Decision | Detail |
+|----------|--------|
+| [06-05-A] Two-layer migration | globals.css tokens (Phase A) + hardcoded class replacements in 26 files (Phase B) |
+| [06-05-B] Illustration path deferred | Inline SVG vs. PNG replacement is Phase C implementation-time decision |
+| [06-05-C] Domain timing | metadataBase URL holds until domain confirmed; all other name changes proceed in Phase A |
+| [06-05-D] Canela substitute | DM Serif Display (Google Fonts) recommended; executor decides at Phase A |
+| [06-05-E] Accent differentiation | Merlot for Mirror/revelation; Burnished Amber for Blueprint/research |
+
+---
 
 ## Deviations from Plan
 
-None — plan executed exactly as written. The execution plan was created as specified, referencing all codebase files listed in the plan context, mapping all 06-04 visual direction recommendations to specific implementation changes, and addressing the name change (Raising Giants → Imprint per 06-03-A) with full technical scope.
+### Directional Override (User-specified in prompt)
 
-## Issues Encountered
+**1. [User Override] Execution plan rewritten for Kin / 2026 direction — not terracotta/Imprint direction**
 
-None.
+- **Found during:** Plan start — prompt context specified new direction explicitly
+- **Issue:** The existing `06-05-rebrand-execution-plan.md` (v1) used the terracotta/Cormorant/School-of-Life/Imprint direction — the prior visual brief before the 2026 update.
+- **Fix:** Complete rewrite of the execution plan to map the v3 visual direction brief (Deep Teal / Merlot / Burnished Amber / Cloud White / Canela / bento-grid) to codebase files.
+- **Files modified:** 06-05-rebrand-execution-plan.md
+- **Commit:** eb13872
 
-## User Setup Required
+### Canela Font Constraint Discovery (Rule 2 — Missing Critical Info)
 
-**Domain acquisition is a user action required before Phase C name change implementation:**
-- Check availability of: `imprint.com`, `imprint.co`, `theimprint.com`, `imprint.app`
-- Purchase preferred domain if available
-- Check social handles: `@getimprint`, `@imprint`, `@imprintapp` on Instagram, X/Twitter, TikTok
+**2. [Rule 2 - Critical functionality] Canela font licensing documented as critical implementation constraint**
 
-This is non-blocking for Phase A (palette + font) and Phase B (component colors) work — only Phase C name-change steps depend on domain confirmation.
+- **Found during:** Task 1 execution (font change planning)
+- **Issue:** The 06-04 brief specifies Canela as the display serif. Canela is a commercial font from Commercial Type — it is NOT available on Google Fonts. Any implementation attempt using `next/font/google` for Canela would fail at build time.
+- **Fix:** Documented the constraint explicitly, provided 3 free Google Fonts alternatives with recommendation (DM Serif Display), and specified the implementation path.
+- **Files modified:** 06-05-rebrand-execution-plan.md (added "Font System" constraint section)
 
-## Next Phase Readiness
-
-**Phase 6 is complete after user verification of this checkpoint:**
-- 06-01: Competitive landscape — done
-- 06-02: Reference brand gallery — done
-- 06-03: Positioning narrative — done
-- 06-04: Visual direction brief — done
-- 06-05: Rebrand execution plan — done (awaiting human-verify)
-
-**Phase 7 (Rebrand Implementation) can begin after user approves Phase 6 direction:**
-- A Claude executor in a future phase can read 06-05-rebrand-execution-plan.md and know exactly which files to modify, in what order, with what specific values
-- Phase A (Foundation) is the recommended starting point — lowest risk, globally propagating changes, clean rollback point
-- Illustration work (Phase C) may require human checkpoints for visual quality review
+---
 
 ## Self-Check
 
-- FOUND: `.planning/phases/06-brand-positioning-research-and-visual-direction/06-05-rebrand-execution-plan.md` — PASS
-- File is 331 lines (requirement: 150+) — PASS
-- All required sections present: Executive Summary, Change Scope Matrix, Implementation Constraints, Phased Implementation Scope, Effort Estimate, Risks — PASS
-- Change Scope Matrix references specific files (globals.css, layout.tsx, component files) — PASS
-- Specific tokens listed (oklch values, CSS property names, Tailwind class names) — PASS
-- Implementation scoped into 3 phases (Phase A/B/C) — PASS
-- Brand name change technical checklist included — PASS (06-03-A recommended name change)
-- Effort estimate provides plan count and time estimate — PASS
-- FOUND commit: `12cffa0` (Task 1) — PASS
+**Files exist:**
+- [x] `.planning/phases/06-brand-positioning-research-and-visual-direction/06-05-rebrand-execution-plan.md` — verified present; v2; contains 38-row change matrix, Phase A/B/C, color mapping tables, risk section, brand name checklist
+- [ ] `.planning/phases/06-brand-positioning-research-and-visual-direction/06-05-SUMMARY.md` — this file (being written)
 
-## Self-Check: PASSED
+**Commits exist:**
+- [x] eb13872 — `feat(06-05): rewrite rebrand execution plan for Kin — 2026 visual direction`
 
----
-*Phase: 06-brand-positioning-research-and-visual-direction*
-*Completed: 2026-02-27*
+**Verification criteria (Task 1):**
+- [x] All brand-affecting files discovered via codebase audit (26 files)
+- [x] File-by-file change matrix maps every visual direction recommendation to specific files (38 rows)
+- [x] Three implementation phases (A/B/C) defined with files, scope, effort, execution order
+- [x] Brand name technical checklist included — Raising Giants → Kin, with exact string locations
+- [x] Total implementation effort estimated (8–11 plans, ~100–140 min)
+- [x] No actual codebase changes made — this is a plan, not implementation
+- [x] Plan uses Kin brand name (not Imprint)
+- [x] Plan uses Deep Teal / Merlot / Burnished Amber / Cloud White palette (not terracotta/amber)
+- [x] Plan specifies Canela / DM Serif Display (not Cormorant Garamond)
+
+**Task 2 (checkpoint — pending):**
+- [ ] User has reviewed and approved all 5 Phase 6 deliverables
+
+## Self-Check: PASSED (Task 1)
