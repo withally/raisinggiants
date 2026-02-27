@@ -53,13 +53,13 @@ export function FAQ() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <section className="bg-stone-50 py-16 lg:py-24">
+      <section className="bg-[#F5F4F2] py-16 lg:py-24">
         <div className="mx-auto max-w-2xl px-6">
           <ScrollReveal>
-            <p className="text-xs tracking-[0.25em] uppercase text-stone-500 font-medium mb-4 text-center">
+            <p className="text-xs tracking-[0.25em] uppercase text-[#8A7A66] font-medium mb-4 text-center">
               Common questions
             </p>
-            <h2 className="text-3xl sm:text-4xl font-semibold text-stone-900 leading-tight mb-12 text-center font-display">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-[#1A1008] leading-tight mb-12 text-center font-display">
               Before you begin
             </h2>
           </ScrollReveal>
@@ -67,11 +67,11 @@ export function FAQ() {
           <div className="space-y-6">
             {faqs.map((faq, i) => (
               <ScrollReveal key={faq.question} delay={i * 100}>
-                <div className="border-b border-stone-200 pb-6 last:border-b-0">
-                  <h3 className="text-base font-semibold text-stone-900 mb-2">
+                <div className="border-b border-[#E8E4DF] pb-6 last:border-b-0">
+                  <h3 className="text-base font-semibold text-[#1A1008] mb-2">
                     {faq.question}
                   </h3>
-                  <p className="text-sm text-stone-500 leading-relaxed">
+                  <p className="text-sm text-[#8A7A66] leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>

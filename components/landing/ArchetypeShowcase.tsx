@@ -33,34 +33,34 @@ export function ArchetypeShowcase() {
         <div className="max-w-3xl mx-auto text-center">
           {/* Section intro — mirrors ArchetypePreview header */}
           <ScrollReveal>
-            <p className="text-xs tracking-[0.25em] uppercase text-amber-700 font-medium mb-4">
-              What you&apos;ll discover
+            <p className="text-xs tracking-[0.25em] uppercase text-[#0D3D3A] font-medium mb-4">
+              The pattern you&apos;ve been carrying
             </p>
-            <h2 className="text-3xl sm:text-4xl font-semibold text-stone-900 leading-tight mb-4 font-display">
-              Which of the 9 parenting archetypes shaped you?
+            <h2 className="text-3xl sm:text-4xl font-semibold text-[#1A1008] leading-tight mb-4 font-display">
+              Nine patterns. One of them is yours.
             </h2>
-            <p className="text-base text-stone-500 leading-relaxed mb-12 max-w-xl mx-auto">
-              The Mirror maps the parenting you received to a research-backed
-              archetype — revealing the patterns you absorbed and how they still
-              show up in your life.
+            <p className="text-base text-[#8A7A66] leading-relaxed mb-12 max-w-xl mx-auto">
+              The Mirror maps the parenting you received to one of nine
+              research-backed archetypes — naming what you&apos;ve carried but
+              never had the language for.
             </p>
           </ScrollReveal>
         </div>
 
-        {/* 3×3 archetype grid */}
+        {/* 3x3 archetype grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 mb-12">
           {ARCHETYPES.map((archetype, i) => {
             const Icon = ICON_MAP[archetype.id];
             return (
               <ScrollReveal key={archetype.id} delay={i * 80}>
-                <div className="group bg-stone-50 border border-stone-200 rounded-2xl p-5 sm:p-6 transition-colors duration-200 hover:border-amber-300 hover:bg-gradient-to-b hover:from-amber-50/60 hover:to-amber-50/20">
+                <div className="group bg-[#F5F4F2] border border-[#E8E4DF] rounded-2xl p-5 sm:p-6 transition-colors duration-200 hover:border-[#0D3D3A]/30 hover:bg-gradient-to-b hover:from-[#0D3D3A]/5 hover:to-[#0D3D3A]/[0.02]">
                   {Icon && (
-                    <Icon className="w-24 h-24 text-stone-400 transition-colors duration-200 group-hover:text-amber-700 mb-4" />
+                    <Icon className="w-24 h-24 mb-4 opacity-80 transition-opacity duration-200 group-hover:opacity-100" />
                   )}
-                  <h3 className="text-base font-semibold text-stone-800 mb-1 font-display">
+                  <h3 className="text-base font-semibold text-[#1A1008] mb-1 font-display">
                     {archetype.name}
                   </h3>
-                  <p className="text-sm text-stone-500 leading-relaxed">
+                  <p className="text-sm text-[#8A7A66] leading-relaxed">
                     {archetype.tagline}
                   </p>
                 </div>
@@ -72,14 +72,14 @@ export function ArchetypeShowcase() {
         {/* Curiosity hook + CTA */}
         <div className="text-center">
           <ScrollReveal delay={750}>
-            <p className="text-lg italic text-stone-500 mb-6">
-              Which one shaped you?
+            <p className="text-lg italic text-[#8A7A66] mb-6">
+              Which pattern did you carry?
             </p>
             <Link
               href="/quiz"
-              className="inline-flex items-center justify-center rounded-full bg-stone-900 px-8 py-4 text-base font-semibold text-amber-50 shadow-md hover:bg-stone-700 hover:shadow-lg transition-all duration-200 min-h-[52px]"
+              className="inline-flex items-center justify-center rounded-full bg-[#0D3D3A] px-8 py-4 text-base font-semibold text-[#F5F4F2] shadow-md hover:bg-[#0F4F4B] hover:shadow-lg transition-all duration-200 min-h-[52px]"
             >
-              Find your archetype — it&apos;s free
+              Take the Mirror — it&apos;s free
             </Link>
           </ScrollReveal>
         </div>

@@ -1,7 +1,7 @@
 /**
  * lib/quiz/questions.ts
  *
- * Complete question bank for the Raising Giants parenting quiz.
+ * Complete question bank for the Kin parenting quiz.
  *
  * Focuses on the past lens: memory-based questions about how the quiz-taker
  * was raised. This makes the quiz universally accessible — it works for current

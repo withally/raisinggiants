@@ -13,7 +13,7 @@ export default function QuizPage() {
   return (
     <NuqsAdapter>
       {/* Suspense boundary required by nuqs useQueryState (calls useSearchParams internally) */}
-      <Suspense fallback={<div className="min-h-screen bg-amber-50" />}>
+      <Suspense fallback={<div className="min-h-screen bg-[#F5F4F2]" />}>
         <QuizShell />
       </Suspense>
     </NuqsAdapter>

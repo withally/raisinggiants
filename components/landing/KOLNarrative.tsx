@@ -46,11 +46,11 @@ const highlights = [
 
 export function KOLNarrative() {
   return (
-    <section className="bg-amber-50 pb-20 lg:pb-28">
+    <section className="bg-[#F5F4F2] pb-20 lg:pb-28">
       <div className="mx-auto max-w-3xl px-6">
-        <div className="border-t border-amber-200/60 pt-14">
+        <div className="border-t border-[#E8E4DF]/60 pt-14">
           <ScrollReveal>
-            <p className="text-xs tracking-[0.25em] uppercase text-amber-700 font-medium mb-8 text-center">
+            <p className="text-xs tracking-[0.25em] uppercase text-[#0D3D3A] font-medium mb-8 text-center">
               Why this research matters for you
             </p>
           </ScrollReveal>
@@ -60,20 +60,20 @@ export function KOLNarrative() {
               <ScrollReveal key={h.name} delay={i * 120}>
                 <div className="group">
                   {/* Quote */}
-                  <blockquote className="relative pl-5 border-l-2 border-amber-300 mb-4">
-                    <p className="text-lg sm:text-xl text-stone-700 leading-relaxed italic font-display">
+                  <blockquote className="relative pl-5 border-l-2 border-[#0D3D3A]/30 mb-4">
+                    <p className="text-lg sm:text-xl text-[#1A1008] leading-relaxed italic font-display">
                       &ldquo;{h.quote}&rdquo;
                     </p>
-                    <footer className="mt-2 text-sm text-stone-500 not-italic">
+                    <footer className="mt-2 text-sm text-[#8A7A66] not-italic">
                       — {h.name}, {h.year}
                     </footer>
                   </blockquote>
 
                   {/* Discovery + Mirror connection */}
-                  <p className="text-sm text-stone-500 leading-relaxed mb-1.5">
+                  <p className="text-sm text-[#8A7A66] leading-relaxed mb-1.5">
                     {h.discovery}
                   </p>
-                  <p className="text-sm text-amber-700/80 leading-relaxed font-medium">
+                  <p className="text-sm text-[#0D3D3A]/80 leading-relaxed font-medium">
                     {h.mirrorConnection}
                   </p>
                 </div>
@@ -82,16 +82,16 @@ export function KOLNarrative() {
           </div>
 
           {/* CTA — catch intent at peak curiosity */}
-          <ScrollReveal delay={200} className="mt-12 pt-10 border-t border-amber-200/60 text-center">
-            <p className="text-sm text-stone-500 mb-4">
+          <ScrollReveal delay={200} className="mt-12 pt-10 border-t border-[#E8E4DF]/60 text-center">
+            <p className="text-sm text-[#8A7A66] mb-4">
               See which patterns shaped you — and which ones you&apos;re
               carrying forward.
             </p>
             <Link
               href="/quiz"
-              className="inline-flex items-center justify-center rounded-full bg-stone-900 px-8 py-4 text-base font-semibold text-amber-50 shadow-md hover:bg-stone-700 hover:shadow-lg transition-all duration-200 min-h-[52px]"
+              className="inline-flex items-center justify-center rounded-full bg-[#0D3D3A] px-8 py-4 text-base font-semibold text-[#F5F4F2] shadow-md hover:bg-[#0F4F4B] hover:shadow-lg transition-all duration-200 min-h-[52px]"
             >
-              Find your archetype — it&apos;s free
+              Take the Mirror — it&apos;s free
             </Link>
           </ScrollReveal>
         </div>

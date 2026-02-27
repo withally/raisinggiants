@@ -15,10 +15,10 @@ export function QuizProgress({ current, total }: QuizProgressProps) {
       aria-valuemin={0}
       aria-valuemax={total}
       aria-label={`Quiz progress: ${current} of ${total} questions answered`}
-      className="fixed top-0 left-0 w-full z-50 h-1 bg-stone-100"
+      className="fixed top-0 left-0 w-full z-50 h-1 bg-[#F5F4F2]"
     >
       <div
-        className="h-full bg-amber-500 transition-all duration-300 ease-out"
+        className="h-full bg-[#0D3D3A] transition-all duration-300 ease-out"
         style={{ width: `${percentage}%` }}
       />
     </div>

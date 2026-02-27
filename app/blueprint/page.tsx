@@ -3,9 +3,9 @@ import Link from "next/link";
 import { BlueprintEmailForm } from "@/components/result/BlueprintEmailForm";
 
 export const metadata: Metadata = {
-  title: "The Blueprint — Coming Soon | Raising Giants",
+  title: "The Blueprint by Kin — Coming Soon",
   description:
-    "A personalized guide to bridge what you inherited with what you want to build. Join the waitlist for The Blueprint from Raising Giants.",
+    "A personalized guide to bridge what you inherited with what you want to build. Join the waitlist for The Blueprint by Kin.",
 };
 
 const valueProps = [
@@ -28,12 +28,12 @@ const valueProps = [
 
 export default function BlueprintPage() {
   return (
-    <main className="min-h-[100dvh] bg-amber-50">
+    <main className="min-h-[100dvh] bg-[#F5F4F2]">
       {/* Back link */}
       <div className="px-6 pt-6">
         <Link
           href="/"
-          className="inline-flex items-center gap-1 text-xs text-stone-400 hover:text-stone-600 transition-colors"
+          className="inline-flex items-center gap-1 text-xs text-[#8A7A66] hover:text-[#1A1008] transition-colors"
         >
           <svg
             width="14"
@@ -51,7 +51,7 @@ export default function BlueprintPage() {
               strokeLinejoin="round"
             />
           </svg>
-          Back to Raising Giants
+          Back to Kin
         </Link>
       </div>
 
@@ -59,19 +59,19 @@ export default function BlueprintPage() {
       <div className="max-w-2xl mx-auto px-6 pt-12 pb-6">
         {/* Coming Soon badge */}
         <div className="mb-6">
-          <span className="inline-flex items-center rounded-full bg-amber-200/80 px-3 py-1 text-xs font-semibold text-amber-800 ring-1 ring-amber-300/60">
+          <span className="inline-flex items-center rounded-full bg-[#C8B89A]/40 px-3 py-1 text-xs font-semibold text-[#0D3D3A] ring-1 ring-[#E8E4DF]">
             Coming Soon
           </span>
         </div>
 
         <h1
-          className="text-4xl sm:text-5xl font-semibold text-stone-900 leading-tight mb-5"
+          className="text-4xl sm:text-5xl font-semibold text-[#1A1008] leading-tight mb-5"
           style={{ fontFamily: "var(--font-display)" }}
         >
           The Blueprint
         </h1>
 
-        <p className="text-stone-600 text-lg sm:text-xl leading-relaxed mb-12">
+        <p className="text-[#8A7A66] text-lg sm:text-xl leading-relaxed mb-12">
           A personalized guide to bridge what you inherited with what you want to build.
         </p>
 
@@ -80,17 +80,17 @@ export default function BlueprintPage() {
           {valueProps.map((prop) => (
             <div
               key={prop.title}
-              className="flex gap-4 p-5 bg-white rounded-2xl border border-amber-100 shadow-sm"
+              className="flex gap-4 p-5 bg-white rounded-2xl border border-[#E8E4DF] shadow-sm"
             >
               {/* Check icon */}
-              <span className="shrink-0 mt-0.5 flex h-6 w-6 items-center justify-center rounded-full bg-amber-100">
+              <span className="shrink-0 mt-0.5 flex h-6 w-6 items-center justify-center rounded-full bg-[#F5F4F2]">
                 <svg
                   width="12"
                   height="12"
                   viewBox="0 0 12 12"
                   fill="none"
                   aria-hidden="true"
-                  className="text-amber-700"
+                  className="text-[#0D3D3A]"
                 >
                   <path
                     d="M2 6l3 3 5-5"
@@ -102,22 +102,22 @@ export default function BlueprintPage() {
                 </svg>
               </span>
               <div>
-                <p className="text-stone-800 font-semibold text-sm mb-1">{prop.title}</p>
-                <p className="text-stone-500 text-sm leading-relaxed">{prop.description}</p>
+                <p className="text-[#1A1008] font-semibold text-sm mb-1">{prop.title}</p>
+                <p className="text-[#8A7A66] text-sm leading-relaxed">{prop.description}</p>
               </div>
             </div>
           ))}
         </div>
 
         {/* Email capture */}
-        <div className="bg-white rounded-2xl border border-amber-100 shadow-sm px-6 sm:px-8 py-8">
+        <div className="bg-white rounded-2xl border border-[#E8E4DF] shadow-sm px-6 sm:px-8 py-8">
           <h2
-            className="text-xl font-semibold text-stone-800 mb-2"
+            className="text-xl font-semibold text-[#1A1008] mb-2"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Get notified when it launches.
           </h2>
-          <p className="text-stone-500 text-sm leading-relaxed mb-6">
+          <p className="text-[#8A7A66] text-sm leading-relaxed mb-6">
             Leave your email and we&apos;ll reach out as soon as The Blueprint is ready.
           </p>
           <BlueprintEmailForm source="blueprint-page" />

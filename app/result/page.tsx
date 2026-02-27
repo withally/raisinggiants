@@ -11,7 +11,7 @@ import { ARCHETYPES } from "@/lib/archetypes/archetypes";
 import { CULTURAL_DISPLAY_NAMES, fetchQuizSession, getCulturalOverlay } from "@/lib/result/helpers";
 
 export const metadata: Metadata = {
-  title: "Your Result | Raising Giants — The Mirror",
+  title: "Your Result | Kin — The Mirror",
   description: "Discover the parenting patterns you inherited — your personalised Mirror result.",
 };
 
@@ -21,24 +21,24 @@ export const metadata: Metadata = {
 
 function ResultErrorState({ message }: { message: string }) {
   return (
-    <div className="min-h-[100dvh] flex items-center justify-center bg-amber-50 px-6">
+    <div className="min-h-[100dvh] flex items-center justify-center bg-[#F5F4F2] px-6">
       <div className="max-w-lg text-center">
-        <p className="text-xs tracking-[0.25em] uppercase text-stone-400 font-medium mb-4">
+        <p className="text-xs tracking-[0.25em] uppercase text-[#8A7A66] font-medium mb-4">
           The Mirror
         </p>
         <h1
-          className="text-3xl sm:text-4xl font-semibold text-stone-900 mb-6 leading-tight"
+          className="text-3xl sm:text-4xl font-semibold text-[#1A1008] mb-6 leading-tight"
           style={{ fontFamily: "var(--font-display)" }}
         >
           {message}
         </h1>
-        <p className="text-stone-600 leading-relaxed mb-8">
+        <p className="text-[#8A7A66] leading-relaxed mb-8">
           Take the quiz to discover the parenting archetype that shaped you — the patterns you
           inherited, grounded in research from the world&apos;s leading parenting experts.
         </p>
         <Link
           href="/quiz"
-          className="inline-block rounded-full bg-amber-500 px-8 py-3 text-white font-semibold hover:bg-amber-600 transition-colors"
+          className="inline-block rounded-full bg-[#0D3D3A] px-8 py-3 text-white font-semibold hover:bg-[#0F4F4B] transition-colors"
         >
           Take the quiz
         </Link>
@@ -85,7 +85,7 @@ export default async function ResultPage({
 
   return (
     <ResultPageClient>
-      <main className="bg-amber-50">
+      <main className="bg-[#F5F4F2]">
         {/* Section 1: Archetype hero reveal */}
         <ArchetypeReveal archetype={archetype} />
 

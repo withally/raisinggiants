@@ -32,20 +32,20 @@ export function EmailCaptureScreen({ onSubmit, isSubmitting = false }: EmailCapt
   }
 
   return (
-    <div className="min-h-[100dvh] flex items-center justify-center px-6 py-8 bg-amber-50">
+    <div className="min-h-[100dvh] flex items-center justify-center px-6 py-8 bg-[#F5F4F2]">
       <div className="w-full max-w-lg">
         {/* Card */}
-        <div className="bg-white rounded-2xl shadow-sm border border-amber-100 px-8 py-10">
+        <div className="bg-white rounded-2xl shadow-sm border border-[#E8E4DF] px-8 py-10">
           {/* Headline */}
           <h2
-            className="text-2xl font-semibold text-stone-800 mb-2 leading-snug"
+            className="text-2xl font-semibold text-[#1A1008] mb-2 leading-snug"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Your reflection is complete.
           </h2>
 
           {/* Sub-text */}
-          <p className="text-stone-500 mb-8 leading-relaxed">
+          <p className="text-[#8A7A66] mb-8 leading-relaxed">
             Enter your email so we can send your results.
           </p>
 
@@ -72,7 +72,7 @@ export function EmailCaptureScreen({ onSubmit, isSubmitting = false }: EmailCapt
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-amber-500 hover:bg-amber-600 text-white font-semibold py-4 h-auto text-base rounded-xl transition-colors"
+              className="w-full bg-[#0D3D3A] hover:bg-[#0F4F4B] text-white font-semibold py-4 h-auto text-base rounded-xl transition-colors"
             >
               {isSubmitting ? "Saving..." : "See My Results"}
             </Button>
@@ -80,10 +80,10 @@ export function EmailCaptureScreen({ onSubmit, isSubmitting = false }: EmailCapt
         </div>
 
         {/* Privacy note */}
-        <p className="mt-4 text-center text-xs text-stone-400">
+        <p className="mt-4 text-center text-xs text-[#8A7A66]">
           We&apos;ll only use your email to send your results. No spam, ever.
           <br />
-          <Link href="/privacy" className="underline underline-offset-2 hover:text-stone-600 transition-colors">
+          <Link href="/privacy" className="underline underline-offset-2 hover:text-[#1A1008] transition-colors">
             Read our privacy policy
           </Link>
         </p>

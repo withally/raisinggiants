@@ -54,18 +54,18 @@ export function BlueprintEmailForm({ source = "blueprint-page" }: BlueprintEmail
   if (submitted) {
     return (
       <output
-        className="block rounded-2xl bg-amber-100 border border-amber-200 px-8 py-8 text-center"
+        className="block rounded-2xl bg-[#F5F4F2] border border-[#E8E4DF] px-8 py-8 text-center"
         aria-live="polite"
       >
         <div className="mb-3 flex justify-center">
-          <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-amber-400/30">
+          <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#0D3D3A]/20">
             <svg
               width="20"
               height="20"
               viewBox="0 0 20 20"
               fill="none"
               aria-hidden="true"
-              className="text-amber-700"
+              className="text-[#0D3D3A]"
             >
               <path
                 d="M4 10l4 4 8-8"
@@ -78,12 +78,12 @@ export function BlueprintEmailForm({ source = "blueprint-page" }: BlueprintEmail
           </span>
         </div>
         <p
-          className="text-stone-800 font-semibold text-lg mb-1"
+          className="text-[#1A1008] font-semibold text-lg mb-1"
           style={{ fontFamily: "var(--font-display)" }}
         >
           You&apos;re on the list.
         </p>
-        <p className="text-stone-600 text-sm leading-relaxed">
+        <p className="text-[#8A7A66] text-sm leading-relaxed">
           We&apos;ll notify you when The Blueprint launches.
         </p>
       </output>
@@ -122,12 +122,12 @@ export function BlueprintEmailForm({ source = "blueprint-page" }: BlueprintEmail
       <Button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-amber-500 hover:bg-amber-600 text-white font-semibold py-4 h-auto text-base rounded-xl transition-colors cursor-pointer"
+        className="w-full bg-[#0D3D3A] hover:bg-[#0F4F4B] text-white font-semibold py-4 h-auto text-base rounded-xl transition-colors cursor-pointer"
       >
         {isSubmitting ? "Saving..." : "Notify me when it launches"}
       </Button>
 
-      <p className="text-center text-xs text-stone-400">
+      <p className="text-center text-xs text-[#8A7A66]">
         No spam. We&apos;ll only contact you about The Blueprint launch.
       </p>
     </form>

@@ -1,7 +1,7 @@
 /**
  * lib/archetypes/archetypes.ts
  *
- * Complete parenting archetype definitions for the Raising Giants framework.
+ * Complete parenting archetype definitions for the Kin framework.
  *
  * 9 archetypes derived from the KOL synthesis and 11-dimension scoring space
  * (see .planning/phases/00-archetype-framework/kol-synthesis.md for the

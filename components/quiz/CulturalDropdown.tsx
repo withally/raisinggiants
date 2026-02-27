@@ -89,7 +89,7 @@ export function CulturalDropdown({ options, value, onSelect }: CulturalDropdownP
       />
 
       {isOpen && filteredOptions.length > 0 && (
-        <div className="absolute z-10 mt-1 w-full bg-white border border-stone-200 rounded-xl shadow-lg max-h-60 overflow-y-auto">
+        <div className="absolute z-10 mt-1 w-full bg-white border border-[#E8E4DF] rounded-xl shadow-lg max-h-60 overflow-y-auto">
           {filteredOptions.map((option) => {
             const isSelected = value === option.id;
             return (
@@ -100,15 +100,15 @@ export function CulturalDropdown({ options, value, onSelect }: CulturalDropdownP
                 className={cn(
                   "flex w-full items-center gap-3 px-4 py-3 text-left text-sm min-h-[44px]",
                   "transition-colors duration-100",
-                  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-inset",
+                  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0D3D3A] focus-visible:ring-inset",
                   isSelected
-                    ? "bg-amber-50 text-amber-900 font-medium"
-                    : "text-stone-800 hover:bg-stone-50",
+                    ? "bg-[#F5F4F2] text-[#0D3D3A] font-medium"
+                    : "text-[#1A1008] hover:bg-[#F5F4F2]",
                 )}
               >
                 {isSelected && (
                   <svg
-                    className="h-4 w-4 shrink-0 text-amber-600"
+                    className="h-4 w-4 shrink-0 text-[#6B1E2E]"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                     aria-hidden="true"
@@ -129,7 +129,7 @@ export function CulturalDropdown({ options, value, onSelect }: CulturalDropdownP
       )}
 
       {isOpen && filteredOptions.length === 0 && (
-        <div className="absolute z-10 mt-1 w-full bg-white border border-stone-200 rounded-xl shadow-lg px-4 py-3 text-sm text-stone-500">
+        <div className="absolute z-10 mt-1 w-full bg-white border border-[#E8E4DF] rounded-xl shadow-lg px-4 py-3 text-sm text-[#8A7A66]">
           No matches found
         </div>
       )}

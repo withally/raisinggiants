@@ -29,20 +29,20 @@ const steps = [
 
 export function ProductLadder() {
   return (
-    <section className="bg-stone-900 py-20 lg:py-32">
+    <section className="bg-[#0D3D3A] py-20 lg:py-32">
       <div className="mx-auto max-w-5xl px-6">
         {/* Section header */}
         <div className="mb-14">
-          <p className="text-xs tracking-[0.25em] uppercase text-amber-400 font-medium mb-4">
+          <p className="text-xs tracking-[0.25em] uppercase text-[#C4892A] font-medium mb-4">
             The Journey
           </p>
           <h2
-            className="text-4xl sm:text-5xl font-semibold text-stone-100 leading-tight max-w-2xl"
+            className="text-4xl sm:text-5xl font-semibold text-[#F5F4F2] leading-tight max-w-2xl"
             style={{ fontFamily: "var(--font-display)" }}
           >
             It starts with seeing clearly.
           </h2>
-          <p className="mt-4 text-stone-400 text-base leading-relaxed max-w-xl">
+          <p className="mt-4 text-[#7A9E9C] text-base leading-relaxed max-w-xl">
             The Mirror is your first step. What comes next builds on what you discover about yourself.
           </p>
         </div>
@@ -54,21 +54,21 @@ export function ProductLadder() {
               key={step.step}
               className={`relative flex flex-col p-6 lg:p-8 transition-all duration-200 ${
                 step.active
-                  ? "bg-amber-950/40 border border-amber-800/50 rounded-2xl lg:rounded-r-none lg:rounded-l-2xl hover:bg-amber-950/60"
-                  : "border border-stone-800/40 rounded-2xl lg:rounded-none last:lg:rounded-r-2xl"
+                  ? "bg-[#0D3D3A]/40 border border-[#C4892A]/50 rounded-2xl lg:rounded-r-none lg:rounded-l-2xl hover:bg-[#0D3D3A]/60"
+                  : "border border-[#F5F4F2]/10 rounded-2xl lg:rounded-none last:lg:rounded-r-2xl"
               } ${index === 1 ? "lg:rounded-none" : ""}`}
             >
               {/* Step number + status */}
               <div className="flex items-center gap-3 mb-4">
-                <p className={`text-3xl font-bold leading-none ${step.active ? "text-amber-500/60" : "text-stone-700"}`}>
+                <p className={`text-3xl font-bold leading-none ${step.active ? "text-[#6B1E2E]/60" : "text-[#7A9E9C]/40"}`}>
                   {step.step}
                 </p>
                 {step.active ? (
-                  <span className="inline-flex items-center rounded-full bg-amber-500/20 px-3 py-1 text-xs font-semibold text-amber-300 ring-1 ring-amber-500/30">
+                  <span className="inline-flex items-center rounded-full bg-[#6B1E2E]/20 px-3 py-1 text-xs font-semibold text-[#C4892A] ring-1 ring-[#6B1E2E]/30">
                     Start here — free
                   </span>
                 ) : (
-                  <span className="inline-flex items-center rounded-full bg-stone-800/60 px-3 py-1 text-xs font-medium text-stone-500">
+                  <span className="inline-flex items-center rounded-full bg-[#F5F4F2]/10 px-3 py-1 text-xs font-medium text-[#7A9E9C]">
                     Coming soon
                   </span>
                 )}
@@ -76,19 +76,19 @@ export function ProductLadder() {
 
               {/* Product name — display font */}
               <h3
-                className={`text-2xl font-semibold mb-1 ${step.active ? "text-stone-100" : "text-stone-400"}`}
+                className={`text-2xl font-semibold mb-1 ${step.active ? "text-[#F5F4F2]" : "text-[#7A9E9C]"}`}
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 {step.name}
               </h3>
 
               {/* Tagline */}
-              <p className={`text-sm font-medium mb-4 ${step.active ? "text-amber-300/80" : "text-stone-500"}`}>
+              <p className={`text-sm font-medium mb-4 ${step.active ? "text-[#C4892A]/80" : "text-[#7A9E9C]"}`}>
                 {step.tagline}
               </p>
 
               {/* Description */}
-              <p className={`text-sm leading-relaxed flex-1 ${step.active ? "text-stone-400" : "text-stone-500/70"}`}>
+              <p className={`text-sm leading-relaxed flex-1 ${step.active ? "text-[#7A9E9C]" : "text-[#7A9E9C]/70"}`}>
                 {step.description}
               </p>
 
@@ -96,7 +96,7 @@ export function ProductLadder() {
               {step.active && (
                 <Link
                   href="/quiz"
-                  className="mt-6 inline-flex items-center justify-center rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-stone-900 hover:bg-amber-400 hover:shadow-lg hover:shadow-amber-500/20 transition-all duration-200 min-h-[44px] w-full"
+                  className="mt-6 inline-flex items-center justify-center rounded-full bg-[#6B1E2E] px-6 py-3 text-sm font-semibold text-[#F5F4F2] hover:bg-[#8B2A3D] hover:shadow-lg hover:shadow-[#6B1E2E]/20 transition-all duration-200 min-h-[44px] w-full"
                 >
                   Start The Mirror — free
                 </Link>
@@ -105,7 +105,7 @@ export function ProductLadder() {
               {/* Connector arrow — desktop only, not last item */}
               {index < steps.length - 1 && (
                 <div
-                  className="hidden lg:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10 w-6 h-6 bg-stone-900 border border-stone-700 rounded-full items-center justify-center"
+                  className="hidden lg:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10 w-6 h-6 bg-[#0D3D3A] border border-[#7A9E9C]/40 rounded-full items-center justify-center"
                   aria-hidden="true"
                 >
                   <svg
@@ -113,7 +113,7 @@ export function ProductLadder() {
                     height="10"
                     viewBox="0 0 10 10"
                     fill="none"
-                    className="text-stone-500"
+                    className="text-[#7A9E9C]"
                     aria-hidden="true"
                   >
                     <path

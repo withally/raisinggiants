@@ -41,7 +41,7 @@ export function ResultPageClient({ children }: ResultPageClientProps) {
       {/* Fading overlay during transition */}
       {!gateOpen && transitioning && (
         <div
-          className="fixed inset-0 z-50 bg-amber-50/95 backdrop-blur-sm animate-gate-fade-out pointer-events-none"
+          className="fixed inset-0 z-50 bg-[#F5F4F2]/95 backdrop-blur-sm animate-gate-fade-out pointer-events-none"
           aria-hidden="true"
         />
       )}

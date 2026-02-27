@@ -21,15 +21,15 @@ export default function QuizError({
   };
 
   return (
-    <div className="min-h-[100dvh] flex items-center justify-center bg-amber-50 px-6">
+    <div className="min-h-[100dvh] flex items-center justify-center bg-[#F5F4F2] px-6">
       <div className="max-w-md text-center">
         <h1
-          className="text-3xl sm:text-4xl font-semibold text-stone-900 mb-4"
+          className="text-3xl sm:text-4xl font-semibold text-[#1A1008] mb-4"
           style={{ fontFamily: "var(--font-display)" }}
         >
           The quiz hit a snag
         </h1>
-        <p className="text-stone-600 leading-relaxed mb-8">
+        <p className="text-[#8A7A66] leading-relaxed mb-8">
           Something went wrong while loading your quiz. Your previous answers
           may not have been saved. You can start fresh and try again — it only
           takes a few minutes.
@@ -38,13 +38,13 @@ export default function QuizError({
           <button
             type="button"
             onClick={handleStartOver}
-            className="rounded-full bg-amber-500 px-6 py-3 text-white font-semibold hover:bg-amber-600 transition-colors"
+            className="rounded-full bg-[#0D3D3A] px-6 py-3 text-white font-semibold hover:bg-[#0F4F4B] transition-colors"
           >
             Start over
           </button>
           <Link
             href="/"
-            className="text-stone-500 hover:text-stone-700 underline underline-offset-4 transition-colors"
+            className="text-[#8A7A66] hover:text-[#1A1008] underline underline-offset-4 transition-colors"
           >
             Go home
           </Link>

@@ -20,11 +20,11 @@ export function OptionCard({ label, isSelected, onSelect, disabled = false }: Op
         "w-full min-h-[44px] rounded-xl px-5 py-4 text-left",
         "border-2 transition-colors duration-150",
         "text-base font-normal leading-snug",
-        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2",
+        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0D3D3A] focus-visible:ring-offset-2",
         // Default (unselected) state
         isSelected
-          ? "bg-amber-50 border-amber-500 text-amber-900"
-          : "bg-white border-stone-200 text-stone-800 hover:border-amber-300 hover:bg-amber-50/40",
+          ? "bg-[#F5F4F2] border-[#0D3D3A] text-[#0D3D3A]"
+          : "bg-white border-[#E8E4DF] text-[#1A1008] hover:border-[#0D3D3A]/20 hover:bg-[#F5F4F2]/40",
         // Disabled state
         disabled && "opacity-60 cursor-not-allowed",
       )}
@@ -32,7 +32,7 @@ export function OptionCard({ label, isSelected, onSelect, disabled = false }: Op
       <span className="flex items-center gap-3">
         {isSelected && (
           <svg
-            className="h-5 w-5 shrink-0 text-amber-600"
+            className="h-5 w-5 shrink-0 text-[#6B1E2E]"
             viewBox="0 0 20 20"
             fill="currentColor"
             aria-hidden="true"

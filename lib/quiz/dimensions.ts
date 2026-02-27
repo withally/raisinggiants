@@ -1,7 +1,7 @@
 /**
  * lib/quiz/dimensions.ts
  *
- * Scoring dimension definitions for the Raising Giants archetype framework.
+ * Scoring dimension definitions for the Kin archetype framework.
  *
  * Dimensions are the intermediate layer in the two-step scoring algorithm:
  *   Step 1: Quiz answers × question weights → dimension scores per user

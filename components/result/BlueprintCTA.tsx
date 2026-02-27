@@ -17,25 +17,25 @@ const features = [
 
 export function BlueprintCTA() {
   return (
-    <section className="bg-stone-900 py-16 sm:py-20">
+    <section className="bg-[#0D3D3A] py-16 sm:py-20">
       <div className="max-w-3xl mx-auto px-6">
         {/* Coming Soon badge */}
         <div className="mb-6">
-          <span className="inline-flex items-center rounded-full bg-amber-500/20 px-3 py-1 text-xs font-semibold text-amber-300 ring-1 ring-amber-500/30">
+          <span className="inline-flex items-center rounded-full bg-[#C4892A]/20 px-3 py-1 text-xs font-semibold text-[#C4892A] ring-1 ring-[#C4892A]/30">
             Coming Soon
           </span>
         </div>
 
         {/* Section header */}
         <h2
-          className="text-3xl sm:text-4xl font-semibold text-stone-100 leading-tight mb-4"
+          className="text-3xl sm:text-4xl font-semibold text-[#F5F4F2] leading-tight mb-4"
           style={{ fontFamily: "var(--font-display)" }}
         >
           Go deeper with The Blueprint
         </h2>
 
         {/* Product description */}
-        <p className="text-stone-300 text-base sm:text-lg leading-relaxed mb-10 max-w-xl">
+        <p className="text-[#F5F4F2]/80 text-base sm:text-lg leading-relaxed mb-10 max-w-xl">
           A personalized action plan built from your result — including partner dynamics guidance,
           healing exercises, and research-backed strategies tailored to your archetype.
         </p>
@@ -45,10 +45,10 @@ export function BlueprintCTA() {
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="bg-stone-800/60 border border-stone-700/50 rounded-xl p-4"
+              className="bg-[#0F4F4B]/60 border border-[#7A9E9C]/30 rounded-xl p-4"
             >
-              <p className="text-stone-100 text-sm font-semibold mb-1">{feature.title}</p>
-              <p className="text-stone-400 text-xs leading-relaxed">{feature.description}</p>
+              <p className="text-[#F5F4F2] text-sm font-semibold mb-1">{feature.title}</p>
+              <p className="text-[#7A9E9C] text-xs leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>
@@ -56,7 +56,7 @@ export function BlueprintCTA() {
         {/* CTA */}
         <Link
           href="/blueprint"
-          className="inline-flex items-center justify-center rounded-full bg-amber-500 px-8 py-3 text-sm font-semibold text-stone-900 hover:bg-amber-400 hover:shadow-lg hover:shadow-amber-500/20 transition-all duration-200 min-h-[44px]"
+          className="inline-flex items-center justify-center rounded-full bg-[#C4892A] px-8 py-3 text-sm font-semibold text-white hover:bg-[#D4993A] hover:shadow-lg hover:shadow-[#C4892A]/20 transition-all duration-200 min-h-[44px]"
         >
           Get notified when it launches
         </Link>

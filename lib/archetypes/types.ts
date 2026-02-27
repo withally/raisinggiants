@@ -1,7 +1,7 @@
 /**
  * lib/archetypes/types.ts
  *
- * TypeScript type contracts for the Raising Giants archetype framework.
+ * TypeScript type contracts for the Kin archetype framework.
  *
  * These interfaces define the complete data shape for all Phase 0 outputs.
  * Every downstream artifact — archetype profiles, scoring matrix, AI prompts,

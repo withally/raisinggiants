@@ -18,16 +18,16 @@ const quotes = [
 
 export function SocialProof() {
   return (
-    <section className="bg-stone-50 py-14 lg:py-20">
+    <section className="bg-[#F5F4F2] py-14 lg:py-20">
       <div className="mx-auto max-w-5xl px-6">
         {/* Counter */}
         <p className="text-center mb-10">
           <CountUp
             target={2847}
             suffix=" people"
-            className="text-3xl sm:text-4xl font-semibold text-stone-900 font-display"
+            className="text-3xl sm:text-4xl font-semibold text-[#1A1008] font-display"
           />
-          <span className="block sm:inline sm:ml-2 text-base text-stone-500">
+          <span className="block sm:inline sm:ml-2 text-base text-[#8A7A66]">
             have already taken The Mirror
           </span>
         </p>
@@ -36,11 +36,11 @@ export function SocialProof() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {quotes.map((quote, i) => (
             <ScrollReveal key={quote.attribution} delay={i * 150}>
-              <div className="relative bg-white border border-stone-200 rounded-xl p-5 shadow-sm h-full">
-                <p className="text-sm text-stone-600 leading-relaxed italic mb-3">
+              <div className="relative bg-white border border-[#E8E4DF] rounded-xl p-5 shadow-sm h-full">
+                <p className="text-sm text-[#8A7A66] leading-relaxed italic mb-3">
                   &ldquo;{quote.text}&rdquo;
                 </p>
-                <p className="text-xs text-stone-500 font-medium">
+                <p className="text-xs text-[#8A7A66] font-medium">
                   — {quote.attribution}
                 </p>
               </div>
@@ -52,7 +52,7 @@ export function SocialProof() {
         <ScrollReveal delay={500} className="text-center mt-10">
           <a
             href="/quiz"
-            className="inline-flex items-center gap-2 text-stone-900 font-medium hover:text-amber-700 transition-colors"
+            className="inline-flex items-center gap-2 text-[#1A1008] font-medium hover:text-[#0D3D3A] transition-colors"
           >
             See what yours reveals
             <span aria-hidden="true">&rarr;</span>

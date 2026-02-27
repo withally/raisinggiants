@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Geist } from "next/font/google";
+import { Geist } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -7,25 +8,23 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const cormorantGaramond = Cormorant_Garamond({
+const pangaia = localFont({
+  src: "../public/fonts/PPPangaia-Medium.otf",
   variable: "--font-display",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  style: ["normal", "italic"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://raisinggiants.com"),
-  title: "Raising Giants — The Mirror",
+  title: "Kin — The Mirror",
   description:
-    "Understand the parenting you received. A free, research-backed assessment grounded in the work of the world's leading parenting scientists.",
+    "Finally, the words for it. A free, research-backed assessment that reveals the parenting patterns you inherited — and how they still shape you.",
   openGraph: {
-    title: "Raising Giants — The Mirror",
+    title: "Kin — The Mirror",
     description:
-      "Understand the parenting you received. A free, research-backed assessment grounded in the work of the world's leading parenting scientists.",
+      "Finally, the words for it. A free, research-backed assessment that reveals the parenting patterns you inherited — and how they still shape you.",
     type: "website",
-    siteName: "Raising Giants",
+    siteName: "Kin",
     images: [
       {
         url: "/og-image.png",
@@ -37,9 +36,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Raising Giants — The Mirror",
+    title: "Kin — The Mirror",
     description:
-      "Understand the parenting you received. A free, research-backed assessment grounded in the work of the world's leading parenting scientists.",
+      "Finally, the words for it. A free, research-backed assessment that reveals the parenting patterns you inherited — and how they still shape you.",
   },
   alternates: {
     canonical: "/",
@@ -53,7 +52,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${cormorantGaramond.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${pangaia.variable} antialiased`}>
         {children}
       </body>
     </html>

@@ -1,7 +1,7 @@
 /**
  * scripts/validate-scoring.ts
  *
- * Scoring validation script for the Raising Giants archetype framework.
+ * Scoring validation script for the Kin archetype framework.
  *
  * Runs 20-30 diverse simulated answer profiles through the scoring matrix
  * and validates that the framework produces clinically plausible, well-distributed

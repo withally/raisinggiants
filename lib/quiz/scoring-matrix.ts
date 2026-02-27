@@ -1,7 +1,7 @@
 /**
  * lib/quiz/scoring-matrix.ts
  *
- * Scoring algorithm and dimension weight matrix for the Raising Giants
+ * Scoring algorithm and dimension weight matrix for the Kin
  * archetype framework.
  *
  * Implements the two-step scoring algorithm from RESEARCH.md:

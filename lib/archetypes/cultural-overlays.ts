@@ -1,7 +1,7 @@
 /**
  * lib/archetypes/cultural-overlays.ts
  *
- * Cultural context overlays for every parenting archetype in the Raising Giants framework.
+ * Cultural context overlays for every parenting archetype in the Kin framework.
  *
  * These overlays describe how the parenting you received expressed differently across
  * cultural contexts. Overlays are MODIFIERS, not alternative archetypes: a "Fierce Guardian"

@@ -36,26 +36,26 @@ export function EmailGateOverlay({ onDismiss }: EmailGateOverlayProps) {
       role="dialog"
       aria-modal="true"
       aria-label="Reveal your result"
-      className="fixed inset-0 z-50 flex items-center justify-center bg-amber-50/95 backdrop-blur-sm px-6"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-[#F5F4F2]/95 backdrop-blur-sm px-6"
     >
       <div className="w-full max-w-lg">
         {/* Content card */}
-        <div className="bg-white rounded-2xl shadow-sm border border-amber-100 px-8 py-10">
+        <div className="bg-white rounded-2xl shadow-sm border border-[#E8E4DF] px-8 py-10">
           {/* Eyebrow */}
-          <p className="text-xs tracking-[0.25em] uppercase text-stone-400 font-medium mb-4">
+          <p className="text-xs tracking-[0.25em] uppercase text-[#8A7A66] font-medium mb-4">
             The Mirror
           </p>
 
           {/* Headline */}
           <h2
-            className="text-2xl sm:text-3xl font-semibold text-stone-900 mb-3 leading-snug"
+            className="text-2xl sm:text-3xl font-semibold text-[#1A1008] mb-3 leading-snug"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Your result is ready.
           </h2>
 
           {/* Sub-copy */}
-          <p className="text-stone-500 mb-8 leading-relaxed">
+          <p className="text-[#8A7A66] mb-8 leading-relaxed">
             We&apos;ve prepared a personalised report about the parenting you received. Enter your
             email to reveal it.
           </p>
@@ -88,7 +88,7 @@ export function EmailGateOverlay({ onDismiss }: EmailGateOverlayProps) {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-amber-500 hover:bg-amber-600 text-white font-semibold py-4 h-auto text-base rounded-xl transition-colors"
+              className="w-full bg-[#0D3D3A] hover:bg-[#0F4F4B] text-white font-semibold py-4 h-auto text-base rounded-xl transition-colors"
             >
               {isSubmitting ? "Revealing..." : "Reveal My Result"}
             </Button>
@@ -96,7 +96,7 @@ export function EmailGateOverlay({ onDismiss }: EmailGateOverlayProps) {
         </div>
 
         {/* Privacy note */}
-        <p className="mt-4 text-center text-xs text-stone-400">
+        <p className="mt-4 text-center text-xs text-[#8A7A66]">
           We only use your email to send your result. No spam, ever.
         </p>
       </div>

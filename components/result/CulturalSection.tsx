@@ -13,7 +13,7 @@
  * 2. "What this gave you" — strengthsInContext as styled bullet list
  * 3. "What this may have cost you" — tensionsInContext as styled bullet list
  *
- * Background: bg-amber-50 (warm closing — matches the hero reveal)
+ * Background: bg-[#F5F4F2] (Cloud White closing — matches the hero reveal)
  * Extra bottom padding (pb-24) since this closes the page.
  */
 
@@ -26,15 +26,15 @@ interface CulturalSectionProps {
 
 export function CulturalSection({ overlay, displayName }: CulturalSectionProps) {
   return (
-    <section className="bg-amber-50 py-16 sm:py-20 pb-24 px-6">
+    <section className="bg-[#F5F4F2] py-16 sm:py-20 pb-24 px-6">
       <div className="max-w-3xl mx-auto">
         {/* Section header */}
         <div className="mb-10">
-          <p className="text-xs tracking-[0.25em] uppercase text-stone-400 font-medium mb-3">
+          <p className="text-xs tracking-[0.25em] uppercase text-[#8A7A66] font-medium mb-3">
             Your cultural context
           </p>
           <h2
-            className="text-3xl sm:text-4xl font-semibold text-stone-900 leading-tight"
+            className="text-3xl sm:text-4xl font-semibold text-[#1A1008] leading-tight"
             style={{ fontFamily: "var(--font-display)" }}
           >
             {displayName}
@@ -42,14 +42,14 @@ export function CulturalSection({ overlay, displayName }: CulturalSectionProps) 
         </div>
 
         {/* Expression modifier — narrative intro paragraph */}
-        <p className="text-base italic text-stone-700 leading-relaxed mb-12 max-w-2xl">
+        <p className="text-base italic text-[#1A1008] leading-relaxed mb-12 max-w-2xl">
           {overlay.expressionModifier}
         </p>
 
         {/* Strengths in context */}
         <div className="mb-10">
           <h3
-            className="text-xl font-semibold text-stone-900 mb-5"
+            className="text-xl font-semibold text-[#1A1008] mb-5"
             style={{ fontFamily: "var(--font-display)" }}
           >
             What this gave you
@@ -58,22 +58,22 @@ export function CulturalSection({ overlay, displayName }: CulturalSectionProps) 
             {overlay.strengthsInContext.map((strength) => (
               <li key={strength.slice(0, 40)} className="flex items-start gap-3">
                 <span
-                  className="mt-1.5 w-2 h-2 rounded-full bg-amber-400 flex-shrink-0"
+                  className="mt-1.5 w-2 h-2 rounded-full bg-[#C4892A] flex-shrink-0"
                   aria-hidden="true"
                 />
-                <p className="text-stone-700 leading-relaxed text-base">{strength}</p>
+                <p className="text-[#1A1008] leading-relaxed text-base">{strength}</p>
               </li>
             ))}
           </ul>
         </div>
 
         {/* Divider */}
-        <div className="w-full h-px bg-stone-200 mb-10" />
+        <div className="w-full h-px bg-[#E8E4DF] mb-10" />
 
         {/* Tensions in context */}
         <div>
           <h3
-            className="text-xl font-semibold text-stone-900 mb-5"
+            className="text-xl font-semibold text-[#1A1008] mb-5"
             style={{ fontFamily: "var(--font-display)" }}
           >
             What this may have cost you
@@ -82,10 +82,10 @@ export function CulturalSection({ overlay, displayName }: CulturalSectionProps) 
             {overlay.tensionsInContext.map((tension) => (
               <li key={tension.slice(0, 40)} className="flex items-start gap-3">
                 <span
-                  className="mt-1.5 w-2 h-2 rounded-full bg-stone-400 flex-shrink-0"
+                  className="mt-1.5 w-2 h-2 rounded-full bg-[#8A7A66] flex-shrink-0"
                   aria-hidden="true"
                 />
-                <p className="text-stone-700 leading-relaxed text-base">{tension}</p>
+                <p className="text-[#1A1008] leading-relaxed text-base">{tension}</p>
               </li>
             ))}
           </ul>
