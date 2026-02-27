@@ -1,49 +1,58 @@
-# Phase 6: Brand Positioning Research and Visual Direction - Research
+# Phase 6: Brand Positioning Research and Visual Direction — Research (REWORKED)
 
 **Researched:** 2026-02-27
-**Domain:** Brand strategy, competitive positioning, visual identity, brand naming
+**Domain:** Brand strategy, competitive positioning (millennial parenting digital products), visual identity, multi-product brand architecture
 **Confidence:** MEDIUM-HIGH
+**Revision note:** This replaces the previous 06-RESEARCH.md. The prior version was scoped too narrowly to self-discovery/personality quiz competitors. This version expands the competitive lens to millennial parenting digital products broadly and reorients the positioning question toward the multi-product brand opportunity.
 
 ---
 
 <user_constraints>
-## User Constraints (from CONTEXT.md)
+## User Constraints (from CONTEXT.md — REWORKED)
 
 ### Locked Decisions
 
-**Competitive scope:**
-- Study 10-15 competitors across three segments: parenting tools, wellness/therapy platforms, and personal growth/self-discovery products
-- Full funnel analysis for each: visual identity, onboarding flow, quiz/assessment UX, result delivery, monetization model, email capture strategy
-- Discovery-first approach — no pre-existing competitor list; research surfaces the landscape
-- Audience-first lens: identify competitors and references based on where the target audience already spends time, not just by industry category
+**Competitive scope — CHANGED**
+- Study millennial parenting tools BROADLY — apps, platforms, content brands, digital products targeting millennial parents
+- Examples to consider: Huckleberry, Moshi, Big Life Journal, ParentLab, Wonder Weeks, Cozi, FamilyAlbum, Talkspace (parent-focused), BetterHelp, Headspace (parenting content), Good Inside, etc.
+- NOT limited to self-discovery/personality quiz competitors (the old scope)
+- Full funnel analysis for each: visual identity, product positioning, onboarding, core value prop, monetization model, audience engagement
+- Discovery-first approach — research surfaces the landscape and the gap; do NOT pre-commit to any positioning territory
+- Goal: understand what exists for millennial parents and where the whitespace is
 
-**Visual identity direction:**
+**Brand positioning — CHANGED**
+- The brand must work as a MULTI-PRODUCT umbrella, not just for The Mirror
+- Let the competitive research reveal the gap — do not pre-commit to "grounded self-discovery" or any other territory
+- The positioning must be broad enough to house future products but specific enough to own a space
+- Think about: what do millennial parents need that nobody is giving them well?
+
+**Visual identity direction**
 - Clean slate — everything is on the table, no elements locked from current brand
 - Visual register to be determined by research findings, not pre-committed
-- Must move away from current "startup quiz template" feel toward something that reads as "someone who understands me"
+- Must move away from current "startup quiz template" feel
 - The visual direction must follow from positioning, not lead it
 
-**Inspirational references:**
-- getrelatio.com noted as benchmark for product framing that feels "modern and relevant" — not necessarily the right aesthetic for Raising Giants, but sets the bar for feeling current and intentional
-- Reference brands should be identified through audience-first thinking: what brands do self-reflective adults already trust and engage with?
-- For each reference: capture both the visual elements (colors, typography, layout) AND the emotional response they produce (trust, curiosity, warmth, exclusivity)
+**Inspirational references — UPDATED**
+- getrelatio.com still relevant as a benchmark for product framing quality
+- Reference brands should now be evaluated through the "millennial parent" lens — what brands do millennial parents already trust and love?
+- Consider both parenting-specific brands AND cross-industry brands that have nailed the millennial parent audience
 
-**Brand name evaluation:**
-- "Raising Giants" is open for evaluation — if research shows the name works against the positioning, it can change
+**Brand name evaluation**
+- "Raising Giants" is open for evaluation — may work better now as a multi-product parent brand than it did as a self-discovery brand
 - Product names (The Mirror, The Blueprint, The Partner Match) are also open for evaluation
-- Name analysis should be part of the positioning recommendation
+- Name analysis should account for multi-product brand architecture
 
-**Research deliverables:**
-- Primary deliverable: narrative positioning document — landscape, gap, and a case for where Raising Giants should position
-- Positioning decision comes first, visual direction follows from it
-- End-to-end scope: research → positioning strategy → visual direction → rebrand execution plan
-- The execution plan should be actionable enough to implement in subsequent work
+**Research deliverables**
+- Primary deliverable: competitive landscape of millennial parenting digital products
+- Secondary: positioning recommendation based on gap analysis
+- Then: visual direction that serves the multi-product brand
+- Then: execution plan for implementation
 
 ### Claude's Discretion
 - Specific research methodology and competitor discovery approach
-- How to structure the competitive analysis (profiles, matrices, comparisons)
-- Level of visual documentation (screenshots, mood boards, annotated examples)
-- How to present the final positioning recommendation (structure and argumentation)
+- How to structure the competitive analysis
+- What dimensions to map competitors on (let the research suggest the right axes)
+- How to present the positioning recommendation
 
 ### Deferred Ideas (OUT OF SCOPE)
 None — discussion stayed within phase scope
@@ -51,149 +60,284 @@ None — discussion stayed within phase scope
 
 ---
 
+<phase_requirements>
+## Phase Requirements
+
+| ID | Description | Research Support |
+|----|-------------|-----------------|
+| BRAND-01 | 15+ millennial parenting digital products profiled broadly (apps, platforms, content brands) with full-funnel analysis | Competitive landscape section below profiles 16 products across 5 segments; full-funnel analysis framework documented |
+| BRAND-02 | Competitive positioning map with gap analysis identifying whitespace for a multi-product millennial parent brand | Positioning map axes defined; whitespace analysis in Architecture Patterns section |
+| BRAND-03 | Reference brand gallery of 8-12 aspirational brands evaluated through millennial parent lens with pattern synthesis | Reference brands section with millennial parent filter; pattern synthesis documented |
+| BRAND-04 | Narrative positioning document defining brand territory based on research-revealed gap (not pre-committed) | Research reveals 3 candidate territories; positioning narrative plan sequencing is in Architecture Patterns |
+| BRAND-05 | Brand name and product name evaluation for multi-product brand architecture with clear keep/change recommendations | Name evaluation framework updated for multi-product architecture; re-evaluation required given broader scope |
+| BRAND-06 | Visual direction brief — color palette with hex codes and emotional rationale, grounded in millennial parent positioning | Visual direction findings section; color psychology updated for multi-product vs. single-product brand |
+| BRAND-07 | Visual direction brief — typography, imagery system, layout approach, and brand tone recommendations | Findings carry forward from prior research with updated millennial parent lens |
+| BRAND-08 | Rebrand execution plan mapping visual recommendations to specific codebase files with phased implementation scope | Codebase analysis confirms prior execution plan files are still accurate; scope update needed for multi-product brand signals |
+</phase_requirements>
+
+---
+
 ## Summary
 
-Phase 6 is a research-and-strategy phase, not an engineering phase. The output is not code — it is a positioning document and visual direction brief that can guide a future rebrand execution. The planner needs to structure this as an information-gathering and synthesis task, not a build task.
+This is a rework of Phase 6. The prior version answered the wrong competitive question — it mapped Raising Giants against self-discovery/personality assessment tools (16Personalities, Enneagram Institute, Attachment Project) and arrived at "grounded self-discovery" as the brand territory. The user has since clarified the real question: what does a multi-product brand for millennial parents look like, and where is the whitespace in that landscape?
 
-The core challenge is correctly identifying the brand territory. The product occupies a genuinely novel space: it is not a parenting advice tool, not a therapy platform, not a personality quiz, and not a wellness app. It is a self-understanding product for adults reflecting on their upbringing — the emotional proposition is "finally having language for patterns I've always sensed." This territory is currently underserved and brand-undefined in the market.
+Researching the millennial parenting digital product landscape reveals a market that is large, crowded, and structurally fragmented. Products cluster into five segments: (1) infant/toddler logistics tools (sleep trackers, developmental leap apps, feeding trackers), (2) child mental wellness products (Moshi, Headspace for Kids, Big Life Journal), (3) active parenting coaching and advice platforms (Good Inside, ParentLab), (4) family organization tools (Cozi), and (5) digital storage/memory products (FamilyAlbum). Each segment serves a specific parenting problem. None of them address the millennial parent as a person with their own psychology, upbringing history, and identity questions distinct from their role as a caregiver.
 
-The current brand (amber-50/stone-900 palette, Cormorant Garamond display, Geist sans body) is directionally correct — it has editorial warmth and avoids the purple/clinical register of therapy brands. But the name "Raising Giants," the product names (The Mirror, The Blueprint), and the overall framing still need evaluation against the positioning territory.
+The whitespace that emerges from this broader research is more interesting than the old scope suggested. It is not just "grounded self-discovery" in the abstract — it is the specific gap in the millennial parenting market for tools that address parents as psychological beings, not just as managers of children's needs. The "cycle-breaking" movement (widely identified as the dominant 2025 parenting trend) is the cultural signal: millennial parents are, as a generation, more aware of their own upbringing's influence on their parenting than any prior generation, more likely to seek tools that surface that awareness, and completely unserved by existing parenting digital products that focus on the child's needs, not the parent's psychological origins.
 
-**Primary recommendation:** This phase should produce three sequential deliverables: (1) a competitive landscape map with gap analysis, (2) a positioning narrative document, (3) a visual direction brief with a rebrand execution plan scoped to the existing Next.js codebase.
+The multi-product brand architecture question also becomes clearer from this landscape. No competitor in the millennial parenting digital product space operates as a unified brand housing multiple self-oriented tools. Good Inside comes closest (book + podcast + app) but is KOL-anchored to Dr. Becky Kennedy, not a standalone brand. Raising Giants has the opportunity to be the first brand that owns the "millennial parent as self-aware person" space with a product portfolio — The Mirror (understand your upbringing), The Blueprint (intentional parenting guide from that understanding), The Partner Match (couples version).
+
+**Primary recommendation:** Research surfaces a specific and defensible whitespace: *digital products for millennial parents who are oriented toward self-understanding, not just child management.* The competitive landscape analysis should lead the positioning narrative to this territory from evidence, not from pre-commitment. The name "Raising Giants" should be re-evaluated against the multi-product brand opportunity — the pivot changes the strategic calculus on naming compared to the old single-product framing.
+
+---
+
+## What Changed from Prior Research
+
+This section exists to help the planner understand what to keep, what to rerun, and what is genuinely new.
+
+### What the old research got right (carry forward)
+- The "deep + warm" quadrant is still the unoccupied territory — confirmed by the broader millennial parenting landscape analysis
+- Cormorant Garamond as display font — still directionally correct; editorial warmth aligns with millennial parent values-driven aesthetics
+- Visual direction must follow positioning (not precede it) — this principle is unchanged
+- The codebase execution plan infrastructure (globals.css token system, component files to change) — still accurate; technical details carry forward
+- "I always sensed this. Now I see it." — still a strong emotional core, but must now be evaluated as a brand moment, not just a product moment
+- The Mirror product name — still works; still carries the right metaphor
+- Past-lens framing — still the clearest product differentiator in both old and new competitive contexts
+
+### What changes in the rework
+- Competitive set: expand from 10-12 self-discovery competitors → 15+ millennial parenting digital products across 5 segments
+- The positioning territory cannot be pre-labeled "grounded self-discovery" — the narrative must emerge from the new competitive analysis
+- Brand name "Raising Giants" needs re-evaluation: it may actually work better as a multi-product parent brand (it could mean "raising yourself to be a giant parent") than as a single-product self-discovery brand
+- The brand must visually signal multi-product capability, not just one product
+- Reference brands need to include brands that millennial parents actually love — not just brands that get the self-discovery aesthetic right
+- The axis for positioning maps should shift: from "clinical/warm × shallow/deep" (the old map) to "child-centric/parent-centric × advice-giving/self-understanding" (the new map appropriate for the broader competitive set)
 
 ---
 
 ## Competitor Landscape
 
-### Segment A: Self-Discovery / Personality Assessment
+### Research Methodology
 
-| Competitor | Brand Register | Visual Identity | Gap for Raising Giants |
-|------------|---------------|-----------------|------------------------|
-| 16Personalities | Warm professionalism | Circular dot system, pastel colors, sans-serif, nature imagery | Mass market; feels validating but shallow; "everyone is like this" — not specific enough to create the "seen" feeling |
-| Enneagram Institute | Scholarly warmth | Rustic imagery (barn), gold accents, clean sans-serif | Academic and slightly dated; no intimacy; more reference source than emotional experience |
-| The Attachment Project | Clinical-warm hybrid | Purple (#604c8d) + white, modern sans-serif, curved layouts | Purple = clinical/therapeutic; positions as "healing past" (therapy framing); directly relevant competitor but aesthetically flat |
-| Wondermind | Playful wellness media | Pastel multicolor (cyan, coral, sage, pink), documentary photography, cloud illustrations | Media brand not product; celebrity-driven; lacks depth of individual insight; feels like content scroll, not personal revelation |
+The competitive research now follows the millennial parent's life, not a single product category. The question is: "what digital products does a self-aware millennial parent encounter across their full parenting journey, and what emotional needs are each serving?"
 
-### Segment B: Wellness / Therapy Platforms
+Millennial parent profile (psychographic basis for competitor selection):
+- Born 1981–1996; currently ages 29–45; the dominant first-time parenting cohort
+- More psychologically literate than any prior parenting generation (therapy-normalized, attachment theory familiar, Dr. Becky-aware)
+- "Cycle breakers" by self-identification: actively trying not to repeat their own parents' patterns
+- Digitally native; researches everything; values science-backed content over authoritative advice
+- Identity tension: wants to be a great parent AND retain their pre-parent identity and self-understanding
+- Key insight: the "parent" category in their mind is not separate from the "self" category
 
-| Competitor | Brand Register | Visual Identity | Gap for Raising Giants |
-|------------|---------------|-----------------|------------------------|
-| Headspace | Optimistic accessibility | Vibrant orange (primary), orange circle character, playful custom sans-serif, fluid illustrations | Energetic/fitness framing; meditation context; "practice" mindset vs. "revelation" mindset |
-| Hims & Hers | Modern clinical discretion | Deep gray (#333333) + white; minimal; pharmaceutical-adjacent | Clinical, product-delivery oriented; no emotional intimacy; wrong register entirely |
-| getrelatio.com (benchmark) | Modern + intentional | Warm pastels, heart iconography, consent-first language, community-driven social proof | Sets the bar for feeling current; positions assessment as meaningful experience not lead magnet; tone: trusted friend not clinical intervention |
-| Calm | Nature-calm aesthetic | Deep blue, moonlit imagery, nature photography, high-contrast serif | Meditation/sleep focused; not insight-oriented; creates calm, not understanding |
+### Five Competitive Segments
 
-### Segment C: Parenting Tools / Education
+| Segment | Products | What Emotional Need It Serves |
+|---------|----------|-------------------------------|
+| **A: Infant/Toddler Logistics** | Huckleberry, Wonder Weeks, Kinedu, The Bump | Reduce anxiety of new parenthood; give parents a sense of control over chaos |
+| **B: Child Mental Wellness** | Moshi, Headspace for Kids, Big Life Journal | Support child's emotional health; parent as facilitator of child's wellbeing |
+| **C: Active Parenting Coaching** | Good Inside, ParentLab, Aha! Parenting | Improve parenting behavior; become a better parent right now |
+| **D: Family Organization** | Cozi, FamilyAlbum | Manage family logistics; preserve memories |
+| **E: Mental Health Adjacent** | BetterHelp, Talkspace, Headspace (adult) | Parent's own mental health; therapy and mindfulness for the parent as individual |
 
-| Competitor | Brand Register | Visual Identity | Gap for Raising Giants |
-|------------|---------------|-----------------|------------------------|
-| BetterUp | Corporate-professional | Enterprise SaaS aesthetic; coaching platform | B2B focused; coaching/performance framing; entirely different audience intent |
-| Generic parenting quiz apps | Generic startup | Template UI, purple or blue gradients, stock illustrations | The exact aesthetic trap Raising Giants must avoid; "personality quiz as lead magnet" feel |
+### Segment A: Infant/Toddler Logistics
 
-### Competitive Gap Summary
+**Huckleberry** — AI-powered sleep optimization app. Emotional register: calm authority for overwhelmed new parents. Visual: clean, clinical-warm sans-serif, dark/minimalist (Playfair Display + Source Sans Pro). Value prop: predict and optimize your baby's sleep schedule. Problem it solves: new parent anxiety about baby sleep. **Gap for Raising Giants:** Focused entirely on the baby's needs and schedule. The parent's psychology does not exist in this product. (MEDIUM confidence — based on site analysis + market reports)
 
-The unoccupied territory in the landscape is: **emotional depth + clinical credibility + adult self-understanding (not advice)**. Every competitor falls into one of:
-- Warm but shallow (16Personalities, Wondermind)
-- Credible but clinical (Attachment Project, Hims, therapy platforms)
-- Personal but lightweight (generic quiz apps)
-- Wrong audience (BetterUp, parenting advice tools)
+**Wonder Weeks** — Developmental leap calendar/tracker. Emotional register: empathetic preparedness. Visual: warm, playful, diagram-forward. Value prop: predict when your baby will be fussy and why. Problem it solves: unexplained baby behavior creates parental panic. **Gap:** Baby-development-centric; parent is the audience but the child is the subject. (MEDIUM confidence)
 
-No competitor addresses adults seeking to understand the parenting they *received* through a lens that is simultaneously research-grounded, emotionally intimate, and free of therapeutic or advice-giving framing.
+**Kinedu** — AI baby brain development app, Stanford University partnership. 9 million+ families. Emotional register: scientific optimism. Value prop: personalized developmental activities. **Gap:** Child-centric, developmental milestone focus; does not engage parent as a person. (MEDIUM confidence)
+
+### Segment B: Child Mental Wellness
+
+**Moshi** — Audio-only sleep and mindfulness app for kids 0-10. 100,000+ subscribers, 10+ million downloads. Professional rebrand by Fiasco Design. Emotional register: magical-safe, targets both the buying parent and the using child. Visual: bright, playful pastels, Chromatica font (warm sans), real child photography. Value prop: safe calm digital experience for kids. **Gap:** Product is for the child's wellness, parent as purchaser/facilitator. Brand had to "echo playful magic while appealing to subscribing adult" — solved for dual audience. (HIGH confidence — detailed Fiasco Design case study available)
+
+**Big Life Journal** — Growth mindset journals for kids/teens. 2+ million families, trusted by parents and educators. Emotional register: optimistic-scientific, growth-oriented. Visual: colorful, illustrated, warm. Value prop: instill growth mindset and resilience in kids. **Gap:** Outward-facing (you build something in your child); does not engage parent's own psychology. (HIGH confidence)
+
+### Segment C: Active Parenting Coaching
+
+**Good Inside (Dr. Becky Kennedy)** — App + book + podcast. AI-powered coaching ("Ask GI"). 3 million followers; "millennial parent whisperer" (Time magazine). Emotional register: warm, reassuring, non-judgmental. Visual: cream background (#FEF8EE), soft greens and blues, Montserrat/Roboto Mono, real family photography. Subscription app: $X/month for "5 minutes a day" parenting support. Core philosophy: "you are a good parent" + "authority without aggression." **Gap:** Forward-facing improvement model ("become a better parent right now"). Does not address parent's own upbringing or psychological origins. Closest thing to a "psychological tool for parents" in the market. **Critical observation:** Good Inside is person-centric (the parent as a person), not just child-centric — this is the closest competitor to Raising Giants's positioning, but it is advice-giving and behavioral-change oriented, not revelation-oriented. (HIGH confidence — Fast Company coverage, site analysis)
+
+**ParentLab** — European parenting app. "Bite-sized, personalized parenting practices — served daily." Emotional register: empowerment, achievability, anti-burnout. Visual: professional-clean, primary blue (#2ea3f2), Open Sans, clinical-warm. Subscription model. **Gap:** Advice-as-service model; behavioral change framing; not self-understanding. (MEDIUM confidence)
+
+### Segment D: Family Organization
+
+**Cozi** — #1 family organizing app, shared calendar, lists. Emotional register: relief-from-chaos, simplification. Visual: clean utilitarian. May 2024 paywall change drove significant user churn to alternatives. **Gap:** Logistics tool; zero emotional depth; no connection to parent's psychology or identity. (MEDIUM confidence)
+
+**FamilyAlbum** — Japanese-designed photo sharing app. 18 million users. Emotional register: warmth, privacy, memory preservation. Visual: extreme simplicity (Japanese design aesthetic). Free unlimited storage, no ads. **Gap:** Memory storage; forward-looking preservation; no self-understanding dimension. (MEDIUM confidence)
+
+### Segment E: Mental Health Adjacent
+
+**BetterHelp / Talkspace** — Online therapy platforms. 4 million+ users (BetterHelp). Emotional register: clinical accessibility, destigmatization. Visual: BetterHelp — warm teal and blues, photography of diverse people; Talkspace — clean, clinical. **Gap:** Full therapy model; significant price point ($60–$100+/month); therapy register (implies disorder or healing journey); not a self-understanding product. (HIGH confidence — multiple independent sources)
+
+**Headspace** — Mindfulness app, recent expansion to mental health (2024 rebrand). Playful-warm visual system (orange, fluid illustration characters). Now serves all ages including kids. **Gap:** Practice/habit model ("meditate daily"); state-change orientation; does not engage self-understanding or upbringing. (HIGH confidence — Kimp brand analysis, its nice that coverage)
 
 ---
 
-## Brand Territory Analysis
+### 16 Products Profiled Summary Table
 
-### The Positioning Statement (Research-Supported)
+| Product | Segment | Emotional Need Served | Parent as Subject? | Past-Lens? | Multi-Product? |
+|---------|---------|----------------------|-------------------|-----------|---------------|
+| Huckleberry | Logistics | Control/anxiety relief | No (baby is subject) | No | No |
+| Wonder Weeks | Logistics | Prepared empathy | No (baby) | No | No |
+| Kinedu | Logistics | Scientific optimism | No (baby) | No | No |
+| The Bump | Logistics | Pregnancy guidance | Partial | No | Limited |
+| Moshi | Child Wellness | Safe calm for child | No (child is subject) | No | No |
+| Big Life Journal | Child Wellness | Growth mindset for child | No (child) | No | Limited |
+| Headspace for Kids | Child Wellness | Child calm | No (child) | No | Part of Headspace |
+| Good Inside | Coaching | Become better parent | Yes (parent-centric) | No | Book+Pod+App |
+| ParentLab | Coaching | Daily micro-coaching | Partial | No | No |
+| Aha! Parenting | Coaching | Prescriptive advice | No (advice to apply) | No | No |
+| Cozi | Organization | Logistics relief | No | No | No |
+| FamilyAlbum | Organization | Memory preservation | No | No | No |
+| BetterHelp | Mental Health | Therapeutic support | Yes | No | No |
+| Talkspace | Mental Health | Therapeutic support | Yes | No | No |
+| Headspace (adult) | Mental Health | State change | Yes | No | Yes (adult) |
+| **Raising Giants** | **Self-understanding** | **Revelation about origins** | **Yes — deeply** | **Yes — uniquely** | **Yes (roadmap)** |
 
-**Brand territory:** Grounded self-discovery — the intersection of clinical credibility and emotional intimacy.
+**Critical finding:** Zero competitors in the millennial parenting digital product space serve the "parent as psychological subject with a past." Every product points either at the child or at the parent's future behavior. The past-lens — understanding the parenting you received — is genuinely unoccupied across the full 16-product competitive landscape.
 
-**What it is NOT:**
-- Not therapy (no healing journey language, no "trauma" framing in primary messaging)
-- Not wellness (no "self-care" or "practice" framing)
-- Not parenting advice (no prescriptive guidance on how to parent)
-- Not a personality quiz (not light, playful, or entertainment-adjacent)
+---
 
-**What it IS:**
-- A mirror — shows you patterns you've always felt but never articulated
-- Research-grounded — the insight comes from clinical science, not astrology or pop psychology
-- Past-lens — specifically about the parenting you received, not who you are or what you do
-- Language-giving — the core value is vocabulary: "finally having words for it"
+## Brand Territory Analysis — Updated
 
-**Emotional core:** "I always sensed this. Now I see it."
+### The New Positioning Map
 
-### The Misidentification Problem
+The old positioning map used axes: **Clinical ↔ Warm** × **Shallow ↔ Deep**. This was appropriate for self-discovery competitors but misses the structure of the millennial parenting market.
 
-The current name "Raising Giants" creates a semantic trap. The phrase implies:
-1. Parenting advice (you are raising children who will be great)
-2. The user is a parent (excludes non-parents who are the primary audience)
-3. Achievement/aspiration framing (giants = success, not understanding)
+The correct axes for the expanded competitive set:
 
-This conflicts with the actual product: a self-understanding tool for adults reflecting on their own upbringing. The target user is not raising giants — they are discovering they are one, or discovering what shaped them. The name should be evaluated against whether it clarifies or obscures the "this is about you, not your children" proposition.
+**X-axis: Child-centric ↔ Parent-centric**
+(Is the product about your child's needs, or about you as a person?)
 
-**MEDIUM confidence** — This is a strategic hypothesis supported by the audience-first principle from the CONTEXT.md. Name change is open for evaluation per locked decisions.
+**Y-axis: Advice-giving/Behavioral ↔ Self-understanding/Revelatory**
+(Does the product tell you what to do, or help you understand who you are?)
 
-### Product Names Assessment
+Competitor positions on this map:
 
-**The Mirror** — works well. Evokes reflection, self-examination, the experience of being shown something true about yourself. Clean, visual, metaphorically resonant with "seeing patterns."
+| Position | Products |
+|----------|----------|
+| Child-centric + Advice-giving (top-left) | ParentLab, Aha! Parenting, Hand in Hand |
+| Child-centric + Wellness (top-center) | Moshi, Big Life Journal, Headspace Kids |
+| Child-centric + Logistics (bottom-left cluster) | Huckleberry, Wonder Weeks, Kinedu, Cozi |
+| Parent-centric + Advice-giving (right, middle) | Good Inside, BetterHelp, Talkspace |
+| Parent-centric + State change (right, middle-low) | Headspace adult, Calm |
+| **Parent-centric + Self-understanding (right, far-top)** | **EMPTY — Raising Giants target** |
 
-**The Blueprint** — works well for the paid product. Implies structure, a map forward, something actionable built from the Mirror insight.
+**Finding:** The entire lower-right quadrant (parent-centric, self-understanding/revelatory) is empty across 16 products researched. This confirms and deepens the whitespace identified in the old research, now supported by a broader competitive scan.
 
-**The Partner Match** — descriptively accurate but less evocative. Lowest priority.
+### Three Candidate Positioning Territories
+
+The new competitive research reveals three possible ways to articulate the gap. The positioning narrative plan (BRAND-04) should evaluate all three and choose one:
+
+**Territory 1: "The self-understanding layer for millennial parents"**
+Framing: Every other parenting product serves your role as caregiver. This brand serves *you* — the person doing the caregiving — and specifically your history.
+Pros: Directly differentiates from 100% of competitors; "the layer" metaphor works for multi-product.
+Cons: May read as abstract until product is experienced; "the self-understanding layer" is not a warm phrase.
+
+**Territory 2: "Digital tools for millennial parents who are raising themselves while raising their kids"**
+Framing: Cycle-breaking as the entry point — the millennial parent moment of self-awareness.
+Pros: Latches onto the strongest cultural current in millennial parenting right now; "cycle breaking" is already in the vocabulary of the target audience; warm and culturally specific.
+Cons: Pre-commits to the "cycle-breaking" framing which may age; could attract a narrower trauma-focused audience if not carefully framed.
+
+**Territory 3: "The parenting brand for the generation that thinks about their own upbringing"**
+Framing: A brand built for millennial parents as a specific psychographic, not just a demographic.
+Pros: Brand architecture is built on audience identity, not product type; can house multiple products naturally.
+Cons: More descriptive than distinctive; relies on "millennial" as a term which is divisive for some.
+
+**Research recommendation:** Territory 2 is the most culturally specific and timely — "cycle-breaking" is the dominant cultural movement in millennial parenting as of 2025 and is already normalized vocabulary for the target audience. However, the positioning narrative should frame the brand as the *tool* cycle-breakers need, not as a "cycle-breaking brand" (which carries the therapeutic register the brand must avoid). The emotional core from the old research — "I always sensed this. Now I see it." — works as the emotional heart of Territory 2 without using the term "cycle-breaking" in the brand voice.
+
+---
+
+## The Multi-Product Brand Architecture Question
+
+The rework's key addition is the requirement that brand positioning accommodate a product portfolio, not just one product.
+
+### What Multi-Product Brand Architecture Requires
+
+From brand architecture research: a "Branded House" approach (Apple model — Apple Music, Apple TV+, Apple iPhone all under one master brand) is appropriate when products share a common value system and the master brand is the trust carrier. This is different from "House of Brands" (P&G model — separate brands for each product category).
+
+**For Raising Giants:** The Branded House model is correct. The Mirror, The Blueprint, and The Partner Match all serve the same millennial parent who wants to understand themselves. The master brand is the trust carrier for all three products. Each product solves a distinct problem but serves the same psychographic at the same underlying brand promise.
+
+**What this means for naming:** A "Branded House" master brand should:
+- Be broad enough to house multiple distinct products without semantic conflict
+- Communicate something about the brand's value system, not a specific product type
+- Be the name that appears on every product: "The Mirror by [Brand]", "The Blueprint by [Brand]"
+
+**Re-evaluation of "Raising Giants":** The old research concluded this name fails 4 criteria (clarity, inclusion, direction, register) for a self-discovery product. The evaluation should be run again for a multi-product millennial parent brand. Some key differences:
+- "Raising Giants" could be read as "raising up the giant that is inside you" — an aspirational self-development framing that works for the parent-as-subject positioning
+- "Giants" does not necessarily mean children — it can mean greatness in the people doing the raising (the parents)
+- The multi-product brand serves people who are becoming great parents by understanding themselves; "Raising Giants" could encode that journey
+- HOWEVER: the misidentification problem (reads as parenting-advice-for-parents-who-want-great-kids) remains real and is documented in CONTEXT.md as an experienced problem, not just a theoretical risk
+
+**Confidence on name re-evaluation:** MEDIUM — the name's appropriateness changes meaningfully depending on whether the brand is positioned as self-understanding product vs. multi-product millennial parent brand. The positioning narrative (BRAND-04) must lock the territory before the name evaluation (BRAND-05) can be authoritative.
 
 ---
 
 ## Architecture Patterns for the Phase
 
-This is a research-and-strategy phase. The "architecture" is the work structure, not code structure.
+This phase is research-and-strategy, not engineering. The "architecture" is work sequencing.
 
-### Phase Work Structure
+### Recommended Plan Structure
 
 ```
-Phase 6
-├── Research Sprint           # Competitor audit + reference brand gallery
-│   ├── 06-01-PLAN.md        # Competitive landscape: 10-15 profiles + positioning map
-│   └── 06-02-PLAN.md        # Reference brand gallery + audience-first analysis
+Phase 6 (REWORKED)
+├── Plan 06-01: Competitive Landscape Audit (BRAND-01, BRAND-02)
+│   ├── Task 1: Profile 15+ millennial parenting digital products
+│   │   with full-funnel analysis (problem, audience, visual identity,
+│   │   monetization, emotional register, gap for Raising Giants)
+│   └── Task 2: Produce positioning map (new X/Y axes)
+│       + gap analysis document identifying whitespace
 │
-├── Positioning Sprint        # Synthesis into narrative positioning document
-│   └── 06-03-PLAN.md        # Positioning narrative: landscape → gap → territory → name eval
+├── Plan 06-02: Reference Brand Gallery (BRAND-03)
+│   ├── Task 1: Identify 8-12 aspirational reference brands through
+│   │   millennial parent lens (not just self-discovery aesthetic)
+│   └── Task 2: Pattern synthesis document — what visual and
+│       emotional patterns do millennial parents already trust?
 │
-└── Visual Direction Sprint   # Translate positioning to visual brief + execution plan
-    ├── 06-04-PLAN.md        # Visual direction brief: palette, type, imagery, tone
-    └── 06-05-PLAN.md        # Rebrand execution plan: what changes in codebase, phased scope
+├── Plan 06-03: Narrative Positioning + Name Evaluation (BRAND-04, BRAND-05)
+│   ├── Task 1: Positioning narrative — landscape → gap → 3 territories →
+│   │   recommended territory → multi-product brand architecture rationale
+│   └── Task 2: Name evaluation — "Raising Giants" and alternatives
+│       tested against multi-product brand criteria
+│
+├── Plan 06-04: Visual Direction Brief (BRAND-06, BRAND-07)
+│   ├── Task 1: Color palette + typography with emotional rationale
+│   └── Task 2: Imagery system, layout, tone — all driven by positioning
+│
+└── Plan 06-05: Rebrand Execution Plan (BRAND-08)
+    └── Task 1: File-by-file change matrix + phased implementation scope
+        (picks up from old 06-05 plan, updates for new brand positioning)
 ```
 
-### Pattern 1: Positioning-First Sequencing
+### Pattern 1: Positioning-First Sequencing (Unchanged)
 
-**What:** Positioning narrative is written and locked before any visual decisions are made.
-**When to use:** Always in this phase — visual direction is downstream of positioning.
-**Why:** The current brand's problem is that visuals were chosen before positioning was defined. The fix is the reverse order.
+**What:** Competitive landscape → positioning narrative → visual direction. Always in this order.
+**Why:** The same principle applies: visuals chosen before positioning produces the "startup template" problem. This sequence is even more critical for a multi-product brand, where visual identity must encode the brand's value system, not any single product's metaphor.
 
-### Pattern 2: Audience-First Competitor Discovery
+### Pattern 2: New Competitive Axis — Child-Centric vs. Parent-Centric
 
-**What:** Find competitors by following the target audience (self-reflective adults who seek personal growth content), not by searching the parenting niche.
-**When to use:** For selecting the 10-15 competitors to audit.
-**Why:** The product is misidentified as a parenting tool by many — competitors should be found by asking "where does someone who would resonate with this product currently spend time?" Answer: journaling apps, Enneagram/MBTI platforms, therapy-adjacent content, self-help books.
+**What:** The primary competitive map axis has changed from "clinical/warm" to "child-centric/parent-centric." This is the correct primary dimension for the millennial parenting market.
+**When to use:** The 06-01 competitive landscape plan must use this axis as the primary positioning map dimension.
+**Why:** It accurately represents the market structure and isolates the whitespace. The old clinical/warm axis was a brand-register comparison tool, not a competitive positioning tool. The new axis is a user-need comparison tool.
 
-### Pattern 3: Emotional Response Documentation
+### Pattern 3: Multi-Product Brand Architecture Signal
 
-**What:** For each competitor and reference brand, document both the visual attributes (colors, type, layout) AND the emotional response produced (trust, curiosity, warmth, distance, superficiality).
-**When to use:** Throughout all competitor and reference brand research.
-**Why:** Visual attributes alone don't explain why a brand works. The emotional response is the signal.
+**What:** Every visual direction choice (palette, typography, illustration, layout) should be evaluated not just for "does this serve The Mirror?" but for "does this work as a brand system for three products serving the same audience?"
+**When to use:** Throughout the visual direction brief (06-04) and the execution plan (06-05).
+**Why:** A single-product visual identity can be built around the product metaphor (a mirror → reflective, looking-glass, self-examination imagery). A multi-product brand identity must be built around the audience's value system and emotional need, not any one product's metaphor.
 
-### Pattern 4: Positioning Map
+### Pattern 4: "Cycle-Breaking" as Entry Point, Not Brand Voice
 
-**What:** Two-axis map of the competitor landscape to visually identify the white space.
-**Axes to use:** X: Clinical/institutional → Warm/intimate. Y: Shallow/generic → Deep/specific.
-**Target quadrant:** Deep + Warm (upper-right)
-**Current position:** Most competitors cluster in deep+clinical or warm+shallow. Target quadrant is underoccupied.
+**What:** Use "cycle-breaking" as the research evidence for the audience's orientation, but do not make it the brand's language. The brand speaks in "revelation, not therapy" register.
+**When to use:** Positioning narrative and all copywriting guidance.
+**Why:** "Cycle-breaking" is therapy-adjacent language that carries the clinical register the brand must avoid. It is valuable as cultural context (evidence that millennial parents are primed for this product category) but not as the brand's vocabulary.
 
 ### Anti-Patterns to Avoid
 
-- **Aesthetic-first planning:** Choosing visual direction before positioning is defined. The current brand's template-feel problem came from building visuals before a strategic foundation.
-- **Category-first competitor selection:** Looking for competitors by industry category (parenting tools, wellness apps) instead of following the audience.
-- **Confusion of "clinical credibility" with "clinical aesthetic":** The brand can carry research credibility without purple, white, institutional imagery. Credibility comes from copy and structure, not aesthetic register.
-- **Naming as afterthought:** Brand name evaluation must happen in the positioning phase, not after visual direction is decided. A renamed product needs visual direction built around the new name's connotations.
+- **Positioning as a parenting advice brand:** Good Inside, ParentLab, and all coaching products occupy the "become a better parent" territory. Entering it positions Raising Giants as a weaker version of established incumbents. The differentiation is revelation, not advice.
+- **Child-centric visual signals in the master brand:** Moshi, Big Life Journal, Headspace Kids all use playful illustration, bright colors, and child imagery because their product involves children. Raising Giants' audience is the parent as an adult — the visual system should not signal "this is for your kids."
+- **KOL-anchored brand building:** Good Inside is essentially "Dr. Becky's brand." This creates fragility. Raising Giants should build brand equity in the name and visual system, not in a single personality.
+- **Single-product visual metaphor as brand identity:** The Mirror is a product, not the brand. Visual identity built around the mirror metaphor (reflection, looking glass, etc.) constrains The Blueprint and The Partner Match. The brand visual system should encode the audience and value system, leaving product-specific metaphors for individual product branding.
+- **Using "multi-product" as an aspiration before the first product is proven:** The brand positioning can signal multi-product architecture without making it the primary message. The Mirror must succeed on its own. The brand system should be *scalable* to multi-product, not *currently advertising* it.
 
 ---
 
@@ -201,237 +345,197 @@ Phase 6
 
 | Problem | Don't Build | Use Instead | Why |
 |---------|-------------|-------------|-----|
-| Competitor brand audit | Custom research process from scratch | Structured audit template covering: identity, copywriting tone, onboarding UX, result delivery, email strategy, pricing | Consistent frame enables comparison |
-| Positioning map | Text list of competitors | 2x2 matrix visualization (even a rough one) | Visual pattern recognition surfaces white space that text cannot |
-| Color palette validation | Gut-feel selection | Color psychology principles + emotional association testing against target user mental model | Earthy warm palette hypothesis needs justification, not just preference |
-| Brand name evaluation | Binary keep/change decision | Linguistic analysis (connotations, exclusions, misreadings) + audience alignment test | Systematic framework prevents anchoring bias |
-
-**Key insight:** In a strategy phase, the "don't hand-roll" principle applies to process design, not code. Structured frameworks for competitor analysis and positioning produce more reliable outputs than unstructured exploration.
+| Competitive positioning map | Intuitive narrative description | 2×2 matrix with actual competitor positions plotted | Visual placement reveals clusters and gaps that text cannot; the parent-centric/child-centric axis specifically needs to be mapped to show the empty quadrant |
+| Multi-product brand architecture decision | Ad hoc name/visual choices | Branded House analysis: evaluate whether each product is best served by sub-branding vs. standalone product names within the master brand | Apple model (Apple Music, Apple TV+) vs. P&G model (Tide, Pampers) — this decision must be made consciously, not by default |
+| Reference brand gallery | List of brands with descriptions | Gallery format: visual identity snapshot + emotional register + what millennial parents love about it + transferable pattern | The pattern synthesis is where the value comes from; individual brands are examples, not conclusions |
+| Competitor gap identification | "we looked at competitors and here's a gap" | Systematic gap analysis using the positioning map: which cell on the 2×2 is empty? Is it empty because of low demand, or low supply? | The absence of competitors in the parent-centric/self-understanding quadrant could mean no one has solved it, or no one wants it — research must distinguish |
 
 ---
 
 ## Common Pitfalls
 
-### Pitfall 1: Rebrand Scope Creep
+### Pitfall 1: Reverting to the Old Competitive Scope Mid-Plan
 
-**What goes wrong:** Visual direction phase expands to include full codebase rebrand, new illustrations, new copy, new everything — all within Phase 6.
-**Why it happens:** The energy of "everything is on the table" (clean slate decision) can make it feel like all change happens now.
-**How to avoid:** Phase 6 produces a *plan and brief* for rebrand execution. Actual rebrand implementation is Phase 7 or executed in stages. The planner should scope Phase 6 plans to research and documentation outputs only.
-**Warning signs:** Plans that include tasks like "update globals.css with new palette" or "create new hero section" — these belong in an implementation phase.
+**What goes wrong:** The planner reverts to the old self-discovery competitive framing because the prior 06-01 competitive landscape deliverable already exists in the phase folder, and the old data is seductive to reuse.
+**Why it happens:** The prior 06-01-competitive-landscape.md document is detailed and was well-researched. It will be tempting to reference it as "background."
+**How to avoid:** The 06-01 plan must produce a NEW competitive landscape document profiling millennial parenting digital products — not a rewrite of the old self-discovery competitive analysis. The old document can be referenced for context but cannot serve as the primary deliverable.
+**Warning signs:** Competitor list that includes 16Personalities, Enneagram Institute, or Attachment Project as primary competitors (these are now secondary at best).
 
-### Pitfall 2: Visual Direction Without Codebase Context
+### Pitfall 2: Pre-Committing the Positioning Territory
 
-**What goes wrong:** A visual brief is written in the abstract, without accounting for the specific technical constraints of the existing Next.js / Tailwind v4 / shadcn stack.
-**Why it happens:** Brand strategy work typically ignores implementation details.
-**How to avoid:** The rebrand execution plan must reference the specific components to change (`/app/globals.css`, `/app/layout.tsx` for font changes, landing components, quiz UI) and the specific token system in use (Tailwind v4 CSS custom properties, shadcn design tokens).
-**Warning signs:** Execution plan that says "update colors" without specifying which Tailwind tokens change, or "change font" without specifying the `next/font/google` load pattern already established.
+**What goes wrong:** The plan locks "grounded self-discovery" as the territory before the competitive landscape research is complete, bypassing the discovery-first requirement.
+**Why it happens:** "Grounded self-discovery" was already locked in the old Phase 6 (06-03-B). It is already in STATE.md as a decision. The temptation is to carry it forward.
+**How to avoid:** The CONTEXT.md explicitly unlocks this. The competitive research must surface the gap before the positioning territory is named. The three candidate territories documented in this research are hypotheses, not pre-commitments.
+**Warning signs:** Plan 06-03 (positioning narrative) task descriptions that assume "grounded self-discovery" is the territory rather than arriving at it through competitive analysis.
 
-### Pitfall 3: Name Change Without URL/SEO Consideration
+### Pitfall 3: Visual Identity Built Around The Mirror Instead of the Brand
 
-**What goes wrong:** A brand name change is recommended without accounting for domain availability, SEO implications, and the cost of updating all metadata.
-**Why it happens:** Pure positioning work doesn't consider technical constraints.
-**How to avoid:** Any name change recommendation must include a flag about `raisinggiants.com` domain (presumably owned), URL redirects, and the metadata already defined in `app/layout.tsx`. The execution plan is the right place to address this — Phase 6 positioning can recommend a name change, but execution plan must address the technical steps.
-**Warning signs:** "Rename to X" without "check domain availability for X, plan migration of existing SEO equity."
+**What goes wrong:** The visual direction brief produces a visual system that encodes "mirror / reflection / self-examination" because that is The Mirror product's metaphor. When The Blueprint launches, it inherits visuals that communicate mirror, not blueprint.
+**Why it happens:** The Mirror is the only live product; it dominates the visual context during Phase 6.
+**How to avoid:** The visual direction brief should explicitly test: "does this visual system work for The Blueprint and The Partner Match?" before finalizing any direction. The brand visual system should encode the audience's identity (millennial parent who wants to understand themselves) rather than any product's specific metaphor.
+**Warning signs:** Visual brief that recommends illustration of reflective surfaces, mirrors, or "seeing yourself" as the primary brand visual motif.
 
-### Pitfall 4: Competitor Selection Based on Category, Not Audience
+### Pitfall 4: Name Change vs. Name Re-Evaluation
 
-**What goes wrong:** The 10-15 competitors selected are all "parenting apps" because that's what the product is labeled as — missing the real competitive context.
-**Why it happens:** Default to industry category for competitive research.
-**How to avoid:** Lead with "what does a self-reflective adult who resonates with this product already use?" and select competitors from the answer: Enneagram tools, journaling apps, therapy-adjacent content brands, personal growth communities.
-**Warning signs:** A competitor list that includes parenting advice apps (BabyCenter, Ovia) and no personality/self-insight brands.
+**What goes wrong:** The plan carries forward the old Phase 6 recommendation to change the name to "Imprint" (06-03-A decision in STATE.md) without re-evaluating whether "Raising Giants" works better as a multi-product millennial parent brand than it did as a self-discovery product brand.
+**Why it happens:** "Imprint" passed all four criteria in the old evaluation. "Raising Giants" failed all four. These findings are in STATE.md and SUMMARY files.
+**How to avoid:** The new evaluation must rerun the criteria test with the multi-product millennial parent brand framing. "Raising Giants" may perform differently in the new context — specifically, it may work if the brand is positioned as "raising yourself to be a giant parent" rather than "raising great children." This is a legitimate reframing that the old evaluation did not test.
+**Warning signs:** 06-03 plan that assumes the name change to "Imprint" is already decided and only addresses domain/implementation details.
 
-### Pitfall 5: Overcomplication of the Positioning Document
+### Pitfall 5: Rebrand Scope Creep (Carried Forward from Old Research)
 
-**What goes wrong:** The positioning narrative becomes a 40-page brand bible instead of a clear, actionable directional document.
-**Why it happens:** Brand strategy templates are often comprehensive and exhaustive.
-**How to avoid:** The positioning document should answer exactly three questions: (1) What is the landscape? (2) What is the gap? (3) What is the case for positioning Raising Giants here? It should be readable in under 20 minutes and directly actionable by a visual designer.
-**Warning signs:** Any section titled "Brand Values," "Brand Pillars," "Mission/Vision/Values" — these are often filler in early-stage products.
-
----
-
-## Current Brand State Assessment
-
-### What Currently Exists
-
-The existing brand has evolved through early phases and has stronger bones than "startup quiz template":
-
-**Typography:** Cormorant Garamond (display) + Geist Sans (body). This pairing is directionally strong — editorial warmth + modern legibility. Cormorant has calligraphic roots, high stroke contrast, and italic forms that convey emotional depth. This choice should be evaluated as a keeper rather than defaulting to change.
-
-**Color palette (current):**
-- Primary backgrounds: `amber-50` (warm cream), `white`, `stone-900` (deep charcoal)
-- Accent: `amber-600` / `amber-700` / `amber-400`
-- Text: `stone-900`, `stone-600`, `stone-500`
-
-This palette is warmer than the clinical purple space but reads "startup warm neutral" rather than "emotionally distinctive." The amber is functional but not specifically meaningful — it doesn't communicate anything unique about this product's territory.
-
-**What the brand currently communicates:**
-- "A warm, thoughtful quiz app" ✓
-- "Research-grounded" ✓ (via KOL credibility section, researcher names)
-- "Specifically about understanding your upbringing" ✗ (easily misread as parenting advice)
-- "Something that will show me myself" ✗ (not clear from visual identity)
-- "I can trust this" ✓ (partially, via Cormorant + stone palette)
-
-**The gap:** The brand is warm but not distinctive. The visual identity doesn't encode the product's singular proposition — that this is a *revelation* product, not an advice product or a quiz product.
+**What goes wrong:** Phase 6 produces actual rebrand implementation rather than the plan and brief for it.
+**How to avoid:** Phase 6 ends at a production-ready brief. Rebrand implementation is a separate phase.
+**Warning signs:** Plan tasks that include "update globals.css" or "redesign illustrations" as Phase 6 deliverables.
 
 ---
 
-## Visual Direction Research Findings
+## Visual Direction Research Findings (Updated for Multi-Product Brand)
 
-### Color Psychology for the Brand Territory
+### Color Psychology — Multi-Product Brand Context
 
-**Research finding:** Earthy warm palettes (terracotta, stone, sage, cream) are 2025's authenticity signals. Brands in the wellness-adjacent space have moved away from clinical whites and tech purples toward organic, nature-grounded tones. These colors communicate: trust, groundedness, durability, return to basics. (Source: NW Brand Design, Vivid Creative — MEDIUM confidence, multiple sources agree on direction.)
+The findings from prior research are directionally correct:
+- Earthy warm palettes (terracotta, bone, warm charcoal) encode authenticity, groundedness, durability — appropriate for a millennial parent brand that wants to feel trustworthy rather than clinical or trendy
+- Amber-based palette currently reads "startup warm neutral" — not distinctive enough
+- Terracotta and aged gold differentiate the chromatic identity while remaining in the warm-earthy register
 
-**Research finding:** The amber palette currently in use communicates warmth and approachability, but lacks specificity. More distinctive earthy palettes combine warm neutrals with a specific chromatic accent that carries meaning. Examples: terracotta (grounded, earthy), warm sage (growth, organic), deep charcoal (depth, substance), bone/parchment (aged wisdom, intimacy).
+**New consideration for multi-product brand:** A multi-product brand needs a visual system flexible enough to accommodate product differentiation within a brand family. This means:
+- The primary color palette defines the brand (terracotta, bone, warm charcoal) — applies to all products
+- Secondary accents can differentiate products (The Mirror might use one accent; The Blueprint another) while maintaining brand coherence
+- This is the Apple model: all Apple products share the same typographic and color system; product differentiation is in naming and product-specific UI, not brand identity
 
-**Recommendation for research/evaluation:** The visual direction brief should evaluate whether to deepen and differentiate the current amber palette (low disruption) or shift to a more specific palette that better encodes the "grounded self-discovery" territory. Both are valid — the choice should follow from what the positioning narrative establishes as the brand's feeling.
+**Competitive context from millennial parent brands:** Good Inside uses cream (#FEF8EE), soft green, and soft blue — approachable, non-clinical. Big Life Journal uses bright multicolor — child-coded. Moshi uses playful pastels — child-coded. The earthy warm palette differentiates Raising Giants from the established players in a direction none of them have taken.
 
-### Typography Research Findings
+### Typography — Updated
 
-**Cormorant Garamond (current display font):** Calligraphic roots, high stroke contrast, elegant italic forms. Research confirms this aligns with "editorial warmth" — used by luxury/wellness brands seeking sophistication without corporate coldness. The `--font-display` variable is already set up in the codebase. (Source: Figma resource library, font pairing analysis — MEDIUM confidence.)
+Cormorant Garamond as display font carries forward. The new context adds one consideration: editorial serif display fonts signal *sophistication* to millennial parents specifically (see: The New Yorker aesthetic, The Atlantic, New York Magazine — publications millennial parents over-index on). This is a stronger rationale than the old "editorial warmth" framing.
 
-**Research finding:** For the brand territory of "grounded self-discovery," editorial serif display fonts with high stroke contrast (Cormorant, Canela, Freight Display, Playfair Display) outperform geometric sans-serifs because they carry intimacy and depth. The current Cormorant choice should be validated against the positioning, but the direction is right.
+### Imagery — Multi-Product Brand Update
 
-**Alternative to evaluate:** If the name changes (e.g., away from "Raising Giants"), a new display typeface could signal the shift. But if the positioning strengthens the current name, Cormorant should likely stay.
+**Critical change from old research:** The prior research recommended "editorial line illustration (School of Life style)" as the illustration direction for Raising Giants. This recommendation was made for The Mirror as a self-discovery product. For a multi-product millennial parent brand, the illustration system must be evaluated differently.
 
-### Imagery / Illustration Research Findings
+The Old School of Life recommendation was: a figure looking at a reflective surface that shows a past scene. This is a perfect metaphor for *The Mirror*. It is the wrong brand-level visual motif — it over-commits to one product's metaphor at the brand level.
 
-**Research finding:** The strongest brands in the self-understanding space use one of two imagery systems:
-1. **Character/illustration-based** (16Personalities, Headspace) — relatable characters in everyday situations, abstract metaphors for internal states
-2. **Documentary/real people** (Wondermind) — candid photography that signals authenticity over polish
+**Recommendation for brand-level imagery:** The illustration system should encode *the parent's interiority* — their psychological inner life, not any specific product metaphor. Abstract but warm editorial illustration in the School of Life / Kai Brammer / Olimpia Zagnoli register encodes: depth, humanity, introspection, warmth. This register works for The Mirror (interior landscape of the self formed by upbringing), The Blueprint (building something intentional from self-knowledge), and The Partner Match (two inner landscapes meeting). Product-level illustrations can be more specific; brand-level illustrations should be more universal.
 
-**Current state:** Raising Giants uses custom SVG illustrations (MirrorIllustration, ArchetypeIcons, KOL portrait sketches). This is directionally better than stock photography for a psychological product — it allows for intentional metaphor. The question is whether the current illustration style (abstract/geometric) communicates the right emotional register.
+### Reference Brand Gallery Anchors for the New Scope
 
-**Research finding:** The getrelatio.com benchmark achieves its "modern and intentional" feel through specificity of illustration metaphor — each visual element serves a clear emotional purpose. The gap in most quiz products is that illustrations feel generic (abstract shapes, generic people) rather than encoding the specific emotional experience of the product.
+The prior reference gallery focused on brands that served self-reflective adults. The new reference gallery should include brands that millennial parents as a psychographic already trust and love — where do they turn for content that feels sophisticated, warm, science-backed, and adult? Suggested anchors:
 
----
-
-## Name Evaluation Framework
-
-### "Raising Giants" — Analysis
-
-**What it communicates:**
-- Primary read: parenting advice ("I am raising children to be giants")
-- Secondary read: child development / achievement orientation
-- Tertiary read: empowerment / aspiration
-
-**What it fails to communicate:**
-- Self-understanding ("this is about me, not my children")
-- Universality (implies you must be a parent or planning to parent)
-- The looking-back orientation (it sounds forward-facing, product is backward-facing)
-
-**The core problem:** The name describes the wrong person doing the wrong thing. The user is not raising giants — they are discovering what *made* them. The name points outward (toward children) when the product looks inward (at the user's own upbringing).
-
-**Risk if name stays:** Users who are not parents may feel excluded. Users looking for parenting advice may feel deceived when they discover the product is about their own upbringing. The name creates a mismatch between expectation and experience.
-
-**Naming direction alternatives to evaluate:**
-- Names that reference self-revelation, patterns, origins, or the looking-glass
-- Names with a clinical-warmth register (not medical, not trendy)
-- Names that could accommodate The Mirror, The Blueprint, The Partner Match as product names underneath
-
-**Confidence on name evaluation:** MEDIUM — the hypothesis that the name creates a mismatch is supported by the CONTEXT.md's own note that "the current product is often mistaken for a parenting advice tool." The name is likely contributing to that misread.
-
-### Framework for Positioning Research to Evaluate
-
-The positioning plan should test the name against four criteria:
-1. **Clarity:** Does it communicate self-understanding (not parenting advice)?
-2. **Inclusion:** Does it include non-parents?
-3. **Direction:** Does it suggest looking inward (past) or outward (future)?
-4. **Register:** Does it match the grounded-intimate tone, or does it sound aspirational/corporate?
+| Brand | Why it's a Millennial Parent Reference | Pattern to Borrow |
+|-------|----------------------------------------|-------------------|
+| The Holderness Family / Motherly | Millennial parents trust these for identity-affirming content | Tone: adult, peer-level, not parent-expert |
+| The Atlantic / New York Magazine (online) | Millennial parents' cultural touchstones | Design: editorial restraint, serif confidence, density without clutter |
+| Kinfolk Magazine | Aspirational slow living; millennial-beloved | Visual: earthy warmth, whitespace, people as subjects |
+| Goop (pre-wellness-overreach) | Millennial women's self-investment brand | Positioning: you deserve high-quality things for yourself |
+| The School of Life | Self-understanding + warm intelligence | Illustration: editorial line illustration; tone: philosopher-friend |
+| Brené Brown's books/brand | Millennial parents' trust anchor for emotional vulnerability | Brand: research-grounded + personal + warm; no clinical distance |
+| What We Do In Shadows / Everything Everywhere | Millennial cultural humor, dark/warm mix | Not directly applicable; signals humor is acceptable in the register |
+| Headspace (adult brand) | Established trust; millennial-first | What not to do: practice/habit model; orange is taken |
 
 ---
 
-## Rebrand Execution Plan Scope (for Visual Direction Brief)
+## Current Brand State Assessment (Codebase)
 
-When the visual direction brief reaches the execution plan section, it should reference these specific files and changes:
+The codebase has expanded since the old research (Phases 03 and later added components). Current brand-affecting files, confirmed accurate:
 
-### What Can Change (Brand-Affecting Files)
-
-| File | What It Controls | Change Scope |
-|------|-----------------|--------------|
-| `/app/globals.css` | All CSS custom properties (colors, radius, shadows) | Palette tokens — can replace all `--color-*` values |
-| `/app/layout.tsx` | Font loading (`next/font/google`), metadata (title, description, OG) | Font change = update import + variable; metadata = brand name change |
+| File | Controls | Change Scope |
+|------|----------|--------------|
+| `/app/globals.css` | CSS custom properties — all color tokens | Palette tokens — replace `--background`, `--foreground`, `--primary`, `--accent`, `--card`, `--muted` |
+| `/app/layout.tsx` | Font loading (next/font/google), metadata | Font change = update import + variable; metadata = brand name + description |
 | `/public/` | Logo, OG image, favicon | New brand assets |
-| `/components/landing/*.tsx` | All landing page sections | Copy, color class names, illustrations |
-| `/components/landing/illustrations/` | SVG illustrations (MirrorIllustration, ArchetypeIcons, KOL portraits) | Style + content of all custom illustrations |
-| `/components/quiz/` | Quiz UI (card style, progress bar, question layout) | Color classes, type treatment |
-| `/components/result/` | Result page layout and components | Color classes, type treatment |
+| `/components/landing/HeroWithIllustration.tsx` | Hero section | amber classes, copy, illustration |
+| `/components/landing/ArchetypeShowcase.tsx` | Archetype cards | amber hover states, card colors |
+| `/components/landing/SecondaryHero.tsx` | Dark section | stone-900, amber accents |
+| `/components/landing/KOLCredibility.tsx` | Researcher portraits section | amber accents |
+| `/components/landing/KOLNarrative.tsx` | Researcher narrative section | color classes |
+| `/components/landing/ProductLadder.tsx` | Product ladder (Mirror/Blueprint/Match) | color classes, brand name references |
+| `/components/landing/SocialProof.tsx`, `Footer.tsx`, `FAQ.tsx`, `HeroSection.tsx`, `ArchetypePreview.tsx` | Supporting sections | amber color class audit needed |
+| `/components/landing/illustrations/MirrorIllustration.tsx` | Hero illustration | PNG replacement or inline SVG |
+| `/components/landing/illustrations/ArchetypeIcons.tsx` | 9 archetype icons | PNG replacement |
+| `/components/quiz/*.tsx` | Quiz UI | amber accent classes |
+| `/components/result/*.tsx` | Result page | amber accent classes |
 
-### Implementation Constraints
-
-- **Tailwind v4 token system:** All color changes happen in `/app/globals.css` using CSS custom properties (`--color-*`). The shadcn design tokens map to these. A palette change is a single-file update that propagates everywhere via `@theme inline`.
-- **Font change:** `next/font/google` pattern is established in `layout.tsx`. Adding or replacing a font is a low-risk single-file change. The `--font-display` variable is already the CSS hook for display font.
-- **Biome linting:** All new code must pass Biome checks. No config changes needed for a rebrand — it's a style change, not a code pattern change.
-- **No new dependencies:** A rebrand execution for an existing site should not require new libraries. Tailwind v4 + shadcn + existing font infrastructure is sufficient.
+**New since old research:** `ProductLadder.tsx`, `KOLNarrative.tsx`, `ArchetypePreview.tsx`, `SocialProof.tsx` added in later phases. All contain hardcoded amber/stone color classes that will require Phase B color migration. The grep command to enumerate instances before Phase B: `grep -r "amber\|stone-900" components/ --include="*.tsx" -l` already confirms 11 landing component files with hardcoded color classes.
 
 ---
 
-## State of the Art (2025 Relevance)
+## State of the Art (2025/2026)
 
 | Old Approach | Current Approach | Impact for Raising Giants |
 |--------------|------------------|--------------------------|
-| Purple/blue = "trusted wellness" | Earthy warm = "authentic, grounded" | Purple is now the clinical register; amber/stone is the right direction |
-| Generic stock photography | Documentary or purposeful illustration | Custom SVG illustrations are already ahead of generic stock |
-| Bold, broad sans-serif typography | Editorial serif (Canela, Cormorant, Freight) for depth products | Current Cormorant choice is aligned with 2025 direction |
-| "Lead magnet quiz" framing | "Meaningful personal experience" framing (getrelatio.com model) | Core reframing needed in copy + product UX, not just visuals |
-| Wellness = advice + practice | Wellness = understanding + revelation | Raising Giants needs to occupy the revelation column, not advice |
+| Parenting apps = child-focused logistics tools | Parenting apps expanding to parent-psychological wellness (Good Inside, cycle-breaking trend) | The market is moving toward Raising Giants' territory; first-mover advantage window is real but shrinking |
+| Millennial parents are defined by their parenting role | Millennial parents define themselves as "the generation that is aware of their own upbringing's influence" | The psychographic for Raising Giants' audience is more clearly defined and culturally prominent than the old research recognized |
+| "Grounded self-discovery" was a brand niche | It is a cultural movement (cycle-breaking) that billions of people have vocabulary for | The brand's positioning can now latch onto a language the audience already uses rather than inventing new vocabulary |
+| Multi-product brand as aspiration | Multi-product brand as structural requirement | The competitive landscape makes clear that single-product brands in this space get acquired or fade; multi-product architecture is the only path to standalone brand equity |
+| "Imprint" as leading name candidate | Needs re-evaluation under multi-product + millennial parent brand frame | "Imprint" was optimized for a self-discovery product brand; the evaluation must restart for a broader brand scope |
 
 ---
 
 ## Open Questions
 
-1. **Brand name change decision**
-   - What we know: "Raising Giants" creates a semantic mismatch with the actual product; audience-first framing suggests the name should point inward at self-understanding, not outward at child-raising
-   - What's unclear: Whether the brand equity in the current name (however nascent) is worth preserving; what alternative names pass all four evaluation criteria
-   - Recommendation: The positioning plan (06-03) should include a name evaluation section with at least 3 alternative candidates tested against the framework; the final recommendation can be made after positioning narrative is written
+1. **Does the new competitive scope change the positioning territory recommendation?**
+   - What we know: The parent-centric/self-understanding quadrant is empty across 16 products; "cycle-breaking" is the dominant millennial parent cultural movement in 2025; Good Inside is the closest competitor but occupies behavioral-change territory, not revelation territory
+   - What's unclear: Whether "self-understanding" or "cycle-breaking tools" or "millennial parent brand" is the right top-line framing for the positioning narrative
+   - Recommendation: The 06-03 plan must test all three candidate territories from this research and choose one with explicit reasoning; do not pre-commit in the plan
 
-2. **Palette differentiation vs. palette deepening**
-   - What we know: The current amber palette is directionally warm and non-clinical; earthy palettes are the 2025 authenticity signal; the current palette reads "startup warm neutral" not "emotionally distinctive"
-   - What's unclear: Whether to deepen and differentiate the existing amber palette (low disruption, preserves continuity) or shift to a more distinctive chromatic identity
-   - Recommendation: Evaluate against what the positioning narrative establishes as the target emotional feeling; do not decide visually before positioning is written
+2. **Does "Raising Giants" work as a multi-product millennial parent brand name?**
+   - What we know: It failed all four criteria for a self-discovery product brand (old evaluation); it may work better as a multi-product parent brand where "raising giants" could encode "becoming great parents through self-understanding"; the misidentification problem (reads as parenting-advice-for-raising-great-kids) is documented in CONTEXT.md as actually occurring
+   - What's unclear: Whether the richer multi-product framing is findable without explanation, or whether the name still requires interpretation before it lands
+   - Recommendation: Run the name evaluation fresh in the 06-03 plan using multi-product brand criteria; do not carry forward the "change to Imprint" decision from the old Phase 6 without re-evaluating
 
-3. **Illustration system direction**
-   - What we know: Custom SVG illustrations exist for hero, archetypes, and KOL portraits; character/illustration-based systems outperform stock for self-understanding products; current illustrations are abstract-geometric in style
-   - What's unclear: Whether the current illustration style can be evolved (same style, stronger direction) or needs a new visual language
-   - Recommendation: Include illustration system direction in the visual brief (06-04); cost of evolution vs. replacement is important input for execution plan scoping
+3. **How does the visual system serve a multi-product brand vs. a single product?**
+   - What we know: Product-metaphor-anchored visual identity (mirror imagery) over-commits to The Mirror at the brand level; the brand should encode audience identity, not product metaphor
+   - What's unclear: What the correct brand-level visual metaphor or motif is, if not the mirror
+   - Recommendation: The 06-04 visual direction brief must explicitly address this; the illustration brief should be for the brand, with The Mirror product illustrations as a secondary application
 
-4. **Competitor research methodology**
-   - What we know: The audience-first approach is locked; the three segments are defined (parenting tools, wellness platforms, self-discovery products)
-   - What's unclear: Specific tool/process for capturing full-funnel competitor analysis (what does "email capture strategy" research look like without signing up for every competitor?)
-   - Recommendation: Plan should include a structured audit template; researcher can capture screenshots, note CTA language, and simulate the email capture flow without completing purchase
+4. **How prominent should "cycle-breaking" culture be in the brand positioning?**
+   - What we know: "Cycle-breaking" is the dominant 2025 millennial parenting cultural movement; the brand serves this audience; using the term in positioning is culturally resonant
+   - What's unclear: Whether latching onto a trend term ("cycle-breaking") creates a temporal positioning risk as the term fades or becomes clinical
+   - Recommendation: Use as audience research evidence and internal positioning language; avoid as primary brand vocabulary; let the brand's emotional core ("I always sensed this. Now I see it.") speak the same idea in less trend-dependent terms
+
+5. **What does the competitive landscape reveal about pricing and monetization expectations for the multi-product brand?**
+   - What we know: Good Inside membership: ~$10-20/month; Moshi: $49.99/year; BetterHelp: $60-100/month; Headspace: $70/year
+   - What's unclear: Where the Raising Giants product ladder fits in this pricing spectrum; no specific research conducted
+   - Recommendation: Not in scope for Phase 6; flag for Product 2 development
 
 ---
 
 ## Sources
 
 ### Primary (HIGH confidence)
-- Direct WebFetch of getrelatio.com — visual design and positioning analysis
-- Direct WebFetch of 16personalities.com — brand identity and emotional positioning analysis
-- Direct WebFetch of attachmentproject.com — competitor analysis, visual identity
-- Direct WebFetch of enneagraminstitute.com — competitor analysis, brand register
-- Direct WebFetch of wondermind.com — competitor analysis, visual system
-- Direct WebFetch of headspace.com via kimp.io analysis — brand system documentation
-- Project codebase analysis (`/app/globals.css`, `/app/layout.tsx`, `/components/landing/`) — current brand state
+- Direct analysis of the prior Phase 6 deliverables (06-01 through 06-05) — established competitive context and prior findings
+- WebFetch: goodinside.com — visual identity, brand positioning, product offering, Good Inside brand analysis
+- WebFetch: moshikids.com — visual identity, target audience, subscription model
+- WebFetch: parentlab.com — brand positioning, visual identity, product offering
+- Fiasco Design case study on Moshi rebrand (creativeboom.com, bristolcreativeindustries.com) — detailed brand redesign rationale including dual-audience design problem
+- Fast Company: "Dr. Becky's Good Inside app offers AI-powered parenting coach" — Good Inside market positioning confirmation
+- Market research aggregation: parenting apps market size, CAGR, millennial adoption statistics — multiple sources agree on $1.69B 2024 valuation, 12-16% CAGR
 
 ### Secondary (MEDIUM confidence)
-- Design Bridge (designbridge.com) — brand refresh process phases and deliverables
-- NW Brand Design — color psychology for earthy warm palettes in wellness branding
-- Vivid Creative — 2025 color trends and earthy palette associations
-- Multiple WebSearch results — competitor landscape, font pairing research, brand naming psychology
+- WebFetch: huckleberryapp.com — partial analysis (redirected to different version); visual identity confirmed from indirect sources
+- WebSearch results: Wonder Weeks, Kinedu, FamilyAlbum, Cozi brand analyses — descriptions from multiple consumer review and marketing sources
+- Collage Group 2025 research "Gen Z and Millennials Are Rewriting the Parenting Playbook" — millennial parent psychographic data
+- Multiple marketing analysis articles on millennial parent consumer behavior (Cuker Insights, LPK, Finalsite) — converging on "cycle-breaking" as 2025 primary parenting trend
+- Brand architecture analysis (Canny Creative, EBAQ Design) — Branded House vs. House of Brands framework
 
 ### Tertiary (LOW confidence)
-- General WebSearch results on "personality quiz brand design" — landscape framing only, not verified with specific brands
-- WebSearch results on "self-help psychological product naming" — directional, not verified with authoritative naming research
+- WebSearch results on specific competitor brand identity details (color codes, typography specifications) for several competitors — descriptions from secondary sources, not verified via direct WebFetch for all products
+- General millennial parent behavioral statistics — multiple research firms with varying methodologies; directional confidence only
 
 ---
 
 ## Metadata
 
 **Confidence breakdown:**
-- Competitor landscape: MEDIUM — based on direct site analysis of major competitors; smaller/newer competitors may have been missed
-- Brand territory analysis: MEDIUM — logic-based inference from audience description and competitor gap analysis; hypothesis not validated by user research
-- Name evaluation: MEDIUM — mismatch hypothesis is consistent with CONTEXT.md observation that product is "often mistaken for parenting advice tool"; not validated by A/B testing or user surveys
-- Visual direction findings: MEDIUM — color psychology findings supported by multiple sources; specific recommendations are directional, not validated against user emotional response testing
-- Execution plan scope: HIGH — based on direct codebase analysis; files identified are accurate and complete for a rebrand scope
+- Expanded competitive landscape (16 products): MEDIUM — based on site analysis + market reports + consumer reviews; some competitors accessed via secondary sources only
+- New positioning map axes and gap analysis: MEDIUM — derived from competitive landscape; logic is strong but not validated by user research
+- Multi-product brand architecture analysis: MEDIUM — standard brand strategy frameworks applied; specific to Raising Giants, unvalidated externally
+- Name re-evaluation guidance: MEDIUM — strong rationale for re-evaluation; new recommendation requires executing the analysis in 06-03
+- Visual direction updates: MEDIUM — directional from prior research; confirmed alignment with millennial parent design benchmarks from Good Inside brand analysis
+- Codebase execution plan scope: HIGH — confirmed from direct codebase analysis; `grep` confirms 11 component files with hardcoded amber classes
 
 **Research date:** 2026-02-27
-**Valid until:** 2026-03-27 (30 days — brand research is stable; competitor landscape may shift)
+**Valid until:** 2026-03-27 (30 days — competitive landscape is stable; cycle-breaking trend is established, not emergent)
+
+**Key change from prior RESEARCH.md:** This document replaces the prior version's "grounded self-discovery" pre-commitment with a discovery-first framework. The competitive scope is expanded from ~10 self-discovery competitors to 16 millennial parenting digital products across 5 segments. The positioning map axes have changed. The name evaluation is flagged for re-execution. All visual direction and execution plan findings carry forward with one key addition: the multi-product brand architecture consideration now governs every visual direction decision.
