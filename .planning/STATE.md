@@ -1,3 +1,16 @@
+---
+gsd_state_version: 1.0
+milestone: v2.0
+milestone_name: milestone
+status: unknown
+last_updated: "2026-02-27T07:12:10.710Z"
+progress:
+  total_phases: 8
+  completed_phases: 5
+  total_plans: 24
+  completed_plans: 19
+---
+
 # Project State
 
 ## Project Reference
@@ -43,6 +56,7 @@ Progress: [█████████░] 86% (19/~22 plans estimated)
 | Phase 025 P02 | 10 min | 2 tasks | 2 files |
 | Phase 03 P01 | 3 min | 2 tasks | 6 files |
 | Phase 03 P02 | 3 min | 2 tasks | 7 files |
+| Phase 06 P02 | 5 | 2 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -114,6 +128,9 @@ Recent decisions affecting current work:
 - [Phase 04]: [04-02-B] Display font loaded via next/font/google as --font-display CSS variable (zero render-blocking, display: swap)
 - [Phase 04]: [04-02-C] Display font applied via inline style prop on headlines — avoids Tailwind v4 @theme coupling
 - [Phase 04]: [04-02-D] SVG sketch portrait icons created for all 8 KOL researchers, each with unique editorial visual metaphor for their contribution
+- [Phase 06]: [06-02-A] Cormorant Garamond confirmed as correct display font — aligned with all high-depth reference brands
+- [Phase 06]: [06-02-B] Accent color specificity needed — terracotta or aged gold more semantically aligned with brand territory than generic amber
+- [Phase 06]: [06-02-E] Vocabulary gift as core brand mechanism — archetype names must be framed as naming unnamed experiences, not just labels
 
 ### Roadmap Evolution
 
