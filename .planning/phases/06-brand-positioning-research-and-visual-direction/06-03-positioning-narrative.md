@@ -1,356 +1,638 @@
-# Positioning Narrative: Raising Giants
-## Phase 06-03 — The Strategic Case for Grounded Self-Discovery
+# Positioning Narrative: The Strategic Case for Raising Giants' Brand Territory
 
-**Written:** 2026-02-27
-**Purpose:** Lock positioning before any visual decisions are made.
-**Audience:** Team, co-founder Sophia, and the visual designer who will execute Plan 04.
-**Reading time:** ~15 minutes
-
----
-
-## Section 1: The Landscape
-
-### What the Market Looks Like for Self-Reflective Adults
-
-Anyone building a product for adults who want to understand themselves enters a market that looks, at first glance, full. The self-help, personal growth, and psychology-adjacent consumer space has exploded. Tens of millions of people have taken MBTI tests, found their Enneagram type, practiced Headspace, read Brené Brown, booked a BetterHelp session, or scrolled Wondermind. The psychology-for-everyone category is mature and crowded.
-
-But crowd isn't the same as depth. When you map the landscape by what products actually *do* for users — not what they say they do — a pattern emerges that is clearer and starker than the surface noise suggests.
-
-**The first major cluster occupies the deep-left quadrant: research credibility without emotional intimacy.** The Enneagram Institute, The Gottman Institute, and The Attachment Project are serious, well-researched, and clinically grounded. They have real intellectual depth. But their visual language — institutional blues, academic typography, clinical photography — signals the professional distance of a therapy office or a research paper. You trust them the way you trust a therapist: with respect, with deference, with a slight formality that keeps you from feeling wholly *seen*. They give you knowledge; they don't give you the feeling that this was made specifically for you.
-
-**The second major cluster occupies the warm-right but shallow quadrant: emotional accessibility without real depth.** 16Personalities, Wondermind, Enneagram & Coffee, Headspace, and Calm all feel warm, approachable, and enjoyable. They've made psychology feel culturally safe and even entertaining. 16Personalities reached 900 million visitors by stripping the MBTI framework down to four letters and making the types relatable through social media. Headspace turned mindfulness into a daily practice with a gentle, beginner-welcoming orange aesthetic. But these products trade specificity for scale. 16Personalities assigns you one of 16 types shared by hundreds of millions of people. Headspace creates a mood; it doesn't produce knowledge. You feel good engaging with these brands. You don't feel *seen*.
-
-**The third cluster is the professional center: psychology as a means to an end.** Noom, BetterUp, and Truity use psychological frameworks as tools for behavioral change, performance coaching, or career navigation. The emotional proposition is improvement — of weight, of work performance, of self-awareness as a professional asset. The goal is always to *do* something differently. The experience is calibrated, not intimate. These are the most instrumental products in the category: useful in specific contexts, not particularly warm or particularly deep.
-
-**The fourth cluster creates the most relevant misidentification risk: advice-giving parenting brands.** Aha! Parenting and Hand in Hand Parenting are genuinely warm, credibly research-grounded, and emotionally intelligent. They exist in adjacent territory. But they are fundamentally prescriptive — they tell you what to *do* as a parent. The output is guidance, not revelation. And they assume the user is currently a parent, which immediately excludes the largest segment of Raising Giants' potential audience.
-
-This is the landscape for a product that wants to be research-grounded, emotionally intimate, personally specific, and oriented around understanding rather than improvement.
-
-### What Emotional Registers Are Overrepresented
-
-The emotional register that dominates consumer psychology products is validation. "You are a Type 4. You are an INFP. Millions of people are like you." The experience this produces is recognition — the mild pleasure of seeing your traits reflected back at you in a culturally legible format. It is comfortable. It is social. It generates significant sharing behavior. But it has a ceiling.
-
-The second overrepresented register is aspiration-toward-improvement. "You can be calmer. You can communicate better. You can parent more peacefully." This register works for products with behavioral change goals. But it is fundamentally forward-looking and prescriptive — it implies something is wrong that should be fixed.
-
-The third register — clinical-therapeutic — is increasingly overrepresented in the "understand yourself" adjacent space. The language of attachment theory, trauma-informed care, and nervous system regulation has moved from therapy offices into consumer products. The result is that self-understanding products often carry the implicit framing of "you were hurt, here's how to heal." This is a legitimate and important space, but it is not the only way to approach self-understanding — and for many self-reflective adults, it is the wrong frame.
-
-### What Is Underrepresented
-
-The emotional register that is genuinely underrepresented is **revelation without prescription**. Not "here is your type." Not "here is how to be better." But: *"Here is something true about what happened to you — something you have always sensed but never had language for."*
-
-The distinction is subtle but profound. Revelation produces a specific feeling that validation and aspiration cannot: the feeling of a light being turned on in a room you've always lived in. "I always knew something about how I was raised. Now I see what it was." This is categorically different from "I am like this" or "I should be like that." It is about the past, not the present or the future. It is specific to one person's actual experience, not a generalized type.
+**Written:** 2026-02-27 (REWORKED — replaces prior single-product self-discovery version)
+**Purpose:** Lock positioning for a multi-product millennial parent brand before any visual decisions are made.
+**Audience:** Team, co-founder Sophia, and the visual designer who will execute Plan 06-04.
+**Reading time:** ~20 minutes
 
 ---
 
-## Section 2: The Gap
+## Section 1: The Millennial Parenting Landscape
 
-### What the Gap Is
+### What Exists for Millennial Parents Today
 
-The unoccupied territory in the competitive landscape can be stated precisely:
+The market for digital products serving millennial parents is large, crowded, and almost uniformly built around the same implicit assumption: a parent's job is to manage their children's needs. Unpack the landscape product by product, and the structural sameness becomes striking.
 
-**Emotional depth + clinical credibility + adult self-understanding of one's own upbringing, framed as revelation rather than advice or healing.**
+The five segments that dominate the millennial parenting digital market each serve a different version of child management:
 
-Each component of that gap is important. Emotional depth alone exists in On Being, in Brené Brown's work, in The School of Life. Clinical credibility alone exists in The Gottman Institute, in The Enneagram Institute. Adult self-understanding as a general category is served by dozens of products. But the specific combination — grounded in research, delivered with emotional intimacy, focused on understanding the parenting one *received* rather than improving the parenting one gives, and framed as revelation not therapy — does not exist.
+**Segment A — Infant and Toddler Logistics:** Huckleberry, Wonder Weeks, Kinedu, The Bump. These products exist to relieve the new parent's anxiety about a baby they cannot read. Huckleberry optimizes sleep schedules. Wonder Weeks predicts developmental leaps. Kinedu suggests activities that stimulate brain development. The parent is the anxious user; the baby is the subject of all concern. These products are enormously valuable for what they are — but "what they are" is anxiety management for people staring at an infant.
 
-### Why This Gap Exists
+**Segment B — Child Mental Wellness:** Moshi, Headspace for Kids, Big Life Journal. These products serve the parent's desire to do something active about their child's emotional health. The parent is purchaser and facilitator; the child is the subject. Big Life Journal has reached two million families by giving parents a concrete tool for instilling growth mindset in their kids. The parent is always in service of the child's outcome.
 
-The gap exists because the three main adjacent categories each contain one missing element that prevents any of them from occupying it.
+**Segment C — Active Parenting Coaching:** Good Inside (Dr. Becky Kennedy), ParentLab, Aha! Parenting. These are the products that most closely approach the psychological territory. Good Inside in particular — the most culturally prominent brand in this space, with three million followers and a Time Magazine "millennial parent whisperer" cover — is fundamentally a product about helping parents behave better. Its core promise is "you are a good parent" combined with a daily micro-dose of behavioral change: how to respond to tantrums, how to set limits without aggression, how to repair after a rupture. The emotional register is warm, non-judgmental, and expert-guided. But the lens is always forward and always behavioral: what should you do right now?
 
-**The personality assessment category** (16Personalities, Enneagram tools) is structured around the *present* self — who you are, what type you are, what your traits look like in relationships and at work. The formative origins of those traits are acknowledged but not the primary product. The lens is "who are you now?" The gap they leave: "what made you this way?" The emotional ceiling of personality typing is recognition and validation. Raising Giants' emotional territory — the specific vertigo of finally seeing the pattern in your own upbringing — is simply outside what this category is designed to produce.
+**Segment D — Family Organization:** Cozi, FamilyAlbum. Logistics and memory preservation. No psychological depth.
 
-**The wellness and therapy-adjacent category** (BetterHelp, therapy platforms, mindfulness apps) is structured around healing and improvement. Its frame is that something is imperfect, limited, or in need of change. Even when the clinical framing is soft, the implicit promise is "you can feel better, cope better, relate better." This is a legitimate and valuable frame — but it is not the same as pure revelation. The gap they leave: self-understanding without the implication that you need fixing. There are adults who have done their therapy, who are not in crisis, who simply want to understand the patterns in their own history — and the current category doesn't offer them a product that meets them where they are.
+**Segment E — Mental Health Adjacent:** BetterHelp, Talkspace, Headspace (adult). These products do serve the parent as a person, not just as a caregiver. But the frame is therapeutic: something is difficult, you need support, therapy helps. Headspace has pivoted toward mental health but remains a state-change product (meditate to feel calmer) rather than a self-understanding product.
 
-**The parenting content category** (Aha! Parenting, Hand in Hand, Gottman for couples) is structured entirely around the *present and future* of relationships the user is actively in — with their children, their partner, their family. Even the most psychologically sophisticated brands in this category are fundamentally prescriptive: "here is what research says about parenting, here is how to apply it." The lens is entirely forward-looking. The gap they leave: the adult reflecting on what was done to *them*, not on what they are doing to others.
+### The Positioning Map
 
-### Why This Gap Is Valuable
+When you plot these 16 products on a map with two axes — **Child-centric to Parent-centric** on the horizontal, and **Advice-giving/Behavioral to Self-understanding/Revelatory** on the vertical — a pattern emerges that is both obvious in retrospect and invisible until you look for it.
 
-The specific emotional experience that fills this gap is one of the most profound and enduring in human psychology: the experience of suddenly understanding a pattern that has shaped one's entire life.
+Every product clusters in three quadrants:
 
-People carry their upbringing forward in ways they feel but cannot always name. They sense that something about how they were raised shaped how they connect, how they react under pressure, how they relate to authority, what they find terrifying. But without vocabulary and without a framework grounded in actual research, that sensed understanding remains diffuse — an intuition without a map.
+- **Child-centric + Advice-giving:** ParentLab, Aha! Parenting, all Segment A and B products
+- **Parent-centric + Advice-giving/Behavioral:** Good Inside, BetterHelp, Talkspace
+- **Parent-centric + State-change:** Headspace adult, Calm
 
-The value of a product that gives this map is not instrumental. It is not "now I will parent better" or "now I will be more secure." The value is the experience itself: *finally seeing something that was always true*. This is the emotional core that no competitor currently produces. And it is a profoundly underserved human need — one that is growing, not shrinking, as therapy culture has normalized both introspection and the idea that understanding one's formative experiences is worth pursuing.
+The fourth quadrant — **Parent-centric + Self-understanding/Revelatory** — is empty. Not sparsely populated. Not underserved. Empty.
 
-The specific market timing also matters. Self-reflective adults today are more psychologically sophisticated than any previous generation of consumer psychology product audiences. They have taken other personality tests. They have done therapy. They are familiar with attachment theory, with nervous system language, with emotional regulation frameworks. They are looking for something that meets their existing sophistication — not a beginner's introduction to self-reflection, but a specific and credible exploration of one part of their history that most products haven't touched.
+Not a single digital product in the millennial parenting landscape is built around the parent as a person with a past that shaped them, and helps them understand that past. No product has staked this claim. And critically: the absence is supply-constrained, not demand-constrained. The demand evidence is visible everywhere you look.
 
-### What a Brand Occupying This Gap Feels Like
+### The Demand Evidence
 
-Based on the reference brand research, a brand that successfully occupies this territory would have a very specific emotional character: the warmth of being spoken to personally, combined with the substance of genuinely knowing what it's talking about.
+Four independent signals confirm that millennial parents are oriented toward self-understanding in a way that no current product is serving:
 
-It would feel like Brené Brown's directness — the second-person address, the named experience, the permission given before the revelation asked. It would have the editorial restraint of Kinfolk — unhurried, trusting the reader's intelligence, not crowding the page with features and benefits. It would carry the research credibility of The Gottman Institute — not via institutional visual signaling, but via the actual quality and specificity of what the product produces. And it would have the product philosophy of getrelatio.com — the assessment is the meaningful experience, not a lead magnet for something else.
+**1. The "cycle-breaking" cultural movement.** Millennial parents self-identify as "cycle breakers" at a rate unprecedented in any prior parenting generation. The phrase — which refers to consciously interrupting harmful patterns inherited from one's own upbringing — is normalized vocabulary in parenting communities, TikTok comment threads, and therapy offices. It describes exactly the behavior that Raising Giants serves: looking backward at what happened to you in order to parent more intentionally. The cultural movement is the demand signal. No product is the tool.
 
-It would explicitly *not* feel like a therapy platform (healing journey framing, clinical purple, "working on yourself"), a personality quiz (types, percentages, entertainment-adjacent), a parenting advice platform (outward-facing, prescriptive, parent-assuming), or a wellness app (practices, habits, state change).
+**2. Good Inside's success as indirect evidence.** Dr. Becky Kennedy has built three million followers and a successful subscription app around a philosophy that begins with one insight: how you were parented affects how you parent. Her content does not stop there — it pivots quickly to "here is what to do." But the entry point is the past-lens realization, and her audience is enormous. She has demonstrated the market; she has not served its deepest need.
 
----
+**3. Therapy normalization and saturation.** Millennial parents are the most therapy-going generation in history. They have done work on their attachment patterns, their inner child, their family systems. Many of them have hit the ceiling of what therapy (expensive, clinical, healing-framed) can give them and are looking for tools that continue the self-understanding project without the clinical register. BetterHelp has four million users, which indicates the demand. The register many of those users are graduating out of is what the gap is for.
 
-## Section 3: The Case for Positioning
-
-### Defining the Brand Territory: Grounded Self-Discovery
-
-"Grounded self-discovery" is the two-word articulation of the territory established above. Each word is doing specific work.
-
-**Grounded** carries three meanings simultaneously, all of which are relevant:
-
-First, it means *research-backed*. The insight comes from clinical science — the specific work of Baumrind, Gottman, Ainsworth, Siegel, van der Kolk, and the other researchers in the framework. This is not astrology, not pop psychology, not "5 types based on our data." The groundedness is the source of the credibility that makes the revelation trustworthy rather than flattering.
-
-Second, it means *the past as foundation*. The product is about the ground on which you were built — the actual conditions of your upbringing. "Grounded" connotes soil, foundation, what you stand on. It is the right metaphor for a product that looks at what formed you.
-
-Third, it means *not in the clouds* — practical, specific, connected to reality. This implicitly distinguishes the product from aspirational-abstract brands that describe transformation in vague terms.
-
-**Self-discovery** carries an important specificity: the subject is *you, the adult, reflecting on your own history*. Not "discover your parenting type" (outward-facing, parenting-advice register). Not "discover what your children need" (advice-forward). Self-discovery is the looking inward, the understanding of one's own patterns and origins, the exploration of what made you who you are.
-
-Together, "grounded self-discovery" communicates: *this is a serious, research-backed product about understanding yourself through the lens of your own upbringing.* It is warm and it is specific. It is intimate and it is credible. It is the brand territory that the competitive landscape has left open.
-
-### What the Brand Is
-
-**A mirror.** The product shows you something that is already true — it does not prescribe, evaluate, or recommend. The output is reflection, not advice. This metaphor is load-bearing: a mirror shows you yourself; it doesn't improve you. "The Mirror" as product name is semantically accurate in a way that creates genuine differentiation.
-
-**Research-grounded.** The insight comes from decades of clinical parenting research by identified experts. The credibility is not institutional (no clinical logo, no medical authority signals) — it is *transparent*. The researchers are named. The dimensions are explained. The credibility comes from showing the work, not from asserting authority.
-
-**Past-lens.** The product is specifically about the parenting you *received*. Not the parenting you give. Not your current attachment style. Not your personality as it exists today. This temporal specificity — looking backward rather than forward or at the present moment — is the single strongest competitive differentiator. No other product in the competitive landscape occupies this lens. It is both the product's clearest claim and its most important brand signal.
-
-**Language-giving.** The core value delivered is vocabulary. Before the quiz, users sense patterns they cannot articulate. After the quiz, they have names — the Intentional Guide, the Resilient Striver, the Devoted Champion. These names are not labels that classify them. They are vocabulary gifts that name what they have always felt. This framing distinction is critical: the archetype names must be positioned as *naming unnamed experiences*, not as assigning users to categories.
-
-### What the Brand Is Not
-
-**Not therapy.** There is no healing journey language in primary positioning. No "trauma-informed," no "nervous system," no "working through," no "processing." These frames — however legitimate — carry the clinical register that this brand must not occupy. Users who need therapy should get therapy. Raising Giants is for users who want to understand, not users who need to heal.
-
-**Not wellness.** No "self-care," no "practice," no "daily habit," no "ritual." The wellness register implies ongoing improvement through repeated behavior. This product is a single experience of revelation — not a subscription to a lifestyle. The emotional proposition is "now I see" not "keep doing this to feel better."
-
-**Not parenting advice.** No "here is how to parent better," no "what your children need," no prescriptive guidance for raising children. This distinction is the one the brand must most aggressively signal — it is the primary misidentification risk and the clearest departure from the most visible adjacent category. Every piece of primary copy must make the inward-looking nature of the product explicit.
-
-**Not personality quiz entertainment.** No "share your type," no percentages and compatibility scores, no "find out which celebrity has your type." The entertainment register is the brand kill — it tells the sophisticated self-reflective adult that this is not serious, not specific, not worth their attention.
-
-### The Emotional Core: "I Always Sensed This. Now I See It."
-
-This six-word statement is the product's emotional proposition in its purest form. It contains everything that distinguishes Raising Giants from its competitive landscape.
-
-"I always sensed this" — the product is not telling you something new. It is naming something you already know in the way you know things you feel but cannot articulate. The insight is not foreign to you; it is yours, finally given form.
-
-"Now I see it" — seeing rather than feeling is the shift the product produces. The moving from sensed to seen, from diffuse to named, from felt to known. The product's value is this specific transition — and the value of that transition is immense, because it is permanent. Once you see it, you cannot unsee it.
-
-This emotional core is the test for every brand decision: does this copy, this visual, this name, this product feature, produce the "I always sensed this, now I see it" feeling? If it produces something else — "I want to improve," "I feel understood by someone," "that's entertaining," "that's useful information" — the direction has drifted.
-
-### The Audience
-
-The primary audience is self-reflective adults — defined not by parenthood status but by the disposition to want to understand how their upbringing shaped who they are today. The unifying trait is the desire to see the pattern.
-
-This means:
-- Adults who are not parents at all — and who may never be
-- Adults who are parents but whose primary motivation for taking the quiz is understanding *themselves*, not becoming better parents
-- Adults in therapy who have hit a wall with behavioral patterns and want to understand the origins
-- Adults who have consumed personality tests and self-help content and want something more specific and credible
-- Adults processing family relationships, family estrangement, or the experience of becoming a parent and encountering their own upbringing in unexpected ways
-
-**The product's specific misidentification problem** — being read as a parenting advice tool — is resolved entirely by consistent brand framing. The brand must be explicit at every touchpoint: "This is about understanding yourself. It is not about your children." The quiz asks about the parenting you received, not the parenting you give. The result tells you about your parents' archetype, which means it tells you about *your experience of being raised* — a fundamentally self-focused act of understanding. Every headline, every CTA, every quiz intro must make this clear.
+**4. Personality test and self-understanding content virality.** 16Personalities gets 900 million visitors. The Attachment Styles quiz has been shared millions of times on social media. Millennial parents take every available self-understanding tool they can find. They share them with partners. They discuss them with friends. The appetite is enormous and demonstrably present. The missing product is one that meets their existing sophistication and is specifically grounded in the parenting they received, not their generic personality type.
 
 ---
 
-## Section 4: Name Evaluation
+## Section 2: The Gap — What Millennial Parents Need and Nobody Provides
 
-### Naming Principles
+### The Experience That Is Missing
 
-Before evaluating specific names, the positioning narrative above establishes five principles that any name must satisfy:
+Strip away the product categories and ask a different question: what does a self-aware millennial parent feel when they think about their own upbringing?
 
-1. **Point inward, not outward.** The brand is about self-understanding, not child-raising. A name that points toward what you do for others (raising, building, growing others) is semantically backwards.
+"I want to understand *why* I parent the way I do — not just how to parent better. Good Inside tells me what to say when my kid is melting down. I've read all of it. I can say the words. But sometimes I react in ways I don't want to, in ways I watched my own parents react, and no product helps me see the actual mechanism — why this specific reaction, from this specific history, is playing out right now."
 
-2. **Be past-lens compatible.** The product looks back at the parenting received. A name should accommodate this temporal orientation — it should not be exclusively future-facing or aspirationally forward.
+"I know my childhood affects my parenting. Everyone in therapy knows this. What I don't have is a clear picture of *how* — what were the specific conditions of my upbringing, what patterns did they install, and what does that mean for how I show up as a parent? I want to see the map."
 
-3. **Carry a warm-intimate register, not an aspirational or corporate one.** The emotional register of the brand is grounded self-discovery. Names that sound like startup brands, motivational platforms, or growth-hacking products undermine the register.
+"Therapy helped. But therapy is framed around healing. I'm not broken. I'm curious. I want revelation, not repair. I want to understand my own history the way an anthropologist would — with curiosity, with intellectual rigor, with the specific pleasure of something that was always true suddenly being visible."
 
-4. **Include non-parents.** Any name that implies the user is or must be a parent fails the inclusion criterion for the primary audience.
+This is the unmet need in the market. It is not the need for better parenting advice. It is not the need for more therapy access. It is the need for a specific kind of seeing: looking backward at one's own upbringing with a credible, warm, non-clinical framework that produces revelation.
 
-5. **Hold a product ladder.** The brand name must work as an umbrella for The Mirror (free), The Blueprint (paid), and The Partner Match (premium). The name should be general enough to accommodate three distinct but related products, all connected to the theme of understanding one's relational origins.
+### Why This Gap Has Not Been Filled
 
----
+The three adjacent categories each get close and then fall short for the same reason: they are built on a different premise about what parents need.
 
-### Brand Name Evaluation: "Raising Giants"
+**Active parenting coaching** (Good Inside, ParentLab) is built on the premise that parents need behavior change. They need to know what to do. The insight comes as a preamble to the prescription. The gap is that many parents have already done the behavioral work — they know the script — and still find themselves reacting from a deeper pattern they cannot see.
 
-**The name as it currently stands:**
+**Therapy and mental health platforms** are built on the premise that parents need support and sometimes healing. The insight comes inside a clinical relationship that is framed around a problem. The gap is that the clinical frame excludes the large population of people who are not in crisis, not seeking healing, but genuinely curious about their own formation. Therapy is designed for a different experience than revelation.
 
-"Raising Giants" is read, in sequence, as: (1) a parenting activity — you are doing the verb "raising" to the noun "giants"; (2) an aspirational parenting philosophy — the goal is to raise children who are great (giants); (3) potentially motivational or personal-growth-adjacent, but the "raising" still points outward toward something being grown.
+**Personality assessment products** are built on the premise that people want to understand who they are right now — their current traits, their current communication style, their current type. The formation of those traits is background. The gap is the whole category has missed the question that becomes central to self-aware millennial parents: "not just who am I, but what made me this way?"
 
-**Testing against four criteria:**
-
-**1. Clarity — Does it communicate self-understanding (not parenting advice)?**
-No. "Raising" is the primary semantic problem. It is a verb that takes an object — you raise *something*. The object ("giants") implies children or something external to the user. Even with explanation, the name communicates parenting activity, not personal insight. A user encountering the name without context will read it as "a product for raising children." This is the misidentification that CONTEXT.md confirms already happens in practice. Rating: FAILS.
-
-**2. Inclusion — Does it include non-parents?**
-No. "Raising" as an activity implies parenthood or at minimum a nurturing-role relationship with someone younger. A person who has no children and no intention of having children is unlikely to feel included by a product that announces itself with the word "raising." The verb excludes. Rating: FAILS.
-
-**3. Direction — Does it suggest looking inward (past) or outward (future)?**
-Outward and future. "Raising" is an active, future-facing verb. The product looks backward (what was done to you), but the name looks forward (what you are doing to others). The temporal mismatch is fundamental. Rating: FAILS.
-
-**4. Register — Does it match the grounded-intimate tone, or does it sound aspirational/corporate?**
-Aspirational-corporate. "Giants" is an ambition word — it implies greatness, scale, achievement. This is the register of a productivity platform or a leadership brand, not a warm, intimate self-understanding product. The name does not sound like something that would hold "I always sensed this, now I see it" as its emotional core. Rating: FAILS.
-
-**Verdict:** Raising Giants fails all four criteria. The name is working against the positioning. The primary recommendation is to change it. The domain migration and SEO considerations are Plan 05's responsibility — the positioning recommendation is change.
-
-**If the name is kept:** Reframing would require positioning "raising" as something you do *to yourself* — "raising" the hidden giant within you, raising your own understanding of yourself. This is a reachable interpretation if established clearly in brand copy, but it requires explaining before it lands, which is a brand tax. The name has pre-existing equity (however nascent) and domain ownership. These are relevant implementation considerations, but they are not sufficient strategic reasons to keep a name that actively creates the primary misidentification problem.
+The unserved experience is precisely the intersection of these failures: self-understanding about the past, delivered with clinical credibility but not clinical framing, aimed at revelation rather than improvement or healing.
 
 ---
 
-### Alternative Brand Name Candidates
+## Section 3: Three Candidate Territories
 
-**Candidate 1: Imprint**
+The competitive landscape and gap analysis reveal three ways to articulate what Raising Giants could own. Each is evaluated on five dimensions.
 
-**Connotation and register:** "Imprint" carries two meanings simultaneously — the mark left on something, and the publishing imprint (a trusted editorial voice). The first meaning is exactly right: your upbringing left an imprint on you, and the product helps you see what that imprint is. The second meaning adds an associative layer of editorial credibility. The word is warm, specific, and inward-looking — it describes what happened to you, not what you are doing. It is past-lens by definition.
+### Territory 1: "The self-understanding layer for millennial parents"
 
-**Testing against four criteria:**
-1. Clarity: Yes — "imprint" communicates something that was done *to* you, from outside. Self-understanding is the natural frame.
-2. Inclusion: Yes — imprint is universal. Everyone received an imprint from their upbringing. No parenthood assumption.
-3. Direction: Past-tense compatible. "The imprint left on you" is backward-facing. "Seeing your imprint" is the act of looking back.
-4. Register: Warm and intimate. The word is not aspirational or corporate. It carries a slight elegance and specificity that matches the brand territory.
+**Statement:** Raising Giants provides the self-understanding layer that every other parenting product assumes you have but none of them give you — tools for understanding yourself, not just tools for managing your children.
 
-**Product ladder compatibility:** The Imprint — The Mirror / The Blueprint / The Partner Match. Works. The brand holds the product names naturally.
+**How it addresses the gap:** Directly and explicitly. It names the thing that every competitor is missing (the parent as a person with a psychology, not just a caregiver with a job to do) and positions Raising Giants as the product category that fills it.
 
-**Risks:**
-- Domain: imprint.com is almost certainly taken; alternates (theimprint.co, imprint.io) need checking
-- SEO: "imprint" has multiple competing meanings (legal imprints, book publishers, shoe brand)
-- Cultural resonance: Strong in English; may have different connotations in other markets (publishing-heavy in UK)
+**Pros:**
+- Maximum competitive differentiation — this claims the empty quadrant by name
+- The "layer" metaphor is technically accurate and architecturally interesting — it positions Raising Giants beneath every other parenting tool as the foundational understanding that makes them all work better
+- Works for multi-product: The Mirror is one layer of self-understanding; The Blueprint is the next; The Partner Match extends to shared history with a partner
+- No pre-commitment to specific product metaphor — "layer" is broad enough for any future product
+- Does not require "cycle-breaking" language — it speaks to the same audience through a different door
 
-**Rating: STRONG candidate — most semantically aligned with the positioning**
+**Cons:**
+- "The self-understanding layer" is an abstract, analytical phrase — it reads more like a positioning strategy slide than a consumer brand statement
+- "Layer" is a UX architecture term; for a consumer brand, it may feel unfamiliar
+- Requires copy and brand voice to translate the abstraction into the warm emotional register the brand needs
+- The phrase does not immediately resonate emotionally — a parent encountering this for the first time would need context to understand why this matters
 
----
-
-**Candidate 2: Lineage**
-
-**Connotation and register:** "Lineage" refers to descent, ancestry, the line from which you come. It is explicitly past-focused — about where you came from and what was passed to you. The word has a natural dignity and weight to it without being clinical. It suggests that what shaped you is part of a longer story, not just your individual parents' choices.
-
-**Testing against four criteria:**
-1. Clarity: Yes, with some extension needed. Lineage implies family origins, which is close to but not exactly "understanding the parenting I received." It may need a subtitle or product framing to clarify the self-understanding orientation.
-2. Inclusion: Yes — everyone has a lineage. Non-parents fully included.
-3. Direction: Strongly past-facing. Lineage is definitionally backward-looking.
-4. Register: Warm and grounded, not corporate. The word has a slight formality that reads as depth rather than institutional distance. Could read as genealogy-adjacent if not framed carefully.
-
-**Risks:**
-- Domain: lineage.com — likely taken; lineage.co or similar available
-- Possible confusion with genealogy products (Ancestry.com, 23andMe territory)
-- "Lineage" as a word is slightly more formal than the intimate register desired — may push toward "serious" rather than "warm"
-
-**Rating: GOOD candidate, secondary to Imprint — risks are manageable**
+**Multi-product fit:** Strong. The Mirror, The Blueprint, The Partner Match each represent a different dimension of self-understanding. The "layer" framing allows new products to be introduced as additional areas of self-understanding without reframing the brand.
 
 ---
 
-**Candidate 3: Shaped By**
+### Territory 2: "Digital tools for millennial parents who are raising themselves while raising their kids"
 
-**Connotation and register:** "Shaped By" is explicitly a passive construction — something acted on you. "You were shaped by." The brand name itself performs the insight the product delivers. It is inward-looking by grammatical structure. And "by" implies an agent — you were shaped by something. The product answers the implicit question: what shaped you?
+**Statement:** Raising Giants serves the millennial parent moment — the generation that is the most psychologically aware cohort of parents in history, confronting their own upbringing while trying to parent differently, and completely unserved by products that assume parenting is only about the children.
 
-**Testing against four criteria:**
-1. Clarity: Yes — "shaped by" communicates that this is about what happened to you, not what you do. The self-understanding frame is built into the grammar.
-2. Inclusion: Yes — everyone was shaped by something. Non-parents included; non-biological family included.
-3. Direction: Past-facing by construction. "Shaped by" is a completed past action.
-4. Register: Conversational, intimate, warm — but possibly too casual for a product that carries research credibility. The phrase-as-brand-name approach works for some brands (It Gets Better) but can read as tagline rather than name.
+**How it addresses the gap:** Culturally specific and emotionally warm. This territory names the millennial parent experience directly and positions Raising Giants as the brand built for that specific cultural moment.
 
-**Risks:**
-- Domain: shapedby.com would need checking; two-word phrases as domains have availability issues
-- Feels like a tagline more than a brand name — may lack the weight to hold a product ladder
-- Less distinctive in search — "shaped by" is a common phrase, harder to own in SEO
+**Pros:**
+- Directly captures the "cycle-breaking" cultural energy that already has enormous momentum in the target audience without using the clinical phrase
+- The paradox embedded in "raising themselves while raising their kids" is emotionally resonant and immediately recognizable to the target audience
+- Audience-identity positioning — the brand is defined by who it serves, which makes it naturally extensible to any product that serves the same audience
+- High cultural specificity means strong word-of-mouth recognition: target users will say "this brand is for people like me"
+- Warm and human — contains the emotional register of the brand without requiring explanation
 
-**Rating: INTERESTING but potentially too tagline-adjacent; better as a positioning phrase than as brand name**
+**Cons:**
+- "Millennial" as an explicit term is generationally specific in a way that may age or limit future audience growth — a 27-year-old Gen Z parent would not self-identify as "millennial"
+- The phrase "raising themselves while raising their kids" is brilliant as copy but may be too long and too metaphor-dense as a sustained territory statement
+- The territory is so culturally specific that it may resist premium positioning — it risks reading as trend-chasing rather than enduring brand claim
+- If the "cycle-breaking" cultural moment fades or becomes clichéd, this territory is more exposed to dating than the other two
 
----
-
-**Candidate 4: Meridian**
-
-**Connotation and register:** "Meridian" refers to a dividing line, a point of origin, a moment of clarity at peak. In traditional usage it denotes a high point or a line of demarcation. As a brand name, it carries a quiet sophistication — it sounds like the kind of brand that deals in understanding and precision without being clinical. It does not obviously communicate "self-understanding from upbringing," but it has a resonance of depth and orientation.
-
-**Testing against four criteria:**
-1. Clarity: No — "meridian" does not intuitively communicate self-understanding or upbringing orientation. It would require explanation.
-2. Inclusion: Yes — the word is universal; no exclusion implied.
-3. Direction: Neutral — meridian is about a point in time more than past or future orientation.
-4. Register: Warm and sophisticated, but abstract. The brand would need heavy positioning investment to make the name meaningful.
-
-**Risks:**
-- Requires significant brand investment to create semantic association with the product's territory
-- Multiple competitors already use geographic/navigational brand names in wellness adjacent spaces
-- Without context, reads as tech company or wellness brand generically
-
-**Rating: WEAK for this brand — too abstract, requires too much explanation**
+**Multi-product fit:** Strong. Any product that serves the millennial parent's self-understanding — The Mirror (past), The Blueprint (integration), The Partner Match (relational history) — fits this territory. New products can be added as "tools" in the same tradition.
 
 ---
 
-### Name Recommendation
+### Territory 3: "The parenting brand for the generation that thinks about their own upbringing"
 
-**Primary recommendation: Change the brand name to "Imprint."**
+**Statement:** Raising Giants is the brand built for the generation that changed the question — not just "how do I raise my children?" but "what was done to me, and what does it mean for how I parent?"
 
-"Imprint" passes all four evaluation criteria, is semantically precise to the product's positioning (understanding the mark that upbringing left on you), includes non-parents, is past-facing by definition, and carries a warm-intimate register that aligns with the brand territory of grounded self-discovery.
+**How it addresses the gap:** This territory owns the behavioral and attitudinal shift that defines the millennial parenting psychographic. It positions Raising Giants as the brand that recognized this shift first and built a product suite for it.
 
-"Raising Giants" fails all four criteria. The misidentification problem it creates — being read as a parenting advice tool — is not a positioning communication problem that better copy can solve. The name itself is the signal that points in the wrong direction.
+**Pros:**
+- Brand-as-audience-identity model — the strongest and most enduring positioning approach (comparable to how Patagonia is "the brand for people who care about the planet")
+- Works as a mission statement: a brand that exists because this generation asks a fundamentally different question deserves a fundamentally different brand
+- Does not require cultural vocabulary that may age — "thinking about your own upbringing" is a permanent human behavior, not a trend-specific phrase
+- Maximum longevity — this territory could hold 10 products over 20 years without losing relevance
+- Does not imply a therapeutic or healing register; the act of "thinking about your own upbringing" is curious, intellectual, self-reflective — the right register
 
-**Ranking of alternatives if Imprint is unavailable:**
-1. Imprint (primary)
-2. Lineage (secondary — past-facing, dignified, slightly formal)
-3. Shaped By (tertiary — only if positioned as phrase-brand with strong visual identity investment)
+**Cons:**
+- Less emotionally immediate than Territory 2 — "the generation that thinks about their own upbringing" is more of a sociological observation than a feeling
+- "Parenting brand" may read as child-centric to someone encountering it for the first time — the word "parenting" still carries the association of managing children rather than understanding yourself
+- Like Territory 1, this territory requires copy and brand voice to carry the emotional warmth — the statement itself is cooler and more analytical than the brand register should be
+- "The generation" framing, like "millennial," has built-in longevity limits
 
-**Implementation flags (for Plan 05, not for this document to resolve):**
-- Domain availability for imprint.com, theimprint.co, imprint.io needs verification before recommendation is final
-- Existing raisinggiants.com domain holds SEO equity; migration plan needed (301 redirects, metadata update)
-- All metadata in app/layout.tsx and Supabase references to the brand name would need updating
-- Social handles and any existing brand assets would need to be renamed/recreated
-
----
-
-### Product Name Evaluation
-
-**The Mirror**
-
-**Alignment with positioning:** Excellent. The mirror metaphor is load-bearing — it captures the revelation-without-prescription nature of the product. A mirror shows you what is already there; it does not tell you what to do about it. The verb embedded in the product name ("to mirror") is reflective, not prescriptive. The name accurately describes what the product does: holds up a specific, research-grounded reflection of your upbringing experience.
-
-**Metaphor resonance:** Strong. Looking in a mirror is a universal act of self-examination. The metaphor is immediately understood and does not require explanation. It is also visually generative — an illustration of a mirror, a reflection, a person looking back — gives clear creative direction.
-
-**Misidentification risk:** Low. "The Mirror" does not read as parenting advice, as wellness app, or as entertainment quiz. The product name is semantically correct.
-
-**Recommendation: Keep. The Mirror is well-named.**
+**Multi-product fit:** Strong. All three products serve the same generation's same fundamental question. Future products extend the answer rather than reframing the question.
 
 ---
 
-**The Blueprint**
+## Section 4: Territory Selection
 
-**Alignment with positioning:** Good. The blueprint metaphor suggests taking the insight from The Mirror and creating something actionable — a structured plan built from understanding. The semantic shift from Mirror (reflection, revelation) to Blueprint (action, construction) correctly positions the paid product as the next step after the free product.
+### The Synthesis: What the Evidence Demands
 
-**Metaphor resonance:** Strong. Blueprints are associated with intentionality, expertise, and building something designed rather than improvised. The implication is: "you understand what shaped you (Mirror); now you build intentionally from that understanding (Blueprint)."
+Evaluating all three territories against five criteria produces a clear direction — not toward any single territory as stated, but toward a synthesis that borrows the best elements of each.
 
-**Misidentification risk:** Low to medium. "Blueprint" carries a slight association with "self-improvement plan" and potentially parenting advice (a blueprint for better parenting). The brand framing needs to make clear that The Blueprint is about understanding and intentional building from insight, not a prescriptive parenting guide.
+**Competitive defensibility:**
+Territory 1 is the most defensible — "the self-understanding layer" is a direct claim on the empty quadrant and cannot be imitated without occupying the same unique positioning. Territories 2 and 3 are culturally defensible but could be approached by a well-capitalized competitor (Good Inside could theoretically pivot toward the "millennial parent's psychology" space). The winner here is Territory 1's content — defensible via the product, not just the rhetoric.
 
-**Recommendation: Keep, with clear framing in copy that "The Blueprint" is built on self-understanding, not parenting advice.**
+**Multi-product scalability:**
+All three pass this test. Territory 3 has the highest scalability ceiling — audience-identity positioning imposes the least constraint on future product types. Territory 1's "layer" metaphor is flexible. Territory 2's cultural specificity is the most constraining long-term.
+
+**Audience resonance:**
+Territory 2 wins on immediate emotional recognition. The language it uses — "raising themselves while raising their kids" — is the language the audience already uses to describe their own experience. Territory 3 is intellectually resonant but cooler. Territory 1 is most abstract.
+
+**Brand distinctiveness:**
+All three differentiate from Good Inside, from BetterHelp, from personality quiz tools. Territory 2 is most distinct in cultural register; Territory 1 is most distinct in structural claim.
+
+**Longevity:**
+Territory 3 wins on longevity — it is not dependent on the "millennial" generational frame or the "cycle-breaking" cultural moment. Territory 1 is also durable — "self-understanding" is a permanent human category. Territory 2 is most exposed to cultural aging.
+
+### The Selected Territory: The Parent Who Looks Inward
+
+The evidence points to a territory that combines:
+- The structural claim of Territory 1 (the empty quadrant: parent-centric, self-understanding)
+- The emotional warmth of Territory 2 (the felt experience of the audience)
+- The longevity framework of Territory 3 (audience-identity, not trend-specific)
+
+**The brand territory for Raising Giants:**
+
+> **Digital tools for parents who want to understand themselves — not just their children.**
+
+This is the territory. Not "grounded self-discovery" (which is too narrow and too product-level). Not "cycle-breaking" (which is culturally specific and therapy-adjacent). Not "the self-understanding layer" (which is abstract and cold).
+
+The territory is: you are a parent who treats yourself as worth understanding. You want to know what shaped you. You want to see the pattern in your own history. You are not looking for advice about your children. You are looking for clarity about yourself. This brand is for you.
+
+**Why this territory:**
+
+*Competitive defensibility:* Zero of 16 mapped competitors occupies this space. A competitor cannot enter without abandoning their current positioning. Good Inside has built its brand around "become a better parent" — pivoting to "understand yourself first" would require dismantling their core promise.
+
+*Multi-product scalability:* "Understanding yourself" accommodates The Mirror (the upbringing you received), The Blueprint (building intentionally from that understanding), The Partner Match (understanding how your history interacts with your partner's), and any future product that serves the parent's self-knowledge. The territory imposes no product-type constraints.
+
+*Audience resonance:* The experience of being a parent who looks inward is universal across the target audience and not bounded by generation, cultural moment, or therapeutic vocabulary. The phrase works for a 29-year-old first-time parent and a 45-year-old parent of teenagers. It works for non-parents who want to understand their own upbringing. It works for adults in therapy and adults who have never tried therapy.
+
+*Brand distinctiveness:* The territory separates Raising Giants from Good Inside (behavioral-change), from BetterHelp (clinical-therapeutic), from 16Personalities (present-tense traits), and from Headspace (state-change). There is no competitor in the same territory.
+
+*Longevity:* "Understanding yourself" is a permanent human project. The territory does not depend on "millennial" vocabulary or "cycle-breaking" cultural momentum. It will be as true in 2035 as it is in 2026.
+
+### What the Territory Explicitly Excludes
+
+The territory selection rules out certain adjacent claims that might be tempting:
+
+**Excluded: "Become a better parent."** This is Good Inside's territory and is advice-forward. Raising Giants does not tell people how to parent.
+
+**Excluded: "Heal from your childhood."** This is therapeutic framing. Raising Giants is for curious adults, not patients.
+
+**Excluded: "Understand your personality type."** This is the personality-quiz register. Raising Giants is past-specific and upbringing-specific, not present-tense traits.
+
+**Excluded: "Parent your children better."** The children are not the subject. The parent is.
 
 ---
 
-**The Partner Match**
+## Section 5: Brand Architecture — The Branded House
 
-**Alignment with positioning:** Moderate. "Partner Match" is descriptively accurate but less evocative than The Mirror or The Blueprint. The word "match" carries a dating/compatibility register that conflicts slightly with the brand's more intimate, introspective territory. "Partner Match" sounds more like a compatibility quiz tool than an introspective product.
+### The Model
 
-**Metaphor resonance:** Weaker than the other two names. The product's value (both partners understand their upbringing patterns and see where they interact, conflict, and complement) is more nuanced than "matching."
+The correct architecture for Raising Giants is the Branded House model (as confirmed by reference brand analysis in 06-02). In the Branded House model, the master brand carries trust and value system across all products. Products are identified as belonging to the master brand rather than operating as independent brands.
 
-**Misidentification risk:** Medium. "Partner Match" reads as relationship-compatibility quiz, which pulls toward the getrelatio.com / relationship assessment category rather than the grounded self-discovery territory. Users might expect a compatibility score, not a shared introspection experience.
+The alternative — House of Brands (Procter & Gamble: Tide, Pampers, Gillette, each a standalone brand) — is the wrong model for Raising Giants. The products serve the same audience at the same underlying need (self-understanding for parents) and share the same value system. Separating them into independent brands would lose the cumulative trust and cross-selling opportunity that the portfolio creates.
 
-**Recommendation: Change at the time of Product 3 development. Consider "The Dialogue" (emphasis on conversation produced by the shared result) or "The Confluence" (where two rivers — two upbringings — meet). Both are more aligned with the positioning territory than "Match."**
+The Apple model is instructive: Apple Music, Apple TV+, Apple Fitness+, Apple Watch, iPhone, Mac — all products carry the master brand and reinforce the same quality standard and aesthetic identity. A user who trusts Apple Music is primed to trust Apple TV+. A user who trusts The Mirror is primed to trust The Blueprint.
+
+### How the Architecture Works
+
+**The master brand** carries the positioning: digital tools for parents who want to understand themselves. The master brand name appears on every product and is the primary trust mechanism. The research framework (Baumrind, Gottman, Siegel, Ainsworth, van der Kolk) anchors the master brand's credibility — not a founder personality, not a clinical institution, but transparent research sourcing.
+
+**Product naming convention:** The [Product] by [Brand]. Each product name describes the experience the product delivers; the master brand certifies the quality and value system.
+
+- *The Mirror* by [Brand] — the product that reflects back the parenting you received
+- *The Blueprint* by [Brand] — the product that helps you build intentionally from that understanding
+- *The Partner Match* by [Brand] — the product that maps how two upbringing histories interact
+
+**Visual system:** The brand visual system encodes the master brand's territory (warm, editorial, adult, psychologically serious) — not any individual product's metaphor. The Mirror's reflection metaphor belongs to The Mirror's product illustrations and onboarding; it should not become the master brand's visual identity. The Blueprint's construction metaphor belongs to The Blueprint. The master brand's illustration system should depict interiority, self-examination, and the interior landscape of the self — scenes that are abstract enough to belong to any product but specific enough to signal psychological depth.
+
+### Future-Product Fit Test
+
+The architecture test for any future Raising Giants product is a two-question check:
+1. Does this product serve a parent who wants to understand themselves?
+2. Does it fit the research-grounded, revelation-oriented, non-prescriptive value system?
+
+A product that passes both questions belongs in the Raising Giants brand portfolio. A product that fails (e.g., a "parenting tips" daily digest, a "how to talk to your toddler" advice tool) does not — because it would require the brand to enter the advice-giving territory that the brand positioning explicitly excludes.
 
 ---
 
-## Summary: Positioning Locked
+## Section 6: Emotional Core
 
-The positioning narrative establishes the following locked decisions for subsequent visual direction work:
+### Reexamining the Emotional Core at Brand Level
 
-**Brand territory:** Grounded self-discovery — the intersection of clinical credibility and emotional intimacy.
+The prior Phase 6 research produced "I always sensed this. Now I see it." as the emotional core. That phrase was generated for The Mirror as a single product. The question this rework must answer is whether that emotional core works at the brand level — for a portfolio of products serving the same audience at different points in their self-understanding journey.
 
-**Emotional proposition:** "I always sensed this. Now I see it." — revelation, not validation or improvement.
+The test: does the phrase work for The Blueprint? Does it work for The Partner Match?
 
-**Primary audience:** Self-reflective adults seeking to understand the parenting they received; non-parents are the primary growth audience.
+**For The Mirror:** Perfect fit. The Mirror is precisely the experience of having something confirmed that you always sensed — the pattern in your upbringing finally rendered visible. "I always sensed this. Now I see it." is The Mirror's emotional core statement.
 
-**Brand is:** A mirror. Research-grounded. Past-lens. Language-giving.
+**For The Blueprint:** Strong fit. The Blueprint takes the revelation produced by The Mirror and builds from it. The emotional experience is: "now that I see it, what do I build?" The phrase still resonates — you saw something true (Mirror), now you have a map to work from (Blueprint). The phrase is slightly less perfect here, but the brand promise it encodes (revelation, not prescription) still holds.
 
-**Brand is not:** Therapy. Wellness. Parenting advice. Personality quiz entertainment.
+**For The Partner Match:** Good fit. The emotional experience of The Partner Match is: "I always sensed that our upbringings were colliding somewhere. Now I see where." The phrase stretches slightly but the core emotional territory — revelation over validation, seeing over being-seen-by — holds.
 
-**Recommended brand name:** Imprint (change from Raising Giants — pending domain verification).
+### The Evolved Brand-Level Emotional Core
 
-**Recommended product names:** The Mirror (keep). The Blueprint (keep). The Partner Match (change at Product 3 development).
+The phrase "I always sensed this. Now I see it." is so strong for The Mirror that it risks becoming product-specific rather than brand-level if used verbatim across all products. The brand-level emotional core should be the feeling that the phrase describes — not the six words themselves.
 
-**Unlocked for Plan 04:** Visual direction can now proceed. The visual brief should translate this positioning into concrete visual choices — how grounded self-discovery looks, how "research credibility without institutional distance" is encoded, how "emotional intimacy without superficiality" is achieved. Colors, typography application, illustration direction, whitespace standards, and copy tone are all Plan 04's territory.
+The brand-level emotional core is: **the experience of seeing something about yourself that you have always carried but never had a name for.**
+
+This is the feeling the brand must consistently create across all products and all touchpoints. The Mirror gives this feeling about the parenting you received. The Blueprint gives this feeling about what you can build from that understanding. The Partner Match gives this feeling about the dynamic between two histories. Every future product should be evaluated for whether it can produce this specific feeling.
+
+The six-word phrase — "I always sensed this. Now I see it." — remains the most powerful single articulation of the emotional core. It should be used as a brand voice touchstone, as an internal test for copy quality, and selectively in primary brand-level communication. It is not a tagline to be printed on everything; it is the emotional standard against which everything is measured.
+
+### What the Emotional Core Is Not
+
+The emotional core is explicitly not:
+- "I feel understood by this brand" (that is validation, not revelation)
+- "I want to be better" (that is aspiration, not revelation)
+- "I need healing" (that is therapeutic, not revelatory)
+- "This is entertaining" (that is entertainment, not revelation)
+
+Any copy, visual, or product feature that produces one of those feelings instead of revelation has drifted from the brand territory.
+
+---
+
+## Section 7: Brand Name Evaluation — "Raising Giants"
+
+### Fresh Evaluation Under the Multi-Product Frame
+
+The prior Phase 6 analysis concluded: "Change to Imprint." That conclusion was generated under the old single-product self-discovery framing. This evaluation starts fresh under the new brand territory: **digital tools for parents who want to understand themselves.**
+
+The multi-product frame changes the evaluation in one significant way: the brand name now serves as the umbrella for a portfolio, not a label for a single self-assessment product. A name that failed under the old frame may succeed under the new frame, and vice versa.
+
+Six criteria are evaluated:
+
+### Criterion 1: Clarity
+
+**Does a millennial parent hearing "Raising Giants" for the first time understand what kind of brand this is?**
+
+Test against the new territory: a brand for parents who want to understand themselves.
+
+"Raising Giants" heard cold by a new audience: the primary interpretation is overwhelmingly "a brand about raising children who will be great." The verb "raising" is transitive — it takes an object, and the object is "giants," which can only mean children or an aspiration imposed on children. The reframing hypothesis — "raising yourself to be a giant parent" — is not findable without explanation. To arrive at the self-understanding interpretation, the listener would need to:
+1. Reject the default "raising children" reading
+2. Apply "raising" reflexively to themselves
+3. Redefine "giants" as something the parent becomes, not something the parent produces
+
+This is three interpretive steps before the name lands correctly. Brand names that require three interpretive steps before they communicate the right thing are not landing — they are being explained.
+
+**Verdict on Clarity: FAILS.** The default interpretation points away from the brand territory.
+
+### Criterion 2: Inclusion
+
+**Does the name work for all family structures (single parents, non-traditional families, child-free adults who were raised by someone)?**
+
+"Raising" as a verb implies the act of raising. A child-free adult reflecting on what their own parents did to them is not performing "raising" in any conventional sense. Non-traditional family structures may have no "giants" in prospect. The name assumes a raising relationship that excludes a significant portion of the brand's target audience.
+
+The CONTEXT.md document explicitly notes that the misidentification of Raising Giants as a parenting-advice brand "actually occurred in practice" — meaning real potential users encountered the name and concluded the product was not for them.
+
+**Verdict on Inclusion: FAILS.** The name assumes a parenting role that excludes non-parents and child-free adults in the target audience.
+
+### Criterion 3: Direction
+
+**Does the name point toward the brand's value (self-understanding) or away from it (parenting advice)?**
+
+The brand territory is about looking inward — understanding the parenting you *received*. The name "Raising Giants" is an action phrase — it describes what you *do* to others. It is future-facing and outward-pointing. The brand is past-facing and inward-pointing.
+
+The temporal mismatch is fundamental. The brand exists to help parents look backward. The name describes an activity that is definitionally forward and outward.
+
+**The reframing hypothesis examined:** Could "raising" apply reflexively — "raising your own understanding," "raising yourself to your full capacity as a parent"? In written brand copy with sufficient context, yes. As a brand name encountered cold, without context? No. The reflexive "raising yourself" interpretation is linguistically available but not semantically natural. Brand names should not require context to point in the right direction.
+
+**Verdict on Direction: FAILS.** The name points forward and outward; the brand territory is backward and inward.
+
+### Criterion 4: Register
+
+**Does the name match the brand's emotional register (revelation, not therapy; warm, not clinical; adult, not child-coded)?**
+
+"Giants" is an ambition word — it belongs to the register of achievement brands, leadership platforms, and motivational content. The emotional register of "giant" is aspirational scale. The emotional register of this brand is intimate revelation.
+
+Consider the brand's emotional core: "I always sensed this. Now I see it." The feeling is quiet, personal, specific. Now consider the name: Raising Giants. The feeling is ambitious, outward, aspirational. These registers conflict.
+
+The name sounds like a leadership accelerator program or a startup founder community. It does not sound like a brand whose emotional proposition is the quiet experience of finally seeing a pattern you always sensed.
+
+**Verdict on Register: FAILS.** The name's emotional register is aspirational-ambitious; the brand territory's emotional register is revelatory-intimate.
+
+### Criterion 5: Multi-Product Fit
+
+**Does the name work as the umbrella for "The Mirror by [Brand]", "The Blueprint by [Brand]", "The Partner Match by [Brand]"?**
+
+The Branded House convention is: "The Mirror by Raising Giants." Does this naming combination cohere?
+
+"The Mirror by Raising Giants" — creates a slight semantic tension. A Mirror reflects you; Raising Giants implies producing something external. The juxtaposition reads as two different promises. A user encountering "The Blueprint by Raising Giants" would face a similar pull in two directions: Blueprint implies intentional building (which is fine), but for whom? For the giants you are raising, or for yourself?
+
+The multi-product test is: does the master brand name amplify or dilute each product name's promise? "The Mirror by Raising Giants" dilutes slightly. The brand name points outward; the product points inward.
+
+**Verdict on Multi-Product Fit: MIXED.** Technically functional, but creates mild semantic tension with inward-looking products. The conflict is manageable with strong brand copy, but it is friction rather than reinforcement.
+
+### Criterion 6: Misidentification Risk
+
+**How likely is a first-time encounter to misidentify this as a parenting-advice brand or a children's product?**
+
+The CONTEXT.md documents this as an *experienced* problem, not a theoretical one. Users have encountered the brand and concluded it is a parenting advice tool or a product for raising children. This is not a hypothetical edge case — it is the brand's documented primary misidentification problem.
+
+Given that the brand name is the first signal most potential users receive, and the default interpretation of "Raising Giants" is "raising great children," the misidentification risk is high and has real-world evidence behind it.
+
+**Verdict on Misidentification Risk: HIGH RISK.** Documented real-world occurrence.
+
+### Summary Assessment: "Raising Giants"
+
+| Criterion | Verdict |
+|-----------|---------|
+| Clarity | FAILS — default interpretation is "raising great children" |
+| Inclusion | FAILS — assumes parenting role; excludes child-free adults in target audience |
+| Direction | FAILS — forward and outward; brand is backward and inward |
+| Register | FAILS — aspirational-ambitious; brand is revelatory-intimate |
+| Multi-product fit | MIXED — technically functional but creates semantic tension |
+| Misidentification risk | HIGH — documented real-world misidentification as parenting advice brand |
+
+**The reframing hypothesis tested and rejected:** "Raising Giants" could mean "raising yourself to be a giant parent." This reading is grammatically available but not semantically natural. It requires the listener to:
+1. Reject the default transitive reading ("raising children")
+2. Apply the verb reflexively
+3. Redefine "giants" as the quality of the parents rather than the size of the children they produce
+
+Reframings that require this much interpretive work are brand taxes — they force every touchpoint to spend copy budget explaining the name before it can get to the actual brand promise. The brand's copy work is too important to spend it explaining the name.
+
+**Recommendation: Change the brand name.**
+
+"Raising Giants" fails five of six criteria under fresh evaluation with the multi-product millennial parent brand frame. The misidentification problem it creates is documented, not theoretical. The mismatch between the name's aspirational-outward register and the brand's revelatory-inward territory creates compounding friction at every brand touchpoint.
+
+---
+
+## Section 7B: Alternative Brand Name Evaluation
+
+Five alternatives are evaluated against the same six criteria.
+
+### Alternative A: Imprint
+
+**One-sentence statement:** The mark that your upbringing left on you — and the brand that helps you see it.
+
+**Six-criteria evaluation:**
+1. **Clarity:** YES — "imprint" communicates something done *to* you from outside, in the past. Self-understanding is the natural frame. First encounter produces the correct interpretation.
+2. **Inclusion:** YES — everyone has an imprint. No parenthood assumed. Child-free adults, non-traditional family structures, adults in therapy, adults not in therapy — all included.
+3. **Direction:** YES — "imprint" is definitionally past-tense. It describes what was left on you, not what you will produce. The brand's backward-looking, inward-pointing territory is baked into the word.
+4. **Register:** YES — warm, specific, slightly literary. "Imprint" is not clinical, not aspirational, not corporate. It has an intimacy that matches the brand territory. It reads as editorial and intelligent without being academic.
+5. **Multi-product fit:** STRONG — "The Mirror by Imprint," "The Blueprint by Imprint," "The Partner Match by Imprint." The master brand name amplifies rather than dilutes each product's promise. Imprint (your history) → The Mirror (you see it) → The Blueprint (you build from it) → The Partner Match (you compare it). The progression is coherent.
+6. **Misidentification risk:** LOW — "Imprint" is not a parenting advice term, not a children's brand signal, not a therapy platform name. The primary associations are: a mark that was made, a publishing imprint, the scientific phenomenon of imprinting in early development (which is adjacent to the brand territory in a useful way).
+
+**Domain and practical considerations:**
+- imprint.com: almost certainly taken (requires verification)
+- imprint.co, theimprint.co, imprint.io: likely available (requires verification)
+- "Imprint" in SEO competes with legal imprint pages, shoe brands, publishing imprints
+- Strong in English; publishing-heavy connotation in UK market is a mild complication
+
+**Risks/tradeoffs:**
+- SEO competition from multiple meanings requires brand investment to own the term
+- The publishing connotation may need managing for non-literary audiences
+- Less immediately "warm" than some alternatives — the word is precise and slightly spare
+
+**Rating: STRONG — semantically precise, passes all six criteria, most aligned with brand territory**
+
+---
+
+### Alternative B: Lineage
+
+**One-sentence statement:** Where you come from, and what it made you.
+
+**Six-criteria evaluation:**
+1. **Clarity:** MOSTLY — lineage communicates family origins and inheritance. The self-understanding frame is close but not exact. A subtitle or product framing would help.
+2. **Inclusion:** YES — everyone has a lineage. No parenthood assumed.
+3. **Direction:** YES — lineage is definitionally past-facing. It is about descent, ancestry, what came before.
+4. **Register:** MOSTLY — warm and dignified. Slightly more formal than the intimate register desired. Risks reading as genealogical rather than psychological.
+5. **Multi-product fit:** GOOD — "The Mirror by Lineage," "The Blueprint by Lineage." The brand name is broad enough. Slight risk that "lineage" implies the products are about ancestry rather than the psychological imprint of upbringing.
+6. **Misidentification risk:** MEDIUM — could be confused with a genealogy product (Ancestry, 23andMe) or a family history app.
+
+**Risks/tradeoffs:**
+- Genealogy brand confusion is a real risk given the cultural prominence of Ancestry.com and 23andMe
+- "Lineage" may attract an older audience than the millennial parent target
+- Domain availability likely requires lineage.co or similar (lineage.com is almost certainly taken)
+
+**Rating: GOOD — secondary to Imprint; the genealogy confusion risk is manageable but real**
+
+---
+
+### Alternative C: Formed
+
+**One-sentence statement:** You were formed by what happened to you — this is where you learn how.
+
+**Six-criteria evaluation:**
+1. **Clarity:** YES — "formed" is past-passive: something formed you. The self-understanding frame is immediate.
+2. **Inclusion:** YES — everyone was formed by something. No parenthood assumed.
+3. **Direction:** YES — past-tense, passive, inward. The name performs the brand's orientation.
+4. **Register:** GOOD — conversational, human, slightly literary without being academic. "Formed" feels warm and humble rather than ambitious or clinical.
+5. **Multi-product fit:** STRONG — "The Mirror by Formed," "The Blueprint by Formed." The master brand name (formed — the passive process of being shaped) amplifies each product's promise. Simple, clean.
+6. **Misidentification risk:** LOW — "Formed" does not immediately evoke parenting advice, children's products, or therapy platforms.
+
+**Risks/tradeoffs:**
+- "Formed" is a very spare word — may lack the weight to hold a product portfolio over time
+- Could be confused with a religion-adjacent brand ("formation" is a spiritual discipline term in Catholicism and some Christian traditions)
+- formed.com: likely available or acquirable (less high-profile than imprint.com)
+- Less distinctively "warm" than Imprint — more neutral in register
+
+**Rating: GOOD — strong criteria pass; spiritual formation association is a mild risk to manage**
+
+---
+
+### Alternative D: Origin
+
+**One-sentence statement:** Your origin story — what it was, what it means, what you build from it.
+
+**Six-criteria evaluation:**
+1. **Clarity:** MOSTLY — "origin" communicates starting point, where something comes from. Self-understanding frame is accessible but requires slight extension.
+2. **Inclusion:** YES — universal. No parenthood implied.
+3. **Direction:** YES — origin is definitionally backward-facing.
+4. **Register:** NEUTRAL — "origin" is a slightly more neutral and aspirational word than "imprint" or "formed." It risks reading as a tech brand or productivity tool.
+5. **Multi-product fit:** GOOD — broad enough to hold any product in the portfolio.
+6. **Misidentification risk:** MEDIUM — multiple products and brands already use "Origin" (Origin Energy, Origin fitness, various apps). Brand ownership would be difficult.
+
+**Risks/tradeoffs:**
+- Highly competitive term — many brands have claimed "Origin" across multiple categories
+- The word's associations include tech, science, and productivity — not primarily psychological or editorial
+- Domain competition would be significant (origin.com is taken and well-known)
+
+**Rating: ACCEPTABLE — functional but not distinctive; brand ownership challenge is significant**
+
+---
+
+### Alternative E: Provenance
+
+**One-sentence statement:** The brand that traces what shaped you — with the precision of a provenance document.
+
+**Six-criteria evaluation:**
+1. **Clarity:** PARTIALLY — "provenance" communicates origins and history (wine provenance, art provenance), but is not immediately self-referential. Requires a moment's extension.
+2. **Inclusion:** YES — universal.
+3. **Direction:** YES — provenance is definitionally about the past and origin.
+4. **Register:** HIGH — "provenance" is a warm, intelligent, slightly elevated word. It carries associations of care, specificity, authenticity, and a kind of connoisseur quality. This matches the brand's aspiration to meet the audience's existing sophistication.
+5. **Multi-product fit:** STRONG — the provenance metaphor (the documented history of what shaped something) holds all three products elegantly.
+6. **Misidentification risk:** LOW — "Provenance" does not evoke parenting advice, children's products, or therapy.
+
+**Risks/tradeoffs:**
+- "Provenance" is a slightly unfamiliar word for some audiences — may require brand copy to activate its meaning
+- The wine/art association could read as precious or exclusive if not carefully framed
+- provenance.com may be taken (requires verification); provenanceapp.com or similar likely available
+
+**Rating: INTERESTING — distinctive and intelligent; the register is close to ideal but requires more copy investment to activate the unfamiliar word**
+
+---
+
+### Brand Name Recommendation
+
+**Primary recommendation: Change to "Imprint."**
+
+Imprint passes all six evaluation criteria cleanly. It is past-tense by definition, inward-pointing by grammar, inclusive by semantics, warm and specific by register, and amplifies rather than dilutes each product name in the portfolio. The word's semantic precision is exceptional: an imprint is exactly what upbringing leaves on a person, and seeing your imprint is exactly what the products help you do.
+
+"Raising Giants" fails five of six criteria under both the old single-product framing and the new multi-product framing. The reframing hypothesis (raising yourself) requires three interpretive steps that a brand name should not require. The misidentification problem is documented and real.
+
+**Ranked alternatives:**
+1. **Imprint** — primary recommendation; strongest criteria pass; most semantically precise
+2. **Formed** — secondary; strong but slightly spare; spiritual association risk is manageable
+3. **Lineage** — tertiary; good criteria pass; genealogy confusion risk requires careful brand differentiation
+4. **Provenance** — interesting; distinctive register; requires more copy investment to activate
+5. **Origin** — functional but not distinctive; brand ownership challenge is significant
+
+**Implementation note (not this document's responsibility to resolve):** Domain acquisition, SEO migration, metadata update, and social handle changes are Plan 06-05's scope. This positioning recommendation is: the name should change, and Imprint is the strongest replacement candidate. Domain availability determines which alternative to pursue if Imprint is unavailable.
+
+---
+
+## Section 8: Product Name Evaluation
+
+### Evaluation Framework
+
+Each product name is evaluated against the chosen brand territory: **digital tools for parents who want to understand themselves.** The question is whether each product name serves that territory or creates friction with it.
+
+### The Mirror
+
+**Does it serve a revelation/self-understanding brand?**
+
+Yes — definitively. The mirror metaphor is load-bearing for the brand's core promise. A mirror shows you what is already true. It does not prescribe, evaluate, or recommend. The product shows you a specific, research-grounded reflection of the parenting you received — which is precisely what a mirror does for the face.
+
+The metaphor is immediately understood. It is visually generative (illustration of looking backward at a reflection). It is semantically precise to the experience of revelation: you look, you see, you understand something that was always there.
+
+**Does it create any friction with the brand territory?**
+
+Minimal. The only risk is that the mirror metaphor becomes so dominant that it bleeds into the master brand's visual identity — illustration of reflective surfaces, looking-glass imagery — which would over-commit the master brand to The Mirror product. This is a visual direction management risk, not a naming risk.
+
+**Recommendation: KEEP.** The Mirror is exceptionally well-named for this brand territory.
+
+---
+
+### The Blueprint
+
+**Does it serve a revelation/self-understanding brand?**
+
+Yes — with appropriate framing. The blueprint metaphor correctly positions this product as the next step after The Mirror. You understand what you received (Mirror); The Blueprint helps you build intentionally from that understanding. The shift from revelation to intentional action is the right semantic move for a second paid product.
+
+The metaphor is clear: blueprints are precise, expert-designed, and built from deep understanding of the underlying structure. "Your blueprint" implies both the plan you work from and the structural document of what you are made of.
+
+**Does it create any friction with the brand territory?**
+
+Some. "Blueprint" carries a slight association with parenting advice — "a blueprint for better parenting" is a recognizable phrase. The brand framing must make clear that The Blueprint is built on self-understanding, not on parenting prescriptions. The copy responsibility here is clear: "The Blueprint is not a parenting guide. It is your personal guide to parenting from your own self-knowledge." This is a manageable framing challenge, not a fundamental name problem.
+
+**Recommendation: KEEP** — with clear framing in product copy that The Blueprint is built from self-understanding, not parenting advice.
+
+---
+
+### The Partner Match
+
+**Does it serve a revelation/self-understanding brand?**
+
+Partially. The product's value — helping two partners understand how their respective upbringings interact, conflict, and complement each other — is genuinely interesting and well within the brand territory. The insight it produces ("I always sensed our upbringings were colliding somewhere. Now I see where.") is revelation in the correct register.
+
+But "Match" is not the word for that experience. "Match" is the vocabulary of dating apps, compatibility scores, and the question "are we a good match?" — which implies a verdict rather than an understanding. The product's value is not telling you whether you and your partner "match" but helping you both see each other's psychological history and understand the dynamics it produces.
+
+**Does it create any friction with the brand territory?**
+
+Yes — notable friction. "Partner Match" reads as relationship-compatibility quiz, which is closer to the getrelatio.com register than the Raising Giants brand territory. Users encountering the name for the first time may expect a compatibility assessment (are you and your partner compatible?) rather than a shared revelation experience (where do your two histories meet?).
+
+**Alternative name considerations:** The product deserves a name that encodes the shared-revelation experience rather than the compatibility-assessment experience. Possibilities:
+- **The Intersection** — where two histories meet; implies the specific place rather than the verdict
+- **The Dialogue** — the conversation that two self-understanding partners can now have; revelation becomes relational
+- **The Confluence** — two rivers meeting; beautiful metaphor for two upbringings creating a shared dynamic
+- **The Overlap** — where your histories share territory
+
+**Recommendation: CHANGE at Product 3 development.** The current name "The Partner Match" is functional enough as a placeholder but creates misidentification risk (compatibility-quiz register) and is semantically weaker than the product's actual value proposition. The name change should happen before the product builds a following under the current name. "The Dialogue" or "The Confluence" are the strongest alternatives.
+
+---
+
+## Summary: Brand Territory and Name Decisions Locked
+
+The positioning narrative establishes the following decisions for subsequent visual direction work:
+
+### Brand Territory (locked for Plan 06-04)
+
+**Territory:** Digital tools for parents who want to understand themselves — not just their children.
+
+**Competitive claim:** The only digital product brand that occupies the parent-centric + self-understanding quadrant across all 16 mapped millennial parenting products.
+
+**Audience:** Parents who treat themselves as worth understanding; self-reflective adults whose primary question is not "how do I raise better children?" but "what shaped me, and what does it mean?"
+
+**Brand architecture:** Branded House (Apple model) — master brand carries trust; products are identified as belonging to the master brand; naming convention is "The [Product] by [Brand]."
+
+### Emotional Core (locked for Plan 06-04)
+
+**Brand-level feeling:** The experience of seeing something about yourself that you have always carried but never had a name for.
+
+**Primary articulation:** "I always sensed this. Now I see it." (use as internal creative standard and selectively in primary brand communication; not a tagline for all surfaces).
+
+**The brand is:** Research-grounded. Past-lens. Language-giving. Revelatory, not prescriptive.
+
+**The brand is not:** Therapy. Parenting advice. Personality entertainment. Wellness subscription.
+
+### Name Decisions (locked for Plan 06-04)
+
+| Name | Decision | Reasoning |
+|------|----------|-----------|
+| Raising Giants | CHANGE | Fails 5/6 criteria under fresh evaluation; documented misidentification problem; aspirational-outward register conflicts with revelatory-inward territory |
+| Imprint (recommended) | ADOPT pending domain verification | Passes all 6 criteria; semantically precise to the brand territory; amplifies all product names |
+| The Mirror | KEEP | Exceptionally well-named; load-bearing metaphor for core brand promise |
+| The Blueprint | KEEP | Good fit with appropriate framing; "blueprint for self-knowledge" not "parenting guide" |
+| The Partner Match | CHANGE at Product 3 build | "Match" is compatibility-quiz register; the product's value is shared revelation, not verdict; rename before the product builds following |
+
+### Unlocked for Plan 06-04
+
+Visual direction can begin immediately. The brief should translate this territory into concrete visual choices:
+
+- How "parent who looks inward" is encoded visually (warm, editorial, adult — not child-coded, not clinical)
+- How research credibility appears without institutional distance
+- How emotional intimacy is achieved without wellness-platform aesthetics
+- How the visual system scales across three products without becoming product-specific at the brand level
+- How terracotta, Cormorant Garamond, and editorial line illustration operate as a coherent master brand system
+
+The brand territory is locked. The name recommendation is clear. Plan 06-04 has a firm foundation.
 
 ---
 
 *Document: 06-03-positioning-narrative.md*
 *Phase: 06-brand-positioning-research-and-visual-direction*
-*Created: 2026-02-27*
-*Status: Complete — this is the primary deliverable of Phase 6; all subsequent visual and execution work builds from this*
+*Reworked: 2026-02-27*
+*Status: Complete — this is the primary deliverable of Phase 06-03; all downstream visual direction builds from this territorial claim*
