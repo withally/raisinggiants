@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v2.0
 milestone_name: milestone
 status: unknown
-last_updated: "2026-02-27T14:39:09.635Z"
+last_updated: "2026-02-27T14:48:21.921Z"
 progress:
   total_phases: 8
   completed_phases: 5
   total_plans: 25
-  completed_plans: 21
+  completed_plans: 22
 ---
 
 # Project State
@@ -66,6 +66,7 @@ Progress: [█████████░] 95% (23/~24 plans estimated)
 | Phase 06 P03 | 5 | 2 tasks | 1 files |
 | Phase 06 P04 | 5 | 2 tasks | 1 files |
 | Phase 06 P03 | 6 | 2 tasks | 1 files |
+| Phase 06 P04 | 5 | 2 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -171,6 +172,10 @@ Recent decisions affecting current work:
 - [Phase 06]: [06-03-TERR] Brand territory locked: 'digital tools for parents who want to understand themselves' — permanent, defensible, product-neutral; synthesized from Territory 2 and Territory 3 candidates
 - [Phase 06]: [06-03-ARCH] Branded House architecture — 'The [Product] by Kin' naming convention; master brand carries all trust; new products evaluated by mission-fit not category-fit
 - [Phase 06]: [06-03-CORE] Emotional core at brand level: 'I always sensed this. Now I see it.' — revelation not repair; works across Mirror, Blueprint, and Partner Match
+- [Phase 06]: [06-04-NEW-A] Deep Teal #0D3D3A replaces terracotta as primary brand color — oceanic depth + precision + 2026 premium digital register
+- [Phase 06]: [06-04-NEW-D] Cormorant Garamond REMOVED — bookish/print-editorial; replaced by Canela or contemporary display serif designed for screens
+- [Phase 06]: [06-04-NEW-F] Illustration register: School of Life loose editorial OUT; refined craft geometric-organic or minimal figurative IN
+- [Phase 06]: [06-04-NEW-G] Layout: bento-grid + large typographic heroes + glassmorphism + scroll-triggered motion — 2026 premium digital patterns
 
 ### Roadmap Evolution
 
