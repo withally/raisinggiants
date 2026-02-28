@@ -18,15 +18,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-02-25)
 
 **Core value:** Adults feel deeply seen and understood about the parenting they *received* — the personalized output surfaces patterns they've always sensed but never had language for, grounded in credible research from top parenting experts.
-**Current focus:** Phase 04 in progress — Brand Positioning Research and Visual Direction
+**Current focus:** Phase 04 complete — Brand Positioning Research. Phase 05 (Landing Page Rebuild) next.
 **Product:** The Mirror (free) — v1 launch scope
 
 ## Current Position
 
-Phase: 04 of 6 (Brand Positioning Research and Visual Direction) — IN PROGRESS
-Plan: 4 of 5 complete — 04-05 (rebrand execution plan) not yet executed
-Status: Plans 01-04 complete. 04-04 executed 2026-02-28 — design system explored via 11 skill searches, visual direction brief written for all 8 landing sections. 04-05 ready for execution.
-Last activity: 2026-02-28 - Phase restructuring: old Phase 6 → Phase 4, old Phase 4 (landing page) deleted for rebuild as Phase 5
+Phase: 05 of 6 (Landing Page Rebuild) — NOT STARTED
+Status: Phase 04 (Brand Positioning) complete (3/3 plans). Old landing page nuked — clean slate. Phase 05 needs discuss → plan → execute.
+Last activity: 2026-02-28 - Phase restructuring + clean slate: old Phase 6 → Phase 4, old landing page deleted, visual direction brief deleted (carried too much baggage)
 
 Progress: [██████████] 100% (24/~24 plans estimated)
 
@@ -44,7 +43,7 @@ Progress: [██████████] 100% (24/~24 plans estimated)
 | 0. Archetype Framework | 5/5 (complete) | 40 min | 8 min |
 | 1. Data Foundation | 2/2 (complete) | 27 min | 13 min |
 | 2. Quiz Engine | 5/5 (complete) | 30 min | 6 min |
-| 4. Landing Page Polish | 2/2 (complete) | 23 min | 11 min |
+| 4. Brand Positioning | 3/3 (complete) | ~15 min | 5 min |
 
 **Recent Trend:**
 - Last 5 plans: 02-01 (15 min), 02-02 (5 min), 02-03 (5 min), 02-04 (5 min), 04-01 (6 min)
@@ -90,17 +89,6 @@ Recent decisions affecting current work:
 - **[PIVOT-09]** RSLT-02 (blurred PDF previews) and RSLT-04 (partner dialogue teaser) deleted — incompatible with free full result
 - **[PIVOT-10]** Product 2 coming-soon page (RSLT-10) replaces purchase CTA — captures Blueprint launch interest
 
-**Phase 04-01 Landing Page (2026-02-25):**
-- **[04-01-A]** Editorial warm aesthetic: amber-50/stone-900 alternating section backgrounds for visual rhythm
-- **[04-01-B]** KOL researcher data defined as inline const array in KOLCredibility.tsx, not imported from archetypes.ts
-- **[04-01-C]** Named exports for all landing components (`export function`) for explicit import pattern in page.tsx
-- **[04-01-D]** 8 named researchers displayed: Baumrind, Gottman, Siegel, Ainsworth, Kennedy, Tsabary, van der Kolk, Rohner
-
-**Phase 04-02 Landing Page Typography (2026-02-25):**
-- **[04-02-A]** Cormorant Garamond chosen as display font — editorial warmth, elegant italic forms, strong contrast with Geist Sans
-- **[04-02-B]** Display font loaded via next/font/google as --font-display CSS variable (zero render-blocking, display: swap)
-- **[04-02-C]** Display font applied via inline style prop on headlines — avoids Tailwind v4 @theme coupling
-
 **Phase 025-02 Cultural Overlay Rewrite (2026-02-26):**
 - **[025-02-A]** expressionModifier register: factual/observational, not personal second-person — describes how archetype qualities manifested in cultural context, then invites reader in with "you may have felt" or "you likely grew up with"
 - **[025-02-B]** strengthsInContext across all 45 overlays: "gave you / giving you" framing — what growing up with this gave the child
@@ -135,53 +123,20 @@ Recent decisions affecting current work:
 - **[01-01]** Dual Supabase client pattern: client.ts (browser) and server.ts (service_role)
 - **[02-04]** SSR-safe Zustand hydration pattern established
 - **[02-04]** store.reset() not called after quiz completion — result page may need localStorage session data
-- [Phase 04]: [04-02-A] Cormorant Garamond chosen as display font — editorial warmth and elegant italic forms for Raising Giants brand
-- [Phase 04]: [04-02-B] Display font loaded via next/font/google as --font-display CSS variable (zero render-blocking, display: swap)
-- [Phase 04]: [04-02-C] Display font applied via inline style prop on headlines — avoids Tailwind v4 @theme coupling
-- [Phase 04]: [04-02-D] SVG sketch portrait icons created for all 8 KOL researchers, each with unique editorial visual metaphor for their contribution
-- [Phase 04]: [06-02-A] Cormorant Garamond confirmed as correct display font — aligned with all high-depth reference brands
-- [Phase 04]: [06-02-B] Accent color specificity needed — terracotta or aged gold more semantically aligned with brand territory than generic amber
-- [Phase 04]: [06-02-E] Vocabulary gift as core brand mechanism — archetype names must be framed as naming unnamed experiences, not just labels
-- [Phase 04]: [06-01-A] Deep+warm quadrant is the unoccupied positioning territory for Raising Giants across all 15 mapped competitors
-- [Phase 04]: [06-01-B] Past-lens framing (understanding parenting received) is the single strongest differentiator — zero competitors occupy this lens
-- [Phase 04]: [06-01-C] Revelation vs. validation framing — Raising Giants must position as revelation product not personality validation tool
-- [Phase 04]: [06-03-A] Brand name change recommended: Raising Giants → Imprint — fails all 4 criteria (clarity, inclusion, direction, register)
-- [Phase 04]: [06-03-B] Brand territory locked: grounded self-discovery — intersection of clinical credibility and emotional intimacy
-- [Phase 04]: [06-03-C] Emotional core locked: 'I always sensed this. Now I see it.' — revelation not validation or improvement
-- [Phase 04]: [06-03-E/F/G] Product names: The Mirror (keep), The Blueprint (keep), The Partner Match (change at Product 3 build)
-- [Phase 04]: [06-04-A] Palette: terracotta replaces amber — semantically encodes 'grounded, past, earthen' more precisely
-- [Phase 04]: [06-04-B] Cormorant Garamond: KEEP — increase italic use for emotional emphasis; font correctly chosen, underutilized
-- [Phase 04]: [06-04-D] Illustration: editorial line illustration (School of Life style) replacing abstract geometric SVGs
-- [Phase 04]: [06-05-A] Rebrand requires two-layer color migration — semantic token update (globals.css Phase A) + hardcoded Tailwind class replacements (component files Phase B) — because codebase uses both patterns
-- [Phase 04]: [06-05-B] Illustration redesign implementation path (PNG replacement vs. inline SVG) deferred to Phase C decision at implementation time
-- [Phase 04]: [06-05-C] Domain acquisition (for Raising Giants → Imprint rename) is a user action required before metadataBase URL change; metadata string changes (title/OG/twitter) can proceed immediately
-- [Phase 04]: [06-01-R1] Parent-centric + self-understanding quadrant is empty across all 16 millennial parenting digital products — supply gap, not demand gap
-- [Phase 04]: [06-01-R2] Good Inside is nearest competitor but occupies behavioral-advice territory, not revelation territory — differentiable, not competing
-- [Phase 04]: [06-01-R3] Past-lens framing (understanding parenting received) confirmed as single strongest differentiator — zero competitors engage this dimension
-- [Phase 04]: [06-02-ARCH] Mission-as-architecture (Patagonia model) confirmed as correct multi-product architecture for Raising Giants — brand coherence from mission clarity, not product adjacency
-- [Phase 04]: [06-02-KOL] KOL-anchored brand building explicitly identified as anti-pattern — trust must anchor to research framework and methodology, not founder personality
-- [Phase 04]: [06-02-ILLUS] Illustration must shift from geometric abstraction to representational editorial line illustration (School of Life register) for interior psychological state depiction
-- [Phase 04]: [06-03-NEW-A] Brand territory locked: 'digital tools for parents who want to understand themselves' — replaces old 'grounded self-discovery' territory
-- [Phase 04]: [06-03-NEW-B] Emotional core at brand level: the experience of seeing something you always carried but never had a name for — 'I always sensed this. Now I see it.' is primary articulation, not universal tagline
-- [Phase 04]: [06-03-NEW-C] Brand name: change Raising Giants to Imprint — fails 5/6 criteria under fresh multi-product evaluation; documented real-world misidentification confirmed
-- [Phase 04]: [06-03-NEW-D] Product names: The Mirror (keep), The Blueprint (keep with self-knowledge framing), The Partner Match (change at Product 3 build — 'match' is compatibility-quiz register)
-- [Phase 04]: [06-04-A] Terracotta #B05A3A replaces amber — semantically encodes 'earthen, past, permanent' not 'startup warm'; direct encoding of brand territory 'the ground on which you were built'
-- [Phase 04]: [06-04-B] Cormorant Garamond: KEEP — dramatically increase italic utilization; font correctly chosen, critically underdeployed; italic form is the brand's warmest typographic gesture
-- [Phase 04]: [06-04-G] Tagline: 'Finally, the words for it.' recommended as primary option — encodes vocabulary gift mechanism; works across Mirror, Blueprint, Partner Match
-- [Phase 04]: [06-04-E] Brand illustration subject: parent interiority (not product metaphor) — MirrorIllustration.tsx redesign required from reflection metaphor to brand-level scene
-- [Phase 04]: [06-03-KIN] Brand name: CHANGE from Raising Giants to Kin — founder decision; one syllable; warm familial register; amplifies all product names; supersedes Imprint recommendation from prior iteration
-- [Phase 04]: [06-03-TERR] Brand territory locked: 'digital tools for parents who want to understand themselves' — permanent, defensible, product-neutral; synthesized from Territory 2 and Territory 3 candidates
-- [Phase 04]: [06-03-ARCH] Branded House architecture — 'The [Product] by Kin' naming convention; master brand carries all trust; new products evaluated by mission-fit not category-fit
-- [Phase 04]: [06-03-CORE] Emotional core at brand level: 'I always sensed this. Now I see it.' — revelation not repair; works across Mirror, Blueprint, and Partner Match
-- [Phase 04]: [06-04-NEW-A] Deep Teal #0D3D3A replaces terracotta as primary brand color — oceanic depth + precision + 2026 premium digital register
-- [Phase 04]: [06-04-NEW-D] Cormorant Garamond REMOVED — bookish/print-editorial; replaced by Canela or contemporary display serif designed for screens
-- [Phase 04]: [06-04-NEW-F] Illustration register: School of Life loose editorial OUT; refined craft geometric-organic or minimal figurative IN
-- [Phase 04]: [06-04-NEW-G] Layout: bento-grid + large typographic heroes + glassmorphism + scroll-triggered motion — 2026 premium digital patterns
-- [Phase 04]: [06-05-APPROVED] Full Phase 6 direction approved by user 2026-02-27 — Kin brand name, Deep Teal/Merlot/Canela/Cloud White palette, bento-grid layout, A/B/C phased rebrand execution plan all confirmed as developer work order
-- [Phase 04]: [06-04-TYPO] PP Pangaia KEEP after comparison-based evaluation against 15 Google Font alternatives — superior weight range + humanist warmth + Neo-Minimalism hero-scale capability
-- [Phase 04]: [06-04-COLOR] Existing Kin palette VALIDATED — skill color searches confirmed Deep Teal + Burnished Amber + Cloud White direction; amber and merlot use rebalanced (emotional emphasis only)
-- [Phase 04]: [06-04-TREND] Trend formula confirmed via 11 skill searches: #5 Neo-Minimalism as structure (Exaggerated Minimalism style), #6 Emotion-Led as content (Nature Distilled texture), #9 Raw Authenticity as craft signals
-- [Phase 04]: [06-04-SECTION] ONE bold typographic moment per section rule — prevents competing focal points; each section has one element that commands full attention
+**Phase 04 Brand Positioning — Final Decisions (2026-02-28):**
+- **[04-KIN]** Brand name: Kin — founder decision; one syllable; warm familial register; supersedes Raising Giants and Imprint
+- **[04-TERR]** Brand territory: "digital tools for parents who want to understand themselves" — permanent, defensible, product-neutral
+- **[04-ARCH]** Branded House architecture — "The [Product] by Kin" naming convention; master brand carries all trust
+- **[04-CORE]** Emotional core: "I always sensed this. Now I see it." — revelation not repair
+- **[04-PROD]** Product names: The Mirror (keep), The Blueprint (keep), The Partner Match (change at Product 3 build)
+- **[04-POS]** Deep+warm quadrant is unoccupied positioning territory across 16 mapped competitors
+- **[04-DIFF]** Past-lens framing (understanding parenting received) is single strongest differentiator — zero competitors
+- **[04-REV]** Revelation vs. validation framing — position as revelation product, not personality validation
+- **[04-VOCAB]** Vocabulary gift as core brand mechanism — archetype names frame unnamed experiences
+- **[04-KOL]** KOL-anchored brand building is anti-pattern — trust anchors to research framework, not founder personality
+- **[04-MISSION]** Mission-as-architecture (Patagonia model) for multi-product coherence
+
+NOTE: All visual direction decisions (palette, typography, illustration, layout) were deleted 2026-02-28 — carried too much baggage from old implementation. Visual direction will be established fresh during Phase 5.
 
 ### Roadmap Evolution
 
@@ -215,5 +170,5 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-02-28
-Stopped at: Phase restructured — old Phase 6 (brand positioning) → Phase 4. Plans 01-04 complete. Ready for 04-05 (rebrand execution plan).
-Resume file: .planning/phases/04-brand-positioning-research-and-visual-direction/04-04-visual-direction-brief.md — visual direction spec for all 8 sections
+Stopped at: Phase 04 complete (3/3). Old landing page nuked. Clean slate for Phase 05 (Landing Page Rebuild).
+Resume with: /gsd:discuss-phase 5
