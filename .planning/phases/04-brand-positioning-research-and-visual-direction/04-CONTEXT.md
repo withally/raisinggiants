@@ -1,4 +1,4 @@
-# Phase 6: Brand Positioning Research and Visual Direction - Context
+# Phase 4: Brand Positioning Research and Visual Direction - Context
 
 **Gathered:** 2026-02-27
 **Status:** Ready for planning (REWORKED — pivot from self-discovery to multi-product millennial parent brand)
@@ -10,7 +10,7 @@ Research and define brand positioning, competitive landscape, visual direction, 
 
 The current brand feels generic/template-like. It needs to evolve into something that owns the space of **digital products for millennial parents** — not just a self-discovery quiz tool.
 
-**Critical pivot:** The previous Phase 6 work positioned around "grounded self-discovery." This was too narrow — it anchored the brand to Product 1's lens. The real brand play is owning the millennial parent space with a multi-product portfolio.
+**Critical pivot:** The previous Phase 4 work positioned around "grounded self-discovery." This was too narrow — it anchored the brand to Product 1's lens. The real brand play is owning the millennial parent space with a multi-product portfolio.
 
 </domain>
 
@@ -80,5 +80,5 @@ None — discussion stayed within phase scope
 
 ---
 
-*Phase: 06-brand-positioning-research-and-visual-direction*
+*Phase: 04-brand-positioning-research-and-visual-direction*
 *Context gathered: 2026-02-27 (reworked)*

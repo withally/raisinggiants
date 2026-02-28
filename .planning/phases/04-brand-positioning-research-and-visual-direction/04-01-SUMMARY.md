@@ -1,5 +1,5 @@
 ---
-phase: 06-brand-positioning-research-and-visual-direction
+phase: 04-brand-positioning-research-and-visual-direction
 plan: 01
 subsystem: brand-strategy
 tags: [competitive-landscape, positioning-map, gap-analysis, millennial-parenting, market-research]
@@ -7,7 +7,7 @@ tags: [competitive-landscape, positioning-map, gap-analysis, millennial-parentin
 dependency_graph:
   requires: []
   provides:
-    - "06-01-competitive-landscape.md — 16-product competitive landscape with 2x2 positioning map and gap analysis"
+    - "04-01-competitive-landscape.md — 16-product competitive landscape with 2x2 positioning map and gap analysis"
     - "Evidence base: parent-centric + self-understanding quadrant is empty across all 16 products"
     - "Demand evidence: 4 independent signals confirming whitespace is supply-constrained, not demand-constrained"
   affects:
@@ -24,7 +24,7 @@ tech_stack:
 key_files:
   created: []
   modified:
-    - ".planning/phases/06-brand-positioning-research-and-visual-direction/06-01-competitive-landscape.md"
+    - ".planning/phases/04-brand-positioning-research-and-visual-direction/04-01-competitive-landscape.md"
 
 decisions:
   - "[06-01-R1] The parent-centric + self-understanding quadrant is empty across all 16 millennial parenting digital products surveyed — supply gap, not demand gap"
@@ -48,7 +48,7 @@ metrics:
 
 ## What Was Built
 
-The competitive landscape document (`06-01-competitive-landscape.md`) has been completely replaced. The prior version profiled self-discovery/personality assessment competitors (16Personalities, Enneagram Institute, etc.) under the old single-product self-discovery scope. This version profiles 16 millennial parenting digital products across 5 competitive segments.
+The competitive landscape document (`04-01-competitive-landscape.md`) has been completely replaced. The prior version profiled self-discovery/personality assessment competitors (16Personalities, Enneagram Institute, etc.) under the old single-product self-discovery scope. This version profiles 16 millennial parenting digital products across 5 competitive segments.
 
 **The 16 products profiled:**
 - Segment A (Logistics): Huckleberry, Wonder Weeks, Kinedu, The Bump
@@ -96,14 +96,14 @@ The 2x2 map plots all 16 products in clusters and clearly identifies the parent-
 
 None — plan executed exactly as written.
 
-The plan specified replacing the existing 06-01-competitive-landscape.md (old self-discovery scope) with a new document profiling millennial parenting digital products. This was done. Both Task 1 (product profiles) and Task 2 (positioning map + gap analysis) were completed in a single document write, which resulted in a single commit (7dbc5bd) covering both tasks because the tasks write to the same file.
+The plan specified replacing the existing 04-01-competitive-landscape.md (old self-discovery scope) with a new document profiling millennial parenting digital products. This was done. Both Task 1 (product profiles) and Task 2 (positioning map + gap analysis) were completed in a single document write, which resulted in a single commit (7dbc5bd) covering both tasks because the tasks write to the same file.
 
 ---
 
 ## Self-Check: PASSED
 
 Files created/modified:
-- [x] `.planning/phases/06-brand-positioning-research-and-visual-direction/06-01-competitive-landscape.md` — exists and contains 16 product profiles, positioning map, gap analysis, competitive summary table, implications section
+- [x] `.planning/phases/04-brand-positioning-research-and-visual-direction/04-01-competitive-landscape.md` — exists and contains 16 product profiles, positioning map, gap analysis, competitive summary table, implications section
 
 Commits:
 - [x] 7dbc5bd — `feat(06-01): profile 16 millennial parenting digital products with full-funnel analysis`

@@ -823,8 +823,8 @@ Evidence: Apple (the canonical example), School of Life (books series within bra
 
 ---
 
-*Document: 06-02-reference-brand-gallery.md*
-*Phase: 06-brand-positioning-research-and-visual-direction*
+*Document: 04-02-reference-brand-gallery.md*
+*Phase: 04-brand-positioning-research-and-visual-direction*
 *Created/Revised: 2026-02-27*
-*Status: Complete — feeds into 06-04-PLAN.md (visual direction brief)*
+*Status: Complete — feeds into 04-04-PLAN.md (visual direction brief)*
 *Replaces: Previous version scoped to self-discovery aesthetic lens only*

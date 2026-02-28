@@ -1,19 +1,19 @@
 ---
-phase: 06-brand-positioning-research-and-visual-direction
+phase: 04-brand-positioning-research-and-visual-direction
 plan: "02"
 subsystem: brand-research
 tags: [brand, reference-brands, millennial-parent, visual-direction, multi-product]
 dependency_graph:
-  requires: [06-01-competitive-landscape.md]
-  provides: [06-02-reference-brand-gallery.md]
-  affects: [06-04-visual-direction-brief.md]
+  requires: [04-01-competitive-landscape.md]
+  provides: [04-02-reference-brand-gallery.md]
+  affects: [04-04-visual-direction-brief.md]
 tech_stack:
   added: []
   patterns: [brand-gallery, pattern-synthesis, anti-pattern-synthesis, design-direction-signals]
 key_files:
   created: []
   modified:
-    - .planning/phases/06-brand-positioning-research-and-visual-direction/06-02-reference-brand-gallery.md
+    - .planning/phases/04-brand-positioning-research-and-visual-direction/04-02-reference-brand-gallery.md
 decisions:
   - "[06-02-A-REVISED] Reference brands now evaluated through millennial parent lens — 10 brands spanning parenting-specific (Good Inside, Big Life Journal, Motherly), editorial (School of Life, Kinfolk), wellness (Brene Brown, Headspace), and architecture models (Patagonia, Apple, getrelatio)"
   - "[06-02-ARCH] Mission-as-architecture (Patagonia model) is the correct multi-product architecture for Raising Giants — brand coherence comes from mission clarity, not product adjacency"
@@ -33,7 +33,7 @@ metrics:
 
 ## What Was Built
 
-Completely replaced the previous 06-02-reference-brand-gallery.md (which evaluated brands through a self-discovery aesthetic lens only) with a comprehensive reference brand gallery scoped to the multi-product millennial parent brand opportunity.
+Completely replaced the previous 04-02-reference-brand-gallery.md (which evaluated brands through a self-discovery aesthetic lens only) with a comprehensive reference brand gallery scoped to the multi-product millennial parent brand opportunity.
 
 The new document covers:
 
@@ -105,7 +105,7 @@ Each brand is profiled across all 8 required dimensions:
 ## Self-Check
 
 **Files exist:**
-- .planning/phases/06-brand-positioning-research-and-visual-direction/06-02-reference-brand-gallery.md — verified (contains 10 brand profiles, all synthesis sections)
+- .planning/phases/04-brand-positioning-research-and-visual-direction/04-02-reference-brand-gallery.md — verified (contains 10 brand profiles, all synthesis sections)
 
 **Commits exist:**
 - 4ee0caa — feat(06-02): rewrite reference brand gallery through millennial parent lens

@@ -571,4 +571,4 @@ The competitive landscape has established strong visual associations: child-cent
 
 *Generated: 2026-02-27*
 *Plan: 06-01 — Competitive Landscape Audit (REWORKED: Millennial Parenting Digital Products)*
-*Replaces: Prior 06-01-competitive-landscape.md (old scope: self-discovery/personality assessment competitors)*
+*Replaces: Prior 04-01-competitive-landscape.md (old scope: self-discovery/personality assessment competitors)*

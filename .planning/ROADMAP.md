@@ -2,7 +2,7 @@
 
 ## Overview
 
-From clinical framework to working product: Phase 0 defines the archetype system with Sophia, Phases 1-2 build the data and quiz engine, Phase 2.5 rewrites all archetype copy to the parents-lens framing, Phase 3 builds the full free Mirror result page (email gate, complete result, Product 2 CTA), Phase 4 builds the landing page, and Phase 5 covers marketing and launch strategy. Every phase delivers a coherent, verifiable capability before the next phase begins.
+From clinical framework to working product: Phase 0 defines the archetype system with Sophia, Phases 1-2 build the data and quiz engine, Phase 2.5 rewrites all archetype copy to the parents-lens framing, Phase 3 builds the full free Mirror result page (email gate, complete result, Product 2 CTA), Phase 4 establishes brand positioning and visual direction, Phase 5 rebuilds the landing page against the brand direction, and Phase 6 covers marketing and launch strategy. Every phase delivers a coherent, verifiable capability before the next phase begins.
 
 **Product ladder:** v1 delivers The Mirror (free). Payment, AI content generation, and PDF rendering are deferred to Product 2 (The Blueprint).
 
@@ -17,8 +17,9 @@ From clinical framework to working product: Phase 0 defines the archetype system
 - [x] **Phase 2: Quiz Engine** — Full quiz UI with scoring, persistence, and Supabase session write (completed 2026-02-24)
 - [x] **Phase 2.5: Archetype Content Rewrite** — Reframe all archetype copy from "your parenting style" to "your parents' parenting style" (INSERTED — pivot requirement) (completed 2026-02-26)
 - [ ] **Phase 3: Mirror Result Page** — Email gate, full free result (parents' archetype, patterns, watchouts, cultural section), Product 2 CTA
-- [x] **Phase 4: Landing Page + Polish** — Credibility-forward landing page, KOL signals, mobile-responsive (completed 2026-02-25)
-- [ ] **Phase 5: Marketing + Launch Strategy** — Go-to-market plan, content marketing, social media strategy, email funnels, KOL/influencer outreach
+- [ ] **Phase 4: Brand Positioning Research + Visual Direction** — Competitive landscape, positioning narrative, visual direction brief, rebrand execution plan
+- [ ] **Phase 5: Landing Page Rebuild** — Rebuild landing page from scratch informed by Phase 4 brand direction
+- [ ] **Phase 6: Marketing + Launch Strategy** — Go-to-market plan, content marketing, social media strategy, email funnels, KOL/influencer outreach
 
 ## Product 2 Roadmap — The Blueprint (Paid)
 
@@ -113,47 +114,9 @@ Plans:
 - [ ] 03-02-PLAN.md — Blueprint CTA components, /blueprint coming-soon page, API + database
 - [ ] 03-03-PLAN.md — Email gate overlay, ResultPageClient wrapper, gate animations, human verification
 
-### Phase 4: Landing Page + Polish
-**Goal**: A credibility-forward landing page that communicates the bigger mission, presents the full product ladder (Mirror/Blueprint/Partner Match), integrates KOL research attribution, and converts visitors into the free Mirror quiz
+### Phase 4: Brand Positioning Research + Visual Direction
+**Goal**: Research the millennial parenting digital product landscape, identify the whitespace for a multi-product brand, define positioning, evaluate the brand name, create a visual direction brief, and produce an actionable rebrand execution plan — so Raising Giants owns the space of digital products for millennial parents
 **Depends on**: Phase 3
-**Requirements**: LAND-01, LAND-02, LAND-03, LAND-04, LAND-05
-**Success Criteria** (what must be TRUE):
-  1. Named KOL credibility signals (8+ researchers) are visible with specific research attribution — clinical authority communicated through the research framework, not Sophia's personal credentials (per user decision in 04-CONTEXT.md)
-  2. The full product ladder (Mirror, Blueprint, Partner Match) is displayed with correct status labels
-  3. A prominent quiz start CTA drives visitors into the quiz flow at /quiz
-  4. The entire landing page is fully mobile-responsive and loads fast on mobile connections
-**Plans:** 2/2 plans complete
-Plans:
-- [x] 04-01-PLAN.md — Landing page core build: hero, product ladder, KOL credibility, secondary CTA, footer
-- [x] 04-02-PLAN.md — Metadata update (Raising Giants branding), display font, visual polish, human verification
-
-### Phase 5: Marketing + Launch Strategy
-**Goal**: A concrete go-to-market plan is in place so the product reaches its target audience and generates initial traffic from launch day
-**Depends on**: Phase 4
-**Requirements**: TBD
-**Success Criteria** (what must be TRUE):
-  1. TBD — needs scoping (likely covers: launch campaign plan, content/social media strategy, email funnel design, KOL/influencer outreach plan, distribution channels identified)
-**Plans**: TBD
-
-## Progress
-
-**Execution Order:**
-Phases execute in numeric order: 0 → 1 → 2 → 2.5 → 3 → 4 → 5
-
-| Phase | Plans Complete | Status | Completed |
-|-------|----------------|--------|-----------|
-| 0. Archetype Framework | 5/5 | Complete | 2026-02-24 |
-| 1. Data Foundation | 2/2 | Complete | 2026-02-24 |
-| 2. Quiz Engine | 5/5 | Complete | 2026-02-24 |
-| 2.5. Archetype Content Rewrite | 2/2 | Complete | 2026-02-26 |
-| 3. Mirror Result Page | 2/3 | In Progress|  |
-| 4. Landing Page + Polish | 2/2 | Complete    | 2026-02-25 |
-| 5. Marketing + Launch Strategy | 0/TBD | Not started | — |
-
-### Phase 6: Brand Positioning Research and Visual Direction
-
-**Goal:** Research the millennial parenting digital product landscape, identify the whitespace for a multi-product brand, define positioning, evaluate the brand name, create a visual direction brief, and produce an actionable rebrand execution plan — so Raising Giants owns the space of digital products for millennial parents
-**Depends on:** Phase 4 (landing page exists to evaluate against)
 **Requirements**: BRAND-01, BRAND-02, BRAND-03, BRAND-04, BRAND-05, BRAND-06, BRAND-07, BRAND-08
 **Success Criteria** (what must be TRUE):
   1. 15+ millennial parenting digital products are profiled with full-funnel analysis across the landscape
@@ -164,10 +127,45 @@ Phases execute in numeric order: 0 → 1 → 2 → 2.5 → 3 → 4 → 5
   6. A rebrand execution plan maps visual recommendations to specific codebase files and phases
   7. The user has reviewed and approved the overall direction
 **Plans:** 4/5 plans executed
-
 Plans:
-- [ ] 06-01-PLAN.md — Competitive landscape: profile 16+ millennial parenting digital products, positioning map, gap analysis
-- [ ] 06-02-PLAN.md — Reference brand gallery: 8-12 aspirational brands with pattern synthesis
-- [ ] 06-03-PLAN.md — Positioning narrative and brand name evaluation for multi-product brand
-- [ ] 06-04-PLAN.md — Visual direction brief: palette, typography, imagery, layout, tone
-- [ ] 06-05-PLAN.md — Rebrand execution plan and user approval checkpoint
+- [x] 04-01-PLAN.md — Competitive landscape: profile 16+ millennial parenting digital products, positioning map, gap analysis
+- [x] 04-02-PLAN.md — Reference brand gallery: 8-12 aspirational brands with pattern synthesis
+- [x] 04-03-PLAN.md — Positioning narrative and brand name evaluation for multi-product brand
+- [x] 04-04-PLAN.md — Visual direction brief: palette, typography, imagery, layout, tone
+- [ ] 04-05-PLAN.md — Rebrand execution plan and user approval checkpoint
+
+### Phase 5: Landing Page Rebuild
+**Goal**: Rebuild the landing page from scratch, informed by the brand positioning and visual direction established in Phase 4 — credibility-forward, KOL signals, mobile-responsive, aligned with the Kin brand identity
+**Depends on**: Phase 4
+**Requirements**: LAND-01, LAND-02, LAND-03, LAND-04, LAND-05
+**Success Criteria** (what must be TRUE):
+  1. Landing page visual design implements the Phase 4 visual direction brief (palette, typography, imagery, tone)
+  2. Named KOL credibility signals (8+ researchers) are visible with specific research attribution
+  3. The full product ladder (Mirror, Blueprint, Partner Match) is displayed with correct status labels
+  4. A prominent quiz start CTA drives visitors into the quiz flow at /quiz
+  5. The entire landing page is fully mobile-responsive and loads fast on mobile connections
+**Plans**: TBD — needs discuss-phase and planning
+
+### Phase 6: Marketing + Launch Strategy
+**Goal**: A concrete go-to-market plan is in place so the product reaches its target audience and generates initial traffic from launch day
+**Depends on**: Phase 5
+**Requirements**: TBD
+**Success Criteria** (what must be TRUE):
+  1. TBD — needs scoping (likely covers: launch campaign plan, content/social media strategy, email funnel design, KOL/influencer outreach plan, distribution channels identified)
+**Plans**: TBD
+
+## Progress
+
+**Execution Order:**
+Phases execute in numeric order: 0 → 1 → 2 → 2.5 → 3 → 4 → 5 → 6
+
+| Phase | Plans Complete | Status | Completed |
+|-------|----------------|--------|-----------|
+| 0. Archetype Framework | 5/5 | Complete | 2026-02-24 |
+| 1. Data Foundation | 2/2 | Complete | 2026-02-24 |
+| 2. Quiz Engine | 5/5 | Complete | 2026-02-24 |
+| 2.5. Archetype Content Rewrite | 2/2 | Complete | 2026-02-26 |
+| 3. Mirror Result Page | 2/3 | In Progress | — |
+| 4. Brand Positioning Research | 4/5 | In Progress | — |
+| 5. Landing Page Rebuild | 0/TBD | Not started | — |
+| 6. Marketing + Launch Strategy | 0/TBD | Not started | — |

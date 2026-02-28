@@ -1,16 +1,16 @@
 ---
-phase: 06-brand-positioning-research-and-visual-direction
+phase: 04-brand-positioning-research-and-visual-direction
 plan: "05"
 subsystem: brand-rebrand-execution
 tags: [rebrand, execution-plan, kin, 2026-design, deep-teal, merlot, canela, brand-name-change]
 
 dependency_graph:
   requires:
-    - 06-04-visual-direction-brief.md
-    - 06-03-positioning-narrative.md
-    - 06-RESEARCH.md (codebase analysis)
+    - 04-04-visual-direction-brief.md
+    - 04-03-positioning-narrative.md
+    - 04-RESEARCH.md (codebase analysis)
   provides:
-    - "06-05-rebrand-execution-plan.md — file-by-file rebrand execution plan (v2, Kin/2026 direction)"
+    - "04-05-rebrand-execution-plan.md — file-by-file rebrand execution plan (v2, Kin/2026 direction)"
     - "26-file audit with explicit amber/stone-900 → Deep Teal/Merlot/Burnished Amber/Cloud White class map"
     - "Phased implementation scope: Foundation / Component / Asset"
     - "Brand name change checklist: Raising Giants → Kin"
@@ -32,7 +32,7 @@ tech_stack:
 key_files:
   created: []
   modified:
-    - ".planning/phases/06-brand-positioning-research-and-visual-direction/06-05-rebrand-execution-plan.md"
+    - ".planning/phases/04-brand-positioning-research-and-visual-direction/04-05-rebrand-execution-plan.md"
 
 decisions:
   - "[06-05-A] Two-layer color migration required: semantic token update (globals.css Phase A) + hardcoded Tailwind class replacements in 26 component files (Phase B) — codebase uses both patterns"
@@ -56,7 +56,7 @@ metrics:
 
 ## What Was Built
 
-The `06-05-rebrand-execution-plan.md` was fully rewritten as v2. The v1 (prior) plan specified a terracotta palette, Cormorant Garamond retention, School of Life editorial illustration, and used "Imprint" as the new brand name. All of these have been superseded by the v3 visual direction brief (06-04) and the founder's decision to rename to "Kin".
+The `04-05-rebrand-execution-plan.md` was fully rewritten as v2. The v1 (prior) plan specified a terracotta palette, Cormorant Garamond retention, School of Life editorial illustration, and used "Imprint" as the new brand name. All of these have been superseded by the v3 visual direction brief (06-04) and the founder's decision to rename to "Kin".
 
 ### Task 1: Codebase Audit + Phased Execution Plan
 
@@ -106,7 +106,7 @@ The `06-05-rebrand-execution-plan.md` was fully rewritten as v2. The v1 (prior) 
 
 ### Task 2: User Review and Approval (APPROVED)
 
-Human-verify checkpoint — user reviewed all 5 Phase 6 deliverables and typed "approved", confirming:
+Human-verify checkpoint — user reviewed all 5 Phase 4 deliverables and typed "approved", confirming:
 
 - **Competitive Landscape** (06-01): 16+ millennial parenting digital products profiled; parent-centric/self-understanding quadrant confirmed empty
 - **Reference Brand Gallery** (06-02): 8-12 aspirational brands synthesized; mission-as-architecture model confirmed; KOL-anchor anti-pattern identified
@@ -114,7 +114,7 @@ Human-verify checkpoint — user reviewed all 5 Phase 6 deliverables and typed "
 - **Visual Direction Brief** (06-04): Deep Teal / Merlot / Canela / Cloud White / bento-grid direction confirmed; contemporary premium digital register approved
 - **Rebrand Execution Plan** (06-05): Phased A/B/C implementation scope confirmed; 38-row file change matrix approved as developer work order
 
-Phase 6 is **COMPLETE** — all strategic direction confirmed and approved.
+Phase 4 is **COMPLETE** — all strategic direction confirmed and approved.
 
 ---
 
@@ -137,9 +137,9 @@ Phase 6 is **COMPLETE** — all strategic direction confirmed and approved.
 **1. [User Override] Execution plan rewritten for Kin / 2026 direction — not terracotta/Imprint direction**
 
 - **Found during:** Plan start — prompt context specified new direction explicitly
-- **Issue:** The existing `06-05-rebrand-execution-plan.md` (v1) used the terracotta/Cormorant/School-of-Life/Imprint direction — the prior visual brief before the 2026 update.
+- **Issue:** The existing `04-05-rebrand-execution-plan.md` (v1) used the terracotta/Cormorant/School-of-Life/Imprint direction — the prior visual brief before the 2026 update.
 - **Fix:** Complete rewrite of the execution plan to map the v3 visual direction brief (Deep Teal / Merlot / Burnished Amber / Cloud White / Canela / bento-grid) to codebase files.
-- **Files modified:** 06-05-rebrand-execution-plan.md
+- **Files modified:** 04-05-rebrand-execution-plan.md
 - **Commit:** eb13872
 
 ### Canela Font Constraint Discovery (Rule 2 — Missing Critical Info)
@@ -149,15 +149,15 @@ Phase 6 is **COMPLETE** — all strategic direction confirmed and approved.
 - **Found during:** Task 1 execution (font change planning)
 - **Issue:** The 06-04 brief specifies Canela as the display serif. Canela is a commercial font from Commercial Type — it is NOT available on Google Fonts. Any implementation attempt using `next/font/google` for Canela would fail at build time.
 - **Fix:** Documented the constraint explicitly, provided 3 free Google Fonts alternatives with recommendation (DM Serif Display), and specified the implementation path.
-- **Files modified:** 06-05-rebrand-execution-plan.md (added "Font System" constraint section)
+- **Files modified:** 04-05-rebrand-execution-plan.md (added "Font System" constraint section)
 
 ---
 
 ## Self-Check
 
 **Files exist:**
-- [x] `.planning/phases/06-brand-positioning-research-and-visual-direction/06-05-rebrand-execution-plan.md` — verified present; v2; contains 38-row change matrix, Phase A/B/C, color mapping tables, risk section, brand name checklist
-- [ ] `.planning/phases/06-brand-positioning-research-and-visual-direction/06-05-SUMMARY.md` — this file (being written)
+- [x] `.planning/phases/04-brand-positioning-research-and-visual-direction/04-05-rebrand-execution-plan.md` — verified present; v2; contains 38-row change matrix, Phase A/B/C, color mapping tables, risk section, brand name checklist
+- [ ] `.planning/phases/04-brand-positioning-research-and-visual-direction/04-05-SUMMARY.md` — this file (being written)
 
 **Commits exist:**
 - [x] eb13872 — `feat(06-05): rewrite rebrand execution plan for Kin — 2026 visual direction`
@@ -174,6 +174,6 @@ Phase 6 is **COMPLETE** — all strategic direction confirmed and approved.
 - [x] Plan specifies Canela / DM Serif Display (not Cormorant Garamond)
 
 **Task 2 (checkpoint — APPROVED):**
-- [x] User has reviewed and approved all 5 Phase 6 deliverables — "approved" signal received 2026-02-27
+- [x] User has reviewed and approved all 5 Phase 4 deliverables — "approved" signal received 2026-02-27
 
 ## Self-Check: PASSED (Tasks 1 and 2 complete)

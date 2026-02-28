@@ -1,15 +1,15 @@
 ---
-phase: 06-brand-positioning-research-and-visual-direction
+phase: 04-brand-positioning-research-and-visual-direction
 plan: "03"
 subsystem: brand-strategy
 tags: [brand-territory, positioning-narrative, name-evaluation, brand-architecture, kin]
 
 dependency_graph:
   requires:
-    - 06-01-competitive-landscape.md
-    - 06-02-reference-brand-gallery.md
+    - 04-01-competitive-landscape.md
+    - 04-02-reference-brand-gallery.md
   provides:
-    - "06-03-positioning-narrative.md — locked brand territory, Kin name decision, Branded House architecture"
+    - "04-03-positioning-narrative.md — locked brand territory, Kin name decision, Branded House architecture"
     - "Brand territory: 'digital tools for parents who want to understand themselves'"
     - "Brand name: Kin (replaces Raising Giants)"
     - "Emotional core: 'I always sensed this. Now I see it.'"
@@ -28,7 +28,7 @@ tech_stack:
 key_files:
   created: []
   modified:
-    - ".planning/phases/06-brand-positioning-research-and-visual-direction/06-03-positioning-narrative.md"
+    - ".planning/phases/04-brand-positioning-research-and-visual-direction/04-03-positioning-narrative.md"
 
 decisions:
   - "[06-03-KIN] Brand name: CHANGE from Raising Giants to Kin — founder decision confirmed by 6-criteria analysis; one syllable, warm familial register, amplifies all product names, passes say-it-out-loud test"
@@ -54,7 +54,7 @@ metrics:
 
 ## What Was Built
 
-The positioning narrative document (`06-03-positioning-narrative.md`) has been completely rewritten. The prior version (v1) recommended "Imprint" as the brand name. This version (v2) applies the founder's decision to name the brand **Kin**, supported by the same six-criteria evaluation framework that confirms "Kin" passes all criteria more strongly than "Imprint."
+The positioning narrative document (`04-03-positioning-narrative.md`) has been completely rewritten. The prior version (v1) recommended "Imprint" as the brand name. This version (v2) applies the founder's decision to name the brand **Kin**, supported by the same six-criteria evaluation framework that confirms "Kin" passes all criteria more strongly than "Imprint."
 
 **Task 1: Positioning narrative — landscape to territory**
 
@@ -97,9 +97,9 @@ The document follows a strict discovery arc. The reader encounters the evidence 
 **1. [User Override — Name Decision] Brand name changed from Imprint to Kin**
 
 - **Found during:** Task 2 (brand name evaluation)
-- **Issue:** Prior version of this plan (06-03-PLAN.md) recommended "Imprint" as the brand name. The founder has decided on "Kin."
+- **Issue:** Prior version of this plan (04-03-PLAN.md) recommended "Imprint" as the brand name. The founder has decided on "Kin."
 - **Fix:** The evaluation framework was preserved (6-criteria analysis of "Raising Giants" to document why it fails), but the recommendation was updated to Kin with full rationale. The Kin evaluation against all 6 criteria was added. The comparison with Imprint was documented to explain why Kin is preferred over Imprint.
-- **Files modified:** 06-03-positioning-narrative.md
+- **Files modified:** 04-03-positioning-narrative.md
 - **Commit:** 3c7947c
 
 This is not a deviation from the plan's instructions — the PLAN.md explicitly includes a USER OVERRIDE section requiring Kin as the recommendation. The plan was followed exactly.
@@ -109,7 +109,7 @@ This is not a deviation from the plan's instructions — the PLAN.md explicitly 
 ## Self-Check
 
 **Files exist:**
-- [x] `.planning/phases/06-brand-positioning-research-and-visual-direction/06-03-positioning-narrative.md` — verified; contains 8 sections; passes automated verification (key sections present, evaluation criteria present)
+- [x] `.planning/phases/04-brand-positioning-research-and-visual-direction/04-03-positioning-narrative.md` — verified; contains 8 sections; passes automated verification (key sections present, evaluation criteria present)
 
 **Commits exist:**
 - [x] 3c7947c — `feat(06-03): rewrite positioning narrative with discovery arc and brand territory`

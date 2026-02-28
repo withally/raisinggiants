@@ -3,8 +3,8 @@
 
 **Date:** 2026-02-27 (v2 — REWRITTEN for Kin brand, 2026 visual direction)
 **Status:** Complete
-**Inputs:** 06-04-visual-direction-brief.md (what to change — v3, 2026 direction), 06-03-positioning-narrative.md (why), codebase analysis (how)
-**Purpose:** Bridge strategy and implementation — every visual direction recommendation mapped to a specific file, token, or component change. Per 06-RESEARCH.md Pitfall 1: Phase 6 produces the PLAN for rebrand, not the rebrand itself.
+**Inputs:** 04-04-visual-direction-brief.md (what to change — v3, 2026 direction), 04-03-positioning-narrative.md (why), codebase analysis (how)
+**Purpose:** Bridge strategy and implementation — every visual direction recommendation mapped to a specific file, token, or component change. Per 04-RESEARCH.md Pitfall 1: Phase 4 produces the PLAN for rebrand, not the rebrand itself.
 
 ---
 
@@ -89,7 +89,7 @@ All semantic tokens are currently set to neutral Tailwind defaults (oklch black/
 
 ## Color Change Mapping — New Palette
 
-All hex values are from 06-04-visual-direction-brief.md (v3). oklch values below are conversion approximations — implementing executor must verify with oklch.com.
+All hex values are from 04-04-visual-direction-brief.md (v3). oklch values below are conversion approximations — implementing executor must verify with oklch.com.
 
 ### Semantic Token Updates (globals.css — Phase A)
 
@@ -522,8 +522,8 @@ Before committing any Phase B or C changes, visually verify:
 
 ---
 
-*Document: 06-05-rebrand-execution-plan.md*
-*Phase: 06-brand-positioning-research-and-visual-direction*
+*Document: 04-05-rebrand-execution-plan.md*
+*Phase: 04-brand-positioning-research-and-visual-direction*
 *Created: 2026-02-27*
 *Updated: 2026-02-27 (v2 — rewritten for Kin brand, 2026 visual direction: Deep Teal / Merlot / Burnished Amber / Cloud White / Canela / bento-grid)*
 *Status: Complete — maps all visual direction recommendations (v3 brief) to specific files, tokens, and components; scopes implementation into Phases A/B/C; addresses Kin name change technical requirements; supersedes v1 (terracotta/Imprint direction)*

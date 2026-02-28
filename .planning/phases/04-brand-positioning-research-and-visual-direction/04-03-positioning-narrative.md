@@ -411,7 +411,7 @@ The master brand name should amplify each product name. "Raising Giants" does no
 | Multi-product fit | FAIL | Does not amplify product names; creates categorical confusion at each product level |
 | Misidentification risk | FAIL | Documented real-world misidentification as parenting-advice brand |
 
-**Verdict: Change. "Raising Giants" fails all six criteria under the multi-product millennial parent brand frame. The recommendation from the prior Phase 6 iteration (change from "Raising Giants") is confirmed under fresh evaluation with the new competitive frame. The name to change to, however, is not "Imprint" — see the recommendation below.**
+**Verdict: Change. "Raising Giants" fails all six criteria under the multi-product millennial parent brand frame. The recommendation from the prior Phase 4 iteration (change from "Raising Giants") is confirmed under fresh evaluation with the new competitive frame. The name to change to, however, is not "Imprint" — see the recommendation below.**
 
 ---
 
@@ -518,7 +518,7 @@ The founder has selected Kin as the brand name, and the six-criteria analysis co
 - Warm and modern — the register of Calm, Headspace, Notion: single-word emotional clarity
 - No misidentification as parenting advice or children's product
 
-The prior Phase 6 recommendation ("Imprint") is superseded by this decision. "Imprint" passes the six criteria adequately, but "Kin" is stronger in two specific dimensions: multi-product amplification (Kin amplifies the Partner Match name with particular power — "kin meeting kin" is the precise emotional content of that product) and conversational register (Kin is warmer and more intimate than Imprint, which has a slight printing/publishing connotation).
+The prior Phase 4 recommendation ("Imprint") is superseded by this decision. "Imprint" passes the six criteria adequately, but "Kin" is stronger in two specific dimensions: multi-product amplification (Kin amplifies the Partner Match name with particular power — "kin meeting kin" is the precise emotional content of that product) and conversational register (Kin is warmer and more intimate than Imprint, which has a slight printing/publishing connotation).
 
 **The ranked alternative list:**
 1. **Kin** — primary recommendation; strongest overall criteria pass; maximum simplicity; relationship register without baggage
@@ -649,7 +649,7 @@ The brand territory is locked. The name is Kin. Plan 06-04 has a firm foundation
 
 ---
 
-*Document: 06-03-positioning-narrative.md*
-*Phase: 06-brand-positioning-research-and-visual-direction*
+*Document: 04-03-positioning-narrative.md*
+*Phase: 04-brand-positioning-research-and-visual-direction*
 *Reworked v2: 2026-02-27*
 *Status: Complete — brand name updated to Kin per founder decision; this is the primary deliverable of Phase 06-03; all downstream visual direction builds from this territorial claim*

@@ -1,9 +1,9 @@
-# Phase 6: Brand Positioning Research and Visual Direction — Research (REWORKED)
+# Phase 4: Brand Positioning Research and Visual Direction — Research (REWORKED)
 
 **Researched:** 2026-02-27
 **Domain:** Brand strategy, competitive positioning (millennial parenting digital products), visual identity, multi-product brand architecture
 **Confidence:** MEDIUM-HIGH
-**Revision note:** This replaces the previous 06-RESEARCH.md. The prior version was scoped too narrowly to self-discovery/personality quiz competitors. This version expands the competitive lens to millennial parenting digital products broadly and reorients the positioning question toward the multi-product brand opportunity.
+**Revision note:** This replaces the previous 04-RESEARCH.md. The prior version was scoped too narrowly to self-discovery/personality quiz competitors. This version expands the competitive lens to millennial parenting digital products broadly and reorients the positioning question toward the multi-product brand opportunity.
 
 ---
 
@@ -79,7 +79,7 @@ None — discussion stayed within phase scope
 
 ## Summary
 
-This is a rework of Phase 6. The prior version answered the wrong competitive question — it mapped Raising Giants against self-discovery/personality assessment tools (16Personalities, Enneagram Institute, Attachment Project) and arrived at "grounded self-discovery" as the brand territory. The user has since clarified the real question: what does a multi-product brand for millennial parents look like, and where is the whitespace in that landscape?
+This is a rework of Phase 4. The prior version answered the wrong competitive question — it mapped Raising Giants against self-discovery/personality assessment tools (16Personalities, Enneagram Institute, Attachment Project) and arrived at "grounded self-discovery" as the brand territory. The user has since clarified the real question: what does a multi-product brand for millennial parents look like, and where is the whitespace in that landscape?
 
 Researching the millennial parenting digital product landscape reveals a market that is large, crowded, and structurally fragmented. Products cluster into five segments: (1) infant/toddler logistics tools (sleep trackers, developmental leap apps, feeding trackers), (2) child mental wellness products (Moshi, Headspace for Kids, Big Life Journal), (3) active parenting coaching and advice platforms (Good Inside, ParentLab), (4) family organization tools (Cozi), and (5) digital storage/memory products (FamilyAlbum). Each segment serves a specific parenting problem. None of them address the millennial parent as a person with their own psychology, upbringing history, and identity questions distinct from their role as a caregiver.
 
@@ -279,7 +279,7 @@ This phase is research-and-strategy, not engineering. The "architecture" is work
 ### Recommended Plan Structure
 
 ```
-Phase 6 (REWORKED)
+Phase 4 (REWORKED)
 ├── Plan 06-01: Competitive Landscape Audit (BRAND-01, BRAND-02)
 │   ├── Task 1: Profile 15+ millennial parenting digital products
 │   │   with full-funnel analysis (problem, audience, visual identity,
@@ -357,36 +357,36 @@ Phase 6 (REWORKED)
 ### Pitfall 1: Reverting to the Old Competitive Scope Mid-Plan
 
 **What goes wrong:** The planner reverts to the old self-discovery competitive framing because the prior 06-01 competitive landscape deliverable already exists in the phase folder, and the old data is seductive to reuse.
-**Why it happens:** The prior 06-01-competitive-landscape.md document is detailed and was well-researched. It will be tempting to reference it as "background."
+**Why it happens:** The prior 04-01-competitive-landscape.md document is detailed and was well-researched. It will be tempting to reference it as "background."
 **How to avoid:** The 06-01 plan must produce a NEW competitive landscape document profiling millennial parenting digital products — not a rewrite of the old self-discovery competitive analysis. The old document can be referenced for context but cannot serve as the primary deliverable.
 **Warning signs:** Competitor list that includes 16Personalities, Enneagram Institute, or Attachment Project as primary competitors (these are now secondary at best).
 
 ### Pitfall 2: Pre-Committing the Positioning Territory
 
 **What goes wrong:** The plan locks "grounded self-discovery" as the territory before the competitive landscape research is complete, bypassing the discovery-first requirement.
-**Why it happens:** "Grounded self-discovery" was already locked in the old Phase 6 (06-03-B). It is already in STATE.md as a decision. The temptation is to carry it forward.
+**Why it happens:** "Grounded self-discovery" was already locked in the old Phase 4 (06-03-B). It is already in STATE.md as a decision. The temptation is to carry it forward.
 **How to avoid:** The CONTEXT.md explicitly unlocks this. The competitive research must surface the gap before the positioning territory is named. The three candidate territories documented in this research are hypotheses, not pre-commitments.
 **Warning signs:** Plan 06-03 (positioning narrative) task descriptions that assume "grounded self-discovery" is the territory rather than arriving at it through competitive analysis.
 
 ### Pitfall 3: Visual Identity Built Around The Mirror Instead of the Brand
 
 **What goes wrong:** The visual direction brief produces a visual system that encodes "mirror / reflection / self-examination" because that is The Mirror product's metaphor. When The Blueprint launches, it inherits visuals that communicate mirror, not blueprint.
-**Why it happens:** The Mirror is the only live product; it dominates the visual context during Phase 6.
+**Why it happens:** The Mirror is the only live product; it dominates the visual context during Phase 4.
 **How to avoid:** The visual direction brief should explicitly test: "does this visual system work for The Blueprint and The Partner Match?" before finalizing any direction. The brand visual system should encode the audience's identity (millennial parent who wants to understand themselves) rather than any product's specific metaphor.
 **Warning signs:** Visual brief that recommends illustration of reflective surfaces, mirrors, or "seeing yourself" as the primary brand visual motif.
 
 ### Pitfall 4: Name Change vs. Name Re-Evaluation
 
-**What goes wrong:** The plan carries forward the old Phase 6 recommendation to change the name to "Imprint" (06-03-A decision in STATE.md) without re-evaluating whether "Raising Giants" works better as a multi-product millennial parent brand than it did as a self-discovery product brand.
+**What goes wrong:** The plan carries forward the old Phase 4 recommendation to change the name to "Imprint" (06-03-A decision in STATE.md) without re-evaluating whether "Raising Giants" works better as a multi-product millennial parent brand than it did as a self-discovery product brand.
 **Why it happens:** "Imprint" passed all four criteria in the old evaluation. "Raising Giants" failed all four. These findings are in STATE.md and SUMMARY files.
 **How to avoid:** The new evaluation must rerun the criteria test with the multi-product millennial parent brand framing. "Raising Giants" may perform differently in the new context — specifically, it may work if the brand is positioned as "raising yourself to be a giant parent" rather than "raising great children." This is a legitimate reframing that the old evaluation did not test.
 **Warning signs:** 06-03 plan that assumes the name change to "Imprint" is already decided and only addresses domain/implementation details.
 
 ### Pitfall 5: Rebrand Scope Creep (Carried Forward from Old Research)
 
-**What goes wrong:** Phase 6 produces actual rebrand implementation rather than the plan and brief for it.
-**How to avoid:** Phase 6 ends at a production-ready brief. Rebrand implementation is a separate phase.
-**Warning signs:** Plan tasks that include "update globals.css" or "redesign illustrations" as Phase 6 deliverables.
+**What goes wrong:** Phase 4 produces actual rebrand implementation rather than the plan and brief for it.
+**How to avoid:** Phase 4 ends at a production-ready brief. Rebrand implementation is a separate phase.
+**Warning signs:** Plan tasks that include "update globals.css" or "redesign illustrations" as Phase 4 deliverables.
 
 ---
 
@@ -482,7 +482,7 @@ The codebase has expanded since the old research (Phases 03 and later added comp
 2. **Does "Raising Giants" work as a multi-product millennial parent brand name?**
    - What we know: It failed all four criteria for a self-discovery product brand (old evaluation); it may work better as a multi-product parent brand where "raising giants" could encode "becoming great parents through self-understanding"; the misidentification problem (reads as parenting-advice-for-raising-great-kids) is documented in CONTEXT.md as actually occurring
    - What's unclear: Whether the richer multi-product framing is findable without explanation, or whether the name still requires interpretation before it lands
-   - Recommendation: Run the name evaluation fresh in the 06-03 plan using multi-product brand criteria; do not carry forward the "change to Imprint" decision from the old Phase 6 without re-evaluating
+   - Recommendation: Run the name evaluation fresh in the 06-03 plan using multi-product brand criteria; do not carry forward the "change to Imprint" decision from the old Phase 4 without re-evaluating
 
 3. **How does the visual system serve a multi-product brand vs. a single product?**
    - What we know: Product-metaphor-anchored visual identity (mirror imagery) over-commits to The Mirror at the brand level; the brand should encode audience identity, not product metaphor
@@ -497,14 +497,14 @@ The codebase has expanded since the old research (Phases 03 and later added comp
 5. **What does the competitive landscape reveal about pricing and monetization expectations for the multi-product brand?**
    - What we know: Good Inside membership: ~$10-20/month; Moshi: $49.99/year; BetterHelp: $60-100/month; Headspace: $70/year
    - What's unclear: Where the Raising Giants product ladder fits in this pricing spectrum; no specific research conducted
-   - Recommendation: Not in scope for Phase 6; flag for Product 2 development
+   - Recommendation: Not in scope for Phase 4; flag for Product 2 development
 
 ---
 
 ## Sources
 
 ### Primary (HIGH confidence)
-- Direct analysis of the prior Phase 6 deliverables (06-01 through 06-05) — established competitive context and prior findings
+- Direct analysis of the prior Phase 4 deliverables (06-01 through 06-05) — established competitive context and prior findings
 - WebFetch: goodinside.com — visual identity, brand positioning, product offering, Good Inside brand analysis
 - WebFetch: moshikids.com — visual identity, target audience, subscription model
 - WebFetch: parentlab.com — brand positioning, visual identity, product offering

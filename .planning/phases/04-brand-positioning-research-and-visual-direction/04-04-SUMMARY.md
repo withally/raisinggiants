@@ -1,5 +1,5 @@
 ---
-phase: 06-brand-positioning-research-and-visual-direction
+phase: 04-brand-positioning-research-and-visual-direction
 plan: 04
 subsystem: ui
 tags: [design-system, visual-direction, typography, color-palette, landing-page, ux, neo-minimalism, pp-pangaia]
@@ -13,10 +13,10 @@ provides:
   - "design-system/pages/landing.md — section-by-section landing page composition specs"
   - "design-system/kin/MASTER.md — persisted skill-generated design system"
   - "design-system/kin/pages/landing.md — persisted skill-generated landing overrides"
-  - "06-04-visual-direction-brief.md — section-by-section visual spec for all 8 landing sections"
+  - "04-04-visual-direction-brief.md — section-by-section visual spec for all 8 landing sections"
 
 affects:
-  - 06-05-rebrand-execution-plan
+  - 04-05-rebrand-execution-plan
   - components/landing/HeroSection.tsx
   - components/landing/SocialProof.tsx
   - components/landing/ArchetypePreview.tsx
@@ -39,7 +39,7 @@ key-files:
     - design-system/pages/landing.md
     - design-system/kin/MASTER.md
     - design-system/kin/pages/landing.md
-    - .planning/phases/06-brand-positioning-research-and-visual-direction/06-04-visual-direction-brief.md
+    - .planning/phases/04-brand-positioning-research-and-visual-direction/04-04-visual-direction-brief.md
   modified: []
 
 key-decisions:
@@ -102,7 +102,7 @@ Each task was committed atomically:
 - `design-system/pages/landing.md` — section-by-section landing page composition specs with ASCII layout diagrams
 - `design-system/kin/MASTER.md` — raw skill-generated design system (persisted via `--persist` flag)
 - `design-system/kin/pages/landing.md` — raw skill-generated landing page overrides
-- `.planning/phases/06-brand-positioning-research-and-visual-direction/06-04-visual-direction-brief.md` — full visual direction spec: 5 parts, all 8 sections
+- `.planning/phases/04-brand-positioning-research-and-visual-direction/04-04-visual-direction-brief.md` — full visual direction spec: 5 parts, all 8 sections
 
 ## Decisions Made
 
@@ -129,5 +129,5 @@ None — plan executed exactly as written. All 6 skill search steps performed (p
 - Implementation targets for 06-05: KOLNarrative quote size (push to 24-28px italic), KOLCredibility header left-alignment, SecondaryHero font-weight verification, ArchetypePreview option button hover states
 
 ---
-*Phase: 06-brand-positioning-research-and-visual-direction*
+*Phase: 04-brand-positioning-research-and-visual-direction*
 *Completed: 2026-02-28*
