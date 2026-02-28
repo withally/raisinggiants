@@ -53,6 +53,7 @@ body {
 
 :root {
   --radius: 0.625rem;
+  --ease-organic: cubic-bezier(0.22, 1, 0.36, 1);
 
   /* Kin brand palette — 2026 visual direction */
   --color-cloud-white: #F5F4F2;
@@ -61,6 +62,10 @@ body {
   --color-merlot: #6B1E2E;
   --color-warm-sand: #C8B89A;
   --color-burnished-amber: #C4892A;
+  /* Extended palette tokens */
+  --color-muted-warm: #8A7A66;
+  --color-border-edge: #E8E4DF;
+  --color-teal-muted: #7A9E9C;
 
   /* Semantic tokens mapped to Kin palette */
   --background: #F5F4F2;
@@ -181,6 +186,35 @@ body {
   animation: slide-in-left 0.25s ease-out;
 }
 
+/* Grain texture overlay — organic tactile feel */
+.grain {
+  position: relative;
+}
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  border-radius: inherit;
+}
+
+/* Slow breathing pulse for decorative accents */
+@keyframes breathe {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.03); }
+}
+
+@utility animate-breathe {
+  animation: breathe 6s var(--ease-organic, ease-in-out) infinite;
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
 /* Landing page — gentle fade-up reveal */
 @keyframes fade-up {
   from {
@@ -194,7 +228,7 @@ body {
 }
 
 @utility animate-fade-up {
-  animation: fade-up 0.6s ease-out both;
+  animation: fade-up 0.8s var(--ease-organic, ease-out) both;
 }
 
 /* Email gate overlay — curtain-lifting reveal animations */
