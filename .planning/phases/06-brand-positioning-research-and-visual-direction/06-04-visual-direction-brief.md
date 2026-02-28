@@ -1,760 +1,513 @@
-# Visual Direction Brief
-## Phase 06-04 — Translating Brand Territory into Visual Language for Kin
+# Kin Landing Page — Visual Direction Brief (v4)
 
-**Date:** 2026-02-27 (v3 — REWRITTEN per founder visual direction, 2026 aesthetic)
-**Status:** Complete
-**Positioning anchor:** The brand territory is "digital tools for parents who want to understand themselves." The brand name is **Kin**. The visual identity must serve a premium digital product — sleek, modern, warm-but-confident — not an editorial publication or craft market aesthetic.
-**Feeds into:** 06-05-PLAN.md (rebrand execution plan)
+**Phase:** 06, Plan 04
+**Date:** 2026-02-28
+**Status:** Generated from skill exploration + 2026 trend research. Ready for Plan 06-05 implementation.
 
 ---
 
-## Positioning Anchor
+## Part 1: Design System (From Skill-Generated Exploration)
 
-The brand territory, locked in Plan 06-03, is: **digital tools for parents who want to understand themselves — not just their children.**
+### 1.1 The Design Formula
 
-Kin occupies a specific unoccupied gap: the entire millennial parenting digital market serves child management. No competitor addresses the millennial parent as a psychological being with their own history, patterns, and interiority. The whitespace is structural — no one is there.
+**"#5 Neo-Minimalism as the container. #6 Emotion-Led Humanity as the content. #9 Raw Authenticity as the texture."**
 
-The emotional core of the brand:
+This formula was confirmed across 11 ui-ux-pro-max searches. Exaggerated Minimalism emerged as the primary structural style. Nature Distilled (warm earth tones, grain, organic shadows) emerged as the texture layer. Scroll-Triggered Storytelling emerged as the page pattern. All three align with the Kin brand territory and the target feel: "A premium product that clearly had a human behind it — a beautifully designed book that lives on the web."
 
-1. **The past shapes the present.** What you received as a child — the parenting style, the emotional environment, the spoken and unspoken rules — is active in you today. Most people sense this. Almost none have language for it.
-2. **Recognition, not improvement.** The brand's value proposition is revelation: "I always sensed this. Now I see it." Not therapy. Not healing. Not growth. The specific, profound satisfaction of seeing something clearly that you have always known was there.
-3. **Self-understanding as the starting point.** Whether the product is The Mirror, The Blueprint, or The Partner Match — the brand root is the same: turning the lens inward, on yourself, not on your children.
+### 1.2 Palette
 
-**The visual register Kin must occupy:** A premium digital product that happens to be warm and thoughtful. Think Calm, Headspace, Oura — sleek, confident, modern — not a literary magazine, not a craft market, not a wellness blog. The warmth comes from the content and moments of typographic intimacy, NOT from the palette being beige or from illustration being loose and hand-drawn.
+The existing Kin palette was validated by skill color searches. Rebalancing (not replacement) is the direction.
 
-**What the visual identity must achieve:** Before a user reads a single word, the visual language must signal: *depth, intelligence, digital-native precision, and warmth that is earned rather than decorative.* It must not signal: therapy, wellness generic, parenting blog, craft aesthetic, or personality quiz entertainment.
+| Name | Hex | Role | Emotional Function |
+|------|-----|------|--------------------|
+| Deep Teal | `#0D3D3A` | Primary — dominant | Oceanic depth. The ground. Authority without coldness. |
+| Cloud White | `#F5F4F2` | Background — primary | Warmth. Paper. Breath. Aligns with Pantone 2026 (Cloud Dancer). |
+| Espresso | `#1A1008` | Text primary | Presence. Weight. Not harsh black — warm dark. |
+| Burnished Amber | `#C4892A` | Accent — emotional emphasis | Craft. Gold. Warmth at a distance. Used sparingly. |
+| Merlot | `#6B1E2E` | Emotional peak accent | Revelation. The deepest feeling. Used at emotional climax only. |
+| Warm Sand | `#C8B89A` | Secondary / borders | Rest. Transition. Connective tissue between elements. |
+| Muted Warm | `#8A7A66` | Body text muted | Body copy, captions, secondary information. |
+| Border Edge | `#E8E4DF` | Structural separator | Cards, dividers. Warm, not cool-gray. |
 
-**What it must NOT be:**
-- Terracotta/earthy/bone/parchment palette — this is 2022–2024 and reads dated
-- Loose editorial line illustration in the "School of Life" register — too analog/warm for Kin's digital-native energy
-- Cormorant Garamond — too literary/bookish/editorial; not designed for digital product environments
-- Startup warm neutral palette (amber, stone, generic beige backgrounds)
-- "Alternating text/image sections" SaaS landing page template
-- Literary magazine aesthetic — the brand is a product, not a publication
+**Gradient applications (Trend #7 reinterpreted within palette):**
+- Teal sections: `linear-gradient(180deg, #0D3D3A 0%, #092D2B 50%, #0D3D3A 100%)` — oceanic depth
+- Teal decorative blobs: `radial-gradient(circle, rgba(13,61,58,0.08) 0%, transparent 100%)` — atmospheric
 
----
+**What changed from previous implementation:**
+- Amber (#C4892A): previously scattered. Now used ONLY for hand-drawn elements, eyebrow circles, and emotional italic moments in display headlines.
+- Merlot (#6B1E2E): previously used for quote marks casually. Now reserved for peak emotional moments (SecondaryHero CTA, climactic pull quotes).
+- Teal: previously just for CTAs. Now used more boldly as a compositional background in SecondaryHero.
 
-## Section 1: Color Palette
+### 1.3 Typography
 
-### Current State Assessment
+**Typography decision came from comparison, not inheritance. PP Pangaia won on merit.**
 
-The previous palette direction:
-- Background: Bone `#F7F2EB` (parchment/analog)
-- Accent: Terracotta `#B05A3A`
-- Secondary: Aged Gold `#C4892A`, Soft Clay `#EBE0D5`
-- Text: Warm Charcoal `#1C1512`
+| Element | Font | Weight | Size | Italic? |
+|---------|------|--------|------|---------|
+| Hero headline | PP Pangaia | Ultralight (200) | 60px → 140px (clamp) | No |
+| Hero tagline / emotional moment | PP Pangaia | Ultralight (200) | 48px → 80px | Yes — italic |
+| Section h2 | PP Pangaia | Medium (500) | 36px → 56px | No |
+| Pull quotes (KOLNarrative) | PP Pangaia | Ultralight (200) | 20px → 24px | Yes — italic |
+| Researcher names in cards | PP Pangaia | Medium (500) | 16px | No |
+| CTA button labels | Geist Sans | Semibold (600) | 16px | No |
+| Body copy | Geist Sans | Regular (400) | 16-18px | No |
+| Captions / attribution | Geist Sans | Regular (400) | 12-14px | No |
+| Eyebrow labels | Geist Sans | Medium (500) | 11px, tracking 0.25em | No |
 
-**Why this is being replaced:** The terracotta/bone/parchment palette peaked in 2022–2024 and now reads as dated — the visual language of craft markets, wellness blogs, and editorial print design. It is warm but not sleek. It signals "analog thoughtfulness" rather than "digital precision with genuine warmth." For a product called Kin — one syllable, clean, digital-native — the palette must match: deep, saturated, modern, with warmth achieved through color depth rather than earthy analog tones.
+**Why PP Pangaia beats evaluated alternatives:**
+- Cormorant Garamond: bookish, print-oriented, too cold for emotional product
+- Newsreader: journalism register, too neutral
+- Bodoni Moda: high contrast but cold, luxury register not warm-intimate
+- Lora: wellness correct but lacks weight range for Neo-Minimalism dramatic moments
+- PP Pangaia: geometric-humanist, Ultralight at scale IS the composition (#5), italic IS the warmth (#6)
 
-**2026 direction:** Deep, saturated colors as anchors — oceanic depth, rich chocolate, merlot/wine richness — paired with a clean airy off-white that reads as digital clarity, not parchment. The warmth is in the depth of the chromatic colors, not in the neutrals.
+**The typographic rule:** At hero scale, PP Pangaia Ultralight is NOT a font choice — it IS the design. The words occupy space like physical objects. This is how Neo-Minimalism works: you remove decoration and let type carry the entire visual weight of the composition.
 
----
+### 1.4 Style + Effects
 
-### 1.1 Primary Palette
+| Element | Spec | Purpose |
+|---------|------|---------|
+| Grain texture | CSS `feTurbulence` at 3.5% opacity | Tactile, warm — "someone made this" |
+| Grain application | Hero + teal sections ONLY | Not blanket — selective, deliberate |
+| Organic easing | `cubic-bezier(0.22, 1, 0.36, 1)` | Contemplative, not energetic |
+| Reveal animations | 800ms, 24px distance, organic easing | Slow, intentional — matches brand pace |
+| Breathing animation | 6s, scale 1→1.03, opacity 0.6→0.8 | Decorative teal blob — alive |
+| Border radius | Mostly `rounded-2xl` (16px), full pill for CTAs | Warm, not sharp |
+| Archetype pill radius | Deterministic irregular (per index) | Organic variety — hand-crafted feel |
+| Sample card rotation | `rotate(-0.5deg)` | Subtle tilt — paper on a desk |
 
-**The three primary colors appear on every product across the brand family.**
+**Hand-drawn elements (visible craft signals — Trend #6 + #9):**
 
----
+These are not decoration. They are functional markers of human presence:
+- `HandDrawnDivider`: wavy SVG line at section boundaries, in amber (0.3 opacity)
+- `HandDrawnQuoteMark`: organic quote marks on testimonials, in merlot (0.4 opacity)
+- `HandDrawnCircle`: imperfect circle accent for eyebrow labels, in amber (0.6 opacity)
+- Vertical organic line in blockquotes: teal SVG path, hand-drawn feel
 
-#### Primary 1 — Cloud White
-**Hex:** `#F5F4F2`
-**Color name:** Cloud White
-**Role:** Primary page background, hero sections, card backgrounds
-
-**Emotional rationale:** This is a Pantone 2026 Cloud Dancer-energy off-white — airy, clean, digital. Not clinical hospital white (`#FFFFFF`), not parchment/bone (analog). Cloud White reads as a premium digital surface: the background of a Calm onboarding screen, an Oura dashboard, a Headspace breathing exercise. It provides maximum contrast for the deep chromatic palette colors without the sterility of pure white. The tiny warmth in the undertone (leaning just barely warm) prevents the coldness of a purely neutral white, but is not visible enough to register as "warm" — it simply registers as "excellent."
-
-**Why not bone/parchment:** Bone reads as paper, print, craft. Cloud White reads as screen, premium, digital-native — which is what Kin is.
-
-**Multi-product test:**
-- The Mirror: Cloud White creates a focused, clean context for the archetype revelation — the revelation lands on a surface that signals precision and intelligence.
-- The Blueprint: Clean background reads as professional, considered, high-signal — appropriate for a forward-looking product.
-- The Partner Match: Neutral enough for relational content without signaling romance app or lifestyle brand.
-
----
-
-#### Primary 2 — Espresso
-**Hex:** `#1A1008`
-**Color name:** Espresso
-**Role:** Primary text, headlines, primary dark surfaces, deep hero backgrounds
-
-**Emotional rationale:** Rich, warm-dark chocolate rather than cool near-black. Espresso replaces both stone-900 (too cool/institutional) and warm charcoal (too editorial). This is the dark anchor of a 2026 premium palette — the color of a quality notebook cover, a well-designed app dark mode, a premium physical product. It reads as considered and premium without the coldness of pure black or the literary feel of aged charcoal. Deep enough for strong typography contrast; warm enough to never feel cold or corporate.
-
-**Why not stone-900:** Stone-900 has a gray/cool undertone that reads as default, institutional, not designed. Espresso reads as a deliberate choice — the difference between a designer choosing a color and a developer choosing a default.
-
-**Multi-product test:**
-- Universal: Functions as the primary text color across all products. Creates strong, premium hierarchy against Cloud White.
-
----
-
-#### Primary 3 — Deep Teal
-**Hex:** `#0D3D3A`
-**Color name:** Deep Teal
-**Role:** Primary brand color — section backgrounds, primary CTAs, hero moments, accent surfaces
-
-**Emotional rationale:** Deep teal is the breakout color signal of 2026 — oceanic mystery combined with technical intelligence. It is simultaneously: the depth of contemplative water, the signal of precision and competence (medical teal, research-institution teal, Calm's foundational color language), and the warmth of something genuinely natural and non-artificial. For Kin — a brand about psychological depth, self-understanding, and the kind of intelligence that meets you where you are — deep teal encodes all three registers without being reducible to any single one.
-
-Deep teal is not the cool, startup teal of 2015–2020 (`#008080`, `#20B2AA`). This is darker, richer, more saturated — the teal of deep ocean, not shallow pool. It signals serious depth without austerity.
-
-**Multi-product test:**
-- The Mirror: Deep teal sections create the "you are entering something serious and worth your attention" environment — not threatening, but genuinely deep.
-- The Blueprint: Teal reads as precision, competence, trust — appropriate for a product about building from understanding.
-- The Partner Match: Deep teal avoids the "compatibility quiz / romance" register entirely — signals depth of relationship, not surface matchmaking.
+**What makes this NOT generic AI-polished SaaS:**
+1. PP Pangaia Ultralight at 140px — not a "safe" sans-serif choice
+2. The grain texture — not a clean, flat background
+3. Hand-drawn SVG details — not geometric icon sets
+4. Organic border-radius variation — not uniform `rounded-lg` everywhere
+5. The -0.5deg card tilt — not perfectly horizontal
+6. Scroll-triggered narrative arc — not independent section blocks
 
 ---
 
-### 1.2 Secondary / Accent Palette
+## Part 2: Design Philosophy
 
-**Secondary colors enable product differentiation and mark moments of insight and emphasis.**
+### 2.1 How 2026 Trends Map to Design Decisions
 
----
+| Trend | Kin Application |
+|-------|----------------|
+| **#5 Neo-Minimalism** | One bold typographic moment per section. Type IS the composition at hero. Extreme whitespace. Left-aligned hero (not centered). Each section has ONE thing that commands attention. |
+| **#6 Emotion-Led Humanised** | Hand-drawn SVG micro-details at every section boundary. PP Pangaia italic for emotional emphasis. Copy that sounds like a real person wrote it. Organic easing that feels natural, not mechanical. |
+| **#9 Raw Authenticity** | CSS grain texture on hero and teal sections. Organic border-radius variation. Sample card tilted -0.5deg. Hand-drawn vertical lines on blockquotes. Slightly irregular archetype pill shapes. |
+| **#7 Vibrant Color (reinterpreted)** | Gradient depth within teal palette. Color as emotional signal (amber = craft, merlot = revelation, teal = depth). Not chromatic-bold — restrained and intentional. |
+| **#2 Brutalist (whisper only)** | Deliberate layout asymmetry in hero (left-aligned, not centered). KOL bento grid (2-column featured + single for others). Not full brutalism — just its discipline around asymmetry. |
 
-#### Secondary 1 — Merlot
-**Hex:** `#6B1E2E`
-**Color name:** Merlot
-**Role:** Emotional emphasis, archetype name accents, the "revelation moment" color, product-level differentiation for The Mirror
+### 2.2 What Makes This Page UNFORGETTABLE
 
-**Emotional rationale:** Rich wine-red in the merlot register — deep, warm, emotionally resonant without being alarming. Where deep teal is the intellectual precision of the brand, merlot is the emotional weight. It encodes something you've carried — the depth of an experience that has had time to concentrate and deepen. Merlot is not red (urgent, alarming), not pink (relationship/romance app), not maroon (institutional). It occupies a specific register: the warmth of something genuinely important, the color of a mark that means something.
+One answer: **the headline.**
 
-For The Mirror specifically, merlot is the archetype-reveal accent — when the archetype name appears, when the most emotionally weighted insight lands, merlot signals: *this matters.*
+"Finally, the words for it." at 140px PP Pangaia Ultralight. No decoration around it. No illustration competing with it. Just the words — enormous, warm, almost architectural. When someone arrives at this page, the first thing they see is a sentence that might describe exactly how they've felt for years, rendered at a scale that makes it impossible to look away.
 
-**Multi-product test:**
-- The Mirror: Merlot on archetype names, revelation moments — the vocabulary gift delivered in emotional-weight color.
-- The Blueprint: Used sparingly; merlot marks the most personal forward-looking statements ("this is what you're building toward").
-- The Partner Match: Used for the most intimate relational insights — not dominant enough to trigger romance-app register.
+This is the moment. Everything else serves it.
 
----
+Secondary memorable elements:
+- The -0.5deg tilted sample question card — "wait, that's a real question I'd think about"
+- The pull quote from van der Kolk at 24px italic — "The body remembers what the mind forgets"
+- SecondaryHero: "You've always known." (Ultralight) + "Now you'll see it." (italic, amber) — the emotional climax
 
-#### Secondary 2 — Warm Sand
-**Hex:** `#C8B89A`
-**Color name:** Warm Sand
-**Role:** Subtle surface variation, card backgrounds in light sections, muted text emphasis, soft borders
+### 2.3 Emotional Arc of the Scroll
 
-**Emotional rationale:** A warm mid-tone that bridges the Cloud White background and the deep chromatic colors. Warm Sand is not bone/parchment (too analog) — it is a calibrated neutral that reads as considered, premium, quiet. It functions as the surface on which content sits within card components — providing just enough depth to create hierarchy without introducing a new chromatic statement. Think: the card background color in Calm's interface, the subtle section variation in Oura's web product.
+```
+[HIGH RECOGNITION] "Finally, the words for it." ← Hero
+       ↓
+[SOCIAL PROOF] "Others have done this. I'm not alone."
+       ↓
+[INTRIGUE] "Which one am I?" — nine archetype names. A real question.
+       ↓
+[TRUST BUILD] 8 researchers. Real science. This isn't arbitrary.
+       ↓
+[HUMAN CONNECTION] The science becomes human through the researchers' words.
+       ↓
+[FRICTION REMOVED] "My childhood was complicated. Will this work for me?"
+       ↓
+[EMOTIONAL PEAK] "You've always known. Now you'll see it." ← the recognition moment
+       ↓
+[EXHALE] Footer — minimal. The page is complete.
+```
 
-**Multi-product test:** Universal. Introduces no product-specific semantic content. Applies identically across The Mirror, Blueprint, and Partner Match.
-
----
-
-#### Secondary 3 — Burnished Amber
-**Hex:** `#C4892A`
-**Color name:** Burnished Amber
-**Role:** Research credibility, insight emphasis, "earned knowledge" moments — secondary accent only
-
-**Emotional rationale:** A deep, saturated amber — not the startup-cheerful amber of Tailwind's color system, but burnished, closer to ochre, the amber of aged and refined things. Used specifically and sparingly for: researcher names in the credibility section, the "now I see it" insight arrival text, secondary emphasis that needs to read as "important" rather than "action." Burnished Amber is the "earned authority" color — used only where knowledge is being delivered, never for CTAs or primary UI actions.
-
-**Important:** This is used at much lower frequency than the primary palette. It is an accent within accents. Its value is its restraint.
-
-**Multi-product test:**
-- Brand level: Research evidence and credibility grounding — works across all products.
-- The Blueprint: Can lean on Burnished Amber more than other products — "accumulated wisdom turned into a forward plan" aligns semantically.
-
----
-
-### 1.3 Semantic Token Mapping
-
-These map directly to CSS custom properties in `globals.css`:
-
-| CSS Token | Color Name | Hex | Usage |
-|-----------|-----------|-----|-------|
-| `--background` | Cloud White | `#F5F4F2` | Primary page background |
-| `--foreground` | Espresso | `#1A1008` | Primary text color |
-| `--primary` | Deep Teal | `#0D3D3A` | Primary brand color, section backgrounds |
-| `--primary-foreground` | Cloud White | `#F5F4F2` | Text on teal surfaces |
-| `--secondary` | Warm Sand | `#C8B89A` | Secondary surfaces, card backgrounds |
-| `--secondary-foreground` | Espresso | `#1A1008` | Text on sand surfaces |
-| `--accent` | Merlot | `#6B1E2E` | Revelation moments, archetype names, emotional emphasis |
-| `--accent-foreground` | Cloud White | `#F5F4F2` | Text on merlot elements |
-| `--card` | Cloud White | `#F5F4F2` | Card component background (light sections) |
-| `--card-foreground` | Espresso | `#1A1008` | Text on cards |
-| `--muted` | Warm Sand | `#C8B89A` | Supporting text, muted labels, metadata text |
-| `--muted-foreground` | `#8A7A66` | Stone Warm | Disabled states, placeholder text |
-| `--destructive` | `#C0392B` | Red | Error states — unchanged |
-| `--border` | `#E8E4DF` | Cloud Border | Subtle borders, dividers |
-| `--popover` | Cloud White | `#F5F4F2` | Popover backgrounds |
-| `--popover-foreground` | Espresso | `#1A1008` | Text on popovers |
-
-**Deep brand section overrides** (applied to sections with `data-theme="deep"` or `.section-deep` class):
-- Background: Deep Teal `#0D3D3A`
-- Foreground: Cloud White `#F5F4F2`
-- Accent on dark: Burnished Amber `#C4892A`
-- Muted on dark: `#7A9E9C` (teal-tinted muted)
-
-**Glassmorphism card overrides** (applied to cards in deep section contexts):
-- Background: `rgba(255, 255, 255, 0.08)`
-- Border: `rgba(255, 255, 255, 0.12)`
-- Backdrop filter: `blur(12px)`
+The emotional arc is a revelation arc. You enter curious. You leave certain. The design supports this by increasing emotional intensity through the scroll: light sections at top, deep teal emotional peak at bottom.
 
 ---
 
-### 1.4 What is Being Replaced
+## Part 3: Section-by-Section Composition Specs
 
-| Previous Direction | New Direction | Rationale |
-|--------------------|---------------|-----------|
-| Bone `#F7F2EB` (parchment background) | Cloud White `#F5F4F2` | Parchment = analog/craft; Cloud White = digital-native premium |
-| Terracotta `#B05A3A` (primary accent) | Deep Teal `#0D3D3A` (primary brand color) | Terracotta peaked 2022–24, reads dated; Deep Teal = 2026 premium digital |
-| Soft Clay `#EBE0D5` (secondary surface) | Warm Sand `#C8B89A` (secondary surface) | Clay = earthy analog; Sand = calibrated neutral for digital premium |
-| Aged Gold `#C4892A` (insight accent) | Burnished Amber `#C4892A` (secondary accent, same hex) | Renamed to clarify register; same color, more restrained usage |
-| Warm Charcoal `#1C1512` (text) | Espresso `#1A1008` (text) | Richer, warmer dark; subtle shift toward more premium depth |
-| Deep Dusk `#1E1814` (dark sections) | Deep Teal `#0D3D3A` (deep brand sections) | Teal dark sections instead of near-black editorial sections — more distinctive |
-| `amber-*` Tailwind classes | `teal-*` and custom tokens | Full migration away from amber system |
+### Section 1: HeroSection
 
----
+**The ONE bold moment:** PP Pangaia Ultralight at 140px. The headline is the design.
 
-### 1.5 Multi-Product Color Test Summary
+**Layout:**
+- Full viewport height, flex column justify-center
+- Left-aligned content column (max-w-3xl on xl screens, max-w-6xl container)
+- Vast whitespace to the right — intentional negative space
+- Teal radial gradient blob at top-right (60% opacity, hidden on mobile)
 
-| Color | The Mirror | The Blueprint | The Partner Match | Pass/Fail |
-|-------|-----------|---------------|-------------------|-----------|
-| Cloud White background | Clean, precision focus for revelation content | Professional, high-signal | Neutral, warm, non-relationship-app | PASS all three |
-| Espresso text | Serious, grounded, premium | Authoritative, considered | Neither cold nor romantic | PASS all three |
-| Deep Teal accent/sections | Depth, contemplative intelligence | Precision, competence, trust | Relational depth, not surface | PASS all three |
-| Merlot accent | Emotional weight, revelation moment | Restrained personal statement | Intimate insight, not romance-app | PASS all three |
-| Warm Sand secondary | Quiet hierarchy, card distinction | Professional card surfaces | Same | PASS all three |
+**Typography:**
+- Eyebrow: `text-xs tracking-[0.25em] uppercase font-display italic` in Teal — "Kin — The Mirror"
+- Headline: `text-6xl sm:text-7xl lg:text-[108px] xl:text-[140px] font-extralight` PP Pangaia, Espresso, `leading-[0.95]`
+- Subtitle: `text-lg sm:text-xl` Geist Sans, Warm Sand, max-w-xl
+- Supporting copy: `text-base` Geist Sans, Warm Sand, 2 paragraphs
 
----
+**Color:**
+- Background: Cloud White (#F5F4F2) + grain class
+- Headline: Espresso (#1A1008)
+- Body: Muted warm (#8A7A66)
+- CTA button: Deep Teal (#0D3D3A) pill, Cloud White text
 
-## Section 2: Typography
+**Craft elements:**
+- `HandDrawnCircle` at size 16, amber, 60% opacity — precedes eyebrow label
+- CSS grain texture on section via `.grain` class
+- Breathing teal gradient blob (abstract atmospheric depth)
 
-### 2.1 Display / Accent Font: Canela (or equivalent contemporary display serif)
+**What stops the scroll here:** The headline. 140px weight in the warmest digital context most users have encountered.
 
-**Decision: REPLACE Cormorant Garamond — specify Canela or contemporary display serif with equivalent energy.**
-
-**Why Cormorant Garamond is being replaced:**
-
-Cormorant Garamond is a beautiful font for literary publications and editorial magazines. It is NOT designed for digital product environments. Its thin hairline strokes render poorly at most digital sizes, its primary cultural associations are with print — The New Yorker, literary journals, academic publications — and its "bookish" register is specifically incompatible with Kin's identity as a sleek, digital-native product. A user encountering Kin and then Calm or Headspace should feel Kin is operating in the same register — precision digital, warm but modern. Cormorant would put Kin firmly in the "literary magazine" camp.
-
-**What replaces it — Contemporary Display Serif (Canela energy):**
-
-The target: a high-contrast display serif designed for screen environments with these characteristics:
-- **High stroke contrast** (thick/thin variation that reads elegantly on screen, not as hairlines that disappear)
-- **Geometric-editorial hybrid** — the precision of a designed type specimen with the warmth of humanist proportions
-- **Culturally current** — associated with 2022–2026 premium wellness tech, high-design digital products, and editorial-meets-digital brands
-- **Not bookish** — should read as "designed for the screen" not "from a publishing house"
-
-**Specific options (in priority order):**
-
-1. **Canela** (Commercial Type) — The primary recommendation. High-contrast display serif with geometric clarity. Used by: Away, Oura, numerous premium DTC brands. Perfect balance of warmth and precision.
-
-2. **Sang Bleu Kingdom** (Swiss Typefaces) — Sharp, modern, editorial with Swiss precision. More sophisticated / exclusive register than Canela.
-
-3. **Quiche Display** — Available on Adobe Fonts / Google Fonts. High-contrast, contemporary, screen-designed. Closest accessible substitute for Canela characteristics.
-
-4. **Freight Display** — Humanist display serif, high-contrast, screen-optimized. If Canela is unavailable, Freight Display is the fallback.
-
-**Loading strategy:**
-- If Canela is licensed: load via `localFont` from `/fonts/Canela-*` files in `next/font/local`
-- If using Quiche Display: load via `next/font/google` (available in Google Fonts)
-- CSS variable: `--font-display` (same variable name as current, new font loaded)
-- Apply: via `fontFamily` style prop on display elements (same pattern as current Cormorant implementation)
-
-**Application rules:**
-
-**Weights to use:**
-- Light (300): Large hero headlines — the size carries the impact; lightness creates elegance
-- Regular (400): Section opener headlines, large display text
-- Medium (500): Subheadings where more presence is needed
-- NOT Bold — display serifs in this register lose their character when bolded; use size, not weight, for impact
-
-**Size hierarchy:**
-- Hero headline: 80–108px light or regular. Typography IS the hero composition in 2026.
-- Section openers: 52–72px regular. The entering of a new section is architecturally significant.
-- Subheadings: 32–42px regular or medium. More presence than Cormorant's hairline aesthetic.
-- Pull quotes: 24–36px regular, line height 1.75. The revelation moment in reading-comfortable form.
-- Minimum size: 24px. Contemporary display serifs are designed for display, not body text.
-
-**Specific use rules:**
-- ALWAYS use display serif for: hero headlines, archetype names as they arrive (the vocabulary gift delivery), section openers on brand sections, pull quotes
-- NEVER use: in body text, in UI elements (navigation, buttons, labels), below 24px, for data/metadata
-- Serif is the wink — the human touch inside the digital precision. It is used for moments that deserve to slow the reader down. It is not the default mode.
-
-**Multi-product test:**
-Contemporary display serif applies identically across The Mirror, Blueprint, and Partner Match. The font signals "serious, premium, thoughtful" — appropriate for all three product registers. Unlike Cormorant (which reads specifically as literary/publishing), a screen-designed display serif reads as "premium digital product with depth."
+**What changes from current implementation:**
+- NONE — current implementation is already correct. Headline at correct scale, eyebrow with hand-drawn circle, left-aligned, vast whitespace, teal blob, grain, CTA pill.
+- **Improvement target:** Increase xl headline scale from `xl:text-[140px]` (already set — good). Ensure `max-w-3xl` clamp on the headline itself.
 
 ---
 
-### 2.2 Body / Workhorse Font: Geist Sans
+### Section 2: SocialProof
 
-**Decision: KEEP — with reinforced application rules.**
+**The ONE bold moment:** The animated counter "2,847 people have already taken The Mirror" in bold display font.
 
-Geist Sans is the correct choice for Kin's interface and marketing body text. It is clean, geometric-inflected, digital-native, and legible at all scales. It pairs well with contemporary display serifs. Most importantly: it reads as "a thoughtfully built product" not "a lifestyle brand" — which is exactly the register Kin needs.
+**Layout:**
+- Centered content, max-w-5xl
+- Counter prominent above the quote grid
+- 3-column quote card grid (responsive: 1 col mobile, 3 col sm+)
 
-**Application — Geist Sans does the heavy lifting:**
-- Navigation, all nav elements
-- Body text, marketing copy
-- UI labels, metadata, supporting text
-- CTAs and button text
-- Quiz questions and answer options
-- Form elements
-- Any text below 22px
+**Typography:**
+- Counter number: `text-3xl sm:text-4xl font-bold font-display` in Espresso — large enough to register
+- "have already taken The Mirror": inline muted text — underplays the number (makes it feel casual, not boastful)
+- Quote text: `text-sm italic` Geist Sans, Muted warm
+- Attribution: `text-xs font-medium` Geist Sans, Muted warm
 
-**Sizing and spacing:**
-- Primary body: 17–18px, line height 1.7–1.8, max measure 68ch
-- Supporting body: 15–16px, line height 1.6
-- Labels/metadata: 13–14px, letter-spacing 0.02em for all-caps metadata
-- CTAs: 15–16px medium weight, letter-spacing 0.03em
+**Color:**
+- Background: Cloud White (#F5F4F2)
+- Cards: `bg-white/80 border border-[#E8E4DF]/60 rounded-2xl`
+- Quote marks: Merlot at 40% opacity
 
-**Multi-product test:** Geist Sans creates no product-specific semantic signal. It applies identically across The Mirror, Blueprint, and Partner Match as the functional workhorse.
+**Craft elements:**
+- `HandDrawnQuoteMark` in merlot — visible mark of care on every testimonial
+- Cards: `rounded-2xl` with subtle shadow
+- Each card has slightly different content height — feels organic, not templated
 
----
+**What stops the scroll here:** The counter + the human specificity of quotes (city, age, role).
 
-### 2.3 Type Scale
-
-| Element | Size | Weight | Font | Line Height | Notes |
-|---------|------|--------|------|-------------|-------|
-| Hero headline | 80–108px | Light 300 | Display Serif | 0.95–1.05 | Typography is the composition. Very tight leading. |
-| Section opener | 52–72px | Regular 400 | Display Serif | 1.05–1.15 | Large typographic presence per section |
-| Subheadings | 32–42px | Regular–Medium | Display Serif | 1.2–1.3 | Structural heading with personality |
-| Pull quote / revelation | 24–36px | Regular | Display Serif | 1.7–1.8 | The moment of "I always sensed this. Now I see it." |
-| Primary body | 17–18px | Regular | Geist Sans | 1.75–1.85 | Max 68ch line length |
-| Supporting body | 15–16px | Regular | Geist Sans | 1.65 | Secondary content |
-| Labels / metadata | 13–14px | Regular | Geist Sans | 1.5 | 0.02em tracking |
-| Archetype names (inline) | Inherit size | Regular | Display Serif | Inherit | Used inline in Geist body for contrast |
-| CTAs | 15–16px | Medium 500 | Geist Sans | 1.4 | 0.03em letter-spacing |
-| Nav items | 14–15px | Regular | Geist Sans | 1.4 | |
+**What changes from current implementation:**
+- Current: correct structure. Counter present. Quotes present. Hand-drawn quote marks present.
+- **Improvement target:** Consider making counter number more dramatic (larger, display font weight). The muted treatment of "people" text below it is good — contrast the number boldness.
 
 ---
 
-### 2.4 Typography Rules
+### Section 3: ArchetypePreview
 
-**Display serif rules:**
-- ONLY at 24px and above
-- NEVER in UI elements (navigation, buttons, labels, form text)
-- NEVER for body text
-- NEVER in bold weight — size is the lever, not weight
-- ALWAYS for: hero headlines, section openers, archetype names (reveal moment), pull quotes
-- Reserve for impact — the serif is the stylistic punctuation, not the default voice
+**The ONE bold moment:** The nine archetype pills floating in an organic flex-wrap cloud.
 
-**Geist Sans rules:**
-- Everything else — body text, UI elements, labels, CTAs, navigation
-- NEVER for hero headlines or section openers
-- Enforce max measure: ~68ch at 17px (approximately 680px at standard resolution)
-- Letter-spacing +0.02–0.03em for all-caps and CTA contexts
+**Layout:**
+- Centered content column, max-w-5xl
+- Centered text header (exception to left-align rule — this section is about discovery, not authority)
+- Organic pill cloud flex-wrap
+- Sample question card: tilted -0.5deg, max-w-lg, centered
 
-**Pairing rule:** Display serif makes the emotional or architectural claim. Geist Sans delivers the information or takes the action. Every section has a clear decision about which mode it's in.
+**Typography:**
+- Eyebrow: `text-xs tracking-[0.25em] uppercase font-medium` Teal
+- h2: `text-4xl sm:text-5xl font-bold font-display` Espresso — "Nine patterns. One of them is yours."
+- Body: `text-base` Muted warm, max-w-xl
+- Archetype pill text: `text-sm` Espresso
+- Sample card question: `text-lg sm:text-xl font-display` Espresso
 
----
+**Color:**
+- Background: White (#FFFFFF) — deliberate break from Cloud White for visual rhythm
+- Archetype pills: `border border-[#E8E4DF] bg-[#F5F4F2]/60`
+- Pill hover: `border-[#0D3D3A]/30 bg-[#F5F4F2]`
+- Sample card: `bg-[#F5F4F2] border border-[#E8E4DF]` + grain texture
 
-## Section 3: Imagery System
+**Craft elements:**
+- `HandDrawnCircle` in amber — eyebrow label
+- Each pill has unique `organicRadius()` — deterministic irregular corners
+- Sample card rotated -0.5deg — paper on a desk
+- `.grain` on sample card — tactile feel
 
-### 3.1 Brand-Level Illustration Direction
+**What stops the scroll here:** "Nine patterns. One of them is yours." — the specificity triggers self-identification.
 
-**The illustration system must encode the parent's interiority — their psychological inner life — not any product-specific metaphor.** This constraint is unchanged from the prior brief.
-
-What changes is the register: not loose editorial line illustration (which reads as warm/analog/School of Life), but **refined craft with intentional warmth** — higher precision, visible human intelligence in the making, anti-AI but not anti-digital.
-
-**2026 Illustration Register for Kin:**
-
-The target: illustrations that read as "an intelligent human chose and refined every line" — not machine-smooth, not hyper-optimized, but clearly made with craft and intention. The distinction from School of Life editorial illustration:
-- School of Life: loose, gestural, deliberately hand-made feeling, warm, approachable → reads as analog/craft
-- Kin target: precise, considered, craft-quality — like a sophisticated brand illustration studio had weeks to perfect each piece — warmth is in the *subject* not in the *looseness of the line*
-
-**Style directions (choose one or establish hybrid):**
-
-**Direction A — Sophisticated Geometric-Organic:**
-Clean geometric forms with organic softness at the edges. Think: the precision of Headspace's illustrations combined with the warmth of a human subject. Figures constructed from considered shapes rather than gestural lines. Color fills in the brand palette (deep teal, merlot accent) rather than line-on-ground. Warmth comes from the subject matter (a figure in contemplation) not from loose line quality.
-
-**Direction B — Refined Figurative with Minimal Line:**
-Figurative illustrations in a minimal style — full figures or fragments (hands, profiles) rendered with confident, spare line work that has been refined to its essential form. Less linework than School of Life, more precision, cleaner negative space. Closer to the illustration register of a premium DTC brand (Away, Glossier's editorial periods) than an editorial publication.
-
-**Direction C — Abstract Psychological Landscape:**
-Abstract compositions that encode psychological states without figurative representation — layered forms, depth through subtle color gradients in the brand palette, compositions that evoke interiority through structure and color rather than representation. This direction pairs especially well with glassmorphism layout elements.
-
-**Recommended primary direction:** Direction A or B, with Direction C available for decorative/background elements. The brand's emotional core requires some figurative element that the audience can project themselves into.
-
-**Visual references for the correct register:**
-1. **Headspace** (app illustrations, 2021–present) — sophisticated geometric-organic figures in contemplative states; warmth through subject not line quality
-2. **Calm** (editorial illustration, 2022–present) — refined, minimal, clearly designed rather than sketched; premium digital product register
-3. **Linear / Pitch** brand illustration — clean, geometric, human but digital-native; shows that "human" and "sleek" are not opposites
-
-**Subject matter (same as prior brief — this is correct):**
-- A figure in a moment of inward attention — paused, looking at something with awareness
-- The relationship between a present-day self and a remembered past — no nostalgia, just recognition
-- Hands in relationship with objects that carry memory or meaning
-- Interior spaces that suggest contemplation rather than action
-- NOT: action, adventure, family lifestyle, children, morning routines
-
-**What is NOT the correct register:**
-- Loose gestural line illustration (too School of Life / warm-analog)
-- Hyper-clean vector illustration (too startup / sterile)
-- Sketch-quality or "doodle" style (too casual for a premium product)
-- Abstract blobs or amorphous shapes (2019–2021 SaaS illustration, dated)
+**What changes from current implementation:**
+- Current: correct and well-structured. Organic pills, tilted card, grain, hand-drawn circle.
+- **Improvement target:** h2 could go bolder — currently `font-bold` which maps to 700 in display font. This is correct. Sample question card interior: option buttons could be more visually distinct (slightly warmer border color on hover state).
 
 ---
 
-### 3.2 Photography Direction
+### Section 4: KOLCredibility
 
-Photography is secondary to illustration. When used (social media, email, editorial content):
+**The ONE bold moment:** The bento-style researcher grid with sketch portrait icons — an asymmetric, human-feeling layout.
 
-**Subject (use):**
-- Adults in private moments of thought — reading, sitting with a feeling, paused
-- Hands engaged in meaningful activity (writing, holding things with history)
-- Unguarded, non-performed faces — thinking, not smiling at camera
-- Environments that signal interior life — personal spaces, morning light, quiet domestic moments
+**Layout:**
+- Left-aligned section header (max-w-2xl) — asymmetric, echoes hero
+- 4-column bento grid (responsive: 2 col mobile, 4 col lg)
+- Featured researchers (Baumrind, Ainsworth) span 2 columns
+- All 8 researchers visible — no carousels
 
-**Subject (avoid):**
-- Lifestyle photography — happy family, outdoor adventure, morning routine performance
-- Children as subjects (signals child-facing brand)
-- Posed couple photography (relationship advice register)
-- Nature as emotional metaphor (sunrises, mountains, water — too generic)
+**Typography:**
+- Eyebrow: `text-xs tracking-[0.25em] uppercase font-medium` Teal
+- h2: `text-4xl sm:text-5xl font-semibold font-display` Espresso — left-aligned
+- Subheading: `text-[#8A7A66] text-base leading-relaxed`
+- Researcher name: `text-base font-semibold font-display` Espresso
+- Contribution: `text-xs font-medium` Teal
+- Work title: `text-xs italic` Muted warm
+- Year: `text-xs` Muted warm
 
-**Style guidance:**
-- Premium, editorial quality — the photography should look like it belongs in a thoughtful magazine
-- Natural interior light, not overly warm-filtered (not Instagram golden hour)
-- Intimate framing, generous negative space
-- Slight desaturation and depth — not clinical sharpness, not vintage aging
+**Color:**
+- Background: Cloud White (#F5F4F2)
+- Cards: same background (intentional — makes sketch portraits pop without card elevation)
+- Card hover: `hover:bg-white` — subtle lift
+- Divider in card: `HandDrawnDivider` in Teal at 20% opacity
 
----
+**Craft elements:**
+- Sketch portrait SVGs — hand-drawn editorial line illustration style (already implemented)
+- `HandDrawnDivider` between contribution and work title in each card
+- Grid asymmetry: featured cards at 2-column width
 
-### 3.3 Brand Illustration vs. Product Illustration
+**What stops the scroll here:** The sketch portrait style — these look like real hand-drawn portraits, not stock icons.
 
-**Brand illustrations:**
-- Appear on: Kin landing page hero, shared brand materials, email headers, brand-level content
-- Subject: parent interiority — the audience's inner life, not the product's function
-- Register: Refined craft — precise, considered, warm through subject matter
-- Color: uses brand palette (deep teal, cloud white, merlot accent, burnished amber for emphasis)
-- Purpose: audience identification — "this is about someone like me, and it's sophisticated"
-
-**Product illustrations:**
-- Appear on: individual product pages, product-specific marketing, results interface
-- Subject: can encode product metaphors (reflection for The Mirror, architectural/structural for The Blueprint, dialogue/encounter for The Partner Match)
-- Register: same brand illustration style but with product-metaphor content
-- Purpose: orient user to specific product's value proposition
-
-**Anti-pattern being corrected:**
-The current `MirrorIllustration.tsx` is a product-level illustration (mirror/reflection metaphor) used at brand level (landing page hero). This must be redesigned as a brand-level illustration — a scene of interior experience recognizable to the audience without being tied to The Mirror product.
-
-**What is being replaced:**
-- `MirrorIllustration.tsx` → Brand-level parent-interiority illustration in the Kin refined-craft register (redesign required)
-- `ArchetypeIcons.tsx` → Updated style from geometric abstraction to refined figurative or geometric-organic in brand palette (style update, not structural change)
-- KOL portrait sketches → Retain but refine — align line quality with the brand's more precise illustration register
+**What changes from current implementation:**
+- Current: correct structure. Portraits, bento grid, hand-drawn dividers.
+- **Improvement target:** Header is currently centered-ish. Push it to strict left-align (remove `max-w-2xl` centering, make it `ml-0 mr-auto`). Make h2 slightly larger on desktop. This echoes the hero's authority asymmetry.
 
 ---
 
-## Section 4: Layout Approach
+### Section 5: KOLNarrative
 
-### 4.1 2026 Layout Philosophy
+**The ONE bold moment:** Research quotes at 24px PP Pangaia Ultralight Italic — the researchers speaking in the brand's voice.
 
-The prior brief's layout approach was editorial sequence (narrative → visual rest → evidence → testimony → CTA) modeled on print editorial publications. This is correct in *sequence logic* but outdated in *visual form*. The 2026 update:
+**Layout:**
+- Narrow reading column, max-w-3xl, centered (reading mode — not authority mode)
+- Each researcher gets: quote + source + discovery + Mirror connection
+- Separated by organic amber dividers
+- No card containers — just type on background
 
-Kin's layout must feel like a premium digital product, not a website of editorial sections. The distinction:
-- **Editorial website:** Alternating text and image sections, each spanning full viewport width, scrolled through linearly — the "5 sections" SaaS landing page template
-- **2026 premium digital:** Bento-grid modularity, large typographic compositions where type IS the visual, glassmorphism depth layers, scroll-triggered reveals, spatial rhythm that feels intentional rather than templated
+**Typography:**
+- Eyebrow: `text-xs tracking-[0.25em] uppercase font-medium` Teal, centered
+- Quote: `text-xl sm:text-2xl italic font-display font-extralight` — PP Pangaia Ultralight Italic, Espresso
+- Attribution: `text-sm font-bold font-display` + year, Muted warm
+- Discovery: `text-sm leading-relaxed` Muted warm
+- Mirror connection: `text-sm font-medium` Teal at 80% opacity
 
-**The section sequence logic is preserved.** What changes is how each section is composed visually.
+**Color:**
+- Background: Cloud White (#F5F4F2) — continuation from KOLCredibility
+- Hand-drawn left vertical line on blockquote: Teal at 30% opacity
+- Dividers between sections: Amber at 30% opacity
 
----
+**Craft elements:**
+- Hand-drawn teal vertical line left of blockquote (already implemented inline SVG)
+- `HandDrawnDivider` in amber between researcher sections
+- No box shadows, no cards — pure typographic composition
 
-### 4.2 Bento-Grid Modularity
+**What stops the scroll here:** Van der Kolk quote at 24px italic: "Being able to feel safe with other people is probably the single most important aspect of mental health." — at that size, in italic, it's almost architectural.
 
-**The primary layout pattern for feature-dense sections (research credibility, product features, archetype showcase):**
-
-Bento grid: asymmetric grid of card modules that creates hierarchy through size variation rather than repetition. Rules:
-- 2–4 columns depending on viewport
-- Card sizes vary: one large hero card (spanning 2 columns), two or three medium cards, one small card
-- Each card carries a single idea — no cards contain more than one claim
-- Cards have genuine depth (shadow, slight elevation, possible glassmorphism for cards on deep teal backgrounds)
-- Grid gaps are generous — bento-grid should feel like a curated composition, not a tile wall
-
-**When to use bento grid:**
-- Research credibility section (researcher names as large and small cards)
-- Product comparison / feature showcase
-- Archetype preview section
-- Any section with multiple equivalent-weight content units
-
-**When NOT to use bento grid:**
-- Hero sections (too structured for opening impact)
-- Narrative/permission-giving sections (needs more visual breathing room)
-- Pull quote moments (should be isolated, not in a grid)
+**What changes from current implementation:**
+- Current: well-structured. Quote size, vertical line, attribution, discovery.
+- **Improvement target:** Quote font-weight should be explicitly `font-extralight` (200) not default. The current `font-display italic` may render at a different weight. Increase quote size from `text-xl sm:text-2xl` — push to `text-2xl sm:text-3xl` for maximum typographic impact.
 
 ---
 
-### 4.3 Large Typographic Heroes
+### Section 6: FAQ
 
-**The hero section and major section openers: typography IS the composition.**
+**The ONE bold moment:** "Before you begin" — massive, centered, display font. The heading sets a tone of safety.
 
-2026 pattern: the headline is so large it becomes the visual — the type carries the entire hero without requiring an illustration or photo behind it. This works when:
-- The font (display serif) has enough personality to sustain being the primary visual element
-- The copy is precise enough to hold a reader's attention as a large typographic object
-- The whitespace around the type is generous enough to give it room to breathe
+**Layout:**
+- Narrow reading column, max-w-2xl, centered
+- Q&A pairs separated by `HandDrawnDivider`
+- No accordion (all answers visible — trust through transparency)
 
-**Implementation for Kin:**
-- Hero: Large display serif headline, 80–108px, light weight, maximum 12 words. Below: Geist Sans subhead, 18–20px, maximum 2 lines. Below: Primary CTA.
-- No illustration required in the hero — the type and the deep teal/cloud white palette create the first impression
-- If illustration is present: it is secondary to the type, not competing with it
-- Background: Cloud White (light hero) or Deep Teal (dark hero variation for campaigns)
+**Typography:**
+- Eyebrow: `text-xs tracking-[0.25em] uppercase font-medium` Muted warm (softer eyebrow — gentle section)
+- h2: `text-4xl sm:text-5xl font-bold font-display` Espresso — "Before you begin"
+- Question: `text-base font-semibold` Espresso
+- Answer: `text-sm leading-relaxed` Muted warm
 
----
+**Color:**
+- Background: Cloud White (#F5F4F2)
+- Dividers: `HandDrawnDivider` in amber at 30% opacity
 
-### 4.4 Glassmorphism for Depth
+**Craft elements:**
+- Hand-drawn amber dividers between FAQ items
+- No icons, no chevrons — pure typography
 
-**Used on cards positioned over deep teal section backgrounds:**
+**What stops the scroll here:** "Before you begin" heading — it acknowledges hesitation before the user even names it.
 
-Glassmorphism brings a sense of layering and depth — surfaces that exist in front of a deep background, with the background visible through them. This creates spatial sophistication without requiring complex illustration. Rules:
-- Apply ONLY on deep teal backgrounds (not on Cloud White — glass has no effect on light surfaces)
-- `background: rgba(255, 255, 255, 0.08)` — very low opacity, just enough to distinguish from background
-- `backdrop-filter: blur(12px)` — essential for the glass effect
-- `border: 1px solid rgba(255, 255, 255, 0.12)` — subtle edge definition
-- Text on glass: Cloud White, full opacity
-- Do not overuse — glassmorphism in every section removes the effect's premium signal
-
-**Specific application for Kin:**
-- Archetype cards in the archetype showcase (if displayed on a deep teal section)
-- Research/evidence cards (researcher names on deep teal background)
-- CTA card near bottom of landing page if positioned on deep teal section
+**What changes from current implementation:**
+- Current: well-structured. Correct structure.
+- **Improvement target:** Remove the last divider after final FAQ item (currently `i < faqs.length - 1` guard is correct — good). Ensure question text is semibold not just regular.
 
 ---
 
-### 4.5 Scroll-Triggered Motion
+### Section 7: SecondaryHero
 
-**Restrained, purposeful animation as the baseline for a premium 2026 product:**
+**The ONE bold moment:** "Now you'll see it." in PP Pangaia Bold Italic, amber — at the emotional peak of the page.
 
-Not spectacle — subtle reveals that reward attention without demanding it. Rules:
-- Every major content section: fade-up reveal on scroll entry (opacity 0 → 1, translateY 20px → 0, 400–600ms ease-out)
-- Hero: no entry animation — immediately visible; animation reserved for scroll
-- Staggered entry for bento-grid cards: each card enters with a 50–100ms delay from the previous
-- Parallax: ONLY for illustration elements, never for text — text must read cleanly without motion
-- `prefers-reduced-motion`: all animations respect this — system with no-motion as the default, motion as enhancement
-- No transitions longer than 700ms — if it takes longer, it is spectacle, not polish
+**Layout:**
+- Full-width deep teal gradient background
+- Centered content, max-w-3xl
+- Small illustration (decorative) above eyebrow — atmospheric, not illustrative
+- Heading in two lines: Ultralight + Bold Italic contrast
 
----
+**Typography:**
+- Eyebrow: `text-xs tracking-[0.25em] uppercase font-medium` Amber (#C4892A)
+- h2 line 1: `text-5xl sm:text-6xl lg:text-7xl font-extralight` Cloud White — "You've always known."
+- h2 line 2: `text-5xl sm:text-6xl lg:text-7xl font-bold italic` Amber (#C4892A) — "Now you'll see it."
+- Body: `text-base sm:text-lg` Teal muted (#7A9E9C), max-w-xl
+- CTA trust text: `text-xs` Teal muted
 
-### 4.6 Whitespace Philosophy
+**Color:**
+- Background: `linear-gradient(180deg, #0D3D3A 0%, #092D2B 50%, #0D3D3A 100%)`
+- Headline line 1: Cloud White (#F5F4F2)
+- Headline line 2: Burnished Amber (#C4892A/90)
+- CTA button: Merlot (#6B1E2E) — the emotional climax, the deepest color, the biggest decision
 
-**Generous whitespace, but purposeful rather than editorial:**
+**Craft elements:**
+- Grain texture via footer's `.grain` class (or inline on section)
+- Decorative abstract illustration (current: secondary-hero-decoration.png, opacity 30%)
+- `HandDrawnDivider` at bottom in Cloud White at 15% opacity
+- Breathing gradient glow effect (ambient, not literal)
 
-The prior direction (closer to Kinfolk radical whitespace) was correct in principle but the rationale is updated. The target: premium digital product whitespace — the amount of breathing room in a well-designed app interface, not the silence of a print publication.
+**What stops the scroll here:** The two-line headline contrast: Ultralight White vs. Bold Italic Amber. Maximum typographic drama. This is the emotional climax of the page.
 
-**Minimum specifications:**
-- Section vertical padding: 96px mobile, 140px desktop
-- Between related content units: 32–48px
-- Hero above-fold: type + subhead + CTA only; illustration (if present) begins below fold
-- Body text measure: max 68ch at 17px
-
----
-
-### 4.7 Responsive Priorities
-
-**Mobile-first design for millennial parent audience:**
-- Quiz: single-question-per-screen, 44px+ touch targets, no horizontal scroll
-- Result page: single column, enforce character measure (max 68ch), reading-optimized — the result is a document, not a dashboard
-- Landing page: mobile hero = type + CTA only; bento grid becomes single column; glassmorphism glass cards preserved on mobile where teal backgrounds appear
-- Navigation: clean sticky header with Cloud White/Deep Teal contrast; no hamburger-menu complexity
-
----
-
-## Section 5: Brand Tone and Voice
-
-### 5.1 Tone Attributes
-
-**1. Knowing**
-
-The brand speaks as if it already knows something true about the person it is addressing — because it does. It is not seeking engagement or offering advice. It is delivering recognition.
-
-*Do:* "You've probably spent years aware that something about how you were raised is active in you today."
-*Don't:* "Many adults wonder how their childhood affected them."
+**What changes from current implementation:**
+- Current: correct direction. Two-line headline contrast exists.
+- **Improvement target:** Ensure line 2 is `font-bold italic` (700 italic), not just `italic`. Current code has `<em className="font-bold italic">` — correct. The amber CTA (merlot button) is present and correct. Illustration could be reduced further in opacity or replaced with a simple teal geometric shape.
 
 ---
 
-**2. Revelatory**
+### Section 8: Footer
 
-The primary register is revelation: "I always sensed this. Now I see it." Not therapy, not growth, not healing — seeing. The tone should feel like underlining a sentence in a book because it named something you could not name.
+**The ONE bold moment:** "Kin" — alone, in display font, on deep teal. The brand as its own statement.
 
-*Do:* "The archetype framework gives you the words for what you've always felt without language."
-*Don't:* "Discover your parenting archetype and start your growth journey."
+**Layout:**
+- Full-width deep teal background + grain
+- 3-column flex: wordmark left, links center, copyright right
+- Minimal, no CTA, no decorative elements
 
----
+**Typography:**
+- "Kin" wordmark: `text-sm font-bold font-display` Cloud White at 80% opacity
+- Links: `text-xs` Teal muted (#7A9E9C)
+- Copyright: `text-xs` Teal muted
 
-**3. Peer-level**
+**Color:**
+- Background: Deep Teal (#0D3D3A) + grain texture
+- Text: Cloud White at 80% (not full white — deliberate warmth reduction)
 
-The brand speaks to adults as adults — intellectually serious, psychologically sophisticated. Not a teacher. Not a therapist. A peer who has read the research and is sharing what they found.
+**Craft elements:**
+- Grain texture (`.grain` class) on footer background
+- No borders, no additional decoration
 
-*Do:* "The research behind the Mirror is grounded in attachment theory and parenting science — Bowlby, Ainsworth, Gottman, Siegel."
-*Don't:* "Our expert-backed quiz uses cutting-edge research to give you personalized insights!"
+**What stops the scroll here:** Nothing. This is the exhale. The page is complete. The minimal footer says "that's it — go take the quiz."
 
----
-
-**4. Grounded**
-
-Specific over general. Named experience over described experience.
-
-*Do:* "The Structured Mentor's household ran on predictability. You knew what was expected, and meeting those expectations was how connection happened."
-*Don't:* "People raised by authoritative parents often have high achievement orientation."
-
----
-
-**5. Confident without proclamation**
-
-Kin is sleek and modern — the tone should match. Not self-consciously warm or healing-adjacent. Confident, precise, generous with insight. The brand does not need to announce that it is warm — it demonstrates warmth through specificity and recognition.
-
-*Do:* "Take the Mirror." (direct, confident, action-driven)
-*Don't:* "Begin your journey of self-discovery and healing." (announcement of warmth, not demonstration)
+**What changes from current implementation:**
+- Current: correct and minimal. Grain, deep teal, 3-column.
+- NO CHANGES NEEDED.
 
 ---
 
-### 5.2 Voice Register
+## Part 4: What This Is NOT
 
-| Dimension | Position | Notes |
-|-----------|----------|-------|
-| Clinical ←→ Personal | 8/10 toward Personal | "You" throughout. Direct address, always. |
-| Expert ←→ Peer | 6/10 toward Peer | Delivers real expertise but as a peer who found something worth sharing. |
-| Prescriptive ←→ Revelatory | 9/10 toward Revelatory | Shows what is already true; does not tell what to do. |
-| Serious ←→ Light | 6/10 toward Serious | Not humorless — but humor is wry recognition, not warmth performance. |
-| Warm ←→ Sleek | 5/10 (balanced) | The brand synthesizes both. Warmth from content; sleekness from delivery. |
+**This visual direction explicitly rejects:**
 
----
+1. **Glassmorphism as a design system** — Liquid Glass was recommended by the skill but rejected. It's performance-intensive and carries the wrong register (premium-SaaS, not warm-human). Glass elements are ONLY used on deep teal backgrounds for cards (`.glass-card`).
 
-### 5.3 Vocabulary Guidance
+2. **Centered hero text** — The hero is left-aligned. Centered hero text is the default SaaS template pattern. Left-alignment plus vast negative space is Neo-Minimalism.
 
-**Words the brand uses:**
-- "Sensed" — pre-existing awareness given language
-- "Named" / "naming" — the vocabulary gift mechanism
-- "Patterns" — emergent from conditions, not fixed character flaws
-- "Shaped" — implies agency still present
-- "Recognized" / "recognition" — the emotional state the brand produces
-- "Carried" — "patterns you've been carrying" — implies weight, presence, understanding
+3. **Violet/indigo/purple palette** — The skill suggested indigo for a parenting/wellness product. Rejected. Indigo reads as mental health app cliché. Kin's palette is warmer and more grounded.
 
-**Words the brand avoids:**
-- "Cycle-breaking" — cultural context (demand evidence), not brand vocabulary; therapy-adjacent
-- "Heal" / "healing" — remediation, not revelation
-- "Trauma" — valid in product content context; never in primary brand messaging
-- "Discover" — implies novelty; brand is about recognition of what was already there
-- "Journey" — wellness-platform register
-- "Transform" / "empowerment" — aspiration register; incompatible with revelation register
-- "Share your result" / "what type are you" — quiz/entertainment register
-- "Break the cycle" — therapeutic framing; accurate demand signal, wrong brand register
-- "Better parent" — outward-facing; product is about the parent's self-understanding, not parenting performance
-- "Cozy" / "warm" / "welcoming" — self-proclamation of warmth undermines the confident digital register
+4. **Bold all-caps display fonts (Bebas, Anton, Lexend Mega)** — Aggressive. Wrong emotional register for an intimate psychological product.
+
+5. **Full anti-polish/raw aesthetic** — Scanned textures, VHS effects, collage style. Kin is intentional craft, not rough. "Someone made this with care" not "this was made carelessly."
+
+6. **Illustration as primary visual element** — No large decorative illustrations competing with the headline. The type IS the hero visual.
+
+7. **Scattered hand-drawn elements** — Hand-drawn details appear at section boundaries and specific emotional emphasis points. Not scattered randomly as "decoration."
+
+8. **Generic card grids** — Equal-height, equal-width, uniform spacing. The KOL bento grid is intentionally asymmetric.
+
+9. **Generic font families** — Inter, Roboto, Arial, Space Grotesk, Poppins anywhere in the landing page display treatment.
+
+10. **Multiple competing bold elements per section** — Each section has ONE bold moment. Not three.
 
 ---
 
-### 5.4 Tagline Options
+## Part 5: Page Flow Map
 
-**Option 1: "Finally, the words for it."**
-Rationale: Encodes the vocabulary-gift mechanism. "Finally" encodes pre-existing awareness. Short, confident, personal. Works across all three products. Primary recommendation.
+**Emotional arc across 8 sections:**
 
-**Option 2: "What was already true."**
-Rationale: Revelation register. "Now I see it" implies "it was always there." Intellectually precise; may require more copy support.
+```
+SECTION          | BACKGROUND      | DENSITY  | EMOTION       | TYPOGRAPHY SCALE
+─────────────────┼─────────────────┼──────────┼───────────────┼──────────────────
+HeroSection      | Cloud White     | SPARSE   | Recognition   | GIANT (140px)
+                 | + Teal blob     |          | "Finally..."  |
+─────────────────┼─────────────────┼──────────┼───────────────┼──────────────────
+SocialProof      | Cloud White     | MEDIUM   | Belonging     | LARGE (40px)
+                 |                 |          | "Not alone"   |
+─────────────────┼─────────────────┼──────────┼───────────────┼──────────────────
+ArchetypePreview | White           | MEDIUM+  | Curiosity     | LARGE (48px)
+                 |                 |          | "Which am I?" |
+─────────────────┼─────────────────┼──────────┼───────────────┼──────────────────
+KOLCredibility   | Cloud White     | DENSE    | Trust build   | LARGE (48px)
+                 |                 |          | "Science"     |
+─────────────────┼─────────────────┼──────────┼───────────────┼──────────────────
+KOLNarrative     | Cloud White     | LIGHT    | Deep read     | MEDIUM ITALIC
+                 |                 | (reading)|"Their words"  | (24px italic)
+─────────────────┼─────────────────┼──────────┼───────────────┼──────────────────
+FAQ              | Cloud White     | LIGHT    | Safety        | LARGE (48px)
+                 |                 | (reading)|"It's ok"      |
+─────────────────┼─────────────────┼──────────┼───────────────┼──────────────────
+SecondaryHero    | Deep Teal       | SPARSE   | Climax        | GIANT (72px)
+                 | gradient        |          | "Now you see" | + amber italic
+─────────────────┼─────────────────┼──────────┼───────────────┼──────────────────
+Footer           | Deep Teal       | MINIMAL  | Exhale        | TINY (wordmark)
+                 | + grain         |          | "Done"        |
+```
 
-**Option 3: "See what shaped you."**
-Rationale: More explanatory. "See" encodes Mirror without requiring the name. "Shaped" carries brand vocabulary. Works as product descriptor and brand line simultaneously.
+**Background rhythm:** Cloud White → Cloud White → White (break) → Cloud White → Cloud White → Cloud White → Deep Teal → Deep Teal
 
-**Option 4: "You've always known."**
-Rationale: Most permission-giving. Speaks directly to pre-existing awareness. Risk: slightly presumptuous before engagement.
+**Key transitions:**
+- Cloud White → White (ArchetypePreview): subtle break provides visual fresh start before curiosity section
+- Cloud White → Deep Teal (SecondaryHero): maximum contrast moment — the emotional peak is announced by the background before a word is read
+- Deep Teal → Deep Teal (Footer): teal continues, density drops to zero — closing statement
 
-**Option 5: "For the parent who looks inward."**
-Rationale: Most direct positioning statement. Best as positioning copy, not as a tagline headline.
-
-**Recommended:** Option 1 ("Finally, the words for it.") as primary direction for testing. It is precise, personal, and confident — matching the Kin brand register.
-
----
-
-## Section 6: Multi-Product Visual System Summary
-
-This table proves the visual system is a brand system — not built around The Mirror — and shows how it applies across each product without significant modification.
-
-| Element | Brand Level (Kin) | The Mirror | The Blueprint | The Partner Match |
-|---------|------------------|------------|---------------|-------------------|
-| **Primary background** | Cloud White `#F5F4F2` | Same | Same | Same |
-| **Primary text** | Espresso `#1A1008` | Same | Same | Same |
-| **Primary brand color** | Deep Teal `#0D3D3A` | Same | Same | Same |
-| **Product accent** | — | Merlot `#6B1E2E` (revelation, emotional weight) | Burnished Amber `#C4892A` (wisdom, forward plan) | Merlot `#6B1E2E` (intimate relational depth) |
-| **Secondary surfaces** | Warm Sand `#C8B89A` | Same | Same | Same |
-| **Research emphasis** | Burnished Amber `#C4892A` | Researcher names, archetype labels | Framework citations, insight delivery | Research grounding |
-| **Deep brand sections** | Deep Teal `#0D3D3A` | Authority/research sections | Structured directive content | Most intimate relational content |
-| **Glassmorphism** | On deep teal sections | Archetype cards, research cards | Feature cards | Insight cards |
-| **Display font** | Canela / contemporary display serif | Same | Same | Same |
-| **Body font** | Geist Sans | Same | Same | Same |
-| **Illustration register** | Refined craft (geometric-organic or minimal figurative) | Same register + reflection metaphors (product page) | Same register + structural/architectural (product page) | Same register + dialogue/encounter (product page) |
-| **Brand illustration subject** | Parent interiority — looking inward | Same | Same | Same |
-| **Product illustration subject** | — | Reflection, recognition, looking back | Structure, building from foundation | Encounter, dialogue, mutual recognition |
-| **Layout** | Bento-grid + large typographic heroes + glassmorphism | Same | Same | Same |
-| **Motion** | Scroll-triggered fade-up, staggered card entry | Same | Same | Same |
-| **Tone** | Knowing, revelatory, peer-level, confident | Same | Same — more forward-looking | Same — more relational frame |
-| **CTA pattern** | "Take the Mirror" / "Begin" / "Start your Blueprint" | "Take the Mirror" | "Start your Blueprint" | "Begin the Partner Match" |
-| **Forbidden patterns** | Earthy/terracotta, bookish serif, School of Life illustration, warm-analog aesthetic | Reflection/vanity register | "Better parent" / advice register | Compatibility verdict, match percentage |
-
-**Brand coherence test:** A user who encounters Kin (landing page), then navigates to The Mirror, then to The Blueprint — experiences continuous visual and tonal identity. The palette, typography, and illustration register do not change. What changes is the product-level subject matter within the shared brand container.
-
-**The palette differentiates products through accent emphasis:** The Mirror leans on Merlot (emotional weight, revelation). The Blueprint leans on Burnished Amber (earned wisdom, forward plan). The Partner Match uses Merlot (intimate depth). All three sit within the same Deep Teal / Cloud White / Espresso primary system.
+**Density rhythm:** SPARSE → MEDIUM → MEDIUM+ → DENSE → LIGHT → LIGHT → SPARSE → MINIMAL
+- Enters spacious, builds through mid-page density, returns to spacious for emotional climax, empties for close
 
 ---
 
 ## Implementation Notes for Plan 06-05
 
-The following decisions directly inform the rebrand execution plan:
+**What already exists and is CORRECT (keep exactly as-is):**
+- app/layout.tsx — PP Pangaia multi-weight loading, correct CSS variables
+- app/globals.css — grain class, breathe animation, organic easing, fade-up, section-deep
+- components/ui/scroll-reveal.tsx — organic easing, 800ms, 24px distance
+- components/ui/hand-drawn.tsx — HandDrawnDivider, HandDrawnQuoteMark, HandDrawnCircle
 
-**Layer A — Color system migration:**
-- Update `globals.css` CSS custom properties: replace the amber/bone/terracotta token system with the Deep Teal / Cloud White / Espresso / Merlot system (per Section 1.3)
-- The codebase uses both CSS custom properties AND hardcoded Tailwind classes (`amber-600`, `stone-900`, `amber-50`) — both layers must be updated
-- New semantic tokens to add: `--background` → Cloud White, `--primary` → Deep Teal, `--accent` → Merlot
+**What needs refinement (Plan 06-05 targets):**
+- KOLNarrative: quote text should explicitly use `font-extralight` (weight 200) — confirm CSS variable correctly maps weight 200 to `font-extralight` Tailwind class
+- KOLCredibility: section header needs stricter left-align (not `max-w-2xl` centerd block — fully left flush)
+- HeroSection: already at target scale. Verify `xl:text-[140px]` class is rendering correctly
+- SecondaryHero: ensure `<em>` uses correct font-weight 700 italic mapping
+- ArchetypePreview: option buttons inside sample card could have slightly warmer border on hover
 
-**Layer B — Typography migration:**
-- REMOVE Cormorant Garamond font loading (from `layout.tsx` and `--font-display` variable)
-- ADD contemporary display serif: Canela (via `next/font/local` if licensed) or Quiche Display (via `next/font/google`)
-- CSS variable `--font-display` remains but points to new font
-- Update all components using `--font-display` — the change is loaded at the variable level, component code unchanged if using the variable
+**Fonts confirmed, no changes needed:**
+- PP Pangaia: Ultralight (200), Ultralight Italic (200i), Medium (500), Medium Italic (500i), Bold (700), Bold Italic (700i) — all loaded
+- Geist Sans: loaded via Google Fonts, correct variable
 
-**Layer C — Illustration migration:**
-- `MirrorIllustration.tsx`: redesign from abstract geometric to brand-level parent-interiority illustration in refined-craft register (geometric-organic or minimal figurative)
-- `ArchetypeIcons.tsx`: update from geometric abstraction to refined-craft register in brand palette
-- KOL portrait sketches: align with brand's more precise illustration register (same subject, higher refinement)
-
-**Layer D — Layout migration:**
-- Bento-grid component for research/archetype/feature sections (replaces alternating section pattern)
-- Glassmorphism card component (for deep teal section contexts)
-- Scroll-reveal animation wrapper component (fade-up, staggered entry)
-- Hero: convert to large typographic hero pattern (display serif dominant, illustration secondary)
-
-**Layer E — Copy migration:**
-- Landing page copy: permission-first pattern; replace discovery/parenting-advice language with recognition/self-understanding language
-- CTA text: "Discover your archetype" → "Take the Mirror"
-- Hero headline: emotional claim before product description
-- Brand name references: Raising Giants → Kin (in all user-facing copy; code namespace remains internal)
-
-**Name migration note:** The brand name is Kin (founder-confirmed per 06-03). Copy references to "Raising Giants" in user-facing text change to "Kin" immediately. Domain/metadataBase URL change requires domain acquisition (user action required); metadata string changes (title, OG, twitter) can proceed as "Kin" before domain transfer.
-
----
-
-## Mood Reference
-
-A user arrives on the Kin landing page. The background is Cloud White — not bone, not parchment, but a premium digital surface with just enough warmth to not read as clinical. The first thing they see is a large display serif headline, light weight, approximately 96px: *"Finally, the words for it."* The type is so large it is the composition — there is no competing image, no background pattern, no decorative element. The type earns the space.
-
-Below the headline: a Geist Sans subhead in Espresso, two lines, precise and confident: "Kin is a set of tools that help you understand yourself as a parent — not just how you parent, but what shaped you." A single CTA button below: "Take the Mirror." Deep Teal background, Cloud White text, no border.
-
-As the user scrolls, the first major section arrives on a Deep Teal background. Cards appear in staggered entry — subtle fade-up, 80ms delay between each. The cards are glassmorphic: very slightly transparent, the deep teal visible through them, with a Burnished Amber accent on researcher names. "Bowlby. Ainsworth. Gottman. Siegel." Each rendered in display serif, card-sized, against the glass. The research is present without being a credentials wall.
-
-Further down, the archetype showcase section — a bento grid. One large card (spanning two columns) introduces the concept in display serif at 52px: "The pattern you've been carrying." Beside it, three smaller cards introduce archetype names in display serif with Merlot accents, each carrying a single phrase from the archetype's core insight.
-
-At the bottom, a pull quote section. Cloud White background. A display serif sentence in Espresso, 36px, centered: *"You've probably spent years aware that something about how you were raised is active in you today."* Below it, 18px Geist Sans: "The Mirror gives you the words for it." Then the CTA.
-
-The result of this sequence — type-forward, depth-layered, restrained in motion, precise in palette — is a feeling that precedes action: *this is a product that takes me seriously. It was made by people who knew exactly what they were doing.*
-
----
-
-## Summary of Visual Direction Decisions
-
-| Element | Previous Direction (2024 era) | New Direction (Kin 2026) | Change Level |
-|---------|-------------------------------|--------------------------|--------------|
-| Palette — background | Bone `#F7F2EB` (parchment/analog) | Cloud White `#F5F4F2` (digital premium) | Medium |
-| Palette — primary accent | Terracotta `#B05A3A` (earthen, craft) | Deep Teal `#0D3D3A` (depth, precision) | High |
-| Palette — secondary accent | Aged Gold (insight) | Merlot `#6B1E2E` (emotional weight) + Burnished Amber (retained) | High |
-| Palette — surface | Soft Clay `#EBE0D5` (earthy) | Warm Sand `#C8B89A` (calibrated neutral) | Medium |
-| Palette — text | Warm Charcoal `#1C1512` | Espresso `#1A1008` (richer, warmer dark) | Low |
-| Palette — deep sections | Deep Dusk `#1E1814` (near-black editorial) | Deep Teal `#0D3D3A` (branded depth) | High |
-| Display font | Cormorant Garamond (bookish, print-editorial) | Canela / contemporary display serif (screen-designed, premium digital) | High |
-| Body font | Geist Sans (keep) | Geist Sans (keep, same) | None |
-| Display font usage | Hero headlines, subheadings | Hero headlines, section openers, pull quotes, archetype reveal moments | Expanded + focused |
-| Illustration register | School of Life editorial line (loose, analog) | Refined craft — geometric-organic or minimal figurative (precise, intentional) | High |
-| Hero section | Illustration + headline | Large typographic hero (type IS the composition) | High |
-| Layout pattern | Editorial alternating sections | Bento-grid + large typographic heroes + glassmorphism | High |
-| Motion | Not specified | Scroll-triggered fade-up, staggered entry, reduced-motion respected | New |
-| Brand tone | Permission-first, warm, knowing | Permission-first retained + Confident, sleek delivery mode added | Medium |
-| Tagline | "Finally, the words for it." (unchanged) | Same — Option 1 confirmed | None |
-| Brand name | Imprint (prior recommendation) | Kin (founder-confirmed) | Confirmed |
-
----
-
-*Document: 06-04-visual-direction-brief.md*
-*Phase: 06-brand-positioning-research-and-visual-direction*
-*Version: 3 — rewritten per founder 2026 visual direction (replaces terracotta/bone/Cormorant version)*
-*Created: 2026-02-27*
-*Status: Complete — all visual choices traceable to Kin brand territory (06-03); feeds 06-05-PLAN.md (rebrand execution)*
+**The brief is sufficient for a developer to implement all 8 sections.** Plan 06-05 will translate this brief directly into component code changes.
