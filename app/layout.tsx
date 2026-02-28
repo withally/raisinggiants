@@ -8,8 +8,15 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const pangaia = localFont({
-  src: "../public/fonts/PPPangaia-Medium.otf",
+const fragmentGlare = localFont({
+  src: [
+    { path: "../public/fonts/PPFragment-GlareLight.otf", weight: "300", style: "normal" },
+    { path: "../public/fonts/PPFragment-GlareLightItalic.otf", weight: "300", style: "italic" },
+    { path: "../public/fonts/PPFragment-GlareRegular.otf", weight: "400", style: "normal" },
+    { path: "../public/fonts/PPFragment-GlareRegularItalic.otf", weight: "400", style: "italic" },
+    { path: "../public/fonts/PPFragment-GlareExtraBold.otf", weight: "800", style: "normal" },
+    { path: "../public/fonts/PPFragment-GlareExtraBoldItalic.otf", weight: "800", style: "italic" },
+  ],
   variable: "--font-display",
   display: "swap",
 });
@@ -52,7 +59,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${pangaia.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${fragmentGlare.variable} antialiased`}>
         {children}
       </body>
     </html>
