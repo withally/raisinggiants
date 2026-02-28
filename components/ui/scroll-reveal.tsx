@@ -16,11 +16,20 @@ export function ScrollReveal({
   children,
   delay = 0,
   className = "",
-  distance = 20,
-  duration = 600,
+  distance = 24,
+  duration = 800,
 }: ScrollRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setPrefersReducedMotion(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setPrefersReducedMotion(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
 
   useEffect(() => {
     const el = ref.current;
@@ -40,6 +49,10 @@ export function ScrollReveal({
     return () => observer.disconnect();
   }, []);
 
+  if (prefersReducedMotion) {
+    return <div className={className}>{children}</div>;
+  }
+
   return (
     <div
       ref={ref}
@@ -47,7 +60,7 @@ export function ScrollReveal({
       style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? "translateY(0)" : `translateY(${distance}px)`,
-        transition: `opacity ${duration}ms ease-out ${delay}ms, transform ${duration}ms ease-out ${delay}ms`,
+        transition: `opacity ${duration}ms var(--ease-organic, ease-out) ${delay}ms, transform ${duration}ms var(--ease-organic, ease-out) ${delay}ms`,
       }}
     >
       {children}
