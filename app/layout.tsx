@@ -8,26 +8,8 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://raisinggiants.com"),
-  title: "Kin — The Mirror",
-  description:
-    "Finally, the words for it. A free, research-backed assessment that reveals the parenting patterns you inherited — and how they still shape you.",
-  openGraph: {
-    title: "Kin — The Mirror",
-    description:
-      "Finally, the words for it. A free, research-backed assessment that reveals the parenting patterns you inherited — and how they still shape you.",
-    type: "website",
-    siteName: "Kin",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Kin — The Mirror",
-    description:
-      "Finally, the words for it. A free, research-backed assessment that reveals the parenting patterns you inherited — and how they still shape you.",
-  },
-  alternates: {
-    canonical: "/",
-  },
+  title: "Kin",
+  description: "",
 };
 
 export default function RootLayout({
