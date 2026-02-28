@@ -123,14 +123,12 @@ Plans:
   2. A positioning map identifies the unoccupied whitespace for a multi-product millennial parent brand
   3. A narrative positioning document defines the brand territory based on research-revealed gap (not pre-committed)
   4. Brand name ("Raising Giants") and product names are evaluated for multi-product brand architecture
-  5. A visual direction brief specifies palette, typography, imagery, layout, and tone — grounded in millennial parent positioning
-  6. The user has reviewed and approved the overall direction
-**Plans:** 4/4 plans complete (Phase 4 complete)
+  5. The user has reviewed and approved the overall direction
+**Plans:** 3/3 plans complete (Phase 4 complete)
 Plans:
 - [x] 04-01-PLAN.md — Competitive landscape: profile 16+ millennial parenting digital products, positioning map, gap analysis
 - [x] 04-02-PLAN.md — Reference brand gallery: 8-12 aspirational brands with pattern synthesis
 - [x] 04-03-PLAN.md — Positioning narrative and brand name evaluation for multi-product brand
-- [x] 04-04-PLAN.md — Visual direction brief: palette, typography, imagery, layout, tone
 
 ### Phase 5: Landing Page Rebuild
 **Goal**: Rebuild the landing page from scratch, informed by the brand positioning and visual direction established in Phase 4 — credibility-forward, KOL signals, mobile-responsive, aligned with the Kin brand identity
