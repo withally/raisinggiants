@@ -1,84 +1,96 @@
 import Link from "next/link";
-import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen bg-[#F5F4F2] overflow-hidden flex flex-col justify-center">
-      {/* Decorative background texture */}
+    <section className="grain relative min-h-screen bg-[#F5F4F2] overflow-hidden flex items-center">
+      {/* Decorative teal gradient orb — top right */}
       <div
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute top-[-20%] right-[-10%] w-[800px] h-[800px] rounded-full opacity-40 hidden lg:block"
         style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, #0D3D3A 1px, transparent 0)`,
-          backgroundSize: "32px 32px",
+          background:
+            "radial-gradient(circle, rgba(0,54,58,0.12) 0%, rgba(0,54,58,0.04) 40%, transparent 70%)",
         }}
         aria-hidden="true"
       />
 
-      {/* Decorative teal radial gradient — desktop only */}
+      {/* Subtle bloom accent — bottom left */}
       <div
-        className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full opacity-60 translate-x-1/3 -translate-y-1/4 hidden lg:block"
+        className="absolute bottom-[10%] left-[5%] w-[300px] h-[300px] rounded-full opacity-20 hidden lg:block"
         style={{
-          background: "radial-gradient(circle, rgba(13,61,58,0.08) 0%, rgba(13,61,58,0.02) 60%, transparent 100%)",
+          background:
+            "radial-gradient(circle, rgba(68,35,47,0.15) 0%, transparent 70%)",
         }}
         aria-hidden="true"
       />
 
-      <div className="relative z-10 mx-auto max-w-5xl px-6 py-20 lg:py-32">
-        {/* Eyebrow label */}
-        <p className="text-xs tracking-[0.25em] uppercase text-[#0D3D3A] font-medium mb-8">
-          Kin — The Mirror
-        </p>
-
-        {/* Main headline — display font */}
-        <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-[108px] font-semibold text-[#1A1008] leading-[1.05] mb-5 max-w-3xl font-display">
-          Finally, the words for it.
-        </h1>
-
-        {/* Single punchy sub — emotion, not explanation */}
-        <p className="text-lg sm:text-xl text-[#8A7A66] leading-relaxed max-w-xl mb-8">
-          The parenting you received is still active in you. The Mirror names the patterns — in 5 minutes.
-        </p>
-
-        {/* CTA group — tight to the headline */}
-        <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center mb-10">
-          <Link
-            href="/quiz"
-            className="inline-flex items-center justify-center rounded-full bg-[#0D3D3A] px-8 py-4 text-base font-semibold text-[#F5F4F2] shadow-md hover:bg-[#0F4F4B] hover:shadow-lg transition-all duration-200 min-h-[52px] w-full sm:w-auto"
-          >
-            Take the Mirror — it&apos;s free
-          </Link>
-          <p className="text-sm text-[#8A7A66] text-center sm:text-left sm:ml-2 self-center">
-            21 questions &middot; No account needed &middot; Completely private
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-16 py-24 lg:py-0">
+        <div className="max-w-4xl">
+          {/* Eyebrow */}
+          <p className="text-[11px] tracking-[0.3em] uppercase text-[#00363A]/60 font-medium mb-8 lg:mb-12">
+            Kin — The Mirror
           </p>
-        </div>
 
-        {/* Supporting copy — below CTA for scrollers who want more context */}
-        <ScrollReveal className="max-w-2xl space-y-3 mb-12">
-          <p className="text-base text-[#8A7A66] leading-relaxed">
-            You already sense it — the patterns, the reactions, the quiet
-            defaults you didn&apos;t choose. They have a shape. The Mirror gives
-            them a name.
-          </p>
-          <p className="text-sm text-[#8A7A66] leading-relaxed">
-            Built on 60+ years of peer-reviewed parenting science from
-            Baumrind, Gottman, Ainsworth, and others. Not a diagnosis. A
-            recognition.
-          </p>
-        </ScrollReveal>
+          {/* Main headline — massive, light, dramatic */}
+          <h1 className="text-[clamp(3.5rem,10vw,9rem)] font-light text-[#002833] leading-[0.9] mb-8 font-display tracking-tight">
+            Finally, the
+            <br />
+            <span className="relative inline-block">
+              words
+              {/* Hand-drawn underline accent */}
+              <svg
+                className="absolute -bottom-2 left-0 w-full h-3"
+                viewBox="0 0 300 12"
+                fill="none"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M2 8C40 4 80 10 120 6C160 2 200 9 240 5C260 3 280 7 298 4"
+                  stroke="#EEC0DA"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  opacity="0.5"
+                />
+              </svg>
+            </span>{" "}
+            for it.
+          </h1>
 
-        {/* Research badge */}
-        <ScrollReveal delay={200}>
-          <div className="pt-8 border-t border-[#E8E4DF] flex flex-col sm:flex-row gap-2 sm:gap-6 items-start">
-            <p className="text-xs text-[#8A7A66] uppercase tracking-wider font-medium shrink-0 mt-0.5">
-              Informed by
-            </p>
-            <p className="text-sm text-[#8A7A66] leading-snug">
-              Baumrind &middot; Gottman &middot; Siegel &middot; Ainsworth
-              &middot; Kennedy &middot; Tsabary &middot; van der Kolk &middot;
-              Rohner
-            </p>
+          {/* Subhead */}
+          <p className="text-xl sm:text-2xl text-[#3A5A56] leading-relaxed max-w-xl mb-10 font-light">
+            The parenting you received is still active in you. The Mirror names
+            the patterns — in 5 minutes.
+          </p>
+
+          {/* CTA */}
+          <div className="flex flex-col sm:flex-row items-start gap-6 mb-12">
+            <Link
+              href="/quiz"
+              className="group inline-flex items-center justify-center rounded-full bg-[#00363A] px-10 py-4 text-base font-semibold text-[#F5F4F2] shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-[#0A4A4E] min-h-[56px] cursor-pointer"
+            >
+              Take the Mirror — it&apos;s free
+              <span
+                className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1"
+                aria-hidden="true"
+              >
+                &rarr;
+              </span>
+            </Link>
           </div>
-        </ScrollReveal>
+
+          {/* Trust line */}
+          <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-[#7AAFA0]">
+            <span>21 questions</span>
+            <span className="text-[#D0DBD8]" aria-hidden="true">
+              &middot;
+            </span>
+            <span>No account needed</span>
+            <span className="text-[#D0DBD8]" aria-hidden="true">
+              &middot;
+            </span>
+            <span>Completely private</span>
+          </div>
+        </div>
       </div>
     </section>
   );

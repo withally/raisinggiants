@@ -1,35 +1,37 @@
+"use client";
+
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
 const faqs = [
   {
-    question: "Will this tell me I'm a bad parent?",
+    question: "Will this tell me I\u2019m a bad parent?",
     answer:
-      "No. The Mirror isn't a judgement — it's a reflection. It shows the patterns in the parenting you received, not a score on the parenting you give. Most people find it validating, not critical.",
+      "No. The Mirror isn\u2019t a judgement \u2014 it\u2019s a reflection. It shows the patterns in the parenting you received, not a score on the parenting you give.",
   },
   {
     question: "Is this therapy?",
     answer:
-      "No. The Mirror is a self-awareness tool, not a clinical assessment or therapeutic intervention. It's designed to surface patterns and start conversations — not replace professional support.",
+      "No. The Mirror is a self-awareness tool, not a clinical assessment. It\u2019s designed to surface patterns and start conversations \u2014 not replace professional support.",
   },
   {
     question: "How accurate is a 5-minute quiz?",
     answer:
-      "The Mirror draws on validated frameworks from researchers like Baumrind, Gottman, and Ainsworth. It's not a clinical diagnosis — it's a structured reflection grounded in 60+ years of peer-reviewed parenting science.",
+      "The Mirror draws on validated frameworks from Baumrind, Gottman, and Ainsworth. It\u2019s a structured reflection grounded in 60+ years of peer-reviewed science.",
   },
   {
     question: "Who sees my answers?",
     answer:
-      "No one. Your responses are processed to generate your result and are not shared, sold, or linked to your identity. You don't even need an account to take it.",
+      "No one. Your responses are processed to generate your result and are never shared, sold, or linked to your identity.",
   },
   {
     question: "What if my childhood was complicated?",
     answer:
-      "Most childhoods are. The Mirror is designed for nuance — it doesn't reduce your experience to a single label. If any question feels too much, you can skip it.",
+      "Most are. The Mirror is designed for nuance \u2014 it doesn\u2019t reduce your experience to a single label. Skip any question that feels like too much.",
   },
   {
     question: "What will you do with my email?",
     answer:
-      "We'll send your archetype profile to the email you provide — that's it. We don't sell data, send spam, or share your information with anyone. You can unsubscribe at any time.",
+      "Send your archetype profile \u2014 that\u2019s it. No spam, no data sales, unsubscribe anytime.",
   },
 ];
 
@@ -53,25 +55,22 @@ export function FAQ() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <section className="bg-[#F5F4F2] py-16 lg:py-24">
-        <div className="mx-auto max-w-2xl px-6">
+      <section className="bg-white py-24 lg:py-36">
+        <div className="mx-auto max-w-3xl px-6 lg:px-16">
           <ScrollReveal>
-            <p className="text-xs tracking-[0.25em] uppercase text-[#8A7A66] font-medium mb-4 text-center">
-              Common questions
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-semibold text-[#1A1008] leading-tight mb-12 text-center font-display">
+            <h2 className="text-4xl sm:text-5xl font-display font-extrabold text-[#002833] leading-tight mb-16">
               Before you begin
             </h2>
           </ScrollReveal>
 
-          <div className="space-y-6">
+          <div className="divide-y divide-[#E2E6E5]">
             {faqs.map((faq, i) => (
-              <ScrollReveal key={faq.question} delay={i * 100}>
-                <div className="border-b border-[#E8E4DF] pb-6 last:border-b-0">
-                  <h3 className="text-base font-semibold text-[#1A1008] mb-2">
+              <ScrollReveal key={faq.question} delay={i * 80}>
+                <div className="py-8 first:pt-0 last:pb-0">
+                  <h3 className="text-lg font-semibold text-[#002833] mb-3">
                     {faq.question}
                   </h3>
-                  <p className="text-sm text-[#8A7A66] leading-relaxed">
+                  <p className="text-base text-[#3A5A56] leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
