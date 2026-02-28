@@ -1,5 +1,6 @@
 import type { ComponentType } from "react";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { HandDrawnDivider } from "@/components/ui/hand-drawn";
 import {
   BaumrindPortrait,
   GottmanPortrait,
@@ -87,14 +88,14 @@ const researchers: {
 
 export function KOLCredibility() {
   return (
-    <section className="bg-[#F5F4F2] py-20 lg:py-32">
+    <section className="bg-[#F5F4F2] py-24 lg:py-32">
       <div className="mx-auto max-w-5xl px-6">
-        {/* Section header */}
-        <ScrollReveal className="mb-14 max-w-2xl">
+        {/* Section header — strict left-align, asymmetric authority (echoes hero) */}
+        <ScrollReveal className="mb-14 ml-0 mr-auto max-w-2xl">
           <p className="text-xs tracking-[0.25em] uppercase text-[#0D3D3A] font-medium mb-4">
             The Research
           </p>
-          <h2 className="text-4xl sm:text-5xl font-semibold text-[#1A1008] leading-tight mb-4 font-display">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-[#1A1008] leading-tight mb-4 font-display">
             Grounded in decades of work from the world&apos;s leading parenting
             scientists.
           </h2>
@@ -106,47 +107,47 @@ export function KOLCredibility() {
           </p>
         </ScrollReveal>
 
-        {/* Researcher grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-[#E8E4DF]/60 border border-[#E8E4DF]/60 rounded-2xl overflow-hidden shadow-sm">
-          {researchers.map((researcher, i) => (
-            <ScrollReveal
-              key={researcher.name}
-              delay={i * 100}
-              distance={16}
-              className="bg-[#F5F4F2] p-5 lg:p-6 flex flex-col gap-3 hover:bg-white transition-colors duration-150"
-            >
-              {/* Portrait sketch */}
-              <div className="w-16 h-18 text-[#8A7A66]">
-                <researcher.Portrait className="w-full h-full" />
-              </div>
+        {/* Researcher grid — featured 2 + supporting 6 */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
+          {researchers.map((researcher, i) => {
+            const isFeatured = i < 2;
+            return (
+              <ScrollReveal
+                key={researcher.name}
+                delay={i * 100}
+                distance={16}
+                className={`bg-[#F5F4F2] border border-[#E8E4DF]/60 rounded-2xl p-5 lg:p-6 flex flex-col gap-3 hover:bg-white transition-colors duration-150 ${isFeatured ? "lg:col-span-2" : ""}`}
+              >
+                {/* Portrait sketch */}
+                <div className="w-16 h-18 text-[#8A7A66]">
+                  <researcher.Portrait className="w-full h-full" />
+                </div>
 
-              {/* Name — display font */}
-              <h3 className="text-base font-semibold text-[#1A1008] leading-snug font-display">
-                {researcher.name}
-              </h3>
+                {/* Name — display font */}
+                <h3 className="text-base font-semibold text-[#1A1008] leading-snug font-display">
+                  {researcher.name}
+                </h3>
 
-              {/* Contribution */}
-              <p className="text-xs text-[#0D3D3A] font-medium leading-snug">
-                {researcher.contribution}
-              </p>
+                {/* Contribution */}
+                <p className="text-xs text-[#0D3D3A] font-medium leading-snug">
+                  {researcher.contribution}
+                </p>
 
-              {/* Divider */}
-              <div
-                className="w-6 h-px bg-[#0D3D3A]/30 my-1"
-                aria-hidden="true"
-              />
+                {/* Divider */}
+                <HandDrawnDivider color="rgba(13,61,58,0.2)" className="my-1" />
 
-              {/* Work */}
-              <p className="text-xs text-[#8A7A66] leading-snug italic">
-                &ldquo;{researcher.work}&rdquo;
-              </p>
+                {/* Work */}
+                <p className="text-xs text-[#8A7A66] leading-snug italic">
+                  &ldquo;{researcher.work}&rdquo;
+                </p>
 
-              {/* Year */}
-              <p className="text-xs text-[#8A7A66] mt-auto">
-                {researcher.year}
-              </p>
-            </ScrollReveal>
-          ))}
+                {/* Year */}
+                <p className="text-xs text-[#8A7A66] mt-auto">
+                  {researcher.year}
+                </p>
+              </ScrollReveal>
+            );
+          })}
         </div>
 
         {/* Closing note */}

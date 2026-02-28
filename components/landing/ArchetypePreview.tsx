@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { HandDrawnCircle } from "@/components/ui/hand-drawn";
 
 const archetypes = [
   "The Steady Anchor",
@@ -13,17 +14,29 @@ const archetypes = [
   "The Collaborative Ally",
 ];
 
+/* Deterministic irregular border-radius per pill */
+function organicRadius(index: number) {
+  const tl = 16 + (index * 7) % 9;
+  const tr = 20 + (index * 5) % 7;
+  const br = 14 + (index * 11) % 10;
+  const bl = 18 + (index * 3) % 8;
+  return `${tl}px ${tr}px ${br}px ${bl}px`;
+}
+
 export function ArchetypePreview() {
   return (
-    <section className="bg-white py-16 lg:py-24">
+    <section className="bg-white py-24 lg:py-32">
       <div className="mx-auto max-w-5xl px-6">
         <div className="max-w-3xl mx-auto text-center">
           {/* Section intro */}
           <ScrollReveal>
-            <p className="text-xs tracking-[0.25em] uppercase text-[#0D3D3A] font-medium mb-4">
-              The pattern you&apos;ve been carrying
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-semibold text-[#1A1008] leading-tight mb-4 font-display">
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <HandDrawnCircle size={16} color="#C4892A" className="opacity-60" />
+              <p className="text-xs tracking-[0.25em] uppercase text-[#0D3D3A] font-medium">
+                The pattern you&apos;ve been carrying
+              </p>
+            </div>
+            <h2 className="text-4xl sm:text-5xl font-bold text-[#1A1008] leading-tight mb-4 font-display">
               Nine patterns. One of them is yours.
             </h2>
             <p className="text-base text-[#8A7A66] leading-relaxed mb-10 max-w-xl mx-auto">
@@ -42,7 +55,10 @@ export function ArchetypePreview() {
                 distance={12}
                 className="inline-flex"
               >
-                <span className="inline-flex items-center rounded-full border border-[#E8E4DF] bg-[#F5F4F2]/60 px-4 py-2 text-sm text-[#1A1008] transition-colors hover:border-[#0D3D3A]/30 hover:bg-[#F5F4F2]">
+                <span
+                  className="inline-flex items-center border border-[#E8E4DF] bg-[#F5F4F2]/60 px-4 py-2 text-sm text-[#1A1008] transition-colors hover:border-[#0D3D3A]/30 hover:bg-[#F5F4F2]"
+                  style={{ borderRadius: organicRadius(i) }}
+                >
                   {name}
                 </span>
               </ScrollReveal>
@@ -51,7 +67,7 @@ export function ArchetypePreview() {
 
           {/* Sample question preview */}
           <ScrollReveal delay={200}>
-            <div className="bg-[#F5F4F2] border border-[#E8E4DF] rounded-2xl p-6 sm:p-8 max-w-lg mx-auto text-left">
+            <div className="grain bg-[#F5F4F2] border border-[#E8E4DF] rounded-2xl p-6 sm:p-8 max-w-lg mx-auto text-left" style={{ transform: "rotate(-0.5deg)" }}>
               <p className="text-xs uppercase tracking-wider text-[#8A7A66] font-medium mb-3">
                 Sample question
               </p>
@@ -67,7 +83,7 @@ export function ArchetypePreview() {
                 ].map((option) => (
                   <div
                     key={option}
-                    className="rounded-lg border border-[#E8E4DF] bg-white px-4 py-3 text-sm text-[#8A7A66]"
+                    className="rounded-lg border border-[#E8E4DF] bg-white px-4 py-3 text-sm text-[#8A7A66] transition-colors duration-150 hover:border-[#C8B89A]/60 hover:bg-[#F5F4F2]"
                   >
                     {option}
                   </div>

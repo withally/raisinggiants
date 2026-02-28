@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { HandDrawnDivider } from "@/components/ui/hand-drawn";
 
 const highlights = [
   {
@@ -46,9 +47,10 @@ const highlights = [
 
 export function KOLNarrative() {
   return (
-    <section className="bg-[#F5F4F2] pb-20 lg:pb-28">
+    <section className="bg-[#F5F4F2] pb-24 lg:pb-32">
       <div className="mx-auto max-w-3xl px-6">
-        <div className="border-t border-[#E8E4DF]/60 pt-14">
+        <div className="pt-14">
+          <HandDrawnDivider color="rgba(196,137,42,0.3)" className="mb-14" />
           <ScrollReveal>
             <p className="text-xs tracking-[0.25em] uppercase text-[#0D3D3A] font-medium mb-8 text-center">
               Why this research matters for you
@@ -60,12 +62,27 @@ export function KOLNarrative() {
               <ScrollReveal key={h.name} delay={i * 120}>
                 <div className="group">
                   {/* Quote */}
-                  <blockquote className="relative pl-5 border-l-2 border-[#0D3D3A]/30 mb-4">
-                    <p className="text-lg sm:text-xl text-[#1A1008] leading-relaxed italic font-display">
+                  <blockquote className="relative pl-5 mb-4" style={{ borderLeft: "none" }}>
+                    {/* Hand-drawn vertical line */}
+                    <svg
+                      className="absolute left-0 top-0 h-full w-2"
+                      viewBox="0 0 4 100"
+                      preserveAspectRatio="none"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M2 0C1.5 10 2.5 20 2 30C1.5 40 2.8 50 2 60C1.2 70 2.5 80 2 90C1.5 95 2 100 2 100"
+                        stroke="rgba(13,61,58,0.3)"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                    <p className="text-2xl sm:text-3xl text-[#1A1008] leading-relaxed italic font-display font-extralight">
                       &ldquo;{h.quote}&rdquo;
                     </p>
                     <footer className="mt-2 text-sm text-[#8A7A66] not-italic">
-                      — {h.name}, {h.year}
+                      — <span className="font-bold font-display">{h.name}</span>, {h.year}
                     </footer>
                   </blockquote>
 
@@ -82,7 +99,8 @@ export function KOLNarrative() {
           </div>
 
           {/* CTA — catch intent at peak curiosity */}
-          <ScrollReveal delay={200} className="mt-12 pt-10 border-t border-[#E8E4DF]/60 text-center">
+          <ScrollReveal delay={200} className="mt-12 pt-10 text-center">
+            <HandDrawnDivider color="rgba(196,137,42,0.3)" className="mb-10" />
             <p className="text-sm text-[#8A7A66] mb-4">
               See which patterns shaped you — and which ones you&apos;re
               carrying forward.
