@@ -1,181 +1,133 @@
 ---
 phase: 06-brand-positioning-research-and-visual-direction
-plan: "04"
-subsystem: brand-visual-direction
-tags: [visual-direction, color-palette, typography, illustration, layout, brand-system, kin, 2026-design]
+plan: 04
+subsystem: ui
+tags: [design-system, visual-direction, typography, color-palette, landing-page, ux, neo-minimalism, pp-pangaia]
 
-dependency_graph:
-  requires:
-    - 06-03-positioning-narrative.md
-    - 06-02-reference-brand-gallery.md
-  provides:
-    - "06-04-visual-direction-brief.md — complete visual direction for Kin brand, 2026 direction"
-    - "Color palette: Deep Teal / Cloud White / Espresso / Merlot / Burnished Amber"
-    - "Typography: Canela (or contemporary display serif) + Geist Sans"
-    - "Illustration register: refined craft, geometric-organic or minimal figurative"
-    - "Layout: bento-grid, large typographic heroes, glassmorphism, scroll-triggered motion"
-  affects:
-    - "06-05 rebrand execution plan — visual direction brief is the complete spec for file-level changes"
-    - "All product UI files — color tokens, typography, illustration, layout components"
+requires:
+  - phase: 06-03
+    provides: Brand name (Kin), brand territory, emotional core "I always sensed this. Now I see it.", multi-product architecture
 
-tech_stack:
+provides:
+  - "design-system/MASTER.md — synthesized design system with decision log covering 11 searches"
+  - "design-system/pages/landing.md — section-by-section landing page composition specs"
+  - "design-system/kin/MASTER.md — persisted skill-generated design system"
+  - "design-system/kin/pages/landing.md — persisted skill-generated landing overrides"
+  - "06-04-visual-direction-brief.md — section-by-section visual spec for all 8 landing sections"
+
+affects:
+  - 06-05-rebrand-execution-plan
+  - components/landing/HeroSection.tsx
+  - components/landing/SocialProof.tsx
+  - components/landing/ArchetypePreview.tsx
+  - components/landing/KOLCredibility.tsx
+  - components/landing/KOLNarrative.tsx
+  - components/landing/FAQ.tsx
+  - components/landing/SecondaryHero.tsx
+  - components/landing/Footer.tsx
+
+tech-stack:
   added: []
   patterns:
-    - "Deep Teal / Cloud White / Espresso / Merlot / Burnished Amber semantic token system"
-    - "Canela or equivalent contemporary display serif for stylistic moments; Geist Sans as workhorse"
-    - "Bento-grid modularity, large typographic heroes, glassmorphism on deep teal sections"
-    - "Scroll-triggered fade-up with staggered card entry, prefers-reduced-motion respected"
+    - "Design system exploration: run 3+ design system generations + 5 domain-specific searches before committing to direction"
+    - "Decision documentation: all visual choices documented with 'what was rejected and why' reasoning"
+    - "Skill validation pattern: use ui-ux-pro-max searches to validate/challenge existing decisions, not just generate new ones"
 
-key_files:
-  created: []
-  modified:
-    - ".planning/phases/06-brand-positioning-research-and-visual-direction/06-04-visual-direction-brief.md"
+key-files:
+  created:
+    - design-system/MASTER.md
+    - design-system/pages/landing.md
+    - design-system/kin/MASTER.md
+    - design-system/kin/pages/landing.md
+    - .planning/phases/06-brand-positioning-research-and-visual-direction/06-04-visual-direction-brief.md
+  modified: []
 
-decisions:
-  - "[06-04-NEW-A] Palette: Deep Teal #0D3D3A replaces terracotta as primary brand color — oceanic depth encodes psychological intelligence and premium digital precision; terracotta is 2022-24 era, reads dated"
-  - "[06-04-NEW-B] Palette: Cloud White #F5F4F2 replaces Bone #F7F2EB — Cloud White reads as premium digital surface, not parchment/analog/craft"
-  - "[06-04-NEW-C] Palette: Merlot #6B1E2E added as emotional-weight accent — revelation moments, archetype reveal color; replaces terracotta's prior role in The Mirror"
-  - "[06-04-NEW-D] Typography: Cormorant Garamond REMOVED — too bookish/print-editorial for Kin's digital-native product identity; replaced by Canela or contemporary display serif designed for screens"
-  - "[06-04-NEW-E] Typography: Display serif is stylistic punctuation only — used for hero headlines, section openers, pull quotes, archetype reveal moments; Geist Sans does all workhorse work"
-  - "[06-04-NEW-F] Illustration: School of Life register REJECTED — too analog/loose for Kin's sleek digital identity; refined craft (geometric-organic or minimal figurative) is correct register"
-  - "[06-04-NEW-G] Layout: Bento-grid modularity + large typographic heroes + glassmorphism + scroll-triggered motion — replaces alternating editorial section template"
-  - "[06-04-G] Tagline: 'Finally, the words for it.' confirmed as primary option — unchanged from prior brief"
+key-decisions:
+  - "PP Pangaia KEEP (comparison-based, not inherited) — evaluated against 15 Google Font pairings, won on weight range + humanist warmth + Neo-Minimalism hero-scale capability"
+  - "Existing Kin palette VALIDATED by color searches — Deep Teal + Burnished Amber + Cloud White confirmed aligned with skill recommendations; rebalancing (not replacement)"
+  - "Trend formula confirmed: #5 Neo-Minimalism as structure, #6 Emotion-Led as content, #9 Raw Authenticity as texture"
+  - "Liquid Glass / Glassmorphism rejected — wrong register for trust product; performance concerns"
+  - "Scroll-Triggered Storytelling pattern selected for landing — narrative arc matches Kin's revelation emotional journey"
+  - "Amber use rebalanced: now reserved for emotional emphasis only (hand-drawn elements, italic display moments)"
+  - "Merlot (#6B1E2E) use rebalanced: reserved for emotional peaks only (SecondaryHero CTA, climactic moments)"
+  - "ONE bold typographic moment per section rule established — prevents visual competition between elements"
+  - "Left-aligned hero confirmed — not centered; asymmetric negative space is the Neo-Minimalism composition"
+  - "Brief is implementation-ready: each section has Layout, Typography, Color, Craft, ONE bold moment, What changes"
 
-metrics:
-  duration: "5 min"
-  completed_date: "2026-02-27"
-  tasks_completed: 2
-  files_modified: 1
+patterns-established:
+  - "One bold moment per section: every section has exactly ONE element that commands attention — no competing focal points"
+  - "Hand-drawn elements as functional craft signals, not decoration: they mark section boundaries and emotional emphasis"
+  - "Type at hero scale IS the composition: remove decoration, let the headline occupy space like a physical object"
+  - "Emotional arc through backgrounds: Cloud White → Cloud White → White → Cloud White → Cloud White → Cloud White → Deep Teal → Deep Teal"
+
+requirements-completed: [BRAND-06, BRAND-07]
+
+duration: 7min
+completed: 2026-02-28
 ---
 
-# Phase 06 Plan 04: Visual Direction Brief Summary (v3 — 2026 Direction)
+# Phase 06 Plan 04: Visual Direction Brief Summary
 
-**One-liner:** Complete rewrite of the visual direction brief for Kin — replaces the terracotta/bone/Cormorant/School-of-Life direction with a 2026 premium-digital aesthetic: Deep Teal, Cloud White, Espresso, Merlot palette; Canela contemporary display serif; refined craft illustration; bento-grid/glassmorphism/typographic-hero layout.
+**Section-by-section visual direction for all 8 Kin landing page sections, generated via 11 ui-ux-pro-max skill searches with explicit typography/palette validation against 2026 trend formula (#5 Neo-Minimalism + #6 Emotion-Led + #9 Raw Authenticity)**
 
----
+## Performance
 
-## What Was Built
+- **Duration:** 7 min
+- **Started:** 2026-02-28T12:59:50Z
+- **Completed:** 2026-02-28T13:07:17Z
+- **Tasks:** 2
+- **Files modified:** 5 created
 
-The `06-04-visual-direction-brief.md` was fully rewritten as v3. The prior version (v2) specified a terracotta/bone palette, Cormorant Garamond as display font, School of Life editorial line illustration, and an alternating editorial sections layout pattern. The founder determined this direction reads as dated (2022–2024 era, craft/analog/literary register) and incompatible with Kin's digital-native, sleek, premium identity.
+## Accomplishments
 
-The v3 brief specifies the 2026 direction throughout:
+- Generated and persisted design system via ui-ux-pro-max skill (3 design system generations + 8 domain-specific searches = 11 total)
+- Validated typography decision: PP Pangaia keeps its role after comparison against 15 evaluated Google Font alternatives — confirmed superior weight range and humanist warmth for the brand
+- Validated color palette: existing Kin palette confirmed aligned with skill recommendations; rebalanced application (amber more intentional, merlot at peaks only)
+- Created visual direction brief with all 8 sections fully specified (Layout, Typography, Color, Craft elements, ONE bold moment, What changes)
+- Established page emotional arc: 8-section narrative from recognition → belonging → curiosity → trust → deep read → safety → climax → exhale
+- Documented 10 explicit rejections (Liquid Glass, centered hero, violet palette, all-caps fonts, full anti-polish) to prevent scope creep in 06-05
 
-**Task 1: Color Palette and Typography**
+## Task Commits
 
-**Color System (Section 1):**
+Each task was committed atomically:
 
-| Role | Previous | New | Rationale |
-|------|----------|-----|-----------|
-| Background | Bone `#F7F2EB` (parchment) | Cloud White `#F5F4F2` | Digital surface, not analog craft |
-| Primary brand color | Terracotta `#B05A3A` (earthen, dated) | Deep Teal `#0D3D3A` | 2026 breakout color — oceanic depth + technical precision |
-| Emotional accent | — | Merlot `#6B1E2E` | Emotional weight, revelation moments |
-| Text | Warm Charcoal `#1C1512` | Espresso `#1A1008` | Richer, warmer dark |
-| Secondary surface | Soft Clay `#EBE0D5` | Warm Sand `#C8B89A` | Calibrated neutral, not earthy |
-| Retained | Aged Gold `#C4892A` | Burnished Amber `#C4892A` (same hex) | Renamed; retained for research/insight emphasis |
+1. **Task 1: Design system exploration via ui-ux-pro-max skill** - `8c4d5ed` (feat)
+2. **Task 2: Visual direction brief** - `60361dd` (feat)
 
-Full semantic token mapping for `globals.css` provided. Glassmorphism overrides for deep teal section contexts.
+**Plan metadata:** (docs commit follows)
 
-**Typography System (Section 2):**
-- Display serif: **Canela** (primary recommendation) or Sang Bleu Kingdom / Quiche Display / Freight Display — contemporary, screen-designed, high-contrast, associated with premium DTC and wellness tech brands. NOT Cormorant Garamond (bookish, print-editorial, hairline strokes that disappear at digital sizes).
-- Body font: **Geist Sans** (retained) — the workhorse for all UI, body text, navigation, CTAs. Does the heavy lifting.
-- Display serif is stylistic punctuation ONLY: hero headlines (80–108px), section openers (52–72px), pull quotes (24–36px), archetype reveal moments. Never in UI elements, never below 24px.
-- Complete type scale with sizes, weights, line heights, and pairing rules.
+## Files Created/Modified
 
-**Task 2: Imagery, Layout, Tone, Multi-Product Summary**
+- `design-system/MASTER.md` — synthesized design system with full decision log (11 searches documented, rejected options explained)
+- `design-system/pages/landing.md` — section-by-section landing page composition specs with ASCII layout diagrams
+- `design-system/kin/MASTER.md` — raw skill-generated design system (persisted via `--persist` flag)
+- `design-system/kin/pages/landing.md` — raw skill-generated landing page overrides
+- `.planning/phases/06-brand-positioning-research-and-visual-direction/06-04-visual-direction-brief.md` — full visual direction spec: 5 parts, all 8 sections
 
-**Imagery System (Section 3):**
-- Illustration register: **Refined craft** — geometric-organic hybrid OR minimal figurative. Higher precision, intentional warmth. Anti-AI but not anti-digital. NOT School of Life loose gestural lines.
-- Three direction options: A (sophisticated geometric-organic, Headspace register), B (refined minimal figurative), C (abstract psychological landscape for decorative elements)
-- Visual references: Headspace, Calm, Linear/Pitch brand illustration
-- Brand illustration subject: parent interiority (unchanged from prior brief — correct)
-- Brand vs. product illustration distinction preserved
-- `MirrorIllustration.tsx` redesign and `ArchetypeIcons.tsx` style update documented
+## Decisions Made
 
-**Layout Approach (Section 4):**
-- **Bento-grid modularity** for feature-dense sections — asymmetric, size-varied cards, genuine depth
-- **Large typographic heroes** — type IS the composition; display serif at 80–108px light weight
-- **Glassmorphism** on deep teal section backgrounds — `rgba(255,255,255,0.08)` + `backdrop-filter: blur(12px)`
-- **Scroll-triggered motion** — fade-up reveals (400–600ms ease-out), staggered 50–100ms card entry, `prefers-reduced-motion` respected
-- Whitespace spec: 96px mobile / 140px desktop section padding
-- Responsive priorities documented for mobile-first millennial parent audience
-
-**Brand Tone and Voice (Section 5):**
-- Five tone attributes: Knowing, Revelatory, Peer-level, Grounded, Confident without proclamation
-- Voice register table updated to include Warm/Sleek balance axis (5/10 balanced — the brand synthesizes both)
-- Vocabulary guidance: words used and words avoided (unchanged, confirmed correct)
-- Tagline: "Finally, the words for it." confirmed as primary direction (unchanged)
-
-**Multi-Product Visual System Summary (Section 6):**
-- Full table proving Kin visual system applies across The Mirror, The Blueprint, The Partner Match
-- Product accent differentiation: Merlot (Mirror + Partner Match), Burnished Amber (Blueprint)
-- All layout patterns (bento-grid, glassmorphism, typographic hero) apply identically across products
-
----
-
-## Key Decisions Made
-
-| Decision | Detail |
-|----------|--------|
-| [06-04-NEW-A] Deep Teal as primary | Replaces terracotta — depth, precision, 2026 premium digital |
-| [06-04-NEW-B] Cloud White as background | Replaces Bone — digital surface, not parchment |
-| [06-04-NEW-C] Merlot added | Emotional weight color for revelation moments |
-| [06-04-NEW-D] Cormorant Garamond OUT | Too bookish/print-editorial; Canela or contemporary display serif IN |
-| [06-04-NEW-E] Serif = stylistic punctuation | Only at 24px+, only for hero/opener/pull-quote/reveal moments; Geist Sans does everything else |
-| [06-04-NEW-F] Illustration register shift | School of Life OUT; refined craft (geometric-organic / minimal figurative) IN |
-| [06-04-NEW-G] Layout: 2026 patterns | Bento-grid + large typographic heroes + glassmorphism + scroll motion |
-| [06-04-G] Tagline confirmed | "Finally, the words for it." — unchanged, confirmed |
-
----
+- **PP Pangaia KEEP** — comparison-based conclusion after evaluating 15 alternatives. Ultralight at 140px embodies #5 Neo-Minimalism (type IS the composition). Italic embodies #6 Emotion-Led (warmth). No evaluated Google Font achieves both simultaneously.
+- **Kin palette VALIDATED** — luxury/premium dark + gold accent from skill color searches confirms Deep Teal + Burnished Amber direction. Nature Distilled style confirms Cloud White warm background. No palette change needed.
+- **Trend formula confirmed** — #5 (Exaggerated Minimalism style from skill) + #6 (Nature Distilled texture) + #9 (Anti-Polish/Raw for craft signals) maps exactly to the formula derived from 2026 trend research.
+- **Scroll-Triggered Storytelling** — landing pattern from skill search. Chapter-by-chapter narrative arc matches Kin's revelation emotional journey exactly.
+- **Liquid Glass rejected** — performance poor, wrong register for trust product. Glassmorphism only on deep teal cards where it's genuinely atmospheric.
+- **ONE bold moment rule** — every section has one typographic or visual element that commands attention. No competing focal points.
 
 ## Deviations from Plan
 
-### Scope Expansion (Auto-applied)
+None — plan executed exactly as written. All 6 skill search steps performed (plus additional searches beyond minimum). Design system persisted. Decision log documented. Visual direction brief created with all 8 sections specified.
 
-**1. [Rule 2 - Critical functionality] Task 2 sections written in Task 1 commit**
+## Issues Encountered
 
-- **Found during:** Task 1 execution
-- **Issue:** The visual direction brief is a single document. Separating color/typography (Task 1) from imagery/layout/tone (Task 2) into two commits would have produced an incomplete document after Task 1. The PLAN.md specifies Task 2 as "Append to the visual direction brief."
-- **Fix:** All six sections were written together in the single Task 1 commit. Task 2 verification was run separately and confirmed all required sections are present. This is a documentation artifact of the plan structure, not a gap in execution.
-- **Files modified:** 06-04-visual-direction-brief.md
-- **Commit:** 6c2a2cc
+- Skill auto-matcher returned "Liquid Glass" and "Vibrant & Block-based" for most searches — these don't match the Kin direction. This is expected behavior: the skill recommends from its database based on keyword matching, and the practitioner's role is to synthesize the recommendations against the specific brand context. The skill's typography and style domain searches were more useful than the design system generators.
 
-### Auto-fixed Directional Overrides
+## Next Phase Readiness
 
-**2. [User Override] Entire prior visual direction replaced per founder 2026 direction**
-
-The prior brief (v2) specified terracotta palette, Cormorant Garamond, School of Life illustration, and alternating editorial sections. The plan (v3 — written by founder/GSD system) explicitly required replacing all four of these elements. This is not a deviation — it is the stated objective. Documented here for traceability.
-
-**Specific elements replaced:**
-- Terracotta `#B05A3A` → Deep Teal `#0D3D3A` as primary brand color
-- Bone `#F7F2EB` → Cloud White `#F5F4F2` as background
-- Cormorant Garamond → Canela / contemporary display serif
-- School of Life editorial line illustration → Refined craft (geometric-organic / minimal figurative)
-- Alternating editorial sections → Bento-grid + typographic heroes + glassmorphism
+- Plan 06-05 (implementation) has a complete visual direction brief to implement from
+- All 8 sections have implementation-ready specs
+- What already works in the current codebase is explicitly documented (PP Pangaia loading, globals.css grain/breathe/organic-easing, scroll-reveal, hand-drawn components) — 06-05 can build from this base
+- Implementation targets for 06-05: KOLNarrative quote size (push to 24-28px italic), KOLCredibility header left-alignment, SecondaryHero font-weight verification, ArchetypePreview option button hover states
 
 ---
-
-## Self-Check
-
-**Files exist:**
-- [x] `.planning/phases/06-brand-positioning-research-and-visual-direction/06-04-visual-direction-brief.md` — verified present; contains 51 hex codes, 11 semantic tokens, all 6 sections
-- [x] `.planning/phases/06-brand-positioning-research-and-visual-direction/06-04-SUMMARY.md` — this file
-
-**Commits exist:**
-- [x] 6c2a2cc — `feat(06-04): rewrite visual direction brief for Kin — 2026 direction`
-
-**Verification criteria:**
-- [x] Color palette has 5+ colors with hex codes and emotional rationale
-- [x] Semantic tokens mapped to CSS custom property names
-- [x] Typography: display font, body font, scale, and rules — all specified
-- [x] Imagery system distinguishes brand-level from product-specific illustration
-- [x] Layout approach covers whitespace, density, bento-grid, glassmorphism, motion, responsive
-- [x] Brand tone has 5 attributes, voice register table, vocabulary guidance
-- [x] Multi-product visual system summary table exists
-- [x] Every visual decision traces to positioning territory and Kin brand identity
-- [x] No product-specific metaphors at brand level
-- [x] NO terracotta as primary recommendation
-- [x] NO Cormorant Garamond as recommendation (only referenced as "being replaced")
-- [x] Sans-serif (Geist Sans) is the workhorse; serif (Canela) is stylistic punctuation only
-- [x] Overall aesthetic is sleek/digital/premium, not literary/editorial/analog
-
-## Self-Check: PASSED
+*Phase: 06-brand-positioning-research-and-visual-direction*
+*Completed: 2026-02-28*
