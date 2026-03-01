@@ -141,7 +141,11 @@ Plans:
   3. The full product ladder (Mirror, Blueprint, Partner Match) is displayed with correct status labels
   4. A prominent quiz start CTA drives visitors into the quiz flow at /quiz
   5. The entire landing page is fully mobile-responsive and loads fast on mobile connections
-**Plans**: TBD — needs discuss-phase and planning
+**Plans:** 3 plans in 3 waves
+Plans:
+- [ ] 05-01-PLAN.md — Foundation + Hero: shared palette constants, layout.tsx font update, hero decomposition, emotional hook section, page shell
+- [ ] 05-02-PLAN.md — Middle sections: How It Works (process + science), KOL credibility (12 researchers, expand/collapse)
+- [ ] 05-03-PLAN.md — Bottom sections + verification: Product ladder, Sophia credentials, FAQ, Final CTA, human verification
 
 ### Phase 6: Marketing + Launch Strategy
 **Goal**: A concrete go-to-market plan is in place so the product reaches its target audience and generates initial traffic from launch day
