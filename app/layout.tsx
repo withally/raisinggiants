@@ -9,7 +9,7 @@ const geistSans = Geist({
 
 export const metadata: Metadata = {
   title: "Kin",
-  description: "",
+  description: "Digital tools for parents who want to understand themselves",
 };
 
 export default function RootLayout({

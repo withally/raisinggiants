@@ -14,7 +14,6 @@ export function ProcessingScreen() {
         {/* Warm message */}
         <h2
           className="text-xl font-semibold text-[#1A1008] mb-3 leading-snug"
-          style={{ fontFamily: "var(--font-display)" }}
         >
           We&apos;re putting together your archetype profile&hellip;
         </h2>

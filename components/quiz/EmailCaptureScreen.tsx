@@ -39,7 +39,6 @@ export function EmailCaptureScreen({ onSubmit, isSubmitting = false }: EmailCapt
           {/* Headline */}
           <h2
             className="text-2xl font-semibold text-[#1A1008] mb-2 leading-snug"
-            style={{ fontFamily: "var(--font-display)" }}
           >
             Your reflection is complete.
           </h2>

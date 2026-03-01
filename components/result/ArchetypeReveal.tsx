@@ -32,7 +32,6 @@ export function ArchetypeReveal({ archetype }: ArchetypeRevealProps) {
         {/* Archetype name — dramatic display font reveal */}
         <h1
           className="text-4xl sm:text-5xl md:text-6xl font-semibold text-[#1A1008] mb-5 leading-tight"
-          style={{ fontFamily: "var(--font-display)" }}
         >
           {archetype.name}
         </h1>

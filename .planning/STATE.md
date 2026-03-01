@@ -19,7 +19,7 @@ See: .planning/PROJECT.md (updated 2026-02-25)
 
 **Core value:** Adults feel deeply seen and understood about the parenting they *received* — the personalized output surfaces patterns they've always sensed but never had language for, grounded in credible research from top parenting experts.
 **Current focus:** Phase 04 complete — Brand Positioning Research. Phase 05 (Landing Page Rebuild) next.
-**Product:** The Mirror (free) — v1 launch scope
+**Product:** The Mirror by Kin (free) — v1 launch scope
 
 ## Current Position
 
@@ -27,7 +27,7 @@ Phase: 05 of 6 (Landing Page Rebuild) — NOT STARTED
 Status: Phase 04 (Brand Positioning) complete (3/3 plans). Old landing page nuked — clean slate. Phase 05 needs discuss → plan → execute.
 Last activity: 2026-02-28 - Phase restructuring + clean slate: old Phase 6 → Phase 4, old landing page deleted, visual direction brief deleted (carried too much baggage)
 
-Progress: [██████████] 100% (24/~24 plans estimated)
+Progress: [██████████░░░░] 72% (22/~30 plans estimated)
 
 ## Performance Metrics
 
@@ -50,23 +50,16 @@ Progress: [██████████] 100% (24/~24 plans estimated)
 - Trend: steady
 
 *Updated after each plan completion*
-| Phase 04 P02 | 15 min | 2 tasks | 7 files |
+
+| Plan | Duration | Tasks | Files |
+|------|----------|-------|-------|
 | Phase 025 P01 | 8 min | 2 tasks | 3 files |
 | Phase 025 P02 | 10 min | 2 tasks | 2 files |
 | Phase 03 P01 | 3 min | 2 tasks | 6 files |
 | Phase 03 P02 | 3 min | 2 tasks | 7 files |
-| Phase 04 P02 | 5 | 2 tasks | 1 files |
-| Phase 04 P01 | 6 | 2 tasks | 1 files |
-| Phase 04 P03 | 3 | 2 tasks | 1 files |
-| Phase 04 P04 | 5 | 2 tasks | 1 files |
-| Phase 04 P05 | 5 | 1 task (checkpoint) | 1 files |
-| Phase 04 P01 | 5 | 2 tasks | 1 files |
-| Phase 04 P02 | 7 | 2 tasks | 1 files |
-| Phase 04 P03 | 5 | 2 tasks | 1 files |
-| Phase 04 P04 | 5 | 2 tasks | 1 files |
-| Phase 04 P03 | 6 | 2 tasks | 1 files |
-| Phase 04 P04 | 5 | 2 tasks | 1 files |
-| Phase 04 P04 | 7 | 2 tasks | 5 files |
+| Phase 04 P01 | 6 min | 2 tasks | 1 file |
+| Phase 04 P02 | 7 min | 2 tasks | 1 file |
+| Phase 04 P03 | 5 min | 2 tasks | 1 file |
 
 ## Accumulated Context
 

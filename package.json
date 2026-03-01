@@ -1,8 +1,8 @@
 {
-  "name": "raisinggiants",
+  "name": "kin",
   "version": "0.1.0",
   "private": true,
-  "description": "Raising Giants — parenting archetype framework and personalized report platform",
+  "description": "Kin — digital tools for parents who want to understand themselves",
   "scripts": {
     "dev": "next dev --port 3001",
     "build": "next build",

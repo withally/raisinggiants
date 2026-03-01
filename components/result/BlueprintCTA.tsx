@@ -29,7 +29,6 @@ export function BlueprintCTA() {
         {/* Section header */}
         <h2
           className="text-3xl sm:text-4xl font-semibold text-[#F5F4F2] leading-tight mb-4"
-          style={{ fontFamily: "var(--font-display)" }}
         >
           Go deeper with The Blueprint
         </h2>

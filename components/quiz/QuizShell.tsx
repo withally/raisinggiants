@@ -299,7 +299,6 @@ export function QuizShell() {
         <div className="max-w-lg text-center animate-fade-up">
           <h1
             className="text-3xl sm:text-4xl font-semibold text-[#1A1008] mb-4 leading-snug"
-            style={{ fontFamily: "var(--font-display)" }}
           >
             Before we begin
           </h1>
@@ -333,7 +332,6 @@ export function QuizShell() {
         <div className="max-w-lg text-center animate-fade-up">
           <h2
             className="text-2xl sm:text-3xl font-semibold text-[#1A1008] mb-4 leading-snug"
-            style={{ fontFamily: "var(--font-display)" }}
           >
             Thank you for reflecting on this.
           </h2>

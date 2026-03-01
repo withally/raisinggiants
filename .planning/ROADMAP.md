@@ -1,4 +1,4 @@
-# Roadmap: Raising Giants — The Mirror
+# Roadmap: Kin — The Mirror
 
 ## Overview
 
@@ -110,20 +110,21 @@ Plans:
   7. No paywall, no blurred content, no purchase CTA for $14 anywhere on the page
 **Plans:** 2/3 plans executed
 Plans:
-- [ ] 03-01-PLAN.md — Result page Server Component + section components (reveal, patterns, watchouts, cultural)
-- [ ] 03-02-PLAN.md — Blueprint CTA components, /blueprint coming-soon page, API + database
+- [x] 03-01-PLAN.md — Result page Server Component + section components (reveal, patterns, watchouts, cultural)
+- [x] 03-02-PLAN.md — Blueprint CTA components, /blueprint coming-soon page, API + database
 - [ ] 03-03-PLAN.md — Email gate overlay, ResultPageClient wrapper, gate animations, human verification
 
 ### Phase 4: Brand Positioning Research + Visual Direction
-**Goal**: Research the millennial parenting digital product landscape, identify the whitespace for a multi-product brand, define positioning, evaluate the brand name, create a visual direction brief, and produce an actionable rebrand execution plan — so Raising Giants owns the space of digital products for millennial parents
+**Goal**: Research the millennial parenting digital product landscape, identify the whitespace for a multi-product brand, define positioning, and evaluate the brand name — so Kin owns the space of digital tools for parents who want to understand themselves
 **Depends on**: Phase 3
-**Requirements**: BRAND-01, BRAND-02, BRAND-03, BRAND-04, BRAND-05, BRAND-06, BRAND-07, BRAND-08
+**Requirements**: BRAND-01, BRAND-02, BRAND-03, BRAND-04, BRAND-05 *(BRAND-06, BRAND-07, BRAND-08 moved to Phase 5)*
 **Success Criteria** (what must be TRUE):
   1. 15+ millennial parenting digital products are profiled with full-funnel analysis across the landscape
   2. A positioning map identifies the unoccupied whitespace for a multi-product millennial parent brand
   3. A narrative positioning document defines the brand territory based on research-revealed gap (not pre-committed)
-  4. Brand name ("Raising Giants") and product names are evaluated for multi-product brand architecture
+  4. Brand name evaluated for multi-product brand architecture (outcome: renamed to "Kin")
   5. The user has reviewed and approved the overall direction
+**Note:** Visual direction (BRAND-06/07/08) was completed in Phase 4 but deleted 2026-02-28 — will be re-established fresh in Phase 5.
 **Plans:** 3/3 plans complete (Phase 4 complete)
 Plans:
 - [x] 04-01-PLAN.md — Competitive landscape: profile 16+ millennial parenting digital products, positioning map, gap analysis
@@ -133,7 +134,7 @@ Plans:
 ### Phase 5: Landing Page Rebuild
 **Goal**: Rebuild the landing page from scratch, informed by the brand positioning and visual direction established in Phase 4 — credibility-forward, KOL signals, mobile-responsive, aligned with the Kin brand identity
 **Depends on**: Phase 4
-**Requirements**: LAND-01, LAND-02, LAND-03, LAND-04, LAND-05
+**Requirements**: LAND-01, LAND-02, LAND-03, LAND-04, LAND-05, BRAND-06, BRAND-07, BRAND-08
 **Success Criteria** (what must be TRUE):
   1. Landing page visual design implements the Phase 4 visual direction brief (palette, typography, imagery, tone)
   2. Named KOL credibility signals (8+ researchers) are visible with specific research attribution
@@ -162,6 +163,6 @@ Phases execute in numeric order: 0 → 1 → 2 → 2.5 → 3 → 4 → 5 → 6
 | 2. Quiz Engine | 5/5 | Complete | 2026-02-24 |
 | 2.5. Archetype Content Rewrite | 2/2 | Complete | 2026-02-26 |
 | 3. Mirror Result Page | 2/3 | In Progress | — |
-| 4. Brand Positioning Research | 4/4 | Complete | 2026-02-28 |
+| 4. Brand Positioning Research | 3/3 | Complete | 2026-02-28 |
 | 5. Landing Page Rebuild | 0/TBD | Not started | — |
 | 6. Marketing + Launch Strategy | 0/TBD | Not started | — |

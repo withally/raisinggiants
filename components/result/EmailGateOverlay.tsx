@@ -49,7 +49,6 @@ export function EmailGateOverlay({ onDismiss }: EmailGateOverlayProps) {
           {/* Headline */}
           <h2
             className="text-2xl sm:text-3xl font-semibold text-[#1A1008] mb-3 leading-snug"
-            style={{ fontFamily: "var(--font-display)" }}
           >
             Your result is ready.
           </h2>

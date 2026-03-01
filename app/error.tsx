@@ -19,7 +19,6 @@ export default function GlobalError({
       <div className="max-w-md text-center">
         <h1
           className="text-3xl sm:text-4xl font-semibold text-[#1A1008] mb-4"
-          style={{ fontFamily: "var(--font-display)" }}
         >
           Something went wrong
         </h1>

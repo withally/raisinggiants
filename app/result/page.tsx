@@ -28,7 +28,6 @@ function ResultErrorState({ message }: { message: string }) {
         </p>
         <h1
           className="text-3xl sm:text-4xl font-semibold text-[#1A1008] mb-6 leading-tight"
-          style={{ fontFamily: "var(--font-display)" }}
         >
           {message}
         </h1>

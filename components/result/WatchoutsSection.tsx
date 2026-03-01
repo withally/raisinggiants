@@ -28,7 +28,6 @@ export function WatchoutsSection({ watchouts }: WatchoutsSectionProps) {
           </p>
           <h2
             className="text-3xl sm:text-4xl font-semibold text-[#1A1008] leading-tight"
-            style={{ fontFamily: "var(--font-display)" }}
           >
             {watchouts.headline}
           </h2>

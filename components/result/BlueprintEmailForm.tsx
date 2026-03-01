@@ -79,7 +79,6 @@ export function BlueprintEmailForm({ source = "blueprint-page" }: BlueprintEmail
         </div>
         <p
           className="text-[#1A1008] font-semibold text-lg mb-1"
-          style={{ fontFamily: "var(--font-display)" }}
         >
           You&apos;re on the list.
         </p>

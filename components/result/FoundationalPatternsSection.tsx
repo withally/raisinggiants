@@ -27,7 +27,6 @@ export function FoundationalPatternsSection({ patterns }: FoundationalPatternsSe
           </p>
           <h2
             className="text-3xl sm:text-4xl font-semibold text-[#1A1008] leading-tight"
-            style={{ fontFamily: "var(--font-display)" }}
           >
             The patterns that shaped you
           </h2>

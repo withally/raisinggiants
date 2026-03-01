@@ -36,7 +36,6 @@ export function StickyBlueprintBar({ hidden = false }: StickyBlueprintBarProps) 
         <div className="flex flex-col sm:flex-row items-center sm:items-baseline gap-1 sm:gap-3 text-center sm:text-left">
           <span
             className="text-[#F5F4F2] text-sm font-semibold"
-            style={{ fontFamily: "var(--font-display)" }}
           >
             The Blueprint is coming.
           </span>

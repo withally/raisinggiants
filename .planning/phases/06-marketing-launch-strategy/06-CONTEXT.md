@@ -1,4 +1,4 @@
-# Phase 8: Marketing + Launch Strategy - Context
+# Phase 6: Marketing + Launch Strategy - Context
 
 **Gathered:** 2026-02-24
 **Status:** Ready for planning
@@ -55,5 +55,5 @@ None — discussion stayed within phase scope
 
 ---
 
-*Phase: 08-marketing-launch-strategy*
+*Phase: 06-marketing-launch-strategy*
 *Context gathered: 2026-02-24*

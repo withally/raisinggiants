@@ -66,7 +66,6 @@ export default function BlueprintPage() {
 
         <h1
           className="text-4xl sm:text-5xl font-semibold text-[#1A1008] leading-tight mb-5"
-          style={{ fontFamily: "var(--font-display)" }}
         >
           The Blueprint
         </h1>
@@ -113,7 +112,6 @@ export default function BlueprintPage() {
         <div className="bg-white rounded-2xl border border-[#E8E4DF] shadow-sm px-6 sm:px-8 py-8">
           <h2
             className="text-xl font-semibold text-[#1A1008] mb-2"
-            style={{ fontFamily: "var(--font-display)" }}
           >
             Get notified when it launches.
           </h2>

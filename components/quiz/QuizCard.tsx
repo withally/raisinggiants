@@ -28,7 +28,6 @@ export function QuizCard({ question, currentAnswer, onAnswer, onSkip, showSectio
       {/* Question text */}
       <h2
         className="text-xl sm:text-2xl font-medium text-[#1A1008] leading-snug mb-6"
-        style={{ fontFamily: "var(--font-display)" }}
       >
         {question.question}
       </h2>

@@ -1,4 +1,4 @@
-# Raising Giants — The Mirror
+# Kin — The Mirror
 
 ## What This Is
 
@@ -21,11 +21,11 @@ Adults feel deeply seen and understood about the parenting they *received* — t
 - [x] Research-backed archetype framework (9 archetypes, 11 dimensions) validated with Sophia
 - [x] 10-20 minute quiz about upbringing with cultural background questions
 - [x] Full quiz experience with progress bar, back navigation, localStorage persistence
-- [ ] Archetype copy rewritten to describe parents' style (not user's current parenting)
+- [x] Archetype copy rewritten to describe parents' style (not user's current parenting)
 - [ ] Email gate before result reveal
-- [ ] Full Mirror result page: parents' archetype, foundational patterns, all watchouts, cultural section
-- [ ] Product 2 coming-soon CTA on result page
-- [ ] Landing page with credibility signals and quiz start CTA
+- [x] Full Mirror result page: parents' archetype, foundational patterns, all watchouts, cultural section
+- [x] Product 2 coming-soon CTA on result page
+- [ ] Landing page with credibility signals and quiz start CTA *(old page nuked — rebuild in Phase 5)*
 - [ ] Marketing and launch strategy
 
 ### Product 2 — The Blueprint (future)
@@ -85,6 +85,9 @@ Adults feel deeply seen and understood about the parenting they *received* — t
 | Moonshot AI Kimi 2.5 for personalization | User's preferred AI model — Product 2 scope | Deferred to Product 2 |
 | Stripe Checkout (redirect) over embedded | Simplest to build, handles PCI compliance — Product 2 scope | Deferred to Product 2 |
 | Vercel Pro for AI + PDF generation | Hobby's 10s timeout insufficient — Product 2 scope | Deferred to Product 2 |
+| Brand name: Kin (supersedes Raising Giants) | One syllable; warm familial register; works for multi-product brand | Confirmed |
+| Branded House: "The [Product] by Kin" | Master brand carries all trust; products named The Mirror, The Blueprint, The Partner Match | Confirmed |
+| Brand territory: "digital tools for parents who want to understand themselves" | Permanent, defensible, product-neutral positioning | Confirmed |
 
 ---
-*Last updated: 2026-02-25 — Product ladder pivot (Mirror free / Blueprint paid / Partner Match premium)*
+*Last updated: 2026-02-28 — Rebrand to Kin; brand positioning decisions added*

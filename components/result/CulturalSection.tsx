@@ -35,7 +35,6 @@ export function CulturalSection({ overlay, displayName }: CulturalSectionProps) 
           </p>
           <h2
             className="text-3xl sm:text-4xl font-semibold text-[#1A1008] leading-tight"
-            style={{ fontFamily: "var(--font-display)" }}
           >
             {displayName}
           </h2>
@@ -50,7 +49,6 @@ export function CulturalSection({ overlay, displayName }: CulturalSectionProps) 
         <div className="mb-10">
           <h3
             className="text-xl font-semibold text-[#1A1008] mb-5"
-            style={{ fontFamily: "var(--font-display)" }}
           >
             What this gave you
           </h3>
@@ -74,7 +72,6 @@ export function CulturalSection({ overlay, displayName }: CulturalSectionProps) 
         <div>
           <h3
             className="text-xl font-semibold text-[#1A1008] mb-5"
-            style={{ fontFamily: "var(--font-display)" }}
           >
             What this may have cost you
           </h3>

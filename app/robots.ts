@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/api/",
     },
-    sitemap: "https://raisinggiants.com/sitemap.xml",
+    sitemap: "https://meetkin.com/sitemap.xml",
   };
 }

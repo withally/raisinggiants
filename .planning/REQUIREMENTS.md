@@ -1,7 +1,7 @@
-# Requirements: Raising Giants — The Mirror
+# Requirements: Kin — The Mirror
 
 **Defined:** 2026-02-23
-**Updated:** 2026-02-25 — Product ladder pivot
+**Updated:** 2026-02-28 — Rebrand to Kin; LAND/BRAND status corrected
 **Core Value:** Adults feel deeply seen and understood about the parenting they *received* — the personalized output surfaces patterns they've always sensed but never had language for, grounded in credible research from top parenting experts.
 
 ## v1 Requirements
@@ -47,11 +47,11 @@ Requirements for initial release (The Mirror — free product). Each maps to roa
 
 ### Landing Page
 
-- [x] **LAND-01**: Clear value proposition communicating the research-backed, expert-informed nature of the product
-- [x] **LAND-02**: KOL credibility signals (top 100 named experts, research attribution)
-- [x] **LAND-03**: Quiz start CTA that drives conversions
-- [x] **LAND-04**: Mobile-responsive design
-- [x] **LAND-05**: Sophia's credentials and clinical authority visible
+- [ ] **LAND-01**: Clear value proposition communicating the research-backed, expert-informed nature of the product *(old landing page nuked 2026-02-28 — rebuild in Phase 5)*
+- [ ] **LAND-02**: KOL credibility signals (top 100 named experts, research attribution) *(old landing page nuked 2026-02-28 — rebuild in Phase 5)*
+- [ ] **LAND-03**: Quiz start CTA that drives conversions *(old landing page nuked 2026-02-28 — rebuild in Phase 5)*
+- [ ] **LAND-04**: Mobile-responsive design *(old landing page nuked 2026-02-28 — rebuild in Phase 5)*
+- [ ] **LAND-05**: Sophia's credentials and clinical authority visible *(old landing page nuked 2026-02-28 — rebuild in Phase 5)*
 
 ### Brand Positioning and Visual Direction
 
@@ -60,9 +60,9 @@ Requirements for initial release (The Mirror — free product). Each maps to roa
 - [x] **BRAND-03**: Reference brand gallery of 8-12 aspirational brands evaluated through millennial parent lens with pattern synthesis
 - [x] **BRAND-04**: Narrative positioning document defining brand territory based on research-revealed gap (not pre-committed)
 - [x] **BRAND-05**: Brand name and product name evaluation for multi-product brand architecture with clear keep/change recommendations
-- [x] **BRAND-06**: Visual direction brief — color palette with hex codes and emotional rationale, grounded in millennial parent positioning
-- [x] **BRAND-07**: Visual direction brief — typography, imagery system, layout approach, and brand tone recommendations
-- [x] **BRAND-08**: Rebrand execution plan mapping visual recommendations to specific codebase files with phased implementation scope
+- [ ] **BRAND-06**: Visual direction brief — color palette with hex codes and emotional rationale, grounded in millennial parent positioning *(done in Phase 4 but deleted 2026-02-28 — will be re-established in Phase 5)*
+- [ ] **BRAND-07**: Visual direction brief — typography, imagery system, layout approach, and brand tone recommendations *(done in Phase 4 but deleted 2026-02-28 — will be re-established in Phase 5)*
+- [ ] **BRAND-08**: Rebrand execution plan mapping visual recommendations to specific codebase files with phased implementation scope *(done in Phase 4 but deleted 2026-02-28 — will be re-established in Phase 5)*
 
 ## Product 2 Scope — The Blueprint (Paid)
 
@@ -164,28 +164,28 @@ Which phases cover which requirements. Updated during roadmap creation.
 | RSLT-08 | Phase 3 | Complete |
 | RSLT-09 | Phase 3 | Complete |
 | RSLT-10 | Phase 3 | Complete |
-| LAND-01 | Phase 4 | Complete |
-| LAND-02 | Phase 4 | Complete |
-| LAND-03 | Phase 4 | Complete |
-| LAND-04 | Phase 4 | Complete |
-| LAND-05 | Phase 4 | Complete |
-| BRAND-01 | Phase 6 | Complete |
-| BRAND-02 | Phase 6 | Complete |
-| BRAND-03 | Phase 6 | Complete |
-| BRAND-04 | Phase 6 | Complete |
-| BRAND-05 | Phase 6 | Complete |
-| BRAND-06 | Phase 6 | Complete |
-| BRAND-07 | Phase 6 | Complete |
-| BRAND-08 | Phase 6 | Complete |
+| LAND-01 | Phase 5 | Pending (rebuild) |
+| LAND-02 | Phase 5 | Pending (rebuild) |
+| LAND-03 | Phase 5 | Pending (rebuild) |
+| LAND-04 | Phase 5 | Pending (rebuild) |
+| LAND-05 | Phase 5 | Pending (rebuild) |
+| BRAND-01 | Phase 4 | Complete |
+| BRAND-02 | Phase 4 | Complete |
+| BRAND-03 | Phase 4 | Complete |
+| BRAND-04 | Phase 4 | Complete |
+| BRAND-05 | Phase 4 | Complete |
+| BRAND-06 | Phase 5 | Pending (redo) |
+| BRAND-07 | Phase 5 | Pending (redo) |
+| BRAND-08 | Phase 5 | Pending (redo) |
 
 **Coverage:**
-- v1 requirements (Mirror): 26 total
-- Mapped to phases: 26
-- Unmapped: 0
-- Brand positioning requirements: 8 (BRAND-01–08)
+- v1 requirements (Mirror + Brand): 34 total
+- Complete: 25
+- Pending: 9 (RSLT-06, LAND-01–05, BRAND-06–08)
+- Brand positioning requirements: 8 (BRAND-01–08) — 5 complete, 3 pending redo in Phase 5
 - Product 2 requirements: 15 (PAY-01–05, PDF-01–10)
 - Product 3 requirements: 5 (COUP-01–05)
 
 ---
 *Requirements defined: 2026-02-23*
-*Last updated: 2026-02-27 — Phase 6 brand positioning requirements added (BRAND-01–08)*
+*Last updated: 2026-02-28 — Rebrand to Kin; LAND-01–05 reset (old page nuked); BRAND-06–08 reset (visual direction deleted); BRAND phase corrected to Phase 4*
