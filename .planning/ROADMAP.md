@@ -18,7 +18,7 @@ From clinical framework to working product: Phase 0 defines the archetype system
 - [x] **Phase 2.5: Archetype Content Rewrite** — Reframe all archetype copy from "your parenting style" to "your parents' parenting style" (INSERTED — pivot requirement) (completed 2026-02-26)
 - [ ] **Phase 3: Mirror Result Page** — Email gate, full free result (parents' archetype, patterns, watchouts, cultural section), Product 2 CTA
 - [x] **Phase 4: Brand Positioning Research + Visual Direction** — Competitive landscape, positioning narrative, visual direction brief, rebrand execution plan
-- [ ] **Phase 5: Landing Page Rebuild** — Rebuild landing page from scratch informed by Phase 4 brand direction
+- [x] **Phase 5: Landing Page Rebuild** — Rebuild landing page from scratch informed by Phase 4 brand direction (completed 2026-03-01)
 - [ ] **Phase 6: Marketing + Launch Strategy** — Go-to-market plan, content marketing, social media strategy, email funnels, KOL/influencer outreach
 
 ## Product 2 Roadmap — The Blueprint (Paid)
@@ -141,7 +141,7 @@ Plans:
   3. The full product ladder (Mirror, Blueprint, Partner Match) is displayed with correct status labels
   4. A prominent quiz start CTA drives visitors into the quiz flow at /quiz
   5. The entire landing page is fully mobile-responsive and loads fast on mobile connections
-**Plans:** 2/3 plans executed
+**Plans:** 3/3 plans complete
 Plans:
 - [ ] 05-01-PLAN.md — Foundation + Hero: shared palette constants, layout.tsx font update, hero decomposition, emotional hook section, page shell
 - [ ] 05-02-PLAN.md — Middle sections: How It Works (process + science), KOL credibility (12 researchers, expand/collapse)
@@ -168,5 +168,5 @@ Phases execute in numeric order: 0 → 1 → 2 → 2.5 → 3 → 4 → 5 → 6
 | 2.5. Archetype Content Rewrite | 2/2 | Complete | 2026-02-26 |
 | 3. Mirror Result Page | 2/3 | In Progress | — |
 | 4. Brand Positioning Research | 3/3 | Complete | 2026-02-28 |
-| 5. Landing Page Rebuild | 2/3 | In Progress|  |
+| 5. Landing Page Rebuild | 3/3 | Complete   | 2026-03-01 |
 | 6. Marketing + Launch Strategy | 0/TBD | Not started | — |

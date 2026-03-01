@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v2.0
 milestone_name: milestone
 status: unknown
-last_updated: "2026-03-01T08:14:08.102Z"
+last_updated: "2026-03-01T08:20:34.006Z"
 progress:
   total_phases: 8
-  completed_phases: 5
+  completed_phases: 6
   total_plans: 23
-  completed_plans: 21
+  completed_plans: 22
 ---
 
 # Project State
@@ -143,6 +143,8 @@ Recent decisions affecting current work:
 - [Phase 05-01]: Named exports for all section components; palette.ts as single source for fonts/colors; Server Component architecture throughout (no use client)
 - [Phase 05-landing-page]: [05-02-A] KOLSection is the only Client Component in landing page — useState for expand/collapse; all other sections are Server Components
 - [Phase 05-landing-page]: [05-02-B] Researcher names used as React keys (unique) per Biome noArrayIndexKey rule; Biome formatter requires inline span text content to avoid whitespace JSX interpolation errors
+- [Phase 05-landing-page]: [05-03-A] Styled pink initial 'S' circle used as Sophia photo placeholder — credible without broken image
+- [Phase 05-landing-page]: [05-03-B] HTML details/summary used for FAQ accordion — zero JS, server-renderable, matches WatchoutsSection pattern
 
 ### Roadmap Evolution
 
