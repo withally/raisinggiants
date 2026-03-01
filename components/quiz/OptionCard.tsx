@@ -1,38 +1,46 @@
 "use client";
 
-import { cn } from "@/lib/utils";
-
 interface OptionCardProps {
   label: string;
   isSelected: boolean;
   onSelect: () => void;
   disabled?: boolean;
+  /** Section pastel light color, e.g. "#FEF4AC" */
+  accentLight?: string;
+  /** Section pastel dark color, e.g. "#3D3B1A" */
+  accentDark?: string;
 }
 
-export function OptionCard({ label, isSelected, onSelect, disabled = false }: OptionCardProps) {
+export function OptionCard({
+  label,
+  isSelected,
+  onSelect,
+  disabled = false,
+  accentLight = "#B2DECD",
+  accentDark = "#1A4A3A",
+}: OptionCardProps) {
   return (
     <button
       type="button"
       onClick={onSelect}
       disabled={disabled}
-      className={cn(
-        // Base styles: full-width, minimum touch target, rounded-3xl (24px), padded
-        "w-full min-h-[48px] rounded-3xl px-5 py-4 text-left",
-        "border transition-all duration-200",
-        "text-[15px] font-medium leading-snug",
-        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#002833] focus-visible:ring-offset-2",
-        // Default (unselected) state — warm off-white
-        isSelected
-          ? "bg-[#B2DECD]/20 border-[#1A4A3A] text-[#1A4A3A] shadow-[0_1px_2px_rgba(0,0,0,0.03),0_4px_16px_rgba(0,0,0,0.03)]"
-          : "bg-white border-[#E8E4DF] text-[#1A1A1A] hover:border-[#B2DECD] hover:bg-[#B2DECD]/5",
-        // Disabled state
-        disabled && "opacity-60 cursor-not-allowed",
-      )}
+      className="w-full min-h-[48px] rounded-3xl px-5 py-4 text-left border transition-all duration-200 text-[15px] font-medium leading-snug focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed"
+      style={{
+        backgroundColor: isSelected ? `${accentLight}33` : `${accentLight}0A`,
+        borderColor: isSelected ? accentDark : "#E8E4DF",
+        color: isSelected ? accentDark : "#1A1A1A",
+        boxShadow: isSelected
+          ? "0 1px 2px rgba(0,0,0,0.03), 0 4px 16px rgba(0,0,0,0.03)"
+          : "none",
+        // @ts-expect-error -- CSS custom property for focus ring
+        "--tw-ring-color": accentDark,
+      }}
     >
       <span className="flex items-center gap-3">
         {isSelected && (
           <svg
-            className="h-5 w-5 shrink-0 text-[#1A4A3A]"
+            className="h-5 w-5 shrink-0"
+            style={{ color: accentDark }}
             viewBox="0 0 20 20"
             fill="currentColor"
             aria-hidden="true"

@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { ff, ffSerif } from "@/lib/landing/palette";
 
 const emailSchema = z.object({
   email: z.string().email("Please enter a valid email"),
@@ -38,13 +39,18 @@ export function EmailCaptureScreen({ onSubmit, isSubmitting = false }: EmailCapt
         <div className="bg-white rounded-3xl shadow-[0_1px_2px_rgba(0,0,0,0.03),0_4px_16px_rgba(0,0,0,0.03),0_16px_48px_rgba(0,0,0,0.025)] border border-[#E8E4DF] px-8 py-10">
           {/* Headline */}
           <h2
-            className="text-2xl font-semibold text-[#1A1A1A] mb-2 leading-snug"
+            className="text-2xl text-[#1A1A1A] mb-2 leading-snug"
+            style={{ fontFamily: ff, fontWeight: 800 }}
           >
-            Your reflection is complete.
+            Your{" "}
+            <span style={{ fontFamily: ffSerif, fontStyle: "italic", color: "#4A1942" }}>
+              reflection
+            </span>
+            {" "}is complete.
           </h2>
 
           {/* Sub-text */}
-          <p className="text-[#777] mb-8 leading-relaxed">
+          <p className="mb-8 leading-relaxed" style={{ fontFamily: ff, fontWeight: 400, color: "#777" }}>
             Enter your email so we can send your results.
           </p>
 

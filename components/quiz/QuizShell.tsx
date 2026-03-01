@@ -8,8 +8,10 @@ import { ProcessingScreen } from "@/components/quiz/ProcessingScreen";
 import { QuizCard } from "@/components/quiz/QuizCard";
 import { QuizProgress } from "@/components/quiz/QuizProgress";
 import { computeDimensionProfile } from "@/lib/quiz/compute-profile";
+import { ff, ffSerif } from "@/lib/landing/palette";
 import { QUESTIONS } from "@/lib/quiz/questions";
 import { getResult } from "@/lib/quiz/scoring-matrix";
+import { getSectionColor } from "@/lib/quiz/section-palette";
 import { createClient } from "@/lib/supabase/client";
 import { useQuizStore } from "@/stores/quizStore";
 
@@ -295,18 +297,30 @@ export function QuizShell() {
   // ---- INTRO SCREEN (step 0) ----
   if (step === 0 && !introSeen) {
     return (
-      <div className="min-h-[100dvh] flex items-center justify-center px-6 bg-[#FAFAF7]">
-        <div className="max-w-lg text-center animate-fade-up">
+      <div className="min-h-[100dvh] flex items-center justify-center px-6 bg-[#FAFAF7] relative overflow-hidden">
+        {/* Subtle gradient wash */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(ellipse 70% 50% at 60% 0%, rgba(254,244,172,0.18) 0%, transparent 70%), radial-gradient(ellipse 50% 40% at 30% 5%, rgba(238,192,218,0.12) 0%, transparent 60%)",
+          }}
+        />
+        <div className="max-w-lg text-center animate-fade-up relative z-10">
           <h1
-            className="text-3xl sm:text-4xl font-semibold text-[#1A1A1A] mb-4 leading-snug"
+            className="text-3xl sm:text-4xl text-[#1A1A1A] mb-4 leading-snug"
+            style={{ fontFamily: ff, fontWeight: 800 }}
           >
-            Before we begin
+            Before we{" "}
+            <span style={{ fontFamily: ffSerif, fontStyle: "italic", color: "#4A1942" }}>
+              begin
+            </span>
           </h1>
-          <p className="text-[#777] text-base sm:text-lg leading-relaxed mb-6">
+          <p className="text-base sm:text-lg leading-relaxed mb-6" style={{ fontFamily: ff, fontWeight: 400, color: "#777" }}>
             You&apos;ll reflect on 21 moments from your childhood. There are no right
             answers&nbsp;&mdash; only your experience.
           </p>
-          <p className="text-sm text-[#777] mb-8">Takes about 5 minutes</p>
+          <p className="text-sm mb-8" style={{ fontFamily: ff, color: "#777" }}>Takes about 5 minutes</p>
           <button
             type="button"
             onClick={handleBegin}
@@ -328,14 +342,27 @@ export function QuizShell() {
   // ---- CLOSING / TRANSITION SCREEN (after last question, before email) ----
   if (step === TOTAL_QUESTIONS + 1) {
     return (
-      <div className="min-h-[100dvh] flex items-center justify-center px-6 bg-[#FAFAF7]">
-        <div className="max-w-lg text-center animate-fade-up">
+      <div className="min-h-[100dvh] flex items-center justify-center px-6 bg-[#FAFAF7] relative overflow-hidden">
+        {/* Subtle gradient wash */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(ellipse 70% 50% at 60% 0%, rgba(254,244,172,0.18) 0%, transparent 70%), radial-gradient(ellipse 50% 40% at 30% 5%, rgba(238,192,218,0.12) 0%, transparent 60%)",
+          }}
+        />
+        <div className="max-w-lg text-center animate-fade-up relative z-10">
           <h2
-            className="text-2xl sm:text-3xl font-semibold text-[#1A1A1A] mb-4 leading-snug"
+            className="text-2xl sm:text-3xl text-[#1A1A1A] mb-4 leading-snug"
+            style={{ fontFamily: ff, fontWeight: 800 }}
           >
-            Thank you for reflecting on this.
+            Thank you for{" "}
+            <span style={{ fontFamily: ffSerif, fontStyle: "italic", color: "#4A1942" }}>
+              reflecting
+            </span>
+            {" "}on this.
           </h2>
-          <p className="text-[#777] text-base leading-relaxed mb-8">
+          <p className="text-base leading-relaxed mb-8" style={{ fontFamily: ff, fontWeight: 400, color: "#777" }}>
             Your answers paint a meaningful picture. Let&apos;s see what they reveal.
           </p>
           <button
@@ -361,10 +388,31 @@ export function QuizShell() {
   }
 
   // ---- QUESTION SCREENS ----
+  const currentSection = isQuestionStep && QUESTIONS[questionIndex]
+    ? QUESTIONS[questionIndex].section
+    : "about-you";
+  const sectionColor = getSectionColor(currentSection);
+
   return (
     <div className="relative overflow-hidden bg-[#FAFAF7]">
+      {/* Subtle gradient wash — matches landing page */}
+      <div
+        className="fixed inset-0 pointer-events-none z-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 70% 50% at 60% 0%, rgba(254,244,172,0.18) 0%, transparent 70%), radial-gradient(ellipse 50% 40% at 30% 5%, rgba(238,192,218,0.12) 0%, transparent 60%)",
+        }}
+      />
+
       {/* Fixed progress bar at top of screen */}
-      {isQuestionStep && <QuizProgress current={questionIndex} total={TOTAL_QUESTIONS} />}
+      {isQuestionStep && (
+        <QuizProgress
+          current={questionIndex}
+          total={TOTAL_QUESTIONS}
+          accentLight={sectionColor.light}
+          accentDark={sectionColor.dark}
+        />
+      )}
 
       {/* Back button — hidden on step 1 (first question) and on post-quiz screens */}
       {step > 1 && isQuestionStep && (
