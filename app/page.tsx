@@ -1,9 +1,13 @@
 import { EmotionalHookSection } from "@/components/landing/EmotionalHookSection";
+import { FAQSection } from "@/components/landing/FAQSection";
+import { FinalCTASection } from "@/components/landing/FinalCTASection";
 import { HeroSection } from "@/components/landing/HeroSection";
 import { HowItWorksProcess } from "@/components/landing/HowItWorksProcess";
 import { HowItWorksScience } from "@/components/landing/HowItWorksScience";
 import { KOLSection } from "@/components/landing/KOLSection";
 import { LandingNav } from "@/components/landing/LandingNav";
+import { ProductLadder } from "@/components/landing/ProductLadder";
+import { SophiaSection } from "@/components/landing/SophiaSection";
 
 export default function Home() {
   return (
@@ -26,8 +30,10 @@ export default function Home() {
       <HowItWorksProcess />
       <HowItWorksScience />
       <KOLSection />
-
-      {/* Sections added in Plan 03: ProductLadder, SophiaSection, FAQSection, FinalCTASection */}
+      <ProductLadder />
+      <SophiaSection />
+      <FAQSection />
+      <FinalCTASection />
     </div>
   );
 }
