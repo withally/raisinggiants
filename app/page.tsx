@@ -1,7 +1,28 @@
+import { EmotionalHookSection } from "@/components/landing/EmotionalHookSection";
+import { HeroSection } from "@/components/landing/HeroSection";
+import { LandingNav } from "@/components/landing/LandingNav";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <p className="text-muted-foreground">Landing page — Phase 5</p>
-    </main>
+    <div
+      className="min-h-screen flex flex-col relative overflow-hidden"
+      style={{ backgroundColor: "#FAFAF7", color: "#1A1A1A" }}
+    >
+      {/* Subtle gradient wash */}
+      <div
+        className="absolute top-0 left-0 right-0 h-[500px] pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse 70% 50% at 60% 0%, rgba(254,244,172,0.18) 0%, transparent 70%), radial-gradient(ellipse 50% 40% at 30% 5%, rgba(238,192,218,0.12) 0%, transparent 60%)",
+        }}
+      />
+
+      <LandingNav />
+      <HeroSection />
+      <EmotionalHookSection />
+
+      {/* Sections added in Plan 02: HowItWorksProcess, HowItWorksScience, KOLSection */}
+      {/* Sections added in Plan 03: ProductLadder, SophiaSection, FAQSection, FinalCTASection */}
+    </div>
   );
 }
