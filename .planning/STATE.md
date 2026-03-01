@@ -23,9 +23,9 @@ See: .planning/PROJECT.md (updated 2026-02-25)
 
 ## Current Position
 
-Phase: 05 of 6 (Landing Page Rebuild) — NOT STARTED
-Status: Phase 04 (Brand Positioning) complete (3/3 plans). Old landing page nuked — clean slate. Phase 05 needs discuss → plan → execute.
-Last activity: 2026-02-28 - Phase restructuring + clean slate: old Phase 6 → Phase 4, old landing page deleted, visual direction brief deleted (carried too much baggage)
+Phase: 05 of 6 (Landing Page Rebuild) — VISUAL DIRECTION LOCKED
+Status: Phase 04 complete. Visual direction exploration done (2026-03-01). Direction locked: "between Warm Solid and Mid Blend" (~35% on spectrum). See .planning/phases/05-landing-page/VISUAL-DIRECTION.md. Phase 05 needs discuss → plan → execute for full implementation.
+Last activity: 2026-03-01 - Visual direction exploration: 9 style variations tested, founder selected direction between solid pastels and atmospheric glass. Asymmetric layout (7/5 split) confirmed as conversion-optimal structure.
 
 Progress: [██████████░░░░] 72% (22/~30 plans estimated)
 
@@ -129,7 +129,15 @@ Recent decisions affecting current work:
 - **[04-KOL]** KOL-anchored brand building is anti-pattern — trust anchors to research framework, not founder personality
 - **[04-MISSION]** Mission-as-architecture (Patagonia model) for multi-product coherence
 
-NOTE: All visual direction decisions (palette, typography, illustration, layout) were deleted 2026-02-28 — carried too much baggage from old implementation. Visual direction will be established fresh during Phase 5.
+**Phase 05 Visual Direction (2026-03-01):**
+- **[05-VIS]** Direction: "between Warm Solid and Mid Blend" (~35% graphic→atmospheric spectrum). See .planning/phases/05-landing-page/VISUAL-DIRECTION.md
+- **[05-LAYOUT]** Asymmetric 7/5 split: hero left (butter card + headline + CTAs) + stacked modules right (pink quote, dark teal stats, dark footer)
+- **[05-TYPE]** Plus Jakarta Sans 800 + Space Grotesk 700 headings, Instrument Serif italic accent ("see what" in solid plum), Plus Jakarta Sans body
+- **[05-PAL]** Four pastel/dark pairs: blue (#B3D5DE/#002833), pink (#EEC0DA/#4A1942), mint (#B2DECD/#1A4A3A), butter (#FEF4AC/#3D3B1A)
+- **[05-CARDS]** Solid pastel fills on cards (tangible, not glassmorphic). Dark teal stat cards. 24px border-radius throughout.
+- **[05-NAV]** Glassmorphic pill nav is the one modern/tech touch — backdrop-blur, segmented toggle
+- **[05-BG]** Warm base (#FAFAF7) with very subtle gradient wash at top — whisper of atmosphere, not full mesh blobs
+- **[05-NO]** No gradient text, no gradient borders, no heavy glassmorphism on cards — warmth from visible pastel color
 
 ### Roadmap Evolution
 
@@ -162,6 +170,6 @@ NOTE: All visual direction decisions (palette, typography, illustration, layout)
 
 ## Session Continuity
 
-Last session: 2026-02-28
-Stopped at: Phase 04 complete (3/3). Old landing page nuked. Clean slate for Phase 05 (Landing Page Rebuild).
-Resume with: /gsd:discuss-phase 5
+Last session: 2026-03-01
+Stopped at: Phase 05 visual direction locked. 9 style variations explored across 4 rounds. Founder selected "between Warm Solid and Mid Blend" (~35%). Direction doc written at .planning/phases/05-landing-page/VISUAL-DIRECTION.md. Current page.tsx has the three spectrum variations (A/B/C) live — target is between A and B. Phase 05 still needs discuss → plan → execute for full landing page build.
+Resume with: /gsd:discuss-phase 5 (visual direction is already locked — skip style exploration, go straight to content/structure planning)
