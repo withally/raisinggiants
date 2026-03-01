@@ -33,7 +33,7 @@ const FAQS = [
 
 export function FAQSection() {
   return (
-    <section style={{ backgroundColor: "#FAFAF7" }}>
+    <section id="faq" style={{ backgroundColor: "#FAFAF7" }}>
       <div className="mx-auto max-w-7xl px-4 py-20 md:px-10 md:py-28">
         {/* Section label */}
         <p

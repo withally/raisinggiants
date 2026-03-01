@@ -184,7 +184,7 @@ function MarqueeRow({
 
 export function TestimonialsSection() {
   return (
-    <section className="py-20 md:py-28 overflow-hidden">
+    <section id="testimonials" className="py-20 md:py-28 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 md:px-10 mb-10">
         {/* Label */}
         <p

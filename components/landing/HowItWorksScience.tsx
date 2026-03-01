@@ -21,7 +21,7 @@ const stats = [
 
 export function HowItWorksScience() {
   return (
-    <section className="py-20 md:py-28 px-4 md:px-10">
+    <section id="science" className="py-20 md:py-28 px-4 md:px-10">
       <div className="max-w-7xl mx-auto">
         {/* Label */}
         <p
