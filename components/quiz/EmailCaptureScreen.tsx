@@ -32,19 +32,19 @@ export function EmailCaptureScreen({ onSubmit, isSubmitting = false }: EmailCapt
   }
 
   return (
-    <div className="min-h-[100dvh] flex items-center justify-center px-6 py-8 bg-[#F5F4F2]">
+    <div className="min-h-[100dvh] flex items-center justify-center px-6 py-8 bg-[#FAFAF7]">
       <div className="w-full max-w-lg">
         {/* Card */}
-        <div className="bg-white rounded-2xl shadow-sm border border-[#E8E4DF] px-8 py-10">
+        <div className="bg-white rounded-3xl shadow-[0_1px_2px_rgba(0,0,0,0.03),0_4px_16px_rgba(0,0,0,0.03),0_16px_48px_rgba(0,0,0,0.025)] border border-[#E8E4DF] px-8 py-10">
           {/* Headline */}
           <h2
-            className="text-2xl font-semibold text-[#1A1008] mb-2 leading-snug"
+            className="text-2xl font-semibold text-[#1A1A1A] mb-2 leading-snug"
           >
             Your reflection is complete.
           </h2>
 
           {/* Sub-text */}
-          <p className="text-[#8A7A66] mb-8 leading-relaxed">
+          <p className="text-[#777] mb-8 leading-relaxed">
             Enter your email so we can send your results.
           </p>
 
@@ -56,7 +56,7 @@ export function EmailCaptureScreen({ onSubmit, isSubmitting = false }: EmailCapt
                 placeholder="your@email.com"
                 autoComplete="email"
                 autoCapitalize="none"
-                className="w-full text-base py-3 h-auto"
+                className="w-full text-base py-3 h-auto rounded-2xl"
                 aria-label="Email address"
                 aria-describedby={errors.email ? "email-error" : undefined}
                 {...register("email")}
@@ -71,7 +71,7 @@ export function EmailCaptureScreen({ onSubmit, isSubmitting = false }: EmailCapt
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-[#0D3D3A] hover:bg-[#0F4F4B] text-white font-semibold py-4 h-auto text-base rounded-xl transition-colors"
+              className="w-full bg-[#002833] hover:bg-[#003d4d] text-white font-semibold py-4 h-auto text-base rounded-2xl transition-colors shadow-[0_1px_3px_rgba(0,0,0,0.06),0_4px_12px_rgba(0,0,0,0.04)]"
             >
               {isSubmitting ? "Saving..." : "See My Results"}
             </Button>
@@ -79,10 +79,10 @@ export function EmailCaptureScreen({ onSubmit, isSubmitting = false }: EmailCapt
         </div>
 
         {/* Privacy note */}
-        <p className="mt-4 text-center text-xs text-[#8A7A66]">
+        <p className="mt-4 text-center text-xs text-[#777]">
           We&apos;ll only use your email to send your results. No spam, ever.
           <br />
-          <Link href="/privacy" className="underline underline-offset-2 hover:text-[#1A1008] transition-colors">
+          <Link href="/privacy" className="underline underline-offset-2 hover:text-[#1A1A1A] transition-colors">
             Read our privacy policy
           </Link>
         </p>

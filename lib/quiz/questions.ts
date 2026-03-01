@@ -117,11 +117,11 @@ export const QUESTIONS: QuizQuestion[] = [
       'When you were little, how did the people who raised you most often show you they loved you?',
     inputType: 'option-cards',
     options: [
-      { id: 'words', label: 'Saying "I love you" and lots of hugs' },
-      { id: 'acts', label: 'Doing things for me — cooking, fixing, being there' },
-      { id: 'time', label: 'Spending time with me, playing or talking' },
-      { id: 'praise', label: 'Telling me how proud they were of me' },
-      { id: 'mixed', label: 'A real mix — it changed depending on the situation' },
+      { id: 'words', label: '🫂 Words and hugs — "I love you" was common' },
+      { id: 'acts', label: '🍳 Acts of service — cooking, fixing, showing up' },
+      { id: 'time', label: '🎲 Quality time — playing or talking together' },
+      { id: 'praise', label: '⭐ Praise — telling me how proud they were' },
+      { id: 'mixed', label: '🔀 A real mix — depended on the moment' },
     ],
     dimensionScores: {
       words:  { 'emotional-warmth': 9, 'nonjudgmental-acceptance': 8 },
@@ -139,10 +139,10 @@ export const QUESTIONS: QuizQuestion[] = [
     question: 'Growing up, were feelings talked about openly in your home, or were they more kept private?',
     inputType: 'option-cards',
     options: [
-      { id: 'openly', label: 'Quite openly — we talked about how we felt' },
-      { id: 'sometimes', label: 'Sometimes, with certain people or in certain moods' },
-      { id: 'rarely', label: 'Rarely — feelings were more private' },
-      { id: 'never', label: "Hardly ever — it wasn't really done" },
+      { id: 'openly', label: '💬 Quite openly — we talked about feelings' },
+      { id: 'sometimes', label: '🌤️ Sometimes, with certain people or moods' },
+      { id: 'rarely', label: '🤐 Rarely — feelings were private' },
+      { id: 'never', label: "🔇 Hardly ever — it wasn't done" },
     ],
     dimensionScores: {
       openly:    { 'emotional-warmth': 8, 'emotional-regulation': 8 },
@@ -166,11 +166,11 @@ export const QUESTIONS: QuizQuestion[] = [
       "When you were upset as a child — really upset, not just a bit annoyed — how often did a parent sit with you, hold you, or let you know you weren't alone?",
     inputType: 'option-cards',
     options: [
-      { id: 'always', label: "Almost always — they'd come find me" },
-      { id: 'often', label: 'Often, though it depended on the day' },
-      { id: 'sometimes', label: 'Sometimes, but I often worked through things alone' },
-      { id: 'rarely', label: 'Rarely — I mostly kept it to myself' },
-      { id: 'never', label: "Almost never — that's just not how it worked" },
+      { id: 'always', label: "🫶 Almost always — they'd come find me" },
+      { id: 'often', label: '🌤️ Often, depended on the day' },
+      { id: 'sometimes', label: '🌥️ Sometimes — I often handled it alone' },
+      { id: 'rarely', label: '🌧️ Rarely — I kept it to myself' },
+      { id: 'never', label: "🧊 Almost never — not how it worked" },
     ],
     dimensionScores: {
       always:    { 'emotional-warmth': 9 },
@@ -189,10 +189,10 @@ export const QUESTIONS: QuizQuestion[] = [
       'How often did the people who raised you say "I love you" out loud — not just through actions, but actually in words?',
     inputType: 'option-cards',
     options: [
-      { id: 'very-often', label: 'Very often — it was a regular part of life' },
-      { id: 'sometimes', label: 'Sometimes, on meaningful occasions' },
-      { id: 'rarely', label: 'Rarely — not really how they expressed things' },
-      { id: 'never', label: 'Never that I can remember' },
+      { id: 'very-often', label: '💝 Very often — a regular part of life' },
+      { id: 'sometimes', label: '💛 Sometimes, on meaningful occasions' },
+      { id: 'rarely', label: '🤫 Rarely — not how they expressed things' },
+      { id: 'never', label: '🚫 Never that I can remember' },
     ],
     dimensionScores: {
       'very-often': { 'emotional-warmth': 9 },
@@ -212,10 +212,10 @@ export const QUESTIONS: QuizQuestion[] = [
       'As a child, when you pushed back on a rule, what usually happened?',
     inputType: 'option-cards',
     options: [
-      { id: 'held', label: 'The rule held, every time — they were consistent' },
-      { id: 'depended', label: 'It depended on who you asked or what mood they were in' },
-      { id: 'negotiated', label: 'We could usually talk it through and find a compromise' },
-      { id: 'gave-in', label: 'The rule often gave way if I pushed long enough' },
+      { id: 'held', label: '🧱 Rule held every time — very consistent' },
+      { id: 'depended', label: '🎭 Depended on who or what mood' },
+      { id: 'negotiated', label: '🤝 We\'d talk it through and compromise' },
+      { id: 'gave-in', label: '🪟 The rule usually gave way if I pushed' },
     ],
     dimensionScores: {
       held:       { 'boundary-consistency': 9 },
@@ -233,10 +233,10 @@ export const QUESTIONS: QuizQuestion[] = [
       'How predictable were the household rules you grew up with — did you know what to expect, or were consequences more of a surprise?',
     inputType: 'option-cards',
     options: [
-      { id: 'very-predictable', label: 'Very predictable — I always knew where the lines were' },
-      { id: 'mostly', label: 'Mostly predictable, with some inconsistency' },
-      { id: 'mixed', label: 'Mixed — it really depended on the day or the mood' },
-      { id: 'unpredictable', label: 'Pretty unpredictable — I often felt unsure' },
+      { id: 'very-predictable', label: '📐 Very predictable — I knew the lines' },
+      { id: 'mostly', label: '📏 Mostly predictable, some inconsistency' },
+      { id: 'mixed', label: '🎲 Mixed — depended on the day or mood' },
+      { id: 'unpredictable', label: '❓ Pretty unpredictable — I often felt unsure' },
     ],
     dimensionScores: {
       'very-predictable': { 'boundary-consistency': 9 },
@@ -256,10 +256,10 @@ export const QUESTIONS: QuizQuestion[] = [
       'Growing up, when you had a problem to figure out — something tricky at school, a falling out with a friend — how much did your parents let you work through it yourself before stepping in?',
     inputType: 'option-cards',
     options: [
-      { id: 'very-much', label: 'A lot — they trusted me to figure most things out' },
-      { id: 'some', label: "Some — they'd offer help but let me lead" },
-      { id: 'little', label: 'Not much — they tended to step in and sort things for me' },
-      { id: 'never', label: 'They were very hands-on — I rarely handled things alone' },
+      { id: 'very-much', label: '🦅 A lot — they trusted me to figure it out' },
+      { id: 'some', label: "🤲 Some — they'd help but let me lead" },
+      { id: 'little', label: '🛡️ Not much — they tended to step in' },
+      { id: 'never', label: '🧲 Very hands-on — I rarely handled things alone' },
     ],
     dimensionScores: {
       'very-much': { 'autonomy-support': 9 },
@@ -282,10 +282,10 @@ export const QUESTIONS: QuizQuestion[] = [
       "Research shows that children sometimes take on an emotional caretaking role for a parent — keeping the peace, managing moods, or being the one who holds it together. This isn't a failing of the parent or the child: it often happens in loving families under real pressure. Understanding this dynamic helps us give you a result that actually reflects your upbringing.",
     inputType: 'option-cards',
     options: [
-      { id: 'often', label: "Often — it was something I was quite aware of" },
-      { id: 'sometimes', label: 'Sometimes — in certain situations or with one particular parent' },
-      { id: 'rarely', label: "Rarely — it wasn't really something I noticed" },
-      { id: 'never', label: "Never — that was never my role" },
+      { id: 'often', label: "🎯 Often — I was quite aware of it" },
+      { id: 'sometimes', label: '🌊 Sometimes — certain situations or one parent' },
+      { id: 'rarely', label: "🍃 Rarely — not something I noticed" },
+      { id: 'never', label: "✨ Never — that wasn't my role" },
     ],
     dimensionScores: {
       often:     { 'role-integrity': 2 },
@@ -306,10 +306,10 @@ export const QUESTIONS: QuizQuestion[] = [
       "Sometimes children become the emotional anchor for a parent in ways that feel normal at the time. It's a quiet form of carrying weight that belongs to adults, and recognising it is actually a strength. Understanding this pattern helps us personalise your results.",
     inputType: 'option-cards',
     options: [
-      { id: 'yes-clearly', label: 'Yes — I was quite aware of playing that role' },
-      { id: 'somewhat', label: 'Somewhat — there were moments where I felt that' },
-      { id: 'not-really', label: "Not really — I don't think that was the dynamic" },
-      { id: 'no', label: "No — that wasn't my experience" },
+      { id: 'yes-clearly', label: '🪞 Yes — I was aware of that role' },
+      { id: 'somewhat', label: '🌫️ Somewhat — there were moments' },
+      { id: 'not-really', label: "🍃 Not really — don't think that was the dynamic" },
+      { id: 'no', label: "✨ No — that wasn't my experience" },
     ],
     dimensionScores: {
       'yes-clearly': { 'role-integrity': 1 },
@@ -332,10 +332,10 @@ export const QUESTIONS: QuizQuestion[] = [
       "Research in attachment science shows that it's not the quality of someone's childhood that matters most for parenting — it's how clearly they can tell the story. A parent who has made sense of a difficult past often transmits more security than one who hasn't examined an easier one. These questions help us understand where you are in that process.",
     inputType: 'option-cards',
     options: [
-      { id: 'very-easy', label: "Quite easy — I have a clear, nuanced picture" },
-      { id: 'mostly', label: 'Mostly — though some parts are harder to organise' },
-      { id: 'mixed', label: "Mixed — I can see parts of it clearly but other parts feel murkier" },
-      { id: 'hard', label: "Hard — it's quite tangled or feels one-dimensional" },
+      { id: 'very-easy', label: "🗺️ Quite easy — clear, nuanced picture" },
+      { id: 'mostly', label: '📝 Mostly — some parts harder to organise' },
+      { id: 'mixed', label: "🌫️ Mixed — parts clear, parts murky" },
+      { id: 'hard', label: "🧶 Hard — quite tangled or one-dimensional" },
     ],
     dimensionScores: {
       'very-easy': { 'narrative-coherence': 9 },
@@ -355,26 +355,11 @@ export const QUESTIONS: QuizQuestion[] = [
       "The ability to hold a nuanced, honest view of your past — including both what was good and what was hard — is one of the strongest predictors of the kind of parent you become. This question isn't about judging your childhood; it's about where you are in making sense of it.",
     inputType: 'option-cards',
     options: [
-      {
-        id: 'nuanced-clear',
-        label: 'Genuinely mixed — and I can hold both the good and the hard with some clarity',
-      },
-      {
-        id: 'positive-clear',
-        label: 'Mostly positive, and I feel at peace with that view',
-      },
-      {
-        id: 'positive-vague',
-        label: "Mostly positive, though I find it hard to think of specific memories",
-      },
-      {
-        id: 'difficult-integrated',
-        label: "Quite difficult — and I've done a lot of work to understand it",
-      },
-      {
-        id: 'difficult-raw',
-        label: "Quite difficult — and it still feels very present or unresolved",
-      },
+      { id: 'nuanced-clear', label: '🎨 Genuinely mixed — I can hold both with clarity' },
+      { id: 'positive-clear', label: '☀️ Mostly positive — at peace with that view' },
+      { id: 'positive-vague', label: '🌤️ Mostly positive — hard to recall specifics' },
+      { id: 'difficult-integrated', label: "🌿 Quite difficult — but I've worked to understand it" },
+      { id: 'difficult-raw', label: '🌊 Quite difficult — still feels present or unresolved' },
     ],
     dimensionScores: {
       'nuanced-clear':       { 'narrative-coherence': 9 },
@@ -395,10 +380,10 @@ export const QUESTIONS: QuizQuestion[] = [
       "Narrative coherence — how we make sense of our own story — tends to develop over time. Parents who have revisited and deepened their understanding of their upbringing often have more room to parent from choice rather than habit. This question helps us understand how far along that process you are.",
     inputType: 'option-cards',
     options: [
-      { id: 'much-more-nuanced', label: "A lot more nuanced — I understand things I didn't before" },
-      { id: 'somewhat-shifted', label: 'Somewhat — a few things have shifted, though much feels the same' },
-      { id: 'mostly-same', label: "Mostly the same — my view hasn't changed much" },
-      { id: 'more-questions', label: "If anything, I have more questions now than I did growing up" },
+      { id: 'much-more-nuanced', label: "🔍 A lot more nuanced — I see things I didn't before" },
+      { id: 'somewhat-shifted', label: '🌱 Somewhat — a few things shifted' },
+      { id: 'mostly-same', label: "➡️ Mostly the same — hasn't changed much" },
+      { id: 'more-questions', label: '❓ If anything, more questions now than before' },
     ],
     dimensionScores: {
       'much-more-nuanced': { 'narrative-coherence': 9 },
@@ -422,22 +407,10 @@ export const QUESTIONS: QuizQuestion[] = [
       "When you were upset as a child, how did the adults around you typically respond?",
     inputType: 'option-cards',
     options: [
-      {
-        id: 'stayed-with-me',
-        label: 'They stayed with me and helped me feel understood',
-      },
-      {
-        id: 'calm-down',
-        label: 'They told me to calm down or that I was overreacting',
-      },
-      {
-        id: 'uncomfortable',
-        label: 'They seemed uncomfortable and changed the subject',
-      },
-      {
-        id: 'ignored',
-        label: 'They mostly ignored it and waited for it to pass',
-      },
+      { id: 'stayed-with-me', label: '🫶 Stayed with me — helped me feel understood' },
+      { id: 'calm-down', label: '🛑 Told me to calm down or I was overreacting' },
+      { id: 'uncomfortable', label: '😶 Seemed uncomfortable — changed the subject' },
+      { id: 'ignored', label: '👻 Mostly ignored it — waited for it to pass' },
     ],
     dimensionScores: {
       'stayed-with-me': { 'emotional-regulation': 9, 'presence-attunement': 8 },
@@ -455,10 +428,10 @@ export const QUESTIONS: QuizQuestion[] = [
       'When your parents got angry or stressed, how did it usually affect the rest of the household?',
     inputType: 'option-cards',
     options: [
-      { id: 'contained', label: "They kept it contained — it didn't really ripple out" },
-      { id: 'noticeable', label: "We all noticed it, but it passed pretty quickly" },
-      { id: 'changed-things', label: "It changed the mood of the whole house for a while" },
-      { id: 'tiptoed', label: "We all tiptoed around them until the storm passed" },
+      { id: 'contained', label: "🧘 Kept it contained — didn't ripple out" },
+      { id: 'noticeable', label: '🌊 We noticed, but it passed quickly' },
+      { id: 'changed-things', label: '⛈️ Changed the mood of the whole house' },
+      { id: 'tiptoed', label: '🤫 We tiptoed until the storm passed' },
     ],
     dimensionScores: {
       contained:       { 'emotional-regulation': 9, 'boundary-consistency': 7 },
@@ -478,11 +451,11 @@ export const QUESTIONS: QuizQuestion[] = [
       "Growing up, how often did you feel like the adults around you genuinely understood what you were going through — not just what you were doing, but what you were feeling inside?",
     inputType: 'option-cards',
     options: [
-      { id: 'very-often', label: 'Very often — I felt truly seen' },
-      { id: 'often', label: 'Often, though not always' },
-      { id: 'sometimes', label: 'Sometimes — certain people, certain moments' },
-      { id: 'rarely', label: 'Rarely — I mostly felt misread or unseen' },
-      { id: 'never', label: "Almost never — I don't think that was on their radar" },
+      { id: 'very-often', label: '🪞 Very often — I felt truly seen' },
+      { id: 'often', label: '🌤️ Often, though not always' },
+      { id: 'sometimes', label: '🌥️ Sometimes — certain people, certain moments' },
+      { id: 'rarely', label: '🌫️ Rarely — felt misread or unseen' },
+      { id: 'never', label: "🚫 Almost never — not on their radar" },
     ],
     dimensionScores: {
       'very-often': { 'presence-attunement': 9, 'emotional-warmth': 8 },
@@ -503,10 +476,10 @@ export const QUESTIONS: QuizQuestion[] = [
       "Growing up, how often did your parents seem worried about your safety in situations that felt completely normal to you?",
     inputType: 'option-cards',
     options: [
-      { id: 'rarely', label: "Rarely — they were pretty relaxed about things" },
-      { id: 'sometimes', label: 'Sometimes, though it made sense in context' },
-      { id: 'often', label: 'Quite often — they were fairly anxious about risks' },
-      { id: 'always', label: 'Very often — I often felt they were worried about things that seemed fine to me' },
+      { id: 'rarely', label: '😌 Rarely — they were pretty relaxed' },
+      { id: 'sometimes', label: '🌤️ Sometimes, made sense in context' },
+      { id: 'often', label: '😟 Quite often — fairly anxious about risks' },
+      { id: 'always', label: '🫣 Very often — worried about things that seemed fine' },
     ],
     dimensionScores: {
       rarely:    { 'protective-instinct': 2 },
@@ -524,10 +497,10 @@ export const QUESTIONS: QuizQuestion[] = [
       'When you wanted to do something independently as a child — walk to a friend\'s house, ride your bike further, stay home alone — how did your parents typically respond?',
     inputType: 'option-cards',
     options: [
-      { id: 'encouraged', label: 'They encouraged it — they liked seeing me be independent' },
-      { id: 'cautious-yes', label: 'They said yes but with conditions and check-ins' },
-      { id: 'reluctant', label: 'They were reluctant and often said no at first' },
-      { id: 'rarely-allowed', label: 'They rarely allowed it — they preferred to keep me close' },
+      { id: 'encouraged', label: '🦅 Encouraged it — liked seeing me independent' },
+      { id: 'cautious-yes', label: '✅ Yes, but with conditions and check-ins' },
+      { id: 'reluctant', label: '😬 Reluctant — often said no at first' },
+      { id: 'rarely-allowed', label: '🏠 Rarely allowed — preferred to keep me close' },
     ],
     dimensionScores: {
       encouraged:      { 'protective-instinct': 2, 'autonomy-support': 9 },
@@ -550,11 +523,11 @@ export const QUESTIONS: QuizQuestion[] = [
       "Research consistently shows that what happens after a difficult moment matters just as much as the moment itself. The ability to come back, repair, and reconnect is one of the strongest predictors of a secure parent-child bond — and it's deeply shaped by whether we experienced that repair in our own childhoods.",
     inputType: 'option-cards',
     options: [
-      { id: 'always', label: 'Almost always — they made a point of coming back' },
-      { id: 'often', label: 'Often — they usually circled back at some point' },
-      { id: 'sometimes', label: 'Sometimes — it depended on the situation' },
-      { id: 'rarely', label: "Rarely — things mostly just moved on" },
-      { id: 'never', label: "Almost never — what was done was done" },
+      { id: 'always', label: '💛 Almost always — they made a point of it' },
+      { id: 'often', label: '🌤️ Often — usually circled back' },
+      { id: 'sometimes', label: '🌥️ Sometimes — depended on the situation' },
+      { id: 'rarely', label: '🍂 Rarely — things just moved on' },
+      { id: 'never', label: '🧊 Almost never — what was done was done' },
     ],
     dimensionScores: {
       always:    { 'repair-reconnection': 9 },
@@ -575,10 +548,10 @@ export const QUESTIONS: QuizQuestion[] = [
       "Parents who can name their mistakes and come back to repair them teach their children something powerful: that relationships can survive difficulty. Whether or not you experienced this growing up often shapes how naturally or awkwardly it feels for you as a parent now.",
     inputType: 'option-cards',
     options: [
-      { id: 'regularly', label: 'Yes, regularly — it was a normal part of how conflict resolved' },
-      { id: 'occasionally', label: 'Occasionally — a handful of times I can remember' },
-      { id: 'once-twice', label: 'Once or twice — it was noticeable because it was rare' },
-      { id: 'never', label: "Never — I don't think I ever heard that" },
+      { id: 'regularly', label: '🔄 Yes, regularly — normal part of resolution' },
+      { id: 'occasionally', label: '🌱 Occasionally — a handful of times' },
+      { id: 'once-twice', label: '💡 Once or twice — rare enough to notice' },
+      { id: 'never', label: "🚫 Never — don't think I ever heard that" },
     ],
     dimensionScores: {
       regularly:     { 'repair-reconnection': 9, 'emotional-regulation': 8 },
@@ -598,10 +571,10 @@ export const QUESTIONS: QuizQuestion[] = [
       "Growing up, how often were you genuinely asked for your opinion on family decisions — and did it actually make a difference?",
     inputType: 'option-cards',
     options: [
-      { id: 'often-mattered', label: "Often — and what I said actually influenced the outcome" },
-      { id: 'asked-not-mattered', label: 'I was asked, but the decision had usually already been made' },
-      { id: 'rarely', label: "Rarely — family decisions were mostly made without my input" },
-      { id: 'never', label: "Never — that wasn't how things worked" },
+      { id: 'often-mattered', label: '🗳️ Often — and it actually influenced things' },
+      { id: 'asked-not-mattered', label: '🎭 Asked, but decision was usually made' },
+      { id: 'rarely', label: '📢 Rarely — decisions made without my input' },
+      { id: 'never', label: "🚫 Never — that wasn't how things worked" },
     ],
     dimensionScores: {
       'often-mattered':   { 'reciprocity': 9, 'autonomy-support': 7 },
@@ -621,10 +594,10 @@ export const QUESTIONS: QuizQuestion[] = [
       "Growing up, did you feel that your parents' love or approval changed depending on how well you behaved, performed at school, or met their expectations?",
     inputType: 'option-cards',
     options: [
-      { id: 'unconditional', label: "Not really — their love felt constant regardless of what I did" },
-      { id: 'somewhat', label: 'Somewhat — I could feel a shift when I disappointed them' },
-      { id: 'quite-conditional', label: 'Quite a bit — approval was noticeably tied to achievement or behaviour' },
-      { id: 'very-conditional', label: 'Very much so — love and approval felt clearly conditional' },
+      { id: 'unconditional', label: '💛 Not really — their love felt constant' },
+      { id: 'somewhat', label: '🌊 Somewhat — felt a shift when I disappointed them' },
+      { id: 'quite-conditional', label: '📊 Quite a bit — approval tied to achievement' },
+      { id: 'very-conditional', label: '❄️ Very much — love felt clearly conditional' },
     ],
     dimensionScores: {
       unconditional:     { 'nonjudgmental-acceptance': 9 },

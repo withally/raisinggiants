@@ -256,9 +256,9 @@ export function QuizShell() {
   // Error state — session init failed
   if (initError) {
     return (
-      <div className="min-h-[100dvh] flex items-center justify-center px-6 bg-[#F5F4F2]">
+      <div className="min-h-[100dvh] flex items-center justify-center px-6 bg-[#FAFAF7]">
         <div className="max-w-lg text-center">
-          <p className="text-[#1A1008] mb-4">
+          <p className="text-[#1A1A1A] mb-4">
             Something went wrong starting your quiz. Please try again.
           </p>
           <button
@@ -267,7 +267,7 @@ export function QuizShell() {
               setInitError(false);
               sessionInitialized.current = false;
             }}
-            className="rounded-full bg-[#0D3D3A] px-6 py-3 text-white font-semibold hover:bg-[#0F4F4B] transition-colors"
+            className="rounded-full bg-[#002833] px-6 py-3 text-white font-semibold hover:bg-[#003d4d] transition-colors"
           >
             Retry
           </button>
@@ -295,22 +295,22 @@ export function QuizShell() {
   // ---- INTRO SCREEN (step 0) ----
   if (step === 0 && !introSeen) {
     return (
-      <div className="min-h-[100dvh] flex items-center justify-center px-6 bg-[#F5F4F2]">
+      <div className="min-h-[100dvh] flex items-center justify-center px-6 bg-[#FAFAF7]">
         <div className="max-w-lg text-center animate-fade-up">
           <h1
-            className="text-3xl sm:text-4xl font-semibold text-[#1A1008] mb-4 leading-snug"
+            className="text-3xl sm:text-4xl font-semibold text-[#1A1A1A] mb-4 leading-snug"
           >
             Before we begin
           </h1>
-          <p className="text-[#8A7A66] text-base sm:text-lg leading-relaxed mb-6">
+          <p className="text-[#777] text-base sm:text-lg leading-relaxed mb-6">
             You&apos;ll reflect on 21 moments from your childhood. There are no right
             answers&nbsp;&mdash; only your experience.
           </p>
-          <p className="text-sm text-[#8A7A66] mb-8">Takes about 5 minutes</p>
+          <p className="text-sm text-[#777] mb-8">Takes about 5 minutes</p>
           <button
             type="button"
             onClick={handleBegin}
-            className="rounded-full bg-[#0D3D3A] text-[#F5F4F2] px-8 py-3 text-base font-semibold hover:bg-[#0F4F4B] transition-colors"
+            className="rounded-full bg-[#002833] text-[#F0EDE8] px-8 py-3 text-base font-semibold hover:bg-[#003d4d] transition-colors shadow-[0_1px_3px_rgba(0,0,0,0.06),0_4px_12px_rgba(0,0,0,0.04)]"
           >
             Begin
           </button>
@@ -322,26 +322,26 @@ export function QuizShell() {
   // If somehow on step 0 but intro was seen (e.g. browser back), push to step 1
   if (step === 0 && introSeen) {
     setStep(1);
-    return <div className="min-h-screen bg-[#F5F4F2]" />;
+    return <div className="min-h-screen bg-[#FAFAF7]" />;
   }
 
   // ---- CLOSING / TRANSITION SCREEN (after last question, before email) ----
   if (step === TOTAL_QUESTIONS + 1) {
     return (
-      <div className="min-h-[100dvh] flex items-center justify-center px-6 bg-[#F5F4F2]">
+      <div className="min-h-[100dvh] flex items-center justify-center px-6 bg-[#FAFAF7]">
         <div className="max-w-lg text-center animate-fade-up">
           <h2
-            className="text-2xl sm:text-3xl font-semibold text-[#1A1008] mb-4 leading-snug"
+            className="text-2xl sm:text-3xl font-semibold text-[#1A1A1A] mb-4 leading-snug"
           >
             Thank you for reflecting on this.
           </h2>
-          <p className="text-[#8A7A66] text-base leading-relaxed mb-8">
+          <p className="text-[#777] text-base leading-relaxed mb-8">
             Your answers paint a meaningful picture. Let&apos;s see what they reveal.
           </p>
           <button
             type="button"
             onClick={handleClosingContinue}
-            className="rounded-full bg-[#0D3D3A] text-[#F5F4F2] px-8 py-3 text-base font-semibold hover:bg-[#0F4F4B] transition-colors"
+            className="rounded-full bg-[#002833] text-[#F0EDE8] px-8 py-3 text-base font-semibold hover:bg-[#003d4d] transition-colors shadow-[0_1px_3px_rgba(0,0,0,0.06),0_4px_12px_rgba(0,0,0,0.04)]"
           >
             Continue
           </button>
@@ -362,7 +362,7 @@ export function QuizShell() {
 
   // ---- QUESTION SCREENS ----
   return (
-    <div className="relative overflow-hidden bg-[#F5F4F2]">
+    <div className="relative overflow-hidden bg-[#FAFAF7]">
       {/* Fixed progress bar at top of screen */}
       {isQuestionStep && <QuizProgress current={questionIndex} total={TOTAL_QUESTIONS} />}
 
@@ -372,7 +372,7 @@ export function QuizShell() {
           type="button"
           onClick={handleBack}
           aria-label="Go to previous question"
-          className="fixed top-4 left-4 z-50 p-2 rounded-full bg-white shadow-sm border border-[#E8E4DF] text-[#8A7A66] hover:text-[#1A1008] hover:bg-[#F5F4F2] transition-colors"
+          className="fixed top-4 left-4 z-50 p-2 rounded-full bg-white shadow-sm border border-[#E8E4DF] text-[#777] hover:text-[#1A1A1A] hover:bg-[#FAFAF7] transition-colors"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

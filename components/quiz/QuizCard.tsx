@@ -22,12 +22,12 @@ export function QuizCard({ question, currentAnswer, onAnswer, onSkip, showSectio
 
       {/* Lead-in normalizing sentence for sensitive questions */}
       {question.leadIn && (
-        <p className="mb-3 text-sm text-[#8A7A66] italic leading-relaxed">{question.leadIn}</p>
+        <p className="mb-3 text-sm text-[#777] italic leading-relaxed">{question.leadIn}</p>
       )}
 
       {/* Question text */}
       <h2
-        className="text-xl sm:text-2xl font-medium text-[#1A1008] leading-snug mb-6"
+        className="text-xl sm:text-2xl font-semibold text-[#1A1A1A] leading-snug mb-6"
       >
         {question.question}
       </h2>
@@ -62,7 +62,7 @@ export function QuizCard({ question, currentAnswer, onAnswer, onSkip, showSectio
         <button
           type="button"
           onClick={onSkip}
-          className="text-sm text-[#8A7A66] hover:text-[#1A1008] transition-colors mt-4"
+          className="text-sm text-[#777] hover:text-[#1A1A1A] transition-colors mt-4"
         >
           Skip this question
         </button>

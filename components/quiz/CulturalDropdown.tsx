@@ -89,7 +89,7 @@ export function CulturalDropdown({ options, value, onSelect }: CulturalDropdownP
       />
 
       {isOpen && filteredOptions.length > 0 && (
-        <div className="absolute z-10 mt-1 w-full bg-white border border-[#E8E4DF] rounded-xl shadow-lg max-h-60 overflow-y-auto">
+        <div className="absolute z-10 mt-1 w-full bg-white border border-[#E8E4DF] rounded-3xl shadow-[0_1px_2px_rgba(0,0,0,0.03),0_4px_16px_rgba(0,0,0,0.03),0_16px_48px_rgba(0,0,0,0.025)] max-h-60 overflow-y-auto">
           {filteredOptions.map((option) => {
             const isSelected = value === option.id;
             return (
@@ -100,15 +100,15 @@ export function CulturalDropdown({ options, value, onSelect }: CulturalDropdownP
                 className={cn(
                   "flex w-full items-center gap-3 px-4 py-3 text-left text-sm min-h-[44px]",
                   "transition-colors duration-100",
-                  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0D3D3A] focus-visible:ring-inset",
+                  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#002833] focus-visible:ring-inset",
                   isSelected
-                    ? "bg-[#F5F4F2] text-[#0D3D3A] font-medium"
-                    : "text-[#1A1008] hover:bg-[#F5F4F2]",
+                    ? "bg-[#B2DECD]/20 text-[#1A4A3A] font-medium"
+                    : "text-[#1A1A1A] hover:bg-[#FAFAF7]",
                 )}
               >
                 {isSelected && (
                   <svg
-                    className="h-4 w-4 shrink-0 text-[#6B1E2E]"
+                    className="h-4 w-4 shrink-0 text-[#1A4A3A]"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                     aria-hidden="true"
@@ -129,7 +129,7 @@ export function CulturalDropdown({ options, value, onSelect }: CulturalDropdownP
       )}
 
       {isOpen && filteredOptions.length === 0 && (
-        <div className="absolute z-10 mt-1 w-full bg-white border border-[#E8E4DF] rounded-xl shadow-lg px-4 py-3 text-sm text-[#8A7A66]">
+        <div className="absolute z-10 mt-1 w-full bg-white border border-[#E8E4DF] rounded-3xl shadow-[0_1px_2px_rgba(0,0,0,0.03),0_4px_16px_rgba(0,0,0,0.03)] px-4 py-3 text-sm text-[#777]">
           No matches found
         </div>
       )}
