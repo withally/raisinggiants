@@ -1,5 +1,8 @@
 import { EmotionalHookSection } from "@/components/landing/EmotionalHookSection";
 import { HeroSection } from "@/components/landing/HeroSection";
+import { HowItWorksProcess } from "@/components/landing/HowItWorksProcess";
+import { HowItWorksScience } from "@/components/landing/HowItWorksScience";
+import { KOLSection } from "@/components/landing/KOLSection";
 import { LandingNav } from "@/components/landing/LandingNav";
 
 export default function Home() {
@@ -20,8 +23,10 @@ export default function Home() {
       <LandingNav />
       <HeroSection />
       <EmotionalHookSection />
+      <HowItWorksProcess />
+      <HowItWorksScience />
+      <KOLSection />
 
-      {/* Sections added in Plan 02: HowItWorksProcess, HowItWorksScience, KOLSection */}
       {/* Sections added in Plan 03: ProductLadder, SophiaSection, FAQSection, FinalCTASection */}
     </div>
   );
