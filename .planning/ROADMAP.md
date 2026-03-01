@@ -141,7 +141,7 @@ Plans:
   3. The full product ladder (Mirror, Blueprint, Partner Match) is displayed with correct status labels
   4. A prominent quiz start CTA drives visitors into the quiz flow at /quiz
   5. The entire landing page is fully mobile-responsive and loads fast on mobile connections
-**Plans:** 3 plans in 3 waves
+**Plans:** 1/3 plans executed
 Plans:
 - [ ] 05-01-PLAN.md — Foundation + Hero: shared palette constants, layout.tsx font update, hero decomposition, emotional hook section, page shell
 - [ ] 05-02-PLAN.md — Middle sections: How It Works (process + science), KOL credibility (12 researchers, expand/collapse)
@@ -168,5 +168,5 @@ Phases execute in numeric order: 0 → 1 → 2 → 2.5 → 3 → 4 → 5 → 6
 | 2.5. Archetype Content Rewrite | 2/2 | Complete | 2026-02-26 |
 | 3. Mirror Result Page | 2/3 | In Progress | — |
 | 4. Brand Positioning Research | 3/3 | Complete | 2026-02-28 |
-| 5. Landing Page Rebuild | 0/TBD | Not started | — |
+| 5. Landing Page Rebuild | 1/3 | In Progress|  |
 | 6. Marketing + Launch Strategy | 0/TBD | Not started | — |

@@ -47,9 +47,9 @@ Requirements for initial release (The Mirror — free product). Each maps to roa
 
 ### Landing Page
 
-- [ ] **LAND-01**: Clear value proposition communicating the research-backed, expert-informed nature of the product *(old landing page nuked 2026-02-28 — rebuild in Phase 5)*
+- [x] **LAND-01**: Clear value proposition communicating the research-backed, expert-informed nature of the product *(old landing page nuked 2026-02-28 — rebuild in Phase 5)*
 - [ ] **LAND-02**: KOL credibility signals (top 100 named experts, research attribution) *(old landing page nuked 2026-02-28 — rebuild in Phase 5)*
-- [ ] **LAND-03**: Quiz start CTA that drives conversions *(old landing page nuked 2026-02-28 — rebuild in Phase 5)*
+- [x] **LAND-03**: Quiz start CTA that drives conversions *(old landing page nuked 2026-02-28 — rebuild in Phase 5)*
 - [ ] **LAND-04**: Mobile-responsive design *(old landing page nuked 2026-02-28 — rebuild in Phase 5)*
 - [ ] **LAND-05**: Sophia's credentials and clinical authority visible *(old landing page nuked 2026-02-28 — rebuild in Phase 5)*
 
@@ -60,9 +60,9 @@ Requirements for initial release (The Mirror — free product). Each maps to roa
 - [x] **BRAND-03**: Reference brand gallery of 8-12 aspirational brands evaluated through millennial parent lens with pattern synthesis
 - [x] **BRAND-04**: Narrative positioning document defining brand territory based on research-revealed gap (not pre-committed)
 - [x] **BRAND-05**: Brand name and product name evaluation for multi-product brand architecture with clear keep/change recommendations
-- [ ] **BRAND-06**: Visual direction brief — color palette with hex codes and emotional rationale, grounded in millennial parent positioning *(done in Phase 4 but deleted 2026-02-28 — will be re-established in Phase 5)*
-- [ ] **BRAND-07**: Visual direction brief — typography, imagery system, layout approach, and brand tone recommendations *(done in Phase 4 but deleted 2026-02-28 — will be re-established in Phase 5)*
-- [ ] **BRAND-08**: Rebrand execution plan mapping visual recommendations to specific codebase files with phased implementation scope *(done in Phase 4 but deleted 2026-02-28 — will be re-established in Phase 5)*
+- [x] **BRAND-06**: Visual direction brief — color palette with hex codes and emotional rationale, grounded in millennial parent positioning *(done in Phase 4 but deleted 2026-02-28 — will be re-established in Phase 5)*
+- [x] **BRAND-07**: Visual direction brief — typography, imagery system, layout approach, and brand tone recommendations *(done in Phase 4 but deleted 2026-02-28 — will be re-established in Phase 5)*
+- [x] **BRAND-08**: Rebrand execution plan mapping visual recommendations to specific codebase files with phased implementation scope *(done in Phase 4 but deleted 2026-02-28 — will be re-established in Phase 5)*
 
 ## Product 2 Scope — The Blueprint (Paid)
 

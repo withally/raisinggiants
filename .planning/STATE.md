@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v2.0
 milestone_name: milestone
 status: unknown
-last_updated: "2026-02-28T13:08:46.073Z"
+last_updated: "2026-03-01T08:08:04.941Z"
 progress:
   total_phases: 8
   completed_phases: 5
-  total_plans: 24
-  completed_plans: 22
+  total_plans: 23
+  completed_plans: 20
 ---
 
 # Project State
@@ -23,9 +23,9 @@ See: .planning/PROJECT.md (updated 2026-02-25)
 
 ## Current Position
 
-Phase: 05 of 6 (Landing Page Rebuild) — VISUAL DIRECTION LOCKED
-Status: Phase 04 complete. Visual direction exploration done (2026-03-01). Direction locked: "between Warm Solid and Mid Blend" (~35% on spectrum). See .planning/phases/05-landing-page/VISUAL-DIRECTION.md. Phase 05 needs discuss → plan → execute for full implementation.
-Last activity: 2026-03-01 - Visual direction exploration: 9 style variations tested, founder selected direction between solid pastels and atmospheric glass. Asymmetric layout (7/5 split) confirmed as conversion-optimal structure.
+Phase: 05 of 6 (Landing Page Rebuild) — Plan 01 Complete (1/3 plans)
+Status: 05-01 done. Design foundation + hero decomposition complete. lib/landing/palette.ts, Plus Jakarta Sans, LandingNav, HeroSection, EmotionalHookSection, thin page.tsx shell all shipped.
+Last activity: 2026-03-01 - 05-01 execution: palette constants, font migration (Geist→Plus Jakarta Sans), hero/nav/emotional-hook section components created as Server Components with Link-wrapped CTAs to /quiz.
 
 Progress: [██████████░░░░] 72% (22/~30 plans estimated)
 
@@ -60,6 +60,7 @@ Progress: [██████████░░░░] 72% (22/~30 plans estimat
 | Phase 04 P01 | 6 min | 2 tasks | 1 file |
 | Phase 04 P02 | 7 min | 2 tasks | 1 file |
 | Phase 04 P03 | 5 min | 2 tasks | 1 file |
+| Phase 05-landing-page P01 | 10 | 2 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -138,6 +139,7 @@ Recent decisions affecting current work:
 - **[05-NAV]** Glassmorphic pill nav is the one modern/tech touch — backdrop-blur, segmented toggle
 - **[05-BG]** Warm base (#FAFAF7) with very subtle gradient wash at top — whisper of atmosphere, not full mesh blobs
 - **[05-NO]** No gradient text, no gradient borders, no heavy glassmorphism on cards — warmth from visible pastel color
+- [Phase 05-01]: Named exports for all section components; palette.ts as single source for fonts/colors; Server Component architecture throughout (no use client)
 
 ### Roadmap Evolution
 
@@ -171,5 +173,5 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-03-01
-Stopped at: Phase 05 visual direction locked. 9 style variations explored across 4 rounds. Founder selected "between Warm Solid and Mid Blend" (~35%). Direction doc written at .planning/phases/05-landing-page/VISUAL-DIRECTION.md. Current page.tsx has the three spectrum variations (A/B/C) live — target is between A and B. Phase 05 still needs discuss → plan → execute for full landing page build.
-Resume with: /gsd:discuss-phase 5 (visual direction is already locked — skip style exploration, go straight to content/structure planning)
+Stopped at: Completed 05-01-PLAN.md: design foundation + hero decomposition. lib/landing/palette.ts created, Plus Jakarta Sans font foundation set, LandingNav/HeroSection/EmotionalHookSection components created, app/page.tsx rewritten as thin Server Component shell.
+Resume with: /gsd:execute-phase 5 (execute plan 02: HowItWorksProcess, HowItWorksScience, KOLSection)
