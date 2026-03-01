@@ -7,7 +7,9 @@ import { HowItWorksScience } from "@/components/landing/HowItWorksScience";
 import { KOLSection } from "@/components/landing/KOLSection";
 import { LandingNav } from "@/components/landing/LandingNav";
 import { ProductLadder } from "@/components/landing/ProductLadder";
+import { ScrollReveal } from "@/components/landing/ScrollReveal";
 import { SophiaSection } from "@/components/landing/SophiaSection";
+import { TestimonialsSection } from "@/components/landing/TestimonialsSection";
 
 export default function Home() {
   return (
@@ -25,15 +27,35 @@ export default function Home() {
       />
 
       <LandingNav />
+      {/* Hero handles its own internal stagger */}
       <HeroSection />
-      <EmotionalHookSection />
-      <HowItWorksProcess />
-      <HowItWorksScience />
-      <KOLSection />
-      <ProductLadder />
-      <SophiaSection />
-      <FAQSection />
-      <FinalCTASection />
+      <ScrollReveal>
+        <EmotionalHookSection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <HowItWorksProcess />
+      </ScrollReveal>
+      <ScrollReveal>
+        <TestimonialsSection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <HowItWorksScience />
+      </ScrollReveal>
+      <ScrollReveal>
+        <KOLSection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <ProductLadder />
+      </ScrollReveal>
+      <ScrollReveal>
+        <SophiaSection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <FAQSection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <FinalCTASection />
+      </ScrollReveal>
     </div>
   );
 }

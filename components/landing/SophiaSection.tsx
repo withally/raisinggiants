@@ -1,4 +1,4 @@
-import { ff, ffSerif, p } from "@/lib/landing/palette";
+import { ff, ffSerif, grad, p, shadow } from "@/lib/landing/palette";
 
 export function SophiaSection() {
   return (
@@ -6,9 +6,10 @@ export function SophiaSection() {
       <div className="mx-auto max-w-7xl px-4 py-20 md:px-10 md:py-28">
         <div
           style={{
-            backgroundColor: p.pink.light,
+            background: grad.pink.light,
             borderRadius: 24,
             padding: "3rem 2.5rem",
+            boxShadow: shadow.card,
           }}
           className="md:p-16"
         >
@@ -72,15 +73,15 @@ export function SophiaSection() {
 
             {/* Right: Styled initial placeholder */}
             <div className="flex flex-shrink-0 flex-col items-center md:items-end">
-              {/* TODO: Replace styled initial with real photo when available */}
               <div
                 className="flex items-center justify-center"
                 style={{
                   width: 120,
                   height: 120,
                   borderRadius: "50%",
-                  backgroundColor: p.pink.dark,
+                  background: `linear-gradient(180deg, #5E2B56 0%, ${p.pink.dark} 100%)`,
                   marginBottom: "1.25rem",
+                  boxShadow: "0 4px 20px rgba(74, 25, 66, 0.25)",
                 }}
               >
                 <span

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ff, ffSerif, p } from "@/lib/landing/palette";
+import { ff, ffSerif, grad, p, shadow } from "@/lib/landing/palette";
 
 export function ProductLadder() {
   return (
@@ -36,11 +36,12 @@ export function ProductLadder() {
           {/* Mirror card — most prominent */}
           <div
             key="mirror"
-            className="flex flex-col"
+            className="hover-lift flex flex-col"
             style={{
-              backgroundColor: p.butter.light,
+              background: grad.butter.light,
               borderRadius: 24,
               padding: "2rem",
+              boxShadow: shadow.card,
             }}
           >
             {/* Status badge */}
@@ -72,7 +73,7 @@ export function ProductLadder() {
 
             <Link
               href="/quiz"
-              className="inline-flex cursor-pointer items-center justify-center px-6 text-sm transition-opacity hover:opacity-90"
+              className="hover-btn inline-flex cursor-pointer items-center justify-center px-6 text-sm"
               style={{
                 fontFamily: ff,
                 fontWeight: 700,
@@ -80,6 +81,7 @@ export function ProductLadder() {
                 color: "#fff",
                 borderRadius: 16,
                 minHeight: 44,
+                boxShadow: shadow.button,
               }}
             >
               Take The Mirror
@@ -91,9 +93,10 @@ export function ProductLadder() {
             key="blueprint"
             className="flex flex-col opacity-70"
             style={{
-              backgroundColor: "#F0F0EC",
+              background: "linear-gradient(180deg, #F7F7F4 0%, #F0F0EC 100%)",
               borderRadius: 24,
               padding: "2rem",
+              boxShadow: shadow.card,
             }}
           >
             {/* Status badge */}
@@ -129,9 +132,10 @@ export function ProductLadder() {
             key="partner-match"
             className="flex flex-col opacity-50"
             style={{
-              backgroundColor: "#F5F5F2",
+              background: "linear-gradient(180deg, #FAFAF8 0%, #F5F5F2 100%)",
               borderRadius: 24,
               padding: "2rem",
+              boxShadow: shadow.card,
             }}
           >
             {/* Status badge */}

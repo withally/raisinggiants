@@ -171,3 +171,78 @@ body {
     animation-duration: 0.01s;
   }
 }
+
+/* ─── Interactive hover effects ─── */
+.hover-btn {
+  transition:
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hover-btn:hover {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 4px 16px rgba(0, 40, 51, 0.14);
+}
+.hover-btn:active {
+  transform: translateY(0) scale(0.98);
+  transition-duration: 0.1s;
+}
+
+.hover-lift {
+  transition:
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    outline 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: 2px solid transparent;
+  outline-offset: -2px;
+}
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07), 0 24px 60px rgba(0, 0, 0, 0.04);
+  outline-color: rgba(0, 40, 51, 0.06);
+}
+
+.hover-faq-summary {
+  transition: background-color 0.2s ease;
+}
+.hover-faq-summary:hover {
+  background-color: rgba(0, 40, 51, 0.025);
+}
+
+/* ─── Testimonial marquee ─── */
+@keyframes marquee-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes marquee-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.marquee-scroll-left {
+  animation: marquee-left 70s linear infinite;
+}
+.marquee-scroll-right {
+  animation: marquee-right 70s linear infinite;
+}
+
+/* Pause marquee on hover */
+.marquee-track:hover .marquee-scroll-left,
+.marquee-track:hover .marquee-scroll-right {
+  animation-play-state: paused;
+}
+
+/* Respect reduced motion for hover effects and marquee */
+@media (prefers-reduced-motion: reduce) {
+  .hover-btn,
+  .hover-lift {
+    transition: none;
+  }
+  .hover-btn:hover,
+  .hover-lift:hover {
+    transform: none;
+  }
+  .marquee-scroll-left,
+  .marquee-scroll-right {
+    animation: none;
+  }
+}

@@ -1,4 +1,5 @@
-import { ff, ffSerif, p } from "@/lib/landing/palette";
+import { ff, ffSerif, grad, p, shadow } from "@/lib/landing/palette";
+import { ScrollReveal } from "./ScrollReveal";
 
 const stats = [
   {
@@ -58,29 +59,31 @@ export function HowItWorksScience() {
 
         {/* Stat cards */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-          {stats.map((stat) => (
-            <div
-              key={stat.label}
-              className="px-6 py-6 flex flex-col justify-between"
-              style={{
-                backgroundColor: p.blue.dark,
-                borderRadius: "24px",
-                minHeight: "140px",
-              }}
-            >
-              <p
-                className="text-5xl leading-none mb-3"
-                style={{ fontFamily: ff, fontWeight: 800, color: stat.numberColor }}
+          {stats.map((stat, i) => (
+            <ScrollReveal key={stat.label} delay={i * 100} offset={20}>
+              <div
+                className="hover-lift px-6 py-6 flex flex-col justify-between"
+                style={{
+                  background: grad.blue.dark,
+                  borderRadius: "24px",
+                  minHeight: "140px",
+                  boxShadow: shadow.cardDark,
+                }}
               >
-                {stat.n}
-              </p>
-              <p
-                className="text-xs leading-relaxed"
-                style={{ fontFamily: ff, fontWeight: 400, color: "rgba(255,255,255,0.45)" }}
-              >
-                {stat.label}
-              </p>
-            </div>
+                <p
+                  className="text-5xl leading-none mb-3"
+                  style={{ fontFamily: ff, fontWeight: 800, color: stat.numberColor }}
+                >
+                  {stat.n}
+                </p>
+                <p
+                  className="text-xs leading-relaxed"
+                  style={{ fontFamily: ff, fontWeight: 400, color: "rgba(255,255,255,0.45)" }}
+                >
+                  {stat.label}
+                </p>
+              </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

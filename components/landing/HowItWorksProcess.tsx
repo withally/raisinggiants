@@ -1,4 +1,5 @@
-import { ff, ffDisplay, ffSerif, p } from "@/lib/landing/palette";
+import { ff, ffDisplay, ffSerif, grad, p, shadow } from "@/lib/landing/palette";
+import { ScrollReveal } from "./ScrollReveal";
 
 const steps = [
   {
@@ -6,7 +7,7 @@ const steps = [
     title: "Take the quiz",
     description:
       "21 questions grounded in research. Each one maps to a specific dimension of how parenting shapes development. Takes about 15 minutes.",
-    bg: p.butter.light,
+    bg: grad.butter.light,
     color: p.butter.dark,
   },
   {
@@ -14,7 +15,7 @@ const steps = [
     title: "Get your Mirror",
     description:
       "Your responses reveal one of 9 distinct parenting archetypes. A personalised report that names the patterns you've always sensed.",
-    bg: p.pink.light,
+    bg: grad.pink.light,
     color: p.pink.dark,
   },
   {
@@ -22,7 +23,7 @@ const steps = [
     title: "Understand your patterns",
     description:
       "See the strengths, tensions, and watchouts that grew from the parenting style you received. Finally have the language for it.",
-    bg: p.mint.light,
+    bg: grad.mint.light,
     color: p.mint.dark,
   },
 ];
@@ -64,42 +65,44 @@ export function HowItWorksProcess() {
 
         {/* Step cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-          {steps.map((card) => (
-            <div
-              key={card.step}
-              className="flex flex-col justify-between px-8 py-10"
-              style={{
-                backgroundColor: card.bg,
-                borderRadius: "24px",
-                minHeight: "320px",
-              }}
-            >
-              <p
-                className="text-6xl leading-none mb-6"
+          {steps.map((card, i) => (
+            <ScrollReveal key={card.step} delay={i * 100} offset={20}>
+              <div
+                className="hover-lift flex flex-col justify-between px-8 py-10"
                 style={{
-                  fontFamily: ffDisplay,
-                  fontWeight: 700,
-                  color: card.color,
-                  opacity: 0.5,
+                  background: card.bg,
+                  borderRadius: "24px",
+                  minHeight: "320px",
+                  boxShadow: shadow.card,
                 }}
               >
-                {card.step}
-              </p>
-              <div>
                 <p
-                  className="text-xl mb-3"
-                  style={{ fontFamily: ff, fontWeight: 800, color: card.color }}
+                  className="text-6xl leading-none mb-6"
+                  style={{
+                    fontFamily: ffDisplay,
+                    fontWeight: 700,
+                    color: card.color,
+                    opacity: 0.5,
+                  }}
                 >
-                  {card.title}
+                  {card.step}
                 </p>
-                <p
-                  className="text-sm leading-relaxed"
-                  style={{ fontFamily: ff, fontWeight: 400, color: card.color, opacity: 0.6 }}
-                >
-                  {card.description}
-                </p>
+                <div>
+                  <p
+                    className="text-xl mb-3"
+                    style={{ fontFamily: ff, fontWeight: 800, color: card.color }}
+                  >
+                    {card.title}
+                  </p>
+                  <p
+                    className="text-sm leading-relaxed"
+                    style={{ fontFamily: ff, fontWeight: 400, color: card.color, opacity: 0.6 }}
+                  >
+                    {card.description}
+                  </p>
+                </div>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

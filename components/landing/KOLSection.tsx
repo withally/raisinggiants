@@ -1,10 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { ff, ffSerif, p } from "@/lib/landing/palette";
+import { ff, ffSerif, grad, p, shadow } from "@/lib/landing/palette";
 
 const ALL_RESEARCHERS = [
-  // Default visible (6 most recognizable)
   {
     name: "John Gottman",
     finding: "Emotion coaching as the foundation of secure parent-child attunement",
@@ -29,7 +28,6 @@ const ALL_RESEARCHERS = [
     name: "Shefali Tsabary",
     finding: "Conscious parenting — allowing the child's own selfhood to emerge",
   },
-  // Expanded (6 more)
   {
     name: "Tina Payne Bryson",
     finding: "Reconnection after disconnection as a core parenting practice",
@@ -102,10 +100,11 @@ export function KOLSection() {
           {visibleResearchers.map((researcher) => (
             <div
               key={researcher.name}
-              className="px-7 py-6"
+              className="hover-lift px-7 py-6"
               style={{
-                backgroundColor: p.blue.dark,
+                background: grad.blue.dark,
                 borderRadius: "24px",
+                boxShadow: shadow.cardDark,
               }}
             >
               <p
@@ -124,13 +123,13 @@ export function KOLSection() {
           ))}
         </div>
 
-        {/* Expand button — hidden when all researchers visible */}
+        {/* Expand button */}
         {!showAll && (
           <div className="flex justify-center">
             <button
               type="button"
               onClick={() => setShowAll(true)}
-              className="cursor-pointer"
+              className="hover-btn cursor-pointer"
               style={{
                 fontFamily: ff,
                 fontWeight: 600,

@@ -1,13 +1,13 @@
 import Link from "next/link";
-import { ff, ffSerif, p } from "@/lib/landing/palette";
+import { ff, ffSerif, grad, p, shadow } from "@/lib/landing/palette";
 
 export function FinalCTASection() {
   return (
     <section>
-      {/* Conversion band — subtle butter tint background */}
+      {/* Conversion band — butter gradient background */}
       <div
         style={{
-          backgroundColor: p.butter.light,
+          background: grad.butter.light,
           borderTop: `1px solid ${p.butter.dark}20`,
         }}
       >
@@ -44,7 +44,7 @@ export function FinalCTASection() {
             {/* Primary CTA */}
             <Link
               href="/quiz"
-              className="inline-flex cursor-pointer items-center justify-center px-10 py-5 text-sm transition-opacity hover:opacity-90"
+              className="hover-btn inline-flex cursor-pointer items-center justify-center px-10 py-5 text-sm"
               style={{
                 fontFamily: ff,
                 fontWeight: 700,
@@ -52,6 +52,7 @@ export function FinalCTASection() {
                 color: "#fff",
                 borderRadius: 16,
                 minHeight: 44,
+                boxShadow: shadow.button,
               }}
             >
               Take The Mirror

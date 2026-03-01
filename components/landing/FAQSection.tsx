@@ -51,7 +51,7 @@ export function FAQSection() {
           Before you start
         </h2>
 
-        {/* FAQ container — narrower for readability */}
+        {/* FAQ container */}
         <div className="mx-auto max-w-3xl">
           {FAQS.map((faq) => (
             <details
@@ -60,7 +60,7 @@ export function FAQSection() {
               style={{ borderColor: `${p.blue.dark}1A` }}
             >
               <summary
-                className="flex cursor-pointer list-none items-center justify-between py-5"
+                className="hover-faq-summary flex cursor-pointer list-none items-center justify-between py-5 px-3 -mx-3 rounded-xl"
                 style={{ fontFamily: ff, fontWeight: 600, color: "#1A1A1A" }}
               >
                 <span>{faq.q}</span>
@@ -72,7 +72,7 @@ export function FAQSection() {
                 </span>
               </summary>
               <p
-                className="pb-5 text-sm leading-relaxed"
+                className="pb-5 px-3 text-sm leading-relaxed"
                 style={{ fontFamily: ff, fontWeight: 400, color: "#666" }}
               >
                 {faq.a}
