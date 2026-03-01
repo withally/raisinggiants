@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v2.0
 milestone_name: milestone
 status: unknown
-last_updated: "2026-03-01T08:08:04.941Z"
+last_updated: "2026-03-01T08:14:08.102Z"
 progress:
   total_phases: 8
   completed_phases: 5
   total_plans: 23
-  completed_plans: 20
+  completed_plans: 21
 ---
 
 # Project State
@@ -23,11 +23,11 @@ See: .planning/PROJECT.md (updated 2026-02-25)
 
 ## Current Position
 
-Phase: 05 of 6 (Landing Page Rebuild) — Plan 01 Complete (1/3 plans)
-Status: 05-01 done. Design foundation + hero decomposition complete. lib/landing/palette.ts, Plus Jakarta Sans, LandingNav, HeroSection, EmotionalHookSection, thin page.tsx shell all shipped.
-Last activity: 2026-03-01 - 05-01 execution: palette constants, font migration (Geist→Plus Jakarta Sans), hero/nav/emotional-hook section components created as Server Components with Link-wrapped CTAs to /quiz.
+Phase: 05 of 6 (Landing Page Rebuild) — Plan 02 Complete (2/3 plans)
+Status: 05-02 done. Middle content sections complete: HowItWorksProcess (3-step cards), HowItWorksScience (dark teal stat cards), KOLSection (12 researchers with expand/collapse). All wired into page.tsx shell.
+Last activity: 2026-03-01 - 05-02 execution: HowItWorksProcess/Science Server Components + KOLSection Client Component island created, app/page.tsx updated to render all 6 sections in order.
 
-Progress: [██████████░░░░] 72% (22/~30 plans estimated)
+Progress: [███████████░░░] 75% (23/~30 plans estimated)
 
 ## Performance Metrics
 
@@ -61,6 +61,7 @@ Progress: [██████████░░░░] 72% (22/~30 plans estimat
 | Phase 04 P02 | 7 min | 2 tasks | 1 file |
 | Phase 04 P03 | 5 min | 2 tasks | 1 file |
 | Phase 05-landing-page P01 | 10 | 2 tasks | 7 files |
+| Phase 05-landing-page P02 | 4 | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -140,6 +141,8 @@ Recent decisions affecting current work:
 - **[05-BG]** Warm base (#FAFAF7) with very subtle gradient wash at top — whisper of atmosphere, not full mesh blobs
 - **[05-NO]** No gradient text, no gradient borders, no heavy glassmorphism on cards — warmth from visible pastel color
 - [Phase 05-01]: Named exports for all section components; palette.ts as single source for fonts/colors; Server Component architecture throughout (no use client)
+- [Phase 05-landing-page]: [05-02-A] KOLSection is the only Client Component in landing page — useState for expand/collapse; all other sections are Server Components
+- [Phase 05-landing-page]: [05-02-B] Researcher names used as React keys (unique) per Biome noArrayIndexKey rule; Biome formatter requires inline span text content to avoid whitespace JSX interpolation errors
 
 ### Roadmap Evolution
 
@@ -173,5 +176,5 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-03-01
-Stopped at: Completed 05-01-PLAN.md: design foundation + hero decomposition. lib/landing/palette.ts created, Plus Jakarta Sans font foundation set, LandingNav/HeroSection/EmotionalHookSection components created, app/page.tsx rewritten as thin Server Component shell.
-Resume with: /gsd:execute-phase 5 (execute plan 02: HowItWorksProcess, HowItWorksScience, KOLSection)
+Stopped at: Completed 05-02-PLAN.md: HowItWorksProcess (3-step cards), HowItWorksScience (dark teal stat cards), KOLSection (12 researchers expand/collapse) created and wired into page.tsx.
+Resume with: /gsd:execute-phase 5 (execute plan 03: ProductLadder, SophiaSection, FAQSection, FinalCTASection)

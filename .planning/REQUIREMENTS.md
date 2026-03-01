@@ -48,9 +48,9 @@ Requirements for initial release (The Mirror — free product). Each maps to roa
 ### Landing Page
 
 - [x] **LAND-01**: Clear value proposition communicating the research-backed, expert-informed nature of the product *(old landing page nuked 2026-02-28 — rebuild in Phase 5)*
-- [ ] **LAND-02**: KOL credibility signals (top 100 named experts, research attribution) *(old landing page nuked 2026-02-28 — rebuild in Phase 5)*
+- [x] **LAND-02**: KOL credibility signals (top 100 named experts, research attribution) *(old landing page nuked 2026-02-28 — rebuild in Phase 5)*
 - [x] **LAND-03**: Quiz start CTA that drives conversions *(old landing page nuked 2026-02-28 — rebuild in Phase 5)*
-- [ ] **LAND-04**: Mobile-responsive design *(old landing page nuked 2026-02-28 — rebuild in Phase 5)*
+- [x] **LAND-04**: Mobile-responsive design *(old landing page nuked 2026-02-28 — rebuild in Phase 5)*
 - [ ] **LAND-05**: Sophia's credentials and clinical authority visible *(old landing page nuked 2026-02-28 — rebuild in Phase 5)*
 
 ### Brand Positioning and Visual Direction
