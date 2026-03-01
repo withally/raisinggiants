@@ -13,7 +13,6 @@ export function SophiaSection() {
           className="md:p-16"
         >
           <div className="flex flex-col gap-10 md:flex-row md:items-center md:gap-16">
-
             {/* Left: Text content */}
             <div className="flex-1">
               {/* Section label */}
@@ -47,19 +46,18 @@ export function SophiaSection() {
                 className="mb-6 text-base leading-relaxed"
                 style={{ fontFamily: ff, fontWeight: 400, color: p.pink.dark, opacity: 0.85 }}
               >
-                Sophia is a clinical psychologist specializing in attachment
-                theory and family systems. She has spent years helping adults
-                understand not just who they are, but how they became that way.
+                Sophia is a clinical psychologist specializing in attachment theory and family
+                systems. She has spent years helping adults understand not just who they are, but
+                how they became that way.
               </p>
 
               <p
                 className="mb-6 text-base leading-relaxed"
                 style={{ fontFamily: ff, fontWeight: 400, color: p.pink.dark, opacity: 0.85 }}
               >
-                She built The Mirror because she experienced these patterns
-                herself. Growing up, she sensed that something in how she was
-                raised was shaping her — her instincts, her relationships, the
-                way she showed up for people she loved. It took years of clinical
+                She built The Mirror because she experienced these patterns herself. Growing up, she
+                sensed that something in how she was raised was shaping her — her instincts, her
+                relationships, the way she showed up for people she loved. It took years of clinical
                 training to find the language for what she already knew.
               </p>
 
@@ -67,8 +65,8 @@ export function SophiaSection() {
                 className="text-base leading-relaxed"
                 style={{ fontFamily: ff, fontWeight: 400, color: p.pink.dark, opacity: 0.85 }}
               >
-                She wanted everyone to have that language. Not after years of
-                therapy — but in fifteen minutes, for free.
+                She wanted everyone to have that language. Not after years of therapy — but in
+                fifteen minutes, for free.
               </p>
             </div>
 
@@ -117,7 +115,6 @@ export function SophiaSection() {
                 Attachment Theory & Family Systems
               </p>
             </div>
-
           </div>
         </div>
       </div>

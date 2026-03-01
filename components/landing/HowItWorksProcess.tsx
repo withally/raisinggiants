@@ -41,9 +41,7 @@ export function HowItWorksProcess() {
 
         {/* Heading */}
         <h2 className="text-4xl md:text-5xl leading-tight tracking-tight mb-4">
-          <span style={{ fontFamily: ff, fontWeight: 800, color: "#1A1A1A" }}>
-            Three steps to{" "}
-          </span>
+          <span style={{ fontFamily: ff, fontWeight: 800, color: "#1A1A1A" }}>Three steps to </span>
           <span
             style={{
               fontFamily: ffSerif,

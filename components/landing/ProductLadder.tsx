@@ -1,12 +1,10 @@
-import { ff, ffSerif, p } from "@/lib/landing/palette";
 import Link from "next/link";
+import { ff, ffSerif, p } from "@/lib/landing/palette";
 
 export function ProductLadder() {
   return (
     <section style={{ backgroundColor: "#FAFAF7" }}>
-      <div
-        className="mx-auto max-w-7xl px-4 py-20 md:px-10 md:py-28"
-      >
+      <div className="mx-auto max-w-7xl px-4 py-20 md:px-10 md:py-28">
         {/* Section label */}
         <p
           className="mb-3 text-xs uppercase tracking-widest"
@@ -35,7 +33,6 @@ export function ProductLadder() {
 
         {/* Product cards grid */}
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
-
           {/* Mirror card — most prominent */}
           <div
             key="mirror"
@@ -70,8 +67,7 @@ export function ProductLadder() {
               className="mb-8 flex-1 text-base leading-relaxed"
               style={{ fontFamily: ff, fontWeight: 400, color: "#444" }}
             >
-              Understand how the parenting you received shapes who you are
-              today.
+              Understand how the parenting you received shapes who you are today.
             </p>
 
             <Link
@@ -165,7 +161,6 @@ export function ProductLadder() {
               See how your parenting patterns interact with your partner's.
             </p>
           </div>
-
         </div>
       </div>
     </section>

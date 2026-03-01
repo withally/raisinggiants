@@ -1,4 +1,4 @@
-import { Space_Grotesk, Instrument_Serif, Plus_Jakarta_Sans } from "next/font/google";
+import { Instrument_Serif, Plus_Jakarta_Sans, Space_Grotesk } from "next/font/google";
 
 export const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -21,8 +21,8 @@ export const ffSerif = instrumentSerif.style.fontFamily;
 export const ffDisplay = spaceGrotesk.style.fontFamily;
 
 export const p = {
-  blue:   { light: "#B3D5DE", dark: "#002833" },
-  pink:   { light: "#EEC0DA", dark: "#4A1942" },
-  mint:   { light: "#B2DECD", dark: "#1A4A3A" },
+  blue: { light: "#B3D5DE", dark: "#002833" },
+  pink: { light: "#EEC0DA", dark: "#4A1942" },
+  mint: { light: "#B2DECD", dark: "#1A4A3A" },
   butter: { light: "#FEF4AC", dark: "#3D3B1A" },
 };
