@@ -12,6 +12,7 @@ const archetypeTeasers = [
     color: p.butter.dark,
     accent: p.butter.light,
     avatar: "/icons/archetype-steady-anchor-final.png",
+    avatarClass: "w-[120px] h-[120px] md:w-[140px] md:h-[140px]",
   },
   {
     name: "The Fierce Guardian",
@@ -21,6 +22,7 @@ const archetypeTeasers = [
     color: p.pink.dark,
     accent: p.pink.light,
     avatar: "/icons/archetype-fierce-guardian-final.png",
+    avatarClass: "w-[105px] h-[105px] md:w-[125px] md:h-[125px]",
   },
   {
     name: "The Gentle Nurturer",
@@ -30,6 +32,7 @@ const archetypeTeasers = [
     color: p.mint.dark,
     accent: p.mint.light,
     avatar: "/icons/archetype-gentle-nurturer-final.png",
+    avatarClass: "w-[110px] h-[110px] md:w-[130px] md:h-[130px]",
   },
   {
     name: "The Resilient Striver",
@@ -39,6 +42,7 @@ const archetypeTeasers = [
     color: p.blue.dark,
     accent: p.blue.light,
     avatar: "/icons/archetype-resilient-striver-final.png",
+    avatarClass: "w-[105px] h-[105px] md:w-[125px] md:h-[125px]",
   },
 ];
 
@@ -128,7 +132,7 @@ export function ArchetypePreviewSection() {
                   alt={arch.name}
                   width={140}
                   height={140}
-                  className="absolute bottom-0 right-2 w-[120px] h-[120px] md:w-[140px] md:h-[140px] object-contain object-bottom"
+                  className={`absolute bottom-0 right-4 ${arch.avatarClass} object-contain object-bottom`}
                 />
               </div>
             </ScrollReveal>
