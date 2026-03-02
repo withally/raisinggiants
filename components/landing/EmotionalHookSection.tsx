@@ -17,6 +17,7 @@ const RESEARCHER_QUOTES = [
       "Children don\u2019t need perfect parents. They need parents who can repair.",
     name: "Becky Kennedy",
     field: "Clinical Psychology",
+    image: "/images/researcher-kennedy.jpg",
   },
   {
     quote:
@@ -30,12 +31,14 @@ const RESEARCHER_QUOTES = [
       "The greatest thing a parent can give a child is the freedom to be themselves.",
     name: "Shefali Tsabary",
     field: "Conscious Parenting",
+    image: "/images/researcher-tsabary.jpg",
   },
   {
     quote:
       "A secure base isn\u2019t a place. It\u2019s a person who makes the world feel safe enough to explore.",
     name: "John Bowlby",
     field: "Attachment Theory",
+    image: "/images/researcher-bowlby.jpg",
   },
   {
     quote:
@@ -49,6 +52,7 @@ const RESEARCHER_QUOTES = [
       "It\u2019s not the moments of disconnection that define us. It\u2019s whether repair follows.",
     name: "Edward Tronick",
     field: "Developmental Psychology",
+    image: "/images/researcher-tronick.jpg",
   },
   {
     quote:
