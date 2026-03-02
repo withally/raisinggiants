@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ff, ffSerif, p, grad, shadow } from "@/lib/landing/palette";
 
 const features = [
   {
@@ -17,48 +18,89 @@ const features = [
 
 export function BlueprintCTA() {
   return (
-    <section className="bg-[#0D3D3A] py-16 sm:py-20">
-      <div className="max-w-3xl mx-auto px-6">
-        {/* Coming Soon badge */}
-        <div className="mb-6">
-          <span className="inline-flex items-center rounded-full bg-[#C4892A]/20 px-3 py-1 text-xs font-semibold text-[#C4892A] ring-1 ring-[#C4892A]/30">
-            Coming Soon
-          </span>
-        </div>
-
-        {/* Section header */}
-        <h2
-          className="text-3xl sm:text-4xl font-semibold text-[#F5F4F2] leading-tight mb-4"
+    <section className="px-4 sm:px-6 py-4">
+      <div className="max-w-5xl mx-auto">
+        <div
+          className="rounded-3xl px-8 sm:px-12 py-10 sm:py-14"
+          style={{ background: grad.blue.dark, boxShadow: shadow.cardDark }}
         >
-          Go deeper with The Blueprint
-        </h2>
-
-        {/* Product description */}
-        <p className="text-[#F5F4F2]/80 text-base sm:text-lg leading-relaxed mb-10 max-w-xl">
-          A personalized action plan built from your result — including partner dynamics guidance,
-          healing exercises, and research-backed strategies tailored to your archetype.
-        </p>
-
-        {/* Feature cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
-          {features.map((feature) => (
-            <div
-              key={feature.title}
-              className="bg-[#0F4F4B]/60 border border-[#7A9E9C]/30 rounded-xl p-4"
+          {/* Coming Soon pill */}
+          <div className="mb-6">
+            <span
+              className="inline-flex items-center rounded-full px-4 py-1.5 text-xs"
+              style={{
+                fontFamily: ff,
+                fontWeight: 600,
+                background: `${p.butter.light}20`,
+                color: p.butter.light,
+              }}
             >
-              <p className="text-[#F5F4F2] text-sm font-semibold mb-1">{feature.title}</p>
-              <p className="text-[#7A9E9C] text-xs leading-relaxed">{feature.description}</p>
-            </div>
-          ))}
-        </div>
+              Coming Soon
+            </span>
+          </div>
 
-        {/* CTA */}
-        <Link
-          href="/blueprint"
-          className="inline-flex items-center justify-center rounded-full bg-[#C4892A] px-8 py-3 text-sm font-semibold text-white hover:bg-[#D4993A] hover:shadow-lg hover:shadow-[#C4892A]/20 transition-all duration-200 min-h-[44px]"
-        >
-          Get notified when it launches
-        </Link>
+          {/* Headline */}
+          <h2
+            className="text-3xl sm:text-4xl leading-tight mb-4"
+            style={{ fontFamily: ff, fontWeight: 800, color: "#F0EDE8" }}
+          >
+            Go deeper with The{" "}
+            <span style={{ fontFamily: ffSerif, fontStyle: "italic", color: p.butter.light }}>
+              Blueprint
+            </span>
+          </h2>
+
+          {/* Description */}
+          <p
+            className="text-base sm:text-lg leading-relaxed mb-10 max-w-xl"
+            style={{ fontFamily: ff, fontWeight: 400, color: "#F0EDE8", opacity: 0.65 }}
+          >
+            A personalized action plan built from your result — including partner dynamics guidance,
+            healing exercises, and research-backed strategies tailored to your archetype.
+          </p>
+
+          {/* Feature cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-10">
+            {features.map((feature) => (
+              <div
+                key={feature.title}
+                className="rounded-2xl p-5"
+                style={{
+                  background: "rgba(255,255,255,0.06)",
+                  border: "1px solid rgba(255,255,255,0.1)",
+                }}
+              >
+                <p
+                  className="text-sm mb-1"
+                  style={{ fontFamily: ff, fontWeight: 600, color: "#F0EDE8" }}
+                >
+                  {feature.title}
+                </p>
+                <p
+                  className="text-xs leading-relaxed"
+                  style={{ fontFamily: ff, fontWeight: 400, color: "#F0EDE8", opacity: 0.5 }}
+                >
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA button */}
+          <Link
+            href="/blueprint"
+            className="inline-flex items-center justify-center rounded-full px-8 py-3 text-sm min-h-[44px] transition-all duration-200 hover:shadow-lg"
+            style={{
+              fontFamily: ff,
+              fontWeight: 600,
+              background: p.butter.light,
+              color: p.blue.dark,
+              boxShadow: shadow.button,
+            }}
+          >
+            Get notified when it launches
+          </Link>
+        </div>
       </div>
     </section>
   );

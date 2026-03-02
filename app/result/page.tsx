@@ -84,7 +84,7 @@ export default async function ResultPage({
 
   return (
     <ResultPageClient>
-      <main className="bg-[#F5F4F2]">
+      <main className="bg-[#FAFAF7]">
         {/* Section 1: Archetype hero reveal */}
         <ArchetypeReveal archetype={archetype} />
 

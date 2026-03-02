@@ -1,23 +1,5 @@
-/**
- * components/result/CulturalSection.tsx
- *
- * The cultural lens section — the page closer that adds cultural context
- * to how the archetype was expressed in the user's specific background.
- *
- * Appears conditionally: only rendered when the user selected a supported
- * cultural background (not "other") and a matching overlay was found.
- *
- * Three sub-sections:
- * 1. expressionModifier — narrative paragraph describing how the archetype
- *    expressed itself within this cultural context
- * 2. "What this gave you" — strengthsInContext as styled bullet list
- * 3. "What this may have cost you" — tensionsInContext as styled bullet list
- *
- * Background: bg-[#F5F4F2] (Cloud White closing — matches the hero reveal)
- * Extra bottom padding (pb-24) since this closes the page.
- */
-
 import type { CulturalOverlay } from "@/lib/archetypes/types";
+import { ff, ffSerif, p, grad, shadow } from "@/lib/landing/palette";
 
 interface CulturalSectionProps {
   overlay: CulturalOverlay;
@@ -26,66 +8,102 @@ interface CulturalSectionProps {
 
 export function CulturalSection({ overlay, displayName }: CulturalSectionProps) {
   return (
-    <section className="bg-[#F5F4F2] py-16 sm:py-20 pb-24 px-6">
-      <div className="max-w-3xl mx-auto">
+    <section className="px-4 sm:px-6 py-4 pb-8">
+      <div className="max-w-5xl mx-auto">
         {/* Section header */}
-        <div className="mb-10">
-          <p className="text-xs tracking-[0.25em] uppercase text-[#8A7A66] font-medium mb-3">
+        <div className="mb-4 px-2">
+          <p
+            className="text-xs tracking-[0.2em] uppercase mb-2"
+            style={{ fontFamily: ff, fontWeight: 600, color: "#888", opacity: 0.7 }}
+          >
             Your cultural context
           </p>
           <h2
-            className="text-3xl sm:text-4xl font-semibold text-[#1A1008] leading-tight"
+            className="text-2xl sm:text-3xl leading-tight"
+            style={{ fontFamily: ff, fontWeight: 800, color: "#1A1A1A" }}
           >
-            {displayName}
+            {displayName.replace(/^The /, "The ")
+              .replace(/(Lens)/, "")}
+            <span style={{ fontFamily: ffSerif, fontStyle: "italic", color: p.pink.dark }}>
+              Lens
+            </span>
           </h2>
         </div>
 
-        {/* Expression modifier — narrative intro paragraph */}
-        <p className="text-base italic text-[#1A1008] leading-relaxed mb-12 max-w-2xl">
-          {overlay.expressionModifier}
-        </p>
-
-        {/* Strengths in context */}
-        <div className="mb-10">
-          <h3
-            className="text-xl font-semibold text-[#1A1008] mb-5"
+        {/* Expression modifier — full-width mint card */}
+        <div
+          className="rounded-3xl px-8 sm:px-12 py-8 sm:py-10 mb-3"
+          style={{ background: grad.mint.light, boxShadow: shadow.card }}
+        >
+          <p
+            className="text-base sm:text-lg leading-relaxed"
+            style={{ fontFamily: ffSerif, fontStyle: "italic", color: p.mint.dark }}
           >
-            What this gave you
-          </h3>
-          <ul className="space-y-3">
-            {overlay.strengthsInContext.map((strength) => (
-              <li key={strength.slice(0, 40)} className="flex items-start gap-3">
-                <span
-                  className="mt-1.5 w-2 h-2 rounded-full bg-[#C4892A] flex-shrink-0"
-                  aria-hidden="true"
-                />
-                <p className="text-[#1A1008] leading-relaxed text-base">{strength}</p>
-              </li>
-            ))}
-          </ul>
+            {overlay.expressionModifier}
+          </p>
         </div>
 
-        {/* Divider */}
-        <div className="w-full h-px bg-[#E8E4DF] mb-10" />
-
-        {/* Tensions in context */}
-        <div>
-          <h3
-            className="text-xl font-semibold text-[#1A1008] mb-5"
+        {/* Two-column: strengths + tensions */}
+        <div className="grid grid-cols-12 gap-3">
+          {/* Strengths card */}
+          <div
+            className="col-span-12 lg:col-span-6 rounded-3xl px-6 sm:px-8 py-6 sm:py-8"
+            style={{ background: grad.butter.light, boxShadow: shadow.card }}
           >
-            What this may have cost you
-          </h3>
-          <ul className="space-y-3">
-            {overlay.tensionsInContext.map((tension) => (
-              <li key={tension.slice(0, 40)} className="flex items-start gap-3">
-                <span
-                  className="mt-1.5 w-2 h-2 rounded-full bg-[#8A7A66] flex-shrink-0"
-                  aria-hidden="true"
-                />
-                <p className="text-[#1A1008] leading-relaxed text-base">{tension}</p>
-              </li>
-            ))}
-          </ul>
+            <h3
+              className="text-lg mb-5"
+              style={{ fontFamily: ff, fontWeight: 700, color: p.butter.dark }}
+            >
+              What this gave you
+            </h3>
+            <ul className="space-y-3">
+              {overlay.strengthsInContext.map((strength) => (
+                <li key={strength.slice(0, 40)} className="flex items-start gap-3">
+                  <span
+                    className="mt-1.5 w-2 h-2 rounded-full flex-shrink-0"
+                    style={{ background: p.butter.dark, opacity: 0.4 }}
+                    aria-hidden="true"
+                  />
+                  <p
+                    className="text-sm leading-relaxed"
+                    style={{ fontFamily: ff, fontWeight: 400, color: p.butter.dark, opacity: 0.8 }}
+                  >
+                    {strength}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Tensions card */}
+          <div
+            className="col-span-12 lg:col-span-6 rounded-3xl px-6 sm:px-8 py-6 sm:py-8"
+            style={{ background: grad.pink.light, boxShadow: shadow.card }}
+          >
+            <h3
+              className="text-lg mb-5"
+              style={{ fontFamily: ff, fontWeight: 700, color: p.pink.dark }}
+            >
+              What this may have cost you
+            </h3>
+            <ul className="space-y-3">
+              {overlay.tensionsInContext.map((tension) => (
+                <li key={tension.slice(0, 40)} className="flex items-start gap-3">
+                  <span
+                    className="mt-1.5 w-2 h-2 rounded-full flex-shrink-0"
+                    style={{ background: p.pink.dark, opacity: 0.4 }}
+                    aria-hidden="true"
+                  />
+                  <p
+                    className="text-sm leading-relaxed"
+                    style={{ fontFamily: ff, fontWeight: 400, color: p.pink.dark, opacity: 0.8 }}
+                  >
+                    {tension}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>
