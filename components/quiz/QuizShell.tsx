@@ -273,7 +273,7 @@ export function QuizShell() {
               </p>
             )}
             <p className="mt-2 text-xs text-[#AAA]" style={{ fontFamily: ff }}>
-              We&apos;ll send your results here. No spam, ever.
+              We&apos;ll save your results and send you a link so you can come back to them whenever you need.
             </p>
           </div>
 
