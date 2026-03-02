@@ -62,7 +62,7 @@ const AVATAR_SIZE = 48;
 
 export function EmotionalHookSection() {
   const [index, setIndex] = useState(0);
-  const autoRef = useRef<ReturnType<typeof setInterval>>();
+  const autoRef = useRef<ReturnType<typeof setInterval> | undefined>(undefined);
   const touchRef = useRef<{ x: number; y: number } | null>(null);
 
   const resetAuto = useCallback(() => {
