@@ -24,8 +24,11 @@ export async function POST(request: Request) {
       .single();
 
     if (error) {
-      console.error("Failed to create quiz session:", error);
-      return NextResponse.json({ error: "Failed to create session" }, { status: 500 });
+      console.error("Failed to create quiz session:", error.message, error.code, error.details);
+      return NextResponse.json(
+        { error: "Failed to create session", detail: error.message },
+        { status: 500 },
+      );
     }
 
     return NextResponse.json({ sessionId: data.id });

@@ -133,7 +133,9 @@ export function QuizShell() {
       });
 
       if (!res.ok) {
-        setIntroEmailError("Something went wrong. Please try again.");
+        const body = await res.json().catch(() => ({}));
+        console.error("Quiz session creation failed:", body);
+        setIntroEmailError(body.detail || "Something went wrong. Please try again.");
         setIsCreatingSession(false);
         return;
       }
