@@ -3,7 +3,6 @@
 import { useRouter } from "next/navigation";
 import { useQueryState } from "nuqs";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { EmailCaptureScreen } from "@/components/quiz/EmailCaptureScreen";
 import { ProcessingScreen } from "@/components/quiz/ProcessingScreen";
 import { QuizCard } from "@/components/quiz/QuizCard";
 import { QuizProgress } from "@/components/quiz/QuizProgress";
@@ -12,44 +11,39 @@ import { ff, ffSerif } from "@/lib/landing/palette";
 import { QUESTIONS } from "@/lib/quiz/questions";
 import { getResult } from "@/lib/quiz/scoring-matrix";
 import { getSectionColor } from "@/lib/quiz/section-palette";
-import { createClient } from "@/lib/supabase/client";
 import { useQuizStore } from "@/stores/quizStore";
 
-// Zustand persist localStorage key: "quiz-session" (defined in stores/quizStore.ts)
 const TOTAL_QUESTIONS = QUESTIONS.length;
 
 // Step layout:
-// step 0 = intro screen
+// step 0 = intro screen (with email capture)
 // step 1..TOTAL_QUESTIONS = question screens (QUESTIONS[step - 1])
 // step TOTAL_QUESTIONS + 1 = closing/transition screen
-// step TOTAL_QUESTIONS + 2 = email capture
-// step TOTAL_QUESTIONS + 3 = processing
+// step TOTAL_QUESTIONS + 2 = processing
 
 export function QuizShell() {
   const router = useRouter();
   const [hasHydrated, setHasHydrated] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [initError, setInitError] = useState(false);
   const [introSeen, setIntroSeen] = useState(false);
-  const sessionInitialized = useRef(false);
+  const [introEmail, setIntroEmail] = useState("");
+  const [introEmailError, setIntroEmailError] = useState("");
+  const [isCreatingSession, setIsCreatingSession] = useState(false);
   const isTransitioning = useRef(false);
 
   // SSR-safe Zustand hydration detection
-  // useQuizStore.persist.hasHydrated() is not available during SSR — use useEffect
   useEffect(() => {
-    // Synchronous check: if already hydrated before this effect runs
     if (useQuizStore.persist.hasHydrated()) {
       setHasHydrated(true);
       return;
     }
-    // Subscribe to hydration completion for slower devices
     const unsubscribe = useQuizStore.persist.onFinishHydration(() => {
       setHasHydrated(true);
     });
     return unsubscribe;
   }, []);
 
-  // nuqs step synchronization — history:push enables browser Back button (QUIZ-03)
+  // nuqs step synchronization — history:push enables browser Back button
   const [step, setStep] = useQueryState("step", {
     parse: (v) => {
       const parsed = parseInt(v, 10);
@@ -61,100 +55,27 @@ export function QuizShell() {
   });
 
   const direction = useQuizStore((s) => s.direction);
-
-  // Fix #8: proper Zustand selector for answers (no stale reads)
   const answers = useQuizStore((s) => s.answers);
 
   // On mount: sync nuqs step from Zustand localStorage state (for page refresh resumption)
   useEffect(() => {
     if (!hasHydrated) return;
     const storeStep = useQuizStore.getState().currentStep;
-    // Only sync if URL has no explicit step param
     const urlParams = new URLSearchParams(window.location.search);
     if (!urlParams.has("step") && storeStep > 0) {
       setStep(storeStep);
-      // If returning user has progressed past intro, mark it as seen
       setIntroSeen(true);
     }
   }, [hasHydrated, setStep]);
 
-  // Anonymous Supabase session initialization
-  useEffect(() => {
-    if (!hasHydrated) return;
-    if (sessionInitialized.current) return;
-    sessionInitialized.current = true;
-
-    async function initSession() {
-      const store = useQuizStore.getState();
-      const supabase = createClient();
-
-      if (store.userId) {
-        // Returning user — verify session is still valid
-        const {
-          data: { session },
-        } = await supabase.auth.getSession();
-
-        if (!session) {
-          // Session expired — create a fresh anonymous session
-          const {
-            data: { user },
-          } = await supabase.auth.signInAnonymously();
-
-          if (!user) {
-            setInitError(true);
-            return;
-          }
-
-          store.setUserId(user.id);
-
-          const { data: newSession } = await supabase
-            .from("quiz_sessions")
-            .insert({ user_id: user.id, status: "in_progress" })
-            .select("id")
-            .single();
-
-          if (newSession) store.setSessionId(newSession.id);
-        }
-        return;
-      }
-
-      // First-time user — sign in anonymously
-      const {
-        data: { user },
-      } = await supabase.auth.signInAnonymously();
-
-      if (!user) {
-        setInitError(true);
-        return;
-      }
-
-      store.setUserId(user.id);
-
-      const { data: sessionRow } = await supabase
-        .from("quiz_sessions")
-        .insert({ user_id: user.id, status: "in_progress" })
-        .select("id")
-        .single();
-
-      if (sessionRow) store.setSessionId(sessionRow.id);
-    }
-
-    initSession().catch((err) => {
-      console.error("Session init failed:", err);
-      setInitError(true);
-    });
-  }, [hasHydrated]);
-
   // Auto-advance handler — called by QuizCard on option tap
   const handleAnswer = useCallback(
     (questionId: string, answerId: string) => {
-      // Fix #7: guard against double-tap race condition
       if (isTransitioning.current) return;
 
       const store = useQuizStore.getState();
       store.setAnswer(questionId, answerId);
 
-      // 300ms delay for visible selected state before advancing
       isTransitioning.current = true;
       setTimeout(() => {
         const nextStep = step + 1;
@@ -181,114 +102,117 @@ export function QuizShell() {
   // Back button handler — navigates to previous question
   const handleBack = useCallback(() => {
     if (step > 1) {
-      // Don't go back to step 0 (intro) once it's been seen
       const prevStep = step - 1;
       setStep(prevStep);
       useQuizStore.getState().goBack(prevStep);
     }
   }, [step, setStep]);
 
-  // Intro screen "Begin" handler
-  const handleBegin = useCallback(() => {
-    setIntroSeen(true);
-    const nextStep = 1;
-    setStep(nextStep);
-    useQuizStore.getState().goForward(nextStep);
-  }, [setStep]);
+  // Intro screen "Begin" handler — validates email, creates session, then starts quiz
+  const handleBegin = useCallback(async () => {
+    // Validate email
+    const trimmed = introEmail.trim();
+    if (!trimmed) {
+      setIntroEmailError("Please enter your email");
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmed)) {
+      setIntroEmailError("Please enter a valid email");
+      return;
+    }
 
-  // Closing screen "Continue" handler — advance to email capture
-  const handleClosingContinue = useCallback(() => {
-    const nextStep = TOTAL_QUESTIONS + 2;
-    setStep(nextStep);
-    useQuizStore.getState().goForward(nextStep);
-  }, [setStep]);
+    setIntroEmailError("");
+    setIsCreatingSession(true);
 
-  // Quiz completion — called by EmailCaptureScreen on form submit
-  const onQuizComplete = useCallback(
-    async (email: string) => {
-      setIsSubmitting(true);
+    try {
+      // Create quiz session via API route
+      const res = await fetch("/api/quiz-session", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: trimmed }),
+      });
+
+      if (!res.ok) {
+        setIntroEmailError("Something went wrong. Please try again.");
+        setIsCreatingSession(false);
+        return;
+      }
+
+      const { sessionId } = await res.json();
+
+      // Store email and session in Zustand
       const store = useQuizStore.getState();
-      store.setEmail(email);
+      store.setEmail(trimmed);
+      store.setSessionId(sessionId);
 
-      // Step 1: Compute dimension profile from answers
-      const dimensionProfile = computeDimensionProfile(store.answers);
+      // Advance to first question
+      setIntroSeen(true);
+      setStep(1);
+      store.goForward(1);
+    } catch {
+      setIntroEmailError("Something went wrong. Please try again.");
+    } finally {
+      setIsCreatingSession(false);
+    }
+  }, [introEmail, setStep]);
 
-      // Step 2: Get primary archetype
-      const result = getResult(dimensionProfile);
+  // Closing screen "Continue" handler — triggers quiz completion
+  const handleClosingContinue = useCallback(async () => {
+    setIsSubmitting(true);
+    const store = useQuizStore.getState();
 
-      // Step 3: Extract cultural background (metadata, not a dimension)
-      const culturalBackground = store.answers["q-cultural-background"] ?? null;
+    // Compute dimension profile from answers
+    const dimensionProfile = computeDimensionProfile(store.answers);
+    const result = getResult(dimensionProfile);
+    const culturalBackground = store.answers["q-cultural-background"] ?? null;
 
-      // Step 4: Show processing screen immediately
-      setStep(TOTAL_QUESTIONS + 3);
+    // Show processing screen immediately
+    setStep(TOTAL_QUESTIONS + 2);
 
-      // Step 5: Persist completed quiz data to quiz_sessions
-      const supabase = createClient();
-      const { error } = await supabase
-        .from("quiz_sessions")
-        .update({
-          status: "completed",
+    try {
+      // Save results via API route
+      const res = await fetch("/api/quiz-session", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          sessionId: store.sessionId,
           answers: store.answers,
-          dimension_scores: dimensionProfile,
-          archetype_id: result.primary,
-          cultural_background: culturalBackground,
-          email: email,
-          completed_at: new Date().toISOString(),
-        })
-        .eq("id", store.sessionId);
+          dimensionScores: dimensionProfile,
+          archetypeId: result.primary,
+          culturalBackground,
+        }),
+      });
 
-      if (error) {
-        console.error("Failed to save quiz results:", error);
+      if (!res.ok) {
+        console.error("Failed to save quiz results");
         setIsSubmitting(false);
         return;
       }
 
-      // Step 6: Minimum 2.5s on processing screen for emotional pacing
+      // Minimum 2.5s on processing screen for emotional pacing
       await new Promise<void>((resolve) => setTimeout(resolve, 2500));
 
-      // Step 7: Redirect to result page (do NOT reset store — Phase 3 may read localStorage)
+      // Redirect to result page
       router.push(`/result?session=${store.sessionId}`);
-    },
-    [setStep, router],
-  );
+    } catch (err) {
+      console.error("Failed to save quiz results:", err);
+      setIsSubmitting(false);
+    }
+  }, [setStep, router]);
 
-  // Blank during Zustand rehydration — prevents flash of step 0 for returning users
+  // Blank during Zustand rehydration
   if (!hasHydrated) return <div className="min-h-screen" />;
-
-  // Error state — session init failed
-  if (initError) {
-    return (
-      <div className="min-h-[100dvh] flex items-center justify-center px-6 bg-[#FAFAF7]">
-        <div className="max-w-lg text-center">
-          <p className="text-[#1A1A1A] mb-4">
-            Something went wrong starting your quiz. Please try again.
-          </p>
-          <button
-            type="button"
-            onClick={() => {
-              setInitError(false);
-              sessionInitialized.current = false;
-            }}
-            className="rounded-full bg-[#002833] px-6 py-3 text-white font-semibold hover:bg-[#003d4d] transition-colors"
-          >
-            Retry
-          </button>
-        </div>
-      </div>
-    );
-  }
 
   // Current question index (step 1 = QUESTIONS[0], step 2 = QUESTIONS[1], etc.)
   const questionIndex = step - 1;
   const isQuestionStep = step >= 1 && step <= TOTAL_QUESTIONS;
 
-  // Section header detection: show header when entering a new section
+  // Section header detection
   const showSectionHeader =
     isQuestionStep &&
     (questionIndex === 0 ||
       QUESTIONS[questionIndex]?.section !== QUESTIONS[questionIndex - 1]?.section);
 
-  // Fix #8: current answer from Zustand selector (reactive, not stale)
   const currentAnswer =
     isQuestionStep && QUESTIONS[questionIndex]
       ? (answers[QUESTIONS[questionIndex].id] ?? null)
@@ -320,13 +244,44 @@ export function QuizShell() {
             You&apos;ll reflect on 21 moments from your childhood. There are no right
             answers&nbsp;&mdash; only your experience.
           </p>
-          <p className="text-sm mb-8" style={{ fontFamily: ff, color: "#777" }}>Takes about 5 minutes</p>
+          <p className="text-sm mb-6" style={{ fontFamily: ff, color: "#777" }}>Takes about 5 minutes</p>
+
+          {/* Email input */}
+          <div className="mb-4 max-w-sm mx-auto">
+            <input
+              type="email"
+              placeholder="your@email.com"
+              autoComplete="email"
+              autoCapitalize="none"
+              value={introEmail}
+              onChange={(e) => {
+                setIntroEmail(e.target.value);
+                if (introEmailError) setIntroEmailError("");
+              }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") handleBegin();
+              }}
+              aria-label="Email address"
+              aria-describedby={introEmailError ? "intro-email-error" : undefined}
+              className="w-full text-base py-3 px-4 rounded-2xl border border-[#E8E4DF] bg-white text-[#1A1A1A] placeholder:text-[#BBB] focus:outline-none focus:ring-2 focus:ring-[#002833]/20 focus:border-[#002833] transition-colors"
+            />
+            {introEmailError && (
+              <p id="intro-email-error" className="mt-2 text-sm text-red-500" role="alert">
+                {introEmailError}
+              </p>
+            )}
+            <p className="mt-2 text-xs text-[#AAA]" style={{ fontFamily: ff }}>
+              We&apos;ll send your results here. No spam, ever.
+            </p>
+          </div>
+
           <button
             type="button"
             onClick={handleBegin}
-            className="rounded-full bg-[#002833] text-[#F0EDE8] px-8 py-3 text-base font-semibold hover:bg-[#003d4d] transition-colors shadow-[0_1px_3px_rgba(0,0,0,0.06),0_4px_12px_rgba(0,0,0,0.04)]"
+            disabled={isCreatingSession}
+            className="rounded-full bg-[#002833] text-[#F0EDE8] px-8 py-3 text-base font-semibold hover:bg-[#003d4d] transition-colors shadow-[0_1px_3px_rgba(0,0,0,0.06),0_4px_12px_rgba(0,0,0,0.04)] disabled:opacity-60"
           >
-            Begin
+            {isCreatingSession ? "Starting..." : "Begin"}
           </button>
         </div>
       </div>
@@ -339,7 +294,7 @@ export function QuizShell() {
     return <div className="min-h-screen bg-[#FAFAF7]" />;
   }
 
-  // ---- CLOSING / TRANSITION SCREEN (after last question, before email) ----
+  // ---- CLOSING / TRANSITION SCREEN (after last question) ----
   if (step === TOTAL_QUESTIONS + 1) {
     return (
       <div className="min-h-[100dvh] flex items-center justify-center px-6 bg-[#FAFAF7] relative overflow-hidden">
@@ -368,22 +323,18 @@ export function QuizShell() {
           <button
             type="button"
             onClick={handleClosingContinue}
-            className="rounded-full bg-[#002833] text-[#F0EDE8] px-8 py-3 text-base font-semibold hover:bg-[#003d4d] transition-colors shadow-[0_1px_3px_rgba(0,0,0,0.06),0_4px_12px_rgba(0,0,0,0.04)]"
+            disabled={isSubmitting}
+            className="rounded-full bg-[#002833] text-[#F0EDE8] px-8 py-3 text-base font-semibold hover:bg-[#003d4d] transition-colors shadow-[0_1px_3px_rgba(0,0,0,0.06),0_4px_12px_rgba(0,0,0,0.04)] disabled:opacity-60"
           >
-            Continue
+            {isSubmitting ? "Preparing..." : "Continue"}
           </button>
         </div>
       </div>
     );
   }
 
-  // ---- EMAIL CAPTURE SCREEN ----
-  if (step === TOTAL_QUESTIONS + 2) {
-    return <EmailCaptureScreen onSubmit={onQuizComplete} isSubmitting={isSubmitting} />;
-  }
-
   // ---- PROCESSING SCREEN ----
-  if (step >= TOTAL_QUESTIONS + 3) {
+  if (step >= TOTAL_QUESTIONS + 2) {
     return <ProcessingScreen />;
   }
 
