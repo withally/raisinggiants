@@ -86,7 +86,7 @@ export function ArchetypePreviewSection() {
           {archetypeTeasers.map((arch, i) => (
             <ScrollReveal key={arch.name} delay={i * 80} offset={20}>
               <div
-                className="hover-lift relative"
+                className="hover-lift relative overflow-hidden"
                 style={{
                   background: arch.bg,
                   borderRadius: "24px",
@@ -94,47 +94,42 @@ export function ArchetypePreviewSection() {
                   boxShadow: shadow.card,
                 }}
               >
-                <div className="flex items-end">
-                  {/* Text content */}
-                  <div className="flex-1 px-7 py-7 flex flex-col justify-between min-h-[200px]">
-                    <div>
-                      <p
-                        className="text-lg mb-1"
-                        style={{ fontFamily: ff, fontWeight: 800, color: arch.color }}
-                      >
-                        {arch.name}
-                      </p>
-                      <p
-                        className="text-sm mb-4"
-                        style={{
-                          fontFamily: ffSerif,
-                          fontStyle: "italic",
-                          color: arch.color,
-                          opacity: 0.7,
-                        }}
-                      >
-                        &ldquo;{arch.tagline}&rdquo;
-                      </p>
-                    </div>
+                <div className="px-7 py-7 flex flex-col justify-between min-h-[200px] relative z-10">
+                  <div className="pr-24 md:pr-28">
                     <p
-                      className="text-xs leading-relaxed"
-                      style={{ fontFamily: ff, fontWeight: 400, color: arch.color, opacity: 0.5 }}
+                      className="text-lg mb-1"
+                      style={{ fontFamily: ff, fontWeight: 800, color: arch.color }}
                     >
-                      {arch.hint}
+                      {arch.name}
+                    </p>
+                    <p
+                      className="text-sm mb-4"
+                      style={{
+                        fontFamily: ffSerif,
+                        fontStyle: "italic",
+                        color: arch.color,
+                        opacity: 0.7,
+                      }}
+                    >
+                      &ldquo;{arch.tagline}&rdquo;
                     </p>
                   </div>
-
-                  {/* Avatar — bottom right, peeking up */}
-                  <div className="relative shrink-0 w-28 h-36 md:w-36 md:h-44 -mb-1 mr-2">
-                    <Image
-                      src={arch.avatar}
-                      alt={arch.name}
-                      width={160}
-                      height={200}
-                      className="absolute bottom-0 right-0 w-full h-full object-contain object-bottom"
-                    />
-                  </div>
+                  <p
+                    className="text-xs leading-relaxed"
+                    style={{ fontFamily: ff, fontWeight: 400, color: arch.color, opacity: 0.5 }}
+                  >
+                    {arch.hint}
+                  </p>
                 </div>
+
+                {/* Avatar pinned to bottom-right */}
+                <Image
+                  src={arch.avatar}
+                  alt={arch.name}
+                  width={140}
+                  height={140}
+                  className="absolute bottom-0 right-2 w-[120px] h-[120px] md:w-[140px] md:h-[140px] object-contain object-bottom"
+                />
               </div>
             </ScrollReveal>
           ))}
