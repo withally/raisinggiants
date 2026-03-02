@@ -60,7 +60,7 @@ export function KOLSection() {
   const visibleResearchers = showAll ? ALL_RESEARCHERS : ALL_RESEARCHERS.slice(0, 6);
 
   return (
-    <section className="py-20 md:py-28 px-4 md:px-10">
+    <section id="about" className="py-20 md:py-28 px-4 md:px-10">
       <div className="max-w-7xl mx-auto">
         {/* Label */}
         <p

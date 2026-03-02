@@ -94,10 +94,6 @@ export const SECTIONS: QuizSection[] = [
     id: 'your-parents-patterns',
     title: "Your Parents' Patterns",
   },
-  {
-    id: 'your-background',
-    title: 'Your Background',
-  },
 ]
 
 // ---------------------------------------------------------------------------
@@ -150,6 +146,47 @@ export const QUESTIONS: QuizQuestion[] = [
       rarely:    { 'emotional-warmth': 3, 'emotional-regulation': 3 },
       never:     { 'emotional-warmth': 2, 'emotional-regulation': 2 },
     },
+  },
+
+  // --- Cultural Background (moved early — signals "we see you" to non-Western parents) ---
+
+  {
+    id: 'q-cultural-background',
+    lens: 'past',
+    section: 'about-you',
+    question:
+      'Which of these best describes the cultural background you were raised in? (You can search or scroll)',
+    whyWeAskThis:
+      "Cultural background shapes parenting in powerful ways — from what's considered 'normal' discipline to how emotions are expressed and how independence is encouraged. Understanding your cultural context helps us make your results more personally relevant and avoid applying a one-size-fits-all lens.",
+    inputType: 'searchable-dropdown',
+    options: [
+      {
+        id: 'east-asian',
+        label: 'East Asian collectivist (Chinese, Korean, Japanese)',
+      },
+      {
+        id: 'south-asian',
+        label: 'South Asian joint-family (Indian, Pakistani, Bangladeshi)',
+      },
+      {
+        id: 'latin-american',
+        label: 'Latin American familismo (Mexican, Colombian, Brazilian)',
+      },
+      {
+        id: 'sub-saharan',
+        label: 'Sub-Saharan African community-centred (Nigerian, Kenyan, Ghanaian)',
+      },
+      {
+        id: 'western',
+        label: 'Western individualist (Australian, British, North American)',
+      },
+      {
+        id: 'other',
+        label: 'Other / Prefer not to say',
+      },
+    ],
+    // Cultural background is metadata, not a scoring dimension — no scores
+    dimensionScores: {},
   },
 
   // =========================================================================
@@ -607,48 +644,6 @@ export const QUESTIONS: QuizQuestion[] = [
     },
   },
 
-  // =========================================================================
-  // SECTION: Your Background
-  // =========================================================================
-
-  {
-    id: 'q-cultural-background',
-    lens: 'past',
-    section: 'your-background',
-    question:
-      'Which of these best describes the cultural background you were raised in? (You can search or scroll)',
-    whyWeAskThis:
-      "Cultural background shapes parenting in powerful ways — from what's considered 'normal' discipline to how emotions are expressed and how independence is encouraged. Understanding your cultural context helps us make your results more personally relevant and avoid applying a one-size-fits-all lens.",
-    inputType: 'searchable-dropdown',
-    options: [
-      {
-        id: 'east-asian',
-        label: 'East Asian collectivist (Chinese, Korean, Japanese)',
-      },
-      {
-        id: 'south-asian',
-        label: 'South Asian joint-family (Indian, Pakistani, Bangladeshi)',
-      },
-      {
-        id: 'latin-american',
-        label: 'Latin American familismo (Mexican, Colombian, Brazilian)',
-      },
-      {
-        id: 'sub-saharan',
-        label: 'Sub-Saharan African community-centred (Nigerian, Kenyan, Ghanaian)',
-      },
-      {
-        id: 'western',
-        label: 'Western individualist (Australian, British, North American)',
-      },
-      {
-        id: 'other',
-        label: 'Other / Prefer not to say',
-      },
-    ],
-    // Cultural background is metadata, not a scoring dimension — no scores
-    dimensionScores: {},
-  },
 ]
 
 // ---------------------------------------------------------------------------

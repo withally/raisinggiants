@@ -8,12 +8,33 @@ const navLinks = [
   { label: "How it Works", href: "#how-it-works" },
   { label: "Science", href: "#science" },
   { label: "Testimonials", href: "#testimonials" },
-  { label: "FAQ", href: "#faq" },
+  { label: "About", href: "#about" },
 ];
 
 export function LandingNav() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<string | null>(null);
+
+  /* Track active section via IntersectionObserver */
+  useEffect(() => {
+    const ids = navLinks.map((l) => l.href.slice(1));
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        }
+      },
+      { rootMargin: "-20% 0px -70% 0px" },
+    );
+    for (const id of ids) {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    }
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 300);
@@ -127,32 +148,41 @@ export function LandingNav() {
                 ].join(", "),
               }}
             >
-              {navLinks.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  onClick={(e) => handleNavClick(e, item.href)}
-                  className="px-4 py-2 text-xs rounded-full"
-                  style={{
-                    fontFamily: ff,
-                    fontWeight: 500,
-                    color: "#777",
-                    transition:
-                      "background-color 200ms ease, color 200ms ease",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor =
-                      "rgba(0,0,0,0.04)";
-                    e.currentTarget.style.color = "#333";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = "transparent";
-                    e.currentTarget.style.color = "#777";
-                  }}
-                >
-                  {item.label}
-                </a>
-              ))}
+              {navLinks.map((item) => {
+                const isActive = activeSection === item.href.slice(1);
+                return (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    onClick={(e) => handleNavClick(e, item.href)}
+                    className="px-4 py-2 text-xs rounded-full"
+                    style={{
+                      fontFamily: ff,
+                      fontWeight: isActive ? 600 : 500,
+                      color: isActive ? "#1A1A1A" : "#777",
+                      backgroundColor: isActive
+                        ? "rgba(0,0,0,0.06)"
+                        : "transparent",
+                      transition:
+                        "background-color 200ms ease, color 200ms ease, font-weight 200ms ease",
+                    }}
+                    onMouseEnter={(e) => {
+                      if (!isActive) {
+                        e.currentTarget.style.backgroundColor = "rgba(0,0,0,0.04)";
+                        e.currentTarget.style.color = "#333";
+                      }
+                    }}
+                    onMouseLeave={(e) => {
+                      if (!isActive) {
+                        e.currentTarget.style.backgroundColor = "transparent";
+                        e.currentTarget.style.color = "#777";
+                      }
+                    }}
+                  >
+                    {item.label}
+                  </a>
+                );
+              })}
             </div>
 
             {/* Right side: CTA + hamburger */}
@@ -270,28 +300,32 @@ export function LandingNav() {
               "transform 300ms cubic-bezier(0.16,1,0.3,1)",
           }}
         >
-          {navLinks.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              onClick={(e) => handleNavClick(e, item.href)}
-              className="block px-4 py-3.5 rounded-2xl text-sm"
-              style={{
-                fontFamily: ff,
-                fontWeight: 500,
-                color: "#555",
-                transition: "background-color 200ms ease",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "rgba(0,0,0,0.03)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "transparent";
-              }}
-            >
-              {item.label}
-            </a>
-          ))}
+          {navLinks.map((item) => {
+            const isActive = activeSection === item.href.slice(1);
+            return (
+              <a
+                key={item.label}
+                href={item.href}
+                onClick={(e) => handleNavClick(e, item.href)}
+                className="block px-4 py-3.5 rounded-2xl text-sm"
+                style={{
+                  fontFamily: ff,
+                  fontWeight: isActive ? 600 : 500,
+                  color: isActive ? "#1A1A1A" : "#555",
+                  backgroundColor: isActive ? "rgba(0,0,0,0.05)" : "transparent",
+                  transition: "background-color 200ms ease, color 200ms ease",
+                }}
+                onMouseEnter={(e) => {
+                  if (!isActive) e.currentTarget.style.backgroundColor = "rgba(0,0,0,0.03)";
+                }}
+                onMouseLeave={(e) => {
+                  if (!isActive) e.currentTarget.style.backgroundColor = "transparent";
+                }}
+              >
+                {item.label}
+              </a>
+            );
+          })}
           <div
             className="mt-1 mx-2 pt-3 pb-2"
             style={{ borderTop: "1px solid rgba(0,0,0,0.06)" }}

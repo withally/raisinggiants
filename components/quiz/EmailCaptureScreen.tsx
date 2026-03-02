@@ -37,6 +37,25 @@ export function EmailCaptureScreen({ onSubmit, isSubmitting = false }: EmailCapt
       <div className="w-full max-w-lg">
         {/* Card */}
         <div className="bg-white rounded-3xl shadow-[0_1px_2px_rgba(0,0,0,0.03),0_4px_16px_rgba(0,0,0,0.03),0_16px_48px_rgba(0,0,0,0.025)] border border-[#E8E4DF] px-8 py-10">
+          {/* Blurred archetype hint */}
+          <div
+            className="mb-6 rounded-2xl px-5 py-4"
+            style={{ background: "linear-gradient(135deg, #FEF6B2 0%, #EEC0DA 50%, #B2DECD 100%)", opacity: 0.6 }}
+          >
+            <p
+              className="text-xs mb-1"
+              style={{ fontFamily: ff, fontWeight: 600, color: "#4A1942", opacity: 0.7 }}
+            >
+              Your archetype
+            </p>
+            <p
+              className="text-lg"
+              style={{ fontFamily: ff, fontWeight: 800, color: "#1A1A1A", filter: "blur(8px)", userSelect: "none" }}
+            >
+              The ████████ ████████
+            </p>
+          </div>
+
           {/* Headline */}
           <h2
             className="text-2xl text-[#1A1A1A] mb-2 leading-snug"
@@ -44,14 +63,17 @@ export function EmailCaptureScreen({ onSubmit, isSubmitting = false }: EmailCapt
           >
             Your{" "}
             <span style={{ fontFamily: ffSerif, fontStyle: "italic", color: "#4A1942" }}>
-              reflection
+              Mirror
             </span>
-            {" "}is complete.
+            {" "}is ready.
           </h2>
 
           {/* Sub-text */}
-          <p className="mb-8 leading-relaxed" style={{ fontFamily: ff, fontWeight: 400, color: "#777" }}>
-            Enter your email so we can send your results.
+          <p className="mb-3 leading-relaxed" style={{ fontFamily: ff, fontWeight: 400, color: "#777" }}>
+            We found your archetype. Enter your email to see what it reveals about the patterns you grew up with.
+          </p>
+          <p className="mb-8 text-xs" style={{ fontFamily: ff, fontWeight: 400, color: "#AAA" }}>
+            You&apos;ll also receive a saved copy you can return to anytime.
           </p>
 
           {/* Form */}
@@ -79,7 +101,7 @@ export function EmailCaptureScreen({ onSubmit, isSubmitting = false }: EmailCapt
               disabled={isSubmitting}
               className="w-full bg-[#002833] hover:bg-[#003d4d] text-white font-semibold py-4 h-auto text-base rounded-2xl transition-colors shadow-[0_1px_3px_rgba(0,0,0,0.06),0_4px_12px_rgba(0,0,0,0.04)]"
             >
-              {isSubmitting ? "Saving..." : "See My Results"}
+              {isSubmitting ? "Preparing your Mirror..." : "Reveal My Archetype"}
             </Button>
           </form>
         </div>

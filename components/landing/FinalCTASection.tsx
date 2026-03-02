@@ -67,7 +67,7 @@ export function FinalCTASection() {
                 className="text-xs tracking-wide"
                 style={{ fontFamily: ff, fontWeight: 600, color: "#AAA" }}
               >
-                The Mirror by Kin &mdash; Free, always
+                The Mirror by Kin &mdash; Free. No account needed.
               </p>
             </div>
           </div>

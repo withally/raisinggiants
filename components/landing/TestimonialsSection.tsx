@@ -1,45 +1,51 @@
 "use client";
 
+import Image from "next/image";
 import { ff, ffSerif, p, shadow } from "@/lib/landing/palette";
 
 const ROW_1 = [
   {
     quote:
-      "I cried reading my result. Not because it was painful — but because I finally had words for something I've carried my whole life.",
+      "I'm The Gentle Nurturer. I cried reading my result — not because it was painful, but because I finally had words for something I've carried my whole life.",
     name: "Sarah",
     detail: "34, teacher",
+    photo: "/images/testimonial-sarah.jpg",
     bg: p.pink.light,
     color: p.pink.dark,
   },
   {
     quote:
-      "I sent this to my sister. We both got the same archetype. We spent three hours on the phone that night.",
+      "I sent this to my sister. We both got The Steady Anchor. We spent three hours on the phone that night talking about mum.",
     name: "Michael",
     detail: "41, designer",
+    photo: "/images/testimonial-michael.jpg",
     bg: p.mint.light,
     color: p.mint.dark,
   },
   {
     quote:
-      "I've been in therapy for years and this captured something my therapist and I have been circling around for months.",
+      "I've been in therapy for years and this captured something my therapist and I have been circling around for months. The Resilient Striver profile was eerily accurate.",
     name: "Priya",
     detail: "29, grad student",
+    photo: "/images/testimonial-priya.jpg",
     bg: p.butter.light,
     color: p.butter.dark,
   },
   {
     quote:
-      "The part about 'emotional over-responsibility' hit me so hard. That's been my pattern in every relationship.",
+      "The watchout about 'emotional over-responsibility' hit me so hard. As a Fierce Guardian, that's been my pattern in every relationship.",
     name: "Emma",
     detail: "37, consultant",
+    photo: "/images/testimonial-emma.jpg",
     bg: p.blue.light,
     color: p.blue.dark,
   },
   {
     quote:
-      "I took this expecting a Buzzfeed quiz. I got something that genuinely made me rethink how I show up as a parent.",
+      "I took this expecting a Buzzfeed quiz. I got The Devoted Champion and it genuinely made me rethink how I show up as a parent.",
     name: "David",
     detail: "45, father of two",
+    photo: "/images/testimonial-david.jpg",
     bg: p.pink.light,
     color: p.pink.dark,
   },
@@ -48,17 +54,19 @@ const ROW_1 = [
 const ROW_2 = [
   {
     quote:
-      "I've never felt so seen by something on the internet. The cultural overlay was spot-on.",
+      "I've never felt so seen by something on the internet. I'm The Intentional Guide — and the cultural overlay for my East Asian background was spot-on.",
     name: "Yuki",
     detail: "32, product manager",
+    photo: "/images/testimonial-yuki.jpg",
     bg: p.mint.light,
     color: p.mint.dark,
   },
   {
     quote:
-      "My husband and I took it separately. The differences in our results explained arguments we've been having for a decade.",
+      "My husband got The Structured Mentor, I got The Gentle Nurturer. The differences explained arguments we've been having for a decade.",
     name: "Olivia",
     detail: "38, mother of three",
+    photo: "/images/testimonial-olivia.jpg",
     bg: p.butter.light,
     color: p.butter.dark,
   },
@@ -67,22 +75,25 @@ const ROW_2 = [
       "15 minutes. That's all it took to understand something I've spent 15 years avoiding.",
     name: "Jake",
     detail: "36, writer",
+    photo: "/images/testimonial-jake.jpg",
     bg: p.blue.light,
     color: p.blue.dark,
   },
   {
     quote:
-      "I didn't expect a free tool to be this accurate. The watchouts section was uncomfortable in the best way.",
+      "I didn't expect a free tool to be this accurate. The watchouts section for The Open-Hearted Learner was uncomfortable in the best way.",
     name: "Aisha",
     detail: "31, psychologist",
+    photo: "/images/testimonial-aisha.jpg",
     bg: p.pink.light,
     color: p.pink.dark,
   },
   {
     quote:
-      "This is what I wish someone had given me before I became a parent.",
+      "I'm The Collaborative Ally. This is what I wish someone had given me before I became a parent.",
     name: "Rachel",
     detail: "40, mother",
+    photo: "/images/testimonial-rachel.jpg",
     bg: p.mint.light,
     color: p.mint.dark,
   },
@@ -129,27 +140,24 @@ function MarqueeRow({
               &ldquo;{item.quote}&rdquo;
             </p>
             <div className="flex items-center gap-2">
-              {/* Avatar initial */}
+              {/* Avatar photo */}
               <div
-                className="flex-shrink-0 flex items-center justify-center"
+                className="flex-shrink-0"
                 style={{
                   width: 32,
                   height: 32,
                   borderRadius: "50%",
-                  backgroundColor: item.color,
+                  overflow: "hidden",
+                  border: `1.5px solid ${item.color}33`,
                 }}
               >
-                <span
-                  style={{
-                    fontFamily: ff,
-                    fontWeight: 700,
-                    fontSize: "0.75rem",
-                    color: item.bg,
-                    lineHeight: 1,
-                  }}
-                >
-                  {item.name[0]}
-                </span>
+                <Image
+                  src={item.photo}
+                  alt={item.name}
+                  width={32}
+                  height={32}
+                  style={{ objectFit: "cover", width: "100%", height: "100%" }}
+                />
               </div>
               <div>
                 <p

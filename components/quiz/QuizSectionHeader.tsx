@@ -1,11 +1,20 @@
 "use client";
 
+import { ff } from "@/lib/landing/palette";
+
 /** Section display names — friendlier than raw IDs */
 const sectionLabels: Record<string, string> = {
   "about-you": "About You",
   "your-upbringing": "Your Upbringing",
   "your-parents-patterns": "Your Parents' Patterns",
-  "your-background": "Your Background",
+};
+
+/** Milestone messages shown when entering a new section */
+const sectionMilestones: Record<string, string> = {
+  "your-upbringing":
+    "Nice start. Now let's go a little deeper into the home you grew up in.",
+  "your-parents-patterns":
+    "You're over halfway there. This is where your Mirror starts to take shape.",
 };
 
 interface QuizSectionHeaderProps {
@@ -24,6 +33,7 @@ export function QuizSectionHeader({
   textColor = "#1A4A3A",
 }: QuizSectionHeaderProps) {
   const label = sectionLabels[title] ?? title;
+  const milestone = sectionMilestones[title];
 
   return (
     <div className="mb-5">
@@ -33,6 +43,14 @@ export function QuizSectionHeader({
       >
         {label}
       </span>
+      {milestone && (
+        <p
+          className="mt-3 text-sm leading-relaxed"
+          style={{ fontFamily: ff, fontWeight: 400, color: "#999" }}
+        >
+          {milestone}
+        </p>
+      )}
       {description && (
         <p className="mt-2 text-sm text-[#777]">{description}</p>
       )}

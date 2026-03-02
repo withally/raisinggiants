@@ -1,14 +1,18 @@
+import { ArchetypePreviewSection } from "@/components/landing/ArchetypePreviewSection";
+import { ReportPreviewSection } from "@/components/landing/ReportPreviewSection";
 import { EmotionalHookSection } from "@/components/landing/EmotionalHookSection";
 import { FAQSection } from "@/components/landing/FAQSection";
 import { FinalCTASection } from "@/components/landing/FinalCTASection";
 import { HeroSection } from "@/components/landing/HeroSection";
 import { HowItWorksProcess } from "@/components/landing/HowItWorksProcess";
 import { HowItWorksScience } from "@/components/landing/HowItWorksScience";
+import { InlineCTA } from "@/components/landing/InlineCTA";
 import { KOLSection } from "@/components/landing/KOLSection";
 import { LandingNav } from "@/components/landing/LandingNav";
 import { ProductLadder } from "@/components/landing/ProductLadder";
 import { ScrollReveal } from "@/components/landing/ScrollReveal";
 import { SophiaSection } from "@/components/landing/SophiaSection";
+import { StickyQuizCTA } from "@/components/landing/StickyQuizCTA";
 import { TestimonialsSection } from "@/components/landing/TestimonialsSection";
 
 export default function Home() {
@@ -27,32 +31,55 @@ export default function Home() {
       />
 
       <LandingNav />
+      <StickyQuizCTA />
+
       {/* Hero handles its own internal stagger */}
       <HeroSection />
       <ScrollReveal>
         <EmotionalHookSection />
       </ScrollReveal>
+
+      <ScrollReveal>
+        <ArchetypePreviewSection />
+      </ScrollReveal>
+
+      {/* Product demo — animated report preview */}
+      <ScrollReveal>
+        <ReportPreviewSection />
+      </ScrollReveal>
+
+      {/* How it Works — process + science grouped */}
       <ScrollReveal>
         <HowItWorksProcess />
       </ScrollReveal>
-      <ScrollReveal>
-        <TestimonialsSection />
-      </ScrollReveal>
+
       <ScrollReveal>
         <HowItWorksScience />
       </ScrollReveal>
+
+      <InlineCTA text="15 minutes. Completely free." label="Start The Mirror" />
+
+      {/* Social proof — testimonials then research */}
+      <ScrollReveal>
+        <TestimonialsSection />
+      </ScrollReveal>
+
       <ScrollReveal>
         <KOLSection />
       </ScrollReveal>
+
       <ScrollReveal>
         <ProductLadder />
       </ScrollReveal>
+
       <ScrollReveal>
         <SophiaSection />
       </ScrollReveal>
+
       <ScrollReveal>
         <FAQSection />
       </ScrollReveal>
+
       <ScrollReveal>
         <FinalCTASection />
       </ScrollReveal>
