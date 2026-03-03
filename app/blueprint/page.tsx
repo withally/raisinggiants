@@ -1,11 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Footer } from "@/components/Footer";
 import { BlueprintEmailForm } from "@/components/result/BlueprintEmailForm";
 
 export const metadata: Metadata = {
   title: "The Blueprint by Kin — Coming Soon",
   description:
     "A personalized guide to bridge what you inherited with what you want to build. Join the waitlist for The Blueprint by Kin.",
+  openGraph: {
+    title: "The Blueprint by Kin — Coming Soon",
+    description:
+      "A personalized guide to bridge what you inherited with what you want to build. Join the waitlist.",
+    url: "https://meetkin.com/blueprint",
+    siteName: "Kin",
+    images: [{ url: "/images/og-default.png", width: 1200, height: 630 }],
+  },
 };
 
 const valueProps = [
@@ -28,6 +37,7 @@ const valueProps = [
 
 export default function BlueprintPage() {
   return (
+    <>
     <main className="min-h-[100dvh] bg-[#F5F4F2]">
       {/* Back link */}
       <div className="px-6 pt-6">
@@ -122,8 +132,8 @@ export default function BlueprintPage() {
         </div>
       </div>
 
-      {/* Footer spacer */}
-      <div className="h-16" />
     </main>
+    <Footer />
+    </>
   );
 }

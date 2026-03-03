@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Footer } from "@/components/Footer";
 import { ArchetypeReveal } from "@/components/result/ArchetypeReveal";
 import { BlueprintCTA } from "@/components/result/BlueprintCTA";
 import { CulturalSection } from "@/components/result/CulturalSection";
@@ -13,6 +14,14 @@ import { CULTURAL_DISPLAY_NAMES, fetchQuizSession, getCulturalOverlay } from "@/
 export const metadata: Metadata = {
   title: "Your Result | Kin — The Mirror",
   description: "Discover the parenting patterns you inherited — your personalised Mirror result.",
+  openGraph: {
+    title: "Your Result | Kin — The Mirror",
+    description:
+      "Discover the parenting patterns you inherited — your personalised Mirror result.",
+    url: "https://meetkin.com/result",
+    siteName: "Kin",
+    images: [{ url: "/images/og-default.png", width: 1200, height: 630 }],
+  },
 };
 
 // ---------------------------------------------------------------------------
@@ -102,6 +111,7 @@ export default async function ResultPage({
           <CulturalSection overlay={culturalOverlay} displayName={culturalDisplayName} />
         )}
       </main>
+      <Footer />
     </ResultPageClient>
   );
 }

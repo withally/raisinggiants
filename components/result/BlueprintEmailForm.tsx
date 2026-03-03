@@ -4,6 +4,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { trackBlueprintInterest } from "@/lib/analytics";
+import { getUTMParams } from "@/lib/utm";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -36,7 +38,7 @@ export function BlueprintEmailForm({ source = "blueprint-page" }: BlueprintEmail
       const res = await fetch("/api/blueprint-interest", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: values.email, source }),
+        body: JSON.stringify({ email: values.email, source, ...getUTMParams() }),
       });
 
       if (!res.ok) {
@@ -45,6 +47,7 @@ export function BlueprintEmailForm({ source = "blueprint-page" }: BlueprintEmail
         return;
       }
 
+      trackBlueprintInterest();
       setSubmitted(true);
     } catch {
       setServerError("Unable to connect. Please check your connection and try again.");

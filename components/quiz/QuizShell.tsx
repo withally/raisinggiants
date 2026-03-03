@@ -11,6 +11,8 @@ import { ff, ffSerif } from "@/lib/landing/palette";
 import { QUESTIONS } from "@/lib/quiz/questions";
 import { getResult } from "@/lib/quiz/scoring-matrix";
 import { getSectionColor } from "@/lib/quiz/section-palette";
+import { trackEmailCapture, trackQuizComplete } from "@/lib/analytics";
+import { getUTMParams } from "@/lib/utm";
 import { useQuizStore } from "@/stores/quizStore";
 
 const TOTAL_QUESTIONS = QUESTIONS.length;
@@ -129,7 +131,7 @@ export function QuizShell() {
       const res = await fetch("/api/quiz-session", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: trimmed }),
+        body: JSON.stringify({ email: trimmed, ...getUTMParams() }),
       });
 
       if (!res.ok) {
@@ -141,6 +143,7 @@ export function QuizShell() {
       }
 
       const { sessionId } = await res.json();
+      trackEmailCapture("quiz_start");
 
       // Store email and session in Zustand
       const store = useQuizStore.getState();
@@ -190,6 +193,8 @@ export function QuizShell() {
         setIsSubmitting(false);
         return;
       }
+
+      trackQuizComplete(result.primary);
 
       // Minimum 2.5s on processing screen for emotional pacing
       await new Promise<void>((resolve) => setTimeout(resolve, 2500));

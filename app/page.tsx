@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { ArchetypePreviewSection } from "@/components/landing/ArchetypePreviewSection";
 import { ReportPreviewSection } from "@/components/landing/ReportPreviewSection";
 import { EmotionalHookSection } from "@/components/landing/EmotionalHookSection";
@@ -14,6 +15,23 @@ import { ScrollReveal } from "@/components/landing/ScrollReveal";
 import { SophiaSection } from "@/components/landing/SophiaSection";
 import { StickyQuizCTA } from "@/components/landing/StickyQuizCTA";
 import { TestimonialsSection } from "@/components/landing/TestimonialsSection";
+import { Footer } from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "Discover the Parenting Patterns You Inherited | Kin",
+  description:
+    "A free, research-informed quiz that uncovers the parenting patterns you inherited — and how they shape the parent you're becoming. 5 minutes. Completely private.",
+  openGraph: {
+    title: "Discover the Parenting Patterns You Inherited | Kin",
+    description:
+      "A free, research-informed quiz that uncovers the parenting patterns you inherited. 5 minutes. Completely private.",
+    url: "https://meetkin.com",
+    type: "website",
+    siteName: "Kin",
+    locale: "en_US",
+    images: [{ url: "/images/og-default.png", width: 1200, height: 630 }],
+  },
+};
 
 export default function Home() {
   return (
@@ -83,6 +101,8 @@ export default function Home() {
       <ScrollReveal>
         <FinalCTASection />
       </ScrollReveal>
+
+      <Footer />
     </div>
   );
 }

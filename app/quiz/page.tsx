@@ -7,6 +7,14 @@ export const metadata: Metadata = {
   title: "Take the Quiz | Your Parenting Blueprint",
   description:
     "Answer 21 reflective questions to uncover the parenting patterns you inherited. Free, private, and research-informed.",
+  openGraph: {
+    title: "Take the Quiz | Your Parenting Blueprint",
+    description:
+      "Answer 21 reflective questions to uncover the parenting patterns you inherited. Free, private, and research-informed.",
+    url: "https://meetkin.com/quiz",
+    siteName: "Kin",
+    images: [{ url: "/images/og-default.png", width: 1200, height: 630 }],
+  },
 };
 
 export default function QuizPage() {
