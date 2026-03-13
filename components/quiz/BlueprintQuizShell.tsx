@@ -271,7 +271,7 @@ export function BlueprintQuizShell() {
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              "radial-gradient(ellipse 70% 50% at 60% 0%, rgba(178,229,216,0.18) 0%, transparent 70%), radial-gradient(ellipse 50% 40% at 30% 5%, rgba(196,235,224,0.12) 0%, transparent 60%)",
+              "radial-gradient(ellipse 70% 50% at 60% 0%, rgba(254,244,172,0.18) 0%, transparent 70%), radial-gradient(ellipse 50% 40% at 30% 5%, rgba(238,192,218,0.12) 0%, transparent 60%)",
           }}
         />
         <div className="max-w-lg text-center animate-fade-up relative z-10">
@@ -280,7 +280,7 @@ export function BlueprintQuizShell() {
             style={{ fontFamily: ff, fontWeight: 800 }}
           >
             Let&apos;s explore your{" "}
-            <span style={{ fontFamily: ffSerif, fontStyle: "italic", color: "#0F5845" }}>
+            <span style={{ fontFamily: ffSerif, fontStyle: "italic", color: "#4A1942" }}>
               parenting instincts
             </span>
           </h1>
@@ -312,7 +312,7 @@ export function BlueprintQuizShell() {
               }}
               aria-label="Email address"
               aria-describedby={introEmailError ? "bp-intro-email-error" : undefined}
-              className="w-full text-base py-3 px-4 rounded-2xl border border-[#E8E4DF] bg-white text-[#1A1A1A] placeholder:text-[#BBB] focus:outline-none focus:ring-2 focus:ring-[#0F5845]/20 focus:border-[#0F5845] transition-colors"
+              className="w-full text-base py-3 px-4 rounded-2xl border border-[#E8E4DF] bg-white text-[#1A1A1A] placeholder:text-[#BBB] focus:outline-none focus:ring-2 focus:ring-[#002833]/20 focus:border-[#002833] transition-colors"
             />
             {introEmailError && (
               <p id="bp-intro-email-error" className="mt-2 text-sm text-red-500" role="alert">
@@ -329,7 +329,7 @@ export function BlueprintQuizShell() {
             type="button"
             onClick={handleBegin}
             disabled={isCreatingSession}
-            className="rounded-full bg-[#0F5845] text-white px-8 py-3 text-base font-semibold hover:bg-[#0D4A3A] transition-colors shadow-[0_1px_3px_rgba(0,0,0,0.06),0_4px_12px_rgba(0,0,0,0.04)] disabled:opacity-60"
+            className="rounded-full bg-[#002833] text-[#F0EDE8] px-8 py-3 text-base font-semibold hover:bg-[#003d4d] transition-colors shadow-[0_1px_3px_rgba(0,0,0,0.06),0_4px_12px_rgba(0,0,0,0.04)] disabled:opacity-60"
           >
             {isCreatingSession ? "Starting..." : "Begin"}
           </button>
@@ -353,7 +353,7 @@ export function BlueprintQuizShell() {
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              "radial-gradient(ellipse 70% 50% at 60% 0%, rgba(178,229,216,0.18) 0%, transparent 70%), radial-gradient(ellipse 50% 40% at 30% 5%, rgba(196,235,224,0.12) 0%, transparent 60%)",
+              "radial-gradient(ellipse 70% 50% at 60% 0%, rgba(254,244,172,0.18) 0%, transparent 70%), radial-gradient(ellipse 50% 40% at 30% 5%, rgba(238,192,218,0.12) 0%, transparent 60%)",
           }}
         />
         <div className="max-w-lg text-center animate-fade-up relative z-10">
@@ -362,7 +362,7 @@ export function BlueprintQuizShell() {
             style={{ fontFamily: ff, fontWeight: 800 }}
           >
             Your instincts tell{" "}
-            <span style={{ fontFamily: ffSerif, fontStyle: "italic", color: "#0F5845" }}>
+            <span style={{ fontFamily: ffSerif, fontStyle: "italic", color: "#4A1942" }}>
               a story
             </span>
             .
@@ -378,7 +378,7 @@ export function BlueprintQuizShell() {
             type="button"
             onClick={handleClosingContinue}
             disabled={isSubmitting}
-            className="rounded-full bg-[#0F5845] text-white px-8 py-3 text-base font-semibold hover:bg-[#0D4A3A] transition-colors shadow-[0_1px_3px_rgba(0,0,0,0.06),0_4px_12px_rgba(0,0,0,0.04)] disabled:opacity-60"
+            className="rounded-full bg-[#002833] text-[#F0EDE8] px-8 py-3 text-base font-semibold hover:bg-[#003d4d] transition-colors shadow-[0_1px_3px_rgba(0,0,0,0.06),0_4px_12px_rgba(0,0,0,0.04)] disabled:opacity-60"
           >
             {isSubmitting ? "Preparing..." : "See my results"}
           </button>

@@ -9,8 +9,8 @@ interface BridgeComparisonSectionProps {
 // Colors for the two sides of the bridge
 const mirrorGradient = "linear-gradient(180deg, #F0C5DE 0%, #EEC0DA 100%)";
 const mirrorDark = "#4A1942";
-const blueprintGradient = "linear-gradient(180deg, #B8E8D8 0%, #A0DEC8 100%)";
-const blueprintDark = "#0D4035";
+const blueprintGradient = "linear-gradient(180deg, #BBDAE3 0%, #B3D5DE 100%)";
+const blueprintDark = "#002833";
 const bridgeBackground = "linear-gradient(180deg, #F7F5F0 0%, #EFEFEA 100%)";
 
 export function BridgeComparisonSection({

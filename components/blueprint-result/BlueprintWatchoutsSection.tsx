@@ -5,9 +5,9 @@ interface BlueprintWatchoutsSectionProps {
   watchouts: ArchetypeContent;
 }
 
-// Teal-stone accent for Blueprint watchouts
-const tealStone = "#2D5A4E";
-const tealStoneBorder = "#2D5A4E25";
+// Plum accent for watchouts (from site palette)
+const plumDark = "#4A1942";
+const plumBorder = "#4A194225";
 
 export function BlueprintWatchoutsSection({ watchouts }: BlueprintWatchoutsSectionProps) {
   return (
@@ -44,13 +44,13 @@ export function BlueprintWatchoutsSection({ watchouts }: BlueprintWatchoutsSecti
                 {/* Number */}
                 <p
                   className="text-2xl shrink-0 mt-0.5"
-                  style={{ fontFamily: ffDisplay, fontWeight: 700, color: tealStone, opacity: 0.2 }}
+                  style={{ fontFamily: ffDisplay, fontWeight: 700, color: plumDark, opacity: 0.2 }}
                 >
                   {num}
                 </p>
 
                 {/* Content */}
-                <div className="border-l-2 pl-5" style={{ borderColor: tealStoneBorder }}>
+                <div className="border-l-2 pl-5" style={{ borderColor: plumBorder }}>
                   {title && (
                     <p
                       className="text-base mb-1.5 leading-snug"

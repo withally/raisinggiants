@@ -48,7 +48,7 @@ export function ParentStatusSelector({ onSelect }: ParentStatusSelectorProps) {
               key={option.id}
               type="button"
               onClick={() => onSelect(option.id)}
-              className="w-full text-left bg-white rounded-2xl border border-[#E8E4DF] px-5 py-4 min-h-[64px] flex flex-col justify-center hover:border-[#2D8B7A] hover:bg-[#F0FAF8] transition-colors"
+              className="w-full text-left bg-white rounded-2xl border border-[#E8E4DF] px-5 py-4 min-h-[64px] flex flex-col justify-center hover:border-[#1A4A3A] hover:bg-[#F0F7F4] transition-colors"
               aria-label={`${option.label} — ${option.sublabel}`}
             >
               <span

@@ -5,9 +5,9 @@ interface BlueprintArchetypeRevealProps {
   archetype: Archetype;
 }
 
-// Teal gradient for Blueprint (distinct from Mirror's butter gradient)
-const gradTeal = "linear-gradient(180deg, #B8E8D8 0%, #A0DEC8 100%)";
-const tealDark = "#0D4035";
+// Blue gradient for Blueprint hero (from site palette)
+const gradBlue = "linear-gradient(180deg, #BBDAE3 0%, #B3D5DE 100%)";
+const blueDark = "#002833";
 
 export function BlueprintArchetypeReveal({ archetype }: BlueprintArchetypeRevealProps) {
   // Extract the last word for serif italic treatment (e.g., "The Steady *Anchor*")
@@ -25,12 +25,12 @@ export function BlueprintArchetypeReveal({ archetype }: BlueprintArchetypeReveal
           {/* Main reveal card — teal gradient, 7-col */}
           <div
             className="col-span-12 lg:col-span-7 rounded-3xl px-8 sm:px-12 py-10 sm:py-14 flex flex-col justify-between"
-            style={{ background: gradTeal, boxShadow: shadow.card, minHeight: 340 }}
+            style={{ background: gradBlue, boxShadow: shadow.card, minHeight: 340 }}
           >
             {/* Eyebrow */}
             <p
               className="text-xs tracking-[0.2em] uppercase mb-8"
-              style={{ fontFamily: ff, fontWeight: 600, color: tealDark, opacity: 0.6 }}
+              style={{ fontFamily: ff, fontWeight: 600, color: blueDark, opacity: 0.6 }}
             >
               Your parenting archetype:
             </p>
@@ -42,7 +42,7 @@ export function BlueprintArchetypeReveal({ archetype }: BlueprintArchetypeReveal
                 style={{ fontFamily: ff, fontWeight: 800, color: "#1A1A1A" }}
               >
                 {namePrefix}{" "}
-                <span style={{ fontFamily: ffSerif, fontStyle: "italic", color: tealDark }}>
+                <span style={{ fontFamily: ffSerif, fontStyle: "italic", color: blueDark }}>
                   {lastWord}
                 </span>
               </h1>

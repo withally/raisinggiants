@@ -6,9 +6,9 @@ interface BlueprintCulturalSectionProps {
   displayName: string;
 }
 
-// Teal accent dot color for Blueprint
-const tealDark = "#0D4035";
-const tealGradient = "linear-gradient(180deg, #B8E8D8 0%, #A0DEC8 100%)";
+// Blue accent from site palette — expression card uses blue, strength/tension cards use mint/blue
+const blueDark = "#002833";
+const blueGradient = "linear-gradient(180deg, #BBDAE3 0%, #B3D5DE 100%)";
 
 export function BlueprintCulturalSection({
   overlay,
@@ -30,7 +30,7 @@ export function BlueprintCulturalSection({
             style={{ fontFamily: ff, fontWeight: 800, color: "#1A1A1A" }}
           >
             How your cultural background shapes{" "}
-            <span style={{ fontFamily: ffSerif, fontStyle: "italic", color: tealDark }}>
+            <span style={{ fontFamily: ffSerif, fontStyle: "italic", color: blueDark }}>
               your parenting
             </span>
           </h2>
@@ -39,11 +39,11 @@ export function BlueprintCulturalSection({
         {/* Expression modifier — full-width teal card */}
         <div
           className="rounded-3xl px-8 sm:px-12 py-8 sm:py-10 mb-3"
-          style={{ background: tealGradient, boxShadow: shadow.card }}
+          style={{ background: blueGradient, boxShadow: shadow.card }}
         >
           <p
             className="text-base sm:text-lg leading-relaxed"
-            style={{ fontFamily: ffSerif, fontStyle: "italic", color: tealDark }}
+            style={{ fontFamily: ffSerif, fontStyle: "italic", color: blueDark }}
           >
             {overlay.expressionModifier}
           </p>
@@ -67,7 +67,7 @@ export function BlueprintCulturalSection({
                 <li key={strength.slice(0, 40)} className="flex items-start gap-3">
                   <span
                     className="mt-1.5 w-2 h-2 rounded-full flex-shrink-0"
-                    style={{ background: tealDark, opacity: 0.4 }}
+                    style={{ background: blueDark, opacity: 0.4 }}
                     aria-hidden="true"
                   />
                   <p
@@ -97,7 +97,7 @@ export function BlueprintCulturalSection({
                 <li key={tension.slice(0, 40)} className="flex items-start gap-3">
                   <span
                     className="mt-1.5 w-2 h-2 rounded-full flex-shrink-0"
-                    style={{ background: tealDark, opacity: 0.4 }}
+                    style={{ background: blueDark, opacity: 0.4 }}
                     aria-hidden="true"
                   />
                   <p

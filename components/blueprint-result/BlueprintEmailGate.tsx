@@ -52,7 +52,7 @@ export function BlueprintEmailGate({ sessionId, onVerified }: BlueprintEmailGate
           {/* Eyebrow */}
           <p
             className="text-xs tracking-[0.25em] uppercase mb-4"
-            style={{ fontFamily: ff, fontWeight: 600, color: "#2D8B7A" }}
+            style={{ fontFamily: ff, fontWeight: 600, color: "#002833" }}
           >
             The Blueprint
           </p>
@@ -86,7 +86,7 @@ export function BlueprintEmailGate({ sessionId, onVerified }: BlueprintEmailGate
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 disabled={isLoading}
-                className="w-full rounded-xl border border-[#E8E4DF] bg-white px-4 py-3 text-base text-[#1A1008] placeholder:text-[#C4BBAF] focus:outline-none focus:ring-2 focus:ring-[#0F5845]/30 focus:border-[#0F5845] disabled:opacity-50 transition-colors"
+                className="w-full rounded-xl border border-[#E8E4DF] bg-white px-4 py-3 text-base text-[#1A1008] placeholder:text-[#C4BBAF] focus:outline-none focus:ring-2 focus:ring-[#002833]/20 focus:border-[#002833] disabled:opacity-50 transition-colors"
                 style={{ fontFamily: ff }}
                 aria-describedby={error ? "bp-gate-error" : undefined}
               />
@@ -105,7 +105,7 @@ export function BlueprintEmailGate({ sessionId, onVerified }: BlueprintEmailGate
             <button
               type="submit"
               disabled={isLoading || !email.trim()}
-              className="w-full rounded-xl bg-[#0F5845] hover:bg-[#0D4A3A] text-white font-semibold py-4 text-base transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full rounded-xl bg-[#002833] hover:bg-[#003d4d] text-[#F0EDE8] font-semibold py-4 text-base transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               style={{ fontFamily: ff }}
             >
               {isLoading ? "Verifying..." : "View My Results"}

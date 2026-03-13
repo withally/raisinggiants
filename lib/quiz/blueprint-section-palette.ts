@@ -6,13 +6,13 @@
 import type { SectionColor } from "@/lib/quiz/section-palette";
 
 const blueprintSectionPalette: Record<string, SectionColor> = {
-  "daily-moments": { light: "#C4EBE0", dark: "#0D4035" }, // soft teal
-  "discipline-boundaries": { light: "#B2E5D4", dark: "#1A4A38" }, // seafoam green
-  "emotional-connection": { light: "#CAF0E6", dark: "#0F3D30" }, // pale aqua
-  "values-legacy": { light: "#BDE8DC", dark: "#164438" }, // sage teal
+  "daily-moments": { light: "#FEF4AC", dark: "#3D3B1A" }, // butter
+  "discipline-boundaries": { light: "#EEC0DA", dark: "#4A1942" }, // pink
+  "emotional-connection": { light: "#B2DECD", dark: "#1A4A3A" }, // mint
+  "values-legacy": { light: "#B3D5DE", dark: "#002833" }, // blue
 };
 
-const blueprintFallback: SectionColor = { light: "#C4EBE0", dark: "#0D4035" };
+const blueprintFallback: SectionColor = { light: "#B2DECD", dark: "#1A4A3A" };
 
 export function getBlueprintSectionColor(sectionId: string): SectionColor {
   return blueprintSectionPalette[sectionId] ?? blueprintFallback;

@@ -5,9 +5,9 @@ interface BlueprintPatternsSectionProps {
   patterns: ArchetypeContent;
 }
 
-// Teal accent colors for Blueprint
-const tealDark = "#0D4035";
-const tealBorder = "#0D403530";
+// Blue accent from site palette
+const blueDark = "#002833";
+const blueBorder = "#00283330";
 
 export function BlueprintPatternsSection({ patterns }: BlueprintPatternsSectionProps) {
   return (
@@ -26,7 +26,7 @@ export function BlueprintPatternsSection({ patterns }: BlueprintPatternsSectionP
             style={{ fontFamily: ff, fontWeight: 800, color: "#1A1A1A" }}
           >
             The patterns that{" "}
-            <span style={{ fontFamily: ffSerif, fontStyle: "italic", color: tealDark }}>
+            <span style={{ fontFamily: ffSerif, fontStyle: "italic", color: blueDark }}>
               define
             </span>{" "}
             how you parent
@@ -46,13 +46,13 @@ export function BlueprintPatternsSection({ patterns }: BlueprintPatternsSectionP
                 {/* Number */}
                 <p
                   className="text-2xl shrink-0 mt-0.5"
-                  style={{ fontFamily: ffDisplay, fontWeight: 700, color: tealDark, opacity: 0.25 }}
+                  style={{ fontFamily: ffDisplay, fontWeight: 700, color: blueDark, opacity: 0.25 }}
                 >
                   {num}
                 </p>
 
                 {/* Content */}
-                <div className="border-l-2 pl-5" style={{ borderColor: tealBorder }}>
+                <div className="border-l-2 pl-5" style={{ borderColor: blueBorder }}>
                   {title && (
                     <p
                       className="text-base mb-1.5 leading-snug"
