@@ -64,30 +64,40 @@ Requirements for initial release (The Mirror — free product). Each maps to roa
 - [x] **BRAND-07**: Visual direction brief — typography, imagery system, layout approach, and brand tone recommendations *(done in Phase 4 but deleted 2026-02-28 — will be re-established in Phase 5)*
 - [x] **BRAND-08**: Rebrand execution plan mapping visual recommendations to specific codebase files with phased implementation scope *(done in Phase 4 but deleted 2026-02-28 — will be re-established in Phase 5)*
 
-## Product 2 Scope — The Blueprint (Paid)
+## v2 Requirements — The Blueprint (Paid)
 
-Deferred to Product 2 release. Tracked but not in v1 roadmap.
+Requirements for milestone v2.0. Each maps to roadmap phases.
 
-### Payment & Delivery
+### Blueprint Quiz
 
-- [ ] **PAY-01**: Stripe Checkout redirect for Blueprint purchase
-- [ ] **PAY-02**: Webhook-driven fulfillment triggered by checkout.session.completed (not success page redirect)
-- [ ] **PAY-03**: Idempotent webhook handler (handles duplicate Stripe events)
-- [ ] **PAY-04**: Success page shows download button or "check your email" based on fulfillment status
-- [ ] **PAY-05**: PDF delivered instantly via email after payment with download link
+- [ ] **BQUIZ-01**: User sees a parent-status gating question ("Are you a current parent / expecting / planning?") that adapts quiz framing
+- [ ] **BQUIZ-02**: User takes a full own-parenting quiz (card-style, one question per screen, progress bar, back navigation)
+- [ ] **BQUIZ-03**: Blueprint quiz scores into one of 9 archetypes using existing scoring engine (own-parenting lens)
+- [ ] **BQUIZ-04**: User sees their own-parenting archetype result as a teaser with "proceed to purchase" CTA
+- [ ] **BQUIZ-05**: Blueprint quiz answers persist to `bp_quiz_sessions` in Supabase
+- [ ] **BQUIZ-06**: Blueprint quiz state persists in localStorage (separate key from Mirror quiz)
 
-### PDF Guide
+### Payment & Fulfillment
 
-- [ ] **PDF-01**: 15-20 page fixed template with AI-personalized paragraphs via Moonshot Kimi 2.5
-- [ ] **PDF-02**: Warm, approachable premium design (therapy workbook meets Canva premium aesthetic)
-- [ ] **PDF-03**: Parenting origin profile section personalized to user's specific quiz answers
-- [ ] **PDF-04**: Cultural background insights section tailored to user's stated cultural context
-- [ ] **PDF-05**: Foundational patterns section (positive framing of user's parenting tendencies)
-- [ ] **PDF-06**: Specific watchouts section (shadow patterns and risks to be aware of)
-- [ ] **PDF-07**: Tailored reflection prompts specific to user's archetype and answers
-- [ ] **PDF-08**: Research snippets relevant to user's specific results with KOL attribution
-- [ ] **PDF-09**: Partner dialogue prompts section with conversation starters customized to user's blind spots
-- [ ] **PDF-10**: Conversation starter section designed for dialogue with partner and loved ones
+- [ ] **PAY-01**: User pays via Stripe Checkout redirect at $39-49 (founding member pricing)
+- [ ] **PAY-02**: Webhook handler processes `checkout.session.completed` with correct signature verification (`request.text()`)
+- [ ] **PAY-03**: Webhook handler is idempotent (duplicate Stripe events don't create duplicate orders/PDFs)
+- [ ] **PAY-04**: Success page shows order status (generating / ready / download link)
+- [ ] **PAY-05**: PDF stored in Supabase Storage private bucket after generation
+
+### PDF Generation & Delivery
+
+- [ ] **PDF-01**: Template-driven 15-20 page PDF with premium design (therapy workbook meets Canva premium)
+- [ ] **PDF-02**: PDF contains archetype overview, foundational patterns, and watchouts sections
+- [ ] **PDF-03**: PDF contains reflection prompts specific to user's archetype
+- [ ] **PDF-04**: PDF contains research snippets with KOL attribution
+- [ ] **PDF-05**: PDF contains bridge comparison section (inherited vs own archetype) when user has both Mirror and Blueprint sessions
+- [ ] **PDF-06**: User receives email with download link after payment (not PDF attachment)
+
+### Launch Integration
+
+- [ ] **LAUNCH-01**: Mirror result page Blueprint CTA upgraded from "coming soon" to live purchase button
+- [ ] **LAUNCH-02**: Blueprint has its own landing/sales page accessible from the main site
 
 ## Product 3 Scope — The Partner Match (Premium)
 
@@ -100,8 +110,10 @@ Deferred to future release. Tracked but not in roadmap.
 - **COUP-03**: Email invite flow — Person A enters partner's email, partner gets invited
 - **COUP-04**: Combined report shows alignment areas and potential conflict points
 - **COUP-05**: Partnership-specific dialogue prompts and dialogue kit for couple conversations
+- **COUP-06**: Partner dialogue prompts customized to user's blind spots (moved from Blueprint)
+- **COUP-07**: Conversation starter section designed for dialogue with partner and loved ones (moved from Blueprint)
 
-## v2 Requirements
+## Future Requirements
 
 Deferred to future release. Tracked but not in current roadmap.
 
@@ -117,6 +129,11 @@ Deferred to future release. Tracked but not in current roadmap.
 - **GROW-03**: PDF re-delivery flow ("lost my PDF?" email request)
 - **GROW-04**: A/B testing on email capture timing and result page conversion
 
+### Blueprint Enhancements
+
+- **BPEX-01**: Cultural background personalization in Blueprint PDF (culturally-variant copy per archetype)
+- **BPEX-02**: AI-personalized paragraphs within template (deferred — template-first for v2.0)
+
 ## Out of Scope
 
 Explicitly excluded. Documented to prevent scope creep.
@@ -127,6 +144,9 @@ Explicitly excluded. Documented to prevent scope creep.
 | Fully AI-generated PDF (no template) | Quality control impossible. Fixed template with AI paragraphs gives 80% personalization at 20% risk. Product 2 scope. |
 | Embedded Stripe payment (no redirect) | Higher PCI scope, more complex. Stripe Checkout redirect is trusted. Product 2 scope. |
 | Unlimited quiz retakes | Undermines result credibility. Users game for flattering results. |
+| AI-generated PDF content | Template-driven is faster, more reliable, and sufficient. AI adds complexity without proportional value for v2.0. |
+| PDF email attachment | Spam filter risk for new sending domains. Use download link instead. |
+| Partner dialogue in Blueprint | Individual product — partner content belongs in Product 3 (Partner Match). |
 | Social login (Google, Facebook) | Privacy concerns in deeply personal parenting context. Email is lower friction here. |
 | Affiliate / referral program | Needs purchase volume baseline first. Add after validating core flow. |
 | Live chat during quiz | Distracting, breaks flow, reduces completion. FAQ + helper text covers it. |
@@ -179,13 +199,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | BRAND-08 | Phase 5 | Pending (redo) |
 
 **Coverage:**
-- v1 requirements (Mirror + Brand): 34 total
-- Complete: 25
-- Pending: 9 (RSLT-06, LAND-01–05, BRAND-06–08)
-- Brand positioning requirements: 8 (BRAND-01–08) — 5 complete, 3 pending redo in Phase 5
-- Product 2 requirements: 15 (PAY-01–05, PDF-01–10)
-- Product 3 requirements: 5 (COUP-01–05)
+- v1 requirements (Mirror + Brand): 34 total — 25 complete, 9 pending
+- v2 requirements (Blueprint): 18 total — 0 complete (roadmap pending)
+- Product 3 requirements: 7 (COUP-01–07)
 
 ---
 *Requirements defined: 2026-02-23*
-*Last updated: 2026-02-28 — Rebrand to Kin; LAND-01–05 reset (old page nuked); BRAND-06–08 reset (visual direction deleted); BRAND phase corrected to Phase 4*
+*Last updated: 2026-03-13 — Milestone v2.0 Blueprint requirements added (BQUIZ-01–06, PAY-01–05, PDF-01–06, LAUNCH-01–02); partner dialogue moved to Product 3; AI generation removed from scope*
