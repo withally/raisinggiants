@@ -71,7 +71,7 @@ Requirements for milestone v2.0. Each maps to roadmap phases.
 ### Blueprint Quiz
 
 - [x] **BQUIZ-01**: User sees a parent-status gating question ("Are you a current parent / expecting / planning?") that adapts quiz framing
-- [ ] **BQUIZ-02**: User takes a full own-parenting quiz (card-style, one question per screen, progress bar, back navigation)
+- [x] **BQUIZ-02**: User takes a full own-parenting quiz (card-style, one question per screen, progress bar, back navigation)
 - [x] **BQUIZ-03**: Blueprint quiz scores into one of 9 archetypes using existing scoring engine (own-parenting lens)
 - [ ] **BQUIZ-04**: User sees their own-parenting archetype result as a teaser with "proceed to purchase" CTA
 - [x] **BQUIZ-05**: Blueprint quiz answers persist to `bp_quiz_sessions` in Supabase
@@ -198,7 +198,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | BRAND-07 | Phase 5 | Pending (redo) |
 | BRAND-08 | Phase 5 | Pending (redo) |
 | BQUIZ-01 | Phase 7 | Complete |
-| BQUIZ-02 | Phase 7 | Pending |
+| BQUIZ-02 | Phase 7 | Complete |
 | BQUIZ-03 | Phase 7 | Complete |
 | BQUIZ-04 | Phase 7 | Pending |
 | BQUIZ-05 | Phase 7 | Complete |
