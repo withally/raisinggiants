@@ -16,8 +16,7 @@ export const metadata: Metadata = {
   description: "Discover the parenting patterns you inherited — your personalised Mirror result.",
   openGraph: {
     title: "Your Result | Kin — The Mirror",
-    description:
-      "Discover the parenting patterns you inherited — your personalised Mirror result.",
+    description: "Discover the parenting patterns you inherited — your personalised Mirror result.",
     url: "https://meetkin.com/result",
     siteName: "Kin",
     images: [{ url: "/images/og-default.png", width: 1200, height: 630 }],
@@ -35,9 +34,7 @@ function ResultErrorState({ message }: { message: string }) {
         <p className="text-xs tracking-[0.25em] uppercase text-[#8A7A66] font-medium mb-4">
           The Mirror
         </p>
-        <h1
-          className="text-3xl sm:text-4xl font-semibold text-[#1A1008] mb-6 leading-tight"
-        >
+        <h1 className="text-3xl sm:text-4xl font-semibold text-[#1A1008] mb-6 leading-tight">
           {message}
         </h1>
         <p className="text-[#8A7A66] leading-relaxed mb-8">

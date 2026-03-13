@@ -47,9 +47,7 @@ export function EmailGateOverlay({ onDismiss }: EmailGateOverlayProps) {
           </p>
 
           {/* Headline */}
-          <h2
-            className="text-2xl sm:text-3xl font-semibold text-[#1A1008] mb-3 leading-snug"
-          >
+          <h2 className="text-2xl sm:text-3xl font-semibold text-[#1A1008] mb-3 leading-snug">
             Your result is ready.
           </h2>
 
