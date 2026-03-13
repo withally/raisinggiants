@@ -1,412 +1,572 @@
 # Architecture Research
 
-**Domain:** Quiz-to-personalized-PDF digital product (parenting assessment)
-**Researched:** 2026-02-23
-**Confidence:** MEDIUM — core patterns are well-established; PDF generation on Vercel serverless has edge cases that required multiple sources to clarify
+**Domain:** Blueprint integration — adding paid quiz + Stripe + PDF pipeline to existing Kin app
+**Researched:** 2026-03-13
+**Confidence:** HIGH — based on existing codebase inspection + verified patterns from Stripe/Supabase/Next.js official docs
 
 ---
 
-## Standard Architecture
+## Context: What Already Exists
 
-### System Overview
+This document is integration-specific. The codebase already has a working architecture. The job is to add Blueprint features onto it — not redesign.
 
-```
-┌─────────────────────────────────────────────────────────────────────────┐
-│                           CLIENT LAYER (Browser)                         │
-│                                                                           │
-│  ┌────────────┐  ┌─────────────────┐  ┌──────────────┐  ┌───────────┐  │
-│  │  Landing   │  │   Quiz Shell    │  │  Free Result │  │  Download │  │
-│  │   Page     │  │  (multi-step)   │  │    Page      │  │   Page    │  │
-│  └─────┬──────┘  └────────┬────────┘  └──────┬───────┘  └─────┬─────┘  │
-│        │                  │                   │                │         │
-│        │         Zustand quiz store           │                │         │
-│        │         (in-memory, persisted)       │                │         │
-└────────┼──────────────────┼───────────────────┼────────────────┼─────────┘
-         │                  │                   │                │
-         ▼                  ▼                   ▼                ▼
-┌─────────────────────────────────────────────────────────────────────────┐
-│                       NEXT.JS APP ROUTER LAYER                           │
-│                                                                           │
-│  ┌────────────────────┐  ┌────────────────────┐  ┌──────────────────┐  │
-│  │  Server Components │  │   Route Handlers   │  │  Server Actions  │  │
-│  │  (RSC, SSG pages)  │  │  /api/pdf          │  │  (form submit,   │  │
-│  │                    │  │  /api/webhooks/    │  │   quiz save)     │  │
-│  │                    │  │    stripe          │  │                  │  │
-│  └────────────────────┘  └────────────────────┘  └──────────────────┘  │
-└────────────────────────────────┬────────────────────────────────────────┘
-                                 │
-         ┌───────────────────────┼───────────────────────┐
-         ▼                       ▼                       ▼
-┌─────────────────┐   ┌─────────────────┐   ┌────────────────────────┐
-│   Supabase DB   │   │  Moonshot AI    │   │       Stripe           │
-│  (PostgreSQL)   │   │  Kimi 2.5 API   │   │   (Checkout + Events)  │
-│                 │   │                 │   │                        │
-│ quiz_sessions   │   │  Structured     │   │  checkout.session.     │
-│ quiz_answers    │   │  JSON output    │   │  completed webhook      │
-│ orders          │   │  per section    │   │                        │
-│ pdf_files       │   └─────────────────┘   └────────────────────────┘
-└─────────────────┘
-         │
-         ▼
-┌─────────────────┐
-│ Supabase Storage│
-│  (PDF bucket,   │
-│  private with   │
-│  signed URLs)   │
-└─────────────────┘
-```
+**Already built and working:**
+- `app/quiz/page.tsx` + `components/quiz/QuizShell.tsx` — full multi-step quiz UI
+- `stores/quizStore.ts` — Zustand store with `persist` middleware (localStorage key `quiz-session`)
+- `app/api/quiz-session/route.ts` — POST (create session) + PATCH (save results)
+- `lib/quiz/compute-profile.ts` — `computeDimensionProfile(answers, questions?)` accepts custom question arrays
+- `lib/quiz/scoring-matrix.ts` — `getResult(dimensionProfile)` returns `{ primary, secondaries }`
+- `lib/archetypes/archetypes.ts` — 9 archetypes with `dimensionProfile` fingerprints
+- `app/result/page.tsx` — Server Component reads `quiz_sessions` by session UUID
+- `lib/supabase/server.ts` — `createAdminClient()` (service_role, bypasses RLS)
+- `lib/email/send.ts` + `lib/email/client.ts` — Resend integration (already installed)
+- `supabase/migrations/20260224000000_phase1_data_foundation.sql` — `quiz_sessions` + `orders` tables + `blueprints` storage bucket already exist
 
-### Component Responsibilities
+**Notable: `orders` table schema is already migrated.** It has `quiz_session_id`, `stripe_checkout_session_id`, `status` enum, `pdf_storage_path`, `paid_at`, `fulfilled_at`, `delivered_at`. The core DB schema is done.
 
-| Component | Responsibility | Typical Implementation |
-|-----------|----------------|------------------------|
-| Quiz Shell | Step navigation, answer collection, progress state | Next.js Client Component + Zustand store |
-| Zustand Quiz Store | In-memory quiz state across steps; optional localStorage persist for resumption | `zustand` with `persist` middleware |
-| Free Result Page | Display archetype summary computed from quiz answers | Server Component — reads from Supabase after session save |
-| `/api/webhooks/stripe` Route Handler | Receive `checkout.session.completed` from Stripe, trigger PDF generation | Route Handler (external caller requires HTTP endpoint) |
-| `/api/pdf` Route Handler | Generate PDF from quiz answers + AI content; return binary or store in Supabase | Route Handler (custom Content-Type headers, streaming) |
-| Moonshot AI Kimi 2.5 Client | Call AI API with quiz answers per section, return structured JSON with personalized text | Server-side utility module (called from Route Handler) |
-| `@react-pdf/renderer` | Render typed React components → PDF binary on server | Server-side only render (Node.js environment) |
-| Supabase DB | Persist quiz sessions, answers, order records, PDF storage paths | PostgreSQL via `@supabase/ssr` + service-role client in Route Handlers |
-| Supabase Storage | Store generated PDF files, serve via signed URLs with expiry | Private bucket; `createSignedUrl()` for time-limited access |
-| Stripe Checkout | Payment session creation, redirect flow, webhook events | `stripe` Node SDK + `checkout.session.completed` event |
-| Download Page | Show download button after successful payment, fetch signed URL | Server Component — validates order status then generates signed URL |
+**NOT yet built:** Stripe checkout route, webhook handler, Blueprint quiz questions, Blueprint Zustand store, PDF generation, Blueprint result/success pages.
 
 ---
 
-## Recommended Project Structure
+## System Overview
+
+### Full System After Blueprint Integration
 
 ```
-src/
-├── app/                          # Next.js App Router
-│   ├── (marketing)/              # Route group — no shared layout with app
-│   │   └── page.tsx              # Landing page
-│   ├── quiz/                     # Multi-step quiz flow
-│   │   ├── page.tsx              # Quiz entry — loads quiz shell (Client Component)
-│   │   └── [step]/               # Optional: URL-per-step for deep linking
-│   ├── result/                   # Free result summary page
-│   │   └── page.tsx              # Shows archetype, teases full report
-│   ├── checkout/                 # Stripe redirect handling
-│   │   └── success/
-│   │       └── page.tsx          # Post-payment confirmation + download link
-│   └── api/
-│       ├── quiz/
-│       │   └── route.ts          # Save completed quiz session to Supabase
-│       ├── checkout/
-│       │   └── route.ts          # Create Stripe Checkout session
-│       ├── pdf/
-│       │   └── route.ts          # Generate PDF (AI content + render) — or trigger storage
-│       └── webhooks/
-│           └── stripe/
-│               └── route.ts      # Handle checkout.session.completed
-│
-├── components/
-│   ├── quiz/
-│   │   ├── QuizShell.tsx         # Client Component — step navigation container
-│   │   ├── QuizStep.tsx          # Individual step renderer
-│   │   ├── QuizProgress.tsx      # Progress indicator
-│   │   └── questions/            # Question type components (scale, choice, text)
-│   ├── pdf/
-│   │   ├── BlueprintDocument.tsx # @react-pdf/renderer Document root
-│   │   ├── sections/             # One component per PDF section
-│   │   │   ├── CoverSection.tsx
-│   │   │   ├── ArchetypeSection.tsx
-│   │   │   ├── OriginProfileSection.tsx
-│   │   │   ├── CulturalInsightsSection.tsx
-│   │   │   ├── WatchoutsSection.tsx
-│   │   │   ├── ReflectionPromptsSection.tsx
-│   │   │   └── ConversationStartersSection.tsx
-│   │   └── styles/               # Shared PDF StyleSheet definitions
-│   └── ui/                       # Shared UI components (shadcn/ui)
-│
-├── lib/
-│   ├── quiz/
-│   │   ├── questions.ts          # Question bank and quiz structure
-│   │   ├── scoring.ts            # Archetype scoring logic
-│   │   └── archetypes.ts         # Archetype definitions (6-8 types)
-│   ├── ai/
-│   │   ├── moonshot.ts           # Moonshot AI Kimi 2.5 client
-│   │   └── prompts/              # One prompt file per PDF section
-│   │       ├── archetype.ts
-│   │       ├── origin-profile.ts
-│   │       └── ...
-│   ├── pdf/
-│   │   └── generate.ts           # Orchestrates AI calls + PDF render
-│   ├── stripe/
-│   │   └── client.ts             # Stripe SDK singleton
-│   └── supabase/
-│       ├── client.ts             # Browser client (@supabase/ssr)
-│       └── server.ts             # Server client (service-role for webhooks)
-│
-├── stores/
-│   └── quizStore.ts              # Zustand store for quiz state
-│
-└── types/
-    ├── quiz.ts                   # Question, Answer, Session types
-    ├── archetype.ts              # Archetype type definitions
-    └── pdf.ts                    # PDF content section types
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                              CLIENT LAYER                                      │
+│                                                                                │
+│  ┌──────────┐  ┌───────────────┐  ┌──────────────┐  ┌──────────────────────┐ │
+│  │  /quiz   │  │ /blueprint/   │  │   /result    │  │ /blueprint/success   │ │
+│  │ (Mirror) │  │     quiz      │  │ (Mirror RSC) │  │  (post-payment RSC)  │ │
+│  └────┬─────┘  └───────┬───────┘  └──────┬───────┘  └──────────┬───────────┘ │
+│       │                │                  │                       │             │
+│  quizStore        blueprintStore     (no client state)     (no client state)   │
+│  (localStorage:   (localStorage:                                               │
+│   quiz-session)    bp-session)                                                 │
+└───────┼────────────────┼──────────────────┼───────────────────────┼────────────┘
+        │                │                  │                       │
+        ▼                ▼                  ▼                       ▼
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                        NEXT.JS API LAYER (Route Handlers)                      │
+│                                                                                │
+│  ┌─────────────────────┐  ┌───────────────────────┐  ┌──────────────────┐    │
+│  │ /api/quiz-session   │  │ /api/blueprint-session│  │  /api/checkout   │    │
+│  │  POST: create       │  │  POST: create         │  │  POST: create    │    │
+│  │  PATCH: complete    │  │  PATCH: complete       │  │  Stripe session  │    │
+│  └─────────────────────┘  └───────────────────────┘  └──────────────────┘    │
+│                                                                                │
+│  ┌───────────────────────────────────────────────────────────────────────┐    │
+│  │              /api/webhooks/stripe (POST)                               │    │
+│  │              checkout.session.completed → fulfillOrder()               │    │
+│  └───────────────────────────────────────────────────────────────────────┘    │
+└──────────────────────────────────────────┬───────────────────────────────────┘
+                                            │
+           ┌────────────────────────────────┼──────────────────────────┐
+           ▼                                ▼                          ▼
+┌──────────────────┐              ┌──────────────────┐       ┌─────────────────┐
+│   Supabase DB    │              │      Stripe       │       │     Resend      │
+│  quiz_sessions   │              │  Checkout hosted  │       │  PDF attachment │
+│  bp_quiz_sessions│              │  + webhook events │       │  email delivery │
+│  orders          │              │  + metadata IDs   │       └─────────────────┘
+└──────────┬───────┘              └──────────────────┘
+           │
+           ▼
+┌──────────────────┐
+│ Supabase Storage │
+│  blueprints/     │
+│  (private bucket)│
+│  signed URLs     │
+└──────────────────┘
 ```
 
-### Structure Rationale
+### New Components Required
 
-- **`app/api/webhooks/stripe/`:** Stripe webhooks require Route Handlers (external HTTP caller, cannot use Server Actions). Isolated directory makes security review easy.
-- **`components/pdf/sections/`:** Each PDF section is a separate React component. This enables independent iteration on design without touching generation logic.
-- **`lib/ai/prompts/`:** One file per section keeps prompts auditable and easy to tune without touching rendering code.
-- **`stores/quizStore.ts`:** Zustand at root level — used only in Client Components, never in Server Components or Route Handlers.
-- **`lib/supabase/server.ts`:** Service-role client for webhook handlers (bypasses Row Level Security). Never expose to client.
+| Component | Type | Relationship to Existing |
+|-----------|------|--------------------------|
+| `stores/blueprintStore.ts` | NEW Zustand store | Mirrors `quizStore.ts` structure; separate localStorage key `bp-session` |
+| `app/blueprint/quiz/page.tsx` | NEW Next.js page | Replaces the coming-soon `/blueprint` page with the actual quiz |
+| `components/blueprint/quiz/BlueprintShell.tsx` | NEW Client Component | Mirrors `QuizShell.tsx`; uses `blueprintStore` + Blueprint questions |
+| `lib/quiz/blueprint-questions.ts` | NEW question bank | Same `QuizQuestion[]` shape as `questions.ts`; own-parenting lens |
+| `app/api/blueprint-session/route.ts` | NEW Route Handler | Mirrors `quiz-session/route.ts`; writes to `bp_quiz_sessions` table |
+| `app/api/checkout/route.ts` | NEW Route Handler | Creates Stripe Checkout session; passes `bp_session_id` + `mirror_session_id` in metadata |
+| `app/api/webhooks/stripe/route.ts` | NEW Route Handler | `checkout.session.completed` → PDF generation → Supabase storage → email |
+| `lib/stripe/client.ts` | NEW singleton | Stripe SDK initialized server-side only |
+| `lib/pdf/generate.ts` | NEW orchestrator | Assembles archetype data → renders PDF → returns `Buffer` |
+| `components/pdf/BlueprintDocument.tsx` | NEW react-pdf component | Template-driven document; sections driven by archetype data |
+| `app/blueprint/success/page.tsx` | NEW Server Component | Reads `orders` table → shows download link or "check email" state |
+
+---
+
+## New vs Modified: Full Inventory
+
+### New Files (create from scratch)
+
+```
+lib/
+├── stripe/
+│   └── client.ts                      # Stripe SDK singleton (server-only)
+├── quiz/
+│   └── blueprint-questions.ts         # Blueprint question bank (own-parenting lens)
+├── pdf/
+│   ├── generate.ts                    # PDF orchestration: archetype data → Buffer
+│   └── blueprint-content.ts           # Pre-written copy per archetype per section
+│
+app/
+├── blueprint/
+│   ├── quiz/
+│   │   └── page.tsx                   # Blueprint quiz entry point
+│   └── success/
+│       └── page.tsx                   # Post-payment success/download page
+├── api/
+│   ├── blueprint-session/
+│   │   └── route.ts                   # Create/complete Blueprint quiz sessions
+│   ├── checkout/
+│   │   └── route.ts                   # Create Stripe Checkout session
+│   └── webhooks/
+│       └── stripe/
+│           └── route.ts               # Stripe webhook handler + fulfillOrder()
+│
+components/
+├── blueprint/
+│   └── quiz/
+│       └── BlueprintShell.tsx         # Blueprint quiz orchestrator (mirrors QuizShell)
+├── pdf/
+│   ├── BlueprintDocument.tsx          # @react-pdf/renderer Document root
+│   └── sections/                      # One component per PDF section
+│
+stores/
+└── blueprintStore.ts                  # Zustand store for Blueprint quiz state
+│
+supabase/
+└── migrations/
+    └── [timestamp]_blueprint_quiz_sessions.sql   # New bp_quiz_sessions table
+```
+
+### Modified Files (extend, not rewrite)
+
+```
+lib/email/send.ts        → ADD sendBlueprintDelivery(to, pdfBuffer) function
+lib/email/templates/     → ADD blueprint-delivery.ts (PDF attachment template)
+app/blueprint/page.tsx   → REPLACE coming-soon page with quiz entry / redirect to /blueprint/quiz
+```
+
+### Unchanged Files (reused as-is)
+
+```
+lib/quiz/compute-profile.ts      # computeDimensionProfile(answers, blueprintQuestions) — already accepts custom questions param
+lib/quiz/scoring-matrix.ts       # getResult(profile) — works on any DimensionProfile, archetype-agnostic
+lib/archetypes/archetypes.ts     # Same 9 archetypes used for Blueprint scoring
+lib/archetypes/types.ts          # All types reused
+lib/supabase/server.ts           # createAdminClient() — same pattern
+components/quiz/*                # All existing quiz sub-components (QuizCard, QuizProgress, etc.) reused directly by BlueprintShell
+stores/quizStore.ts              # Unchanged — Mirror quiz state lives here
+```
+
+---
+
+## Database Changes
+
+### New Table: `bp_quiz_sessions`
+
+The Mirror uses `quiz_sessions`. Blueprint needs its own parallel table so both can exist independently per user (a user may have both a Mirror result AND a Blueprint result).
+
+```sql
+CREATE TABLE bp_quiz_sessions (
+  id                  UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  email               TEXT,
+  parent_status       TEXT,                          -- 'current-parent' | 'expecting' | 'planning' | 'unsure'
+  status              TEXT NOT NULL DEFAULT 'in_progress'
+                      CHECK (status IN ('in_progress', 'completed')),
+  answers             JSONB,
+  dimension_scores    JSONB,
+  archetype_id        TEXT,
+  cultural_background TEXT,
+  mirror_session_id   UUID,                          -- FK to quiz_sessions.id (nullable — Blueprint can be standalone)
+  started_at          TIMESTAMPTZ NOT NULL DEFAULT now(),
+  completed_at        TIMESTAMPTZ,
+  created_at          TIMESTAMPTZ NOT NULL DEFAULT now(),
+  updated_at          TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+```
+
+**Design rationale:** Keeping `bp_quiz_sessions` separate from `quiz_sessions` avoids polluting the Mirror table with a `quiz_type` discriminator column and keeps RLS policies clean. The `mirror_session_id` nullable FK links the two if a user did both quizzes — this enables the comparison bridge analysis.
+
+### Existing `orders` Table: No Schema Changes
+
+The `orders` table already has all required columns:
+- `quiz_session_id` — repurpose as `bp_quiz_session_id` OR add a separate FK column
+- `stripe_checkout_session_id` — idempotency guard
+- `status` enum: `pending → paid → generating → fulfilled → delivered`
+- `pdf_storage_path` — Supabase storage path
+- `paid_at`, `fulfilled_at`, `delivered_at` — fulfillment tracking
+
+**Decision:** Add a `bp_session_id` column via migration to make the FK explicit. The `quiz_session_id` column stays for forward-compatibility with possible future Mirror upgrades.
+
+```sql
+ALTER TABLE orders ADD COLUMN bp_session_id UUID REFERENCES bp_quiz_sessions(id) ON DELETE RESTRICT;
+```
+
+### Existing `blueprints` Storage Bucket: No Changes
+
+Already created by `20260224000000_phase1_data_foundation.sql`:
+- Private bucket, 50MB file limit, PDF-only MIME type
+- Path convention: `blueprints/{order_id}/blueprint.pdf`
+
+---
+
+## Data Flow: Payment → PDF → Email
+
+```
+1. BLUEPRINT QUIZ COMPLETION
+   Browser → BlueprintShell finishes last question
+   → computeDimensionProfile(answers, BLUEPRINT_QUESTIONS)
+   → getResult(profile) → { primary: archetypeId, secondaries: [...] }
+   → PATCH /api/blueprint-session { sessionId, answers, dimensionScores, archetypeId }
+   → Supabase: UPDATE bp_quiz_sessions SET status='completed', archetype_id=...
+   → router.push('/blueprint/success-pending?bp_session=' + sessionId)
+      OR directly to checkout
+
+2. CHECKOUT INITIATION
+   /blueprint/success-pending (or button on blueprint result page)
+   → POST /api/checkout {
+       bp_session_id: UUID,
+       mirror_session_id: UUID | null   (from quizStore.sessionId if present)
+     }
+   → Server: reads bp_quiz_sessions.email for Stripe customer_email
+   → stripe.checkout.sessions.create({
+       line_items: [{ price: BLUEPRINT_PRICE_ID, quantity: 1 }],
+       mode: 'payment',
+       customer_email: email,
+       success_url: '/blueprint/success?session_id={CHECKOUT_SESSION_ID}',
+       cancel_url: '/blueprint',
+       metadata: {
+         bp_session_id: bpSessionId,
+         mirror_session_id: mirrorSessionId ?? '',
+       }
+     })
+   → Returns: { checkoutUrl }
+   → Browser redirects to Stripe-hosted checkout page
+
+3. PAYMENT COMPLETES (Stripe fires webhook)
+   Stripe → POST /api/webhooks/stripe
+   → const body = await req.text()           // MUST be .text(), not .json()
+   → const sig = req.headers.get('stripe-signature')
+   → stripe.webhooks.constructEvent(body, sig, STRIPE_WEBHOOK_SECRET)
+   → event.type === 'checkout.session.completed'
+   → const { bp_session_id, mirror_session_id } = session.metadata
+   → Idempotency: SELECT id FROM orders WHERE stripe_checkout_session_id = session.id
+     → If exists and fulfilled_at IS NOT NULL: return 200 (already done)
+   → INSERT INTO orders { stripe_checkout_session_id, bp_session_id, customer_email, amount_cents, status: 'paid', paid_at }
+   → UPDATE orders SET status = 'generating'
+   → await fulfillOrder({ orderId, bpSessionId, mirrorSessionId })
+   → Return 200 immediately (Stripe expects fast response)
+
+4. fulfillOrder() — INLINE (sync within webhook for <60s Vercel Pro timeout)
+   → Fetch bp_quiz_sessions WHERE id = bpSessionId
+   → Fetch quiz_sessions WHERE id = mirrorSessionId (if present)
+   → Determine hasBothQuizzes = mirrorSessionId && mirrorSession.archetype_id
+   → const archetype = ARCHETYPES.find(a => a.id === bpSession.archetype_id)
+   → const mirrorArchetype = hasBothQuizzes ? ARCHETYPES.find(...) : null
+   → const pdfBuffer = await generateBlueprintPDF({
+       bpArchetype: archetype,
+       mirrorArchetype,
+       parentStatus: bpSession.parent_status,
+       culturalBackground: bpSession.cultural_background,
+       hasBridgeAnalysis: hasBothQuizzes,
+     })
+   → const storagePath = `blueprints/${orderId}/blueprint.pdf`
+   → supabase.storage.from('blueprints').upload(storagePath, pdfBuffer)
+   → UPDATE orders SET pdf_storage_path = storagePath, status = 'fulfilled', fulfilled_at = now()
+   → await sendBlueprintDelivery(customerEmail, pdfBuffer)   // Resend with PDF attachment
+   → UPDATE orders SET status = 'delivered', delivered_at = now()
+
+5. SUCCESS PAGE (/blueprint/success?session_id=...)
+   → Server Component: SELECT * FROM orders WHERE stripe_checkout_session_id = sessionId
+   → If status = 'fulfilled' or 'delivered':
+       → supabase.storage.createSignedUrl(pdf_storage_path, 3600) → signedUrl
+       → Render: download button + "check your email" note
+   → If status = 'paid' or 'generating':
+       → Render: "Your Blueprint is being prepared" + email instructions
+       → Optional: 5s client-side polling via useEffect → re-fetch status
+```
+
+---
+
+## Second Quiz: Reuse vs Extend
+
+### What Gets Reused Directly
+
+`computeDimensionProfile(answers, questions?)` already accepts a `questions` parameter override. Pass `BLUEPRINT_QUESTIONS` instead of the default `QUESTIONS`. The same 11-dimension scoring space and `getResult()` function work unchanged.
+
+`getResult(profile)` returns `{ primary, secondaries }` — identical output format.
+
+All quiz sub-components (`QuizCard`, `QuizProgress`, `OptionCard`, `QuizSectionHeader`, `WhyWeAskThis`) are generic and reusable. `BlueprintShell` imports them directly.
+
+`createAdminClient()`, `lib/supabase/server.ts` — unchanged.
+
+### What Gets Extended
+
+**`stores/blueprintStore.ts`:** New Zustand store with the same shape as `quizStore.ts` plus a `parentStatus` field (the gating question answer) and `bpSessionId`. Different localStorage key (`bp-session`) so Mirror and Blueprint state do not collide.
+
+**`app/api/blueprint-session/route.ts`:** Mirrors `quiz-session/route.ts` exactly but writes to `bp_quiz_sessions` instead of `quiz_sessions`. Copy the file, rename the table reference.
+
+**`lib/quiz/blueprint-questions.ts`:** New question bank using the exact same `QuizQuestion[]` type from `questions.ts`. Questions are own-parenting lens ("When your child is upset, what do you usually do?" vs "When you were upset as a child..."). Parent-status gating question is handled as the first question with a special `id: 'q-parent-status'` that routes to different subsequent question framing.
+
+### Parent-Status Gating
+
+The first Blueprint question is `"Are you currently a parent, expecting, planning, or exploring?"` with options:
+- `current-parent` → questions framed in present behavior ("I do / I find myself")
+- `expecting` → questions framed in aspiration + anticipation
+- `planning` / `unsure` → questions framed as intention and values
+
+**Architecture decision:** All three paths use the same question IDs and `dimensionScores` maps. The framing difference is in the `question` text and `leadIn` field, not the scoring. This means the same `computeDimensionProfile` and `getResult` work for all paths without branching in the scoring layer.
+
+**Implementation:** Store `parentStatus` in `blueprintStore`. When rendering, `BlueprintShell` selects a question variant array from `BLUEPRINT_QUESTIONS` filtered by `parentStatus`. The scoring function receives the filtered array.
 
 ---
 
 ## Architectural Patterns
 
-### Pattern 1: Quiz State in Zustand + Server Persist on Completion
+### Pattern 1: Stripe Webhook with `request.text()` for Signature Verification
 
-**What:** Quiz answers live in a Zustand store while the user is actively taking the quiz. On quiz completion (final step submit), a Server Action or API route persists the full session to Supabase in one write.
+**What:** In Next.js App Router, Stripe webhook signature verification requires the raw request body. Use `await req.text()`, not `await req.json()`. Next.js does not auto-parse on `.text()`.
 
-**When to use:** Any multi-step flow where answers accumulate across 20-50 questions. Prevents N round-trips to the server during the quiz.
+**When to use:** Any Stripe webhook handler in App Router. This is a hard requirement — using `.json()` will cause "No signatures found matching the expected signature" errors.
 
-**Trade-offs:** Answers are lost on hard refresh mid-quiz unless `persist` middleware writes to `localStorage`. Persisting to localStorage is fine for non-sensitive quiz data. Supabase write happens once at end — simpler, no partial-save complexity.
+**Trade-offs:** None. `request.text()` is the correct method. Never use `request.body` in App Router.
 
-**Example:**
-```typescript
-// stores/quizStore.ts
-import { create } from 'zustand'
-import { persist } from 'zustand/middleware'
-
-interface QuizState {
-  currentStep: number
-  answers: Record<string, string | number | string[]>
-  setAnswer: (questionId: string, value: string | number | string[]) => void
-  nextStep: () => void
-  prevStep: () => void
-  reset: () => void
-}
-
-export const useQuizStore = create<QuizState>()(
-  persist(
-    (set) => ({
-      currentStep: 0,
-      answers: {},
-      setAnswer: (questionId, value) =>
-        set((state) => ({ answers: { ...state.answers, [questionId]: value } })),
-      nextStep: () => set((state) => ({ currentStep: state.currentStep + 1 })),
-      prevStep: () => set((state) => ({ currentStep: state.currentStep - 1 })),
-      reset: () => set({ currentStep: 0, answers: {} }),
-    }),
-    { name: 'quiz-session' }
-  )
-)
-```
-
-### Pattern 2: Supabase Anonymous Session for Pre-Payment Data Linking
-
-**What:** On quiz start (or first answer), call Supabase `signInAnonymously()` to create an anonymous user. Store quiz answers under this user ID. When Stripe Checkout session is created, pass the Supabase `user_id` as metadata. Webhook uses this ID to locate answers for PDF generation.
-
-**When to use:** Product has no required account creation. Stripe metadata (max 500 chars per value, 50 pairs) is sufficient for a single `user_id` UUID.
-
-**Trade-offs:** Anonymous sessions are device-specific — users who clear cookies lose access. Acceptable for this product (email delivery of PDF mitigates loss). Requires enabling anonymous sign-ins in Supabase dashboard.
-
-**Example:**
-```typescript
-// On quiz start
-const { data: { user } } = await supabase.auth.signInAnonymously()
-// user.id is now the session anchor for all subsequent DB writes
-
-// On Stripe Checkout creation (api/checkout/route.ts)
-const session = await stripe.checkout.sessions.create({
-  // ...line_items, mode, success_url
-  metadata: {
-    supabase_user_id: user.id,
-    quiz_session_id: quizSessionId, // row ID in quiz_sessions table
-  },
-})
-```
-
-### Pattern 3: Webhook-Triggered PDF Generation with Idempotency Guard
-
-**What:** Stripe sends `checkout.session.completed` to `/api/webhooks/stripe`. The handler verifies the signature, checks the order hasn't already been fulfilled (idempotency), then triggers PDF generation. PDF is stored in Supabase Storage and a signed URL is sent to the customer.
-
-**When to use:** Always. Stripe explicitly states: "You must use webhooks to make sure fulfillment happens for every payment." Do not rely solely on the success page redirect — users may close the tab.
-
-**Trade-offs:** Adds async complexity. PDF generation inside the webhook handler must complete within Vercel's function timeout (60s on Pro, 10s on Hobby). For the 15-20 page personalized PDF with multiple AI calls, this is a real constraint — see Scaling Considerations.
-
-**Example:**
 ```typescript
 // app/api/webhooks/stripe/route.ts
 export async function POST(req: Request) {
-  const body = await req.text() // Must use .text() for signature verification
-  const sig = req.headers.get('stripe-signature')!
+  const body = await req.text()  // raw body for Stripe signature
+  const sig = req.headers.get('stripe-signature')
+  if (!sig) return new Response('Missing signature', { status: 400 })
 
   let event: Stripe.Event
   try {
     event = stripe.webhooks.constructEvent(body, sig, process.env.STRIPE_WEBHOOK_SECRET!)
-  } catch {
-    return new Response('Invalid signature', { status: 400 })
+  } catch (err) {
+    return new Response(`Webhook Error: ${err}`, { status: 400 })
   }
 
   if (event.type === 'checkout.session.completed') {
     const session = event.data.object as Stripe.Checkout.Session
-
-    // Idempotency: check if order already fulfilled
-    const { data: existingOrder } = await supabase
-      .from('orders')
-      .select('id, fulfilled_at')
-      .eq('stripe_session_id', session.id)
-      .single()
-
-    if (existingOrder?.fulfilled_at) {
-      return new Response('Already fulfilled', { status: 200 })
-    }
-
-    const quizSessionId = session.metadata?.quiz_session_id
-    // Trigger PDF generation + storage
-    await fulfillOrder(session.id, quizSessionId)
+    await fulfillOrder(session)
   }
 
   return new Response('OK', { status: 200 })
 }
 ```
 
-### Pattern 4: Sectional AI Generation with Structured Output
+Confidence: HIGH — confirmed by Stripe official docs + Next.js GitHub issue #60002.
 
-**What:** Rather than asking the AI to generate the entire PDF in one prompt, split generation into one API call per PDF section (7 sections). Each call returns a typed JSON object with the text fields for that section. Errors on one section don't fail the entire PDF.
+### Pattern 2: Metadata Handshake for Fulfillment Correlation
 
-**When to use:** Any PDF with 5+ sections and >500 tokens total output. Improves reliability, enables per-section retry, and respects context window limits.
+**What:** Pass `bp_session_id` and optionally `mirror_session_id` in Stripe Checkout session metadata. The webhook reads these IDs to locate the quiz data for PDF generation.
 
-**Trade-offs:** 7 sequential AI calls adds latency (est. 15-35 seconds total for Kimi 2.5). Can be parallelized with `Promise.all()` for independent sections. Requires consistent Pydantic-style schema definitions per section.
+**When to use:** Any product where fulfillment requires application-side data that predates the payment.
 
-**Example:**
+**Trade-offs:** Metadata values are capped at 500 chars each. UUIDs are 36 chars — well within limits. Keep metadata to IDs only; retrieve data from the DB inside the webhook handler.
+
 ```typescript
-// lib/ai/generate.ts
-interface ArchetypeSection {
-  headline: string
-  body_paragraph: string
-  reflection_callout: string
-}
+// app/api/checkout/route.ts
+const session = await stripe.checkout.sessions.create({
+  line_items: [{ price: process.env.BLUEPRINT_PRICE_ID!, quantity: 1 }],
+  mode: 'payment',
+  customer_email: customerEmail,
+  success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/blueprint/success?session_id={CHECKOUT_SESSION_ID}`,
+  cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/blueprint`,
+  metadata: {
+    bp_session_id: bpSessionId,
+    mirror_session_id: mirrorSessionId ?? '',
+  },
+})
+```
 
-async function generateArchetypeSection(
-  answers: QuizAnswers,
-  archetype: Archetype
-): Promise<ArchetypeSection> {
-  const response = await moonshot.chat.completions.create({
-    model: 'moonshot-v1-8k',
-    response_format: { type: 'json_object' }, // Structured output
-    messages: [
-      { role: 'system', content: ARCHETYPE_SYSTEM_PROMPT },
-      { role: 'user', content: buildArchetypePrompt(answers, archetype) },
-    ],
-  })
-  return JSON.parse(response.choices[0].message.content) as ArchetypeSection
+### Pattern 3: Idempotent Webhook Fulfillment
+
+**What:** Before running fulfillment, check if an `orders` row with the same `stripe_checkout_session_id` already has `fulfilled_at IS NOT NULL`. If yes, return 200 without processing. Stripe may retry webhooks if your handler takes too long or returns non-2xx.
+
+**When to use:** Always. Stripe's webhook retry policy can fire the same event multiple times. Without idempotency, a user could receive two PDFs or be billed the generation cost twice.
+
+**Trade-offs:** Requires one extra DB read per webhook event. Negligible cost.
+
+```typescript
+// Inside fulfillOrder():
+const { data: existing } = await supabase
+  .from('orders')
+  .select('id, fulfilled_at')
+  .eq('stripe_checkout_session_id', checkoutSessionId)
+  .maybeSingle()
+
+if (existing?.fulfilled_at) return // Already fulfilled — skip
+```
+
+### Pattern 4: Template-Driven PDF with `@react-pdf/renderer`
+
+**What:** Pre-written archetype copy (15-20 pages) is stored in `lib/pdf/blueprint-content.ts` as a structured data object keyed by `ArchetypeId`. The PDF renderer selects the correct copy at generation time based on the user's `primary` archetype. No AI calls needed — content exists for all 9 archetypes.
+
+**When to use:** This project. PROJECT.md explicitly states "template-first PDF (no AI generation)." The 9-archetype x ~15 sections grid produces ~135 content blocks that can be written and validated ahead of time.
+
+**Trade-offs:** More upfront content work. In exchange: no AI API costs, no generation latency, no reliability dependency on a third-party AI service.
+
+```typescript
+// lib/pdf/blueprint-content.ts
+export const BLUEPRINT_CONTENT: Record<ArchetypeId, BlueprintContent> = {
+  'steady-anchor': {
+    coverTagline: '...',
+    ownArchetypeHeadline: '...',
+    ownArchetypeBody: '...',
+    watchouts: [...],
+    reflectionPrompts: [...],
+    // ...
+  },
+  'fierce-guardian': { ... },
+  // ... all 9 archetypes
 }
 ```
+
+```typescript
+// lib/pdf/generate.ts
+import { renderToBuffer } from '@react-pdf/renderer'
+import { BlueprintDocument } from '@/components/pdf/BlueprintDocument'
+
+export async function generateBlueprintPDF(options: BlueprintPDFOptions): Promise<Buffer> {
+  const content = BLUEPRINT_CONTENT[options.bpArchetype.id]
+  const mirrorContent = options.mirrorArchetype
+    ? BLUEPRINT_CONTENT[options.mirrorArchetype.id]
+    : null
+
+  const pdfBuffer = await renderToBuffer(
+    <BlueprintDocument
+      bpArchetype={options.bpArchetype}
+      content={content}
+      mirrorArchetype={options.mirrorArchetype}
+      mirrorContent={mirrorContent}
+      parentStatus={options.parentStatus}
+      culturalBackground={options.culturalBackground}
+    />
+  )
+
+  return Buffer.from(pdfBuffer)
+}
+```
+
+`@react-pdf/renderer` runs server-side in Node.js. No Chromium, no headless browser. Confirmed working in Next.js App Router route handlers as of v4.x.
+
+### Pattern 5: PDF Email Delivery via Resend Attachment
+
+**What:** The `lib/email/send.ts` already initializes Resend. Add a `sendBlueprintDelivery(to, pdfBuffer)` function that passes the PDF `Buffer` as a base64-encoded attachment.
+
+**When to use:** Primary delivery channel — email is more reliable than a signed URL download page because the user receives it regardless of whether they stay on the success page.
+
+```typescript
+// lib/email/send.ts — ADD this function
+export async function sendBlueprintDelivery(to: string, pdfBuffer: Buffer) {
+  if (!resend) {
+    console.warn('[email] RESEND_API_KEY not set — skipping delivery')
+    return
+  }
+  const { error } = await resend.emails.send({
+    from: FROM_EMAIL,
+    to,
+    subject: 'Your Blueprint by Kin is ready',
+    html: blueprintDeliveryTemplate(),
+    attachments: [{
+      filename: 'your-blueprint-by-kin.pdf',
+      content: pdfBuffer.toString('base64'),
+    }],
+  })
+  if (error) console.error('[email] Blueprint delivery failed:', error)
+}
+```
+
+Resend supports PDF attachments via base64 `content`. Total email size limit: 40MB. A 15-20 page PDF template document is expected to be 1-3MB — well within limits.
 
 ---
 
-## Data Flow
+## Build Order
 
-### Full User Journey: Quiz Answers → AI → PDF
-
-```
-1. USER STARTS QUIZ
-   Browser → signInAnonymously() → Supabase returns anonymous user.id
-   Browser → QuizStore (Zustand) initialized, user.id stored in store
-
-2. QUIZ PROGRESSION (client-side only)
-   Each answer → useQuizStore.setAnswer() → localStorage (via persist middleware)
-   No server calls during quiz
-
-3. QUIZ COMPLETION
-   Browser → POST /api/quiz { answers, user_id }
-     → Server Action / Route Handler
-     → Supabase: INSERT quiz_sessions (user_id, answers JSON, archetype_id, created_at)
-     → Returns: session_id, archetype summary data
-
-4. FREE RESULT PAGE
-   Browser renders archetype name, summary from returned data
-   CTA: "Get Your Full Blueprint — $14"
-
-5. CHECKOUT INITIATION
-   Browser → POST /api/checkout { quiz_session_id, user_id }
-     → Route Handler
-     → stripe.checkout.sessions.create({
-         metadata: { quiz_session_id, supabase_user_id }
-         success_url: /checkout/success?session_id={CHECKOUT_SESSION_ID}
-       })
-     → Returns: Stripe Checkout URL
-   Browser → redirect to Stripe-hosted payment page
-
-6. PAYMENT COMPLETES
-   Stripe → POST /api/webhooks/stripe (checkout.session.completed)
-     → Signature verification
-     → Idempotency check (orders table)
-     → Fetch quiz answers from Supabase (by quiz_session_id from metadata)
-     → Compute archetype scores (lib/quiz/scoring.ts)
-     → Generate AI content (parallel where possible):
-         Promise.all([
-           generateArchetypeSection(answers, archetype),
-           generateOriginProfileSection(answers),
-           generateCulturalInsightsSection(answers),
-           generateWatchoutsSection(answers),
-           generateReflectionPromptsSection(answers),
-           generateConversationStartersSection(answers),
-         ])
-     → Render PDF:
-         renderToBuffer(<BlueprintDocument content={aiContent} archetype={archetype} />)
-     → Store PDF:
-         supabase.storage.from('blueprints').upload(`${user_id}/${order_id}.pdf`, pdfBuffer)
-     → Record order:
-         supabase: INSERT orders (stripe_session_id, user_id, pdf_path, fulfilled_at)
-     → Send delivery email with signed URL (Resend or similar)
-     → Return 200
-
-7. DOWNLOAD PAGE
-   Browser → /checkout/success?session_id=...
-     → Server Component fetches order by stripe session_id
-     → If fulfilled: createSignedUrl(pdf_path, 3600) → display download button
-     → If pending: show "generating..." with polling or email instructions
-```
-
-### State Management Flow
+Dependencies determine the order. Each step unblocks the next.
 
 ```
-QuizStore (Zustand, client-only)
-    │
-    │ persist middleware
-    ▼
-localStorage (quiz-session key)
-    │
-    │ on quiz complete
-    ▼
-POST /api/quiz (Server Route Handler)
-    │
-    ▼
-Supabase: quiz_sessions table
-    │
-    │ referenced by quiz_session_id
-    ▼
-Stripe metadata → Webhook → Supabase → PDF generation
+STEP 1: Blueprint Quiz Engine
+  New files:
+    lib/quiz/blueprint-questions.ts     — own-parenting question bank
+    stores/blueprintStore.ts            — Zustand store with parentStatus field
+    components/blueprint/quiz/
+      BlueprintShell.tsx                — quiz orchestrator (mirrors QuizShell)
+  New migration:
+    supabase/migrations/[ts]_blueprint_quiz_sessions.sql
+  New API route:
+    app/api/blueprint-session/route.ts  — POST/PATCH (mirrors quiz-session)
+  New page:
+    app/blueprint/quiz/page.tsx         — quiz entry
+  Modify:
+    app/blueprint/page.tsx              — redirect to /blueprint/quiz (replace coming-soon)
+
+  Verifiable: user can take Blueprint quiz, answers saved to bp_quiz_sessions
+
+STEP 2: Stripe Checkout Flow
+  New files:
+    lib/stripe/client.ts                — Stripe SDK singleton
+    app/api/checkout/route.ts           — create Stripe session with metadata
+  New migration:
+    ALTER TABLE orders ADD COLUMN bp_session_id UUID...
+  New env vars:
+    STRIPE_SECRET_KEY
+    STRIPE_WEBHOOK_SECRET
+    BLUEPRINT_PRICE_ID
+    NEXT_PUBLIC_BASE_URL
+
+  Verifiable: CTA on Blueprint quiz completion redirects to Stripe hosted checkout
+  Blocked by: Step 1 (needs bp_session_id to put in metadata)
+
+STEP 3: PDF Template + Generation
+  New files:
+    lib/pdf/blueprint-content.ts        — pre-written copy for all 9 archetypes
+    lib/pdf/generate.ts                 — generateBlueprintPDF() orchestrator
+    components/pdf/BlueprintDocument.tsx
+    components/pdf/sections/            — one component per section
+  New dependency:
+    npm install @react-pdf/renderer
+
+  Verifiable: generateBlueprintPDF() returns a valid Buffer in isolation (unit test)
+  Blocked by: Step 1 (needs archetype content structure)
+  Independent of: Step 2 (can be built in parallel)
+
+STEP 4: Webhook Handler + Fulfillment
+  New files:
+    app/api/webhooks/stripe/route.ts    — verify → idempotency → fulfillOrder()
+    lib/email/templates/blueprint-delivery.ts
+  Modify:
+    lib/email/send.ts                   — ADD sendBlueprintDelivery()
+
+  Verifiable: stripe trigger checkout.session.completed with CLI → PDF stored + email sent
+  Blocked by: Step 2 (needs Stripe event) + Step 3 (calls generateBlueprintPDF)
+
+STEP 5: Success Page
+  New files:
+    app/blueprint/success/page.tsx      — RSC reads orders + generates signed URL
+
+  Verifiable: end-to-end checkout → success page shows download link
+  Blocked by: Step 4 (order must exist to display)
 ```
 
-### Database Schema (Logical)
+**Parallel work possible:** Step 3 (PDF template) and Step 2 (Stripe checkout) can be built simultaneously by different work streams, since both only depend on Step 1 being complete.
 
-```
-quiz_sessions
-  id            UUID PK
-  user_id       UUID FK → auth.users (anonymous or real)
-  answers       JSONB         -- full quiz answer map
-  archetype_id  VARCHAR(50)   -- computed archetype slug
-  created_at    TIMESTAMPTZ
+---
 
-orders
-  id                UUID PK
-  stripe_session_id VARCHAR(255) UNIQUE
-  user_id           UUID FK → auth.users
-  quiz_session_id   UUID FK → quiz_sessions
-  pdf_path          TEXT          -- Supabase storage path
-  customer_email    VARCHAR(255)
-  fulfilled_at      TIMESTAMPTZ   -- NULL until webhook completes
-  created_at        TIMESTAMPTZ
-```
+## Comparison Bridge Analysis
+
+When both Mirror (`quiz_sessions`) and Blueprint (`bp_quiz_sessions`) exist for the same email, the PDF unlocks an additional "Bridge" section comparing:
+- Inherited archetype (Mirror result: `mirror_archetype_id`)
+- Own archetype (Blueprint result: `bp_archetype_id`)
+
+**Architecture:** The webhook handler checks if `mirror_session_id` is present and not empty in the Stripe metadata. If yes, it fetches both sessions and sets `hasBridgeAnalysis: true` in the PDF options. `generateBlueprintPDF` passes this flag to `BlueprintDocument`, which conditionally includes bridge comparison sections.
+
+**Data linkage:** The `/api/checkout` route reads `mirror_session_id` from the client request body. The client reads this from `useQuizStore.getState().sessionId` at checkout initiation time. If the Mirror was taken in a previous browser session (no localStorage), the bridge analysis is skipped — acceptable since Blueprint has standalone value.
 
 ---
 
@@ -414,51 +574,57 @@ orders
 
 | Scale | Architecture Adjustments |
 |-------|--------------------------|
-| 0-500 orders/month | Single Next.js deployment on Vercel Hobby/Pro. PDF generation inline in webhook handler. Supabase free tier sufficient. |
-| 500-5k orders/month | Move PDF generation to Vercel Pro (60s function timeout). Add monitoring for webhook failures. Supabase Pro tier. |
-| 5k+ orders/month | Extract PDF generation to Supabase Edge Function or separate worker (Inngest, Trigger.dev). Webhook handler queues a job, returns 200 immediately. Worker processes async. |
+| 0-200 orders/month | PDF generation inline in webhook handler. Vercel Pro (60s function timeout) required. @react-pdf/renderer with pre-written templates should complete in 2-8s. |
+| 200-2k orders/month | Monitor webhook function execution times. Add Sentry/Datadog for webhook failure tracking. Consider Resend batch rate limits (currently 100/day on free tier). |
+| 2k+ orders/month | Extract fulfillment to background queue (Inngest or Trigger.dev). Webhook handler inserts a job record and returns 200 immediately. Worker processes async and updates order status. Upgrade Resend plan. |
 
-### Scaling Priorities
+**First bottleneck:** Vercel function timeout. `@react-pdf/renderer` with pre-written templates (no AI calls) is fast — expected 2-8 seconds. Test with a realistic 20-page document before launch. Vercel Pro plan (60s timeout) is required.
 
-1. **First bottleneck — Vercel function timeout:** PDF generation involves 6-7 AI API calls + rendering. On Hobby tier (10s timeout), this will fail. Use Vercel Pro (60s) from day one, or pre-generate the AI content in one parallelized call and render fast. Benchmark total generation time before launch.
-
-2. **Second bottleneck — Webhook handler complexity:** If Stripe retries a webhook (e.g., function timed out), the idempotency guard on the `orders` table prevents duplicate PDFs. This must work correctly before first sale. Test with `stripe trigger checkout.session.completed` CLI.
+**Second bottleneck:** Resend daily sending limits on free tier (100/day). Upgrade to paid plan before launch.
 
 ---
 
 ## Anti-Patterns
 
-### Anti-Pattern 1: Puppeteer on Vercel for PDF Rendering
+### Anti-Pattern 1: Using `quizStore` for the Blueprint Quiz
 
-**What people do:** Use Puppeteer (headless Chromium) to render HTML → PDF, expecting pixel-perfect output matching the web design.
+**What people do:** Add a `quizType` flag to the existing `quizStore` and branch behavior based on it.
 
-**Why it's wrong:** Puppeteer requires a Chromium binary (~170MB). Vercel serverless functions have a 50MB compressed size limit. The workaround using `@sparticuz/chromium` adds cold start latency of ~10-15 seconds (loading Chromium alone). This exceeds Hobby tier timeouts and makes Pro tier tight when combined with AI API calls.
+**Why it's wrong:** Contaminating the Mirror quiz state with Blueprint state creates a complex shared store. Mirror and Blueprint are independent products. If a user takes both, the state collision will be difficult to debug.
 
-**Do this instead:** Use `@react-pdf/renderer` which generates PDF natively via its own rendering engine — no browser required. Design the PDF using `@react-pdf/renderer` primitives (View, Text, Image, StyleSheet) rather than HTML/CSS. Accept that layout is different from the web UI but optimized for PDF output.
+**Do this instead:** Create `blueprintStore` as a completely separate Zustand store with its own localStorage key (`bp-session`). The two stores are entirely independent.
 
-### Anti-Pattern 2: Generating AI Content One Section at a Time Sequentially
+### Anti-Pattern 2: Writing Blueprint Answers to `quiz_sessions`
 
-**What people do:** Call the AI API for Section 1, await, then Section 2, await, etc.
+**What people do:** Add a `quiz_type TEXT` column to `quiz_sessions` and use the same table for both quizzes.
 
-**Why it's wrong:** 7 sequential AI calls at ~2-5 seconds each = 14-35 seconds minimum. This almost certainly exceeds Vercel function timeouts and creates poor user experience if users poll for completion.
+**Why it's wrong:** The `orders` table references `quiz_session_id`. Adding a type discriminator to `quiz_sessions` would require conditional joins and makes the schema harder to reason about. Both products will exist in parallel — they deserve parallel tables.
 
-**Do this instead:** Identify which sections are independent (most of them) and parallelize with `Promise.all()`. Only sequence calls that depend on output from a previous call (e.g., if Section 2 references content from Section 1's output).
+**Do this instead:** Create `bp_quiz_sessions` as a mirror-schema table. Add `bp_session_id` to `orders`. Clean separation, no discriminator columns.
 
-### Anti-Pattern 3: Storing All Quiz Answers in Stripe Metadata
+### Anti-Pattern 3: Using `request.json()` in the Stripe Webhook Handler
 
-**What people do:** Serialize quiz answers into Stripe Checkout session metadata to avoid needing a database before payment.
+**What people do:** `const body = await request.json()` then pass that to `stripe.webhooks.constructEvent()`.
 
-**Why it's wrong:** Stripe metadata values are capped at 500 characters each, 50 key-value pairs max. A 20-question quiz with multi-part answers will exceed this easily. Also means Stripe holds your user data — not ideal for privacy.
+**Why it's wrong:** Stripe signature verification requires the exact raw bytes of the request body. `request.json()` parses the body and destroys the original byte representation. The signature check will always fail.
 
-**Do this instead:** Save quiz answers to Supabase on quiz completion. Pass only the Supabase `quiz_session_id` (a UUID) in Stripe metadata. Webhook retrieves the full answers from Supabase using that ID.
+**Do this instead:** `const body = await request.text()`. The `text()` method returns the raw string without modification. This is confirmed behavior in Next.js App Router.
 
-### Anti-Pattern 4: Relying on Stripe Success Page Redirect for Fulfillment
+### Anti-Pattern 4: Inline PDF Rendering in the Webhook With No Idempotency
 
-**What people do:** On the `/checkout/success` page load, trigger PDF generation — assuming all customers land there.
+**What people do:** Generate the PDF and send the email in one go, without checking if the order was already fulfilled.
 
-**Why it's wrong:** Customers can close the tab after payment, lose connectivity, or have the redirect fail. Stripe explicitly documents this limitation: "You can't rely on triggering fulfillment only from your Checkout landing page."
+**Why it's wrong:** Stripe retries webhooks on non-2xx responses or timeouts. If PDF generation takes 10+ seconds and Stripe retries, the user receives two emails with duplicate PDFs and you pay double generation cost.
 
-**Do this instead:** Primary fulfillment is always via webhook. The success page is UI only — it reads order status from Supabase and shows a download link if the PDF is ready, or a "check your email" message if still generating.
+**Do this instead:** INSERT the order row first with a `UNIQUE` constraint on `stripe_checkout_session_id`. Check `fulfilled_at IS NOT NULL` before running generation. Return 200 to Stripe as quickly as possible after the idempotency check.
+
+### Anti-Pattern 5: Relying on the Success Page Redirect for Fulfillment
+
+**What people do:** Trigger PDF generation when the user lands on `/blueprint/success`.
+
+**Why it's wrong:** Users may close the tab after payment and never see the success page. Stripe's official documentation explicitly states the redirect cannot be relied upon for fulfillment.
+
+**Do this instead:** Webhook is the source of truth for fulfillment. The success page reads order status from the database and either shows a download link (if fulfilled) or a "check your email" message (if still generating).
 
 ---
 
@@ -468,93 +634,39 @@ orders
 
 | Service | Integration Pattern | Notes |
 |---------|---------------------|-------|
-| Moonshot AI Kimi 2.5 | Direct HTTPS API calls from server-side Route Handler | OpenAI-compatible API — use `openai` SDK pointed at Moonshot endpoint, or native fetch. Keep API key server-side only. |
-| Stripe Checkout | Create session via server-side Route Handler; consume events via webhook Route Handler | Never create checkout sessions client-side (exposes secret key). Verify all webhook signatures. |
-| Supabase Auth | `@supabase/ssr` package — cookie-based sessions for SSR compatibility | Use `signInAnonymously()` for quiz takers without forcing account creation. |
-| Supabase Storage | Private bucket `blueprints/`; access via `createSignedUrl()` with short expiry (1 hour) | Do not make PDF bucket public. Generate signed URL only after order fulfillment verified. |
-| Email Delivery (Resend) | Called from webhook handler after PDF stored | Send signed URL in email as backup delivery channel. Signed URL in email should have longer expiry (7 days). |
+| Stripe | Server-side `stripe` SDK in `/api/checkout` and `/api/webhooks/stripe`. Client never touches Stripe directly. | Use `request.text()` in webhook; verify `stripe-signature` header on every request. Confirm Vercel Deployment Protection is OFF for webhook endpoint URL. |
+| Resend | Already integrated in `lib/email/`. Add `sendBlueprintDelivery(to, pdfBuffer)` with base64 attachment. | 40MB email limit. 15-20 page PDF template expected to be 1-3MB. Upgrade from free plan before launch (100/day limit). |
+| Supabase Storage | `blueprints/` bucket already exists. Upload in webhook handler via `createAdminClient()`. Generate signed URLs in success page Server Component. | Path convention: `blueprints/{orderId}/blueprint.pdf`. Signed URLs for download: 1h expiry. Signed URLs in email: use direct attachment instead (more reliable than expiring links). |
 
 ### Internal Boundaries
 
 | Boundary | Communication | Notes |
 |----------|---------------|-------|
-| Quiz Client Component ↔ Zustand Store | Direct hook call (`useQuizStore()`) | Store must not be accessed in Server Components |
-| Zustand Store ↔ Server (on completion) | Single `fetch()` POST to `/api/quiz` | One write per quiz, not per step |
-| Route Handler ↔ Supabase | `@supabase/supabase-js` with service-role key | Service-role bypasses RLS — only use server-side |
-| Route Handler ↔ AI Client | Server-side HTTP client (fetch or SDK) | All AI calls server-side; API key never in client bundle |
-| Route Handler ↔ PDF Renderer | Direct import of `@react-pdf/renderer` `renderToBuffer()` | Server-side only; do not import in Client Components |
-| Webhook Handler ↔ Fulfillment Logic | In-process function call (same Route Handler file) | Keep webhook handler thin — call extracted `fulfillOrder()` function |
-
----
-
-## Suggested Build Order (Dependencies)
-
-The following order respects hard dependencies — each phase's output is a prerequisite for the next:
-
-```
-Phase 1: Data Foundation
-  → Supabase schema (quiz_sessions, orders tables)
-  → Supabase Storage bucket setup
-  Unblocks: everything downstream
-
-Phase 2: Quiz Engine
-  → Question bank + archetype scoring logic (lib/quiz/)
-  → Zustand store
-  → Quiz UI components
-  → /api/quiz route (session save)
-  Depends on: Phase 1 (schema)
-  Unblocks: Result page, AI generation
-
-Phase 3: Free Result Page
-  → Archetype summary display
-  → CTA to purchase
-  Depends on: Phase 2 (archetype scoring output)
-  Unblocks: Payment flow
-
-Phase 4: Payment Flow
-  → /api/checkout route (Stripe session creation)
-  → /api/webhooks/stripe route (event handling + idempotency)
-  → Checkout success page
-  Depends on: Phase 1 (orders table), Phase 3 (result page as entry point)
-  Unblocks: PDF generation (webhook triggers it)
-
-Phase 5: AI Content Generation
-  → Moonshot client setup
-  → Section prompt files
-  → Parallelized section generation
-  Depends on: Phase 2 (quiz answers schema), Phase 4 (webhook calls it)
-  Unblocks: PDF rendering
-
-Phase 6: PDF Rendering + Delivery
-  → @react-pdf/renderer section components
-  → Full BlueprintDocument composition
-  → Storage upload + signed URL generation
-  → Email delivery
-  Depends on: Phase 5 (AI content input)
-  Completes: Full purchase flow
-
-Phase 7: Landing Page + Polish
-  → Marketing copy, credibility signals
-  → Performance, mobile responsiveness
-  Depends on: Phases 1-6 (something to sell)
-```
+| `blueprintStore` ↔ `BlueprintShell` | Direct `useBluprintStore()` hook | Keep store access inside Client Components only |
+| `blueprintStore` ↔ `/api/blueprint-session` | `fetch()` POST/PATCH | Same pattern as existing Mirror quiz |
+| `/api/checkout` ↔ `blueprintStore` | Client reads `blueprintStore.bpSessionId` + `quizStore.sessionId` at checkout time | Mirror `sessionId` from `quizStore` enables bridge analysis |
+| Webhook handler ↔ `fulfillOrder()` | In-process function call | Keep webhook handler thin; `fulfillOrder()` in same file or adjacent module |
+| `fulfillOrder()` ↔ `generateBlueprintPDF()` | Direct `await` call | PDF generation is synchronous (template-driven, no async AI calls) |
+| `generateBlueprintPDF()` ↔ `@react-pdf/renderer` | `renderToBuffer()` import — server-side only | Never import `@react-pdf/renderer` in Client Components; it is Node.js only |
+| `lib/quiz/compute-profile.ts` ↔ Blueprint quiz | `computeDimensionProfile(answers, BLUEPRINT_QUESTIONS)` — questions param override | No changes to compute-profile.ts needed |
+| `lib/quiz/scoring-matrix.ts` ↔ Blueprint quiz | `getResult(profile)` — archetype-agnostic | No changes to scoring-matrix.ts needed |
 
 ---
 
 ## Sources
 
-- Stripe Checkout Fulfillment (official): https://docs.stripe.com/checkout/fulfillment
-- Stripe Metadata Limits (official): https://docs.stripe.com/metadata
-- Supabase Anonymous Sign-Ins (official): https://supabase.com/docs/guides/auth/auth-anonymous
-- Supabase Stripe Webhook Edge Functions (official): https://supabase.com/docs/guides/functions/examples/stripe-webhooks
-- Supabase Storage Signed URLs (official): https://supabase.com/docs/guides/storage/serving/downloads
-- Server Actions vs Route Handlers — MakerKit: https://makerkit.dev/blog/tutorials/server-actions-vs-route-handlers
-- Zustand + Next.js multi-step form — Build with Matija: https://www.buildwithmatija.com/blog/master-multi-step-forms-build-a-dynamic-react-form-in-6-simple-steps
-- @react-pdf/renderer npm: https://www.npmjs.com/package/@react-pdf/renderer
-- Puppeteer on Vercel serverless limitations: https://github.com/maheshpaulj/serverless-pdf-generator
-- Next.js 15 Modern Architecture — SoftwareMill: https://softwaremill.com/modern-full-stack-application-architecture-using-next-js-15/
+- [Stripe fulfill orders (official)](https://docs.stripe.com/checkout/fulfillment) — webhook-primary fulfillment pattern
+- [Stripe metadata (official)](https://docs.stripe.com/metadata) — 500 char/value, 50 key limit
+- [Stripe webhook signature verification (official)](https://docs.stripe.com/webhooks/signature) — raw body requirement
+- [Next.js App Router webhook request.text() (Next.js GitHub #60002)](https://github.com/vercel/next.js/issues/60002) — confirmed: must use `.text()` not `.json()`
+- [Next.js App Router + Stripe webhook (Medium)](https://kitson-broadhurst.medium.com/next-js-app-router-stripe-webhook-signature-verification-ea9d59f3593f) — practical implementation
+- [Resend attachments (official)](https://resend.com/docs/dashboard/emails/attachments) — base64 `content` field, 40MB total limit
+- [Supabase Storage signed URLs (official)](https://supabase.com/docs/guides/storage/serving/downloads) — `createSignedUrl()` API
+- [@react-pdf/renderer NPM](https://www.npmjs.com/package/@react-pdf/renderer) — v4.3.2, 860k weekly downloads, confirmed Node.js server-side
+- [react-pdf Next.js App Router discussion (GitHub)](https://github.com/diegomura/react-pdf/discussions/2402) — server-side rendering confirmed working
+- [PDF generation in 2025 comparison (DEV Community)](https://dev.to/michal_szymanowski/how-to-generate-pdfs-in-2025-26gi) — React-PDF vs Puppeteer tradeoffs
 
 ---
 
-*Architecture research for: quiz-to-personalized-PDF parenting assessment (Your Parenting Blueprint)*
-*Researched: 2026-02-23*
+*Architecture research for: Blueprint integration with existing Kin Mirror codebase*
+*Researched: 2026-03-13*
