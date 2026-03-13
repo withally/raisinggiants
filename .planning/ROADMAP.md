@@ -165,7 +165,7 @@ Plans:
 
 ### v2.0 Phase Checklist
 
-- [ ] **Phase 7: Blueprint Quiz Engine** — Blueprint quiz UI, parent-status gating, archetype scoring, result teaser, Supabase persistence (BQUIZ-01–06)
+- [ ] **Phase 7: Blueprint Quiz Engine** — Blueprint quiz UI, parent-status gating, archetype scoring, full result page with email gate, Supabase persistence (BQUIZ-01–06)
 - [ ] **Phase 8: Stripe Payment Flow** — Checkout redirect, webhook handler with idempotency, orders row lifecycle, success page (PAY-01–05)
 - [ ] **Phase 9: PDF Template and Delivery** — React-PDF template, Supabase Storage, Resend download-link email (PDF-01–06)
 - [ ] **Phase 10: Launch Integration** — Mirror CTA upgrade from coming-soon to live purchase, Blueprint sales page (LAUNCH-01–02)
@@ -173,17 +173,22 @@ Plans:
 ## Phase Details (v2.0)
 
 ### Phase 7: Blueprint Quiz Engine
-**Goal**: Users can take the Blueprint quiz about their own parenting instincts, see their archetype result as a teaser, and have their answers persisted to Supabase — with the Mirror quiz completely unaffected
+**Goal**: Users can take the Blueprint quiz about their own parenting instincts, see their full archetype result (pay-first model -- payment happens in Phase 8), and have their answers persisted to Supabase — with the Mirror quiz completely unaffected
 **Depends on**: Phase 6 (v1.0 complete); requires two prerequisite DB migrations before any quiz code is written
 **Requirements**: BQUIZ-01, BQUIZ-02, BQUIZ-03, BQUIZ-04, BQUIZ-05, BQUIZ-06
 **Success Criteria** (what must be TRUE):
   1. User sees a parent-status gating question as the first screen and their selected status (current parent / expecting / planning) adapts the framing of subsequent questions
   2. User can complete the full Blueprint quiz (card-style, progress bar, back navigation) without it affecting or overwriting their Mirror quiz state
-  3. User sees their own-parenting archetype name and a brief teaser result at the end of the quiz
-  4. A "proceed to purchase" CTA is present on the result teaser screen (may link to nothing yet — wired up in Phase 8)
-  5. Blueprint quiz answers are saved to `bp_quiz_sessions` in Supabase with correct archetype_id
-  6. If user leaves mid-quiz and returns, their Blueprint quiz progress restores from localStorage using a separate key from the Mirror quiz
-**Plans**: TBD
+  3. User sees their own-parenting archetype name and full result after completing the quiz (pay-first: no teaser, full result since payment precedes quiz access)
+  4. Blueprint quiz answers are saved to `bp_quiz_sessions` in Supabase with correct archetype_id
+  5. If user leaves mid-quiz and returns, their Blueprint quiz progress restores from localStorage using a separate key from the Mirror quiz
+  6. Result page has email verification gate for access control (prevents casual link-sharing of paid content)
+  7. Bridge comparison section appears when user has completed both Mirror and Blueprint quizzes
+**Plans:** 3 plans
+Plans:
+- [ ] 07-01-PLAN.md — DB migrations (product_type + bp_quiz_sessions), API route, Zustand store, question bank, section palette
+- [ ] 07-02-PLAN.md — ParentStatusSelector, BlueprintQuizShell orchestrator, quiz page route
+- [ ] 07-03-PLAN.md — Blueprint result page, section components, email gate, bridge comparison
 
 ### Phase 8: Stripe Payment Flow
 **Goal**: Users can pay for The Blueprint via Stripe Checkout, and a verified, idempotent webhook handler creates an order row — no PDF generation yet, just the payment pipeline proven end-to-end
@@ -235,7 +240,7 @@ v2.0: 7 → 8 → 9 (8 and 9 can run in parallel after 7) → 10
 | 4. Brand Positioning Research | v1.0 | 3/3 | Complete | 2026-02-28 |
 | 5. Landing Page Rebuild | v1.0 | 3/3 | Complete | 2026-03-01 |
 | 6. Marketing + Launch Strategy | v1.0 | 0/TBD | Not started | — |
-| 7. Blueprint Quiz Engine | v2.0 | 0/TBD | Not started | — |
+| 7. Blueprint Quiz Engine | v2.0 | 0/3 | Planned | — |
 | 8. Stripe Payment Flow | v2.0 | 0/TBD | Not started | — |
 | 9. PDF Template and Delivery | v2.0 | 0/TBD | Not started | — |
 | 10. Launch Integration | v2.0 | 0/TBD | Not started | — |
