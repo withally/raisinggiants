@@ -11,7 +11,7 @@ import {
 } from "@/lib/result/blueprint-helpers";
 
 export const metadata: Metadata = {
-  title: "Your Blueprint Result | Kin",
+  title: "Your Blueprint Result",
   description: "Your personalized parenting archetype — patterns, blind spots, and insights.",
   openGraph: {
     title: "Your Blueprint Result | Kin",

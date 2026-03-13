@@ -4,7 +4,7 @@ import { Suspense } from "react";
 import { BlueprintQuizShell } from "@/components/quiz/BlueprintQuizShell";
 
 export const metadata: Metadata = {
-  title: "The Blueprint Quiz | Kin",
+  title: "The Blueprint Quiz",
   description:
     "Discover your parenting archetype — your instincts, patterns, and approach to raising your child.",
   openGraph: {
