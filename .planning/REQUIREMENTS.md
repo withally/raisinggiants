@@ -1,7 +1,7 @@
 # Requirements: Kin — The Mirror
 
 **Defined:** 2026-02-23
-**Updated:** 2026-02-28 — Rebrand to Kin; LAND/BRAND status corrected
+**Updated:** 2026-03-13 — v2.0 roadmap created; v2 traceability added (BQUIZ, PAY, PDF, LAUNCH → Phases 7–10)
 **Core Value:** Adults feel deeply seen and understood about the parenting they *received* — the personalized output surfaces patterns they've always sensed but never had language for, grounded in credible research from top parenting experts.
 
 ## v1 Requirements
@@ -197,12 +197,31 @@ Which phases cover which requirements. Updated during roadmap creation.
 | BRAND-06 | Phase 5 | Pending (redo) |
 | BRAND-07 | Phase 5 | Pending (redo) |
 | BRAND-08 | Phase 5 | Pending (redo) |
+| BQUIZ-01 | Phase 7 | Pending |
+| BQUIZ-02 | Phase 7 | Pending |
+| BQUIZ-03 | Phase 7 | Pending |
+| BQUIZ-04 | Phase 7 | Pending |
+| BQUIZ-05 | Phase 7 | Pending |
+| BQUIZ-06 | Phase 7 | Pending |
+| PAY-01 | Phase 8 | Pending |
+| PAY-02 | Phase 8 | Pending |
+| PAY-03 | Phase 8 | Pending |
+| PAY-04 | Phase 8 | Pending |
+| PAY-05 | Phase 8 | Pending |
+| PDF-01 | Phase 9 | Pending |
+| PDF-02 | Phase 9 | Pending |
+| PDF-03 | Phase 9 | Pending |
+| PDF-04 | Phase 9 | Pending |
+| PDF-05 | Phase 9 | Pending |
+| PDF-06 | Phase 9 | Pending |
+| LAUNCH-01 | Phase 10 | Pending |
+| LAUNCH-02 | Phase 10 | Pending |
 
 **Coverage:**
 - v1 requirements (Mirror + Brand): 34 total — 25 complete, 9 pending
-- v2 requirements (Blueprint): 18 total — 0 complete (roadmap pending)
-- Product 3 requirements: 7 (COUP-01–07)
+- v2 requirements (Blueprint): 19 total — 0 complete, 19 pending (roadmap created 2026-03-13)
+- Product 3 requirements: 7 (COUP-01–07) — deferred
 
 ---
 *Requirements defined: 2026-02-23*
-*Last updated: 2026-03-13 — Milestone v2.0 Blueprint requirements added (BQUIZ-01–06, PAY-01–05, PDF-01–06, LAUNCH-01–02); partner dialogue moved to Product 3; AI generation removed from scope*
+*Last updated: 2026-03-13 — v2.0 roadmap created; traceability updated for BQUIZ-01–06 → Phase 7, PAY-01–05 → Phase 8, PDF-01–06 → Phase 9, LAUNCH-01–02 → Phase 10*
